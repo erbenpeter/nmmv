@@ -1,0 +1,143 @@
+\documentclass[a4paper,10pt]{article} 
+\usepackage[latin2]{inputenc}
+\usepackage{graphicx}
+\usepackage{amssymb}
+\voffset - 20pt
+\hoffset - 35pt
+\textwidth 450pt
+\textheight 650pt 
+\frenchspacing 
+
+\pagestyle{empty}
+\def\ki#1#2{\hfill {\it #1 (#2)}\medskip}
+
+\def\tg{\, \hbox{tg} \,}
+\def\ctg{\, \hbox{ctg} \,}
+\def\arctg{\, \hbox{arctg} \,}
+\def\arcctg{\, \hbox{arcctg} \,}
+
+\begin{document}
+\begin{center} \Large {\em XI. Nemzetközi Magyar Matematika Verseny} \end{center}
+\begin{center} \large{\em Sepsiszentgyörgy, 2002. márc. 16-20.} \end{center}
+\smallskip
+\begin{center} \large{\bf 10. osztály} \end{center}
+\bigskip 
+
+{\bf 1. feladat: } Egy körön adott $2002$ pont, amelyek közül egyet megjelölünk $A$-val. Az adott pontokkal, mint csúcspontokkal megszerkesztjük az összes konvex sokszöget (háromszögeket, négyszögeket, ... ).
+
+a) Melyik sokszögbõl van több, azokból, amelyeknek az egyik csúcspontja az $A$, vagy azokból, amelyeknek egyik csúcspontja sem esik egybe az $A$ ponttal?
+
+b) Legyen $P$ annak a valószínusége, hogy az összes konvex sokszög közül találomra kiválasztva egyet, annak az egyik csúcspontja az $A$. Bizonyítsuk be, hogy
+$$\left\vert P-\frac{1}{2}\right\vert<\frac{1}{2^{1981}}.$$
+
+
+\ki{Szabó Magda}{Szabadka}\medskip
+
+{\bf 1. feladat I. megoldása: } a.) Tekintsük a legkisebb olyan ívet, amely tartalmazza az $A$-t és mindkét végpontját kiválasztottuk! Ha ehhez a két végponthoz hozzávesszük még az $A$ csúcsot, és a sokszöget kiegészítjük a kapott háromszöggel, az eredmény nyilván egy konvex sokszög lesz, amely megfelel a feltételeknek. Az is látható, hogy különbözõ sokszögekbõl különbözõket kapunk, mivel ez az átalakítás egyértelmûen megfordítható: venni kell az $A$ csúccsal szomszédos két kiválasztott csúcsot, és a meghatározott háromszöget levágni a sokszögbõl. Ez azt jelenti, hogy az $A$ csúcsot nem tartalmazó sokszögekbõl legfeljebb annyi van, mint az $A$ csúcsot tartalmazókból. Ha viszont veszünk egy $A$ csúcsú háromszöget, annak a fent leírt módon nem tudunk megfeleltetni egyetlen olyan sokszöget sem, amely nem tartalmazza csúcsként az $A$-t, vagyis az $A$-t tartalmazó sokszögekbõl szigorúan több lesz.
+
+b.) Ha kiválasztjuk a csúcsokat, az összekötés sorrendje már egyértelmû, azaz az össze lehetséges sokszögek száma
+$$N = {2002 \choose 3} + {2002 \choose 4} + \ldots + {2002 \choose 2002} = 2^{2002} - {2002 \choose 0} - {2002 \choose 1} - {2002 \choose 2}$$
+Vegyük most számba azokat a sokszögeket, amelyek egyik csúcsa az $A$ pont!
+$$N_{A} = {2001 \choose 2} + {2001 \choose 3} + \ldots + {2001 \choose 2001} = 2^{2001} - {2001 \choose 0} - {2001 \choose 1}$$
+A keresett valószínûség így
+$$p = {N_A \over N} = {2^{2001} - {2001 \choose 0} - {2001 \choose 1} \over 2^{2002} - {2002 \choose 0} - {2002 \choose 1} - {2002 \choose 2}}$$
+Ebbõl
+{\setlength\arraycolsep{2pt}\begin{eqnarray*}
+p - {1 \over 2} &=& {\left( 2 {2002 \choose 2} + 1 \right) - \left( {2002 \choose 0} + {2002 \choose 1} + {2002 \choose 2} \right)} = \\[6pt]
+&=& {2 {2002 \choose 2} + 1 \over 2^{2003}} < {2048^2 \over 2^{2003}} = {1 \over 2^{1981}},
+\end{eqnarray*}}
+és éppen ezt kellett belátnunk.
+\medskip
+
+
+\hbox to \hsize{\hskip2truecm\hrulefill\hskip2truecm}
+{\bf 2. feladat: } Határozzuk meg az $a$ paraméter azon értékeit, amelyekre
+$$\sqrt{1+x^4}>1-2ax+x^2$$
+egyenlõtlenség minden pozitív $x$-re teljesül.
+
+
+
+\ki{Bogdán Zoltán}{Cegléd}\medskip
+
+{\bf 2. feladat I. megoldása: } Az egyenlõtlenség 
+$$a > {1 \over 2}\left( x+ {1 \over x} - \sqrt{x^2 + {1 \over x^2}} \right)$$
+alakba írható át. Ha most bevezetjük az $y = x + {1 \over x}$ jelölést, akkor $x^2 + {1 \over x^2} = y^2 - 2$ miatt az egyenlõtlenségünk 
+$$a > {1 \over 2}\left( y - \sqrt{y^2 - 2} \right)$$
+formájú, azaz gyöktelenítés után
+$$a > {1 \over (y + \sqrt{y^2 - 2})}$$
+Mivel $x$ pozitív, azért $y \geq 2$, tehát $a > {2 \over 2 + \sqrt{2}}$ esetén az egyenlõtlenség biztosan teljesülni fog, ennél kisebb alsó korlátot viszont nem tudunk mondani, tehát ezek lesznek az $a$ paraméter megfelelõ értékei.
+\medskip
+
+
+\hbox to \hsize{\hskip2truecm\hrulefill\hskip2truecm}
+{\bf 3. feladat: } Bizonyítsuk be, hogy minden $ABC$ háromszögben érvényes a következõ egyenlõtlenség:
+$$4T(\ctg A+\ctg B+\ctg C)\geq ab+bc+ac,$$
+ahol $a$, $b$, $c$ a háromszög oldalainak hosszát, $A$, $B$, $C$ a háromszög szögeinek nagyságát és $T$ a háromszög területét jelenti. 
+
+
+\ki{Oláh György}{Komárom}\medskip
+
+{\bf 3. feladat I. megoldása: } Lássuk be elsõ lépésként, hogy
+$$4T(\ctg A + \ctg B + \ctg C) = a^2 + b^2 + c^2$$
+A koszinusztételbõl tudjuk, hogy $\cos \alpha = {b^2 + c^2 - a^2 \over 2bc}$, amibõl azt kapjuk, hogy $\ctg \alpha = {b^2 + c^2 - a^2 \over 2bc \sin \alpha} = {b^2 + c^2 - a^2 \over 4T}$, átszorozva tehát
+$$4T \ctg \alpha = b^2 + c^2 - a^2$$
+Hasonlóan megy a bizonyítás a másik két szögre, a három megfelelõ összefüggést összeadva pedig éppen a bizonyítandó állítás adódik.
+
+Ezután már csak azt kell belátnunk, hogy $a^2 + b^2 + c^2 \geq ab+bc+ac$. Ez azonban 2-vel szorozva és átrendezve azt adja, hogy $(a-b)^2 + (b-c)^2 + (a-c)^2 \geq 0$, ami nyilvánvalóan igaz. Ezzel a feladat állítását bebizonyítottuk.
+\medskip
+
+
+\hbox to \hsize{\hskip2truecm\hrulefill\hskip2truecm}
+{\bf 4. feladat: } Adott az $n\geq 2$ páratlan természetes szám. Határozzuk meg az
+$$\frac{1}{\sqrt{1}+\sqrt{2}}+\frac{1}{\sqrt{3}+\sqrt{4}}+\frac{1}{\sqrt{5}+\sqrt{6}}+\cdots+\frac{1}{\sqrt{n^2-2}+\sqrt{n^2-1}}$$
+szám egész részét. 
+
+
+\ki{Balázsi Borbála}{Beregszász}\medskip
+
+{\bf 4. feladat I. megoldása: } Vezessük be a következõ jelöléseket:
+{\setlength\arraycolsep{2pt}\begin{eqnarray*}
+A &=& {1 \over \sqrt{1} + \sqrt{2}} + {1 \over  \sqrt{3} + \sqrt{4}} + {1 \over \sqrt{5} + \sqrt{6}} + \ldots + {1 \over \sqrt{n^2 - 2} + \sqrt{n^2} - 1} \\[6pt]
+B &=& {1 \over \sqrt{2} + \sqrt{3}} + {1 \over \sqrt{4} + \sqrt{5}} + \ldots + {1 \over \sqrt{n^2 - 1} + \sqrt{n^2}}
+\end{eqnarray*}}
+Tudjuk, hogy ${1 \over \sqrt{n} + \sqrt{n+1}} > {1 \over \sqrt{n+1} + \sqrt{n+2}}$ bármely $n$-re, ez pedig azt jelenti $A > B$. Adjuk most össze a két kifejezést, illetve vonjuk ki õket egymásból:
+$$A + B = {1 \over \sqrt{1} + \sqrt{2}} + {1 \over \sqrt{2} + \sqrt{3}} + \ldots + {1 \over \sqrt{n^2 - 1} + \sqrt{n^2}},$$
+ami gyöktelenítés után egyenlõ
+$$- \sqrt{1} + \sqrt{2} - \sqrt{2} + \sqrt{3} - \sqrt{3} \pm \ldots - \sqrt{n^2 - 2} + \sqrt{n^2 - 1} - \sqrt{n^2 - 1} + \sqrt{n^2} = n - 1$$
+Továbbá
+{\setlength\arraycolsep{2pt}\begin{eqnarray*}
+A - B &=& {1 \over \sqrt{1} + \sqrt{2}} - \left( {1 \over \sqrt{2} + \sqrt{3}} - {1 \over \sqrt{3} + \sqrt{4}} \right) - \left( {1 \over \sqrt{4} + \sqrt{5}} - {1 \over \sqrt{5} + \sqrt{6}} \right) - \ldots - \\[6pt]
+&&- \left( {1 \over \sqrt{n^2 - 3} + \sqrt{n^2 - 2}} - {1 \over \sqrt{n^2 - 2} + \sqrt{n^2 - 1}} \right) - {1 \over \sqrt{n^2 - 1} + \sqrt{n^2}} < {1 \over \sqrt{1} + \sqrt{2}} < 1
+\end{eqnarray*}}
+Tekintve, hogy $A = {A + B \over 2} + {A - B \over 2}$, azért ${A + B \over 2} < A < {A + B \over 2} + {1 \over 2}$, vagyis ${n-1 \over 2} < A < {n+1 \over 2}$. Tudjuk továbbá, hogy $n$ páratlan, ami azt jelenti, hogy $[A] = {n-1 \over 2}$. 
+\medskip
+
+
+\hbox to \hsize{\hskip2truecm\hrulefill\hskip2truecm}
+{\bf 5. feladat: } Az $ABC$ háromszögben az $AM$, $BN$ és $CP$ összefutó egyenesek (egy ponton átmenõ) ($M$ a $BC$, $N$ a $CA$ és $P$ az $AB$ oldalon található). Legyen az $AM$ és $NP$ metszéspontja $Q$. Bizonyítsuk be, hogy, ha a $BQM\sphericalangle$ és $MQC\sphericalangle$ szögek egyenlõk, akkor $AM$ merõleges $NP$-re. 
+
+
+\ki{András Szilárd}{Kolozsvár}\medskip
+
+{\bf 5. feladat I. megoldása: } %Ábra a pontokkal
+Húzzunk párhuzamost az $A$ ponton át a $PN$ egyenessel, jelöljük ezt az egyenest $d$-vel! Hosszabbítsuk meg a $BQ$ és $CQ$ szakaszokat a $d$ egyenesig, legyenek a kialakult metszéspontok $S$ és $R$. A párhuzamos szelõk tétele szerint ${AS \over PQ} = {AB \over BP}$, továbbá ${AR \over QN} = {AC \over CN}$, amibõl azt kapjuk, hogy 
+$${AR \over AS} = {AC \over CN} \cdot {BP \over AB} \cdot {QN \over QP}$$
+Az $APN$ háromszögben alkalmazva továbbá a Ceva-tételt az $AO, BO, CO$ egyenesekre azt kapjuk, hogy 
+$${AC \over CN} \cdot {BP \over AB} \cdot {QN \over QP} = 1,$$
+amibõl azt kapjuk, hogy $AR = AS$. Ez azt jelenti, hogy a $QA$ egyenes az $RQS$ háromszögben nemcsak szögfelezõ, hanem súlyvonal is, ami viszont azt jelenti, hogy a háromszög egyenlõszárú, tehát $QA$ egyben magasság, vagyis merõleges $RS$-re, azaz $NP \parallel SR$ miatt $AQ \perp PN$ is teljesülni fog.
+\medskip
+
+
+\hbox to \hsize{\hskip2truecm\hrulefill\hskip2truecm}
+{\bf 6. feladat: } Egy négyzet alakú $100$-szor $100$-as táblázat minden mezõjébe egy pozitív egész számot írunk. Tudjuk, hogy bármely két szomszédos (közös oldallal rendelkezõ) mezõbe írt szám különbsége legfeljebb $10$. Bizonyítsuk be, hogy van $6$ olyan mezõ a táblázatban, amelyekbe azonos számokat írtunk.
+
+
+\ki{Urbán János}{Budapest}\medskip
+
+{\bf 6. feladat I. megoldása: } Véges sok számot írtunk be, ezek között mindig van legkisebb, jelöljük ezt $m$-mel! Legfeljebb 198 lépésben errõl a mezõrõl bármelyikre eljuthatunk, vagyis minden szám legfeljebb
+$$m + 198 \cdot 10 = m + 1980$$
+lesz, ami azt jelenti, hogy maximum 1981 különbözõ számot írhattunk be a táblázatba. Annak azonban 10000 eleme van, és ha minden szám legfeljebb ötször szerepelne, akkor összesen $5 \cdot 1981 = 9905$ mezõt tudnánk kitölteni, ami ennél kevesebb. A skatulyaelv szerint tehát lennie kell legalább egy számnak, amely minimum 6-szor fordul elõ. 
+\medskip
+
+\vfill
+\end{document}

@@ -1,0 +1,122 @@
+\documentclass[a4paper,10pt]{article} 
+\usepackage[latin2]{inputenc}
+\usepackage{graphicx}
+\usepackage{amssymb}
+\voffset - 20pt
+\hoffset - 35pt
+\textwidth 450pt
+\textheight 650pt 
+\frenchspacing 
+
+\pagestyle{empty}
+\def\ki#1#2{\hfill {\it #1 (#2)}\medskip}
+
+\def\tg{\, \hbox{tg} \,}
+\def\ctg{\, \hbox{ctg} \,}
+\def\arctg{\, \hbox{arctg} \,}
+\def\arcctg{\, \hbox{arcctg} \,}
+
+\begin{document}
+\begin{center} \Large {\em XI. Nemzetközi Magyar Matematika Verseny} \end{center}
+\begin{center} \large{\em Sepsiszentgyörgy, 2002. márc. 16-20.} \end{center}
+\smallskip
+\begin{center} \large{\bf 9. osztály} \end{center}
+\bigskip 
+
+{\bf 1. feladat: } Határozzuk meg a
+$$2001^{2002}$$
+szám tízes számrendszerbeli alakjának utolsó hat számjegyét. 
+
+
+\ki{Kacsó Ferenc}{Marosvásárhely}\medskip
+
+{\bf 1. feladat I. megoldása: } Ismert képlet, hogy $a^n - b^n = (a-b)(a^{n-1} + a^{n-2}b + \ldots + b^{n-1})$. Eszerint
+$$2001^n - 1 = 2000 \cdot a_n,$$
+ahol $a_n$ pozitív egész szám. Alakítsuk most át a kifejezésünket:
+$${\setlength\arraycolsep{2pt}\begin{array}{rcl}
+2001^{2000} - 1 &=& (2001 - 1)(2001^{1999} + 2001^{1998} + \ldots + 1) = \\[6pt] 
+&=& 2000 (2000a_{1999} + 2000a_{1998} + \ldots + 2000a_1 + 2000) = 10^6 \cdot k,
+\end{array}}$$
+a zárójelen belül minden tagból egyet kivonva és az utolsóhoz 1999-et hozzáadva. Mivel pedig
+$$2001^{2002} = 2001^2[(2001^{2000} - 1) + 1] = 4004001\cdot 10^6 \cdot k,$$
+azért az utolsó 6 jegye a $4004001$ utolsó hat jegye lesz, vagyis $004001$. 
+\medskip
+
+
+\hbox to \hsize{\hskip2truecm\hrulefill\hskip2truecm}
+{\bf 2. feladat: } Az $ABC$ egyenlõ szárú derékszögû háromszög $AC$ és $BC$ befogóján úgy vesszük fel a $D$ és $E$ pontokat, hogy $DE$ párhuzamos $AB$-vel és
+$$DE+EA=AB.$$
+
+Határozzuk meg az $EAB$ szög nagyságát. 
+
+
+\ki{dr. Katz Sándor}{Bonyhád}\medskip
+
+{\bf 2. feladat I. megoldása: } A feladat szerint $DE + EA = AB$, vagyis $AE = AB - DE$. Jelöljük a $D$ és $E$ pontok átfogóra vetített képét $P$-vel és $Q$-val. Tudjuk, hogy az $ABC$ szög $45^{\circ}$-os, eszerint $EQ = QB$. De tudjuk azt is, hogy $AP = BQ$, hiszen az $APD$ és $BQE$ háromszögek egybevágók. Ennek okán $BQ = {AB - DE \over 2} = {AE \over 2}$. Ez pedig azt jelenti, hogy mivel $EQ = QB$, azért $EQ = {AE \over 2}$ is teljesülni fog. Így tehát az $AQE$ háromszögben a $QE$ befogó egyenlõ az átfogó felével, ami azt jelenti, hogy az $EAQ$ szög $30^{\circ}$-os, ezzel a feladatot megoldottuk.
+\medskip
+
+
+\hbox to \hsize{\hskip2truecm\hrulefill\hskip2truecm}
+{\bf 3. feladat: } Az ábrán látható táblázatban az $1, 2, 3, 4, 5, 6, 7, 8, 9$ számjegyeket úgy írtuk be, hogy mindegyiket pontosan egyszer használtuk fel, továbbá az $\overline{abc}$, $\overline{adg}$, $\overline{beh}$, $\overline{cfi}$, $\overline{def}$, $\overline{ghi}$, $\overline{aei}$ számok mindegyike osztható 11-gyel. Mekkora a $\overline{ceg}$ szám lehetséges legnagyobb értéke?
+
+$$\begin{tabular}{|c|c|c|}
+\hline
+a&b&c\\
+\hline
+d&e&f\\
+\hline
+g&h&i\\
+\hline
+\end{tabular}$$
+
+
+\ki{Kiss Sándor}{Nyíregyháza}\medskip
+
+{\bf 3. feladat I. megoldása: } A táblázatba beírt számok összeg 45. Tekintsük az
+$$(a-b+c) + (d-e+f) + (g-h+i) + 2(b-e+h)$$
+összeget. A feladat szerint ennek minden tagja osztható 11-gyel, vagyis ez elmondható az összegrõl is.  Vegyök azonban e helyett az
+$$(a+b+c+d+e+f+g+h+i) - 4e$$
+kifejezést, amely az eredetivel megegyezik, tehát szintén 11-gyel osztható lesz. A zárójelben 45 áll, tehát $e$ csakis 3 lehet, mivel csak ekkor lesz az összeg 11 többszöröse. Az $\overline{aei}$, $\overline{def}$, $\overline{beh}$ számok mind 11-gyel oszthatók és második számjegyük 3. Ilyen számból azonban csak 6 van: 132 és 231, 935 és 539, valamint 836 és 638. Ez viszont azt jelenti, hogy az $a,b,d,f,h,i$ számok valamilyen sorrendben megegyeznek az $1, 2, 5, 6, 8, 9$ számokkal, vagyis $c$ és $g$ csak $4$ és $7$ lehet. Ebben az esetben a legnagyobb lehetséges érték 734, ami viszont elõ is áll, ha 
+$$a = 1, b = 8, c = 7, d= 5, e = 3, f = 9, g = 4, h = 6, i = 2.$$
+\medskip
+
+
+\hbox to \hsize{\hskip2truecm\hrulefill\hskip2truecm}
+{\bf 4. feladat: } Az $ABC$, $C$-ben derékszögû háromszögben $BC=p$, ahol $p$ prímszám, az $AC$ befogó hosszának számértéke a $k\cdot p$ $\left(k\in \mathbb{N}, k\geq 2\right)$, továbbá egész szám annak a négyzetnek az oldalhossza is, amelynek egyik csúcsa a $C$ pont, a többi csúcsa az $ABC$ háromszög oldalain van. Bizonyítsuk be, hogy a négyzet területe $k^{2}$-tel egyenlõ!
+
+
+\ki{Bíró Bálint}{Eger}\medskip
+
+{\bf 4. feladat I. megoldása: } Jelöljük a négyzet oldalhosszát $x$-szel, ekkor $FB = p - x$ és $AD = kp - x$.
+
+\centerline{\includegraphics{figures/2002-9-4}}
+
+A $BFE$ és $EDA$ háromszögek a szögek egyenlõsége miatt hasonlók, ami azt jelenti, hogy ${p-x \over x} = {x \over kp - x}$, ebbõl pedig átszorzás és rendezés után az következik, hogy $x(k+1) = kp$. Tudjuk azonban, hogy a $k$ és a $k+1$ relatív prímek, azért $k+1$ szükségképpen osztója a jobb oldalon a $p$ számnak is. Ez pedig csak azt hagyja lehetõségként, hogy $k+1=p$, továbbá $x = k$, és így a négyzet területe $x^2 = k^2$.
+\medskip
+
+
+\hbox to \hsize{\hskip2truecm\hrulefill\hskip2truecm}
+{\bf 5. feladat: } Az $ABC$ egyenlõ szárú háromszög $\left(AB=AC\right)$ síkjában adottak az $M$ és $N$ pontok úgy, hogy a $BN$ és $CM$ szakaszok a háromszög belsejében metszik egymást, $NBC\sphericalangle =MCA\sphericalangle$ és az $MBN$ valamint $NCM$ szögek derékszögek. Igazoljuk, hogy az $M$, $N$ és $A$ pontok egy egyenesen vannak!
+
+
+\ki{András Szilárd, Lukács Andor}{Kolozsvár}\medskip
+
+{\bf 5. feladat I. megoldása: } %Ábra
+Legyen az $MN$ szakasz felezõpontja $P$. A $BMN$ és $CMN$ derékszögû háromszögekben $P$ az átfogó felezõpontja, tehát a Thalész-tétel következményeként $PB = PC = MP$, vagyis $P$ rajta lesz a $BC$ szakasz oldalfelezõ merõlegesén.  Tudjuk, hogy az $MBN$ és $NCM$ szögek megegyeznek (ti. derékszögek), ez azt jelenti, hogy a $B$ és $C$ pontok is rajta lesznek az $MN$ fölé emelt Thalész-körön, tehát $MBCN$ húrnégyszög lesz. Ebbõl pedig $NBC \angle = NMC \angle$ következik. Az $MPC$ háromszögrõl már beláttuk, hogy egyenlõszárú, vagyis $MCP \angle = PMC \angle$, és az elsõ feltétel alapján tudjuk, hogy $MCA \angle = MCP \angle$. Mivel pedig $P$ a $CM$ szakasz $B$-vel ellentétes oldalán fekszik, azért $P$ rajta van az $AC$ egyenesen, és mivel tudjuk, hogy rajta van $BC$ felezõmerõlegesén is, azért a $P$ és $A$ pontok meg fognak egyezni, és így $M$, $N$ és $A$ valóban egy egyenesre esnek.
+\medskip
+
+
+\hbox to \hsize{\hskip2truecm\hrulefill\hskip2truecm}
+{\bf 6. feladat: } Mutassuk ki, hogy bárhogyan is választunk $17$ darab természetes számot az $\left\{1, 2, \ldots, 2002\right\}$ halmazból, létezik ezek között három különbözõ szám, amelyekkel mint oldalhosszakkal egy háromszög szerkeszthetõ. Igaz marad-e az állítás $16$ szám esetén?
+
+
+
+\ki{Jakab Tibor}{Sepsiszentgyörgy}\medskip
+
+{\bf 6. feladat I. megoldása: } Legyen a 17 kiválasztott számunk $1 \leq x_1 < x_2 < x_3 < \ldots < x_{17} \leq 2002$. Belátjuk, hogy van olyan $1 \leq i \leq 15$ melyre az $x_{i}, x_{i+1}, x_{i+2}$ hosszúságú szakaszokból háromszög szerkeszthetõ, ez láthatóan csak annyit jelent, hogy $a_{i+2} < a_{i+1} + a_i$. Bizonyítsuk ezt indirekt módon! Ha nem lenne ilyen, akkor teljesülne az, hogy $x_1 \geq 1$, valamint $x_2 \geq 2$, ezekbõl $x_3 \geq x_2 + x_1 \geq 1 + 2 = 3$, ebbõl $x_4 \geq x_2 + x_3 \geq 3 + 2 = 5$, és így tovább, végül rövid számolással belátható, hogy $x_{17} \geq x_{16} + x_{15} \geq 1597 + 987 = 2584$ teljesülne, ami nyilvánvaló ellentmondás. 17 számra így igaz lesz az állítás.
+
+$n = 16$-ra azonban már lehet olyan számokat találni, amelyek megfelelõk lesznek. Válasszunk minden $i$-re $a_i$-nek az $i$-edik Fibonacci-számot, ($F_0 = F_1 = 1, F_{n+2} = F_{n+1} + F_{n}$). Könnyen ellenõrizhetjük, hogy a 16-odik Fibonacci-szám kisebb, mint 2002, tehát minden szám a megadott intervallumba esik. Az így elõállt számhármasokból pedig, mint szakaszok mérõszámaiból, nyilvánvaló módon nem szerkeszthetõ háromszög.
+\medskip
+
+\vfill
+\end{document}

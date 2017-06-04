@@ -1,0 +1,139 @@
+\documentclass[a4paper,10pt]{article} 
+\usepackage[latin2]{inputenc}
+\usepackage{graphicx}
+\usepackage{amssymb}
+\voffset - 20pt
+\hoffset - 35pt
+\textwidth 450pt
+\textheight 650pt 
+\frenchspacing 
+
+\pagestyle{empty}
+\def\ki#1#2{\hfill {\it #1 (#2)}\medskip}
+
+\def\tg{\, \hbox{tg} \,}
+\def\ctg{\, \hbox{ctg} \,}
+\def\arctg{\, \hbox{arctg} \,}
+\def\arcctg{\, \hbox{arcctg} \,}
+
+\begin{document}
+\begin{center} \Large {\em XI. Nemzetközi Magyar Matematika Verseny} \end{center}
+\begin{center} \large{\em Sepsiszentgyörgy, 2002. márc. 16-20.} \end{center}
+\smallskip
+\begin{center} \large{\bf 11. osztály} \end{center}
+\bigskip 
+
+{\bf 1. feladat: } Az
+$$\frac{1}{2002},\frac{2}{2001},\frac{3}{2000}, \cdots, \frac{2000}{3},\frac{2001}{2},\frac{2002}{1}$$
+számok közül kiválasztható-e három úgy, hogy a kiválasztott három szám szorzata $1$ legyen?
+
+
+
+\ki{dr. Katz Sándor}{Bonyhád}\medskip
+
+{\bf 1. feladat I. megoldása: } Nem lehet megfelelõ számokat kiválasztani. Ezt bizonyítsuk be indirekten! Tegyük fel, hogy léteznek ilyen számok, ${a \over 2003 - a}$, ${b \over 2003 - b}$, ${c \over 2003 - c}$, ahol $a,b,c$ 1 és 2002 közé esnek. Ez azt jelenti, hogy
+$${a \over 2003 - a} \cdot {b \over 2003-b} \cdot {c \over 2003 - c} = 1$$
+Ha átszorzunk, azt kapjuk, hogy
+$${\setlength\arraycolsep{2pt}\begin{array}{rcl}
+abc &=& (2003 - a)(2003-b)(2003-c) \\[6pt]
+abc &=& 2003^3 - 2003^2(a+b+c) + 2003(ab + bc + ac) - abc \\[6pt]
+2abc &=& 2003[2003^2 - 2003(a+b+c) + 2003(ab+bc+ac)]
+\end{array}}$$
+Mivel pedig a 2003 prímszám, ezért osztója kéne hogy legyen $a,b,c$ valamelyikének, de ez lehetetlen, hiszen mindhárom szám 2003-nál kisebb.
+\medskip
+
+
+\hbox to \hsize{\hskip2truecm\hrulefill\hskip2truecm}
+{\bf 2. feladat: } Adott az $a>1$ valós szám és az $f:(1,\infty)\longrightarrow \mathbb{N}$ függvény, úgy, hogy
+$$a^{f(x)}\leq x< a^{f(x)+1},\quad \forall x>1.$$
+Igazoljuk, hogy $$f(xyz)\geq f(x)+f(y)+f(z),\quad \forall x,y,z>1.$$
+
+
+\ki{Bencze Mihály}{Brassó}\medskip
+
+{\bf 2. feladat I. megoldása: } Adott $a$ mellett bármely $x$ valós számra létezik egy olyan $k$ kitevõ, melyre $a^k \leq a^{k+1}$. A feladat feltételei mellett
+$$a^{f(x)} \leq x < a_{k+1} \hbox{és} a^k \leq x < a^{f(x) + 1},$$
+ebbõl pedig azt kapjuk, hogy $k-1 < f(x) < k+1$, de mivel $f$ a természetes számokra képez, azért szükségszerûen $f(x) = k$. Vegyünk most két ismeretlent, $x$-et és $y$-t, melyekre $f(x) = k$ és $f(y) = l$. A definícióba visszaírva ezeket az értékeket $a^{k+l} \leq xy < a^{k+l+2}$ adódik, amibõl $f(xy) \geq k+l = f(x) + f(y)$. Alkalmazva ugyanezt az eljárást $xy$-ra és $z$-re végeredményben azt kapjuk, hogy
+$$f(xyz) \geq f(xy) + f(z) \geq f(x) + f(y) + f(z),$$
+amit bizonyítani akartunk.
+\medskip
+
+
+\hbox to \hsize{\hskip2truecm\hrulefill\hskip2truecm}
+{\bf 3. feladat: } Bizonyítsuk be, hogy minden tetraédernek van olyan csúcsa, amelybõl induló három élébõl háromszög szerkeszthetõ.
+
+
+\ki{Kántor Sándor}{Debrecen}\medskip
+
+{\bf 3. feladat I. megoldása: } %Ábra, A-ból kiindulnak a,b,c, B-bõl a,e,d
+Legyen a tetraéder leghosszabb éle $AB$. Belátjuk, hogy ekkor az $A$-ból vagy a $B$-bõl induló élekbõl háromszög szerkeszthetõ.
+
+Alkalmazzuk az indirekt módszert! Legyenek az $A$-ból kiinduló élek $AB = a, b, c$, a $B$-bõl kiindulók $a, d, e$. Ha feltesszük, hogy egyik csúcsból induló élekbõl sem szerkeszthetõ háromszög, akkor mivel $a$ volt a tetraéder leghosszabb éle, azért $a \geq e+d$ és $a \geq b+c$. A tetraédernek azonban $a,e,c$ és $a,d,b$ egy-egy lapot közrefogó élei, vagyis ezek az élek háromszöget alkotnak. Ez azt jelenti, hogy $a < e+c$ és $a < b+d$. Ebbõl egyrészt $2a < e+b+c+d$ következik, másrészt az elõzõ két egyenlõtlenségünkbõl $2a \geq b+c+d+e$ következik, ami ellentmondás, ezzel pedig az állítást beláttuk.
+\medskip
+
+
+\hbox to \hsize{\hskip2truecm\hrulefill\hskip2truecm}
+{\bf 4. feladat: } Határozzuk meg az összes olyan $f:\mathbb{N}\longrightarrow \mathbb{N} $ szürjektív (amely minden természetes számot felvesz) függvényt, amelyre
+$$f\left(10^{f(n)}+m\right)=f\left(10^n\right)+f(m),\quad \forall m,n\in \mathbb{N} .$$
+
+
+\ki{Bíró Béla}{Sepsiszentgyörgy}\medskip
+
+{\bf 4. feladat I. megoldása: } Az identikus függvény könnyen látható módon megfelelõ lesz. Megmutatjuk, hogy ez lesz az egyetlen jó függvény. A szürjektivitás miatt bármely megfelelõ függvényre van egy olyan $n_0$, amelyre $f(n_0) = 0$. Helyettesítsünk most $n = n_0$-t a feltételi egyenletben
+$$f(m+1) = f(10^{n_0}) + f(m)$$
+Ha $n_0 \geq 1$ lenne, akkor $m = n_0 - 1$ helyettesítésével
+$$0 = f(10^{n_0}) + f(n_0 - 1),$$
+ebbõl pedig $f(10^{n_0}) = 0$, amibõl már $f(n) = 0$-t kapjuk minden $n$-re, ez viszont ellentmondás, mivel feltettük, hogy $f$ szürjektív.
+
+Ez azt jelenti, hogy $n_0 = 0$, vagyis $n = 0$-t helyettesítve
+$$f(m+1) = f(m) + f(1)$$
+Teljes indukcióval könnyen belátható, hogy bármely $k$-ra $f(k) = kf(1)$. Ez azt jelenti, hogy a szürjektivitás miatt $f(1) = 0$ nem lehetséges. Ekkor viszont a feltételi egyenletünk a
+$$\left(10^{f(n) + m}\right)f(1) = 10^nf(1) + mf(1)$$
+formát ölti, és mivel $f(1) \not = 0$, azért egyszerûsíthetünk vele, és így
+$$10^{f(n)} + m = 10^n + m.$$
+Ez pedig azt jelenti, hogy az exponenciális függvény injektivitása miatt $f(n) = n$ minden $n$-re, és éppen ezt akartuk belátni.
+\medskip
+
+
+\hbox to \hsize{\hskip2truecm\hrulefill\hskip2truecm}
+{\bf 5. feladat: } a) Oldjuk meg a valós számok halmazán a
+$$2^{nx}+\left(n-1\right)\cdot 2=\frac{2}{x}$$
+egyenletet, ha $n\in \mathbb{N} ^*$ rögzített természetes szám.
+
+b) Határozzuk meg annak az $\left(x_n\right)_{n\geq 1}$ sorozatnak az általános tagját, amelynek a tagjai teljesítik
+$$2^{x_1}+2^{2x_2}+2^{3x_3}+\ldots +2^{nx_n}=\frac{2}{x_n}$$
+egyenlõséget bármely $n\in \mathbb{N}^*$ esetén. 
+
+
+\ki{Longáver Lajos}{Nagybánya}\medskip
+
+{\bf 5. feladat I. megoldása: } a.) Mivel a bal oldalon mindenképpen egy pozitív szám áll, ez igaz lesz a jobb oldalra is, tehát $x > 0$ teljesül. Vegyük észre továbbá, hogy a pozitív számokon a $2^{nx} + (n-1) \cdot 2$ függvény szigorúan növekvõ, a ${2 \over x}$ függvény pedig szigorúan csökkenõ. Ez azt jelenti, hogy az egyenletnek legfeljebb egy megoldása van. A kifejezések alakjából azonban láthatjuk, hogy ${1 \over n}$ megoldás, tehát másik nincs is.
+
+b.) Teljes indukcióval belátjuk, hogy bármely $n$-re $x_n = {1 \over n}$. $n = 1$-re $x_1 = 1$ a $2^{x_1} = {2 \over x_1}$ egyenlet megoldása. Tegyük fel most, hogy bármely $n$-nél kisebb $k$-ra $x_k = {1 \over k}$ (ez nem szükséges feltétele a megoldás létezésének, de mi egyetlen sorozatot keresünk, és annak a tagjaira ez föltehetõ), ekkor az egyenlet
+$$2^{n} + (n-1)\cdot 2 = {2 \over x_n},$$
+ennek pedig csak egyetlen megoldása van, $x_n = {1 \over n}$. Ezzel az állítást beláttuk.
+\medskip
+
+
+\hbox to \hsize{\hskip2truecm\hrulefill\hskip2truecm}
+{\bf 6. feladat: } Egy lépés során az $\left(a, b\right)$ természetes számpárt az $\left(a+2b, b+2a\right)$ számpárral helyettesítjük.
+
+a) Határozzuk meg azokat a természetes számpárokat, amelyekbõl bizonyos számú lépés után a $\left(2002,2003\right)$ számpárt kapjuk.
+
+b) Adott a $p>3$ prímszám. Bizonyítsuk be, hogy létezik egy olyan kezdeti $\left(a, b\right)$ számpár, amelyre vagy az $a$ vagy a $b$ szám osztható $p$-vel és legalább $\displaystyle \frac{p+1}{2}$ lépés elvégzése után egy olyan számpárt kapunk, amelyben a két szám összege $2\cdot 3^p$.
+
+
+
+\ki{Bege Antal}{Kolozsvár}\medskip
+
+{\bf 6. feladat I. megoldása: } A számok összegét vizsgálva azt látjuk, hogy egy-egy lépés után az háromszorosára nõ. A végeredményben a számok összege $4005 = 3^2 \cdot 445$, vagyis legfeljebb két lépést tehetünk, mivel pedig a lépések visszafelé is elvégezhetõk ($a = {2 \over 3}\left( b+2a - {1 \over 2}(a+2b) \right)$, $b = {2 \over 3}\left( 2b + a - {1 \over 2}(2a+b) \right)$), azért csak két megoldás lehet, $(668, 667)$ és $(222, 223)$, ezekbõl egy, illetve két lépésben kapjuk meg a kívánt számpárt.
+
+b.) A két szám összege az imént látott módon egy lépésben háromszorosára nõ, míg különbségük nyilván nem változik. Az utolsó lépés után az összeg $2 \cdot 3^p$ lesz, próbálkozzunk elõször olyan számokkal, melyek különbsége 2. Tekintsük az $a_0 = 3^k + 1$ és $b_0 = 3^k - 1$ számokat, ezekbõl $n$ lépés elvégzése után az
+$$(a_n, b_n) = \left( 3^{k+n} + (-1)^n, 3^{k+n} - (-1)^n \right)$$
+számpárt kapjuk, a kis Fermat-tétel szerint pedig a
+$$3^{p-1} - 1 = \left(3^{{p-1 \over 2}} - 1 \right) \left( 3^{{p-1 \over 2}} + 1 \right)$$
+szám osztható lesz $p$-vel, ennek alapján ha $k$-t ${p-1 \over 2}$-re választjuk, akkor mivel $p$ prím, azért osztani fogja a szorzat valamelyik tényezõjét, tehát $a_0$-t vagy $b_0$-t, és ha ${p+1 \over 2}$ lépést végzünk, akkor ezek után a fent kapott formula szerint az összeg nem lesz más, mint $2 \cdot 3^p$, tehát ezek a számok valóban megfelelõk lesznek.
+\medskip
+
+\vfill
+\end{document}
