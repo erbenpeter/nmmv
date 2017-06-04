@@ -1,0 +1,117 @@
+\documentclass[a4paper,10pt]{article} 
+\usepackage[latin2]{inputenc}
+\usepackage{graphicx}
+\usepackage{amssymb}
+\voffset - 20pt
+\hoffset - 35pt
+\textwidth 450pt
+\textheight 650pt 
+\frenchspacing 
+
+\pagestyle{empty}
+\def\ki#1#2{\hfill {\it #1 (#2)}\medskip}
+
+\def\tg{\, \hbox{tg} \,}
+\def\ctg{\, \hbox{ctg} \,}
+\def\arctg{\, \hbox{arctg} \,}
+\def\arcctg{\, \hbox{arcctg} \,}
+
+\begin{document}
+\begin{center} \Large {\em IV. Nemzetközi Magyar Matematika Verseny} \end{center}
+\begin{center} \large{\em Paks, 1995. márc. 31-ápr. 4.} \end{center}
+\smallskip
+\begin{center} \large{\bf 12. osztály} \end{center}
+\bigskip 
+
+{\bf 1. feladat: } Az $A$ csúcsú $\alpha$ hegyesszög szögtartományában vegyünk fel egy tetszés szerinti $P$ pontot. Ennek merõleges vetülete a szögszárakon legyen $B$, illetve $C$. Bizonyítsuk be, hogy
+$$BC/AP=\sin \alpha.$$
+
+
+\ki{Csorba Ferenc}{Gyõr}\medskip
+
+{\bf 1. feladat I. megoldása: } %Saját megoldás
+Vegyük észre, hogy az $ABCP$ négyszög húrnégyszög, hiszen van két szemközti derékszöge. A körülírt kör átmérõje $AP$ lesz, mivel ez a szakasz mindkét másik csúcsból derékszög alatt látszik. Ez pedig azt jelenti, hogy az $\alpha$ kerületi szöggel rendelkezõ $BC$ ívhez tartozó húr hossza $\sin \alpha \cdot AP$ lesz, ez pedig éppen a feladat által kívánt összefüggést adja. 
+\medskip
+
+
+\hbox to \hsize{\hskip2truecm\hrulefill\hskip2truecm}
+{\bf 2. feladat: } Az $ABCD$ konvex négyszög átlói az $O$ pontban metszik egymást. Mutassuk meg, hogy az
+$$AB^2+BC^2+CD^2+DA^2= 2(AO^2+BO^2+CO^2+DO^2)$$
+egyenlõség akkor és csak akkor teljesül, ha vagy az átlók merõlegesek, vagy pedig $O$ felezi valamelyik átlót.
+
+
+\ki{Kiss Sándor}{Nyíregyháza}\medskip
+
+{\bf 2. feladat I. megoldása: } Jelöljük az $AOB$ szöget $\alpha$-val! Ekkor a $DOC$ szög is $\alpha$ lesz, továbbá az $AOD$ és $BOC$ szögek $180^{\circ} - \alpha$ nagyságúak lesznek. A koszinusztételt felírva az $ABO$, $BCO$, $CDO$, $DAO$ háromszögekre (az $O$-nál lévõ csúcsra) és a megfelelõ oldalakat összeadva
+$$AB^2 + BC^2 + CD^2 + DA^2 = 2(AO^2 + BO^2 + CO^2 +DO^2) - 2(AO \cdot BO - BO \cdot CO + CO \cdot DO - DO \cdot AO) \cdot \cos \alpha$$
+Ahhoz, hogy az egyenlõség a feladatban fennálljon, a kivonandónak a jobb oldalon 0-nak kell lennie, mivel azonban az
+$$(AO - CO)(BO - DO) \cdot \cos \alpha$$
+alakba írható, azért csak akkor lesz 0, ha $AO = CO$, vagy $BO = DO$ (tehát $O$ felezi valamelyik átlót), illetve ha $\alpha = {\pi \over 2}$ (konvex négyszögrõl van szó, tehát csak ez az egy érték lehetséges), amibõl pedig az következik, hogy az átlók merõlegesek egymásra. Ez a két feltétel pedig együtt épp a feladatban leírtakat jelenti.
+\medskip
+
+
+\hbox to \hsize{\hskip2truecm\hrulefill\hskip2truecm}
+{\bf 3. feladat: } Adott az $\{a_1, a_2,\ldots, a_n\}$ pozitív számokból álló halmaz. Írjuk fel minden nem üres részhalmazában a számok összegét. Igazoljuk, hogy az így felírt számokat $n$ csoportba tudjuk osztani úgy, hogy az egyes csoportokban a legnagyobb és legkisebb szám hányadosa nem nagyobb 2-nél!
+
+
+\ki{Katz Sándor}{Bonyhád}\medskip
+
+{\bf 3. feladat I. megoldása: } Az általánosság megszorítása nélkül feltehetjük, hogy $a_1 \leq a_2 \leq \ldots \leq a_n$, hiszen egy halmaz elemeirõl beszélünk, az pedig rendezetlen. Jelöljük $b_i$-vel az ${1 \over 2}(a_1 + a_2 + a_3 + \ldots + a_i)$ kifejezés értékét! Megfelelõ csoportosítás lesz, ha azokat a számokat soroljuk egy csoportba, amelyek egy adott $i$-re $b_i$ és $2b_i$ közé esnek. Ilyen módon nyilván legfeljebb $n$ csoportot definiálunk; ha esetleg valamelyik üres lenne, további tetszõleges szétosztásával növelhetõ a csoportok száma (egy csoport bármely részhalmaza is nyilván megfelel a kívánalmaknak). Nem biztos továbbá, hogy minden szám csoportját egyértelmûen meg tudjuk határozni, de ez nem is szükséges; a megfelelõ csoportok közül bármelyikbe besorolhatjuk, csak annyi a fontos, hogy bármely csoport minden eleme $b_k$ és $2b_k$ közé essen valamely $k$-ra.
+
+Be kell látnunk még, hogy bármelyik számot besorolhatjuk legalább egy csoportba. Ezt indirekt módon bizonyíthatjuk: ha nem így lenne, találnánk egy olyan $s$ összeget, valamint egy $k$ számot, amelyekre $2b_k < s < b_{k+1}$ teljesülne. $2b_k < s$, tehát $a_1 + a_2 + a_3 + \ldots + a_k < s$ miatt $s$ tartalmaz legalább egy $k$-nál nagyobb indexû (így nagyobb) elemet, hiszen az összes $k$-nál kisebb indexû elemet felsoroltuk az összegben. Ez azt jelenti, hogy $s \geq a_{k+1}$. Ekkor viszont az $a_1 + a_2 + a_3 + \ldots + a_k < s$ egyenlõtlenségbe a jobb oldalhoz $s$-et, a bal oldalhoz $a_{k+1}$-et adva továbbra is teljesül az egyenlõtlenség, ez viszont azt jelenti, hogy
+$$a_1 + a_2 + a_3 + \ldots + a_k + a_{k+1} < 2s,$$
+tehát $b_{k+1} < s$, ami ellentmondás, hiszen a kezdeti feltevésünk épp ennek az ellenkezõje volt. Ezzel tehát beláttuk, hogy minden számot besorolhatunk legalább egy csoportba, így a feladatot megoldottuk.
+\medskip
+
+
+\hbox to \hsize{\hskip2truecm\hrulefill\hskip2truecm}
+{\bf 4. feladat: } Bizonyítsuk be, hogy ha $x$ és $y$ olyan pozitív egészek, amelyekre $2x^2+x=3y^2+y$ teljesül, akkor $x-y$, $2x+2y+1$ és $3x+3y+1$ is négyzetszámok.
+
+
+\ki{Bogdán Zoltán}{Cegléd}\medskip
+
+{\bf 4. feladat I. megoldása: } Alakítsuk át az egyenletet!
+$$2x^2 + x - 2y^2 - y = y^2$$
+A feladat állítását is figyelembe véve a bal oldal viszonylag könnyen szorzattá alakítható:
+$$(x-y)(2x+2y+1) = y^2$$
+Ha belátnánk, hogy $x-y$ és $2x + 2y + 1$ relatív prímek, az elsõ két kifejezést illetõen kész lennénk. Ez azonban igaz, ha ugyanis $(x-y)$-nak $p$ egy prímosztója, akkor osztója $y^2$-nek is az egyenlet miatt, tehát osztója $y$-nak, ekkor azonban szükségképpen osztója $x$-nek is, ebbõl viszont már az következik, hogy osztja $2x+2y$-t, tehát relatív prím $2x+2y+1$-hez, vagyis nem osztja azt. Így az elsõ két kifejezésre az állítás igaz.
+
+A harmadik kifejezéshez használjuk egy másik átrendezését az eredeti egyenletnek!
+{\setlength\arraycolsep{2pt}\begin{eqnarray*}
+3x^2 + x - 3y^2 - y &=& x^2 \\ (x - y)(3x + 3y + 1) &=& x^2 
+\end{eqnarray*}}
+Az elõzõekbõl tudjuk, hogy $x-y$ négyzetszám, ekkor viszont $3x+3y+1$-nek is annak kell lennie. Ezzel a feladat megoldását befejeztük.
+\medskip
+
+
+\hbox to \hsize{\hskip2truecm\hrulefill\hskip2truecm}
+{\bf 5. feladat: } Határozzuk meg az összes olyan $f$ függvényt, amely az egész számok halmazán van értelmezve és értéke is egész, és minden $x$ egészre eleget tesz a következõ egyenletnek:
+$$3f(f(x))=2f(x)+x$$
+
+
+\ki{András Szilárd}{Csíkszereda}\medskip
+
+{\bf 5. feladat I. megoldása: } Rendezzünk át!
+$$3\left(f\left(f\left(x\right)\right)-f(x)\right) = -\left(f(x)-x\right)$$
+Definiáljuk a $g(x) = f(x) - x$ függvényt, ez láthatóan $f$-hez nagyon hasonló tulajdonságokkal rendelkezik. Ezzel a függvénnyel az egyenlet alakja a következõ:
+$$3g\left(f(x)\right) = -g(x)$$
+Ez azt jelenti, hogy minden egész $x$-re $g(x)$ osztható lesz $3$-mal. Ekkor viszont $3g\left(f(x)\right)$ osztható 9-cel, ami azt jelenti, hogy $g(x)$ osztható $9$-cel is, és így tovább, teljes indukcióval belátható, hogy bármely $n$ természetes számra és $x$ egészre $3^n | g(x)$, ezt a feltételt azonban csak a $g(x) = 0$ függvény elégíti ki, ez pedig $g(x)$ definíciójával egybevetve azt jelenti, hogy bármely $x$-re $f(x) = x$. Ekkor pedig teljesül a feladatban szereplõ egyenlet is.
+\medskip
+
+
+\hbox to \hsize{\hskip2truecm\hrulefill\hskip2truecm}
+{\bf 6. feladat: } Fibonacci sorozatnak nevezzük az $F_1=1$, $F_2=1$, $F_n=F_{n-1}+F_{n-2}$ ($n\ge 3$) kikötésekkel értelmezett sorozatot. Bizonyítsuk be, hogy ha $0<p<n$, akkor az $F_{2p+1}+F_{2p+3}+\ldots+F_{2n+1}$ és $F_{2p}+F_{2p+2}+\ldots+F_{2n}$ számok nem lehetnek a Fibonacci sorozat tagjai.
+
+
+\ki{Bencze Mihály}{Brassó}\medskip
+
+{\bf 6. feladat I. megoldása: } Jelöljük az elsõ számot $A$-val, a másodikat $B$-vel!
+A Fbonacci-sorozat definícióját felhasználva
+$$A+B = F_{2p+2} + F_{2p+4} + \ldots  + F_{2n+2}$$
+$$A-B = F_{2p-1} + F_{2p+1} + \ldots + F_{2n-1}$$
+
+Továbbá $A = (A+B)-B$ miatt $A = F_{2n+2} - F_{2p}$, és $B = A-(A-B)$ miatt $B=F_{2n+1} - F_{2p-1}$. A sorozat nyilvánvalóan növekvõ és tagjai pozitívak, továbbá $F_{2n+2} = F_{2n+1} + F_{2n}$, így hát $A = F_{2n+2} - F_{2p} > F_{2n+2} - F_{2n} = F_{2n+1}$, de nyilván $A < F_{2n+2}$. Teljesen hasonló módon $F_{2n} < B < F_{2n+1}$, mivel azonban a sorozat monoton növekszik, ezért két szomszédos tagja között nem lehet újabb tag, tehát $A$ és $B$ valóban nem a Fibonacci-sorozat tagjai.
+\medskip
+
+\vfill
+\end{document}
