@@ -1,0 +1,125 @@
+\documentclass[a4paper,10pt]{article} 
+\usepackage[latin2]{inputenc}
+\usepackage{graphicx}
+\usepackage{amssymb}
+\voffset - 20pt
+\hoffset - 35pt
+\textwidth 450pt
+\textheight 650pt 
+\frenchspacing 
+
+\pagestyle{empty}
+\def\ki#1#2{\hfill {\it #1 (#2)}\medskip}
+
+\def\tg{\, \hbox{tg} \,}
+\def\ctg{\, \hbox{ctg} \,}
+\def\arctg{\, \hbox{arctg} \,}
+\def\arcctg{\, \hbox{arcctg} \,}
+
+\begin{document}
+\begin{center} \Large {\em VIII. Nemzetközi Magyar Matematika Verseny} \end{center}
+\begin{center} \large{\em Debrecen, 1999. márc. 25-29.} \end{center}
+\smallskip
+\begin{center} \large{\bf 11. osztály} \end{center}
+\bigskip 
+
+{\bf 1. feladat: } Melyik az a háromjegyû szám, amelynek négyzete is és köbe is ugyanezzel a háromjegyû számmal végzõdik?
+
+
+
+\ki{Bogdán Zoltán}{Cegléd}\medskip
+
+{\bf 1. feladat I. megoldása: } Jelöljük a számot $n$-nel! Az elsõ feltétel szerint $n^2 - n = n(n-1)$ osztható 1000-rel. Közismert, hogy $n$ és $n-1$ relatív prímek, tehát az egyik osztható lesz 125-tel, a másik 8-cal (nyilvánvalóan egyik sem lehet 1). Ha $n$ osztható 125-tel és háromjegyû, akkor $n-1$ csak akkor lesz 8-cal osztható, ha $n = 625$. Ha pedig $n-1$ osztható 125-tel, akkor $n$ csak abban az esetben lesz 8-cal osztható, ha $n = 376$. Mivel pedig $n^3 - n$ is osztható $n(n-1)$-gyel, azért erre a két számra $n^3 - n$ osztható lesz 1000-rel, tehát ez a két szám mindkét feltételt kielégíti, és láttuk, hogy más számok nem jöhetnek szóba.
+\medskip
+
+
+\hbox to \hsize{\hskip2truecm\hrulefill\hskip2truecm}
+{\bf 2. feladat: } Tekintsük az összes olyan $P(x,y)$ pontot, amelynek koordinátáira $x^2y^2+x^2-10xy-8x+16=0$ teljesül. Milyen értékeket vehet fel az $xy$ szorzat?
+
+
+\ki{Kántor Sándorné}{Debrecen}\medskip
+
+{\bf 2. feladat I. megoldása: } Alakítsuk át a feltételi egyenletet!
+$$(xy - 5)^2 + (x - 4)^2 = 25$$
+$$(xy - 5)^2 = 25 - (x - 4)^2$$
+Ebbõl látható, hogy $(xy - 5)^2 \leq 25$, ebbõl pedig rövid számolás után $xy \in \left[0; 10 \right]$ adódik. Az is látható továbbá, hogy minden lehetséges $xy$ értékre van egy (általában 2) $x$ érték, amely teljesíti az egyenletet, ehhez pedig könnyen találhatunk $y$ értéket (egyedül kérdéses az $x = 0$ eset, de ekkor $x = 8$ is ugyanazt az eredményt adja a jobb oldalon). Tehát $xy$ csak a $\left[ 0;10 \right]$ intervallumba eshet, és ezen belül minden értékhez található megfelelõ $x,y$ pár (vagyis pont). Ez pedig azt jelenti, hogy $xy$ lehetséges értékei a 0 és 10 közé esõ valós számok.
+\medskip
+
+
+\hbox to \hsize{\hskip2truecm\hrulefill\hskip2truecm}
+{\bf 3. feladat: } Határozzuk meg az összes olyan valós együtthatós polinomot, amelyre minden valós $x$ esetén teljesül az 
+$$x\cdot p(x)\cdot p(1-x)+x^3+100 \ge 0$$
+egyenlõtlenség!
+
+
+
+\ki{Erdõs Gábor}{Nagykanizsa}\medskip
+
+{\bf 3. feladat I. megoldása: } Ha a keresett polinom $n$-edfokú ($n > 1$), akkor a bal oldalon egy $2n+1$-edfokú polinom áll, aminek mindig van negatív értéke, hiszen a fokszám páratlan. Ha a polinom konstans, akkor a bal oldal harmadfokú, és arra is igaz ez a megállapítás. Ez azt jelenti, hogy a polinomunk csak elsõfokú lehet.
+Legyen $p(x) = ax + b$. Ekkor a bal oldal
+$$(1-a^2)x^3 + a^2x^2 + (b^2 + ab) x + 100$$
+alakú. Ez nem lehet egy harmadfokú polinom, tehát $1-a^2 = 0$ szükséges, ami azt jelenti, hogy $a^2 = 1$. A kapott polinom ekkor másodfokú lesz, fõegyütthatója pozitív, tehát csak akkor lehetne negatív értéke, ha a diszkrimináns pozitív lenne, ez pedig azt jelenti, hogy 
+$$(b^2 + ab)^2 - 400 a^2 \leq 0,$$
+tehát $|b^2 + ab| \leq 20$. Két eset lehetséges:
+
+1.) $a = 1$. Ekkor $-5 \leq b \leq 4$, vagyis $p(x) = x + b$, ahol $b \in \left[ -5; 4\right]$
+
+2.) $a = -1$. Ekkor $-4 \leq b \leq 5$, vagyis $p(x) = -x + b$, ahol $b \in \left[ -4; 5 \right]$.
+
+Ez a két polinom fog tehát megfelelni a feltételnek, és a gondolatmenet szerint csak ezek.
+\medskip
+
+
+\hbox to \hsize{\hskip2truecm\hrulefill\hskip2truecm}
+{\bf 4. feladat: } Legyen $S$ az $ABC$ hegyesszögû háromszög súlypontja, és $r$ a háromszög köré írt kör sugara. Bizonyítsuk be, hogy $${AS}^2+{BS}^2+{CS}^2 > \frac{8r^2}{3}.$$
+
+
+\ki{Oláh György}{Révkomárom}\medskip
+
+{\bf 4. feladat I. megoldása: } Használjuk fel elõször, hogy a súlypont a súlyvonalakat 2:1 arányban osztja, továbbá a súlyvonalak ismert felírását a háromszög oldalaival:
+$$AS^2 + BS^2 + CS^2 = {4 \over 9}(s_a^2 + s_b^2 + s_c^2) = {1 \over 3}(a^2 + b^2 + c^2)$$
+Felhasználva egy körben az ívhez tartozó húr és kerületi szög közti összefüggést:
+$${1 \over 3}(a^2 + b^2 + c^2) = {1 \over 3}\left( (2r \sin \alpha)^2 + (2r \sin \beta)^2 + (2r \sin \gamma)^2 \right) = {4r^2 \over 3}(\sin ^2 \alpha + \sin ^2 \beta + \sin ^2 \gamma)$$
+Felhasználva most, hogy bármely $\phi$ szögre $\sin ^2 \phi + \cos ^2 \phi = 1$, továbbá, hogy $\sin \phi = \sin (180^{\circ} - \phi)$, felírhatjuk a következõt:
+$${4r^2 \over 3}(\sin ^2 \alpha + \sin ^2 \beta + \sin ^2 \gamma) = {4r^2 \over 3}\left(2 - \cos ^2 \alpha - \cos ^2 \beta + \sin ^2 (\alpha + \beta)\right)$$
+Újra felhasználva az elõzõ összefüggést és elvégezve a mûveleteket:
+$${4r^2 \over 3}\left(2 - \cos ^2 \alpha - \cos ^2 \beta + \sin ^2 (\alpha + \beta)\right) = {4r^2 \over 3}(2 - 2 \cos ^2 \alpha \cos ^2 \beta + 2 \cos \alpha \cos \beta \sin \alpha \sin \beta)$$
+És végül ezt a kifejezést a második tényezõben $2\cos \alpha \cos \beta$-t kiemelve és az addíciós tételt alkalmazva
+$${4r^2 \over 3} (2 - 2 \cos \alpha \cos \beta \cos \gamma)$$
+alakra hozhatjuk, mivel pedig a háromszögünk hegyesszögû, azért $\cos \alpha \cos \beta \cos \gamma > 0$, ebbõl pedig az adódik, hogy
+$$AS^2 + BS^2 + CS^2 > {4r^2 \over 3} \cdot 2 = {8r^2 \over 3},$$
+és éppen ezt akartuk belátni.
+\medskip
+
+
+\hbox to \hsize{\hskip2truecm\hrulefill\hskip2truecm}
+{\bf 5. feladat: } Bizonyítsuk be, hogy ha egy tetraéder súlypontja mind a négy csúcstól egyenlõ távolságra van, akkor bármely két szemközti élpár felezõpontjait összekötõ szakasz merõleges mindkét élre.
+
+
+\ki{Kiss Sándor}{Nyíregyháza}\medskip
+
+{\bf 5. feladat I. megoldása: } %Egy térbeli ábra jó lenne, ami a könyvben van, kicsit egyszerûsítõ nekem
+Válasszuk ki a tetraéder két csúcsát, $C$-t és $D$-t, valamint a szemközti él felezõpontját, $F$-et! Elegendõ bebizonyítanunk, hogy a $CFD$ háromszög egyenlõ szárú, ekkor az $F$ pontból induló súlyvonal, amely $CD$-t $E$-ben metszi, merõleges lesz a $CD$ oldalra. A gondolatmenet nyilván nem fog függni attól, hogy melyik élt választottuk ki, azért a többi négy élre is igaz lesz hasonló állítás, tehát bebizonyítanánk a feladat által kért összefüggést.
+
+Ennek belátásához használjuk fel, hogy a feladat szerint $AS = BS = CS = DS$, mivel pedig a súlypont ismert arányban osztja a súlyvonalakat, azért ebbõl $SS_1 = SS_2$, tehát $CS_1 = DS_2$ következik. $S_1$ súlypont $ABD$-ben, továbbá $S_2$ súlypont $ABC$-ben, így 2:1 arányban osztják a $DF$, illetve $CF$ szakaszt, továbbá az $S_1SD$ és $S_2CS$ háromszögek egybevágók az $S$-nél lévõ szögeik és az õket közrefogó oldalak egyenlõsége miatt, amibõl azt kapjuk, hogy $CDS_1S_2$ egyenlõszárú trapéz lesz. Ez viszont azt jelenti, hogy $CDF$ valóban egyenlõ szárú. Ezzel pedig az állítást bebizonyítottuk.
+\medskip
+
+
+\hbox to \hsize{\hskip2truecm\hrulefill\hskip2truecm}
+{\bf 6. feladat: } Igazoljuk, hogy ha $x_1, x_2, \dots, x_n (n \ge 3)$ különbözõ pozitív egész számok, akkor
+$$\frac{1}{{x_1}^3}+\dots + \frac{1}{{x_n}^3} < \frac{11}{8} - \frac{1}{2n(n-1)}.$$
+
+
+\ki{Bencze Mihály}{Brassó}\medskip
+
+{\bf 6. feladat I. megoldása: } Az általánosság megszorítása nélkül tegyük fel, hogy $0 < x_1 < x_2 < \ldots < x_n$, mivel pedig a számok pozitív egészek, azért $1 \leq x_1,\ 2 \leq x_2, \ n \leq x_n$ is teljesülni fog. Ebbõl már adódik, hogy
+{\setlength\arraycolsep{2pt}\begin{eqnarray*}
+{1 \over x_1^3} + {1 \over x_2^3} + \ldots + {1 \over x_n^3} &<& {1 \over 1 ^3} + {1 \over 2^3} + \ldots + {1 \over n^3} < \\[6pt]
+&<& 1 + {1 \over 8} + {1 \over 1 \cdot 2 \cdot 3} + {1 \over 2 \cdot 3 \cdot 4} + \ldots + {1 \over (n-2)(n-1)n} \\[6pt]
+&=& {9 \over 8} + {1 \over 4} - {1 \over 2(n-1)n} = {11 \over 8} - {1 \over 2(n-1)n}
+\end{eqnarray*}}
+Az utolsó elõtti egyenlõség a törtek elemi törtekre bontásával látható, amikor is egy teleszkopikus összeg alakul ki, hiszen ${1 \over n(n+1)(n+2)} = {{1 \over 2} \over n} - {1 \over n+1} + {{1 \over 2} \over n+2}$. A kapott egyenlõtlenség pedig éppen az, amit bizonyítani kellett.
+\medskip
+
+\vfill
+\end{document}

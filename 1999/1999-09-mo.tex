@@ -1,0 +1,119 @@
+\documentclass[a4paper,10pt]{article} 
+\usepackage[latin2]{inputenc}
+\usepackage{graphicx}
+\usepackage{amssymb}
+\voffset - 20pt
+\hoffset - 35pt
+\textwidth 450pt
+\textheight 650pt 
+\frenchspacing 
+
+\pagestyle{empty}
+\def\ki#1#2{\hfill {\it #1 (#2)}\medskip}
+
+\def\tg{\, \hbox{tg} \,}
+\def\ctg{\, \hbox{ctg} \,}
+\def\arctg{\, \hbox{arctg} \,}
+\def\arcctg{\, \hbox{arcctg} \,}
+
+\begin{document}
+\begin{center} \Large {\em VIII. Nemzetközi Magyar Matematika Verseny} \end{center}
+\begin{center} \large{\em Debrecen, 1999. márc. 25-29.} \end{center}
+\smallskip
+\begin{center} \large{\bf 9. osztály} \end{center}
+\bigskip 
+
+{\bf 1. feladat: } Milyen $p$ és $q$ prímszámokra teljesül a $3(p^2-q)=q^2-p$ egyenlet?
+
+
+\ki{Oláh György}{Révkomárom}\medskip
+
+{\bf 1. feladat I. megoldása: } Alakítsuk át az egyenletet: $(3p+1)p = q(q+3)$. Mivel $p$ és $q$ prímek, azért $3p+1$-nek $q$-val, $q+3$-nak $p$-vel kell oszthatónak lennie. Ebbõl látható, hogy a két prím nem lehet egyenlõ. Ha az egyik esetben a hányados $k$, a másikban $l$, akkor az egyenlet $kqp = qlp$, amibõl $k=l$ szükségképpen következik. Ekkor a két oszthatóság $3p+1 = kq$ és $q+3 = kp$ alakba írható, amit megoldva $(k^2 - 3)p = 3k+1$ adódik. $k>4$-re a bal oldal elsõ tényezõje már nagyobb lesz a jobb oldalnál, ezért elegendõ a $k \leq 4$ esetet vizsgálni. Egyszerû behelyettesítéssel kapjuk, hogy csak $k=2$ esetén lesz a $p$ valóban prímszám. Ebben az esetben $p = 7$ és $q = 11$ adódik, ami könnyen ellenõrizhetõ módon tényleg megoldás lesz.
+\medskip
+
+
+\hbox to \hsize{\hskip2truecm\hrulefill\hskip2truecm}
+{\bf 2. feladat: } Az $ABC$ háromszögben $AC=BC$ és $ABC\angle =BAC\angle =40^\circ$ . A $BAC$ szög szögfelezõje a $BC$ oldalt a $D$ pontban metszi. Bizonyítsuk be, hogy $AD+DC=AB$!
+
+
+\ki{Szabó Magda}{Szabadka}\medskip
+
+{\bf 2. feladat I. megoldása: } Vegyük fel az $AB$ szakaszon azokat az $E$ és $F$ pontokat, melyekre $ADE \angle = 60^{\circ}$ és $BDF \angle = 40^{\circ}$.
+
+\centerline{\includegraphics{figures/1999-9-2}}
+
+A négy pont $A, E, F, B$ sorrendben fog elhelyezkedni a szakaszon, hiszen az $ADE$ és $BDF$ szögek összege kisebb, mint az $ADB$ szög, ami $120^{\circ}$ nagyságú ($C$-nél a háromszögben nyilván $100^{\circ}$-os szög van). Így az $ADC$ és $AED$ háromszögek hasonlók lesznek, mert minden szögük megegyezik. Megegyezik azonban az $AD$ oldaluk is, így a két háromszög egybevágó. A szögek kiszámításával belátható továbbá, hogy az $EFD$, a $DAF$ és a $DFB$ háromszögek mind egyenlõ szárúak. Ebbõl az következik, hogy 
+$$DC = DE = DF = FB, \ AD = AF$$
+Ez pedig továbbgondolva:
+$$AD + DC = AF + FB = AB,$$
+és éppen ezt akartuk bizonyítani.
+\medskip
+
+
+\hbox to \hsize{\hskip2truecm\hrulefill\hskip2truecm}
+{\bf 3. feladat: } Az $ABCD$ érintõnégyszög ($A$ és $C$ átellenes csúcsok) beírt körének középpontja $O$, sugara $r$. Az $ABO$ és $CDO$ háromszögek köré írt körének sugara $r_1$ illetve $r_2$. Bizonyítsuk be, hogy $r$ nem lehet nagyobb $r_1$-nél is és $r_2$-nél is.
+
+
+\ki{Kántor Sándor}{Debrecen}\medskip
+
+{\bf 3. feladat I. megoldása: } %Ábra a szögekkel
+Jelöljük a négyszög csúcsainál lévõ szögek felét $\alpha$-val, $\beta$-val, $\gamma$-val, $\delta$-val! A négy szög összege $180^{\circ}$, így $\alpha + \beta$ és $\gamma + \delta$ közül valamelyik legfeljebb $90^{\circ}$ nagyságú. Ez azt jelenti, hogy az $ABO$ és $CDO$ háromszögek közül az egyik derékszögû vagy tompaszögû. Ez azt jelenti, hogy ennek a háromszögnek az $O$ csúcsból induló magassága (ennek a hossza $r$) legfeljebb akkora, mint a háromszög köré írt kör sugara. Tehát $r$ nem lesz nagyobb $r_1$ és $r_2$ közül valamelyiknél, és épp ezt kellett belátnunk.
+\medskip
+
+
+\hbox to \hsize{\hskip2truecm\hrulefill\hskip2truecm}
+{\bf 4. feladat: } A valós számok halmazában értelmezett $\circ$ mûveletre (amelynél bármely $x$, $y$ valós szám esetén ($x\circ y$) is valós szám) minden $x$, $y$, $z$ valós szám esetén teljesülnek a következõ tulajdonságok:
+$$x\circ y = y\circ x,$$
+$$(x\circ y)z =(xz)\circ (yz)$$
+$$(x\circ y)+z = (x+z)\circ (y+z).$$
+Mennyi $1999\circ 2000$?
+
+
+\ki{Kántor Sándorné}{Debrecen}\medskip
+
+{\bf 4. feladat I. megoldása: } A harmadik feltétel miatt $(x \circ y) + (-x-y) = (-y) \circ (-x)$. Továbbá az elsõ és második feltétel együttes alkalmazásával $(-y) \circ (-x) = -(x \circ y)$. Összességében tehát $(x \circ y) + (-x-y) = - (x \circ y)$. Ez pedig átrendezve $x \circ y = {x+y \over 2}$-t jelenti. Eszerint pedig $1999 \circ 2000 = 1999,5$.
+\medskip
+
+
+\hbox to \hsize{\hskip2truecm\hrulefill\hskip2truecm}
+{\bf 5. feladat: } Egy téglalap oldalai $37$ és $54$ egységnyiek. Vegyünk fel a téglalapon (a belsejében vagy kerületén) $1999$ pontot. Bizonyítsuk be, hogy a pontok bármilyen választása esetén lesz közöttük legalább három, amely lefedhetõ egy $9 \over 4$ átmérõjû körlappal.
+
+
+\ki{Benedek Ilona}{Vác}\medskip
+
+{\bf 5. feladat I. megoldása: } Osszuk fel a téglalap 54 hosszú oldalait 27, a 37 hosszúakat 37 egyenlõ részre, és az osztópontokon át húzzunk merõlegeseket az oldalakra. A kapott egyenesek a téglalapot 999 db 2x1-es téglalapra bontják. A 999 téglalap között lesz olyan, amelybe a kiválaszott pontok közül legalább három esik a skatulyaelv alapján (értjük ez alatt azt is, hogy esetleg a téglalap kerületén vannak a pontok). Ennek a téglalapnak az átlója $\sqrt{5}$ hosszúságú lesz, és mivel $\sqrt{5} < {9 \over 4}$, azért az egész téglalap (így nyilván a benne lévõ pontok is) lefedhetõ egy ${9 \over 4}$ átmérõjû körlappal.
+\medskip
+
+
+\hbox to \hsize{\hskip2truecm\hrulefill\hskip2truecm}
+{\bf 6. feladat: } Adottak az $x_1, x_2, \dots, x_n$ valós számok úgy, hogy $1 \le x_i \le n^2$ ($i=1, 2, \dots n$) és $1 \le i <j \le n$ esetén $x_j-x_i \ge j+i$. Határozzuk meg az $x_1, x_2, \dots x_n$ számokat! 
+
+
+\ki{Bencze Mihály}{Brassó}\medskip
+
+{\bf 6. feladat I. megoldása: } A feltételi egyenlõtlenséget speciális esetekre fölírva:
+{\setlength\arraycolsep{2pt}\begin{eqnarray*}
+x_2 - x_1 & \geq & 2 + 1 \\
+x_3 - x_2 & \geq & 3 + 2 \\
+& \vdots & \\
+x_n - x_{n-1} & \geq & n + n - 1
+\end{eqnarray*}}
+A megfelelõ oldalakat összeadva azt kapjuk, hogy $x_n - x_1 \geq n^2 - 1$. Az elsõ feltételünk miatt ez csak $x_n = n^2$ és $x_1 = 1$ esetén teljesülhet.
+
+Írjuk fel továbbá minden $1 < k < n$-re a következõ két egyenlõtlenségrendszert:
+{\setlength\arraycolsep{2pt}\begin{eqnarray*}
+x_2 - x_1 & \geq & 2+1 \\
+& \vdots & \\
+x_k - x_{k-1} & \geq & k+k-1
+\end{eqnarray*}}
+Ebbõl adódik, hogy $x_k \geq k^2$, továbbá
+{\setlength\arraycolsep{2pt}\begin{eqnarray*}
+x_{k+1} - x_k & \geq & k + 1 + k \\
+& \vdots & \\
+x_n - x_{n-1} & \geq & n + n - 1,
+\end{eqnarray*}}
+ezeket összeadva pedig $x_n - x_k \geq n^2 - k^2$, ekkor viszont $x_n = n^2$ miatt $x_k \leq k^2$-et kapjuk, ezt pedig összevetve az elõzõvel $x_k = k^2$ adódik minden 1 és $n$ közé esõ $k$-ra.
+\medskip
+
+\vfill
+\end{document}
