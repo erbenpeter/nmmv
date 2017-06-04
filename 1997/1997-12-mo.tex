@@ -1,0 +1,142 @@
+\documentclass[a4paper,10pt]{article} 
+\usepackage[latin2]{inputenc}
+\usepackage{graphicx}
+\usepackage{amssymb}
+\voffset - 20pt
+\hoffset - 35pt
+\textwidth 450pt
+\textheight 650pt 
+\frenchspacing 
+
+\pagestyle{empty}
+\def\ki#1#2{\hfill {\it #1 (#2)}\medskip}
+
+\def\tg{\, \hbox{tg} \,}
+\def\ctg{\, \hbox{ctg} \,}
+\def\arctg{\, \hbox{arctg} \,}
+\def\arcctg{\, \hbox{arcctg} \,}
+
+\begin{document}
+\begin{center} \Large {\em VI. Nemzetközi Magyar Matematika Verseny} \end{center}
+\begin{center} \large{\em Kaposvár, 1997. ápr. 2-6.} \end{center}
+\smallskip
+\begin{center} \large{\bf 12. osztály} \end{center}
+\bigskip 
+
+{\bf 1. feladat: } Az $x>0$ valós számra $x^2 + {1 \over x^2} = 7$ teljesül. Mutassuk meg, hogy $x^5 + {1 \over x^5}$ is egész szám.
+
+
+\ki{Róka Sándor}{Nyíregyháza}\medskip
+
+{\bf 1. feladat I. megoldása: } Végezzünk algebrai átalakításokat! $\left(x + {1 \over x}\right)^2 = \left(x^2 + {1 \over x^2} \right) + 2 = 9$. Mivel tudjuk, hogy $x > 0$, és $x + {1 \over x} = 3$, azért 
+$$27 = \left(x + {1 \over x}\right)^3 = x^3 + {1 \over x^3} + 3 \left(x + {1 \over x}\right) = x^3 + {1 \over x^3} + 9$$
+Ez azt jelenti, hogy $x^3 + {1 \over x^3} = 18$.
+Ennek a két egyenlõségnek az ismeretében már kapjuk a következõt:
+$$126 = 7 \cdot 18 = \left(x^2 + {1 \over x^2}\right) \left(x^3 + {1 \over x^3}\right) = x^5 + {1 \over x^5} + x + {1 \over x} + x^5 + {1 \over x^5} + 3,$$
+ami pedig azt jelenti, hogy $x^5 + {1 \over x^5} = 123$. Ezzel a feladatot megoldottuk.
+\medskip
+
+
+\hbox to \hsize{\hskip2truecm\hrulefill\hskip2truecm}
+{\bf 2. feladat: } Legyen $f$ a pozitív egész számokon értelmezett függvény, értékei nemnegatív egészek. Az $f$ minden pozitív egész $x,y$ esetén kielégíti a következõ feltételeket:
+$$\begin{array}{lll}
+1) \quad f(xy) = f(x) + f(y)&& \\[6pt]
+2) \quad f(10x+3) = 0&& \\[6pt]
+3) \quad f(10) = 0&&
+\end{array}$$
+Adjuk meg a feltételeket kielégítõ függvényeket!
+
+
+\ki{Szabó Magda}{Szabadka}\medskip
+
+{\bf 2. feladat I. megoldása: } A feltételekbõl $0 = f(10) = f(2 \cdot 5) = f(2) + f(5)$. Mivel pedig $f(2)$ és $f(5)$ nemnegatív egészek, azért csak $f(2) = f(5) = 0$ lehetséges. Minden $n$ pozitív szám elõáll $2^k \cdot 5^l \cdot b$ alakban, ahol $b$ relatív prím 10-hez. Az ilyen helyeken a függvény értéke az imént kapott értékek segítségével
+$$f(n) = kf(2) + lf(5) + f(b) = f(b)$$
+Mivel pedig $b$ olyan páratlan szám, amely nem osztható 5-tel, azért 10-es maradéka csak $\pm 1$ vagy $\pm 3$ lehet. Négyzetének 10-es maradéka ekkor szükségképpen $\pm 1$, negyedik hatványáé pedig biztosan $+1$. Ez azt jelenti, hogy $3b^4 = 10m+3$ valamilyen $m$ pozitív egészre, tehát $f(3) + 4f(b) = 0$, és mivel mindkét tag nemnegatív egész, azért ez $f(b) = 0$-t jelenti bármely $b$-re. A feltételeknek tehát csak a konstans 0 függvény tesz eleget.
+\medskip
+
+
+\hbox to \hsize{\hskip2truecm\hrulefill\hskip2truecm}
+{\bf 3. feladat: } Bizonyítandó, hogy $x^ny^n + 1$ ($n \geq 1$ pozitív egész) nem állítható elõ két olyan polinom szorzataként, amelyek közül az egyik csak az $x$-et, a másik csak az $y$-t tartalmazza!
+
+
+\ki{Oláh György}{Révkomárom}\medskip
+
+{\bf 3. feladat I. megoldása: } Indirekten bizonyítunk. Tegyük fel, hogy van két ilyen polinom, legyenek ezek $P(x)$ és $Q(y)$! Ekkor
+$$x^ny^n + 1 = P(x) \cdot Q(y)$$
+Helyettesítsünk be $x = y = 0$-t ebbe az egyenletbe, azt kapjuk, hogy $P(0) \cdot Q(0) = 1$, tehát $P$ konstans tagja $a$, $Q$-é pedig ${1 \over a}$, ahol $a$ valós, nem 0 paraméter.
+
+Vezessük most be a következõ jelöléseket:
+$$P(x) = xP_1(x) + a, \ Q(y) = yQ_1(y) + {1 \over a},$$
+$P_1$ és $Q_1$ polinomokkal. Ez azt jelenti, hogy
+$$x^ny^n + 1 = \left( xP_1(x) + a \right) \left(yQ_1(y) + {1 \over a}\right).$$
+Ide $x = 0$-t helyettesítve $ayQ_1(y) + 1 = 1$, ami azt jelenti, hogy $yQ_1(y) = 0$ bármely $y$-ra. Igaz továbbá az is, hogy $xP_1(x)$ is azonosan 0, ez hasonló módszerekkel bizonyítható. Ez viszont ellentmondásban van azzal, hogy a feltételi egyenlõség teljesüléséhez mindkét polinomnak legalább elsõfokúnak kell lennie.
+\medskip
+
+
+\hbox to \hsize{\hskip2truecm\hrulefill\hskip2truecm}
+{\bf 4. feladat: } Az $ABC$ háromszög oldalai $a,b,c$, az $a$ oldallal szemközti szög $\alpha$. Igazoljuk, hogy ha
+$$\begin{array} {ll}
+& 1) \quad \alpha \ \hbox{hegyesszög, akkor} \, \sin {\alpha \over 2} \geq {a \over \sqrt{2(b^2 + c^2)}} \\
+& 2) \quad \alpha \ \hbox{hegyesszög, akkor} \, {a \over \sqrt{2(b^2 + c^2)}} \leq \sin {\alpha \over 2} \leq {a \over b+c}
+\end{array}$$
+
+
+\ki{Bencze Mihály}{Brassó}\medskip
+
+{\bf 4. feladat I. megoldása: } Mivel $\alpha$ egy háromszög belsõ szöge, azért $\sin {\alpha \over 2}$ mindenképpen pozitív, ezért az 1. egyenlõtlenséget négyzetre emelhetjük:
+$$2 \sin ^2 {\alpha \over 2} \leq {a^2 \over b^2 + c^2}$$
+Használjuk fel azt, hogy $2 \sin ^2 {\alpha \over 2} = 1 - \cos \alpha$ (ez bizonyítható, ha átrendezzük $\cos \alpha = 2 \cos ^2 {\alpha \over 2} - 1$ alakra). Alkalmazzuk továbbá $\cos \alpha$ felírásához a koszinusztételt. Ekkor a következõ ekvivalens egyenlõtlenséget kapjuk:
+$${b^2 + c^2 - a^2 \over b^2 + c^2} \leq {b^2 + c^2 - a^2 \over 2bc}$$
+$b^2 + c^2 \geq 2bc$, ez átrendezéssel könnyen bizonyítható. Az egyenlõtlenség így pontosan akkor teljesül, ha $b^2 + c^2 - a^2 \geq 0$, tehát $\alpha$ hegyesszög. Ha $\alpha$ tompaszög, akkor fordított irányú az egyenlõtlenség, ez éppen a 2. egyenlõtlenség bal oldalát jelenti.
+
+Be kell bizonyítanunk még a 2. egyenlõtlenség jobb oldalát. Ehhez húzzunk párhuzamost $C$-n át $\alpha$ szögfelezõjével, legyen ennek metszéspontja az $AB$ egyenessel $D$! Most alkalmazzuk a szinusztételt a $BCD$ háromszögre:
+$${\sin {\alpha \over 2}\over \sin \left({\alpha \over 2} + \gamma \right)} = {a \over b+c}$$
+Mivel pedig $\sin \left( {\alpha \over 2} + \gamma \right)$ 0 és 1 közé esik, azért a 2. egyenlõtlenség jobb oldala is teljesül. 
+\medskip
+
+
+\hbox to \hsize{\hskip2truecm\hrulefill\hskip2truecm}
+{\bf 5. feladat: } Állapítsuk meg az
+$${r_a^2 + r_b^2 + r_c^2 \over s^2}$$
+tört minimumát, ahol $r_a, r_b, r_c$ a háromszög $a,b,c$ oldalához hozzáírt körök sugara, $s$ pedig a háromszög kerületének fele!
+
+
+\ki{Kubatov Antal}{Kaposvár}\medskip
+
+{\bf 5. feladat I. megoldása: } Legyen a hozzáírt kör érintési pontja az $AB$ egyenessel $E_1$, a $BC$ egyenessel $E_2$, az $AC$ egyenessel $E_3$. Egy pontból egy körhöz húzott érintõszakaszok egyenlõk, tehát
+$$BE_1 = BE_2, \ CE_2 = CE_3, \ AE_1 = AE_3$$
+ebbõl pedig $AE_1 + AE_3 = 2s$ következik. Ez azt jelenti, hogy $\tg {\alpha \over 2} = {r_a \over s}$. Teljesen hasonló módon $\tg {\beta \over 2} = {r_b \over s}$ és $\tg {\gamma \over 2} = {r_c \over s}$. Ebbõl következõen
+{\setlength\arraycolsep{2pt}\begin{eqnarray*}
+{r_a^2 + r_b^2 + r_c^2 \over s^2} &=& \left({r_a \over s}\right)^2 + \left({r_b \over s}\right)^2 + \left({r_c \over s}\right)^2 = \tg ^2 {\alpha \over 2} + \tg ^2  {\beta \over 2} + \tg ^2 {\gamma \over 2} \geq \\[6pt]
+&\geq& \tg {\alpha \over 2} \cdot \tg {\beta \over 2} + \tg {\alpha \over 2} \cdot \tg {\gamma \over 2} + \tg {\beta \over 2} \cdot \tg {\gamma \over 2} = 1
+\end{eqnarray*}}
+Az átalakításoknál felhasználtuk az $a^2 + b^2 + c^2 \leq ab + bc + ac$ egyenlõtlenséget továbbá a bármely háromszög szögeire érvényes
+$$\tg {\alpha \over 2} \cdot \tg {\beta \over 2} + \tg {\alpha \over 2} \cdot \tg {\gamma \over 2} + \tg {\beta \over 2} \cdot \tg {\gamma \over 2} = 1$$
+összefüggést. Ez azt jelenti, hogy a törtünk értéke legalább 1, de azt az értéket szabályos háromszögben fel is veheti, tehát a tört értékének minimuma 1 lesz.
+\medskip
+
+
+\hbox to \hsize{\hskip2truecm\hrulefill\hskip2truecm}
+{\bf 6. feladat: } Adott az
+$$u_{n+1} = {1 \over u_n} + {2 \over n+1}$$
+rekurziót teljesítõ sorozat, ahol $1, \! 5 \leq u_1 \leq 2$. Igazoljuk, hogy $1 < u_n < 1 + {1 \over n-1}$, ha $n \geq 2$
+
+
+\ki{András Szilárd}{Kolozsvár}\medskip
+
+{\bf 6. feladat I. megoldása: } Teljes indukcióval igazoljuk, hogy ${2k+3 \over 2k+2} \leq u_{2k+1} \leq {2k+2 \over 2k+1}$. $k = 0$-ra ez igaz lesz. Tegyük fel, hogy igaz $k$-ra és igazoljuk $k+1$-re! A rekurziós definíció szerint
+$$u_{2k+3} = {1 \over u_{2k+2}} + {2 \over 2k+3} = {1 \over {1 \over u_{2k+1}} + {2 \over 2k+2}} + {2 \over 2k+3}$$
+Az indukciós feltevés szerint
+$${2k+1 \over 2k+2} + {2 \over 2k+2} \leq {1 \over u_{2k+1}} + {2 \over 2k+2} \leq {2k+2 \over 2k+3} + {2 \over 2k+2} = {2k^2 + 6k + 5 \over(k+1)(2k+3)} \eqno{(1)}$$
+
+Ez azt jelenti, hogy $u_{2k+3} \leq {2k+2 \over 2k+3} + {2 \over 2k+3} = {2k+4 \over 2k+3}$, továbbá igaz lesz az is, hogy ${(k+1)(2k+3) \over 2k^2 +6k+5} + {2 \over 2k+3} \leq u_{2k+3}$
+Ez azt jelenti, hogy elegendõ belátni, hogy ${2k+5 \over 2k+4} \leq {(k+1)(2k+3) \over 2k^2 + 6k + 5} + {2 \over 2k+3}$, ez pedig egyszerû számolással igazolható.
+
+Ez azt jelenti, hogy páratlan $n$-ekre a feladat állítása igaz, hiszen
+$$1 < {2k+3 \over 2k+2} \leq u_{2k+1} \leq {2k+2 \over 2k+1} < 1 + {1 \over 2k}$$
+$n = 2k+2$-re is igaz lesz az állítás, hiszen $(1)$ alapján
+$$1 < {2k+3 \over 2k+2} \leq u_{2k+2} \leq {2k+2 \over 2k+3} + {1 \over k+1} < 1 + {1 \over 2k+1}$$
+\medskip
+
+\vfill
+\end{document}

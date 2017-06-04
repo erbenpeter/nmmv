@@ -1,0 +1,113 @@
+\documentclass[a4paper,10pt]{article} 
+\usepackage[latin2]{inputenc}
+\usepackage{graphicx}
+\usepackage{amssymb}
+\voffset - 20pt
+\hoffset - 35pt
+\textwidth 450pt
+\textheight 650pt 
+\frenchspacing 
+
+\pagestyle{empty}
+\def\ki#1#2{\hfill {\it #1 (#2)}\medskip}
+
+\def\tg{\, \hbox{tg} \,}
+\def\ctg{\, \hbox{ctg} \,}
+\def\arctg{\, \hbox{arctg} \,}
+\def\arcctg{\, \hbox{arcctg} \,}
+
+\begin{document}
+\begin{center} \Large {\em VI. Nemzetközi Magyar Matematika Verseny} \end{center}
+\begin{center} \large{\em Kaposvár, 1997. ápr. 2-6.} \end{center}
+\smallskip
+\begin{center} \large{\bf 10. osztály} \end{center}
+\bigskip 
+
+{\bf 1. feladat: } Bizonyítsuk be, hogy az $f(x) = (m-1)x^2 - 2(m-1)x + m-5$ függvény grafikonja az $m$ valós paraméter bármely értékére ugyanazon a ponton halad keresztül. Határozzuk meg ennek a pontnak a koordinátáit!
+
+
+\ki{Zolnai Irén}{Újvidék}\medskip
+
+{\bf 1. feladat I. megoldása: } Ha van egy olyan $x_0$ hely, amelyre az $f(x_0)$ függvényérték állandó, akkor
+$$f(x_0) = (m+1)x_0^2 - 2 (m-1)x_0 + m - 5 = m(x_0^2 - 2x_0 + 1) + x_0^2 + 2x_0 - 5$$
+miatt $x_0^2 - 2x_0 + 1 = 0$ szükséges, ami $x_0 = 1$-et jelenti, ezen a helyen pedig a függvény $m$ értékétõl függetlenül $-2$-t vesz fel, tehát az $(1; -2)$ ponton minden ilyen alakú függvény grafikonja áthalad.
+\medskip
+
+
+\hbox to \hsize{\hskip2truecm\hrulefill\hskip2truecm}
+{\bf 2. feladat: } Az $ABC$ háromszög $BC$ oldalának felezõpontja $A_1$, $AB$ oldalának felezõpontja $C_1$, $S$ a háromszög súlypontja. Mekkorák a háromszög szögei, ha $CAA_1 \angle = CC_1A_1 \angle$, $A_1SC_1 \angle = BAC \angle + ACB \angle$?
+
+
+\ki{Balázsi Borbála}{Beregszász}\medskip
+
+{\bf 2. feladat I. megoldása: } Jelöljük a $CAA_1$ szöget $\alpha$-val! Ekkor a feladat állítása szerint $CC_1A \angle = \alpha$, és mivel a háromszög középvonala, $A_1C_1$ párhuzamos a szemközti oldallal, azért $ACC_1 \angle = AA_1C_1 \angle = \alpha$ is teljesül, váltószögek jelentkeznek. Az $ACC_1$ és $AA_1C_1$ szögek így megegyeznek, tehát $C$ és $A_1$ is rajta vannak az $AC_1$ $\alpha$ szögû látókörívén, vagyis $$AC_1A_1C_1$$ húrnégyszög, de mivel trapéz, azért egyenlõszárú is, tehát a háromszög is egyenlõszárú lesz. Továbbá a körbe írhatóság miatt $C_1AA_1 \angle = C_1CA_1 \angle$, mivel ugyanahhoz az ívhez tartozó kerületi szögek. Jelöljük a nagyságukat $\beta$-val! Az $A_1MC_1 \angle = BAC \angle + ACB \angle$ egyenlõség mindkét oldalához hozzáadva az $ABC$ szöget, azt kapjuk, hogy $A_1MC_1 \angle + ABC \angle = 180^{\circ}$ a háromszög szögösszege miatt, és mivel $A_1MC_1 \angle = 180^{\circ} - 2 \alpha$, azért ez $ABC \angle = 2 \alpha$-t jelenti. Ez azt jelenti, hogy a háromszög szögösszege $4 \alpha + 2 \beta = 180^{\circ}$, amibõl $2 \alpha + \beta = 90^{\circ}$ következik. Ekkor viszont az $AC_1C$ háromszögnek $C_1$-nél derékszöge van, ami azt jelenti, hogy a $C$-bõl behúzott súlyvonal egyben magasság is, tehát $AC = BC$, ez viszont $AB = BC$-vel együtt azt jelenti, hogy a háromszög szabályos, vagyis minden szöge $60^{\circ}$-os lesz.
+\medskip
+
+
+\hbox to \hsize{\hskip2truecm\hrulefill\hskip2truecm}
+{\bf 3. feladat: } Bizonyítsuk be, hogy ha $p$ és $q$ 5-nél nagyobb prímszám, akkor $p^4 - q^4$ osztható 60-nal!
+
+
+\ki{Oláh György}{Révkomárom}\medskip
+
+{\bf 3. feladat I. megoldása: } Bebizonyítjuk, hogy a kifejezés osztható 3-mal, 4-gyel és 5-tel is. Ehhez elõször bontsuk szorzattá:
+$$p^4 - q^4 = (p^2 - q^2)(p^2 + q^2)$$
+Mivel a számok páratlanok, azért mindkét tényezõ páros, tehát a szorzat osztható lesz 4-gyel. Egyik szám sem osztható 3-mal, tehát a négyzetük 3-as maradéka csak 1 lehet, ami azt jelenti, hogy $p^2 - q^2$ osztható lesz 3-mal. Teljesen hasonló módon mindkét szám négyzetének 5-ös maradéka vagy 4, vagy 1, így a négyzetek összege és különbsége közül valamelyik biztosan osztható lesz 5-tel, ez pedig azt jelenti, hogy $p^4 - q^4$ osztható 3-mal, 4-gyel és 5-tel is, ami viszont együttesen azt jelenti, hogy osztható lesz 60-nal, és éppen ezt kellett bizonyítanunk.
+\medskip
+
+
+\hbox to \hsize{\hskip2truecm\hrulefill\hskip2truecm}
+{\bf 4. feladat: } Legyen $n>1$ természetes szám. Oldjuk meg a következõ egyenletrendszert a pozitív természetes számok halmazán:
+{\setlength\arraycolsep{2pt}\begin{eqnarray*}
+x_1 + x_2x_3 \ldots x_n & = & 1997 \\
+x_2 + x_1x_3 \ldots x_n & = & 1997 \\
+& \vdots & \\
+x_n + x_1x_2 \ldots x_{n-1} & = & 1997
+\end{eqnarray*}}
+
+
+\ki{Veres Pál}{Miskolc}\medskip
+
+{\bf 4. feladat I. megoldása: } $n = 2$-re az egyenletrendszer $x_1 + x_2 = 1997$ formára egyszerûsödik, ennek megoldása: $\{(x_1;1997-x_1) | x_1 \in {1, 2, \ldots, 1996}\}$. Amennyiben $n > 2$, és van $x_i, x_j$, amelyek különbözõk, akkor
+$$x_i + x_1x_2\ldots x_{i-1}x_{i+1} \ldots x_n = x_j + x_1x_2 \ldots x_{j-1}x_{j+1} \ldots x_n$$
+azt jelenti, hogy átrendezve
+$$(x_i - x_j)(x_1\ldots x_{i-1}x_{i+1}\ldots x_{j-1}x_{j+1}\ldots x_n - 1) = 0$$
+Feltettük, hogy $x_i \not = x_j$, azért az összes $x_k$, ahol $k \not = i,j$, egyenlõ 1-gyel, hiszen természetes számok. Az egyenletrendszer ekkor
+$$x_i + x_j = 1997, \ \ \ 1 + x_ix_j = 1997$$
+formára egyszerûsödik, aminek két egész megoldása van: $x_i = 1996, x_j = 1$ és $x_i = 1, x_j = 1996$. Tehát a megoldás egy tetszõleges eleme 1996, a többi 1.
+
+Ha minden elem egyenlõ, akkor az összes egyenlet ($x$-szel jelölve a közös értéket) $x + x^{n-1} = 1997$ alakú lenne, tehát $x(1 + x^{n-2}) = 1997$ alakú, de mivel az 1997 prímszám, ezért ez csak $x = 1$ vagy $x = 1997$ esetén lehetne, igaz, ezek az értékek azonban könnyen láthatóan nem lesznek megfelelõek.
+\medskip
+
+
+\hbox to \hsize{\hskip2truecm\hrulefill\hskip2truecm}
+{\bf 5. feladat: } Jelölje $M$ az $ABCD$ húrnégyszög átlóinak metszéspontját, valamint $E, F, G, H$ az $M$ merõleges vetületeit az $AB$, $BC$, $CD$, $DA$ oldalakra; föltesszük, hogy ezek az oldalak belsõ pontjai. Igazoljuk, hogy $M$ az $EFGH$ négyszög oldalait érintõ kör középpontja. Mikor lesz $EFGH$ húrnégyszög?
+
+
+\ki{Bencze Mihály}{Brassó}\medskip
+
+{\bf 5. feladat I. megoldása: } Mivel merõleges vetületeket vettünk, azért bármely csúcs a belõle kiinduló oldalakon lévõ vetületekkel és az $M$ ponttal húrnégyszöget alkot, a körülírt kör átmérõje a csúcsot $M$-mel összekötõ szakasz. Így mivel azonos ívhez tartozó kerületi szögek, azért egyenlõk lesznek egymással az $FBM$ és $FEM$, valamint az $MEH$ és az $MAH$ szögek. Mivel $ABCD$ húrnégyszög, azért ugyanilyen okokból $CBD \angle = CAD \angle$, tehát az elõbbi összefüggés miatt az $FEM$ és az $MEH$ szögek is meg fognak egyezni. Így tehát $EM$ felezi a $HEF$ szöget. Ugyanígy kaphatjuk, hogy $M$ az $EFGH$ négyszög belsõ szögfelezõinek metszéspontja, ami azt jelenti, hogy $EFGH$ érintõnégyszög és a beírt kör középpontja éppen $M$.
+
+Az imént kaptuk, hogy $HEF \angle = 2 MBF \angle$, és ugyanígy $HGF \angle = 2MCB \angle$. Ez azt jelenti, hogy $EFGH$ pontosan akkor húrnégyszög, ha $2MBF \angle + 2MBC \angle = 180^{\circ}$, ami pedig azt jelenti, hogy $MBF \angle + MBC \angle = 90^{\circ}$. Ez pedig azt jelenti, hogy az $ABCD$ négyszög átlói merõlegesek egymásra.
+\medskip
+
+
+\hbox to \hsize{\hskip2truecm\hrulefill\hskip2truecm}
+{\bf 6. feladat: } Van egy igen érdekes zsebszámológépünk, amely mindenféle kiinduló értéket képes fogadni, de ennek bevitele után már csak összeadni, kivonni és reciprokot képezni tud, és mindig pontos értéket ad. A gépnek tetszõlegesen sok memóriája van, amelybe a fenti mûveletek végzése közben bármilyen érték bevihetõ, illetve elõhívható onnan. Tehát a számolások során a kiindulási számot és minden részeredményt többször is felhasználhatunk, más számot azonban nem. Ilyen feltételek mellett megkaphatjuk-e az 1-et végeredményül, ha a kiindulási szám
+
+a) $\sqrt{19} + 97$
+
+b) $\sqrt{19} + \sqrt{97}$?
+
+
+\ki{Kiss Sándor}{Nyíregyháza}\medskip
+
+{\bf 6. feladat I. megoldása: } a) Vegyük a szám reciprokát és gyöktelenítsük a nevezõt:
+$${1 \over \sqrt{19} + 97} = {97 - \sqrt{19} \over 97^2 - 19} = {97 - \sqrt{19} \over 9390}$$
+Ha ezt összeadjuk 9390-szer, $97 - \sqrt{19}$-et kapunk. Ehhez hozzáadva az eredeti számunkat 194 az eredmény, amelynek reciprokát 194-szer véve 1-et kapunk, így találtunk egy megfelelõ eljárást.
+
+b) Tekintsük az $a \cdot \sqrt{19} + b \cdot \sqrt{97} (a,b \in \mathbb{Q})$ alakú számokat! Könnyen belátható, hogy két ilyen szám összege, különbsége és reciproka is ilyen alakú. Ez viszont azt jelenti, hogy ezt a számot megadva kiindulásként csak ilyen alakú számokat kaphatunk, ami pedig azt jelenti, hogy mivel az 1 nem áll elõ ilyen formában, azért az 1-hez sosem juthatunk el.
+\medskip
+
+\vfill
+\end{document}
