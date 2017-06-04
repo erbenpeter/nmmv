@@ -1,0 +1,143 @@
+\documentclass[a4paper,10pt]{article} 
+\usepackage[latin2]{inputenc}
+\usepackage{graphicx}
+\usepackage{amssymb}
+\voffset - 20pt
+\hoffset - 35pt
+\textwidth 450pt
+\textheight 650pt 
+\frenchspacing 
+
+\pagestyle{empty}
+\def\ki#1#2{\hfill {\it #1 (#2)}\medskip}
+
+\def\tg{\, \hbox{tg} \,}
+\def\ctg{\, \hbox{ctg} \,}
+\def\arctg{\, \hbox{arctg} \,}
+\def\arcctg{\, \hbox{arcctg} \,}
+
+\begin{document}
+\begin{center} \Large {\em V. Nemzetközi Magyar Matematika Verseny} \end{center}
+\begin{center} \large{\em Székelyudvarhely, 1996. márc. 29-ápr. 2.} \end{center}
+\smallskip
+\begin{center} \large{\bf 10. osztály} \end{center}
+\bigskip 
+
+{\bf 1. feladat: } Bizonyítsuk be, hogy tetszõleges $n$ természetes szám esetén
+$$1996 \, | \, 2557^{2n+1}+1559^{2n+1}-4054^{2n+1}-62^{2n+1}$$
+
+
+\ki{Veres Pál}{Miskolc}\medskip
+
+{\bf 1. feladat I. megoldása: } Tekintve, hogy $1996 = 4 \cdot 499$, a megoldáshoz elegendõ, hogy az
+$$A = 2557^{2n+1} + 1559^{2n+1} - 4054^{2n+1} - 62^{2n+1}$$
+szám osztható külön-külön 4-gyel és 499-cel (a két szám relatív prím). Felhasználjuk a megoldás során, hogy az ismert azonosságok szerint
+$$(a+b) | (a^{2n+1} + b^{2n+1})$$
+és
+$$(a-b) | (a^{2n+1} - b^{2n+1})$$
+Mivel $2557 + 1559 = 4 \cdot 1029$, illetve $4054 + 62 = 4 \cdot 1029$, azért az
+$$A = ( 2557^{2n+1} + 1559^{2n+1} ) - ( 4054^{2n+1} + 62^{2n+1} )$$
+felírásban a kisebbítendõ és a kivonandó is osztható 4-gyel, tehát $4 | A$ is teljesülni fog. Mivel pedig $2557 - 62 = 5 \cdot 499$, továbbá $4054 - 1559 = 5 \cdot 499$, azért az
+$$A =  (2557^{2n+1} - 62^{2n+1}) - (4054^{2n+1} - 1559^{2n+1})$$
+felírásban a kisebbítendõ és a kivonandó is osztható 499-cel, tehát $499 | A$ is teljesülni fog. A két állítás pedig együtt azt jelenti, hogy bebizonyítottuk a kért összefüggést.
+\medskip
+
+
+\hbox to \hsize{\hskip2truecm\hrulefill\hskip2truecm}
+{\bf 2. feladat: } Bizonyítsuk be, hogy ha $x\in \left[ {\pi \over 4};\, \arctg{{\pi \over 2}}\right)$, akkor 
+$$\tg(\!\ctg x)\ctg(\!\tg x) \le 1 \le \tg(\!\tg x)\ctg(\!\ctg x)$$
+
+
+\ki{Bencze Mihály}{Brassó}\medskip
+
+{\bf 2. feladat I. megoldása: } Mivel a $\left[{\pi \over 4}, \arctg {\pi \over 2} \right)$ intervallumon a tangensfüggvény szigorúan monoton növekszik, a kotangensfüggvény pedig szigorúan monoton csökken, azért $x \in \left[{\pi \over 4}, \arctg {\pi \over 2} \right)$ esetén $\arctg {\pi \over 2} = \arcctg{2 \over \pi}$ felhasználásával $\tg x \in \left[ 1, {\pi \over 2} \right)$, illetve $\tg (\tg x) \geq 1$, továbbá $\ctg x \in \left({2 \over \pi}, 1 \right]$, és így $\ctg 1 \leq \ctg (\ctg x)$. Ebbõl pedig $1 \leq \tg (\tg x) \ctg (\ctg x)$.
+
+Analóg módon kapható, hogy $\ctg ( \tg x ) \leq \ctg 1$, és hogy $\tg ( \ctg x ) \leq \tg 1$. Ez pedig együttesen azt jelenti, hogy $\tg ( \ctg x ) \cdot \ctg ( \tg x ) \leq 1$. Ezzel mindkét állítást bebizonyítottuk.
+\medskip
+
+
+\hbox to \hsize{\hskip2truecm\hrulefill\hskip2truecm}
+{\bf 3. feladat: } Minden $n \ge 1$ egész számra határozzuk meg azt a legnagyobb értéket, amelyet az a szorzat vehet fel, amely szorzat tényezõi egészek és a tényezõk összege $n$.
+
+
+\ki{Urbán János}{Budapest}\medskip
+
+{\bf 3. feladat I. megoldása: } Nyilvánvaló, hogy a maximum létezik, hiszen a lehetséges szorzatok halmaza felülrõl korlátos, $n^n$ például egy triviális felsõ korlát. A maximális szorzatot adó felbontásban legyen
+$$n = k_1 + k_2 + \ldots + k_l$$
+Biztosan nem lesz egyik $k_i$ sem 4-gyel egyenlõ, hiszen a 4-esek pótolhatók az összegben és a szorzatban is 2 darab 2-essel. Bármely $i$-re $k_i \leq 4$ teljesülni fog, hiszen ha nem így lenne, $k_i$ helyett $k_i - 2$-t és $2$-t véve $2(k_i - 2) \geq k_i$ miatt a szorzat nagyobb lenne, mint az eredeti. $n = 1$ esetén a maximális szorzat nyilvánvaló módon 1, $n > 1$-re azonban 1-es már nem lehet a tényezõk között, hiszen egy 1-es tényezõt elhagyva és bármelyik másik tényezõt 1-gyel növelve a szorzatot növelhetjük, míg az összeg nem változik. A maximális szorzatban így csak 2-esek és 3-asok szerepelhetnek, de 2-esbõl is legfeljebb 2 darab, mert 3 kettes már helyettesíthetõ két 3-assal, hisz $2 \cdot 2 \cdot 2 < 3 \cdot 3$. Így tehát $n = 1$-re a maximális szorzat 1 lesz, $n = 3l$-re $3^l$, $n = 3l + 1$-re $4 \cdot 3 ^{l-1}$, $n = 3l + 2$-re pedig $2 \cdot 3^k$.
+\medskip
+
+
+\hbox to \hsize{\hskip2truecm\hrulefill\hskip2truecm}
+{\bf 4. feladat: } Helyezzünk el $n$ pozitív számot egy kör kerületén úgy, hogy egy kivételével mindegyik a vele szomszédos két szám mértani és számtani középarányosa által meghatározott intervallumban található. Határozzuk meg a számokat, ha ismerünk egyet közülük!
+
+
+\ki{Bege Antal}{Kolozsvár}\medskip
+
+{\bf 4. feladat I. megoldása: } Megmutatjuk, hogy szükségképpen az összes szám egyenlõ lesz. Jelöljünk ki egy számot a kör kerületén, legyen ez $c$! A többi számot valamilyen körüljárás szerint számozzuk meg: $a_1, a_2, \ldots , a_{n-1}$. Ha most $c > a_1$, akkor mivel $a_1$ a $c$ és $a_2$ számok számtani és mértani közepe között van, azért közéjük esik, tehát $c > a_1 > a_2$. Ugyanígy teljes indukcióval belátható, hogy $c > a_1 > a_2 > \ldots > a_{n-1} > c$. Ez viszont ellentmondást okoz. Hasonló módon juthatunk ellentmondásra akkor is, ha egy bizonyos $k$-ig egyenlõség áll fönt, és csak utána van szigorú egyenlõtlenség. Fordított irányú egyenlõtlenségnél nyilvánvaló módon ugyanez a helyzet, ott $c < a_1 < a_2 < \ldots < a_{n-1} < c$ adódik (az elsõ néhány helyen esetleg állhat egyenlõség), ami szintén ellentmondás. Beláttuk tehát, hogy mindenhol egyenlõségnek kell állnia, ez pedig azt jelenti, hogy szükségképpen minden szám egyenlõ.
+\medskip
+
+
+\hbox to \hsize{\hskip2truecm\hrulefill\hskip2truecm}
+{\bf 5. feladat: } Az $ABC$ háromszögben az $A$ szög belsõ szögfelezõje a háromszög köré írható kört $A_1$-ben metszi. Hasonlóan kapjuk a $B_1$, $C_1$ pontokat. Igazoljuk, hogy:
+$$\begin{array}{rcl}
+&&1.)\quad \hbox{Ter}[BA_1C] + \hbox{Ter}[CB_1A] + \hbox{Ter}[AC_1B] = p(R-r)\\[6pt]
+&&2.)\quad \frac{a^2}{-a+b+c} + \frac{b^2}{a-b+c} + \frac{c^2}{a+b-c} = \frac{2p}{r} (R-r)
+\end{array}$$
+Ahol $a$, $b$, $c$ a háromszög oldalai, $p$ a kerület fele, $R$ a köré írható, $r$ a beírható kör sugara.
+
+
+\ki{Bencze Mihály, Szabó Magda}{Brassó, Szabadka}\medskip
+
+{\bf 5. feladat I. megoldása: } Jelöljük $O$-val a körülírt kör középpontját. Tudjuk, hogy az $A_1$ pont felezi a $BC$ ívet. Ebbõl következõen az $A_1O$ szakasz felezve metszi a $BC$ szakaszt. Jelöljük $x$-szel a $BA_1C$ háromszög $A_1$-hez tartozó magasságát.
+
+\centerline{\includegraphics{figures/1996-10-5}}
+
+A $BA_1C$ háromszög területe ${1 \over 2}ax$, $x$-et pedig kifejezve (használjuk fel, hogy $BC$ és $A_1O$ metszéspontja derékszögû háromszöget alkot $B$-vel és $O$-val, így alkalmazható a Pitagorasz-tétel) $x = R - \sqrt{R^2 - \left( {a \over 2} \right)^2}$, ebbõl az következik, hogy
+$$T_{BA_1C} = {1 \over 2} \cdot a \left(R - \sqrt{R^2 - \left( {a \over 2} \right)^2} \right)$$
+Teljesen analóg módon kapható, hogy
+{\setlength\arraycolsep{2pt}\begin{eqnarray*}
+T_{AC_1B} &=& {1 \over 2} \cdot c \left(R - \sqrt{R^2 - \left( {c \over 2} \right)^2} \right) \\[6pt]
+T_{CB_1A} &=& {1 \over 2} \cdot b \left(R - \sqrt{R^2 - \left( {b \over 2} \right)^2} \right)
+\end{eqnarray*}}
+Összeadva a területeket
+$$T_{BA_1C} + T_{CB_1A} + T_{AC_1B} = {1 \over 2}(a+b+c)R - T_{ABC} = p(R-r),$$
+felhasználva a $T_{ABC} = pr$ jól ismert összefüggést.
+A $BA_1C$ és $ABC$ háromszögek területaránya a következõ ($D$ az $AA_1$ és $BC$ szakaszok metszéspontja, $m_a$ talppontját $M$-mel, $A_1O$ és $BC$ metszéspontját $P$-vel jelölve nyilvánvaló módon a $DMA$ és $PA_1D$ háromszögek hasonlók):
+{\setlength\arraycolsep{2pt}\begin{eqnarray*}
+{T_{BA_1C} \over T_{ABC}} &=& {{1 \over 2} \, ax \over {1 \over 2} \, am_a} = {x \over m_a} = {DA_1 \over DA} = {DA_1 \cdot DA \over DA^2} = {DB \cdot DC \over DA^2} = \\
+&=& {a^2bc \over (b+c)^2} \cdot {(b+c)^2 \over 4bcp(p-a)} = {a^2 \over 4p(p-a)},
+\end{eqnarray*}}
+a szögfelezõ hosszára vonatkozó összefüggést felhasználva, miszerint annak négyzete egyenlõ a közrefogó oldalak szorzatának és a szemközti oldalon kialakuló darabok szorzatának a különbségével, és mivel
+$$bc - a^2{bc \over (b+c)^2} = bc\left(1 - {a^2 \over (b+c)^2}\right) = bc \cdot {(a+b+c)(b+c-a) \over (b+c)^2}$$
+
+Ha a másik két háromszögre is felírjuk ugyanezeket az egyenleteket és átszorzunk $2p$-vel, a kapott egyenletek megfelelõ oldalait pedig összeadjuk, az adódik, hogy
+$${a^2 \over -a + b + c} + {b^2 \over a - b + c} + {c^2 \over a + b - c} = {2p \over T_{ABC}} \cdot (T_{BA_1C} + T_{CB_1A} + T_{AC_1B}) = {2p \over r}(R - r)$$
+\medskip
+
+
+\hbox to \hsize{\hskip2truecm\hrulefill\hskip2truecm}
+{\bf 6. feladat: } Legyen $M$ egy olyan pont a térben, amelynek az $ABCD$ tetraéder $AB$, $BC$, $CD$ és $DA$ éleire esõ $M_1$, $M_2$, $M_3$ és $M_4$ vetületei az illetõ szakaszok belsõ pontjai. Számítsuk ki az $a\cdot M_1A + b\cdot M_2B + c\cdot M_3C + d\cdot M_4D$ összeget (ahol $a$, $b$, $c$ és $d$-vel az $AB$, $BC$, $CD$ és $DA$ élek hosszát jelöltük)!
+
+
+\ki{András Szilárd}{Csíkszereda}\medskip
+
+{\bf 6. feladat I. megoldása: } A Pitagorasz-tétel miatt
+$$MA^2 - MB^2 = M_1M^2 + M_1A^2 - M_1M^2 -M_1B^2 $$
+$$MB^2 - MC^2 = M_2M^2 + M_2B^2 - M_2M^2 - M_2C^2 $$
+$$MC^2 - MD^2 = M_3M^2 + M_3C^2 - M_3M^2 - M_3D^2 $$
+$$MD^2 - MA^2 = M_4M^2 + M_4D^2 - M_4M^2 - M_4A^2$$
+
+\centerline{\includegraphics{figures/1996-10-6}}
+
+A megfelelõ oldalakat összeadva, továbbá $M_1A + M_1B$, $M_2B + M_2C$, $M_3C + M_3D$, $M_4D - M_4A$ helyébe $a$, $b$, $c$ és $d$ beírásával
+$$0 = M_1A^2 - M_1B^2 + M_2B^2 - M_2C^2 + M_3C^2 - M_3D^2 + M_4D^2 - M_4A^2 = $$
+$$a(M_1A - M_1B) + b(M_2B - M_2C) + c(M_3C - M_3D) + d(M_4D - M_4A) = $$
+$$-(a^2 + b^2 + c^2 + d^2) + 2(aM_1A + bM_2B + cM_3C + dM_4D)$$
+Amibõl pedig átrendezés után
+$$aM_1A + bM_2B + cM_3C + dM_4D = {a^2 + b^2 + c^2 + d^2 \over 2}$$
+Ezzel kiszámoltuk a kifejezés pontos értékét, tehát a feladatot megoldottuk.
+\medskip
+
+\vfill
+\end{document}

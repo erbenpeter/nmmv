@@ -1,0 +1,111 @@
+\documentclass[a4paper,10pt]{article} 
+\usepackage[latin2]{inputenc}
+\usepackage{graphicx}
+\usepackage{amssymb}
+\voffset - 20pt
+\hoffset - 35pt
+\textwidth 450pt
+\textheight 650pt 
+\frenchspacing 
+
+\pagestyle{empty}
+\def\ki#1#2{\hfill {\it #1 (#2)}\medskip}
+
+\def\tg{\, \hbox{tg} \,}
+\def\ctg{\, \hbox{ctg} \,}
+\def\arctg{\, \hbox{arctg} \,}
+\def\arcctg{\, \hbox{arcctg} \,}
+
+\begin{document}
+\begin{center} \Large {\em V. Nemzetközi Magyar Matematika Verseny} \end{center}
+\begin{center} \large{\em Székelyudvarhely, 1996. márc. 29-ápr. 2.} \end{center}
+\smallskip
+\begin{center} \large{\bf 11. osztály} \end{center}
+\bigskip 
+
+{\bf 1. feladat: } Igazoljuk, hogy
+$$ (\sqrt{3}+\sqrt{2})^{1996} + (\sqrt{3}-\sqrt{2})^{1996}$$
+pozitív egész szám, és adjuk meg a szám utolsó számjegyét.
+
+
+\ki{Urbán János}{Budapest}\medskip
+
+{\bf 1. feladat I. megoldása: } Vezessük be az
+$$a_n = (\sqrt{3} + \sqrt{2})^{2n} + (\sqrt{3} - \sqrt{2})^{2n}$$
+jelölést! Ekkor $a_0 = 2$, $a_1 = 10$, és mivel $(\sqrt{3} + \sqrt{2})^2 = 5 + 2 \sqrt{6}$ és $(\sqrt{3} - \sqrt{2})^2 = 5 - 2 \sqrt{6}$, azért érvényes a következõ számolás:
+{\setlength\arraycolsep{2pt}\begin{eqnarray*}
+a_{n+2} &=& (49 + 20 \sqrt{6})(5+2 \sqrt{6})^n + (49 - 20 \sqrt{6})(5 - 2 \sqrt{6})^n = \\
+&=& 10 \left( (5+2\sqrt{6})^{n+1} + (5 - 2\sqrt{6})^{n+1} \right) - \left( (5+2\sqrt{6})^n + (5 - 2\sqrt{6})^n \right) = 10 a_{n+1} - a_n
+\end{eqnarray*}}
+
+Ez azt jelenti, hogy az $a_{n+2} = 10a_{n+1} - a_n$ rekurzió megadja a sorozat minden tagját, $a_0 = 2, a_1 = 10$ definícióval. Ez pedig azt jelenti, hogy a sorozat minden tagja egész szám. A feladat $a_{998}$ értékét kéri, így ez is egész szám. Ennek alapján a sorozat tagjainak utolsó számjegye négyes periódus szerint $2, \, 0, \, 8, \, 0$ lesz. Ez azt jelenti, hogy $a_{998}$ utolsó jegye is 8 lesz.
+\medskip
+
+
+\hbox to \hsize{\hskip2truecm\hrulefill\hskip2truecm}
+{\bf 2. feladat: } Oldjuk meg a természetes számok halmazán az $x^y-x=y^x-y$ egyenletet.
+
+
+\ki{Bencze Mihály, Oláh György}{Brassó, Révkomárom}\medskip
+
+{\bf 2. feladat I. megoldása: } Nyilvánvaló módon megoldás, ha a két változó megegyezik (ekkor a két oldal formálisan ugyanaz), illetve ha valamelyik változó 1 (ekkor mindkét oldal 0). Az általánosság megszorítás nélkül tegyük föl, hogy $0 < x < y$, és jelöljük az $y-x$ különbséget $t$-vel. Az eredeti egyenlet új jelölésünkkel és átrendezve a következõ alakú:
+$$x^{x+t} + x + t = (x+t)^x + x$$
+Mindkét oldalt $x^x$-szel elosztva ($x \not = 0$)
+$$x^t + tx^{-x} = \left(1+{t \over x} \right)^x < e^t,$$
+mivel az $\left(1 + {k \over n}\right)^n$ sorozat monoton nõve tart $e^k$-hoz. Ebbõl viszont $x^t < e^t$, abból pedig $x < e$ következik, tehát $e < 3$ miatt $x = 1$ vagy $x = 2$ képzelhetõ el csak. $x = 1$-re már tudjuk, hogy minden $y$ megoldást ad. $x = 2, \ y = 3$ megoldás, de ha $y > 3$, akkor nem kaphatunk megoldást, hiszen $2^y > y^2 - y + 2$ miatt soha nem állhat fönt egyenlõség (az állítás $y$ szerinti teljes indukcióval bizonyítható). Így megoldást akkor kapunk, ha az egyik változó 2, a másik pedig 3, ha valamelyik változó 1, illetve ha a két változó egyenlõ. Ezzel a feladatot megoldottuk.
+\medskip
+
+
+\hbox to \hsize{\hskip2truecm\hrulefill\hskip2truecm}
+{\bf 3. feladat: } Legyen $ABC$ háromszög $AC$ oldalának $A$-hoz közelebbi harmadoló pontja $D$, $BC$ oldalának felezési pontja $E$. Az $ABED$ négyszögrõl tudjuk, hogy húrnégyszög és egyben érintõnégyszög is. Jelölje $R$ az $ABC$ háromszög körülírt körének sugarát és $r$ az $ABED$ négyszög beírt körének sugarát. Határozzuk meg az $R/r$ hányados pontos értékét.
+
+
+\ki{Bíró Bálint}{Eger}\medskip
+
+{\bf 3. feladat I. megoldása: } A feladat állítása szerint $ABED$ húrnégyszög. Ez azt jelenti, hogy az $EDC$ és $ABC$ háromszögek hasonlók lesznek, hiszen az $EDC$ szög egyenlõ lesz az $ABE$-vel, a $DEC$ pedig a $CAB$-vel. Ez a szokásos jelöléseinkkel azt jelenti, hogy $a \ : \ b = {2 \over 3} \, b \ : \ {a \over 2}$, ami átrendezve azt jelenti, hogy $b = {a \sqrt{3} \over 2}$. Ha bevezetjük a $DE = x$ jelölést, $x \ : \ {a \over 2} = c \ : \ b$, amit átrendezve $x = {ac \over 2b} = {c \over \sqrt{3}}$. Mivel $ABED$ érintõnégyszög, azért szemközti oldalai megegyeznek, tehát $x + c = {a \over 2} + {b \over 3}$, és az elõzõ összefüggéseket felhasználva ebbõl $c = {a \over 2}$ adódik.
+
+A kapott egyenlõségekbõl átalakításokkal $a^2 - b^2 - c^2 = 0$ adódik, ez pedig azt jelenti, hogy az $ABC$ háromszög derékszögû, körülírt körének sugara $R = {a \over 2}$. A beírt kör sugara $r = {2T_{ABC} \over a+b+c} = {a \over 2(1+\sqrt{3})}$, ebbõl pedig ${R \over r} = 1 + \sqrt{3}$
+%szerintem ez a megoldás rossz, nem ez volt a kérdés, r a négyszög beírt körének sugara, nem a háromszögé!!
+\medskip
+
+
+\hbox to \hsize{\hskip2truecm\hrulefill\hskip2truecm}
+{\bf 4. feladat: } Igazoljuk, hogy ha az $ABC$ hegyesszögû háromszögben $a=\beta$ és $b=\alpha$ akkor $c \le \alpha \cdot \gamma$. ($a$, $b$, $c$ a háromszög oldalainak hosszát $\alpha$ , $\beta$ , $\gamma$ a háromszög $A$, $B$ illetve $C$ csúcsához tartozó szögeinek mértéke radiánban.)
+
+
+\ki{Bencze Mihály}{Brassó}\medskip
+
+{\bf 4. feladat I. megoldása: } Alkalmazzuk az $ABC$ háromszögben a szinusztételt! Ekkor ${a \over \sin A} = {b \over \sin B}$, azaz ${B \over \sin A} = {A \over \sin B}$, vagyis $A \sin A = B \sin B$. Mivel a szinuszfüggvény 0 és ${\pi \over 2}$ között szigorúan monoton nõ, azért $f(A) = f(B)$ miatt $A=B$, tehát az $ABC$ háromszög egyenlõszárú. Ez azt jelenti, hogy
+$$\cos C = \cos {a^2 + b^2 - c^2 \over 2ab} = 1 - {c^2 \over 2a^2} = 1 - {c^2 \over 2A^2}$$
+Mivel ismert becslés alapján $\cos x \geq 1 - {x^2 \over 2}$, azért $\cos C \geq 1 - {C^2 \over 2}$, ami azt jelenti, hogy $1 - {c^2 \over 2A^2} \geq 1 - {C^2 \over 2}$. Ezt átrendezve pedig $c \leq A \cdot C$- t kapjuk, ami éppen a bizonyítandó állítás volt.
+\medskip
+
+
+\hbox to \hsize{\hskip2truecm\hrulefill\hskip2truecm}
+{\bf 5. feladat: } Egy $6n \times 6n$ ($36n^2$ mezõt tartalmazó) négyzetes táblára két játékos felváltva, $2 \times 2$-es négyzeteket rak, amelyek nem fedik egymást. Az veszít, aki már nem tud tenni.\\
+$a)$ Legalább hány lépés után fejezõdhet be a játék?\\
+$b)$ Van-e valamelyik játékosnak nyerõ stratégiája?
+
+
+\ki{András Szilárd, Bege Antal}{Csíkszereda, Kolozsvár}\medskip
+
+{\bf 5. feladat I. megoldása: } Egy 3x3-as négyzetes táblára csak akkor nem lehet újabb 2x2-eset elhelyezni, ha már legalább négy mezõje foglalt. Ez azért van így, mert ha a középsõ négyzet foglalt, akkor bizonyosan még legalább 3 az (a 2x2-es táblák miatt). 
+Ha csak saroknégyzetek foglaltak, akkor szükségképpen mind a négynek foglaltnak kell lennie, mert másképp lerakhatnánk még egy 2x2-es táblát. Ha a középsõ négyzet nem foglalt, de van valamelyik oldalon foglalt belsõ négyzet, akkor biztosan foglalt mellette még egy saroknégyzet, és ha nem lehet újabb 2x2-est lerakni, akkor foglalt még a két szemközti saroknégyzet is, vagy pedig foglalt még egy oldalsó négyzet, és így a mellette lévõ saroknégyzet. Tehát minden esetben legalább 4 négyzet foglalt lesz.
+
+Ha most a $6n$x$6n$-es táblánkat felbontjuk $4^n$ darab 3x3-asra, akkor a fenti gondolatmenettel belátható, hogy legalább $4^n \cdot 4$ darab mezõ le lesz fedve, mikor az egyik játékos már nem tud lépni. Eddig tehát mindenképp folyhat a játék, vagyis legalább $4^n$ lépés után lesz vége.
+
+A b) kérdést illetõen az elsõ játékosnak van nyerõ stratégiája, amennyiben az elsõ lépésben a tábla közepén elhelyezkedõ 4 db 3x3-as négyzet összeérõ sarkaiból egyet-egyet lefed, majd a második játékos lépéseihez képest mindig a tábla középpontjára centrálszimmetrikusan lép (ez nyilvánvalóan megoldható). Ekkor látható, hogy a második játékos minden lépése után lesz még lehetõsége lépni, tehát mivel a játék egyszer biztosan véget ér, azért a második játékos fog veszíteni, és az elsõ nyerni.
+\medskip
+
+
+\hbox to \hsize{\hskip2truecm\hrulefill\hskip2truecm}
+{\bf 6. feladat: } Az $A_1A_2A_3A_4$ tetraéderben $G_i$-vel jelöljük az $A_i$-vel szemben fekvõ lap súlypontját. Ha egy térbeli $M$ pont esetén $3MG_i=MA_i$ bármely $i \in \{1, 2, 3, 4\}$, igazoljuk, hogy $M$ a tetraéder súlypontja.
+
+
+\ki{András Szilárd, Tuzson Zoltán}{Csíkszereda, Székelyudvarhely}\medskip
+
+{\bf 6. feladat I. megoldása: } Ismert a térben a síkbeli Apollóniosz-tétel megfelelõje, tehát a $G_iA_i$ szakaszok fölé emelhetõ, 1:3 arányhoz tartozó Apollóniosz-gömbök közös pontja lesz $M$. A négy gömb középpontja nem lehet egy síkban, ez azt jelenti, hogy csak egy közös pontjuk lehet, a tetraéder súlypontjáról viszont tudjuk, hogy közös pontja a gömböknek, tehát $M$ a súlypont lesz.
+\medskip
+
+\vfill
+\end{document}
