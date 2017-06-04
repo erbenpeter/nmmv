@@ -1,0 +1,134 @@
+\documentclass[a4paper,10pt]{article} 
+\usepackage[latin2]{inputenc}
+\usepackage{graphicx}
+\usepackage{amssymb}
+\voffset - 20pt
+\hoffset - 35pt
+\textwidth 450pt
+\textheight 650pt 
+\frenchspacing 
+
+\pagestyle{empty}
+\def\ki#1#2{\hfill {\it #1 (#2)}\medskip}
+
+\def\tg{\, \hbox{tg} \,}
+\def\ctg{\, \hbox{ctg} \,}
+\def\arctg{\, \hbox{arctg} \,}
+\def\arcctg{\, \hbox{arcctg} \,}
+
+\begin{document}
+\begin{center} \Large {\em X. Nemzetközi Magyar Matematika Verseny} \end{center}
+\begin{center} \large{\em Nagykanizsa, 2001. ápr. 6-10.} \end{center}
+\smallskip
+\begin{center} \large{\bf 10. osztály} \end{center}
+\bigskip 
+
+{\bf 1. feladat: } Adott a síkban az $A_{1}A_{2}\ldots A_{n} \left(n\geq 3\right)$ konvex sokszög, amelynél az $A_{k}A_{k+1}$ oldal hossza $a_{k}$ $\left(A_{n+1}\equiv A_{1}\right)$. Vetítsük merõlegesen a sokszöget az $A_{k}A_{k+1}$ oldalának egyenesére és jelöljük a vetület hosszát $d_{k}$-val ($k = 1, 2, \ldots, n$). Bizonyítsuk be, hogy
+$$\frac{a_{1}}{d_{1}} + \frac{a_{2}}{d_{2}} + \ldots + \frac{a_{n}}{d_{n}} > 2.$$
+
+
+\ki{Szabó Magda}{Szabadka}\medskip
+
+{\bf 1. feladat I. megoldása: } Könnyen meggondolható, hogy a sokszögnek bármelyik oldalegyenesére vett vetülete kevesebb, mint a kerület fele, amit $s$-sel jelölünk. Ennek alapján felírható a következõ összefüggés:
+$${a_1 \over d_1} + {a_2 \over d_2} + \ldots + {a_n \over d_n} > {a_1 \over s} + {a_2 \over s} + {a_n \over s} = {1 \over s}(a_1 + a_2 + \ldots + a_n) = {1 \over s} \cdot 2s = 2$$
+Ezzel az állítást beláttuk.
+\medskip
+
+
+\hbox to \hsize{\hskip2truecm\hrulefill\hskip2truecm}
+{\bf 2. feladat: } Határozzuk meg azokat a derékszögû háromszögeket, amelyek oldalai egész számok és területének mérõszáma háromszorosa kerülete mérõszámának.
+
+
+\ki{Oláh György}{Rév-Komárom}\medskip
+
+{\bf 2. feladat I. megoldása: } A feltétel azt jelenti, hogy $3(a+b+c) = {ab \over 2}$, amibõl $c = {ab \over 6} - (a+b)$ következik. A háromszögünk derékszögû, ez azt jelenti, hogy $a^2 + b^2 = c^2$. Helyettesítsük be most ebbe $c$ értékét!
+$$a^2 + b^2 = \left( {ab \over 6} - (a+b) \right)^2 = {a^2 b^2 \over 36} - {ab \over 3}(a+b) + a^2 + 2ab + b^2,$$
+egyszerûbb alakra hozva ${a^2b^2 \over 36} - {ab \over 3}(a+b) + 2ab = 0.$
+Rendezzünk át és egyszerûsítsünk $ab$-vel!
+$$ab - 12(a+b) + 72 = 0,$$
+ami azt jelenti, hogy
+$$(a-12)(b-12) = 72.$$
+A 72-t a sorrendet is figyelembe véve 12-féleképp lehet pozitív számok szorzatává bontani. A megoldások a következõk:
+
+$a-12 = 1$, $b-12 = 72$. Ekkor $a = 13, b = 84, c = 85$.
+
+$a-12 = 9$, $b-12 = 8$. Ekkor $a = 21, b = 20, c = 29$.
+
+$a-12 = 3$, $b-12 = 24$. Ekkor $a = 15, b = 36, c = 39$.
+
+$a-12 = 4$, $b-12 = 18$. Ekkor $a = 16, b = 30, c = 34$.
+
+$a-12 = 6$, $b-12 = 12$. Ekkor $a = 18, b = 24, c = 30$.
+
+$a-12 = 36$, $b-12 = 2$. Ekkor $a = 48, b = 14, c = 50$. 
+
+Ellenõrizhetõ, hogy ezek a számhármasok valóban kielégítik az egyenletet, ha pedig $a$-t és $b$-t fölcseréljük, ezekkel egybevágó háromszögeket kapunk. A negatív szorzattá bontások közül kettõ felel meg, a $(-8)\cdot(-9)$ és a $(-9)\cdot(-8)$, de a kapott 3,4,5 oldalú háromszög nem felel meg a kezdeti feltételnek.
+\medskip
+
+
+\hbox to \hsize{\hskip2truecm\hrulefill\hskip2truecm}
+{\bf 3. feladat: } Az $ABC$ derékszögû háromszög $AB$ átfogójához tartozó magasság talppontja $D$. Az $ADC$ és $BDC$ háromszögekbe írható körök sugara $r_{1}$ és $r_{2}$. Fejezzük ki az $ABC$ háromszögbe írható kör $r$ sugarát $r_{1}$ és $r_{2}$ segítségével.
+
+
+\ki{dr. Katz Sándor}{Bonyhád}\medskip
+
+{\bf 3. feladat I. megoldása: } Az $ADC$ és $ABC$ háromszögek a szögeik egyenlõsége miatt hasonlók, ez azt jelenti, hogy $r_1 : r = b : c$, ugyanígy a $BDC$ és $ABC$ háromszögek hasonlósága miatt $r_2 : r = a : c$. Emeljük mindkét egyenletet négyzetre és adjuk össze a megfelelõ oldalakat!
+$${r_1^2 + r_2^2 \over r^2} = {a^2 + b^2 \over c^2} = 1$$
+Ez azt jelenti, hogy $r^2 = r_1^2 + r_2^2$, tehát $r = \sqrt{r_1^2 + r_2^2}$.
+\medskip
+
+
+\hbox to \hsize{\hskip2truecm\hrulefill\hskip2truecm}
+{\bf 4. feladat: } Az $A$ halmaz a pozitív egész számokat tartalmazza $1$-tõl $2001$-ig bezárólag. Megadható-e néhány $A_{i}$ $\left(i = 1, 2, \ldots, n; n\geq 2\right)$ részhalmaz úgy, hogy teljesüljenek a következõ feltételek:
+\begin{itemize}
+\item{a)}$A_{1}\cup A_{2}\cup \ldots A_{n}=A$;
+\item{b)}$A_{i}\cap A_{j}=\emptyset; i\neq j; i, j = 1, 2, \ldots, n$;
+\item{c)}az $A_{i}$ $\left(i = 1, 2, \ldots, n\right)$
+\end{itemize}
+halmazban a számok közül a legnagyobb egyenlõ az összes többi szám összegével.
+
+
+
+\ki{Balázsi Borbála}{Beregszász}\medskip
+
+{\bf 4. feladat I. megoldása: } Minden $i$-re az $A_i$ halmaz elemeinek összege megegyezik a legnagyobb szám kétszeresével, tehát mindenképpen páros. Ez azt jelenti, hogy a részhalmazokra képezve ezen összegek összegét, az is páros lesz, de ez nem lesz más, mint a számok összege 1-tõl 2001-ig, azaz ${2001 \cdot 2002 \over 2} = 2001 \cdot 1001$, ami páratlan szám. Ez pedig ellentmondás, tehát nem létezik a halmaznak megfelelõ felbontása.
+\medskip
+
+
+\hbox to \hsize{\hskip2truecm\hrulefill\hskip2truecm}
+{\bf 5. feladat: } Oldjuk meg az egyenletet, ha x egész szám:
+$$\frac{1}{x^{2}-4x-1} + x\left(x-1\right)^{3}=x^{3}+4x^{2}-\frac{21}{4}x.$$
+
+
+\ki{Bíró Bálint}{Eger}\medskip
+
+{\bf 5. feladat I. megoldása: } Az $x = 0$ láthatóan nem megoldás. Osszuk el mindkét oldalt $x$-szel, végezzük el a mûveleteket és rendezzünk át!
+$${1 \over x^3 - 4x^2 - x} + x^3 - 4x^2 - x + {17 \over 4} = 0$$
+Helyettesítsünk most $a = x^2 - 4x^2 - x$-et, ami egy 0-tól különbözõ paraméter. Az egyenlet alakja ezután:
+$${1 \over a} + a + {17 \over 4} = 0,$$
+ami azt jelenti, hogy
+$$4a^2 + 17a + 4 = 0.$$
+Ennek két gyöke van, $a_1 = -4$, $a_2 = -{1 \over 4}$. Tekintve, hogy $x$ a feladat szerint egész szám, ezért $a$ is az, vagyis $a_2$ nem lesz megfelelõ. $a_1$-re az
+$$x^3 - 4x^2 - x = -4$$
+egyenlet rövid számolással szorzattá alakítható:
+$$(x-4)(x+1)(x-1) = 0.$$
+Ennek pedig három gyöke van: $x_1 = 4$, $x_2 = -1$, $x_3 = 1$, amelyek könnyen látható módon az eredeti egyenletnek is megoldásai.
+\medskip
+
+
+\hbox to \hsize{\hskip2truecm\hrulefill\hskip2truecm}
+{\bf 6. feladat: } Az $1, 2, 3, \ldots, 2n-1, 2n$ számokat két egyenlõ csoportra osztjuk. Legyenek
+$a_{1}< a_{2}< \ldots < a_{n}$ az egyik, $b_{1}>b_{2}> \ldots>b_{n}$ a másik csoport elemei nagyság szerint növekvõ, illetve csökkenõ sorrendben. Bizonyítsuk be, hogy
+$$\left|a_{1}-b_{1}\right|+\left|a_{2}-b_{2}\right|+\ldots+\left|a_{n}-b_{n}\right|=n^{2}.$$
+
+
+\ki{dr. Pintér Ferenc}{Nagykanizsa}\medskip
+
+{\bf 6. feladat I. megoldása: } Bármely $1 \leq k \leq n$-re $a_k$ és $b_k$ közül pontosan az egyik lesz $n$-nél nagyobb. Ez belátható abból, hogy ha $a_k \leq n$ és $b_k \leq n$ teljesülne, az azt jelentené, hogy az $a_1, a_2, \ldots ,a_k$ és $b_k, b_{k+1}, \ldots , b_{n}$ számok közül mindegyik legfeljebb $n$ lenne, de mivel ezek különbözõ számok, azért ez lehetetlen. Ugyanígy ha $a_k > n$, $b_k > n$, akkor $b_1, b_2, \ldots , b_k$ és $a_{k}, a_{k+1}, \ldots , a_n$ mind $n+1$ és $2n$ közé esnek, ami szintén lehetetlen. Ez azt jelenti, hogy az összegben minden tag egy $n$-nél nagyobb és egy $n$-nél kisebb szám különbsége. Így az abszolútértékek összegét megkaphatjuk úgy, hogy az $n$-nél nagyobb számok összegébõl kivonjuk az $n$-nél kisebb számok összegét. Ez az összeg, ha átrendezzük:
+$$(n+1) + (n+2) + \ldots + (n+n) - (1 + 2 + 3 + \ldots + n) =$$
+$$= n^2 + (1 + 2 + 3 + \ldots + n) - (1 + 2 + 3 + \ldots + n) = n^2$$
+, és éppen ezt kellett belátnunk. 
+\medskip
+
+\vfill
+\end{document}
