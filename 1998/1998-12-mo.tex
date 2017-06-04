@@ -1,0 +1,148 @@
+\documentclass[a4paper,10pt]{article} 
+\usepackage[latin2]{inputenc}
+\usepackage{graphicx}
+\usepackage{amssymb}
+\voffset - 20pt
+\hoffset - 35pt
+\textwidth 450pt
+\textheight 650pt 
+\frenchspacing 
+
+\pagestyle{empty}
+\def\ki#1#2{\hfill {\it #1 (#2)}\medskip}
+
+\def\tg{\, \hbox{tg} \,}
+\def\ctg{\, \hbox{ctg} \,}
+\def\arctg{\, \hbox{arctg} \,}
+\def\arcctg{\, \hbox{arcctg} \,}
+
+\begin{document}
+\begin{center} \Large {\em VII. Nemzetközi Magyar Matematika Verseny} \end{center}
+\begin{center} \large{\em Szabadka, 1998. ápr. 23-26.} \end{center}
+\smallskip
+\begin{center} \large{\bf 12. osztály} \end{center}
+\bigskip 
+
+{\bf 1. feladat: } Melyek azok a valós számokon értelmezett, valós értékû $f$ függvények, amelyek minden $x,y \in \mathbb{R}$ esetén kielégítik az $x \cdot f(y) = y \cdot f(x)$ egyenletet?
+
+
+\ki{Árokszállási Tibor}{Paks}\medskip
+
+{\bf 1. feladat I. megoldása: } A konstans 0 függvény láthatóan megfelelõ lesz. Így elég csak az ettõl különbözõ megoldásokat keresnünk. Keressünk egy rögzített 0-tól különbözõ $y$-t! Ekkor $f(y)$ nem lehet 0, mivel másképp minden $x$-re $f(x) = 0$ lenne igaz. Jelöljük az ${f(y) \over y}$ hányadost $c$-vel, ekkor a függvény csak $f(x) = cx$ alakú lehet, az ilyen függvényekre pedig az egyenlet nyilvánvalóan teljesül, hiszen $cxy = cxy$ formájú lesz.
+\medskip
+
+
+\hbox to \hsize{\hskip2truecm\hrulefill\hskip2truecm}
+{\bf 2. feladat: } Oldjuk meg az
+{\setlength\arraycolsep{2pt}\begin{eqnarray*}
+{1 \over 2x} + {1 \over 3y} + {1 \over 6z} & = & {1 \over {x \over 2} + {y \over 3} + {z \over 6}} \\
+x+y^2 + z^3 & = & 14
+\end{eqnarray*}}
+
+
+
+\ki{Neubauer Ferenc}{Munkács}\medskip
+
+{\bf 2. feladat I. megoldása: } Alakítsuk át az elsõ egyenletet ekvivalens módon!
+$$\left( {1 \over 2x} + {1 \over 3y} + {1 \over 6z} \right) \left( {x \over 2} + {y \over 3} + {z \over 6}\right) = 1 $$
+$${1 \over 4} + {y \over 6x} + {z \over 12x} + {x \over 6y} + {1 \over 9} + {z \over 18y} + {x \over 12z} + {y \over 18z} + {1 \over 36} = 1 $$
+$$9 + {6y \over x} + {3z \over x} + {6x \over y} + 4 + {2z \over y} + {3x \over z} + {2y \over z} + 36 = 1 $$
+$$6 \left( {x \over y} + {y \over x}\right) + 3 \left( {z \over x} + {x \over z} \right) + 2 \left( {z \over y} + {y \over z} \right) = 22$$
+A bal oldal viszont az ismert $a + {1 \over a} \geq 2$ egyenlõtlenség miatt, legalább 22, tehát az egyenlõtlenségben mindenhol egyenlõségnek kell fennállnia, ami $x = y = z$-t jelenti. A második egyenlet ekkor $x^3 + x^2 + x - 14 = 0$. Ennek az egyik gyöke 2, vagyis a gyöktényezõ kiemelhetõ:
+$$x^3 + x^2 + x - 14 = (x-2)(x^2 + 3x + 7)$$
+A második tényezõnek nincs valós gyöke, ami azt jelenti, hogy az egyenletrendszernek csak $x = y = z = 2$ a megoldása, és ez láthatóan tényleg jó is lesz.
+\medskip
+
+
+\hbox to \hsize{\hskip2truecm\hrulefill\hskip2truecm}
+{\bf 3. feladat: } Bizonyítsuk be, hogy ha az $x^3 + ax^2 + bx + c = 0$ egyenlet összes gyöke valós szám, akkor $a^2 \geq 3b$ ($a,b,c$ adott valós számok)!
+
+
+\ki{Oláh György}{Révkomárom}\medskip
+
+{\bf 3. feladat I. megoldása: } Jelöljük a gyököket $x_1$-gyel, $x_2$-vel, $x_3$-mal! Ekkor
+$$x^3 + ax^2 + bx + c = (x - x_1)(x - x_2)(x - x_3),$$
+vagyis $x_1 + x_2 + x_3 = a$ és $x_1x_2 + x_1x_3 + x_2x_3 = b$. A kívánt egyenlõtlenség:
+$$x_1^2 + x_2^2 + x_3^2 + 2(x_1x_2 + x_2x_3 + x_3x_1) \geq 3(x_1x_2 + x_2x_3 + x_3x_1).$$
+Ez pedig átrendezve azt jelenti, hogy $x_1^2 + x_2^2 + x_3^2 \geq x_1x_2 + x_1x_3 + x_2x_3$
+Ezt az egyenlõtlenséget pedig 2-vel szorozva és átrendezve
+$$(x_1 - x_2)^2 + (x_2 - x_3)^2 + (x_3 - x_1)^2 \geq 0,$$
+ami pedig mindig teljesül, és egyenlõség csak $x_1 = x_2 = x_3$ esetén állhat fenn. Tehát valóban igaz lesz a feladat állítása.
+\medskip
+
+
+\hbox to \hsize{\hskip2truecm\hrulefill\hskip2truecm}
+{\bf 4. feladat: } Egy szabályos négyoldalú gúla beírt gömbjének sugara $r$, köré írható gömbjének sugara $R$. Igazoljuk, hogy
+$${R \over r} \geq \sqrt{2} + 1.$$
+
+
+\ki{Szabó Magda}{Szabadka}\medskip
+
+{\bf 4. feladat I. megoldása: } Jelöljük a gúla alapélének felét $a$-val, magasságát pedig $m$-mel! Ekkor a gúla egyik fõköre, amely átmegy az alaplap két átellenes csúcsán és a gúla csúcsán, egy $2a \sqrt{2}$ alapú, $m$ magasságú egyenlõ szárú háromszög köré van írva. A Pitagorasz-tételt alkalmazva arra háromszögre, amelyet a kör középpontja alkot az egyik csúccsal és a magasság talppontjával:
+
+{\setlength\arraycolsep{2pt}\begin{eqnarray*}
+R^2 &=& (m - R)^2 + 2a^2 \\
+R &=& {m^2 + 2a^2 \over 2m}
+\end{eqnarray*}}
+
+A beírt gömb fõkörét egy olyan háromszögbe írhatjuk, amelynek két csúcsa az 
+alaplap két átellenes oldalfelezõje, a harmadik pedig a gúla csúcsa. Ennek alapja $2a$, magassága pedig $m$. A középpontból az egyik szárhoz húzott sugár talppontja a középponttal és a gúla csúcsával hasonló háromszöget alkot ahhoz, mint amit akkor kapunk, ha a magasság talppontját és a szár két végpontját vesszük (megegyezik a két háromszögben a derékszög, és a gúla csúcsánál kialakuló szög is). Ez azt jelenti, hogy a megfelelõ oldalak arányát felírva
+$${m-r \over r} = {\sqrt{a^2 + m^2} \over a}$$
+Ebbõl pedig következik, hogy 
+$${1 \over r} = {\sqrt{a^2 + m^2} + a \over a \cdot m}$$
+Ekkor pedig a $k = {R \over r}$ jelölés bevezetésével
+$$k = \left({1 \over 2} + \left({a \over m}\right)^2 \right)\left(\sqrt{1 + \left({m \over a}\right)^2} + 1 \right)$$
+
+Ha most az ${m \over a}$ hányadost $x$-szel jelöljük, akkor a következõ egyenletet kapjuk:
+$${x^2 \over 4} + (1 - k - k^2)x + 1 + 2k = 0$$
+Ennek az egyenletnek akkor van valós gyöke (akkor létezik megfelelõ sugáraránnyal szabályos négyoldalú gúla), ha a diszkrimináns nemnegatív, tehát ha
+$$k^2 (k^2 - 2k - 1) \geq 0,$$
+ami $k > 1$ miatt pontosan akkor teljesül, ha $k^2 - 2k - 1 \geq 0$, tehát $k \geq \sqrt{2} + 1$, és épp ezt kellett bizonyítanunk.
+\medskip
+
+
+\hbox to \hsize{\hskip2truecm\hrulefill\hskip2truecm}
+{\bf 5. feladat: } Az $(a_n)$ valós számsorozatot a következõképpen értelmezzük:
+$$a_1 = a_2 = 2 \ \hbox{és} \ a_{n+1} = {a_n^2 \over a_n^2 - a_n + 1}, \ \hbox{ha} \ n \geq 2.$$
+Igazoljuk, hogy bármely $k \geq 1$ esetén $a_1 + a_2 + \ldots + a_k = a_1 \cdot a_2 \cdot \ldots \cdot a_k$
+
+
+\ki{Kovács Béla}{Szatmárnémeti}\medskip
+
+{\bf 5. feladat I. megoldása: } Egyszerû számolással kaphatjuk, hogy ${a_{n+1} \over a_{n+1} - 1}={a_n^2 \over a_n - 1}$. Ebbõl átalakítva
+$$a_n = {a_{n+1} \over a_{n+1} - 1} \cdot {a_n - 1 \over a_n},$$
+valamint
+$$a_n = {a_{n+1} \over a_{n+1} - 1} - {a-n \over a_n - 1}$$
+adódnak. Az elsõ egyenlõtlenséget véve $k = 2, 3, \ldots , k$-ra, majd a megfelelõ oldalakat összeszorozva és beszorozva $a_1 = {a_2 \over a_2 - 1}$-gyel azt kapjuk, hogy
+$$a_1a_2 \ldots a_k = {a_{k+1} \over a_{k+1} - 1}$$
+A második egyenlõtlenséget véve $2,3, \ldots , k$-ra, majd a megfelelõ oldalakat összeadva és hozzáadva $a_1 = {a_1 \over a_1 - 1}$-et, azt kapjuk, hogy
+$$a_1 + a_2 + \ldots + a_k = {a_{k+1} \over a_{k+1} - 1}$$
+A két kapott összefüggés együttesen pedig már igazolja a feladat állítását.
+\medskip
+
+
+\hbox to \hsize{\hskip2truecm\hrulefill\hskip2truecm}
+{\bf 6. feladat: } Oldjuk meg a pozitív valós számok halmazán az 
+{\setlength\arraycolsep{2pt}\begin{eqnarray*}
+x+y+z & = & xyz \\
+{x \over \sqrt{1 + x^2}} + {y \over \sqrt{1 + y^2}} + {z \over \sqrt{1+z^2}} &=& {3 \sqrt{3} \over 2}
+\end{eqnarray*}}
+egyenletrendszert!
+
+
+\ki{Bencze Mihály}{Brassó}\medskip
+
+{\bf 6. feladat I. megoldása: } Tekintve, hogy a tangensfüggvény szigorúan monoton a $\left] 0; {\pi \over 2}\right[$ intervallumon, továbbá 0-ban 0, és határértéke ${\pi \over 2}$-ben balról végtelen, azért a pozitív $x,y,z$-khez vannak olyan $\alpha, \beta, \gamma$ szögek $0$ és ${\pi \over 2}$ között, melyekre $\tg \alpha = x$, $\tg \beta = y$, $\tg \gamma = z$. Ekkora szögekre érvényes a következõ összefüggés: $\sin \phi = {\tg \phi \over \sqrt{1+\tg ^2 \phi}}$. Így az egyenletrendszer
+{\setlength\arraycolsep{2pt}\begin{eqnarray*}
+\tg \alpha + \tg \beta + \tg \gamma &=& \tg \alpha \tg \beta \tg \gamma \\
+\sin \alpha + \sin \beta + \sin \gamma &=& {3 \sqrt{3} \over 2}
+\end{eqnarray*}}
+Ismert addíciós összefüggés alapján
+$$\tg (\alpha + \beta + \gamma) = {\tg \alpha + \tg \beta + \tg \gamma - \tg \alpha \tg \beta \tg \gamma \over 1 - \tg \alpha \tg \beta - \tg \alpha \tg \gamma - \tg \beta \tg \gamma}$$
+
+Az elsõ egyenlet alapján így $\tg(\alpha + \beta + \gamma) = 0$, ami azt jelenti, hogy $\alpha + \beta + \gamma = k \pi$, ahol $k$ egész szám. Tekintve, hogy mindhárom szög 0 és ${\pi \over 2}$ közé esik, így az összegük 0 és ${3 \pi \over 2}$ közé fog esni, ez azt jelenti, hogy szükségképpen $k = 1$, tehát $\alpha + \beta + \gamma = \pi$. Ekkor viszont $\alpha, \beta, \gamma$ egy háromszög belsõ szögei, ezekre pedig ismert a $$\sin \alpha + \sin \beta + \sin \gamma \geq {\sqrt{3} \over 2}$$
+egyenlõtlenség, amelyben egyenlõség csak akkor áll fenn, ha a háromszög szabályos, ez pedig az eredeti egyenletünkben $x = y = z = \sqrt{3}$-at jelenti, amely könnyen láthatóan valóban megoldás is lesz.
+\medskip
+
+\vfill
+\end{document}
