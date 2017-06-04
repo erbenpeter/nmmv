@@ -1,0 +1,111 @@
+\documentclass[a4paper,10pt]{article} 
+\usepackage[latin2]{inputenc}
+\usepackage{graphicx}
+\usepackage{amssymb}
+\voffset - 20pt
+\hoffset - 35pt
+\textwidth 450pt
+\textheight 650pt 
+\frenchspacing 
+
+\pagestyle{empty}
+\def\ki#1#2{\hfill {\it #1 (#2)}\medskip}
+
+\def\tg{\, \hbox{tg} \,}
+\def\ctg{\, \hbox{ctg} \,}
+\def\arctg{\, \hbox{arctg} \,}
+\def\arcctg{\, \hbox{arcctg} \,}
+
+\begin{document}
+\begin{center} \Large {\em I. Nemzetközi Magyar Matematika Verseny} \end{center}
+\begin{center} \large{\em Révkomárom, 1992. ápr. 9-12.} \end{center}
+\smallskip
+\begin{center} \large{\bf 12. osztály} \end{center}
+\bigskip 
+
+{\bf 1. feladat: } Határozzuk meg azon $x,y$ egészeket, amelyekre $x^2(x^2 + 4xy + 3y^2)$ és $y^2(y^2 + 4xy + 3x^2)$ kifejezések egyszerre teljes negyedik hatványok.
+
+
+\ki{Bencze Mihály}{Brassó}\medskip
+
+{\bf 1. feladat I. megoldása: } Legyen $a^4 = x^2(x^2+4xy+3y^2)$ és $b^4 = y^2(y^2+4xy+3x^2)$. Ekkor formális átalakításokkal $a^4+b^4 = (x+y)^4 = c^4$. A nagy Fermat-tétel azt állítja, hogy ez az egyenlet csak $abc = 0$ esetén oldható meg.
+
+Amennyiben $a = 0$, akkor az õt elõállító szorzat egyik tényezõje, tehát vagy $x^2$, vagy $x^2+4xy+3y^2$ 0-val egyenlõ, amibõl három lehetõség adódik: 
+$x=0$, $x=-3y$, vagy $x = -y$.
+
+Amennyiben $b = 0$, akkor hasonló módon vagy $y = 0$, vagy $y = -3x$, vagy pedig $y = -x$.
+
+Amennyiben $c = 0$, abból $a = b = 0$ adódik, ez $x = -y$-t jelenti (beleértve, hogy esetleg mindkét szám 0).
+\medskip
+
+
+\hbox to \hsize{\hskip2truecm\hrulefill\hskip2truecm}
+{\bf 2. feladat: } Egy konvex 10-szög belsejében vegyünk fel $k$ pontot úgy, hogy bármely két pont összekötõ egyenese ne tartalmazzon sem a felvett pontok, sem a sokszögcsúcsok közül még egyet. Bontsuk fel a sokszöget háromszögekre úgy, hogy minden háromszög csúcsa csak a sokszögcsúcsokkal vagy pedig a felvett pontokkal esik egybe. Bizonyítsuk be, hogy bármilyen módon bontjuk fel a sokszöget háromszögekre, a háromszögek száma mindig ugyanakkora.
+
+
+\ki{Reiman István}{Budapest}\medskip
+
+{\bf 2. feladat I. megoldása: } Jelöljük a felbontás során keletkezett háromszögek számát $N$-nel! Ekkor az ábra egy poliéder hálóját adja, amelynek élei a behúzott határoló oldalak, csúcsai a felvett pontok és a sokszögcsúcsok, lapjai a háromszögek, illetve az egész tízszög, mint "összekötõ" lap.
+Az Euler-féle poliéder-tétel szerint ez azt jelenti, hogy mivel ${3N+10 \over 2}$ él keletkezik (minden háromszögnek három oldala van, és ha a tízszög oldalait is hozzáadjuk, akkor minden élt pontosan kétszer számolunk), azért
+$$10+k+N = {3N+n \over 2} + 1,$$ ezt átalakítva pedig $N = 10+2k-2$ adódik, tehát ennyi háromszög fog keletkezni, függetlenül $k$-tól, ezzel a feladat állítását beláttuk.
+\medskip
+
+
+\hbox to \hsize{\hskip2truecm\hrulefill\hskip2truecm}
+{\bf 3. feladat: } Igazoljuk, hogy
+$${1 \over 3!} + {1 \over 5!} + {1 \over 7!} + \ldots$$
+irracionális.
+
+
+\ki{Bencze Mihály}{Brassó}\medskip
+
+{\bf 3. feladat I. megoldása: } A feladat ugyan nem említi, de fogadjuk el, hogy az összeg létezik (ugyanis az összeg az $1 + {1 \over 1!} + {1 \over 2!} + {1 \over 3!} + \ldots$ összegnek egy részlete, ez pedig ismeretesen $e$-hez konvergál).  Ha ez az összeg (jelöljük $x$-szel) racionális lenne, akkor felírható lenne (egy esetleges bõvítéssel) ${n \over 2k}$ alakban, ahol $n$ és $k$ természetes számok. Ekkor ha a sor minden elemét megszorozzuk $(2k)!$-sal (ez megtehetõ, az összeg is ennyiszeresére változik), akkor
+$$(2k)! \, x = A + {1 \over 2k+1} + {1 \over (2k+1)(2k+2)(2k+3)} + \ldots,$$ ahol $A$ természetes szám (a sor elsõ $k-1$ tagjának összege $(2k)!$-sal szorozva), míg $0 < B_k < {1 \over 2k+1} + {1 \over (2k+1)^3} + \ldots$ (a nevezõket csökkentettük), és a jobb oldali mértani sor összege ismert módon ${2k+1 \over 2k(2k+2)}$, ami mindig kisebb lesz, mint 1. $(2k)! \, x$ tehát egy természetes szám és egy 0 és 1 közé esõ szám összege lesz, de kezdeti föltevésünk miatt természetesnek kéne lennie, ami ellentmondás, tehát $x$ nem lehet racionális szám.
+\medskip
+
+
+\hbox to \hsize{\hskip2truecm\hrulefill\hskip2truecm}
+{\bf 4. feladat: } Legyen $f : \mathbb{R} \rightarrow \mathbb{R}$ egy folytonos függvény, ahol $f\left( f(x)\right) = x^{2n+1}, n \in \mathbb{N}$ és $f(1) = -1$. Igazoljuk, hogy $f$ szigorúan csökkenõ és $f(0) = 0$, valamint
+$$\lim_{x \rightarrow - \infty}f(x) = - \lim_{x \rightarrow + \infty}f(x) = + \infty.$$
+Adjunk példát a fenti feltételeket kielégítõ függvényekre.
+
+
+\ki{Bencze Mihály}{Brassó}\medskip
+
+{\bf 4. feladat I. megoldása: } Tetszõleges $x_1, x_2 \in \mathbb{R}$ esetén ha $f(x_1) = f(x_2)$, akkor $f(f(x_1)) = f(f(x_2))$, tehát ekkor $x_1^{2n+1}=x_2^{2n+1}$, ami azt jelenti, hogy $x_1 = x_2$. Mivel $f$ folytonos, ezért ebbõl már következik, hogy $f$ szigorúan monoton is.
+
+Tegyük fel, hogy $f$ növekvõ. Ekkor $-1 < 1$, azaz $f(-1) < f(1) = -1$, tehát $f(f(1)) = f(-1) = 1$, ez viszont ellentmondás. Ebbõl és az elõzõ állításból következik, hogy $f$ szigorúan csökkenõ lesz.
+
+$f(f(f(x)))$ kétféle megközelítése miatt a kifejezés egyrészt $f(x^{2n+1})$, másrészt $f^{2n+1}(x)$, így ez a két kifejezés minden $x$-re egyenlõ lesz. $x=0$-ra ez $f^{2n+1}(0) = f(0)$-t jelenti a behelyettesítés után, ebbõl pedig $f(0) = 0$ következik, mivel $f(-1) = 1$, és $f(1) = -1$, így $f(0)$-nak e két érték közé kell esnie, és csak $f(0) = 0$, $f(0) = 1$ és $f(0) = 2$ lehetséges.
+
+Ha $f(x)$ felülrõl korlátos, akkor van egy olyan $K$ szám, hogy bármely $x$-re $K>f(x)$. Ebbõl a szigorú csökkenés miatt $f(K) < f(f(x)) = x^{2n+1}$ következne bármely $x$ értékre, ami nem lehetséges, tehát $f(x)$ nem lehet korlátos felülrõl. Ez pedig azt jelenti, hogy a szigorú csökkenés miatt a határérték $- \infty$-ben végtelen. A másik végtelen határérték hasonlóképp igazolható.
+
+Ilyen függvényre példa lehet az $f(x) = - \hbox{sgn}\,(x) \cdot |x|^{\sqrt{2n+1}}$ hozzárendelés, amely könnyen láthatóan teljesíti a feladatban megadott összes feltételt, hiszen az egyetlen gond a 0-ban való folytonosság lehet, de ott a függvény határértéke mindkét oldalról 0 lesz.
+\medskip
+
+
+\hbox to \hsize{\hskip2truecm\hrulefill\hskip2truecm}
+{\bf 5. feladat: } Az $ABC$ derékszögû háromszögben meghúzzuk az átfogóra a magasságot. Az így keletkezett két háromszögnek megszerkesztjük a beírt köreit. Bizonyítsuk be, hogy a talppontból és ezen körök középpontjaiból alkotott háromszög hasonló az eredetihez!
+
+
+\ki{Fonód Tibor}{Komárom}\medskip
+
+{\bf 5. feladat I. megoldása: } Jelöljük az átfogóhoz tartozó magasság talppontját $D$-vel, az $ADC$ és $BCD$ háromszögek beírt körének középpontjait $O_1$-gyel illetve $O_2$-vel, a sugarakat $r_1$-gyel, illetve $r_2$-vel, az $ABC$ háromszög beírt körének sugarát $r$-rel. A $CBD$ és $ABC$ háromszögek hasonlók (két szögük megegyezik), ezért ${r_1 \over r} = {a \over r}$. Ugyanígy $ACD$ is hasonló $ABC$-hez, tehát ${r_2 \over r} = {b \over r}$, ebbõl a kettõbõl ${r_1 \over r_2} = {a \over b}$ következik. Tekintettel arra, hogy $O_1DO_2 \angle = {\pi \over 2}$ és ${O_1D \over O_2D} = {\sqrt{2}r_1 \over \sqrt{2}r_2} = {a \over b}$, az állítás már következik.
+\medskip
+
+
+\hbox to \hsize{\hskip2truecm\hrulefill\hskip2truecm}
+{\bf 6. feladat: } Vágjunk ketté egy háromszöget egy egyenessel két egyenlõ területû részre úgy, hogy az egyenesnek a háromszögön belüli szakasza a lehetõ legrövidebb legyen.
+
+
+\ki{Szabó Magda}{Szabadka}\medskip
+
+{\bf 6. feladat I. megoldása: } Ha $z$-vel jelöljük az egyenesen azt a szakaszt, ami a háromszög belsejébe esik, $\gamma$-val azt a szöget, amelyet levág a háromszögbõl, és $x$-szel, $y$-nal a szög szárain (a háromszög megfelelõ oldalai $a$ és $b$) kialakult szakaszokat. Az ismert trigonometrikus területképlet szerint a háromszög területe ${ab \sin \gamma \over 2}$, ami a feltétel szerint megegyezik $2 \cdot {1 \over 2} xy \sin \gamma$-val, ebbõl $ab = 2xy$.
+
+A koszinusztétel szerint $z^2 = x^2 + y^2 - 2xy \cos \gamma = (x-y)^2 + 2xy(1-\cos \gamma)$. Ebbõl látható, hogy (mivel a második tag állandó, hiszen mindkét tényezõje az) $z$ akkor lesz minimális, ha $x=y$, ekkor $x = y = \sqrt{ab \over 2}$, ezen a két ponton át kell tehát egyenest húzni, ha minimális hosszúságot szeretnénk elérni.
+
+A hossz azonban függ a szögtõl is, konkrétan $z_{\min}^2 = ab(1-\cos \gamma)$, ami a háromszög területe szorozva $\tg {\gamma \over 2}$-vel, ez pedig akkor lesz minimális, ha a szög tangense minimális (a tangens argumentuma biztosan kisebb, mint ${\pi \over 2}$), ami azt jelenti, hogy a legkisebb szög szárait kell elmetszenünk az egyenessel, hogy a kívánt szakaszhosszt megkapjuk.
+\medskip
+
+\vfill
+\end{document}

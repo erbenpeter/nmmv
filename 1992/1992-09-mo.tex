@@ -1,0 +1,101 @@
+\documentclass[a4paper,10pt]{article} 
+\usepackage[latin2]{inputenc}
+\usepackage{graphicx}
+\usepackage{amssymb}
+\voffset - 20pt
+\hoffset - 35pt
+\textwidth 450pt
+\textheight 650pt 
+\frenchspacing 
+
+\pagestyle{empty}
+\def\ki#1#2{\hfill {\it #1 (#2)}\medskip}
+
+\def\tg{\, \hbox{tg} \,}
+\def\ctg{\, \hbox{ctg} \,}
+\def\arctg{\, \hbox{arctg} \,}
+\def\arcctg{\, \hbox{arcctg} \,}
+
+\begin{document}
+\begin{center} \Large {\em I. Nemzetközi Magyar Matematika Verseny} \end{center}
+\begin{center} \large{\em Révkomárom, 1992. ápr. 9-12.} \end{center}
+\smallskip
+\begin{center} \large{\bf 9. osztály} \end{center}
+\bigskip 
+
+{\bf 1. feladat: } Bizonyítsuk be, hogy ha $n>1$ természetes szám, akkor $n^8+n^4+1$ összetett szám.
+
+
+\ki{Mészáros József}{Galánta}\medskip
+
+{\bf 1. feladat I. megoldása: } Vegyük észre, hogy $n^8+n^4+1 = (n^4+1)^2-n^4$. Ez pedig ismert azonosság alapján $(n^4-n^2+1)(n^4+n^2+1)$ formába írható, amelynek $n>1$ esetén mindkét tényezõje 1-nél nagyobb, tehát a szorzat értéke nem lehet prímszám, vagyis mindig összetett szám lesz.
+\medskip
+
+
+\hbox to \hsize{\hskip2truecm\hrulefill\hskip2truecm}
+{\bf 2. feladat: } Mely $p$ pozitív prímszámokra lesz $2p+1$, $3p+2$, $4p+3$, $6p+1$ mindegyike prímszám?
+
+
+\ki{Urbán János}{Budapest}\medskip
+
+{\bf 2. feladat I. megoldása: } $p=2$ és $p=3$ esetén a kérdéses kifejezések értéke nyilvánvalóan nem lesz prím.
+$p=5$-re könnyen ellenõrizhetõen minden szám prím lesz (a kifejezések értéke rendre 11, 17, 23, 31). Az 5-nél nagyobb prímekre pedig valamelyik kifejezés mindig összetett lesz, hiszen ha a maradék $1$, akkor $3p+2$, ha $2$, akkor $2p+1$, ha $3$, akkor $4p+3$, ha $4$, akkor pedig $6p+1$ lesz $5$-tel osztható a maradékokkal való számolási szabályok alapján.
+\medskip
+
+
+\hbox to \hsize{\hskip2truecm\hrulefill\hskip2truecm}
+{\bf 3. feladat: } Igazoljuk, hogy ha $a+b+c=0$, akkor $$6(a^5+b^5+c^5)=5(a^2+b^2+c^2)(a^3+b^3+c^3).$$
+
+
+\ki{Bencze Mihály}{Brassó}\medskip
+
+{\bf 3. feladat I. megoldása: } Használjuk fel, hogy a feladat állítása szerint $c = -(a+b)$! Fejtsük ki az egyenlõség két oldalát ezt felhasználva! 
+
+{\setlength\arraycolsep{2pt}\begin{eqnarray*}
+6(a^5+b^5+c^5)&=& 6(a^5+b^5-(a+b)^5) = -6  (5a^4b+10a^3b^2+10a^2b^3+5ab^4) \\
+&=& -30 ab (a^3+2a^2b+2ab^2+b^3) = 30ab(a+b)(ab-(a+b)^2)
+\end{eqnarray*}}
+A másik oldalt kifejtve a következõt kapjuk:
+{\setlength\arraycolsep{2pt}\begin{eqnarray*}
+5(a^2+b^2+c^2)(a^3+b^3+c^3) &=& 5(2a^2+2b^2+2ab)(-3ab(a+b))\\
+&=& 30ab(a+b)(ab-(a+b)^2).
+\end{eqnarray*}}
+Láthatóan mindkét esetben ugyanazt kaptuk. Ezek szerint tehát $a+b+c = 0$ teljesülése esetén az egyenlõség is biztosan igaz lesz.
+\medskip
+
+
+\hbox to \hsize{\hskip2truecm\hrulefill\hskip2truecm}
+{\bf 4. feladat: } Adott $ABC$ háromszög és $D \in BC$, $E \in AC$, $F \in AB$ pontok. Az $A$ csúcson át párhuzamost húzunk a $BC$ oldallal, amely a $DE$ egyenest $M$-ben és a $DF$ egyenest $N$-ben metszi. Igazoljuk, hogy $AD$, $MF$, $NE$ akkor és csakis akkor mennek át egy ponton, ha $D$ a $BC$ oldal felezõpontja.
+
+
+\ki{Bencze Mihály}{Brassó}\medskip
+
+{\bf 4. feladat I. megoldása: } Alkalmazzuk Ceva tételét a $DMN$ háromszögben az oldalak $F,\ E,\ A$ belsõ pontjaira nézve. Eszerint a kérdéses egyenesek pontosan akkor mennek át egy ponton, ha az oldalak osztásarányainak szorzata valamely körüljárás szerint 1, azaz ebben az esetben $\frac{MA}{AN} \cdot \frac{NF}{FD} \cdot \frac{DE}{EM}$ szorzat $1$-gyel lesz egyenlõ. Felhasználva, hogy az $AEM$ és az $EDC$, valamint az $ANF$ és az $FDB$ háromszögek hasonlók, ez a szorzat
+$\frac{MA}{AN} \cdot \frac{AN}{BD} \cdot \frac{DC}{MA}$-val lesz egyenlõ, ami egyszerûsítés után $\frac{DC}{BD}$. Ennek kell $1$-nek lennie, hogy az egyenesek egy ponton menjenek át. Ekkor viszont $DC=BD$ már adódik, és ezt kellett bizonyítanunk.
+
+\medskip
+
+
+\hbox to \hsize{\hskip2truecm\hrulefill\hskip2truecm}
+{\bf 5. feladat: } Határozzuk meg az $x,y$ egész számokat, ha $x^2-2xy+2y^2-4y^3=0$.
+
+
+
+\ki{Balázs Lajos}{Zselíz}\medskip
+
+{\bf 5. feladat I. megoldása: } Némi átalakítás után az egyenlet $$(x-y)^2 = y^2(4y-1)$$ alakba írható. $y=0$-ból $x=0$ következik, és ez láthatóan megoldás is. Ha $y \not = 0$, akkor $4y-1$ négyzetszám, de egy négyzetszám 4-es maradéka mindig 0 vagy 1. Tehát az egyetlen megoldás $x = y = 0$.
+\medskip
+
+
+\hbox to \hsize{\hskip2truecm\hrulefill\hskip2truecm}
+{\bf 6. feladat: } Legyenek $x_a, x_b, x_c$ az $ABC$ hegyesszögû háromszög tetszõleges $P$ belsõ pontjának az $a, b, c$ oldalaktól mért távolságai, valamint $m_a, m_b, m_c$ a megfelelõ magasságok. Igazoljuk, hogy $${x_a \over m_a}+{x_b \over m_b}+{x_c \over m_c}=1.$$
+
+
+\ki{Mészáros József}{Galánta}\medskip
+
+{\bf 6. feladat I. megoldása: } Az $ABC$ háromszög az $ABP$, $BCP$ és $ACP$ háromszögekbõl áll össze, így területe megkapható ezek területösszegeként. Ennek következtében az $${x_a \over m_a}+{x_b \over m_b}+{x_c \over m_c}$$
+összeg, amely megegyezik az $BCP$, $ACP$ és $ABP$ háromszögek $ABC$ háromszöghöz vett területarányainak összegével (azonos oldalhoz tartozó magasságok arányai), az elsõ megfontolásunk miatt 1-gyel lesz egyenlõ, ezzel az állítást bebizonyítottuk.
+\medskip
+
+\vfill
+\end{document}
