@@ -1,0 +1,112 @@
+\documentclass[a4paper,10pt]{article} 
+\usepackage[latin2]{inputenc}
+\usepackage{graphicx}
+\usepackage{amssymb}
+\voffset - 20pt
+\hoffset - 35pt
+\textwidth 450pt
+\textheight 650pt 
+\frenchspacing 
+
+\pagestyle{empty}
+\def\ki#1#2{\hfill {\it #1 (#2)}\medskip}
+
+\def\tg{\, \hbox{tg} \,}
+\def\ctg{\, \hbox{ctg} \,}
+\def\arctg{\, \hbox{arctg} \,}
+\def\arcctg{\, \hbox{arcctg} \,}
+
+\begin{document}
+\begin{center} \Large {\em III. Nemzetközi Magyar Matematika Verseny} \end{center}
+\begin{center} \large{\em Ungvár, 1994. ápr. 15-19.} \end{center}
+\smallskip
+\begin{center} \large{\bf 9. osztály} \end{center}
+\bigskip 
+
+{\bf 1. feladat: } Igazoljuk, hogy a $2p + 1$ alakú számok között, ahol $p$ prímszám, pontosan egy olyan van, amely egy pozitív egész szám köbe!
+
+
+\ki{Szabó Magda}{Szabadka}\medskip
+
+{\bf 1. feladat I. megoldása: } Vizsgáljuk, meg milyen alakúak azok a számok, amelyek egyszerre állnak elõ a feladatban megadott módon, és egy $2k+1$ alakú szám köbei (nyilván csak páratlan szám jöhet szóba).
+$$2p+1 = (2k+1)^3 = 8k^3 + 12k^2 + 6k + 1$$
+$$p = k(4k^2+6k+3)$$ 
+Ez azt jelenti, hogy csakis $k = 1$ jöhet szóba, hiszen $p$ prímszám, és a második tényezõ mindig nagyobb, mint 1. Ebben az esetben a második tényezõ 13, ami valóban prímszám, és az imént láttuk, hogy más nem lehet, ezzel bebizonyítottuk az állítást.
+\medskip
+
+
+\hbox to \hsize{\hskip2truecm\hrulefill\hskip2truecm}
+{\bf 2. feladat: } Hány olyan --- legalább kételemû --- halmaz van, amelynek elemei egymást követõ pozitív egész számok, és a halmaz elemeinek összege 100?
+
+
+\ki{Kántor Sándorné}{Debrecen}\medskip
+
+{\bf 2. feladat I. megoldása: } %Saját megoldás
+Legyen az elsõ, a halmazban lévõ számnál 1-gyel kisebb szám $k$, a halmaz legnagyobb eleme pedig $n$. Ekkor a halmaz elemeinek összege az ismert formula szerint ${n(n+1) \over 2} - {k(k+1) \over 2} = 100$ lesz, azaz átalakítva $(n-k)(n+k+1) = 200$. A két tényezõ közül az egyik páros, a másik páratlan, hiszen összegük is páratlan. Mivel $n-k$ a halmaz elemszáma, és legalább 2, $n+k+1$ pedig szintén legalább 2, ez csak kétféleképp fordulhat elõ: az egyik tényezõ 5 vagy 25, a másik pedig megfelelõen 40 vagy 8. Az elsõ esetben az összegük, azaz $2n+1$ 45 lesz, tehát $n = 22$, a különbségük pedig $2k+1 = 35$ (nyilvánvaló, hogy a második tényezõ a nagyobb), azaz $k = 17$. A második esetben $n = 16$, $k = 8$. Több eset nem lehetséges, így tehát két halmaz lesz megfelelõ: a 8-nál nagyobb és 17-nél kisebb egész számoké, valamint a 17-nél nagyobb és 23-nál kisebb egész számoké.
+\medskip
+
+
+\hbox to \hsize{\hskip2truecm\hrulefill\hskip2truecm}
+{\bf 3. feladat: } Egy kör $AB$ átmérõjét messük el egy, az $AB$-vel $45^{\circ}$-os szöget bezáró $CD$ húrral, $AB$ és $CD$ metszéspontját jelölje $P$! Igazoljuk, hogy $2(CP^2 + PD^2) = AB^2$.
+
+
+\ki{Benedek Ilona}{Vác}\medskip
+
+{\bf 3. feladat I. megoldása: } Jelöljük a kör középpontját $O$-val, a $C$ $AB$-re vett tükörképét pedig $C'$-vel! A $CPA$ szög $45^{\circ}$ lesz, a $CPC'$ szög derékszög a $C'CP$ szög pedig szintén ekkora lesz, hiszen egy egyenlõszárú derékszögû háromszög hegyesszöge lesz. A kerületi és középponti szögek tétele miatt ekkor $C'OD \angle = 90^{\circ}$, továbbá derékszög lesz $C'PD$ is, hiszen egy derékszög kiegészítõ szöge. Mivel $CP = C'P$, azért $CP^2 + PD^2 = C'P^2 + PD^2$, mivel a $C'PD$ háromszög derékszögû, azért $C'P^2+PD^2 = C'D^2$, és mivel a $C'OD$ háromszög is derékszögû, azért $C'D^2 = DO^2 + C'O^2$, ami pedig egyenlõ az átmérõ fele négyzetének kétszeresével, tehát ${AB^2 \over 2}$. Ez pedig éppen a kívánt állítás.
+
+\centerline{\includegraphics{figures/1994-9-3}}
+\medskip
+
+
+\hbox to \hsize{\hskip2truecm\hrulefill\hskip2truecm}
+{\bf 4. feladat: } Határozzuk meg a $2x^2 - 8xy + 17y^2 - 16x - 4y + 2062$ kifejezés legkisebb értékét, ha $x$ és $y$ tetszõleges valós számok!
+
+
+\ki{Róka Sándor}{Nyíregyháza}\medskip
+
+{\bf 4. feladat I. megoldása: } Alakítsuk át a kifejezést!
+$$
+2x^2 - 8xy + 17y^2 - 16x - 4y + 2062 =2(x-2y-4)^2 + 9(y-2)^2 + 1994 \geq 1994
+$$
+Egyenlõség pontosan akkor lesz, ha $y = 2$, és $x = 2y+4 = 8$, tehát a minimum 1994 lesz, és ezt fel is veszi a kifejezés.
+\medskip
+
+
+\hbox to \hsize{\hskip2truecm\hrulefill\hskip2truecm}
+{\bf 5. feladat: } Egy 2 egység kerületû háromszög oldalainak hossza $a$, $b$ és $c$. Igazoljuk, hogy
+$$\begin{array}{lll}
+&&a) \ (1-a)(1-b)(1-c) > 0 \\[6pt]
+&&b) \ a^2 + b^2 + c^2 + 2abc < 2.
+\end{array}$$
+
+
+\ki{Szabó Magda}{Szabadka}\medskip
+
+{\bf 5. feladat I. megoldása: } A háromszög kerülete 2, tehát a háromszög-egyenlõtlenség szerint (kissé módosított formában, mely szerint bármely oldal kisebb a kerület felénél) mind a három oldal kisebb, mint 1. Ez azt jelenti, hogy az elsõ egyenlõtlenség bal oldalán minden tényezõ pozitív, tehát az mindenképpen igaz. Másrészrõl viszont végezzük el abban a kifejezésben a mûveleteket:
+{\setlength\arraycolsep{2pt}\begin{eqnarray*}
+(1-a)(1-b)(1-c) & = &1 - a - b - c + ab + bc + ac - abc = \\
+& = & 1-2+{1 \over 2} \left((a+b+c)^2 - (a^2+b^2+c^2)\right) - abc > 0
+\end{eqnarray*}}
+
+$a+b+c = 2$ behelyettesítésével pedig ebbõl már $a^2+b^2+c^2+2abc < 2$ már adódik. 
+\medskip
+
+
+\hbox to \hsize{\hskip2truecm\hrulefill\hskip2truecm}
+{\bf 6. feladat: } Bizonyítsuk be, hogy ha $x \in \mathbb{R}$ és $n>0$, akkor
+$$\left[ {(n+1)x \over 2} - {[x] + [2x] + \ldots + [nx] \over n} \right] = 0,$$
+ahol $[A]$ jelöli az $A$ szám egész részét, tehát azt a legnagyobb egész számot, amely nem nagyobb $A$-nál.
+
+
+\ki{Bencze Mihály}{Brassó}\medskip
+
+{\bf 6. feladat I. megoldása: } Használjuk fel, hogy $x = \{x\} + [x]$.
+{\setlength\arraycolsep{2pt}\begin{eqnarray*}
+\left[{(n+1)x \over 2} - {[x]+[2x]+\ldots + [nx] \over n} \right] & = & \left[{(n+1)x \over 2} - {x+2x+ \ldots +nx -\{x\}-\{2x\}- \ldots -\{nx\}}\right] = \\
+& = & \left[{\{x\} + \{2x\} + \ldots + \{nx\} \over n}\right]
+\end{eqnarray*}}
+A számlálóban minden tag 1-nél kisebb abszolútértékû, vagyis összegük $n$-nél kisebb abszolútértékû, tehát a hányados egészrésze valóban 0 lesz, ezzel a kért állítást beláttuk.
+\medskip
+
+\vfill
+\end{document}

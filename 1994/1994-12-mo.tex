@@ -1,0 +1,119 @@
+\documentclass[a4paper,10pt]{article} 
+\usepackage[latin2]{inputenc}
+\usepackage{graphicx}
+\usepackage{amssymb}
+\voffset - 20pt
+\hoffset - 35pt
+\textwidth 450pt
+\textheight 650pt 
+\frenchspacing 
+
+\pagestyle{empty}
+\def\ki#1#2{\hfill {\it #1 (#2)}\medskip}
+
+\def\tg{\, \hbox{tg} \,}
+\def\ctg{\, \hbox{ctg} \,}
+\def\arctg{\, \hbox{arctg} \,}
+\def\arcctg{\, \hbox{arcctg} \,}
+
+\begin{document}
+\begin{center} \Large {\em III. Nemzetközi Magyar Matematika Verseny} \end{center}
+\begin{center} \large{\em Ungvár, 1994. ápr. 15-19.} \end{center}
+\smallskip
+\begin{center} \large{\bf 12. osztály} \end{center}
+\bigskip 
+
+{\bf 1. feladat: } Igazoljuk, hogy ha $x_1$ és $x_2$ az $x^2 - 1994x + 1$ másodfokú polinom gyökei, akkor minden $n>0$ egész számra $x_1^n + x_2^n$ pozitív egész szám!
+
+
+\ki{Szabó Magda}{Szabadka}\medskip
+
+{\bf 1. feladat I. megoldása: } Alkalmazzunk teljes indukciót, mutassuk meg, hogy bármely $n$-re $x_1^{n+1} + x_2^{n+1} > x_1^n + x_2^n$, és $x_1^n + x_2^n \in \mathbb{N}^+$! $x_1+x_2 = 1994$ (a Viete-formula alapján).
+Tegyük fel most, hogy az állítás igaz egy $n$ pozitív egész számig. Szorozzuk meg az $x_1^2 - 1994x_1 + 1 = 0$ egyenletet $x_1^{n-1}$-gyel, $x_2^2 - 1994x_2 + 1 = 0$-t pedig $x_2^{n-1}$-gyel! Kapjuk, hogy $x_1^{n+1}+x_1^{n-1} = 1994x_1^{n}$, továbbá $x_2^{n+1}+x_2^{n-1} = 1994x_2^{n}$. Ha összeadjuk a megfelelõ oldalakat és átrendezünk, azt kapjuk, hogy
+$$x_1^{n+1} + x_2^{n+1} = 1994(x_1^{n} + x_2^{n}) - (x_1^{n-1} + x_2^{n-1})$$
+Ez pedig azt jelenti, hogy $n+1$-re is igaz az állítás, mivel tudjuk, hogy $x_1^{n} + x_2^{n} > x_1^{n-1} + x_2^{n-1}$ és pozitív egészek, ami azt jelenti, hogy $x_1^{n+1} + x_2^{n+1} > x_1^{n} + x_2^{n}$ és pozitív egész szám, ez pedig azt azt jelenti, hogy igaz a feladat állítása.
+\medskip
+
+
+\hbox to \hsize{\hskip2truecm\hrulefill\hskip2truecm}
+{\bf 2. feladat: } Tekintsük azon $y = x^2 + px + q$ egyenletû parabolák halmazát, amelyek a koordinátatengelyeket három különbözõ pontban metszik. Bizonyítsuk be, hogy e ponthármasokon áthaladó körvonalaknak van közös pontja.
+
+
+\ki{Gecse Frigyes}{Ungvár}\medskip
+
+{\bf 2. feladat I. megoldása: } Keressük meg a kör egyenletét a $p, \ q$ paraméterekkel! A három metszéspont: $M_1(0;q)$, a másik két metszéspont pedig $M_2(x_1;0)$ és $M_3(x_2;0)$, ahol $x_1$ és $x_2$ a polinom gyökei. Legyen a kör egyenlete $x^2+y^2+ax+by+c=0$, ez teljesül $M_2$-re és $M_3$-ra is, tehát $x_1^2+ax_1+c=0$ és $x_2^2+ax_2+c=0$, ez azt jelenti, hogy kivonva egymásból a megfelelõ oldalakat $x_1^2-x_2^2 = a(x_2-x_1)$, tehát $a = -(x_1+x_2) = -p$, ezt figyelembe véve $x_1^2 - (x_1+x_2)x_1 +c = 0$, amibõl átrendezve $c = x_1x_2 = q$ adódik. Mivel a kör átmegy $M_1$-en, azért (behelyettesítve $M_1$ koordinátáit és $c$ értékét) $q^2 + bq + q = 0$, ezt átrendezve $b = -1-q$. 
+
+Minden ilyen egyenletû egyenes pedig átmegy a $(0;1)$ ponton, mivel $1+(-1-q)+q = 1 - (1+q) + q = 0$.
+\medskip
+
+
+\hbox to \hsize{\hskip2truecm\hrulefill\hskip2truecm}
+{\bf 3. feladat: } Bizonyítsuk be, hogy ha $a,b,c > 1$, vagy $0 < a,b,c < 1$ valós számok, akkor
+$${\log_b a^2 \over a+b} + {\log_c b^2 \over b+c} + {\log_a c^2 \over a+c} \geq {9 \over a+b+c}.$$
+
+
+\ki{Szabó Magda}{Szabadka}\medskip
+
+{\bf 3. feladat I. megoldása: } A feltételek miatt $\log _b a$, $\log _c b$ és $\log _a c$ mind pozitív számok. Alkalmazhatjuk tehát a számtani és mértani közép közti egyenlõtlenséget 3 változóra:
+{\setlength\arraycolsep{2pt}\begin{eqnarray*}
+{1 \over 3} \left( {\log _b a^2 \over a+b} + {\log _c b^2 \over b+c} + {\log _a c^2 \over a+c}\right) & \geq & \root 3 \of {(\log _b a^2)(\log _c b^2)(\log _a c^2) \over (a+b)(b+c)(a+c)} = \\[6pt]
+& = & \root 3 \of {2^3 (\log _b a^2)(\log _c b^2)(\log _a c^2) \over (a+b)(b+c)(a+c)} = \\[6pt]
+& = & {2 \over \root 3 \of {(a+b)(b+c)(c+a)}}
+\end{eqnarray*}}
+A számtani és mértani közép közti egyenlõtlenség másik alkalmazásával kapjuk, hogy
+$${2(a+b+c) \over 3} = {(a+b) + (b+c) + (a+c) \over 3} \geq \root 3 \of {(a+b)(b+c)(a+c)}$$
+Ebbõl pedig az következik, hogy ${2 \over \root 3 \of {(a+b)(b+c)(a+c)}} \geq {3 \over a+b+c}$
+, ezt egybevetve az elõbb kapott egyenlõtlenséggel pedig éppen a feladat állítását kapjuk.
+\medskip
+
+
+\hbox to \hsize{\hskip2truecm\hrulefill\hskip2truecm}
+{\bf 4. feladat: } Számoljuk ki (zsebszámológép és függvénytáblázat használata nélkül) a következõ szorzat értékét:
+$$x = \sin 5^{\circ} \cdot \sin 15^{\circ} \cdot \sin 25^{\circ} \cdot \sin 35^{\circ} \cdot \sin 45^{\circ} \cdot \sin 55^{\circ} \cdot \sin 65^{\circ} \cdot \sin 75^{\circ} \cdot \sin 85^{\circ}.$$
+
+
+\ki{Kántor Sándorné}{Debrecen}\medskip
+
+{\bf 4. feladat I. megoldása: } "Egészítsük ki" a szorzatot! Jelöljük $y$-nal a $\sin 5^{\circ} \cdot \sin 10^{\circ} \sin 15^{\circ} \cdot \ldots \cdot \sin 80^{\circ} \cdot \sin 85^{\circ}$ kifejezés értékét! A hegyesszögek között ismert $\sin \alpha = \cos (90^{\circ} - \alpha)$ egyenlõség miatt 
+$$y = (\sin 5^{\circ} \cos 5^{\circ}) (\sin 10^{\circ} \cos 10^{\circ}) \cdot \ldots \cdot (\sin 40^{\circ} \cdot \cos 40^{\circ}) \cdot \sin 45^{\circ}.$$
+Tudjuk, hogy $\sin 2 \alpha = 2 \sin \alpha \cos \alpha$. Ezt felhasználva a kifejezés ($y$ értékére) a következõ alakba írható
+$$y = {\sqrt{2} \over 2} \cdot {1 \over 2^8} \cdot \sin 5^{\circ} \cdot \sin 10^{\circ} \cdot \sin 20^{\circ} \ldots \cdot \sin 80^{\circ}$$
+Jelöljük a megkeresendõ értéket $x$-szel, ez azt jelenti, hogy
+$$xy = {\sqrt{2} \over 2} \cdot {1 \over 2^8} \cdot \sin 5^{\circ} \cdot 10^{\circ} \cdot \ldots \cdot \sin 85^{\circ} = {\sqrt{2} \over 2^9} y$$
+Ezt átrendezve pedig azt kapjuk, hogy $x = {\sqrt{2} \over 2^9} = {\sqrt{2} \over 512}$. Ezzel a feladatot megoldottuk.
+\medskip
+
+
+\hbox to \hsize{\hskip2truecm\hrulefill\hskip2truecm}
+{\bf 5. feladat: } Határozzuk meg, hogy azok közül a tetraéderek közül, amelyeknek három, egy csúcsból induló éle páronként merõleges egymásra és összes élének hosszát összeadva egy $h$ állandó értéket kapunk, melyiknek a térfogata maximális és mennyi ez a térfogat!
+
+
+\ki{Kántor Sándorné}{Debrecen}\medskip
+
+{\bf 5. feladat I. megoldása: } Jelöljük a feladatban említett csúcsból kiinduló éleket $a, \ b, \ c$-vel! Ekkor
+$$h = a+b+c+\sqrt{a^2+b^2} + \sqrt{b^2 + c^2} + \sqrt{c^2 + a^2},$$
+hiszen a többi élt a Pitagorasz-tétel segítségével kiszámolhatjuk. A számtani és mértani közép közti egyenlõtlenségbõl adódnak a következõ összefüggések:
+$${a+b+c \over 3} \geq \root 3 \of {abc}, \ a^2 + b^2 \geq 2ab, \ b^2 + c^2 \geq 2bc, \ c^2 + a^2 \geq 2ca$$
+Ebbõl az következik, hogy 
+$$h \geq \root 3 \of {abc} + \sqrt{2ab} + \sqrt{2bc} + \sqrt{2ca} = 3 \root 3 \of {abc} + \sqrt{2}\left( \sqrt{ab} + \sqrt{bc} + \sqrt{ca}\right)$$
+Mivel pedig szintén a számtani és mértani közép közti egyenlõtlenség miatt ${\sqrt{ab} + \sqrt{bc} + \sqrt{ca} \over 3} \geq \root 3 \of {abc}$, azért $h \geq 3(1+\sqrt{2}) \root 3 \of {abc}$ is igaz lesz, egyenlõség az összes esetben $a = b = c$ esetén áll fönn. Tehát a térfogat (${abc \over 6}$) $a=b=c$ esetén lesz maximális, és értéke ${h^3 \over 6 \cdot 3^3(1+\sqrt{2})^3} = {5\sqrt{2} - 7 \over 162} h^3$.
+\medskip
+
+
+\hbox to \hsize{\hskip2truecm\hrulefill\hskip2truecm}
+{\bf 6. feladat: } Igazoljuk, hogy ha $n>0$ egész szám, akkor
+$$e^{1 - {1 \over 2n}} < \left( 1 + {1 \over n} \right)^n < e^{1 - {1 \over 2n} + {1 \over 3n^2}},$$
+ahol $$e = \lim_{n \rightarrow \infty}\left( 1+ {1 \over n} \right)^n,$$ a természetes logaritmus alapszáma!
+
+
+\ki{Bencze Mihály}{Brassó}\medskip
+
+{\bf 6. feladat I. megoldása: } A feladatban szereplõ elsõ egyenlõtlenség mindkét oldal természetes alapú logaritmusát véve ekvivalens az
+$1-{1 \over 2n} < n \ln \left( 1 + {1 \over n}\right)$ egyenlõtlenséggel.
+Legyen most egy tetszõleges $0 < x < 1$, és $g(x) = \ln (1+x)-x+{x^2 \over 2}$. A függvény deriváltja ${1 \over 1+x} - 1 + x > 0$, tehát a függvény szigorúan monoton növekszik. Ebbõl következõen $g(x) > g(0) = 0$, tehát $$ng \left({1 \over n} \right) = n \left( \ln \left(1+{1 \over n} \right) - \left({1 \over n} - {1 \over 2n^2} \right) \right) > 0,$$ ami viszont éppen a bizonyítandó egyenlõtlenség elsõ felét jelenti.
+
+Másfelõl legyen most $h(x) = x-x{x^2 \over 2}-{x^3 \over 3} - \ln (1+x) > 0$. A függvény deriváltja $1-x+x^2-{1 \over 1+x} = {x^3 \over 1+x} > 0$, tehát ez a függvény is szigorúan monoton növekvõ. Ugyanolyan módon, mint az imént, ebbõl igazolható az egyenlõtlenség másik oldala is.
+\medskip
+
+\vfill
+\end{document}
