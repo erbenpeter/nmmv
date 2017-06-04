@@ -1,0 +1,111 @@
+\documentclass[a4paper,10pt]{article} 
+\usepackage[latin2]{inputenc}
+\usepackage{graphicx}
+\usepackage{amssymb}
+\voffset - 20pt
+\hoffset - 35pt
+\textwidth 450pt
+\textheight 650pt 
+\frenchspacing 
+
+\pagestyle{empty}
+\def\ki#1#2{\hfill {\it #1 (#2)}\medskip}
+
+\def\tg{\, \hbox{tg} \,}
+\def\ctg{\, \hbox{ctg} \,}
+\def\arctg{\, \hbox{arctg} \,}
+\def\arcctg{\, \hbox{arcctg} \,}
+
+\begin{document}
+\begin{center} \Large {\em IX. Nemzetközi Magyar Matematika Verseny} \end{center}
+\begin{center} \large{\em Dunaszerdahely, 2000. március 23-27.} \end{center}
+\smallskip
+\begin{center} \large{\bf 9. osztály} \end{center}
+\bigskip 
+
+{\bf 1. feladat: } Bizonyítsuk be, hogy minden $k$ pozitív egész számra igaz, hogy a $(k+1)(k+2)(k+3)\cdot\dots\cdot (k+2000)$ szorzat osztható $2000^{99}$-nel! 
+
+
+\ki{Oláh György}{Komárom}\medskip
+
+{\bf 1. feladat I. megoldása: } Bontsuk prímtényezõkre a 2000-et! $2000 = 2^4 \cdot 5^3$. Ez azt jelenti, hogy $2000^{99} = 2^{4 \cdot 99} \cdot 5^{3 \cdot 99} = 2^{396} \cdot 5^{297}$. A feladatban szereplõ szorzat 2000 egymást követõ számot tartalmaz, amelyek közül minden második páros, tehát a szorzat osztható lesz minimálisan $2^{1000}$-nel, tehát biztosan osztható lesz $2^{396}$-nal is. Hasonló módon a tényezõk közt 400 lesz, melyek oszthatók 5-tel, vagyis a szorzat biztosan osztható lesz $5^{400}$-nal, így $5^{297}$-nel is. Mivel pedig $2^{396}$ és $5^{297}$ relatív prímek, azért a feladatban szereplõ szorzat osztható ezek szorzatával, vagyis $2000^{99}$-nel.
+\medskip
+
+
+\hbox to \hsize{\hskip2truecm\hrulefill\hskip2truecm}
+{\bf 2. feladat: } Ha az $ABC$ háromszög $AB$ és $AC$ oldalán úgy vesszük fel a $D$ és $E$ pontokat, hogy $DE=DB=EC$ teljesüljön, akkor $AD=AE=BC$ is teljesül. Mekkorák az $ABC$ háromszög szögei?
+
+
+\ki{Katz Sándor}{Bonyhád}\medskip
+
+{\bf 2. feladat I. megoldása: } Jelöljük a $BC$, $AD$, $AE$ szakaszok közös hosszát $a$-val, a $BD$, $DE$, $EC$ szakaszokét $x$-szel! Ekkor $AB = AC = a+x$, tehát a háromszög egyenlõszárú, a két szár $AB$ és $AC$ lesz. Jelöljük a szárszög felét $\alpha$-val, az alapon fekvõ szögek összege így $90^{\circ} - \alpha$.
+
+\centerline{\includegraphics{figures/2000-9-2}}
+
+Mindezekbõl következik, hogy $BCED$ egyenlõszárú trapéz, mivel az $ADE$ és $ABC$ háromszögek hasonlók a szárszög egyenlõsége, valamint a mellette fekvõ oldalak aránya miatt, továbbá abból, hogy az $BD = EC$ háromszög egyenlõszárú. Ez azt jelenti, hogy $ADE \angle = 90^{\circ} - \alpha$. Vegyünk fel egy $F$ pontot a $DE$ egyenesen úgy, hogy az $ADF$ háromszög egybevágó legyen $ABC$-vel! $AD = BC$ és $ADE \angle = 90^{\circ} - \alpha$, tehát ez megtehetõ. Ennek a háromszögnek a $DF$ szára $a+x$ hosszúságú, tehát $EF = a$. Mivel $DAF \angle = 90^{\circ} - \alpha$, ebbõl pedig $DAE \angle = 2 \alpha$ miatt $EAF \angle = 90^{\circ} - 3 \alpha$. $AE = EF = a$ miatt $EAF \angle = EFA \angle = 90^{\circ} - 3 \alpha$. Másrészrõl viszont tudjuk, hogy $DFA$ egybevágó $ABC$-vel, tehát $EFA \angle = 2 \alpha$. Ebbõl pedig, hogy $90^{\circ} - 3 \alpha = 2 \alpha$, az adódik, hogy $\alpha = 18^{\circ}$. A háromszög szögei ebbõl következõen $36^{\circ}$, $72^{\circ}$, $72^{\circ}$.
+\medskip
+
+
+\hbox to \hsize{\hskip2truecm\hrulefill\hskip2truecm}
+{\bf 3. feladat: } Igazoljuk, hogy bárhogyan is választunk ki a $2000$-nél nem nagyobb pozitív egész számok közül $1001$-et, biztosan lesz a kiválasztottak között két olyan szám, amelyek különbsége $4$.
+
+
+\ki{Erdõs Gábor}{Nagykanizsa}\medskip
+
+{\bf 3. feladat I. megoldása: } Rendezzük el a számokat egy 4x500-as táblázatba!
+
+$$
+\matrix{
+1 & 5 & 9 & \ldots & 1993 & 1997 \cr
+2 & 6 & 10 & \ldots & 1994 & 1998 \cr
+3 & 7 & 11 & \ldots & 1995 & 1999 \cr
+4 & 8 & 12 & \ldots & 1996 & 2000
+}
+$$
+Tekintve, hogy $1001 = 4 \cdot 250 + 1$, a skatulyaelv alapján lesz egy olyan sor, amelybõl legalább 251 elemet kiválasztunk. Mivel azonban az 500 páros szám, azért csak 250 számot választhatunk ki úgy, hogy ne legyen köztük két szomszédos. Ez azt jelenti, hogy valamelyik sorból kiválasztunk két szomszédos elemet, ezek különbsége pedig 4 lesz. Ezzel az állítást bebizonyítottuk.
+\medskip
+
+
+\hbox to \hsize{\hskip2truecm\hrulefill\hskip2truecm}
+{\bf 4. feladat: } Az $ABC$ derékszögû háromszög $AB$ átfogóját a háromszögbe írt kör a $D$ pontban érinti. Bizonyítsuk be, hogy az $AD$ és $DB$ oldalhosszúságú téglalap területe egyenlõ az $ABC$ háromszög területével!
+
+
+\ki{Szabó Magda}{Szabadka}\medskip
+
+{\bf 4. feladat I. megoldása: } Jelöljük a háromszög oldalait a szokásos módon, legyen a sugár végpontja által kialakított két szakasz $c$-n $x$ és $y$ ($x$ az $A$-hoz közelebbi). A Pitagorasz-tétel alapján $(x+y)^2 = a^2 + b^2$, tehát $x^2 + 2xy + y^2 = a^2 + b^2$. A körhöz húzott érintõk egyenlõsége miatt $a = y + r$, $b = x + r$, egymásból kivonva a megfelelõ oldalakat $a-b = y-x$, vagyis $a^2 - 2ab + b^2 = x^2 - 2xy + y^2$. Ha ezt összevetjük az elõbb kapott egyenlõséggel és kivonjuk egymásból a megfelelõ oldalakat, azt kapjuk, hogy $4xy = 2ab$, amit átosztva $xy = {ab \over 2}$, ez pedig éppen a feladat állítása.
+\medskip
+
+
+\hbox to \hsize{\hskip2truecm\hrulefill\hskip2truecm}
+{\bf 5. feladat: } Az $1 \leq x \leq 3$ valós számokra az f függvényt a következõ módon értelmezzük:
+$$f(x)=\frac{x^4-4x^3+5x^2-4x+9}{1+4x-x^2}.$$
+Határozzuk meg $f$ legkisebb értékét és azt az $x$ helyet, ahol ezt a legkisebb értéket felveszi!
+
+
+\ki{Árokszállási Eszter}{Paks}\medskip
+
+{\bf 5. feladat I. megoldása: } Alakítsuk át a nevezõt! $1 + 4x - x^2 = 5 - (x-2)^2$. Ez azt jelenti, hogy $1 \leq x \leq 3$ esetén a nevezõ 4 és 5 közé esik, az 5-öt pedig $x = 2$-ben veszi fel. A számláló is átalakítható alkalmas módon:
+$$x^4 - 4x^3 + 5x^2 - 4x + 9 = x^2(x-2)^2 + (x-2)^2 + 5 = (x-2)^2(x^2 + 1) + 5 \geq 5,$$
+és könnyen látható, hogy csak $x = 2$-ben lesz egyenlõség. Mivel pedig a számláló $x = 2$-ben veszi fel a minimumát, a nevezõ pedig ugyanitt a maximumát, azért a tört is $x = 2$-ben lesz minimális, és az értéke ekkor $f(2) = 1$ lesz.
+\medskip
+
+
+\hbox to \hsize{\hskip2truecm\hrulefill\hskip2truecm}
+{\bf 6. feladat: } Oldjuk meg az egész számok halmazán a következõ egyenletet:
+$$y(1-x)^2+x(1-y)^2+(x+y)^2-x^3-y^3=2000.$$
+
+
+\ki{Kovács Béla}{Szatmárnémeti}\medskip
+
+{\bf 6. feladat I. megoldása: } Végezzük el a mûveleteket és alakítsuk át ekvivalensen az egyenletet!
+{\setlength\arraycolsep{2pt}\begin{eqnarray*}
+x + y + xy(x+y) + (x-y)^2 - (x+y)(x^2 - xy + y^2) &=& 2000 \\[6pt]
+(x+y)(1 + xy - x^2 + xy - y^2) + (x-y)^2 - 1 &=& 1999 \\[6pt]
+(x+y)\left[1 - (x-y)^2\right] - \left[ 1 -(x-y)^2 \right] &=& 1999 \\[6pt]
+\left[1 - (x-y)^2\right](x+y - 1) &=& 1999
+\end{eqnarray*}}
+Az 1999 pedig prímszám, tehát a két prímtényezõ közül az egyik 1999 és a másik 1, vagy pedig az egyik $-1999$, a másik pedig $-1$. Ez összesen négy esetet jelent, figyelembe véve, hogy $x-y$ egész szám, ezek közül az egyetlen lehetséges, hogy $1 - (x-y)^2 = 1$ és $x+y - 1 = 1999$. Ennek az egyenletrendszernek pedig egyetlen megoldása van: $x = y = 1000$.
+\medskip
+
+\vfill
+\end{document}

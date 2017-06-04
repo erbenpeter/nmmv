@@ -1,0 +1,123 @@
+\documentclass[a4paper,10pt]{article} 
+\usepackage[latin2]{inputenc}
+\usepackage{graphicx}
+\usepackage{amssymb}
+\voffset - 20pt
+\hoffset - 35pt
+\textwidth 450pt
+\textheight 650pt 
+\frenchspacing 
+
+\pagestyle{empty}
+\def\ki#1#2{\hfill {\it #1 (#2)}\medskip}
+
+\def\tg{\, \hbox{tg} \,}
+\def\ctg{\, \hbox{ctg} \,}
+\def\arctg{\, \hbox{arctg} \,}
+\def\arcctg{\, \hbox{arcctg} \,}
+
+\begin{document}
+\begin{center} \Large {\em IX. Nemzetközi Magyar Matematika Verseny} \end{center}
+\begin{center} \large{\em Dunaszerdahely, 2000. március 23-27.} \end{center}
+\smallskip
+\begin{center} \large{\bf 11. osztály} \end{center}
+\bigskip 
+
+{\bf 1. feladat: } Oldjuk meg a valós számok körében a következõ egyenletet:
+$$x^2y^2z^2(x^2+y^2+z^2)+x^2y^2+y^2z^2+z^2x^2=2xyz(x^2y+y^2z+z^2x).$$
+
+
+
+\ki{Árokszállási Tibor}{Paks}\medskip
+
+{\bf 1. feladat I. megoldása: } Az egyenlet láthatóan szimmetrikus a változókra nézve. Az elsõ eset, hogy valamelyik változó nulla, legyen ez ekkor $x$! Ebben az esetben a jobb oldal nulla lesz, és az egyenlet $y^2 z^2 = 0$ formára redukálódik, tehát $y$ és $z$ közül az egyik változó nulla, a másik tetszõleges, tehát megoldást kapunk akkor, ha egy változó értékét tetszõlegesre választjuk, a másik kettõét pedig nullára.
+
+Ha egyik változó sem 0, akkor osszuk el mindkét oldalt $x^2 y^2 z^2$-tel!
+{\setlength\arraycolsep{2pt}\begin{eqnarray*}
+x^2 + y^2 + z^2 + {1 \over z^2} + {1 \over x^2} + {1 \over y^2} &=& 2 \left( {x \over y} + {y \over x} + {z \over y} \right) \\[6pt]
+\left( x^2 - 2 {x \over z} + {1 \over z^2} \right) + \left(z^2 - 2 {z \over y}  + {1 \over y^2}\right) + \left(y^2 - 2{y \over x} + {1 \over x^2}\right) &=& 0 \\[6pt]
+\left(x - {1 \over z}\right)^2 + \left(z - {1 \over y}\right)^2 + \left(y - {1 \over x}\right)^2 &=& 0
+\end{eqnarray*}}
+Ez pedig csak akkor állhat fenn, ha $x = {1 \over z}$, valamint $z = {1 \over y}$, ebbõl $x = y$, másrészt a harmadik tagból $y = {1 \over x}$ következik, tehát csak $x =  y = 1$ lehet a megoldás (ekkor nyilván $z = 1$ is teljesül), vagy pedig $x = y = -1$ (ekkor $z = -1$). Így tehát a megoldás: vagy mindhárom változó $1$, vagy mindhárom $-1$, vagy két változó $0$, és a harmadik tetszõleges.
+\medskip
+
+
+\hbox to \hsize{\hskip2truecm\hrulefill\hskip2truecm}
+{\bf 2. feladat: } Tegyük fel, hogy az $ABC$ hegyesszögû háromszögben $AB>AC$ és jelölje a háromszög köré írt kör középpontját $O$. Az A csúcsból húzott magasságvonal a $BO$ egyenest az $E$, a $CO$ egyenest az $F$ pontban metszi. Igazoljuk, hogy $AE \cdot AF=BE \cdot CF$!
+
+
+\ki{Ábrahám Kinga, Csorba Ferenc}{Sopron, Gyõr}\medskip
+
+{\bf 2. feladat I. megoldása: } %Ábra a jelölésekkel
+Rendezzük át a bizonyítandó egyenlõséget! ${AE \over BE} = {CF \over AF}$. Elegendõ lenne belátnunk, hogy az $AEB$ és $CFA$ háromszögek hasonlók. Jelölje az $AF$ egyenes metszéspontját a körrel $R$, a $B$-n és $C$-n átmenõ átmérõk végpontjai $Q$ és $P$! A $BCQP$ négyször téglalap lesz, mivel átlói felezve metszik egymást és körbe írható, tehát paralelogramma és szomszédos szögei megegyeznek. Az $O$-n átmenõ $BC$-vel párhuzamos tengelyre szimmetrikus lesz az elrendezés (az $ABC$ háromszöget kivéve), ebbõl az következik, hogy $BR = PA$, tehát a hozzájuk tartozó ívek és az azokhoz tartozó kerületi szögek is megegyeznek, vagyis $BAR \angle = PCA \angle$. Az $OEF$ háromszög egyenlõ szárú lesz, mert az $OCQ$  háromszöghöz $O$ középponttal hasonló. Ebbõl viszont az következik, hogy a $BEA$ és $AFC$ szögek (mindkettõ külsõ szög a háromszögben) megegyeznek, tehát igaz lesz az, hogy az $AEB$ és $CFA$ háromszögek hasonlók, ezzel az állítást bebizonyítottuk.
+\medskip
+
+
+\hbox to \hsize{\hskip2truecm\hrulefill\hskip2truecm}
+{\bf 3. feladat: } Jelölje $M(a)$ az egész számegyenesen értelmezett
+$$f_a(x)=\left\vert{a+\cos{2x}+{1 \over {2+\cos^2{x}}}} \right\vert $$
+($a$ tetszõleges valós szám) függvény maximumát. Határozzuk meg az $M(a)$ számok minimumát! 
+
+
+\ki{Dáné Károly}{Marosvásárhely}\medskip
+
+{\bf 3. feladat I. megoldása: } Alakítsuk át a definiáló képletet!
+$$f_a(x) = \left|2 \cos ^2 x + 4 + {1 \over 2 + \cos ^2 x} + a - 5\right| = |2t + {1 \over t} + a - 5|,$$
+ha bevezetjük a $t = (2 + \cos^2x)$, $2 \leq t \leq 3$ értékkészletû paramétert. A $2t + {1 \over t}$ kifejezés a $t$ értékkészletét jelentõ intervallumon szigorúan növekvõ, ebbõl az következik, hogy $2t + {1 \over t} \in [2 \cdot 2 + {1 \over 2}; 2 \cdot 3 + {1 \over 3}] = [{9 \over 2}; {19 \over 3}]$. Ez azt jelenti, hogy a $g_a(t) = 2t + {1 \over t} + a-5$ függvény értékkészlete a $\left[ a - {1 \over 2}; a + {4 \over 3} \right]$ intervallum lesz, így az $f_a(t) = |g_a(t)|$ függvény a maximumát valamelyik végpontban veszi föl. Vázolva az intervallum két végpontját definiáló függvényt ($a$ függvényeként) látható, hogy a minimum $a = - {5 \over 12}$-ben lesz, éspedig ${11 \over 12}$. Ez precízen belátható abból, hogy $a < -{5 \over 12}$ esetén 
+$$\left|a - {1 \over 2}\right| = {1 \over 2} -a > {1 \over 2} + {5 \over 12} = {11 \over 12},$$
+ha pedig $a > -{5 \over 12}$, akkor azt kapjuk, hogy
+$$\left|a + {4 \over 3}\right| = a + {4 \over 3} > -{5 \over 12} + {4 \over 3} = {11 \over 12}$$
+Ezzel pedig a feladat minden kérdését megválaszoltuk.
+\medskip
+
+
+\hbox to \hsize{\hskip2truecm\hrulefill\hskip2truecm}
+{\bf 4. feladat: } Igazoljuk, hogy ha $n\ge 3$ egész szám, akkor
+$$1\cdot 3 \cdot 5 \cdot 7 \cdot \ldots \cdot (2^n-1)-1$$
+osztható $2^n$-nel! 
+
+
+\ki{Bencze Mihály}{Brassó}\medskip
+
+{\bf 4. feladat I. megoldása: } %Ez erõsen hiányos, de nem tudtam kiegészíteni...
+Jelöljük az $1 \cdot 3 \cdot 5 \cdot 7 \cdot \ldots \cdot (2^n - 1) - 1$ számot $E_n$-nel! $E_3 = 2^3 \cdot 13$. Teljes indukcióval bebizonyítjuk, hogy tetszõleges $n$-re $E_n = 2^n \cdot M$, ahol $M$ közelebbrõl meg nem határozott pozitív egész szám. Ez igaz lesz $n = 3$-ra, tegyük fel, hogy igaz $n = k$-ra, és bizonyítsuk be $n = k+1$-re!
+{\setlength\arraycolsep{2pt}\begin{eqnarray*}
+E_{k + 1} &=& 1 \cdot 3 \cdot 5 \cdot \ldots \cdot (2^k - 1)(2^k + 1)(2^k + 3) \ldots (2^k + (2^k - 1)) = \\
+&=& (E_k + 1)(2^k + 1)(2^k + 3)(2^k + 5) \ldots (2^k + (2^k - 1)) = 2^{k+1} \cdot M
+\end{eqnarray*}}
+\medskip
+
+
+\hbox to \hsize{\hskip2truecm\hrulefill\hskip2truecm}
+{\bf 5. feladat: } Jelölje egy trapéz két párhuzamos oldalának hosszát $a$ és $c$ ($a > c$), a két szárának hosszát $b$ és $d$, a két átlójának hosszát pedig $e$ és $f$. Igazoljuk, hogy
+$$d^2-b^2=(a-c){{f^2-e^2}\over{a+c}}.$$
+
+
+\ki{Kántor Sándor}{Debrecen}\medskip
+
+{\bf 5. feladat I. megoldása: } %Ábra a jelölésekkel
+Jelöljük az $a$ és $b$ oldalak által bezárt szöget $\alpha$-val! Ekkor a koszinusztétel szerint $f^2 = a^2 + b^2 - 2ab \cos \alpha$, továbbá $\cos \alpha = - \cos (180^{\circ} - \alpha)$ miatt $e^2 = b^2 + c^2 + 2bc \cos \alpha$. A két egyenlõségbõl:
+$${f^2 - e^2 \over a+c} = {a^2 - c^2 - (a+c) 2 \cos \alpha \over a+c} = {a-c  - 2b \cos \alpha}$$
+Azt kell tehát belátnunk, hogy $d^2 - b^2 = (a-c)^2 - 2b (a-c) \cos \alpha$. Újra felhasználva a koszinusztételt ez azt jelenti, hogy
+$$d^2 - b^2 = (a-c)^2  - (a^2 + b^2 - f^2) + (e^2 - b^2 - c^2),$$
+tehát átrendezve
+$$d^2 + b^2 = f^2 + e^2 - 2ac$$
+Használjuk fel a Pitagorasz-tételt, legyen $x$ a $B$ pont és a $C$-bõl $a$-ra állított merõleges talppontja közti szakasz hossza! Ekkor
+$d^2 = x^2 + m^2$, továbbá $b^2 = (a-c-x)^2 + m^2$, $f^2 = (x+c)^2 + m^2$, $e^2 = (a-x)^2 + m^2$. Ezeket az egyenlõségeket helyettesítük be a bizonyítandó összefüggésbe, és rövid számolás után azonosságra jutunk, ezzel az állítást beláttuk.
+\medskip
+
+
+\hbox to \hsize{\hskip2truecm\hrulefill\hskip2truecm}
+{\bf 6. feladat: } Igazoljuk, hogy ha $n>2$ egész szám, akkor $n+1$ tetszõlegesen választott valós szám között mindig van kettõ --- jelölje ezeket $x$ és $y$ --- amelyekre igaz, hogy
+$0<{{y-x}\over{1+xy}}<\tg{\pi\over n}$.
+
+
+\ki{Lovász Gabriella}{Csallóközaranyos}\medskip
+
+{\bf 6. feladat I. megoldása: } Válasszuk ki azokat a $b_1, b_2, \ldots b_n, b_{n+1}$ valós számokat a $\left( -{\pi \over 2}; {\pi \over 2} \right)$ intervallumból, amelyekre minden $1 \leq i \leq n+1$ esetén $\tg b_i = a_i$, ahol az $a_i$-k az adott valós számok. Ezt megtehetjük, hiszen a tangensfüggvény a fenti intervallumon szigorúan monoton nõ, és értékkészlete a teljes valós számhalmaz. Az intervallumot $n$ egyenlõ részre osztva a skatulyaelv szerint lesz két szám, amely ugyanabba a részbe esik. Legyen ez a két szám $\alpha$ és $\beta$ oly módon, hogy $\alpha > \beta$. Ekkor $0 < \alpha - \beta < {\pi \over n}$, és ha $\tg \alpha = y$, $\tg \beta = x$ (a monotonitás miatt $y > x$), akkor az ismert tangensaddíciós tétel szerint
+$$0 < {y - x \over 1 + xy} = {\tg \alpha - \tg \alpha \over 1 + \tg \alpha \cdot \tg \beta} = \tg (\alpha - \beta) < \tg {\pi \over n},$$
+az utolsó egyenlõtlenség pedig ismét csak a tangensfüggvény monotonitása miatt lesz igaz.
+\medskip
+
+\vfill
+\end{document}
