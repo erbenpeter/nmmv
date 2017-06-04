@@ -1,0 +1,120 @@
+\documentclass[a4paper,10pt]{article} 
+\usepackage[latin2]{inputenc}
+\usepackage{graphicx}
+\usepackage{amssymb}
+\voffset - 20pt
+\hoffset - 35pt
+\textwidth 450pt
+\textheight 650pt 
+\frenchspacing 
+
+\pagestyle{empty}
+\def\ki#1#2{\hfill {\it #1 (#2)}\medskip}
+
+\def\tg{\, \hbox{tg} \,}
+\def\ctg{\, \hbox{ctg} \,}
+\def\arctg{\, \hbox{arctg} \,}
+\def\arcctg{\, \hbox{arcctg} \,}
+
+\begin{document}
+\begin{center} \Large {\em II. Nemzetközi Magyar Matematika Verseny} \end{center}
+\begin{center} \large{\em Vác, 1993. ápr. 4-7.} \end{center}
+\smallskip
+\begin{center} \large{\bf 9. osztály} \end{center}
+\bigskip 
+
+{\bf 1. feladat: } Egy háromjegyû szám számjegyei különbözõk és nincs közöttük nulla. A számjegyek összege $n$. Bizonyítsuk be, hogy a három számjegybõl az összes lehetséges módon képezhetõ háromjegyû számok számtani közepe osztható $37$-tel és $n$-nel.
+
+
+\ki{Szabó Magda}{Szabadka}\medskip
+
+{\bf 1. feladat I. megoldása: } Legyen a három számjegy $a$, $b$ és $c$. Ezekbõl hatféle számot képezhetünk, a hatféle sorrendnek megfelelõen. Az egyes helyiértékeken az eloszlás nyilván szimmetrikus lesz, minden számjegy kétszer szerepel mind a három lehetséges helyiértéken, így a valós értékük is kétszer-kétszer lesz a számjegy 100-szorosa, 10-szerese, illetve 1-szerese. Így a számok számtani közepe 
+$${222a+222b+222c \over 6} = 37(a+b+c) = 37n$$
+lesz, ez pedig azt jelenti, hogy a számtani közép osztható lesz 37-tel és $n$-nel is.
+\medskip
+
+
+\hbox to \hsize{\hskip2truecm\hrulefill\hskip2truecm}
+{\bf 2. feladat: } Az $ABCD$ paralelogramma $AD$ és $BC$ oldalán úgy vesszük fel a belsõ $F$ illetve $E$ pontot, hogy teljesüljön az $AF = EC$ egyenlõség. Legyen továbbá $P$ az $AB$ oldal tetszõleges belsõ pontja. Az $EF$ és $DP$ szakaszok metszéspontját $G$-vel, az $EF$ és $CP$ szakaszok metszéspontját pedig $H$-val jelöljük.
+
+Bizonyítsuk be, hogy a $PGH$ háromszög területe az $FGD$ és $CHE$ háromszögek területeinek összegével egyenlõ.
+
+
+\ki{Mészáros József}{Galánta}\medskip
+
+{\bf 2. feladat I. megoldása: } A megadott feltételek mellett az $ABEF$ és $FECD$ négyszögek egybevágók lesznek, területük megegyezik, tehát az $ABEF$ négyszög területe a paralelogramma területének fele lesz.
+A háromszögek területképletébõl azonnal adódik, hogy az $APD$ és $PBC$ háromszögek együttes területe megegyezik a $DPC$ háromszög területével, tehát ezek is a paralelogramma területének felét képviselik. Mivel pedig a kért egyenlõség egyik oldalát (az $FGD$ és $CHE$ háromszögek területösszegét) megkaphatjuk úgy, hogy az $APD$ és $PBC$ háromszögek területösszegébõl levonjuk az $APGF$ és $PBEH$ négyszögek területösszegét, a másik oldalt (a $PGH$ háromszög területét) pedig úgy, hogy az $ABEF$ trapéz területösszegébõl vonjuk le ugyanezen négyszögek területösszegét, és mivel az imént láttuk, hogy a két háromszög területösszege megegyezik a trapéz területével, ebbõl a feladat által kért állítás már következik.
+\medskip
+
+
+\hbox to \hsize{\hskip2truecm\hrulefill\hskip2truecm}
+{\bf 3. feladat: } Számítsuk ki azt az $n$ pozitív egész értéket, amelyre fennáll a következõ egyenlõség:
+$${1 \over 3} + {13 \over 15} + {33 \over 35} + \ldots + {(2n-1)(2n+1) - 2 \over (2n-1)(2n+1)} = 995 + {1 \over 1993}.$$
+
+
+\ki{Gecse Frigyes}{Ungvár}\medskip
+
+{\bf 3. feladat I. megoldása: } Bontsuk elemi törtekre a bal oldalon az általános tagot!
+
+$${(2n-1)(2n+1) - 2 \over (2n-1)(2n+1)} = 1 - {(2n+1) - (2n-1) \over (2n+1)(2n-1)} = 1 - {1 \over 2n-1} + {1 \over 2n+1}$$
+
+Ez azt jelenti, hogy 
+{\setlength\arraycolsep{2pt}\begin{eqnarray*}
+\sum_{k=1}^n {(2k-1)(2k+1)-2 \over (2k-1)(2k+1)} & = & n + \sum_{k=1}^n \left({1 \over 2k+1} - {1 \over 2k-1}\right) = \\[6pt]
+& = & n + \left({1 \over 3} - {1 \over 1} + {1 \over 5} - {1 \over 3} + {1 \over 7} - {1 \over 5} + \cdots + {1 \over 2n+1} - {1 \over 2n-1}\right)
+\end{eqnarray*}}
+
+
+Az összeg láthatóan teleszkopikus, és nagyban leegyszerûsíthetõ:
+
+
+$$n - 1 + {1 \over 2n+1} = 995 + {1 \over 1993}$$
+
+Ezt a másodfokú egyenletet $n$-re megoldva pedig $n = 996$ adódik értelmes eredményként.
+\medskip
+
+
+\hbox to \hsize{\hskip2truecm\hrulefill\hskip2truecm}
+{\bf 4. feladat: } Bizonyítsuk be, hogy az egységnyi sugarú kör belsejében adott négy különbözõ pont között van olyan kettõ, melyeknek a távolsága kisebb, mint $\sqrt{2}$.
+
+
+\ki{Oláh György}{Révkomárom}\medskip
+
+{\bf 4. feladat I. megoldása: } Ha a pontokat $A_1$, $A_2$, $A_3$, $A_4$ jelöléssel látjuk el, meghúzzuk az $A_1$ egyenesen áthaladó átmérõt, valamint azt, amely erre merõleges, akkor ez a két átmérõ a kört négy negyedkörre osztja. Ha $A_1$ a kör középpontja, akkor bármelyik pont legfeljebb egységnyire lesz tõle, ekkor igaz a feladat állítása.
+Ha $A_1$ nem a kör középpontja, akkor legyen az $AB$ rajta áthaladó átmérõn egy $A$-hoz közelebbi pont. Ha a maradék három pontból bármelyik az $AB$ átmérõ $A$-hoz közelebbi fele által elválasztott két negyedkörbe esik, akkor ez már közelebb lesz $A_1$-hez, mint $\sqrt{2}$, hiszen egy ilyen negyedkörben bármely két pont távolsága legfeljebb ekkora. Ha egyikük sem esik valamelyik ilyen negyedkörbe, akkor mindhárom az $AB$-re merõleges átmérõ által leválasztott másik félkörben foglal helyet, ekkor a skatulyaelv szerint legalább kettõ közülük ugyanabba a negyedkörbe esik, ezek pedig már legföljebb $\sqrt{2}$ távolságra lesznek egymástól.
+
+\centerline{\includegraphics{figures/1993-9-4}}
+
+\medskip
+
+
+\hbox to \hsize{\hskip2truecm\hrulefill\hskip2truecm}
+{\bf 5. feladat: } Legyen
+$$f_n(x) = f_0\left(f_{n-1}(x)\right) \, \hbox{, ahol} \, n = 1,2,\ldots \ \hbox{és} \ f_0(x) = {1 \over 1-x}.$$
+Számítsuk ki az $f_{1994}(1993)$ értékét.
+
+
+\ki{Róka Sándor}{Nyíregyháza}\medskip
+
+{\bf 5. feladat I. megoldása: } Számoljuk ki az elsõ néhány $n$-re $f(n)$-et! $n=1$-re $f_1(x) = f_0(f_0(x)) = {x-1 \over x}$, $n=2$-re $f_2(x) = f_0(f_1(x)) = x$, $n=3$-ra $f_3(x) = f_0(f_2(x)) = {1 \over 1-x} = f_0(x)$. Tehát a függvény alakját csak $n$ hármas maradéka fogja meghatározni, és mivel 1994 hármas maradéka 2 (a számjegyösszeg 23), azért $f_{1994}(x) = f_2(x)$, és így $f_{1994}(1993) = 1993$.
+\medskip
+
+
+\hbox to \hsize{\hskip2truecm\hrulefill\hskip2truecm}
+{\bf 6. feladat: } Igazoljuk, hogy ha bármely $a_1, a_2, \ldots , a_n (n > 1)$ valós számokra fennáll a
+$$\sum_{i = 1}^{n}\left| a_i - a_{i+1} \right| = 2\max(a_1, a_2, \ldots , a_n) - 2 \min (a_1, a_2, \ldots , a_n)$$
+egyenlõség, akkor $n \in \{2,3\}$. Feltételezzük, hogy $a_{n+1} = a_1$.
+
+
+\ki{Bencze Mihály}{Brassó}\medskip
+
+{\bf 6. feladat I. megoldása: } Ha $n = 2$, akkor az állítás igaz, hiszen bármilyen $a_1$, $a_2$-re fennáll az, hogy $$|a_1 - a_2| = |a_2 - a_1| = \max (a_1, a_2) - \min (a_1,a_2),$$ tehát az összeg nyilván a jobb oldal kétszerese lesz.
+
+$n = 3$-ra minden lehetséges nagyságsorrendet figyelembe véve igazolható az állítás. $n > 3$-ra azonban az állítás már nem igaz, hiszen ha a nagyságviszonyok a következõk:
+$$a_1 \geq a_3 > a_2 \geq a_4 \geq \ldots \geq a_n$$ ($\ldots$ helyén a megszokott csökkenõ rendezés értendõ), akkor az összeg 
+$$a_1 - a_2 + a_3 + a_3 - a_4 + a_4 - a_5 + \ldots + a_{n-1} - a_n + a_1 - a_n$$
+teleszkopikus lesz, egyenlõ lesz $2a_1 - 2a_n + 2a_3 -2a_2$ - vel, ami viszont nem lesz egyenlõ $2a_1 - 2a_n$-nel, ami a számok maximuma és minimuma különbségének kétszerese.
+\medskip
+
+\vfill
+\end{document}

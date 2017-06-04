@@ -1,0 +1,128 @@
+\documentclass[a4paper,10pt]{article} 
+\usepackage[latin2]{inputenc}
+\usepackage{graphicx}
+\usepackage{amssymb}
+\voffset - 20pt
+\hoffset - 35pt
+\textwidth 450pt
+\textheight 650pt 
+\frenchspacing 
+
+\pagestyle{empty}
+\def\ki#1#2{\hfill {\it #1 (#2)}\medskip}
+
+\def\tg{\, \hbox{tg} \,}
+\def\ctg{\, \hbox{ctg} \,}
+\def\arctg{\, \hbox{arctg} \,}
+\def\arcctg{\, \hbox{arcctg} \,}
+
+\begin{document}
+\begin{center} \Large {\em V. Nemzetközi Magyar Matematika Verseny} \end{center}
+\begin{center} \large{\em Székelyudvarhely, 1996. márc. 29-ápr. 2.} \end{center}
+\smallskip
+\begin{center} \large{\bf 12. osztály} \end{center}
+\bigskip 
+
+{\bf 1. feladat: } Az $ABC$ egyenlõszárú háromszögben ($AB=AC$) az $AB$ és $AC$ szárakon felvesszük a $D\in AB$ illetve $E\in AC$ pontot úgy, hogy
+$$\left(\frac{\hbox{Ker}(ADE)}{\hbox{Ker}(ABC)}\right)^2 = \frac{\hbox{Ter}(ADE)}{\hbox{Ter}(ABC)}$$
+Igazoljuk, hogy $DE$ párhuzamos $BC$-vel.
+
+
+\ki{Dáné Károly, Péter András}{Marosvásárhely, Arad}\medskip
+
+{\bf 1. feladat I. megoldása: } Jelöljük az $AB$ és $AC$ szakaszok közös hosszát $a$-val, a $BC$ oldal hosszát $b$-vel, $AD$ hosszát $x$-szel, $AE$-ét $y$-nal, az $ADE$ és $ABC$ háromszögek területarányát pedig $k$-val! A háromszög trigonometrikus területképlete szerint (az $A$-nál lévõ szög mindkét háromszögben ugyanaz)
+$${T_{ADE} \over T_{ABC}} = {xy \over a^2} = k$$
+Ebbõl $xy = a^2k$ adódik. A koszinusztétel szerint (az $A$-nál lévõ szöget $\alpha$-val jelölve) 
+$$DE^2 = x^2 + y^2 - 2xy \cos \alpha \geq 2xy - 2xy \cos \alpha = 2xy(1 - \cos \alpha)$$
+
+Írjuk fel most az $ADE$ háromszög területét, használjuk az imént kapott becslést, valamint a számtani és mértani közép közti egyenlõtlenséget!
+{\setlength\arraycolsep{2pt}\begin{eqnarray*}
+K_{ADE} &=& x + y + DE \geq 2 \sqrt{xy} + \sqrt{2xy(1 - \cos \alpha)} = \\[6pt]
+&=& 2a \sqrt{k} + 2a\sqrt{k} \sin {\alpha \over 2} = \sqrt{k}(2a+b) = \sqrt{k}K_{ABC}
+\end{eqnarray*}}
+
+Ami azt jelenti, hogy $\left({K_{ADE} \over K_{ABC}}\right)^2 \geq k$. Egyenlõség csak akkor állhat fönt, ha $x = y$, ez pedig, tekintve, hogy a háromszög egyenlõszárú, azt jelenti, hogy $DE$ és $BC$ párhuzamosak, és épp ezt kellett bizonyítanunk.
+\medskip
+
+
+\hbox to \hsize{\hskip2truecm\hrulefill\hskip2truecm}
+{\bf 2. feladat: } Határozzuk meg a következõ halmaz elemeinek számát:
+$A_n=\{(x,y)\, |\, x \ne y \in N, x, y \in [F_n,F_{n+2}] \hbox{ és } \exists k \in N: x+y=F_k\}$ (bármely rögzített n természetes szám esetén $F_n$ a Fibonacci sorozat $n$-edik tagja, $F_0=1$, $F_1=1$, $F_{n+1}=F_n+F_{n-1}$).
+
+
+\ki{Bege Antal}{Kolozsvár}\medskip
+
+{\bf 2. feladat I. megoldása: } A Fibonacci-sorozat monoton nõ, ezért bármely $n \in \mathbb{N}$-re $F_{n+1} < 2F_n$. A feltétel miatt $2F_n \leq x+y \leq 2F_{n+2}$, és ismét csak a monotonitás miatt $2F_{n+2} < F_{n+4}$. Így a feltétel szerint $x+y = F_{n+2}$, vagy pedig $x+y = F_{n+3}$. Vizsgáljuk külön a két esetet:
+
+a) $x+y = F_{n+2}$. Ekkor $x_1 = x - F_n$ és $y_1 = y - F_n$ természetes értékû paraméterek bevezetésével
+$$x_1 + y_1 = F_{n+2} - 2F_n = F_{n+2} - F_{n+1} + F_{n+1} - 2F_n = F_{n-1}$$
+Ez pedig azt jelenti, hogy $x_1$ és $y_1$, így $x$ és $y$ megválasztására összesen $F_{n-1} + 1$ lehetõségünk van.
+
+b) $x+y = F_{n+3}$. Itt az $x_1 = x - F_{n+2}$ és $y_1 = y - F_{n+2}$ paraméterekkel 
+$$x_1 + y_1 = 2F_{n+2} - x - y = F_{n+2} - (F_{n+3} - F_{n+2}) = F_{n+2} - F_{n+1} = F_n$$
+Ezzel a feltétellel nyilvánvaló módon $F_n + 1$ számpárt választhatunk ki.
+
+A két eset együtt $F_{n-1} + F_n + 2 = F_{n+1} + 2$ megoldást jelent, azonban néhány megoldást ($x = y$) kétszer számoltunk. Így ha $F_{n-1}$ vagy $F_{n}$ páros, akkor eggyel kevesebb eleme van a halmaznak. Teljes indukcióval igazolható, hogy a Fibonacci-sorozatnak pontosan azon elemei párosak, amelyek indexe 3-mal osztva 2 maradékot ad. Ez azt jelenti, hogy ha $n$ 3-as maradéka 0 vagy 2, akkor a halmaz elemszáma $F_{n+1} + 1$, ha pedig $n$ 3-as maradéka 1, akkor a halmaz elemszáma $F_{n+1} + 2$
+\medskip
+
+
+\hbox to \hsize{\hskip2truecm\hrulefill\hskip2truecm}
+{\bf 3. feladat: } Mennyi maradékot kapunk, ha az $n^{n+1}+(n+1)^n$ természetes számot elosztjuk $n(n+1)$-el?
+
+
+\ki{Kovács Béla, Olosz Ferenc}{Szatmárnémeti}\medskip
+
+{\bf 3. feladat I. megoldása: } Az $x^{n+1} + (x+1)^n$ polinomot eloszthatjuk az $x(x+1)$ másodfokú polinommal, írjuk fel a maradékos osztást!
+$$x^{n+1} + (x+1)^n = x(x+1)q(x) + ax + b,$$
+ahol $q(x)$ egy $n-1$-edfokú polinom, és $a,b$ valós számok. $x = 0$ és $x = -1$ behelyettesítésével $b = 1$, $a = 1 + (-1)^n$. Ha most $x$ helyébe a polinomban $n$-et írunk, akkor $n^{n+1} + (n+1)^n$-nek az $n(n+1)$-gyel való osztási maradéka páros $n$-re $n+1$, páratlan $n$-re 1.
+
+Megjegyzés: a polinomoknak ez egy kissé szabadon értelmezett felhasználása, de megtehetõ, hiszen a feladat kérdése mindig egy konkrét $n$-re vonatkozik, így a polinom fokszáma egy adott esetben mindig rögzített, és nem változik.
+\medskip
+
+
+\hbox to \hsize{\hskip2truecm\hrulefill\hskip2truecm}
+{\bf 4. feladat: } \newcommand{\p}{P}
+Legyen $\p(x)$ egy valós együtthatós $n$-ed fokú polinom. Igazoljuk, hogy a $\p(\p(\p(x)))=0$ egyenletnek nem lehet pontosan $n^3-n^2+1$-szeres gyöke.
+
+
+\ki{András Szilárd, Oláh György}{Csíkszereda, Révkomárom}\medskip
+
+{\bf 4. feladat I. megoldása: } A feladatban szereplõ egyenlet bal oldalán nyilván egy polinom áll, elegendõ ennek a gyökeit vizsgálni.
+Jelöljük a $P(x)$ polinom gyökeit $x_1, x_2, \ldots , x_n$-nel! Ekkor a gyöktényezõs alak
+$$\left(P\left(P(x)\right) - x_1 \right)\left(P\left(P(x)\right) - x_2 \right) \ldots \left(P\left(P(x)\right) - x_n \right)$$
+, tehát bármely $i$-re a $P\left(P(x)\right) - x_i$ polinom gyöke gyöke az eredeti polinomnak is.
+
+Tegyük fel most, hogy $x_0$ a polinomunknak $(n^3 - n^2 + 1)$-szeres gyöke. Ha ez nem gyöke mindegyik $P\left(P(x)\right) - x_i$ polinomnak, akkor legföljebb $n-1$ polinomnak gyöke, és mindegyiknek legfeljebb $n^2$-szeres (hiszen $P\left(P(x)\right)$ fokszáma $n^2$ lesz). Mivel pedig $n^2(n-1) < n^3 - n^2 + 1$, azért ez nem lehetséges, így $x$ minden polinomnak gyöke, $P\left(P(x_0)\right) = x_1 = x_2 = \ldots = x_n$. 
+
+Ha viszont a $P\left(P(x)\right) - x_1$ polinom gyökei $a_1, a_2, \ldots, a_m$, rendre $t_1, t_2, \ldots, t_m$ -szeres multiplicitással, akkor ugyanezek lesznek a $P\left(P\left(P(x)\right)\right)$ polinom gyökei is, mégpedig $a_i$ $n \cdot t_i$-s multiplicitással. Így minden gyök többszörösségi foka osztható lesz $n$-nel, és így $n \geq 2$-re $(n^3 - n^2 + 1)$-es gyöke nem lehet a polinomunknak.
+\medskip
+
+
+\hbox to \hsize{\hskip2truecm\hrulefill\hskip2truecm}
+{\bf 5. feladat: } Egy körvonalat 30 ponttal 30 ívdarabra osztunk fel úgy, hogy az ívdarabok közül 10-nek a hossza 1, 10-nek a hossza 2 és 10-nek a hossza 3. Bizonyítsuk be, hogy a felvett osztópontok között van legalább kettõ, amelyek átmérõsen ellentettek.
+
+
+\ki{Reiman István}{Budapest}\medskip
+
+{\bf 5. feladat I. megoldása: } A kör kerülete a feladat szövege szerint 60 egység. Vegyünk fel a 2-es és 3-as íveken újabb osztópontokat, amelyekkel így csupa 1 hosszúságú ívre bonthatjuk a kört. Bizonyítsunk indirekt módon! Tegyük fel, hogy nem volt két átellenes osztópont. Jelöljünk ki egy 2 hosszúságú $AB$ ívet, legyen a felezõpontja $P$, ennek átellenes pontja (ilyen nyilván van) $Q$! A kisebbik $AQ$ ív 29 egység hosszúságú, jelöljük az ezen eredetileg elhelyezkedõ 1-es, 2-es, 3-as ívek számát $x, y, z$-vel! Ekkor $x + 2y + 3z = 29$. Mivel eredetileg nem voltak átellenes osztópontok, azért az $AQ$ ív eredeti 1 hosszúságú íveivel szemben eredetileg 3 hosszúságú ívek 'középsõ' 1 hosszúságú része helyezkedett el, ebben jelöltünk ki két új osztópontot. Fordítva az $AQ$ ív 3 hosszúságú íveinek belsõ osztópontjaival szemben a szemközti $BQ$ íven 1 hosszúságú ív végpontjai vannak. Ez azt jelenti, hogy $x+z = 10$, hiszen összesen 10 db 3 hosszúságú és 10 db 1 hosszúságú ív volt. Ezekbõl a gondolatokból látszik az is, hogy az $AB$ ív felezõpontjával szembeni $Q$ eredetileg is osztópont volt, hiszen $A$-val és $B$-vel szemben nem lehetett osztópont, de ha a felezõponttal szemben nem lett volna, akkor az $AB$-vel szemközti ív 3-nál hosszabb lett volna.
+
+Azt kaptuk tehát, hogy $x+z = 10$, tehát a felírt egyenletünk $10 + 2(y+z) = 29$, ami nyilván lehetetlen, hiszen a bal oldal páros, a jobb oldal pedig páratlan. Így ellentmondásra jutottunk, tehát kellett lennie legalább egy olyan osztópontnak, amellyel szemben szintén osztópont van.
+\medskip
+
+
+\hbox to \hsize{\hskip2truecm\hrulefill\hskip2truecm}
+{\bf 6. feladat: } Adott az $f:(0,+\infty )\to \mathbb{R}$ folytonos függvény úgy, hogy
+$$(f \circ f)(x) = \sqrt[n]{(x+1)^n+1}\quad (n\ge 2).$$
+Igazoljuk, hogy
+$$\lim_{n \to \infty} \frac{f(x+1)}{f(x)} =1.$$
+
+
+\ki{Bencze Mihály}{Brassó}\medskip
+
+{\bf 6. feladat I. megoldása: } Az $f$ függvény szükségszerûen injektív, hiszen ha $0 < x_1 < x_2$, és $f(x_1) = f(x_2)$, akkor $f\left(f(x_1)\right) = f\left(f(x_2)\right)$, tehát $\root n \of {(x_1 + 1)^n + 1} = \root n \of {(x_2 + 1)^n + 1}$, ami viszont nem lehetséges, hiszen $x_1 < x_2$. Ez azt jelenti, hogy $f$ injektív, és így a folytonosság miatt szigorúan monoton is. Mivel $f\left(f(x)\right)$-et értelmezzük, azért $f(x)$ minden $x$-re pozitív. Ha $f(x)$ határértéke a végtelenben véges lenne (jelöljük $a$-val), akkor $f \left(f(x)\right)$ határértéke a végtelenben $f(a)$ lenne, ami ellentmondana annak, hogy $\root n \of {(x+1)^n + 1}$ határértéke a végtelenben végtelen. Mivel $f$ szigorúan monoton nõ, azért $f(x+1) > f(x)$, amibõl
+$$1 < {f(x+1) \over f(x)} < {f\left( \root n \of {(x+1)^n + 1} \right) \over f(x)} = {f\left(f\left(f(x)\right)\right) \over f(x)} = {f\left(f(y)\right) \over y},$$
+bevezetve az $f(x) = y$ jelölést. Tudjuk, hogy $x \rightarrow \infty$ esetén $y \rightarrow \infty$. Mivel pedig ${f\left(f(y)\right)}$ határértéke a végtelenben megegyezik ${\root n \of {(y+1)^n + 1} \over y}$ határértékével, ami pedig láthatóan 1,  így az állítást a fenti egyenlõtlenség segítségével a rendõrelv alapján igazoltuk.
+\medskip
+
+\vfill
+\end{document}

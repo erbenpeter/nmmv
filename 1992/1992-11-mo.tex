@@ -1,0 +1,125 @@
+\documentclass[a4paper,10pt]{article} 
+\usepackage[latin2]{inputenc}
+\usepackage{graphicx}
+\usepackage{amssymb}
+\voffset - 20pt
+\hoffset - 35pt
+\textwidth 450pt
+\textheight 650pt 
+\frenchspacing 
+
+\pagestyle{empty}
+\def\ki#1#2{\hfill {\it #1 (#2)}\medskip}
+
+\def\tg{\, \hbox{tg} \,}
+\def\ctg{\, \hbox{ctg} \,}
+\def\arctg{\, \hbox{arctg} \,}
+\def\arcctg{\, \hbox{arcctg} \,}
+
+\begin{document}
+\begin{center} \Large {\em I. Nemzetközi Magyar Matematika Verseny} \end{center}
+\begin{center} \large{\em Révkomárom, 1992. ápr. 9-12.} \end{center}
+\smallskip
+\begin{center} \large{\bf 11. osztály} \end{center}
+\bigskip 
+
+{\bf 1. feladat: } Az $ABC$ háromszög $AB$, $BC$, $CA$ oldalain felvesszük a $D$, $E$, $F$ pontokat úgy, hogy
+$${AD \over DB} = {BE \over EC} = {CF \over FA}.$$
+Bizonyítsuk be, hogy a $DEF$ háromszög súlypontja egybeesik az $ABC$ háromszög súlypontjával.
+
+
+\ki{Petkovics Zoltán}{Szabadka}\medskip
+
+{\bf 1. feladat I. megoldása: } Jelöljük a háromszög súlypontját $S$-sel! Ekkor ismeretes, hogy $\vec{SA} + \vec{SB} + \vec{SC} = \vec{0}$. Tudjuk, hogy a feladatban a szakaszok közt fennálló arányt $k$-val jelölve $\vec{AD} = k \cdot \vec{DB}, \ \vec{BE} = k\cdot \vec{EC}, \ \vec{CF} = k \cdot \vec{FA}$. Ebbõl a sokszögmódszer alkalmazásával megjelentetve a már ismert vektorokat, 
+$$\vec{SD} + \vec{SE} + \vec{SF} = \vec{SA} + \vec{AD} + \vec{SB} + \vec{BE} + \vec{SC} + \vec{CF}$$ Bontsuk ezt alkalmas módon két részre, hogy megfeleljen céljainknak:
+$$\vec{SA} + \vec{SB} + \vec{SC} + k \cdot (\vec{AB} + \vec{BC} + \vec{CA}) = \vec{0},$$
+hiszen a háromszög oldalait azonos körüljárás szerint vektorokként tekintve a kapott vektorok összege biztosan a nullvektor lesz. Beláttuk tehát, hogy az $S$-bõl a $D, \ E, \ F$ pontokba mutató vektorok összege $\vec{0}$, ez pedig csak egyetlen pontra áll, és az a háromszög súlypontja.
+\medskip
+
+
+\hbox to \hsize{\hskip2truecm\hrulefill\hskip2truecm}
+{\bf 2. feladat: } Ha $n>2$ egész szám, igazoljuk, hogy
+$$1 + {1 \over 2} + {1 \over 3} + \ldots + {1 \over n} - \ln n \geq {1 \over 2} \left(1 + {1 \over n} + {1 \over n^2} \right).$$
+
+
+\ki{Bencze Mihály}{Brassó}\medskip
+
+{\bf 2. feladat I. megoldása: } Zsebszámológép segítségével könnyen ellenõrizhetõ, hogy $n=3$-ra az egyenlõtlenség fennáll. Teljes indukcióval bizonyítunk. Tegyük fel, hogy tetszõleges $n=k$ pozitív egészre már igaz az állítás. Ismert becslés, hogy $e^x \geq 1+x+{x^2 \over 2}$. Írjunk most $x$ helyébe ${1 \over 2n} + {1 \over 2n+2}$-t, ekkor azt kapjuk, hogy
+{\setlength\arraycolsep{2pt}
+\begin{eqnarray*}
+e^{{1 \over 2n} + {1 \over 2n+2}} & \geq & 1 + {1 \over 2n} + {1 \over 2n+2} + {1 \over 8n^2} + {1 \over 4n^2+4n} + {1 \over 8(n+1)^2} > \\[6pt]
+& > & 1 + {1 \over 2n} + {1 \over 2n+2} + {1 \over 2n^2+2n} = 1+{1 \over n},
+\end{eqnarray*}}
+ez pedig azt jelenti, hogy ${1 \over 2n} + {1 \over 2n+2} > \ln \left( 1+{1 \over n}\right)$. Ha ezt felhasználjuk, akkor azt kapjuk, hogy
+
+{\setlength\arraycolsep{2pt}
+\begin{eqnarray*}
+1 + {1 \over 2} + \ldots + {1 \over n} + {1 \over n+1} - \ln (n+1) & = & \left(1 + {1 \over 2} + \ldots + {1 \over n} - \ln n\right)+ {1 \over n+1} + \ln n - \ln(n+1) > \\[6pt]
+& > & {1 \over 2} \left(1 + {1 \over n} + {1 \over n^2} \right) + {1 \over n+1} - \ln \left( 1 +{1 \over n} \right) > {1 \over 2} \left(1 + {1 \over n+1} + {1 \over \left(n+1\right)^2}\right)
+\end{eqnarray*}}
+\medskip
+
+
+\hbox to \hsize{\hskip2truecm\hrulefill\hskip2truecm}
+{\bf 3. feladat: } Az $(a_n), n \in \mathbb{N}$ sorozatot a következõképpen értelmezzük:
+$$a_1 = {1 \over 2}, \ a_2 = {1 \over 3} \, \hbox{, és} \ a_{n+2} = {a_na_{n+1} \over 3a_n - 2a_{n+1}}, \ \forall n \in \mathbb{N}^+.$$ Adjuk meg a sorozat $n$-edik tagját $n$ függvényében! 
+
+
+\ki{Urbán János}{Budapest}\medskip
+
+{\bf 3. feladat I. megoldása: } Írjuk át a megadott definíciót!
+$${1 \over a_{n+2}} = {3 \over a_{n+1}} - {2 \over a_n}$$
+Ez a hozzárendelés $a_n = {1 \over 2^{n-1} + 1}$ esetén biztosan teljesülni fog.
+\medskip
+
+
+\hbox to \hsize{\hskip2truecm\hrulefill\hskip2truecm}
+{\bf 4. feladat: } Az $(a_n), n \in \mathbb{N}$ sorozatot a következõ feltételeket teljesíti:
+$$a_0 = a_1 = {2 \over 3} \, \hbox{, és} \, {1 \over 4}\left(1 + 2a_{n+1} +a_n^2\right) \leq a_{n+2} \leq {1 \over 3}\left(1 + a_{n+1} + a_n^2 \right).$$
+Igazoljuk, hogy a sorozat konvergens és határozzuk meg a határértékét.
+
+
+\ki{Dályai Pál}{Marosvásárhely}\medskip
+
+{\bf 4. feladat I. megoldása: } Jelöljük $\{b_n\}$-nel azt a sorozatot, amelyre teljesül, hogy $$b_0 = b_1 = {2 \over 3} \ \hbox{, és}$$
+$$b_{n+2} = {1 \over 4}\left(1 + 2b_{n+1} + b_{n}^2\right).$$
+A $\{c_n\}$ sorozat pedig legyen a következõ:
+$$c_0 = c_1 = {2 \over 3} \ \hbox{, és}$$
+$$c_{n+2} = {1 \over 3}(1+c_{n+1}+c_{n}^2).$$
+Könnyen belátható (pl. teljes indukcióval), hogy mindkét sorozat minden tagja 0 és 1 közé esik, valamint hogy mindkét sorozat monoton nõ. Ebbõl következik, hogy konvergensek, és a hozzárendelésbe minden tag helyébe a határértéket adva formális számolással a határérték 1-nek adódik. Teljes indukcióval $b_n \leq a_n \leq c_n$ belátható, hiszen a megadott egyenlõtlenség bal és jobb oldala is megfelelõ nagyságviszonyban állnak a $b_n$ és $c_n$ sorozatok megfelelõ tagjaiból képzett összegekkel. Így a rendõr-elv szerint $\{a_n\}$ is konvergens, és határértéke ugyanúgy 1 lesz.
+\medskip
+
+
+\hbox to \hsize{\hskip2truecm\hrulefill\hskip2truecm}
+{\bf 5. feladat: } Határozzuk meg az $f : \mathbb{R} \setminus \{-1, 1, 2\} \rightarrow \mathbb{R}$ függvényt, ha
+$$f\left( {x+1 \over x-2} \right) + 2f \left( {x-2 \over x+1} \right) = x,$$
+majd ábrázoljuk a függvényt grafikusan.
+
+
+\ki{Balázs Lajos}{Zselíz}\medskip
+
+{\bf 5. feladat I. megoldása: } Vezessük be a következõ jelölést: $y = {x-2 \over x+1}$! Beírva ezt a hozzárendelésbe
+$$f\left({1 \over y}\right) + 2 \cdot f(y) = {y+2 \over 1-y}$$
+Írjuk be most $y$-t az ${x+1 \over x-2}$ helyére (mindkét függvény alkalmas $x$ választásával fölvesz bármilyen valós értéket az értelmezési tartományon, tehát a helyettesítés nem jelent megszorítást, amellett nem lesz probléma, hogy mindkét helyen az $y$ változót alkalmazzuk).
+$$f(y) + 2 \cdot f \left({1 \over y}\right) = {1+2y \over y-1}$$
+Formálisan megoldva a kapott lineáris egyenletrendszert azt kapjuk, hogy $f(y) = {4y+5 \over 3-3y}$, ezt pedig ábrázolható formára hozva
+$f(y) = -{4 \over 3} - {3 \over y-1}$. Ez pedig ismeretes módon hiperbola és a szokásos módon ábrázolható.
+\medskip
+
+
+\hbox to \hsize{\hskip2truecm\hrulefill\hskip2truecm}
+{\bf 6. feladat: } Az $A, B, C$ pontok rajta vannak az $y = {1 \over x}$ egyenletû hiperbolán. Bizonyítsuk be, hogy az $ABC$ háromszög magasságpontja is ezen a hiperbolán van!
+
+
+\ki{Reiman István}{Budapest}\medskip
+
+{\bf 6. feladat I. megoldása: } Helyezzük a csúcsokat egy derékszögû koordinátarendszerbe! Legyen $A\left(a;{1 \over a}\right)$, $B\left(b;{1 \over b}\right)$, valamint $C\left(c;{1 \over c}\right)$. Írjuk fel az $A$ és $B$ csúcsokhoz tartozó magasságvonalak egyenletét:
+$$(b-c)x + \left({1 \over b} - {1 \over c}\right)y = ab - ac + {1 \over ab} - {1 \over ac}$$
+$$(a-c)x + \left({1 \over a} - {1 \over c}\right)y = ab - bc + {1 \over ab} - {1 \over bc}$$
+
+Ezen egyenletrendszer megoldása rövid számolás után $x = -abc$, és $y = -{1 \over abc}$, ez a pont pedig láthatóan rajta van a hiperbolán, és ez lesz a magasságpont, tehát az állítást beláttuk.
+
+\medskip
+
+\vfill
+\end{document}

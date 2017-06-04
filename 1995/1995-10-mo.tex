@@ -1,0 +1,103 @@
+\documentclass[a4paper,10pt]{article} 
+\usepackage[latin2]{inputenc}
+\usepackage{graphicx}
+\usepackage{amssymb}
+\voffset - 20pt
+\hoffset - 35pt
+\textwidth 450pt
+\textheight 650pt 
+\frenchspacing 
+
+\pagestyle{empty}
+\def\ki#1#2{\hfill {\it #1 (#2)}\medskip}
+
+\def\tg{\, \hbox{tg} \,}
+\def\ctg{\, \hbox{ctg} \,}
+\def\arctg{\, \hbox{arctg} \,}
+\def\arcctg{\, \hbox{arcctg} \,}
+
+\begin{document}
+\begin{center} \Large {\em IV. Nemzetközi Magyar Matematika Verseny} \end{center}
+\begin{center} \large{\em Paks, 1995. márc. 31-ápr. 4.} \end{center}
+\smallskip
+\begin{center} \large{\bf 10. osztály} \end{center}
+\bigskip 
+
+{\bf 1. feladat: } Egy $n\times n$-es táblázat minden mezõjére ráírjuk az 1, 2, 3 számok valamelyikét. Ki lehet-e tölteni a táblázatot úgy, hogy a sorokban, az oszlopokban és a két átlóban levõ számok összege mind különbözõ legyen?
+
+
+\ki{Kiss Sándor}{Nyíregyháza}\medskip
+
+{\bf 1. feladat I. megoldása: } A sorösszegek között a minimális az $n$ (ami $n$ darab 1-es összeadásával keletkezik), a legnagyobb pedig a $3n$, amit $n$ darab 3-asból kapunk. E két érték között csak $2n+1$ lehetséges sorösszeg van, de az $n$ darab sorra és oszlopra, valamint a két átlóba $2n+2$-re lenne szükségünk, ami azt jelenti, hogy a kért beírás nem megvalósítható.
+\medskip
+
+
+\hbox to \hsize{\hskip2truecm\hrulefill\hskip2truecm}
+{\bf 2. feladat: } Bizonyítsuk be, hogy ha $p$ és $q$ 3-nál nagyobb prímszámok, akkor $p^2+7q^2-23$ nem prímszám.
+
+
+\ki{Oláh György}{Révkomárom}\medskip
+
+{\bf 2. feladat I. megoldása: } Mivel a 3-nál nagyobb prímszámok mind 1-et vagy $-1$-et adnak maradékul 6-tal osztva (másként oszthatók lennének 2-vel vagy hárommal), azért a négyzetük 6-tal osztva mindig 1 maradékot ad. Így $p^2+7q^2$ 6-os maradéka 2 lesz, mivel két 1-es maradékú szám összegeként áll elõ. Ebbõl egy 6-tal osztva 5-ös maradékú számot, a 23-at kivonva a különbség 6-tal osztva 3 maradékot ad, ami azt jelenti, hogy 3-mal osztható, továbbá biztosan nagyobb, mint 3 ($q \geq 5$ miatt $7q^2 \geq 175$), tehát összetett.
+\medskip
+
+
+\hbox to \hsize{\hskip2truecm\hrulefill\hskip2truecm}
+{\bf 3. feladat: } Az $ABC$ háromszög $C$ csúcsánál derékszög van. A $B$-bõl induló szögfelezõ az $AC$ befogót a $P$, a háromszög köré írt kört a $Q$ pontban metszi. Mekkorák a háromszög szögei ha $BP=2PQ$?
+
+
+\ki{Benedek Ilona}{Vác}\medskip
+
+{\bf 3. feladat I. megoldása: } Mivel $Q$ rajta van az $AB$ fölé emelt Thalész-körön, azért az $AQB$ szög is derékszög. Ez azt jelenti, hogy ha $A$-t tükrözzük a $BQ$ egyenesre, az $Q$ középpontú centrális tükrözést jelent, továbbá a tükörkép ($A'$) rajta lesz a $BC$ egyenesen, hiszen egy szög egyik szárának egy pontját a szögfelezõre tükrözve a tükörkép a másik száron lesz.  Ez azt jelenti, hogy az $ABA'$ háromszög $AA'$ oldalának felezõpontja a $Q$ pont lesz, tehát $BQ$ a háromszög súlyvonala, tehát $P$ a súlypont. Továbbá mivel a súlyvonal merõleges az $AA'$ oldalra, azért a háromszög egyenlõszárú, $AB = A'B$. Másrészrõl ha $P$ a súlypont, akkor a rajta áthaladó $AC$ szakasznak is súlyvonalnak kell lennie, ez pedig azt jelenti, hogy $C$ az $A'B$ oldal felezõpontja, mivel pedig $C$-nél derékszög van, ezért az $AA'$ és $AB$ oldalak is egyenlõk, tehát az $ABA'$ háromszög szabályos, ami azt jelenti, hogy az $ABC$ szög $60^{\circ}$-os, továbbá $AC$ egyben az $A'AB$ szög felezõje is, tehát $BAC \angle = 30^{\circ}$, a háromszög harmadik szöge pedig a $C$-nél lévõ derékszög. A háromszög tehát egy $30^{\circ}$-os hegyesszöggel rendelkezõ derékszögû háromszög.
+\medskip
+
+
+\hbox to \hsize{\hskip2truecm\hrulefill\hskip2truecm}
+{\bf 4. feladat: } Bizonyítsuk be, hogy minden $x$ valós számhoz létezik olyan $y$ valós szám, hogy az $(x,y)$ számpár megoldása az $x^5+y^5-x^4-y^4+x^4y+xy^4-x-y+1=0$ egyenletnek!
+
+
+\ki{Kiss Sándor}{Nyíregyháza}\medskip
+
+{\bf 4. feladat I. megoldása: } Alakítsuk szorzattá a bal oldalt:
+$$(x+y - 1)(x^4+y^4-1) = 0$$
+Ebbõl az alakból már nyilvánvaló, hogy minden $x$-hez létezik megfelelõ $y$, éspedig $y = 1 - x$, ami minden $x$-re valós szám lesz.
+\medskip
+
+
+\hbox to \hsize{\hskip2truecm\hrulefill\hskip2truecm}
+{\bf 5. feladat: } Legyen $M$ a hegyesszögû $ABC$ háromszög $AD$ magasságának egy belsõ pontja, és legyen $A_1$ a háromszög köré írt kör $A$ végpontú átmérõjének másik végpontja. Az $A$-ból az $A_1M$ egyenesre emelt merõleges a $BC$ egyenest $A_0$-ban metszi; az $M$-bõl $AC$-re, illetve $AB$-re állított merõlegesek talppontjait $B_0$, illetve $C_0$. Bizonyítsuk be, hogy $A_0$, $B_0$, $C_0$ egy egyenesen vannak.
+
+
+\ki{András Szilárd}{Csíkszereda}\medskip
+
+{\bf 5. feladat I. megoldása: } Jelöljük $k$-val a háromszög köré írt kört! Ennek átmérõje a feladat szerint $AA_1$. Ez azt jelenti, hogy a Thalész-tétel miatt az $A$-ból $A_1M$-re állított merõleges $k$-n van, hiszen derékszögben látszik belõle az $AA_1$ szakasz. Jelöljük ezt a pontot $X$-szel!
+
+Az $AM$ fölé emelt körön az eddigiek szerint rajta van $X$, továbbá a Thalész-tétel miatt $B_0$ és $C_0$ is. Az $MDCB_0$ négyszög húrnégyszög, mivel van két szemközti derékszöge. Ez azt jelenti, hogy az $AMB_0$ szög megegyezik a mellette fekvõ szöggel, $DMB_0$-lal szemben fekvõ szög, $DCB_0$ nagyságával. Továbbá $B_0MA \angle = B_0C_0A \angle $, hiszen azonos ívhez tartozó kerületi szögek. Ebbõl a két meglátásból $DCB_0 \angle = B_0C_0A \angle$ már következik. Ez viszont azt jelenti, hogy a $BCB_0C_0$ négyszög húrnégyszög, hiszen a $BC_0B_0$ szög mellett fekvõ szög a $BCB_0$ szöggel egyezik meg, tehát $BC_0B_0 \angle + BCB_0 \angle = 180^{\circ}$. Jelöljük a négyszög körülírt körét $k_2$-vel!
+
+A $k$ és $k_2$ körök hatványvonala az $AX$ egyenes, a $k$ és $k_1$ köröké a $BC$ egyenes. $A_0$ mindkettõn rajta van, tehát a $k$-ra, $k_1$-re és $k_2$-re vonatkozó hatványai megegyeznek, tehát rajta van a $k_1$ és $k_2$ körök hatványvonalán, amely a $B_0C_0$ egyenes, így tehát a három pont egy egyenesen van.
+\medskip
+
+
+\hbox to \hsize{\hskip2truecm\hrulefill\hskip2truecm}
+{\bf 6. feladat: } Határozzuk meg azt az $f$ függvényt, amely \\
+$a)$ minden nemnegatív egészhez nemnegatív egész számot rendel hozzá, különbözõ egészekhez különbözõ egészeket;\\
+$b)$ minden nemnegatív egész n-re kielégíti az
+$$f^2(0)+f^2(1)+\ldots +f^2(n) \le \frac{n(n+1)(2n+1)}{6}$$
+egyenlõtlenséget.
+
+
+\ki{Bencze Mihály}{Brassó}\medskip
+
+{\bf 6. feladat I. megoldása: } Az egyenlõtlenség jobb oldalán a természetes számok 1-tõl $n$-ig vett négyzetösszege szerepel, ez adja a sejtést, hogy csak $f(n) = n$ lesz megfelelõ. Bizonyítsuk ezt teljes indukcióval!
+
+$n = 0$-ra az állítás $0 \leq f(0) \leq 0$ miatt, amibõl $f(0) = 0$ következik, nyilván igaz. Tegyük fel, hogy igaz az állítás egy nemnegatív $n$egész számig. Ekkor a feladatban megadott egyenlõtlenség:
+$$f^2(0) + f^2(1) + \ldots + f^2(n) + f^2(n+1) \leq {(n+1)(n+2)(2n+3) \over 6}$$
+A bal oldal helyett az indukciós feltevés helyett beírhatjuk 1-tõl $n$-ig az egész számok négyzetösszegét:
+$${n(n+1)(2n+1) \over 6} + f^2(n+1) \leq {(n+1)(n+2)(2n+3) \over 6}$$
+Amely átrendezve
+$$f^2(n+1) \leq {(n+1)(n+2)(2n+3) \over 6} - {n(n+1)(2n+1) \over 6} = (n+1)^2$$
+viszont $f(n+1)$ csak $n+1$ lehet, mivel a többi lehetséges értéket más helyen veszi föl a függvény ($1, \ 2, \ldots ,n$-ben), ezzel tehát az indukciós lépést végrehajtottuk, és a megoldás teljes.
+\medskip
+
+\vfill
+\end{document}

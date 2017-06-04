@@ -1,0 +1,108 @@
+\documentclass[a4paper,10pt]{article} 
+\usepackage[latin2]{inputenc}
+\usepackage{graphicx}
+\usepackage{amssymb}
+\voffset - 20pt
+\hoffset - 35pt
+\textwidth 450pt
+\textheight 650pt 
+\frenchspacing 
+
+\pagestyle{empty}
+\def\ki#1#2{\hfill {\it #1 (#2)}\medskip}
+
+\def\tg{\, \hbox{tg} \,}
+\def\ctg{\, \hbox{ctg} \,}
+\def\arctg{\, \hbox{arctg} \,}
+\def\arcctg{\, \hbox{arcctg} \,}
+
+\begin{document}
+\begin{center} \Large {\em I. Nemzetközi Magyar Matematika Verseny} \end{center}
+\begin{center} \large{\em Révkomárom, 1992. ápr. 9-12.} \end{center}
+\smallskip
+\begin{center} \large{\bf 10. osztály} \end{center}
+\bigskip 
+
+{\bf 1. feladat: } Igazoljuk, hogy ha $x,y,z \in \mathbb{R}$, akkor
+$$x^2 + y^2 + z^2 - xy - yz - zx \geq {3 \over 4} \max \left[ (x-y)^2, (y-z)^2, (z-x)^2 \right].$$
+
+
+\ki{Bencze Mihály}{Brassó}\medskip
+
+{\bf 1. feladat I. megoldása: } Bebizonyítjuk, hogy ha $(x-y)^2$ a maximális, akkor igaz lesz az állítás. A két másik kifejezésre a bizonyítás értelemszerûen átvihetõ.
+{\setlength\arraycolsep{2pt}\begin{eqnarray*}
+x^2+y^2+z^2-xy-yz-zx & = & {1 \over (x-y)^2+\frac{1}{2}\left((x-z)^2+(y-z)^2\right)} \geq \\
+& \geq & \frac{1}{2}(x-y)^2+\left(\frac{1}{2}(x-z+z-y)\right)^2 = \frac{1}{2}(x-y)^2+\frac{1}{4}(x-y)^2 = \frac{3}{4}(x-y)^2
+\end{eqnarray*}}
+\medskip
+
+
+\hbox to \hsize{\hskip2truecm\hrulefill\hskip2truecm}
+{\bf 2. feladat: } Hány olyan háromszög van, amelynek oldalai $n$-nél nagyobb, de $2n$-nél nem nagyobb egész számok? Ezek közül a háromszögek közül hány egyenlõszárú és hány egyenlõoldalú van?
+
+
+\ki{Urbán János}{Budapest}\medskip
+
+{\bf 2. feladat I. megoldása: } A feltétel szerint a háromszög mindhárom oldala $n$ és $2n$ közé esik, akkor a háromszögegyenlõtlenséget már biztosan teljesíteni fogják, hiszen bármely két oldal összege nagyobb lesz, mint $2n$, ez pedig nagyobb lesz bármelyik oldalnál.
+
+Így csak ki kell választani három megfelelõ egész számot $n$ és $2n$ között, úgy, hogy egyenlõk is lehetnek köztük. Ezt ismert képlet szerint ${n+2 \choose 3}$-féleképp tehetjük meg. Ezek, mint láttuk, mind megfelelõ háromszögeket adnak. Az egyenlõ szárúaknál meghatározhatjuk a szárak és az alap hosszát, ez ${n \choose 2}$ lehetõség. Az egyenlõ oldalúaknál csak az egyetlen oldalhosszt határozhatjuk meg, ez $n$ lehetõség.
+\medskip
+
+
+\hbox to \hsize{\hskip2truecm\hrulefill\hskip2truecm}
+{\bf 3. feladat: } Jelölje $N$ azt az 1992 jegyû számot, amelynek az összes számjegye 9-es. Mennyi $N^2$ számjegyeinek összege?
+
+
+\ki{Bencze Mihály}{Brassó}\medskip
+
+{\bf 3. feladat I. megoldása: } Vegyük észre, hogy $N = 10^{1992}-1$. Formálisan négyzetre emelve $N^2 = 10^{1992}(10^{1992}-2)+1$. Az elsõ tag második tényezõje csupa 9-es, kivéve az utolsó jegyet, ami 8-as. 10-hatvánnyal szorozva a számjegyösszeg nem változik, és a szorzat 0-kra végzõdik. Ehhez 1-et adva a számjegyösszeg 1-gyel nõ, tehát végeredményben $9 \cdot 1991+8+1 = 1992 \cdot 9 = 17928$
+\medskip
+
+
+\hbox to \hsize{\hskip2truecm\hrulefill\hskip2truecm}
+{\bf 4. feladat: } Bizonyítsuk be, hogy
+$$82!\left( 1 + {1 \over 2} + {1 \over 3} + \ldots + {1 \over 82} \right)$$
+osztható 1992-vel.
+
+
+\ki{Mészáros József}{Galánta}\medskip
+
+{\bf 4. feladat I. megoldása: } Vegyük észre, hogy $$82!\left(1+{1 \over 2}+ \ldots +{1 \over 82}\right) = 82!\left(\left(1+{1 \over 82}\right) + \ldots + \left({1 \over 41}+{1 \over 42}\right)\right) = 83 \left({82! \over 1 \cdot 82}+{82! \over 2 \cdot 81} + \ldots {82! \over 41 \cdot 42}\right)$$
+A zárójelben mindegyik tag osztható 3-mal és 8-cal is, tehát a szorzat osztható $3 \cdot 8 \cdot 83 = 1992$-vel.
+\medskip
+
+
+\hbox to \hsize{\hskip2truecm\hrulefill\hskip2truecm}
+{\bf 5. feladat: } Adott $ABC$ háromszög. Legyen $O$ a körülírt körének a középpontja. $B$ és $C$ csúcsokból az $AC$ és $AB$ oldalakra bocsátott merõlegesek talppontjai $E$ és $F$. Igazoljuk, hogy $AO \perp EF$.
+
+
+\ki{Nagel tétele}{}\medskip
+
+{\bf 5. feladat I. megoldása: } Jelöljük a szögeket és az oldalakat a szokásos módon! $A$-t tegyük a koordinátarendszer középpontjába, és az $AB$ egyenes legyen az $x$ egyenes.
+$$O\left({c \over 2} ; {c \over 2} \ctg \gamma\right), F(b \cos \alpha ; 0), AE = c \cos \alpha, E(c \cos ^2 \alpha ; c \cos \alpha \sin \alpha)$$
+Ebbõl következik, hogy $\vec {AO} = \left({c \over 2}; {c \over 2} \ctg \gamma \right)$ és $\vec {EF} = \left(b\cos \alpha - c \cos ^2 \alpha ; -c \sin \alpha \cos \alpha \right)$. Ezt felhasználva formális szorzással kapjuk, hogy:
+
+{\setlength\arraycolsep{2pt}\begin{eqnarray*}
+\vec {AO} \cdot \vec {EF} & = & {bc \over 2} \cos \alpha - {c^2 \over 2} \cos ^2 \alpha - {c^2 \over 2 \sin \alpha \cos \alpha \ctg \gamma} = \\
+& = & {c \over 2} \cos \alpha (EC - BE \ctg \gamma) = {c \over 2} \cos \alpha (EC-EC) = 0
+\end{eqnarray*}}
+
+Ezzel pedig beláttuk az állítást, hiszen a két szakaszt jellemzõ vektorok skalárszorzata 0, és a vektorok hossza nem 0, tehát merõlegesek egymásra.
+\medskip
+
+
+\hbox to \hsize{\hskip2truecm\hrulefill\hskip2truecm}
+{\bf 6. feladat: } Az $ABC$ derékszögû háromszög $S$ súlypontjából bocsássunk merõlegeseket az oldalakra. Legyenek ezek talppontjai $A_1, B_1, C_1$. Számítsuk ki a Ter($ABC$)/Ter($A_1B_1C_1$) arányt.
+
+
+\ki{Mészáros József}{Galánta}\medskip
+
+{\bf 6. feladat I. megoldása: } Ha az átfogóhoz tartozó magasságot $m_c$-vel jelöljük, a háromszög szögeit pedig a szokásos módon, akkor egyrészt láthatjuk, hogy az $A_1B_1C_1$ háromszög területe elõáll az $A_1SB_1$, $B_1SC_1$ és $A_1SC_1$ háromszögek területének összegeként, ezen területeket felírva a háromszög ismert trigonometrikus területképletének segítségével pedig kapjuk, hogy a terület nem más, mint
+$${1 \over 2} \cdot {a \over 3} \cdot {b \over 3} \sin {\pi \over 2} + {1 \over 2} \cdot {m_c \over 3} \cdot {a \over 3} \sin \alpha + {1 \over 2} \cdot {m_c \over 3} \cdot {b \over 3} \sin \beta$$
+(az oldalakon kialakuló ${a \over 3}$, illetve ${b \over 3}$ szakaszok a párhuzamos szelõk tételének következményei), és ugyanígy kaphatjuk, az átfogóra bocsátott merõleges ${m_c \over 3}$ hosszúságát is, a súlyvonalat és a $C$ pontból induló magasságot is behúzva.
+
+Felhasználva továbbá, hogy $\alpha + \beta = {\pi \over 2}$, és így ${\sin \beta = \cos \alpha}$, valamint a $\sin ^2 \alpha + \cos ^2 \alpha =1$, azaz $\sin ^2 \alpha + \sin ^2 \beta = 1$ egyenlõség alapján $\sin \alpha$ és $\sin \beta$ értékét definíció szerint beírva és $c$-vel átszorozva kapjuk, hogy $a \sin \alpha + b \sin \beta = c$, tehát a fenti összeg végsõ soron ${2 \over 9}$-ed része az $ABC$ területének, tehát a feladat által kért arány ${9 \over 2}$ lesz.
+\medskip
+
+\vfill
+\end{document}

@@ -1,0 +1,115 @@
+\documentclass[a4paper,10pt]{article} 
+\usepackage[latin2]{inputenc}
+\usepackage{graphicx}
+\usepackage{amssymb}
+\voffset - 20pt
+\hoffset - 35pt
+\textwidth 450pt
+\textheight 650pt 
+\frenchspacing 
+
+\pagestyle{empty}
+\def\ki#1#2{\hfill {\it #1 (#2)}\medskip}
+
+\def\tg{\, \hbox{tg} \,}
+\def\ctg{\, \hbox{ctg} \,}
+\def\arctg{\, \hbox{arctg} \,}
+\def\arcctg{\, \hbox{arcctg} \,}
+
+\begin{document}
+\begin{center} \Large {\em IV. Nemzetközi Magyar Matematika Verseny} \end{center}
+\begin{center} \large{\em Paks, 1995. márc. 31-ápr. 4.} \end{center}
+\smallskip
+\begin{center} \large{\bf 11. osztály} \end{center}
+\bigskip 
+
+{\bf 1. feladat: } Az $AB=1$ átmérõjû félkörbe olyan $ABCD$ trapézt szerkesztettünk, amely érintõnégyszög is. Mekkora a trapéz két szára?
+
+
+\ki{Kiss Sándor}{Nyíregyháza}\medskip
+
+{\bf 1. feladat I. megoldása: } A trapéznak szükségképpen egyenlõ szárúnak kell lennie, hiszen húrtrapéz. Jelöljük az $AD$ szakasz hosszát $x$-szel, a $D$ pont $AB$-re vett merõleges vetülete legyen az $E$ pont. A befogótétel miatt $AD^2 = AE \cdot AB$ . Ez azt jelenti, hogy $AE = x^2$, tehát $CD = 1-2x^2$. Mivel a trapéz egyenlõ szárú, azért az alapok különbsége $AE$ kétszerese lesz, tehát $2x^2$, ami azt jelenti, hogy $CD = 1 - 2x^2$ is teljesülni fog. Mivel azonban a trapézunk érintõnégyszög, azért a szemközti oldalak összege egyenlõ, tehát
+$$1+(1-2x^2) = 2x$$
+Ezt a másodfokú egyenletet $x$-re megoldva pozitív megoldásként azt kapjuk, hogy $x = {\sqrt{5} - 1 \over 2}$, ekkora lesz tehát a trapéz szára.
+\medskip
+
+
+\hbox to \hsize{\hskip2truecm\hrulefill\hskip2truecm}
+{\bf 2. feladat: } Az $e$ élhosszúságú $ABCDA'B'C'D'$ kocka egy lapja az $ABCD$ négyzet; az $AA'$, $BB'$, $CC'$, $DD'$ élek párhuzamosak. Mekkora az $ADCD'$ és a $BCDC'$ derékszögû tetraéderek közös részét képezõ test felszíne és térfogata?
+
+
+\ki{Bogdán Zoltán}{Cegléd}\medskip
+
+{\bf 2. feladat I. megoldása: } Jelöljük az $ABCD$ és $CC'D'D$ lapok középpontjait $P$-vel, illetve $Q$-val! A közös rész a $DPCQ$ tetraéder lesz. A $DCP$ és $CQD$ háromszögek területe is ugyanakkora, ${e^2 \over 4}$, a $PCQ$ és $DPQ$ lapok pedig egyaránt egy szabályos háromszög ($ACD'$ és $DBC'$) egynegyed részei területüket illetõen, a szabályos háromszögek oldala pedig a kocka egy-egy lapátlója.
+A keresett felszín ennek megfelelõen:
+$$A = 2 \cdot {e^2 \over 4} + 2 \cdot {e^2 \sqrt{3} \over 8} = {(2+ \sqrt{3})e^2 \over 4}.$$
+A keresett térfogat pedig a kiszámolt adatok alapján:
+$$V = {1 \over 3} \cdot {e^2 \over 4} \cdot {e \over 2} = {e^3 \over 24}.$$
+\medskip
+
+
+\hbox to \hsize{\hskip2truecm\hrulefill\hskip2truecm}
+{\bf 3. feladat: } Bizonyítsuk be, hogy
+$$\begin{array}{rl}
+a) & \quad \log_a\frac{2bc}{b+c} + \log_b\frac{2ca}{c+a} + \log_c\frac{2ab}{a+b} \ge 3, \hbox{ ha } 0<a,b,c<1 \\[6pt]
+b) & \quad \log_a\frac{b+c}{2} + \log_b\frac{c+a}{2} + \log_c\frac{a+b}{2} \ge 3, \hbox{ ha } a,b,c>1
+\end{array}$$
+Milyen esetben áll fenn az egyenlõség?
+
+
+\ki{Weszely Tibor}{Marosvásárhely}\medskip
+
+{\bf 3. feladat I. megoldása: } A számtani és mértani közép közti egyenlõtlenségben a számtani középpel leosztva és a mértanival szorozva azt kapjuk, hogy ${2ab \over a+b} \leq \sqrt{ab}$. Ez viszont $0 < a,b,c < 1$ esetén a logaritmusfüggvény szigorú monotonitása miatt
+$$\log_a {2bc \over b+c} + \log_b {2ac \over a+c} + \log_c{2ab \over a+b} \geq \log_a\sqrt{bc} + \log_b\sqrt{ca} + \log_c\sqrt{ab}$$
+A jobb oldal viszont a következõ formába írható a logaritmus azonosságainak segítségével
+$${1 \over 2}\left(\log_a b + {1 \over \log_a b} + \log_b c + {1 \over \log_b c} + \log_c a + {1 \over \log_c a} \right)$$
+alakra hozható, ami viszont az ismert egyenlõtlenség miatt, amely szerint egy pozitív számnak és reciprokának abszolútértéke legalább 2 (a kikötés miatt minden logaritmus értéke pozitív) legalább ${1 \over 2} \cdot 6 = 3$.
+
+Az $a,b,c > 1$ esetben a számtani és mértani közép közti egyenlõtlenség felhasználásával az elõbbi módszerrel adódik, hogy
+$$\log_a {b+c \over 2} + \log_b {c+a \over 2} + \log_c {a+b \over 2} \geq \log_a \sqrt{bc} + \log_b \sqrt{ac} + \log_c \sqrt{ab} \geq 3$$
+Egyenlõség pedig mind a két esetben csak $a=b=c$-nél áll fenn a számtani és mértani közép felhasználása miatt, ekkor viszont könnyen ellenõrizhetõ, hogy valóban egyenlõség van.
+\medskip
+
+
+\hbox to \hsize{\hskip2truecm\hrulefill\hskip2truecm}
+{\bf 4. feladat: } Egy sakkbajnokságon mindenki mindenkivel játszott. Gyõzelemért 1, döntetlenért 0,5, vereségért 0 pont járt. A bajnokság végén kiderült, hogy minden résztvevõ pontszámának felét az utolsó három helyezett elleni játszmákban szerezte. Hány résztvevõje volt a versenynek?
+
+
+\ki{Katz Sándor}{Bonyhád}\medskip
+
+{\bf 4. feladat I. megoldása: } Jelöljük a versenyzõk számát $n$-nel!
+
+Az utolsó három helyezett egymás elleni játszmáiban összesen 3 pontot osztottak ki, az elsõ $n-3$ egymás elleni játszmáiban ${(n-3)(n-4) \over 2}$ - t, végül az elsõ $n-3$ helyezettnek az utolsó 3 ellen játszott mérkõzésein összesen $(n-3) \cdot 3 = 3n-9$ pont került kiosztásra. A feladat állítása minden résztvevõre teljesül, így speciálisan az utolsó háromra is, tehát mindhárman a pontjaik felét szerezték egymás ellen, ami azt jelenti, hogy az elsõ $n-3$ ellen ugyanannyi pontot szereztek összesen, mint egymás ellen, vagyis 3-at. Ez azt jelenti, hogy ellenük az elsõ $n-3$ versenyzõ $3n-12$ pontot szerzett, tehát ugyanennyit szereztek egymás ellen is, ennek kell egyenlõnek lennie ${(n-3)(n-4) \over 2}$-vel. A másodfokú egyenletet megoldva $n=4$ és $n=9$ adódik eredményül. $n=4$ esetén azt kapnánk, hogy az elsõ 1 versenyzõnek (tehát a gyõztesnek) $3 \cdot 4 - 12 = 0$ pontja van, ami nyilvánvaló képtelenség. Ha $n=9$, akkor ilyen akadály nem merül fel, csupán mutatni kell egy megfelelõ elosztást, amelyben ezek a pontszámok realizálódnak. Ilyen például, ha az elsõ 4 helyezett egymással csupa döntetlent játszik, az utolsó hármat pedig mind megverik; az utolsó 5 egymással mind döntetlent játszik; az 5. az 1.-tõl és a 2.-tól, a 6. a 3.-tól és a 4.-tõl kap ki, a többi meccsük döntetlen. Ekkor az elsõ négy helyezett mindegyikének 6 pontja van, amelybõl 3-at szereztek az utolsó három ellen; az 5.-nek és a 6.-nak 3 pontja, amelybõl $1,5$-et szereztek az utolsó három ellen, a utolsó háromnak pedig 2 pontja, amelybõl 1-et szereztek egymás ellen. Ezzel a feladatot megoldottuk.
+\medskip
+
+
+\hbox to \hsize{\hskip2truecm\hrulefill\hskip2truecm}
+{\bf 5. feladat: } Határozzuk meg azokat az $x$, $y$, $z$, $t$ valós számokat, amelyek kielégítik a következõ egyenletet:
+$$x^2 + y^2 + z^2 + 1 = t + \sqrt{x+y+z-t}$$
+
+
+\ki{Kovács Béla}{Szatmárnémeti}\medskip
+
+{\bf 5. feladat I. megoldása: } Rendezzünk át a bal oldalra, és alakítsunk teljes négyzetté alkalmas módon!
+$$x^2 + y^2 + z^2 + 1 -t -\sqrt{x+y+z-t} = 0 $$
+$$\left( x- {1 \over 2} \right)^2 + \left( y - {1 \over 2} \right)^2 + \left( z - {1 \over 2} \right)^2+ \left( \sqrt{x+y+z-t} - {1 \over 2} \right) ^2 = 0
+$$
+Ez pedig csak akkor teljesül, ha $x=y=z={1 \over 2}$, valamint ezeket az értékeket felhasználva $t = {5 \over 4}$.
+\medskip
+
+
+\hbox to \hsize{\hskip2truecm\hrulefill\hskip2truecm}
+{\bf 6. feladat: } Határozzuk meg azt a valós számok halmazán értelmezett valós értékû $f$ függvényt, amely minden valós $x$-re kielégíti az $$(f(x))^3+(x^2+x^4+\ldots+x^{2n})f(x)=2x^3+x^5+x^7+\ldots+x^{2n+1}$$egyenletet ($n\ge 1$ rögzített egész).
+
+
+\ki{Bencze Mihály}{Brassó}\medskip
+
+{\bf 6. feladat I. megoldása: } Alakítsuk át az egyenletet!
+$$f^3(x) - x^3 + (x^2 + x^4 + \ldots + x^{2n})f(x) = x(x^2+x^4 + \ldots + x^{2n})$$
+Kiemelve $f(x) - x$-et, azt kapjuk, hogy
+$$(f(x) - x)\left(f^2(x) + xf(x) + x^2 + x^2 + x^4 + \ldots + x^{2n} \right) = 0$$
+A második tényezõ mindig nagyobb lesz, mint 0, ha $x \not = 0$ ($x$-et paraméterként tekintve az $f(x)$-re kapott másodfokú egyenlet diszkriminánsa határozottan negatív), ebbõl az következik, hogy nem 0 $x$-ekre $f(x) = x$. $x = 0$-ban ez ekvivalens a második tényezõ 0 voltához szükséges $f(x) = 0$ feltétellel, tehát az $f(x) = x$ függvény kielégíti a megkívánt feltételt.
+\medskip
+
+\vfill
+\end{document}

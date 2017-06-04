@@ -1,0 +1,112 @@
+\documentclass[a4paper,10pt]{article} 
+\usepackage[latin2]{inputenc}
+\usepackage{graphicx}
+\usepackage{amssymb}
+\voffset - 20pt
+\hoffset - 35pt
+\textwidth 450pt
+\textheight 650pt 
+\frenchspacing 
+
+\pagestyle{empty}
+\def\ki#1#2{\hfill {\it #1 (#2)}\medskip}
+
+\def\tg{\, \hbox{tg} \,}
+\def\ctg{\, \hbox{ctg} \,}
+\def\arctg{\, \hbox{arctg} \,}
+\def\arcctg{\, \hbox{arcctg} \,}
+
+\begin{document}
+\begin{center} \Large {\em IV. Nemzetközi Magyar Matematika Verseny} \end{center}
+\begin{center} \large{\em Paks, 1995. márc. 31-ápr. 4.} \end{center}
+\smallskip
+\begin{center} \large{\bf 9. osztály} \end{center}
+\bigskip 
+
+{\bf 1. feladat: } A mellékelt 3x3-as bûvös négyzetben minden sorban és oszlopban és mindkét átlóban ugyanannyi a számok összege. Határozzuk meg a hiányzó számokat!
+
+\begin{center}
+\begin{tabular}{|c|c|c|}
+\hline
+ 199 & 995 & \phantom{ 1995 }\\
+\hline
+\phantom{ 1995 }&\phantom{ 1995 }&\phantom{ 1995 }\\
+\hline
+\phantom{ 1995 }&\phantom{ 1995 }& 1995 \\
+\hline
+\end{tabular}
+\end{center}
+
+
+\ki{Kiss Sándor}{Nyíregyháza}\medskip
+
+{\bf 1. feladat I. megoldása: } Nevezzük el a mezõket a sakktábla számozásának megfelelõen, a továbbiakban a mezõ nevét az értéke helyett is használjuk! A $c3$-as mezõben lévõ szám beleszámít a $c$ oszlop és a 3. sor összegébe is. Így a $c1+c2$ összegnek meg kell egyeznie az $a3+b3$ összeggel. Ez azt jelenti, hogy $1995+c2 = 199+995 = 1194$, amibõl $c2 = -801$ adódik. Az $a3-c1$ átlóban ugyanannyi az összeg, mint a $b$ oszlopban, tehát hasonló megfontolások miatt $b1 = 199+1995-995 = 1199$. $b1$ értékét felhasználva meghatározható $a2$ értéke is (az elsõ oszlop és a harmadik sor összege egyenlõ), amire $1199+1995-199 = 2995$-öt kapunk. Ha összeadjuk mind a kilenc számot, akkor az $a1-c3$ átló összegének háromszorosát kapjuk, tehát
+$$3(a1+b2+c3) = 199+995+c3+2995+b2-801+a1+1199+1995$$
+Ezt átrendezve $a1+b2+c3 = 3291$, ez lesz minden sor, oszlop és átló összege, amibõl pedig már meghatározhatók a hiányzó értékek: $a1 = 97$, $b2 = 1097$, $c3 =2097$.
+\medskip
+
+
+\hbox to \hsize{\hskip2truecm\hrulefill\hskip2truecm}
+{\bf 2. feladat: } Egy háromszög oldalai: $a$, $b$, $c$; egy másik háromszögé $p$, $q$, $r$. Bizonyítsuk be, hogy ezekre érvényes a következõ egyenlõtlenség:
+$$ (a+1)^2+(b-1)^2+(c+1)^2-2(ap+bq+cr) > 6-(p+1)^2-(q-1)^2-(r+1)^2. $$
+
+
+\ki{Oláh György}{Révkomárom}\medskip
+
+{\bf 2. feladat I. megoldása: } Végezzük el a mûveleteket és rendezzünk át a bal oldalra! A 6-os konstans eltûnik, és a megmaradt kifejezés a következõ alakot ölti:
+{\setlength\arraycolsep{2pt}\begin{eqnarray*}
+a^2 - 2ap + p^2 + b^2 - 2bq + q^2 + c^2 - 2cr + r^2 + 2(a+c-b) + 2(p+r-q) &>& 0 \\[6pt]
+(a-p)^2 + (b-q)^2 + (c-r)^2 + 2(a+c-b) + 2(p+r-q) &>& 0
+\end{eqnarray*}}
+Ez pedig nyilván igaz lesz, hiszen a bal oldalon a háromszög-egyenlõtlenséget is figyelembe véve minden tag nemnegatív, kettõ pedig határozottan pozitív.
+\medskip
+
+
+\hbox to \hsize{\hskip2truecm\hrulefill\hskip2truecm}
+{\bf 3. feladat: } Az $ABCD$ téglalap köré írt körének $C$-t nem tartalmazó $AB$ ívén vegyük fel egy tetszõleges $P$ pontot. $P$-bõl az $AC$, illetve $BD$ átlókra állított merõleges talppontja legyen $L$, illetve $M$. Bizonyítsuk be, hogy az $LM$ szakasz hossza nem függ a $P$ pont helyzetétõl!
+
+
+\ki{Szabó Magdolna}{Szabadka}\medskip
+
+{\bf 3. feladat I. megoldása: } Legyen az átlók metszéspontja $O$! Ekkor az $LPMO$ négyszög húrnégyszög, mivel van két szemközti derékszöge. Mivel $O$ a téglalap körülírt körének középpontja, ezért az $OP$ távolság mindig ugyanakkora lesz. Mindig ugyanakkora lesz továbbá az $LPM$ szög, amely az $AOB$ szög kiegészítõ szöge. Így az $LPM$ pontokra illeszkedõ kör átmérõje mindig ugyanakkora lesz ($OP$ lesz az átmérõ, mivel derékszögben látszik mind a két másik pontból), továbbá az $LM$ ívhez tartozó kerületi szög is állandó lesz, ami azt jelenti, hogy az ív és a húr hossza is ugyanakkora lesz mindig, tehát az $LM$ szakasz hossza független a $P$ pont helyzetétõl és épp ezt kívántuk belátni.
+\medskip
+
+
+\hbox to \hsize{\hskip2truecm\hrulefill\hskip2truecm}
+{\bf 4. feladat: } Egy $9\times 9$-es táblázat mezõire ráírjuk tetszõleges sorrendben az $1, 2,\ldots, 81$ számokat. Bizonyítsuk be, hogy bármely elrendezés esetén található két olyan szomszédos mezõ, amelyeken levõ számok különbsége legalább 6. (Két mezõ akkor szomszédos, ha van közös oldaluk).
+
+
+\ki{Szabó Magdolna}{Szabadka}\medskip
+
+{\bf 4. feladat I. megoldása: } Indirekten bizonyítunk. Ha nem igaz az állítás, akkor egy sorban vagy oszlopban a legnagyobb különbség nem lehet nagyobb, mint $8 \cdot 5 = 40$. Ez azt jelenti, hogy az 1-es oszlopában és sorában is csak 41-nél nem nagyobb számok szerepelhetnek. A 81 oszlopában és sorában pedig ugyanígy csak 41-nél nem kisebb számok szerepelhetnek. Az 1-es oszlopának és sorának, valamint a 81-es oszlopának és sorának legalább két közös mezõje van, amelyeken így csak 41-nél nem nagyobb, illetve nem kisebb számok szerepelhetnek. Két ilyen szám viszont nem létezhet, tehát ellentmondásra jutottunk, ami azt jelenti, hogy nem lehetséges olyan elrendezés, ahol a szomszédos mezõk különbsége legfeljebb 5, ez viszont éppen a feladat állításával egyenértékû.
+\medskip
+
+
+\hbox to \hsize{\hskip2truecm\hrulefill\hskip2truecm}
+{\bf 5. feladat: } Bizonyítsuk be, hogy $1995^4+4^{1995}$ összetett szám!
+
+
+\ki{Benedek Ilona}{Vác}\medskip
+
+{\bf 5. feladat I. megoldása: } Alakítsuk át a kifejezést!
+
+$$1995^4 + 4^{1995} = (1995^2)^2 + (2^{1995})^2 = (1995^2 + 2^{1995})^2 - 2^{1996} \cdot 1995^2$$
+Ez pedig ismert azonosság szerint $(1995^2+2^{1995} + 2^{998}\cdot 1995)(1995^2 + 2^{1995} - 2^{998}\cdot 1995)$ alakba írható, amely viszont láthatóan két 1-nél nagyobb szám szorzata, tehát összetett.
+
+
+\medskip
+
+
+\hbox to \hsize{\hskip2truecm\hrulefill\hskip2truecm}
+{\bf 6. feladat: } Állítsuk elõ az összes olyan $x$, $y$ racionális számot, amelyek kielégítik a következõ egyenletet: $$3x^2-5x+9=y^2.$$
+
+
+\ki{Bencze Mihály}{Brassó}\medskip
+
+{\bf 6. feladat I. megoldása: } Láthatóan $x = 0$ esetén $y = \pm 3$. Ha $x \not = 0$, akkor keressük a megoldást $y = t+3$ jelölés segítségével. A mûveletek elvégzése és átrendezés után
+$$3x^2 - 5x - t^2 -6t = 0$$
+A ${t \over x}$ racionális szám egyszerûsített formáját jelöljük ${m \over n}$-nel. Bármely megfelelõ számhoz (ti. amelynek számlálója és nevezõje relatív prím) megfelelõk lesznek az $x = {5n^2 + 6mn \over 3n^2 - m^2}$ és $t = {m(5n+6m) \over 3n^2 - m^2}$, $y = t \pm 3$ racionális számok. Ez számolással könnyen ellenõrizhetõ, másrészrõl ebbõl a ${t \over x}$ szám értéke ${m \over n}$ lesz, tehát ezek lesznek a megoldások.
+\medskip
+
+\vfill
+\end{document}

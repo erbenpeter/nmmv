@@ -1,0 +1,136 @@
+\documentclass[a4paper,10pt]{article} 
+\usepackage[latin2]{inputenc}
+\usepackage{graphicx}
+\usepackage{amssymb}
+\voffset - 20pt
+\hoffset - 35pt
+\textwidth 450pt
+\textheight 650pt 
+\frenchspacing 
+
+\pagestyle{empty}
+\def\ki#1#2{\hfill {\it #1 (#2)}\medskip}
+
+\def\tg{\, \hbox{tg} \,}
+\def\ctg{\, \hbox{ctg} \,}
+\def\arctg{\, \hbox{arctg} \,}
+\def\arcctg{\, \hbox{arcctg} \,}
+
+\begin{document}
+\begin{center} \Large {\em III. Nemzetközi Magyar Matematika Verseny} \end{center}
+\begin{center} \large{\em Ungvár, 1994. ápr. 15-19.} \end{center}
+\smallskip
+\begin{center} \large{\bf 10. osztály} \end{center}
+\bigskip 
+
+{\bf 1. feladat: } Határozzuk meg azokat a tízes számrendszerben felírt pozitív egész számokat, amelyek egyenlõk számjegyeik összegének négyzetével!
+
+
+\ki{Árokszállási Tibor}{Paks}\medskip
+
+{\bf 1. feladat I. megoldása: } Nézzük meg, hogy vannak-e ilyen 1, 2, 3, illetve 4-jegyû számok.
+
+Az egyjegyû számok között ez $a^2 = a$-t jelenti, ami $a = 1$ esetén teljesül. A kétjegyû számok között $10a+b = (a+b)^2$, átrendezve $9a = (a+b)(a+b-1)$. A jobb oldal két tényezõje relatív prím, ez azt jelenti, hogy az egyikük osztható 9-cel. Csak $a+b = 9$ lehetséges, mert a többi esetben ($a+b = 18$, $a+b = 10$, $a+b = 19$) a szorzat már nagyobb lenne 81-nél. Ha $a+b = 9$, akkor $a = 8$, ebbõl következik, hogy a szám 81 lesz, ez valóban jó is.
+
+Háromjegyû számok között $100a+10b+c = (a+b+c)^2$, azaz $9(11a+b) = (a+b+c)(a+b+c-1)$
+Ugyanígy a jobb oldal valamelyik tényezõje osztható 9-cel, és némi számolás után adódik, hogy nem lesz megoldás.
+
+A négyjegyû számok közt minden szám nagyobb, mint számjegyei összegének a négyzete, ugyanis az utóbbi maximuma $(4\cdot 9)^2 = 1296$, tehát ha lenne ilyen szám, az 1-essel kezdõdne, de ekkor a számjegyösszeg maximuma már csak 28, aminek a négyzete kisebb 1000-nél, tehát nem lehet a feladat feltételeinek megfelelõ szám.
+
+Ha a számjegyek száma nagyobb, mint négy, akkor már biztosan nem találhatunk megfelelõ számot, hiszen $81n^2$, ami a számjegyösszeg maximuma, ekkor már kisebb lesz, mint $10^{n-1}$, a lehetõ legkisebb $n$-jegyû szám. Ez az állítás teljes indukcióval belátható, $n = 5$-re igaz, továbbá $n$-rõl $n+1$-re átléphetünk, hiszen
+{\setlength\arraycolsep{2pt}\begin{eqnarray*}
+81(n+1)^2 & = & 81n^2+162n+81 < 81n^2 +300n < \\
+& < & 10 ^{n-1} + 9 \cdot 10^{n-1} = 10^n
+\end{eqnarray*}}
+Tehát 5-nél több jegyû számokra nem lehet megfelelõ számot találni, ennél kisebbekre viszont csak kettõ van: 1 és 81, tehát ez lesz az összes megoldás.
+\medskip
+
+
+\hbox to \hsize{\hskip2truecm\hrulefill\hskip2truecm}
+{\bf 2. feladat: } Legyenek $a,b,c$ pozitív valós számok, amelyekre $abc = 1$. Határozzuk meg az $M = (1+a)(1+b)(1+c)$ kifejezés minimumát!
+
+
+\ki{Szabó Magda}{Szabadka}\medskip
+
+{\bf 2. feladat I. megoldása: } Használjuk fel, hogy $abc = 1$, és alakítsuk át a kifejezést:
+$$M = {(1+a)(1+b)(1+c) \over abc} = \left(1+{1 \over a}\right) \left(1+{1 \over b}\right) \left(1+{1 \over c}\right)$$
+Ebbõl következik, hogy
+{\setlength\arraycolsep{2pt}\begin{eqnarray*}
+M^2 & = & \left(1+{1 \over a}\right) \left(1+{1 \over b}\right) \left(1+{1 \over c}\right)(1+a)(1+b)(1+c) = \\[6pt]
+& = & \left(2+a+{1 \over a}\right) \left(2+b+{1 \over b}\right) \left(2+c+{1 \over c}\right)
+\end{eqnarray*}} 
+Ebben az alakban viszont minden tényezõ legalább 4, hiszen közismert, hogy egy számnak és reciprokának összege mindig legalább 2. Így a kifejezés négyzete legalább 64-gyel lesz egyenlõ, egyenlõség akkor áll fenn, ha $a = b = c = 1$. Ez azt jelenti, hogy $M$ minimuma 8 lesz, és ezt az értéket föl is veszi.
+\medskip
+
+
+\hbox to \hsize{\hskip2truecm\hrulefill\hskip2truecm}
+{\bf 3. feladat: } Egy $n$ lakosú városban klubokat szerveznek úgy, hogy bármely két klubnak legyen, és bármely három klubnak már ne legyen közös tagja. Legfeljebb hány klubot lehet így szervezni?
+
+
+\ki{Róka Sándor}{Nyíregyháza}\medskip
+
+{\bf 3. feladat I. megoldása: } Egy lakos legfeljebb két klubhoz tartozhat, és bármely két klubnak van közös tagja, így a klubok számát $k$-val, a lakosokét $n$-nel jelölve, ${k \choose 2} \leq n$, ezt kifejtve és átrendezve $k^2-k-2n \leq 0$. Az egyenlõtlenséget megoldva $k \leq {1+\sqrt{8n+1} \over 2}$, és ennek a számnak az egészrészét el is tudja érni, feltéve, hogy minden lakos pontosan két klubhoz tartozik, ekkor éppen ${k \choose 2}$ lakos lesz, ami azt jelenti, hogy az egyenlõtlenségekbe mindenhová egyenlõtlenséget írhatunk. Az így kapott $n$-ek közül vesszük azt, amely a lehetõ legközelebb van alulról a szükséges $n$-hez, és a maradék néhány embernek nem lesz klubja, de ez elkerülhetetlen, hiszen $k+1$ klubot már nem lehet megszervezni, ugyanis ${k+1 \choose 2}$ már nagyobb lesz, mint $n$.
+
+Általánosságban az "ideális" kitöltésnél $n = {k^2 - k \over 2}$, és ha valamely $n$-re van egy olyan $k$, hogy 
+$${k^2 - k \over 2} \leq n < {(k+1)^2 - k-1 \over 2} = {k^2+k \over 2},$$ akkor egy $n$ lakosú városban $k$ klubot lehet szervezni, ez a másodfokú egyenlõtlenségben azt jelenti, hogy $k$ a lehetõ legnagyobb olyan szám, amely azt még kielégíti, tehát a legnagyobb olyan szám, amely nem nagyobb ${1+\sqrt{8n+1} \over 2}$-nél, vagyis ennek a számnak az egészrésze.
+\medskip
+
+
+\hbox to \hsize{\hskip2truecm\hrulefill\hskip2truecm}
+{\bf 4. feladat: } Az $ABC$ derékszögû háromszögben meghúztuk az $AB$ átfogóhoz tartozó magasságot, ennek talppontja $D$. A $C$ csúcsból induló szögfelezõ az átfogót $E$-ben metszi. A $BDC$ szög felezõje $CB$-t $M$-ben, az $ADC$ szög felezõje $AC$-t $N$-ben metszi. Bizonyítsuk be, hogy a $CNEM$ négyszög négyzet!
+
+
+\ki{Benedek Ilona}{Vác}\medskip
+
+{\bf 4. feladat I. megoldása: } Az $ECM$ és $EDM$ szögek is egy derékszög feleként állnak elõ, tehát mindkettõ $45^{\circ}$-os. Ebbõl az következik, hogy a $CMED$ négyszög húrnégyszög, hiszen a $C$ és $D$ pontok is rajta vannak az $ME$ szakasz fölé emelt $45^{\circ}$-os látóköríven. A $CNDM$ négyszög húrnégyszög, mivel van két egymással szemközti derékszöge. Ez viszont azt jelenti, hogy az $N$ pont is rajta van a $C$, $D$, $M$ pontok által meghatározott körön, amelyen már tudjuk, hogy rajta van $E$ is. A $CD$ szakasz a kör átmérõje lesz, mivel derékszögben látszik pl. a $D$ pontból. Ez viszont azt jelenti, hogy derékszögben látszik az $N$ és $M$ pontokból is, amibõl arra következtethetünk, hogy a $CMEN$ négyszög téglalap. Így azonban már tudjuk, hogy nemcsak az $MCE$, hanem az $MEC$ szög is $45^{\circ}$-os, tehát a $CME$ háromszög egyenlõszárú, ez pedig azt jelenti, hogy $CM = CE$, így a $CMEN$ téglalap négyzet lesz, és ezt kellett belátnunk.
+\medskip
+
+
+\hbox to \hsize{\hskip2truecm\hrulefill\hskip2truecm}
+{\bf 5. feladat: } Igazoljuk, hogy ha $n$ és $k$ pozitív egész számok, akkor
+$$(2n)! + (2k)! \geq 2(n+k)! \ \hbox{és}$$
+$$(2n+1)! + (2k+1)! \geq 2(n+k+1)!, \hbox{ ahol}$$
+$$m! = 1 \cdot 2 \cdot 3 \cdot \ldots \cdot m.$$
+
+
+\ki{Bencze Mihály}{Brassó}\medskip
+
+{\bf 5. feladat I. megoldása: } Látható, hogy $n = k$ esetén az egyenlõtlenségek teljesülnek, hisz mindkét oldalon formálisan is ugyanaz a kifejezés áll. Elegendõ tehát csak azzal az esettel foglalkoznunk, ha a két változó nem egyezik meg egymással. Ekkor az általánosság megszorítása nélkül föltehetjük, hogy $n < k$, hiszen mindkét egyenlõtlenség $n$-re és $k$-ra szimmetrikus. Jelöljük ekkor a $k-n$ pozitív egész számot $p$-vel!
+
+Használjuk fel a számtani és mértani közép közötti egyenlõtlenséget!
+{\setlength\arraycolsep{2pt}\begin{eqnarray*}
+(2n)! + (2k)! &=& (2n)! + (2n+2p)! > 2 \sqrt{(2n)!(2n+2p)!} = 2(2n)!\sqrt{(2n+1)\cdot \ldots \cdot (2n+2p)}= \\[6pt]
+&=& 2(2n)!\sqrt{(2n+1)\cdot \ldots \cdot (2n+p)(2n+p+1) \cdot \ldots \cdot (2n+2p)} \geq \\[6pt]
+&\geq& 2(2n)! \sqrt{(2n+1)^2\cdot \ldots \cdot (2n+p)^2} = 2(2n+p)! = 2(n+k)!
+\end{eqnarray*}}
+Ezzel beláttuk az elsõ egyenlõtlenséget. A második hasonló elven bizonyítható be:
+{\setlength\arraycolsep{2pt}\begin{eqnarray*}
+(2n+1)! + (2k+1)! &=& (2n+1)! + (2n+2p+1) > \\[6pt]
+&>& 2 \sqrt{(2n+1)!(2n+2p+1)!} = 2(2n+1)! \sqrt{2n+2 \cdot \ldots \cdot (2n+2p+1)} = \\[6pt]
+&=& 2(2n+1)! \sqrt{(2n+2) \cdot \ldots \cdot (2n+p+1)(2n+p+2) \cdot \ldots \cdot (2n+2p+1)}
+\end{eqnarray*}}
+A gyökjel alatt az utolsó $p$ darab tényezõ helyett vehetünk $p$-vel kisebbeket is, a kapott kifejezés nem lesz nagyobb, mint a fenti (egyenlõség $p = 0$ esetén), tehát a kifejezés nem nagyobb, mint
+$$2(2n+1)! \sqrt{(2n+2)^2 \cdot \ldots \cdot (2n+p+1)^2} = 2(2n+p+1)! = 2(n+k+1)!$$
+Ezzel beláttuk a második állítást is, egyenlõség pedig csak akkor lehet (és van is), ha $p = 0$, tehát $n=k$.
+\medskip
+
+
+\hbox to \hsize{\hskip2truecm\hrulefill\hskip2truecm}
+{\bf 6. feladat: } Az $ABCDEF$ hatszög köré kör írható. Igazoljuk, hogy az $AD$, $BE$ és $CF$ átlók akkor és csak akkor metszik egymást egy $O$ pontban (a kör belsejében), ha
+$$AB \cdot CD \cdot EF = BC \cdot DE \cdot FA.$$
+
+
+\ki{Kárteszi Ferenc}{Budapest}\medskip
+
+{\bf 6. feladat I. megoldása: } Amennyiben létezik az $O$ pont, akkor az $ABO$ és $EDO$ háromszögek hasonlók, mert van két egyenlõ szögük (az $O$-nál lévõ csúcsszögek, illetve az $E$-nél és $A$-nál lévõ szögek, hiszen mindkét csúcs ugyanarra a $BD$ ívre esik). Ugyanilyen okok miatt hasonlók a $CDO$, $AOF$, $BCO$ és $EFO$ háromszögek is. A megfelelõ oldalak arányát felírva:
+$${AB \over ED} = {AO \over EO}, \  {CD \over AF} = {CO \over AO}, \ {EF \over CB} = {EO \over CO}$$
+Ha az egyenletek megfelelõ oldalait összeszorozzuk, azt kapjuk, hogy
+$${AB \cdot CD \cdot EF \over ED \cdot AF \cdot CB} = {AO \cdot CO \cdot EO \over EO \cdot AO \cdot CO} = 1,$$
+ami a kívánt egyenlõtlenség.
+
+Tegyük fel most, hogy a $CO$ egyenes egy $F'$ pontban metszi a kört. Megmutatjuk, hogy ez csak az $F$ pont lehet. Mivel az $F$ pontra a feladat szerint érvényes az egyenlõség, az $F'$ pontra pedig az iménti fejtegetésünk szerint, ezért a szorzatokból az egyenlõ tagokat elhagyva azt kapjuk:
+$FA \cdot EF' = EF \cdot F'A$, átosztva a megfelelõ tényezõkkel (nyilván egyik sem 0) ${FA \over EF} = {F'A \over EF'}$. Mivel pedig az $AFE$ és $AF'E$ ugyanazon íven fekvõ látószögek, így megegyeznek, tehát az $AEF$ és $AEF'$ háromszögek hasonlók lesznek egymáshoz, mivel az $AE$ oldaluk megegyezik, ezért egybevágók is, tehát $F'$ legföljebb csak $F$-nek az $AE$ felezõ merõlegesére vonatkozó tükörképe lehetne, akkor viszont az oldalak között kapott arányosság nem állna fenn (kivéve, ha a felezõ merõleges átmegy $F$-en, de akkor mindegy, hogy róla, vagy a tükörképérõl beszélünk-e). Tehát $F'$ nem lehet más, mint $F$, ami azt jelenti, hogy a feladat állítását beláttuk.
+\medskip
+
+\vfill
+\end{document}

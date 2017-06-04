@@ -1,0 +1,109 @@
+\documentclass[a4paper,10pt]{article} 
+\usepackage[latin2]{inputenc}
+\usepackage{graphicx}
+\usepackage{amssymb}
+\voffset - 20pt
+\hoffset - 35pt
+\textwidth 450pt
+\textheight 650pt 
+\frenchspacing 
+
+\pagestyle{empty}
+\def\ki#1#2{\hfill {\it #1 (#2)}\medskip}
+
+\def\tg{\, \hbox{tg} \,}
+\def\ctg{\, \hbox{ctg} \,}
+\def\arctg{\, \hbox{arctg} \,}
+\def\arcctg{\, \hbox{arcctg} \,}
+
+\begin{document}
+\begin{center} \Large {\em III. Nemzetközi Magyar Matematika Verseny} \end{center}
+\begin{center} \large{\em Ungvár, 1994. ápr. 15-19.} \end{center}
+\smallskip
+\begin{center} \large{\bf 11. osztály} \end{center}
+\bigskip 
+
+{\bf 1. feladat: } Igazoljuk, hogy ha egy számtani sorozat elemei pozitív egész számok és van az elemek között négyzetszám, akkor végtelen sok négyzetszám is van a sorozat elemei között.
+
+
+\ki{Szabó Magda}{Szabadka}\medskip
+
+{\bf 1. feladat I. megoldása: } Ha van a sorozatnak egy négyzetszám eleme ($n^2$), akkor $(n+d)^2$ is eleme lesz a sorozatnak, hiszen $(n+d)^2 = n^2 + (d+2)d$. Ez viszont azt jelenti, hogy van még egy négyzetszám eleme a sorozatnak, amelyhez hasonló módon található egy még nála is nagyobb, és így tovább, látható, hogy a sorozatban valóban végtelen sok négyzetszám lesz található.
+\medskip
+
+
+\hbox to \hsize{\hskip2truecm\hrulefill\hskip2truecm}
+{\bf 2. feladat: } Legyenek $a$, $b$, $c$ olyan valós számok, amelyekre $a+b+c = 1$ és $a,b,c \geq -0, \! 25$. Igazoljuk, hogy
+$$\sqrt{4a+1} + \sqrt{4b+1} + \sqrt{4c+1} \leq \sqrt{21}.$$
+
+
+\ki{Neubauer Ferenc}{Munkács}\medskip
+
+{\bf 2. feladat I. megoldása: } Használjuk fel a számtani és négyzetes közepek közti egyenlõtlenséget!
+$$\sqrt{4a+1} + \sqrt{4b+1} + \sqrt{4c+1} \leq 3 \cdot \sqrt{{4a+1+4b+1+4c+1 \over 3}}$$
+A jobb oldalon a gyökjel alatt pontosan ${7 \over 3}$ fog állni, hiszen $a+b+c = 1$, ha a 3-at bevisszük a gyökjel alá, azt kapjuk, hogy
+$$\sqrt{4a+1} + \sqrt{4b+1} + \sqrt{4c+1} \leq 3 \cdot \sqrt{{7 \over 3}} = \sqrt{21}$$
+és éppen ezt akartuk bizonyítani.
+\medskip
+
+
+\hbox to \hsize{\hskip2truecm\hrulefill\hskip2truecm}
+{\bf 3. feladat: } Mutassuk meg, hogy az
+$$S = \left\{ x \in \mathbb{Q} \left| x = {3k+4 \over 5k+2}, k = 1,2, \ldots 100 \right. \right\}$$
+halmaznak mind a 100 eleme különbözõ! Rendezzük õket nagyság szerint sorrendbe!
+
+
+\ki{Szabó Magda}{Szabadka}\medskip
+
+{\bf 3. feladat I. megoldása: } Alakítsuk át a törtek alakját! ${3k+4 \over 5k+2} = {3 \over 5} + {{14 \over 5} \over 5k+2}$. Ebbõl az alakból látszik, hogy $k$ növelésével a törtek értéke szigorúan csökken, tehát valóban nem lehet köztük két egyenlõ, a nagyság szerinti rendezés pedig megegyezik a $k$ szerint fordított rendezéssel (növekvõ rendezéshez $k$ szerint csökkenõ, csökkenõhõz $k$ szerint növekvõ rendezés szükséges).
+\medskip
+
+
+\hbox to \hsize{\hskip2truecm\hrulefill\hskip2truecm}
+{\bf 4. feladat: } Az $ABC$ háromszög oldalaira az $AC^2 + BC^2 = 2AB^2$ összefüggés áll fenn. Határozzuk meg a háromszög síkjában azoknak a $P$ pontoknak a halmazát, amelyekre $PA^2 + PB^2 = 2PC^2$ teljesül.
+
+
+\ki{Bencze Mihály}{Brassó}\medskip
+
+{\bf 4. feladat I. megoldása: } Helyezzük el a háromszöget egy olyan koordinátarendszerben, amelynek $x$ tengelye az $AB$ egyenes, origója $AB$ felezõpontja. Ekkor a csúcspontok koordinátái a következõk lesznek: $A(a;0), \ B(-a;0), \ C(c_1; c_2)$, ahol $c_1$ és $c_2$ egyelõre közelebbrõl meg nem határozott valós számok. A feladat feltétele a $P(x;y)$ pontra
+$$(x-a)^2 + y^2 + (x+a)^2 + y^2 = 2\left( (x-c_1)^2 + (y-c_2)^2 \right)$$
+A mûveleteket elvégezve és átrendezve az egyenlõtlenséget azt kapjuk:
+$$c_1x + c_2y = {1 \over 2} (c_1^2 + c_2^2 - a^2)$$
+Az $ABC$ háromszögre a feladat a következõt állítja:
+$$(c_1-a)^2 + c_2^2 + (c_1+a)^2 + c_2^2 = 2(2a)^2$$
+Átrendezve $c_1^2 + c_2^2 = 3a^2.$
+Ezt az elõbb kapott egyenletbe behelyettesítve $c_1x + c_2y = a^2$. Ez egy egyenes, melynek minden pontja megfelel a feladat feltételeinek (mások pedig a gondolatmenet szerint biztosan nem), így ez lesz a keresett mértani hely. Az egyenlet alaposabb vizsgálatával látható, hogy az egyenes átmegy a háromszög súlypontján (a súlypont koordinátáira érvényes az egyenlõség), továbbá, hogy merõleges a súlyvonalra, hisz meredeksége $-{c_1 \over c_2}$, míg az origóból kiinduló, a $C(c_1;c_2)$-n áthaladó súlyvonalé ${c_2 \over c_1}$. Ezzel pedig az egyenes geometriai értelemben is teljesen meg van határozva, a mértani helyet megkaptuk, a feladatot megoldottuk.
+\medskip
+
+
+\hbox to \hsize{\hskip2truecm\hrulefill\hskip2truecm}
+{\bf 5. feladat: } Igazoljuk, hogy $2^{1994}$-nek van olyan többszöröse, amelynek tízes számrendszerbeli alakja csak az 1-es és 2-es számjegyeket tartalmazza!
+
+
+\ki{Katz Sándor}{Bonyhád}\medskip
+
+{\bf 5. feladat I. megoldása: } Teljes indukcióval belátjuk, hogy $2^n$-nek mindig van olyan $n$-jegyû többszöröse, amely csak 1-esekbõl és 2-esekbõl áll.
+$n = 1$-re, 2-re, 3-ra igaz az állítás, a megfelelõ többszörösök 2, 12 és 112 lehetnek például.
+Most pedig hajtsuk végre az indukciós lépést!
+
+Ha $2^{n+1}|A_n$, akkor $A_{n+1} = 2 \cdot 10^{n} +A_n$ megfelelõ lesz, hiszen $2^{n+1}|2 \cdot 10^n$, és így $2^{n+1}|A_{n+1}$, továbbá nyilvánvaló, hogy $A_{n+1}$ is csak az 1-es és 2-es számjegyeket tartalmazza, és $n+1$-jegyû, ami azt jelenti, hogy az indukciós lépés ebben az esetben végrehajtható.
+
+Ha $2^{n+1} \not | A_n$, akkor $A_n$ maradéka $2^{n+1}$-gyel osztva csak $2^n$ lehet, mivel $A_n$ osztható $2^n$-nel, tehát a maradéka is, ilyen maradék pedig a 0-n kívül csak a $2^n$ van. Ez azt jelenti, hogy $10^n + A_n$. megfelelõ lesz $A_{n+1}$-nek, hiszen $n+1$-jegyû, csak 1-es vagy 2-es számjegyei vannak, és mivel a jobb oldal mindkét tagjának $2^n$ a $2^{n+1}$-es maradéka, azért összegük osztható $2^{n+1}$-gyel.
+\medskip
+
+
+\hbox to \hsize{\hskip2truecm\hrulefill\hskip2truecm}
+{\bf 6. feladat: } A sík 6 különbözõ pontjában olyan fényszórók vannak elhelyezve, amelyeknek fénynyalábjai $60^{\circ}$-os szöget alkotnak. El lehet-e forgatni a fényszórókat úgy, hogy bevilágítsák az egész síkot?
+
+
+\ki{Gecse Frigyes}{Ungvár}\medskip
+
+{\bf 6. feladat I. megoldása: } A hat fényszóró legfeljebb 15 egyenest határoz meg. Vegyünk egy olyan $e_0$ egyenest, amely egyikükkel sem párhuzamos, és valamennyi fényszóró az egyik partjára esik. Kezdjük el ezt az egyenest önmagával párhuzamosan eltolni, amíg 3-3 fényszóró nem lesz mindkét partján. Ez egyszer biztosan megtörténik, hiszen egyszerre mindig csak egy pont kerülhet át az egyik partról a másikra (ha kettõ kerülne át egyszerre, akkor $e_0$ párhuzamos lett volna az általuk meghatározott egyenessel). Jelöljük a kapott egyenest $e$-vel! Az általánosság megszorítása nélkül feltehetjük, hogy az $e$ egyenes egyik partján a három fényszóró ($A_1$, $A_2$, $A_3$) $e$-re vett merõleges vetületei ebben a sorrendben követik egymást (könnyen kereshetünk olyan $e$ egyenest is, hogy ezek a vetületek ne essenek egybe, csak az kell, hogy $e_0$ ne legyen merõleges a fényszórók által meghatározott egyenesekre). Ekkor húzzunk egy $t_1$ egyenest $A_1$-en, és egy $t_2$-t $A_2$-n keresztül úgy, hogy azok $e$-vel $60^{\circ}$-os szöget zárjanak be. Ha a két fényszórót úgy forgatjuk el, hogy hogy a fénynyaláb egyik szára az egyenesekre essen, a másik pedig párhuzamos legyen $e$-vel (a $t_1$ és $t_2$ által meghatározott szög, $\phi$ belseje felé mutasson), akkor az $e$ másik partján lévõ félsíkból csak a $\phi$ szögbe esõ terület marad sötét. Ez viszont bevilágítható $A_2$-vel, ha úgy forgatjuk el, hogy a fénynyaláb szárai párhuzamosak legyenek $t_1$-gyel és $t_2$-vel. Ha $A_2$ nem esik a $t_1$ és $t_2$ által meghatározott azon szögtartományba, amelybe $A_1$ és $A_2$, akkor valamelyik egyeneshez képest ellenkezõ oldalon van, mint az a fénynyaláb, amelyet az egyenesen fekvõ fényszóró kibocsát (ne engedjük meg, hogy ráessen az egyenesre, az $e$ egyenest nyilván olyanra is választhatjuk, hogy ne zárjon be $60^{\circ}$-os szöget semelyik két fényszóró egyenesével. Legyen ez a fényszóró az egyszerûség kedvéért $A_3$! Ekkor toljuk el a $t_2$-t önmagával párhuzamosan úgy, hogy átmenjen $A_2$-n! A kapott egyenes ugyanúgy $60^{\circ}$-os szöget fog bezárni $t_1$-gyel, azonban $A_3$ már a két egyenes által meghatározott  szögtartományba fog esni, tehát $A_3$-ból bevilágítható a két kapott egyenes által kijelölt szögtartomány.
+
+Ez azt jelenti, hogy a három fényszóróval mindig bevilágítható az $e$ egyenes másik partján fekvõ félsík, a másik 3-mal pedig nyilván az $e$ egyenes ezen partja, tehát a 6 fényszóróval be tudjuk világítani az egész síkot.
+
+\centerline{\includegraphics{figures/1994-11-6}}
+\medskip
+
+\vfill
+\end{document}
