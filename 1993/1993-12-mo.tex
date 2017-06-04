@@ -1,0 +1,111 @@
+\documentclass[a4paper,10pt]{article} 
+\usepackage[latin2]{inputenc}
+\usepackage{graphicx}
+\usepackage{amssymb}
+\voffset - 20pt
+\hoffset - 35pt
+\textwidth 450pt
+\textheight 650pt 
+\frenchspacing 
+
+\pagestyle{empty}
+\def\ki#1#2{\hfill {\it #1 (#2)}\medskip}
+
+\def\tg{\, \hbox{tg} \,}
+\def\ctg{\, \hbox{ctg} \,}
+\def\arctg{\, \hbox{arctg} \,}
+\def\arcctg{\, \hbox{arcctg} \,}
+
+\begin{document}
+\begin{center} \Large {\em II. Nemzetközi Magyar Matematika Verseny} \end{center}
+\begin{center} \large{\em Vác, 1993. ápr. 4-7.} \end{center}
+\smallskip
+\begin{center} \large{\bf 12. osztály} \end{center}
+\bigskip 
+
+{\bf 1. feladat: } Mely $n$ értékre igaz a következõ állítás: Bármely $n$ oldalú, önmagát nem metszõ sokszögnek van olyan belsõ pontja, amelybõl kerületének minden pontja látszik. (Ha $A$ a sokszög kerületének egy pontja, $P$ pedig a sokszög belsõ pontja, az $A$ pont akkor látszik $P$-bõl, ha az $AP$ szakasz minden pontja, az $A$ pont kivételével, a sokszög belsejében van.)
+
+
+\ki{Bogdán Zoltán}{Cegléd}\medskip
+
+{\bf 1. feladat I. megoldása: } Konvex sokszögre az állítás nyilvánvalóan igaz, és általában is, pontosan akkor van megfelelõ $P$ belsõ pont, ha a sokszög felosztható (akár egymást átfedõen) olyan konvex sokszögekre, amelyeknek van közös része, ebben helyezkedik el a pont, ahonnan így minden konvex sokszög kerületét, tehát az eredeti sokszög kerületét is látni.
+$n = 3$ esetén az állítás nyilvánvalóan igaz. $n = 4$-re, ha nem konvex a négyszög, akkor a konkáv szög szárait meghosszabbítva megfelelõ felosztáshoz jutunk. $n = 5$ esetén hasonlóképp a (szükségképpen egyetlen) konkáv szög szárai megfelelõ felosztást szolgáltatnak. $n = 6$ esetén azonban már viszonylag könnyen található olyan sokszög, amely nem felel meg a feltételeknek, egy ilyen látható az ábrán.
+\medskip
+
+
+\hbox to \hsize{\hskip2truecm\hrulefill\hskip2truecm}
+{\bf 2. feladat: } A $K$ kocka élhossza 6 egység. Vágjuk szét a $K$ kockát 216 egységkockára. Hány olyan kocka létezik $K$-ban, amelyet az egységkockák töltenek ki? (Két kockát különbözõnek tekintünk, ha $K$-n belül különbözõ helyet foglalnak el.)
+
+
+\ki{Délvidék}{}\medskip
+
+{\bf 2. feladat I. megoldása: } Helyezzük el a kockát egy koordinátarendszerben, legyen az egyik csúcs az origó, az oldalélek a tengelyek, és adjunk az egységkockáknak a szokásos módon egész koordinátákat, így például az origónak kijelölt csúcs mellett fog elhelyezkedni a $(0,0,0)$ koordinátájú kocka, és az innen kiinduló testátló másik végpontjánál lesz a $(6,6,6)$ koordinátájú.
+Tekintsük minden kérdéses kockából azt az egységkockát, amely koordinátáinak összege minimális (ez lesz az origóhoz legközelebbi egységkocka)! Ennek a helyzete a mérettel együtt egyértelmûen meghatározza az egységkockákból felépített kockát. Amiatt, hogy ez ne lógjon ki $K$-ból, az említett egységkockánk minden egyes méretre egy kockában mozoghat, amelynek oldaléle $6-k+1$, ha a $k$ oldalélû kockákat szeretnénk összeszámolni. Ezen belül minden egyes pozícióhoz tartozik egy $k$ oldalélû kocka, amelyekbõl így $(6-k+1)^3$ darab lesz, ezeket a számokat kell összegezni $k$-ra 1-tõl 6-ig, tehát a köbszámokat 1-tõl 6-ig, ami 441 lesz, tehát ennyi kockát kaphatunk $K$-n belül.
+\medskip
+
+
+\hbox to \hsize{\hskip2truecm\hrulefill\hskip2truecm}
+{\bf 3. feladat: } Határozzuk meg a ${\sin \alpha - \sin \beta \over 1 - \sin \alpha \sin \beta}$ kifejezés maximumát és minimumát, ha $\alpha$ és $\beta$ tetszõleges valós szögmérték.
+
+
+\ki{Mészáros József}{Galánta}\medskip
+
+{\bf 3. feladat I. megoldása: } A szinuszfüggvény értékkészlete $[-1; 1]$, tehát $\sin \alpha + 1$ nem negatív, $\sin \beta - 1$ nem pozitív lesz. Ebbõl következõen
+$$( \sin \alpha - 1 )( \sin \beta + 1) \leq 0.$$
+Ezt átrendezve kapjuk:
+$$1 - \sin \beta \geq \sin \alpha - \sin \beta.$$
+Mivel $\alpha$ és $\beta$ szabadon választhatók, vizsgáljuk azt az esetet, mikor $1 - \sin \alpha \sin \beta$ nem 0, egyébként az eredeti tört sem értelmezett.
+$${\sin \alpha - \sin \beta \over 1 - \sin \alpha \sin \beta} \geq 1$$
+
+Hasonlóképpen $(\sin \alpha + 1) \geq 0$ és $(-\sin \beta + 1) \geq 0$, tehát
+$$(\sin \alpha + 1)( - \sin \beta + 1) \geq 0,$$ ebbõl a fentihez hasonló módon
+$${\sin \alpha - \sin \beta \over 1 - \sin \alpha \sin \beta} \geq -1$$
+adódik, 1 és $-1$ lesz tehát a maximum és a minimum, hiszen $\beta = 0$, $\alpha = {\pi \over 2}$ választással a tört értéke 1, $\beta = {\pi \over 2}$, $\alpha = 0$ választással pedig $-1$, tehát mindkét értéket fölveszi.
+\medskip
+
+
+\hbox to \hsize{\hskip2truecm\hrulefill\hskip2truecm}
+{\bf 4. feladat: } Oldjuk meg a valós számok halmazán a következõ egyenletet:
+$$(x^2 + 3x - 4)^3 + (2x^2 - 5x + 3)^3 = (3x^2 - 2x - 1)^3.$$
+
+
+\ki{Mészáros József}{Galánta}\medskip
+
+{\bf 4. feladat I. megoldása: } Vegyük észre, hogy a bal oldalon köbre emelt két kifejezés összege a jobb oldali hatványozás alapja, ezért ha a kifejezéseket rendre $a$, $b$, $c$ betûkkel jelöljük, akkor az egyenlet $$a^3 + b^3 = (a+b)^3$$ alakú, a köbösszegre vonatkozó ismert összefüggés felhasználásával azt jelenti, hogy $3 (a^2b + ab^2) = 0$, tehát $ab(a+b) = 0$. Ez azt jelenti, hogy vagy $a = 0$, vagy $b = 0$, vagy pedig $a+b = c = 0$.
+Ez azt jelenti, hogy a megoldást az $x^2+3x-4$, a $2x^2-5x+3$ és a $3x-2x-1$ másodfokú polinomok gyökei fogják szolgáltatni, amelyek könnyen számolhatók: az 1 mindegyiknek gyöke, a további gyökök pedig $-4$, $-{1 \over 3}$ és ${1 \over 3}$.
+\medskip
+
+
+\hbox to \hsize{\hskip2truecm\hrulefill\hskip2truecm}
+{\bf 5. feladat: } Határozzuk meg azt a valós együtthatós $P(x)$ polinomot, amely eleget tesz a következõ két feltételnek:
+$$a) \ xP(x) = (x-3)P(x+1) \quad \forall x \in \mathbb{R} \qquad b) \ P(4) = -12.$$
+
+
+\ki{Szabó Magda}{Szabadka}\medskip
+
+{\bf 5. feladat I. megoldása: } Nézzük meg elõször, mit mond a feltétel $x = 3$-ra! $3P(x) = 0 \cdot (-12)$. Ez azt jelenti, hogy $P(3) = 0$. Ugyanígy belátható, hogy $P(2) = P(1) = 0$ is igaz lesz. Így $P(x)$-nek 1, 2 és 3 gyökei, vagyis a gyöktényezõk kiemelhetõk:
+$$P(x) = (x-1)(x-2)(x-3) Q(x)$$
+Ha viszont ezt behelyettesítjük az a) jelû egyenletbe, átrendezve azt kapjuk, hogy $$x(x-1)(x-2)(x-3)\left[Q(x) - Q(x+1) \right] = 0$$
+bármely valós $x$-re. A $ \left[Q(x) - Q(x+1) \right] $ kifejezés értéke tehát azonosan 0, ami azt jelenti, hogy a $Q$ függvény konstans, jelöljük ezt a konstans értéket $a$-val! Ismerjük $P(4)$ értékét, behelyettesítve a kapott kifejezésbe:
+$$P(4) = 1 \cdot 2 \cdot 3 \cdot a = -12$$
+, amibõl láthatóan $a = -2$ adódik, azt kaptuk tehát eredményül, hogy a $P(x)$ polinom alakja
+$$-2(x-1)(x-2)(x-3)$$
+\medskip
+
+
+\hbox to \hsize{\hskip2truecm\hrulefill\hskip2truecm}
+{\bf 6. feladat: } Igazoljuk, hogy ha
+$$a_i \in \mathbb{R}^+, \ i = 1,2, \ldots , n (n \in \mathbb{N}^+) \quad \hbox{és} \quad k \in \mathbb{N}^+ \setminus \{1 \},$$
+akkor
+$$\root k \of{a_1 + a_2 + \ldots + a_n} + \root k \of{a_2 + a_3 + \ldots + a_n} + \root k \of{a_{n-1} + a_n} + \root k \of{a_n} \geq \root k \of{a_1 + 2^ka_2 + \ldots + n^ka_n}.$$
+
+
+\ki{Bencze Mihály}{Brassó}\medskip
+
+{\bf 6. feladat I. megoldása: } Oldjuk meg a feladatot a felsõbb matematikában jól ismert Minkowski-egyenlõtlenséggel!
+$$\sum_{i = 1}^{n} \root k \of {\sum_{j+1}^{m} (x_{i,j})^k} \geq \root k \of {\sum_{j=1}^m \left( \sum_{i = 1}^n x_{i,j} \right)}$$
+Válasszuk most $x_{i,j}$-t $\root k \of {a_j}$-nek, ha $i \geq j$ és 0-nak, ha $i < j$. Ekkor éppen a kívánt egyenlõtlenséget kapjuk.
+\medskip
+
+\vfill
+\end{document}

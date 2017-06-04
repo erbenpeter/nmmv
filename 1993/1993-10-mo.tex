@@ -1,0 +1,127 @@
+\documentclass[a4paper,10pt]{article} 
+\usepackage[latin2]{inputenc}
+\usepackage{graphicx}
+\usepackage{amssymb}
+\voffset - 20pt
+\hoffset - 35pt
+\textwidth 450pt
+\textheight 650pt 
+\frenchspacing 
+
+\pagestyle{empty}
+\def\ki#1#2{\hfill {\it #1 (#2)}\medskip}
+
+\def\tg{\, \hbox{tg} \,}
+\def\ctg{\, \hbox{ctg} \,}
+\def\arctg{\, \hbox{arctg} \,}
+\def\arcctg{\, \hbox{arcctg} \,}
+
+\begin{document}
+\begin{center} \Large {\em II. Nemzetközi Magyar Matematika Verseny} \end{center}
+\begin{center} \large{\em Vác, 1993. ápr. 4-7.} \end{center}
+\smallskip
+\begin{center} \large{\bf 10. osztály} \end{center}
+\bigskip 
+
+{\bf 1. feladat: } Az $ABCD$ négyzet $CD$ oldalára, a négyzet külsõ tartományában, megszerkesztjük az $M$-ben derékszögû $DCM$ háromszöget. Bizonyítsuk be, hogy a $DMC \angle$ szögfelezõje a négyzetet két egybevágó részre osztja.
+
+
+\ki{Mészáros József}{Galánta}\medskip
+
+{\bf 1. feladat I. megoldása: } Ha a négyzet egyik oldalára kört emelünk, az átmegy a négyzet középpontján. Ugyanezen a $CD$ átmérõjû körön lesz az $M$ csúcs is Thalész tétele miatt. A $DO$ és $OC$ húrok egyenlõk, így egyenlõk a hozzájuk tartozó ívek, tehát az azokhoz tartozó szögek is: $CMO$ és $OMD$. Ez viszont azt jelenti, hogy az $OM$ egyenes a $CMD$ szög felezõje, amely így átmegy a négyzet középpontján, tehát felezi annak területét.
+\medskip
+
+
+\hbox to \hsize{\hskip2truecm\hrulefill\hskip2truecm}
+{\bf 2. feladat: } Bizonyítsuk be, hogy a
+$$93n^2 - 4n + 5$$
+másodfokú polinom nem írható fel két racionális együtthatójú elsõfokú polinom négyzeteinek különbségeként.
+
+
+\ki{Mészáros József}{Galánta}\medskip
+
+{\bf 2. feladat I. megoldása: } A bizonyítás indirekt: tegyük fel, hogy van két ilyen polinom, legyenek ezek $an+b$ és $cn+d$. Ekkor az eredeti polinomunk felírható négyzeteik különbségeként, azaz
+$$93n^2 - 4n + 5 = (an+b)^2 - (cn+d)^2$$
+Ezt az ismert azonosság szerint átalakítva kapjuk, hogy
+$$93n^2 - 4n + 5 = \left[(a-c)n + b - d \right] \cdot \left[(a+c)n + b + d \right]$$
+Ekkor, mivel a jobb oldali tényezõk elsõfokúak, biztosan van gyökük, tehát a bal oldalnak is lenne, mivel azonban a diszkrimináns $4^2 - 4 \cdot 93 \cdot 5 = -1844$, ami kisebb, mint 0, így nem létezhet megoldás, vagyis a két oldal soha nem lehet azonos, tehát biztosan nincsenek a feladat feltételének megfelelõ polinomok.
+\medskip
+
+
+\hbox to \hsize{\hskip2truecm\hrulefill\hskip2truecm}
+{\bf 3. feladat: } Oldjuk meg a pozitív prímszámok halmazán a következõ egyenletet:
+$$3x^2 + 6x = 2y^2 + 7y.$$
+
+
+\ki{Oláh György}{Révkomárom}\medskip
+
+{\bf 3. feladat I. megoldása: } Az oszthatóság könnyebb vizsgálata érdekében célszerû átrendezni az egyenletet:
+$$3x ( x+2 ) = y ( 2y+7 )$$
+
+Mivel $x$ és $y$ prímszámok, ez azt jelenti, hogy $x|y$ (ekkor $x = y$ ), vagy $x | 2y+7$. Az elsõ esetben nincs értelmes megoldás, az $x(x-1) = 0$ másodfokú egyenletet kapjuk. A második esetben az is igaz lesz, hogy $3x | 2y+7$, mert $3x$ osztja a bal oldalt, és relatív prím $y$-hoz ($y = 3$ könnyen láthatóan nem ad megoldást). Ekkor
+$$3x \leq 2y+7$$
+Továbbá igaz az, hogy $y | (x+2)$ (mivel $3x$-hez relatív prím). Így az iménti egyenlõtlenségbe behelyettesítve és tovább becsülve 
+$$3x \leq 2y+7 \leq 2x+11$$
+-et kapjuk, tehát $x \leq 11$ a megoldás szükséges feltétele.
+Felhasználva az oszthatóságokat, és a nagyságviszonyokat, tekintsük át $x$ lehetséges értékeit!
+
+$x = 2$-re $y$ az $x+2 = 4$ osztója, de $2$ nem lehet, tehát nincs megoldás.
+$x = 3$-ra $y$ az $x+2 = 5$ osztója, tehát csak $5$ lehet, de a $9$ nem osztja a $2 \cdot 5 + 7 = 17$-et.
+$x = 5$-re $y = 7$ az egyetlen lehetõség, de $3 \cdot 5 \not | 2 \cdot 7 + 7$.
+$x = 7$-re $y = 3$, de $3 \cdot 7 \not | 2 \cdot 3 + 7$.
+És végül $x = 11$-re $y = 13$, ez könnyen ellenõrizhetõen megoldás, és a gondolatmenetünk szerint más megoldás nem is létezik.
+\medskip
+
+
+\hbox to \hsize{\hskip2truecm\hrulefill\hskip2truecm}
+{\bf 4. feladat: } Az $ABC$ háromszög súlyvonalai $s_a$, $s_b$, illetve $s_c$. Bizonyítsuk be, hogy a háromszög akkor és csak akkor derékszögû, ha $s_a^2 + s_b^2 = 5s_c^2$.
+
+
+\ki{Neubauer Ferenc}{Munkács}\medskip
+
+{\bf 4. feladat I. megoldása: } Ismert tény, hogy a háromszög egy súlyvonala (pl. $s_a$) a következõ formában írható fel az oldalakkal:
+$$s_a^2 = {2b^2 + 2c^2 - a^2 \over 4}$$
+Ezt behelyettesítve és a nevezõvel felszorozva 
+{\setlength\arraycolsep{2pt}\begin{eqnarray*}
+2b^2 + 2c^2 - a^2 + 2a^2 + 2c^2 - b^2 & = & 5(2a^2 + 2b^2 - c^2) \\[6pt]
+4c^2 + a^2 + b^2 & = &  10a^2 + 10b^2 - 5c^2 \\[6pt]
+9c^2 & = & 9a^2 + 9b^2\\[6pt]
+a^2 + b^2 & = & c^2,
+\end{eqnarray*}}
+ami a Pitagorasz-tétel megfordítás szerint azt jelenti, hogy a háromszögünk derékszögû.
+\medskip
+
+
+\hbox to \hsize{\hskip2truecm\hrulefill\hskip2truecm}
+{\bf 5. feladat: } Bizonyítsuk be, hogy $n > 1$ egész szám esetén
+$$\root 3 \of {n - \sqrt{n}} + \root 3 \of{n + \sqrt{n}}$$
+irracionális szám.
+
+
+\ki{Tar Miklós}{Ungvár}\medskip
+
+{\bf 5. feladat I. megoldása: } Tegyük fel, hogy a szám racionális, ${p \over q}$ alakú. Emeljünk harmadik hatványra és rendezzünk át!
+
+$$n-\sqrt{n} + n + \sqrt{n} + 3 \left(\root 3 \of {(n^2-n) \left(n-\sqrt{n} \right)} + \root 3 \of {(n^2-n) \left(n+\sqrt{n} \right)}\right) = {p^3 \over q^3}$$
+$$3 \root 3 \of {n^2-n} \left( \root 3 \of {n - \sqrt{n}} + \root 3 \of {n + \sqrt{n}} \right) = Q,$$
+ahol $Q$ racionális szám. Mivel feltevésünk szerint a bal oldal második tényezõje is racionális, ezért az elsõ is az, tehát $\root 3 \of {n^2 - n}$ racionális. De mivel a köbe egész szám, ezért ha õ maga racionális, akkor már egész is, ekkor pedig a köbe, $n^2 - n$ egy köbszám. Ez azonban nem lehet, hiszen két szomszédos szám ($n$ és $n-1$) szorzata, ezek nem tartalmaznak közös prímtényezõt, így mindkettõ köbszám, és ez $n > 1$ miatt nem lehetséges. Ellentmondásra jutottunk, tehát a kifejezés értéke nem lehet racionális szám.
+\medskip
+
+
+\hbox to \hsize{\hskip2truecm\hrulefill\hskip2truecm}
+{\bf 6. feladat: } Igazoljuk a következõ azonosságot:
+$$\left[ \sqrt{n} + \sqrt{n+2} + \sqrt{n+4} \right] = \left[ \sqrt{9n+17} \right],$$
+ahol $n \geq 2$ egész szám, és $[a]$ az $a$ szám egészrészét jelöli.
+
+
+\ki{Bencze Mihály}{Brassó}\medskip
+
+{\bf 6. feladat I. megoldása: } Használjuk fel a számtani, mértani és négyzetes közepek közti egyenlõtlenségeket 3 változóra! Legyen a három változónk $\sqrt{n}$, $\sqrt{n+2}$ és $\sqrt{n+4}$. Ekkor az egyenlõtlenség szerint (a mûveleteket elvégezve)
+
+$$3 \root 6 \of {n(n+2)(n+4)} < \sqrt{n} + \sqrt{n+2} \sqrt{n+4} < \sqrt{9n+18}.$$
+
+Igaz továbbá az, hogy $\sqrt{9n+17} < 3 \root 6 \of {n(n+2)(n+4)}$. Ez 11-nél kisebb $n$-ekre számolással, e fölött teljes indukcióval látható be. Ez pedig azt jelenti, hogy $\sqrt{9n+17} < \sqrt{n} + \sqrt{n+2} + \sqrt{n+4}$. Ebbõl pedig az következik, hogy $[\sqrt{9n+17}] = \left[ \sqrt{n} + \sqrt{n+2} + \sqrt{n+4} \right]$
+\medskip
+
+\vfill
+\end{document}

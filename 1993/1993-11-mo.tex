@@ -1,0 +1,118 @@
+\documentclass[a4paper,10pt]{article} 
+\usepackage[latin2]{inputenc}
+\usepackage{graphicx}
+\usepackage{amssymb}
+\voffset - 20pt
+\hoffset - 35pt
+\textwidth 450pt
+\textheight 650pt 
+\frenchspacing 
+
+\pagestyle{empty}
+\def\ki#1#2{\hfill {\it #1 (#2)}\medskip}
+
+\def\tg{\, \hbox{tg} \,}
+\def\ctg{\, \hbox{ctg} \,}
+\def\arctg{\, \hbox{arctg} \,}
+\def\arcctg{\, \hbox{arcctg} \,}
+
+\begin{document}
+\begin{center} \Large {\em II. Nemzetközi Magyar Matematika Verseny} \end{center}
+\begin{center} \large{\em Vác, 1993. ápr. 4-7.} \end{center}
+\smallskip
+\begin{center} \large{\bf 11. osztály} \end{center}
+\bigskip 
+
+{\bf 1. feladat: } Legyen $p_n$ az $n$-edik prímszám, és $N = p_n + p_{n+1} \ (n>1)$. Bizonyítsuk be, hogy $N$ legalább 3, nem feltétlenül különbözõ prímszám szorzata.
+
+
+\ki{Róka Sándor}{Nyíregyháza}\medskip
+
+{\bf 1. feladat I. megoldása: } $p_n$ és $p_{n+1}$ 1-nél nagyobb prímek, tehát páratlanok, ezért $N$ biztosan páros lesz. ${N \over 2}$ a két prím számtani közepe, tehát $p_n < {N \over 2} < p_{n+1}$. Ez azt jelenti, hogy ${N \over 2}$ összetett szám, így legalább két prím szorzata, tehát $N$ legalább 3 prím szorzata.
+\medskip
+
+
+\hbox to \hsize{\hskip2truecm\hrulefill\hskip2truecm}
+{\bf 2. feladat: } A pozitív egész számok sorozatából töröljük az 1-et, továbbá a 2-vel és 3-mal osztható számokat. Így az $5,7,11,13,17, \ldots$ sorozatot kapjuk. Határozzuk meg a sorozat általános tagját.
+
+
+\ki{Szabó Magda}{Szabadka}\medskip
+
+{\bf 2. feladat I. megoldása: } Ha elvégezzük az elõírt mûveletet, akkor a megmaradt számok $6$-os maradéka csak $1$ vagy $-1$ lehet. Természetesen $n=1,2$-re $k = 1$, $n=3,4$-re $k = 2$, és így tovább, általánosan $n = m, m+1$-re $k = {m+1 \over 2}$, általánosan meghatározva is $k = \left[{n+1 \over 2}\right]$. Így a számok általános képlete $6 \left[{n+1 \over 2}\right] + (-1)^n$.
+\medskip
+
+
+\hbox to \hsize{\hskip2truecm\hrulefill\hskip2truecm}
+{\bf 3. feladat: } Az egész számok halmazán oldjuk meg a következõ egyenletet:
+$$x^4 - x^3y - xy^3 + y^4 = 1.$$
+
+
+\ki{Tar Miklós}{Ungvár}\medskip
+
+{\bf 3. feladat I. megoldása: } Alakítsuk át az egyenlet bal oldalát!
+$$x^4 - x^3y - xy^3 + y^4 = x^3(x-y) - y^3(x-y) = (x-y)^2(x^2+xy+y^2)$$
+
+$x$ és $y$ egész számok, ezért minden tényezõ is az, tehát ha a szorzat $1$, akkor mindkét tényezõ abszolútértékének $1$-nek kell lennie, és mivel az elsõ tényezõ nemnegatív, azért $(x-y)^2 = x^2+xy+y^2 = 1$. A két kifejezést egymásból kivonva azt kapjuk, hogy $|3xy| = 0$, tehát $xy = 0$. Ha $x=0$, akkor $y = \pm 1$, ha pedig $y = 0$, akkor $x = \pm 1$. Ezekben az esetekben pedig könnyen ellenõrizhetõ, hogy mindig megoldást kapunk.
+\medskip
+
+
+\hbox to \hsize{\hskip2truecm\hrulefill\hskip2truecm}
+{\bf 4. feladat: } A körbe írt $ABCD$ négyszög $AC$ átlójának a felezõpontja a $BD$ átlón van. Bizonyítsuk be, hogy
+$$AB^2 + BC^2 + CD^2 + DA^2 = 2BD^2.$$
+
+
+\ki{Szabó Magda}{Szabadka}\medskip
+
+{\bf 4. feladat I. megoldása: } Jelöljük $M$-mel $AC$ felezõpontját! A $CDA$ és az $ABC$ háromszög súlyvonalának kiszámítása az ismert képlettel történik:
+{\setlength\arraycolsep{2pt}\begin{eqnarray*}
+4DM^2 & = & 2(AD^2 + DC^2) - AC^2 \\[6pt]
+4DM^2 & = & 2(AB^2 + BC^2) - AC^2
+\end{eqnarray*}}
+Tudjuk még, hogy $BM \cdot MD = AM \cdot MC = {AC^2 \over 4}$. Ezt felhasználva kapjuk, hogy
+{\setlength\arraycolsep{2pt}\begin{eqnarray*}
+AB^2 + BC^2 + CD^2 + DA^2 & = & 2(DM^2 + BM^2) + AC^2 = \\[6pt]
+& = & 2(DM^2 + BM^2) + 2 \cdot 2 \cdot {AC^2 \over 4} = 2(DM+BM)^2 = 2BD^2,
+\end{eqnarray*}} és éppen ezt akartuk bizonyítani, beláttuk a feladat állítását.
+\medskip
+
+
+\hbox to \hsize{\hskip2truecm\hrulefill\hskip2truecm}
+{\bf 5. feladat: } Határozzuk meg azt a legnagyobb $p$ egész számot, amelyre igaz, hogy az $1, \, 2, \, \ldots , \, 99, \, 100$ számok bármely permutációjában van 10 egymást követõ elem, amelyeknek összege legalább $p$.
+
+
+\ki{Urbán János}{Budapest}\medskip
+
+{\bf 5. feladat I. megoldása: } Ha vesszük a következõ permutációt:
+$$100, \ 1, \ 99, \ 2, \ 98, \ 3, \ldots , \ 51, \ 50$$
+Ebben a permutációban az elsõ tíz elem összege 505 Emellett akárhogy veszünk tíz szomszédos számot, ha 50-nél kisebb az elsõ, akkor az elsõ kettõ, a második kettõ , és így tovább, az ötödik kettõ összege is 100 lesz; ha 50-nél nagyobb az elsõ, akkor ugyanezen párok összege mindig 101 lesz. Így tehát akárhogy választunk 10 szomszédos számot, azok összege mindig vagy 500 lesz, vagy pedig 505. Így a feladat által kért $p$ szám legfeljebb 505 lesz, hiszen ha nagyobb lenne, akkor lenne olyan permutáció (éppenséggel ez), amelyben semelyik szomszédos szám-10-es összege nem lesz legalább akkora, mint $p$.
+
+Másrészrõl ha bármely 10 szomszédos szám összege kisebb lesz 505-nél, akkor $a_1$-tõl kezdve tízesével csoportosítva az elemeket, minden csoportban 505-nél kisebb lesz az összeg, ezeknek az összege viszont kiadja az összes szám összegét. Tíz csoport lesz, ez azt jelentené, hogy a számok összege 5050-nél kisebb, azonban 1-tõl $n$-ig az egész számok összege ${n(n+1) \over 2}$, ebben az esetben 5050. Nem lehet tehát, hogy minden csoport összege kisebb legyen 5050-nél, tehát lesz legalább egy, amelyben az összeg legalább 505. Így az 505 megfelelõ $p$ lesz, és mivel nála nagyobb $p$ nem lehet, azért $p = 505$ a feladat megoldása.
+\medskip
+
+
+\hbox to \hsize{\hskip2truecm\hrulefill\hskip2truecm}
+{\bf 6. feladat: } Igazoljuk, hogy bármely $x,y,z$ pozitív számok esetén fennáll az
+$${x+y+z \over 3} - \root 3 \of{xyz} \geq {1 \over 6}\left( (\sqrt{x} - \sqrt{y})^2 + (\sqrt{y} - \sqrt{z})^2 + (\sqrt{z} - \sqrt{x})^2 \right)$$
+egyenlõség. Általánosítsuk a feladatot.
+
+
+\ki{Bencze Mihály}{Brassó}\medskip
+
+{\bf 6. feladat I. megoldása: } Végezzünk ekvivalens átalakításokat!
+
+{\setlength\arraycolsep{2pt}\begin{eqnarray*}
+x+y+z - 3 \root 3 \of {xyz} &\geq& {1 \over 2} \left( \left(\sqrt{x} -\sqrt{y}\right)^2 + \left(\sqrt{y} -\sqrt{z}\right)^2 + \left(\sqrt{z}-\sqrt{x}\right)^2 \right) \\[6pt]
+x+y+z - 3 \root 3 \of {xyz} &\geq& {1 \over 2} \left( 2x^2 + 2y^2 + 2z^2 - 2\sqrt{xy} - 2\sqrt{yz} - 2\sqrt{zx} \right) \\[6pt]
+\sqrt{xy} + \sqrt{yz} + \sqrt{zx} &\geq& \root 3 \of {xyz}
+\end{eqnarray*}}
+Ez pedig láthatóan a számtani és mértani közép közti egyenlõtlenség $\sqrt{xy}$, $\sqrt{yz}$, $\sqrt{zx}$ változókra.
+
+Teljesen analóg módon látható be az állítás $n$ változóra is:
+
+$${x_1+x_2+ \ldots + x_n \over n} - \root n \of {x_1x_2 \ldots x_n} \geq {1 \over 2n} \left( \sum_{i=1}^n \left(\sqrt{x_i} - \sqrt{x_{i+1}} \right) \right)$$
+
+Ahol az $x_i$-k pozitívak, és $x_{n+1} = x_1$.
+\medskip
+
+\vfill
+\end{document}
