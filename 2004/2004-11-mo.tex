@@ -1,0 +1,169 @@
+\documentclass[a4paper,10pt]{article} 
+\usepackage[latin2]{inputenc}
+\usepackage{graphicx}
+\usepackage{amssymb}
+\voffset - 20pt
+\hoffset - 35pt
+\textwidth 450pt
+\textheight 650pt 
+\frenchspacing 
+
+\pagestyle{empty}
+\def\ki#1#2{\hfill {\it #1 (#2)}\medskip}
+
+\def\tg{\, \hbox{tg} \,}
+\def\ctg{\, \hbox{ctg} \,}
+\def\arctg{\, \hbox{arctg} \,}
+\def\arcctg{\, \hbox{arcctg} \,}
+
+\begin{document}
+\begin{center} \Large {\em XIII. Nemzetközi Magyar Matematika Verseny} \end{center}
+\begin{center} \large{\em Nagydobrony, 2004. márc. 15-20.} \end{center}
+\smallskip
+\begin{center} \large{\bf 11. osztály} \end{center}
+\bigskip 
+
+{\bf 1. feladat: } Bizony\'itsa be, hogy $9^{n}-8n-1$ oszthat\'o $64$-gyel, ahol $n$ nemnegat\'iv eg\'esz sz\'am.
+
+
+\ki{Oláh György}{Komárom}\medskip
+
+{\bf 1. feladat I. megoldása: } A bizony\'it\'ast a matematikai indukci\'o m\'odszer\'evel v\'egezz\"uk. $n=1$-re az \'all\'it\'as igaz.
+Tegy\"uk fel, hogy igaz $n=k$-ra, vagyis $9^{k}-8k-1$ oszthat\'o $64$-gyel.
+Bebizony\'itjuk, hogy ebben az esetben igaz $n=\left(k+1\right)$-re is, vagyis $9^{k+1} - 8\left(k+1\right)-1$ is oszthat\'o $64$-gyel.
+$9^{k+1} - 8\left(k+1\right)-1=9\cdot 9^{k}-8k-8-1=9\left(9^{k}-8k-1\right)+64k$.
+Az els\H o \"osszeadand\'o oszthat\'o $64$-gyel az indukci\'os felt\'etelez\'es alapj\'an, a m\'asodik $64$ t\"obbsz\"or\"ose.
+Teh\'at, az \"osszeg is oszthat\'o $64$-gyel, azaz az \'all\'it\'as bizony\'itott.
+
+\medskip
+
+
+\hbox to \hsize{\hskip2truecm\hrulefill\hskip2truecm}
+{\bf 2. feladat: } Igazolja, hogy a k\"ul\"onb\"oz\H o oldal\'u h\'aromsz\"ogben a legkisebb sz\"og cs\'ucs\'ab\'ol h\'uzott sz\"ogfelez\H o a leghosszabb!
+
+
+\ki{Dr. Kántor Sándor}{Debrecen}\medskip
+
+{\bf 2. feladat I. megoldása: } Legyenek $a$, $b$ \'es $c$ a h\'aromsz\"og oldalai, $\alpha$ a h\'aromsz\"og legkisebb sz\"oge (\'ertelemszer\H uen $a$ -- a legkisebb oldala), $l_{a}$ -- e sz\"og cs\'ucs\'ab\'ol h\'uzott sz\"ogfelez\H o.
+Akkor a h\'aromsz\"og ter\"ulet\'enek k\'etszeres\'et k\'etf\'elek\'eppen fel\'irva, kapjuk: $bc\sin \alpha=bl_{a}\sin \frac{\alpha}{2} + cl_{a}\sin \frac{\alpha}{2}$.
+Ebb\H ol $l_{a}=\frac{bc\sin \alpha}{\left(b+c\right)\sin \frac{\alpha}{2}} = \frac{2bc\cos \frac{\alpha}{2}}{b+c}$.
+Ugyan\'igy $l_{b}=\frac{2ac\cos \frac{\beta}{2}}{a+c}$.
+Mivel $\alpha < \beta$ \'es a $\cos$ az els\H o negyedben fogy\'o f\"uggv\'eny, ez\'ert $\cos \frac{\alpha}{2} > \cos \frac{\beta}{2}$.
+Megmutatjuk, hogy $\frac{b}{b+c}>\frac{a}{a+c}$. $$\frac{b}{b+c}-\frac{a}{a+c}=\frac{b\left(a+c\right)-a\left(b+c\right)}{\left(b+c\right)\left(a+c\right)}=\frac{bc-ac}{\left(b+c\right)\left(a+c\right)}=\frac{c\left(b-a\right)}{\left(b+c\right)\left(a+c\right)}>0,$$ ami az el\H obbi \'all\'it\'ast igazolja.
+Teh\'at $l_{a}>l_{b}$.
+Hasonl\'oan kapjuk, hogy $l_{a}>l_{c}$.
+Vagyis $l_{a}$ a leghosszabb sz\"ogfelez\H o.
+\medskip
+
+
+\hbox to \hsize{\hskip2truecm\hrulefill\hskip2truecm}
+{\bf 3. feladat: } Oldja meg a val\'os sz\'amok halmaz\'an az al\'abbi egyenletet:
+$$\sqrt{4x^{2}-4x+2} = \frac{\sqrt{2} - \left(\sqrt{2x-1} -1\right)^{2}}{\sqrt{\frac{1}{2x-1}}}$$
+
+
+
+\ki{Bíró Bálint}{Eger}\medskip
+
+{\bf 3. feladat I. megoldása: } \'Atalak\'itjuk a kiindul\'o egyenletet: $\sqrt{\left(2x-1\right)^{2}+1} = \frac{\sqrt{2} - \left(\sqrt{2x-1} -1\right)^{2}}{\sqrt{\frac{1}{2x-1}}}$.
+Nyilv\'anval\'o, hogy $2x-1>0 \iff x>\frac{1}{2}$.
+Legyen $2x-1=a$.
+Akkor $\sqrt{a^{2}+1} = \frac{\sqrt{2} - \left(\sqrt{a}-1\right)^{2}}{\sqrt{\frac{1}{a}}}$, vagy $\sqrt{a+\frac{1}{a}} = \sqrt{2} - \left(\sqrt{a} - 1\right)^{2}$.
+Mivel $a$ pozit\'iv, ez\'ert $a+\frac{1}{a}\geq 2$ \'es $\sqrt{a+\frac{1}{a}}\geq 2$.
+De akkor $\sqrt{a} - 1=0$ kell legyen, vagyis $a=1$.
+Visszahelyettes\'itve: $2x-1=1$, ahonnan $\textbf{x=1}$, \'es ez val\'oban gy\"oke az egyenletnek. 
+
+\medskip
+
+
+\hbox to \hsize{\hskip2truecm\hrulefill\hskip2truecm}
+{\bf 4. feladat: } Az $ABC$ h\'aromsz\"ogben $AB = 4$~cm, $AC = 8$~cm, $A\angle=120^{\circ}$. Az $F$ pont a h\'aromsz\"og k\"or\'e \'irt k\"or $BAC$ \'iv\'enek felez\H opontja. Mekkora t\'avols\'agra van az $F$ pont a h\'aromsz\"og magass\'againak metsz\'espontj\'at\'ol?
+
+
+
+\ki{Neubauer Ferenc}{Munkács}\medskip
+
+{\bf 4. feladat I. megoldása: } Megh\'uzzuk a h\'aromsz\"og $BM$ \'es $CN$ magass\'agvonalait, melyek metsz\'espontja legyen $H$.
+
+\centerline{\includegraphics{figures/2004-11-4}}
+
+A ker\"uleti sz\"ogek tulajdons\'aga alapj\'an $BOC\angle=180^{\circ}-\frac{1}{2}BAC\angle=120^{\circ}$.
+Ebb\H ol $BOF\angle=COF\angle=60^{\circ}$.
+Ez azt jelenti, hogy $BOF$ \'es $COF$ h\'aromsz\"ogek szab\'alyosak, vagyis $FB = FO = FC$.
+Ebb\H ol viszont az k\"ovetkezik, hogy $F$ -- a $BOC$ h\'aromsz\"og k\"or\'e \'irt k\"or k\"oz\'eppontja.
+
+$MHNA$ n\'egysz\"og -- h\'urn\'egysz\"og, mivel k\'et szemben fekv\H o sz\"oge der\'eksz\"og.
+$MAN$ sz\"og az adott $BAC$ sz\"og cs\'ucssz\"oge, teh\'at szint\'en $120$ fokos.
+Ebb\H ol $BHC$ sz\"og $60$ fokos.
+Ebben az esetben viszont $BHC\angle+COB\angle=180^{\circ}$, ami azt jelenti, hogy $BOCH$ n\'egysz\"og is h\'urn\'egysz\"og, vagyis a $H$ pont rajta van a $BOC$ h\'aromsz\"og k\"or\'e \'irt k\"or\"on.
+Ez\'ert $FH = FO$.
+
+Az $ABC$ h\'aromsz\"ogben a koszinusz-t\'etellel kisz\'am\'itjuk $BC$-t, majd az $R=\frac{a}{2\sin \alpha}$ k\'eplettel a k\"or\'e \'irt k\"or sugar\'at.
+$$BC^{2}=4^{2}+8^{2}-2\cdot 4\cdot 8\cdot \cos 120^{\circ} = 112, \ BC=4\sqrt{7}$$
+A keresett t\'avols\'ag $FO=\frac{4\sqrt{7}}{2\sin 120^{\circ}} = \frac{4\sqrt{7}}{2\cdot \frac{\sqrt{3}}{2}}=\frac{4\sqrt{21}}{3}\approx 6,11$.
+\medskip
+
+
+\hbox to \hsize{\hskip2truecm\hrulefill\hskip2truecm}
+{\bf 5. feladat: } A $P$ \'es $Q$ pontok \'ugy helyezkednek el az $ABC$ h\'aromsz\"og $BC$ oldal\'an, hogy a l\'etrej\"ov\H o szakaszok ar\'anya:  $BP:PQ:QC=1:2:3$. Az $R$ pont a h\'aromsz\"og $AC$ oldal\'at a k\"ovetkez\H ok\'eppen harmadolja: $AR:RC=1:2$. Az $M$ \'es $N$ pontok a $BR$ szakasznak az $AQ$ \'es az $AP$ szakaszokkal val\'o metsz\'espontjait jel\"oli. Hat\'arozza meg a $PQMN$ n\'egysz\"og ter\"ulet\'et, ha az $ABC$ h\'aromsz\"og ter\"ulete \mbox{$24$~cm${}^{2}$}.
+
+
+
+\ki{Dr. Pintér Ferenc}{Nagykanizsa}\medskip
+
+{\bf 5. feladat I. megoldása: } Jel\"olje $F$ az $RC$ felez\H opontj\'at.
+Akkor $QF\parallel BR$; $AR=RE$ \'es $AM=MQ$.
+K\"ozben bebizony\'itottunk egy k\'es\H obb m\'eg egyszer felhaszn\'alhat\'o \'all\'it\'ast: a h\'aromsz\"og egyik harmadol\'o vonala felezi a harmadol\'o ponthoz k\"ozelebb fekv\H o cs\'ucsb\'ol h\'uzott s\'ulyvonalat.
+
+\centerline{\includegraphics{figures/2004-11-5}}
+
+Ha az ABC h\'aromsz\"og ter\"ulet\'et $T$-vel jel\"olj\"uk, akkor a k\"ovetkez\H o egyenl\H os\'egek \'irhat\'ok: 
+{\setlength\arraycolsep{2pt}\begin{eqnarray*}
+T_{AQC} &=& \frac{1}{2}T \\[6pt]
+\ T_{ABM}&=&\frac{1}{2}T_{ABQ}=\frac{1}{2}\cdot \frac{1}{2}T=\frac{1}{4}T \\[6pt]
+T_{BPN}&=&T_{ABP}-T_{ABN}=\frac{1}{6}T-\frac{1}{2}\cdot \frac{1}{4}T=\left(\frac{1}{6}-\frac{1}{8}\right)T=\frac{1}{24}T.
+\end{eqnarray*}}
+Az $ABN$ h\'aromsz\"og ter\"ulet\'enek kisz\'am\'it\'as\'an\'al felhaszn\'altuk a fenti \'all\'it\'ast, miszerint az $ABQ$ h\'aromsz\"og $AP$ harmadol\'o vonala felezi a $BM$ s\'ulyvonalat. V\'eg\"ul, a keresett ter\"ulet:
+$T_{PQMN} = T-T_{AQC}-T_{ABM}-T_{BPN}=T-\frac{1}{2}T-\frac{1}{4}T-\frac{1}{24}T=\frac{5}{24}T=\frac{5}{24}\cdot 24 = 5$~\mbox{(cm${}^{2}$)}
+\medskip
+
+
+\hbox to \hsize{\hskip2truecm\hrulefill\hskip2truecm}
+{\bf 6. feladat: } Bizony\'itsa be, hogy ha az $a$, $b$ \'es $c$ val\'os sz\'amokra teljes\"ul a $0<a<b<c$ felt\'etel, akkor az $\left(a+b+c\right)x^{2}-2\left(ab+bc+ac\right)x+3abc=0$ egyenletnek k\'et k\"ul\"onb\"oz\H o val\'os gy\"oke van, \'es az egyik gy\"ok az $a$ \'es $b$ k\"oz\'e, a m\'asik a $b$ \'es $c$ k\"oz\'e esik.
+
+
+\ki{Dr. Katz Sándor}{Bonyhád}\medskip
+
+{\bf 6. feladat I. megoldása: } Meghat\'arozzuk az $f\left( x\right) =\left( a+b+c\right) x^{2}-2\left( ab+bc+ac\right) x+abc$ f\"uggv\'eny el\H ojel\'et az $a$, $b$ \'es $c$ pontokban: 
+{\setlength\arraycolsep{2pt}\begin{eqnarray*}
+f\left( a\right) &=&\left( a+b+c\right) a^{2}-2\left( ab+bc+ac\right) a+abc = a\left( a^{2}-ab-ac-bc\right) =a\left( a-b\right) \left( a-c\right) > 0 \\
+f\left( b\right) &=&b\left( b-c\right) \left( b-a\right) < 0 \\
+f\left( c\right) &=&c\left( c-a\right) \left( c-b\right) > 0.\end{eqnarray*}}
+Mivel a m\'asodfok\'u f\"uggv\'eny folytonos az eg\'esz sz\'amegyenesen, ebb\H ol k\"ovetkezik, hogy $a$ \'es $b$ k\"oz\"ott, valamint $b$ \'es $c$ k\"oz\"ott felt\'etlen\"ul van egy-egy z\'erushely.
+
+\medskip
+
+
+\hbox to \hsize{\hskip2truecm\hrulefill\hskip2truecm}
+{\bf 7. feladat: } Egy h\'aromsz\"og egyik cs\'ucs\'ab\'ol kiindul\'o magass\'ag, sz\"ogfelez\H o \'es oldalfelez\H o az illet\H o sz\"oget rendre $x$, $y$, $x$, $y$ sz\"ogekre osztja. Igazolja, hogy $\sin^{3}\left(x+y\right)=\sin x\cos y$.
+
+
+\ki{Bencze Mihály}{Brassó}\medskip
+
+{\bf 7. feladat I. megoldása: } Az ABC h\'aromsz\"ogben $B\angle=90^{\circ}-x$; $C\angle=90^{\circ}-\left( x+2y\right)$.
+Alkalmazzuk a szinusz-t\'etelt az $ABF$ \'es $AFC$ h\'aromsz\"ogekben: $\frac{AF}{\sin \left( 90^{\circ}-x\right)} =\frac{BF}{\sin \left( 2x+y\right)}$; $\frac{AF}{\sin \left( 90^{\circ}- x-2y\right)}$.
+Ezekb\H ol figyelembe v\'eve a $BF = CF$ egyenl\H os\'eget, kapjuk: $\frac{AF}{BF}=\frac{\sin \left(90^{\circ} -x\right)}{\sin \left( 2x+y\right)}=\frac{\cos x}{\sin \left( 2x+y\right)}$; $\frac{AF}{CF}=\frac{\sin \left(90^{\circ} -x-2y\right)}{\sin y} = \frac{\cos \left(x+2y\right)}{\sin y}$.
+Vagyis $\frac{\cos x}{\sin \left( 2x+y\right)} = \frac{\cos \left( x+2y\right)}{\sin y}$.
+Ebb\H ol n\'eh\'any \'atalak\'it\'assal, az \"osszegg\'e alak\'it\'as \'es a $\sin 3\alpha=3\sin \alpha -4\sin ^{3}\alpha$ k\'eplet felhaszn\'al\'as\'aval megkapjuk a bizony\'itand\'o \'all\'it\'ast.
+{\setlength\arraycolsep{2pt}\begin{eqnarray*}
+\sin y \cos x&=&\sin \left( 2x+y\right) \cdot \cos \left(x+2y\right) \\
+\sin \left( y-x\right) + \sin \left( y + x\right) &=& \sin \left( 2x+y-\left( x+2y\right) \right) + \sin \left( 2x+y+\left( x+2y\right) \right) \\
+\sin \left( y-x\right) + \sin \left( y + x\right) &=& \sin \left(x-y\right) + \sin \left( 3x+3y\right) \\
+\sin 3\left( x + y\right) &=&2\sin \left( y-x\right) + \sin \left( y+x\right) \\
+3\sin \left( x + y\right) - 4\sin ^{3}\left( x + y\right) &=& 2\sin \left(y-x\right) + \sin \left( y+x\right) \\
+4\sin ^{3}\left( x + y\right) &=&2\sin \left( x + y\right) + 2\sin \left( x - y\right) \\
+\sin ^{3}\left( x + y\right) &=& \sin \frac{x+y+x-y}{2} \cos \frac{x+y-x+y}{2} = \sin x\cos y.\end{eqnarray*}}
+
+\medskip
+
+\vfill
+\end{document}

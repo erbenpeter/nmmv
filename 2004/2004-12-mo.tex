@@ -1,0 +1,187 @@
+\documentclass[a4paper,10pt]{article} 
+\usepackage[latin2]{inputenc}
+\usepackage{graphicx}
+\usepackage{amssymb}
+\voffset - 20pt
+\hoffset - 35pt
+\textwidth 450pt
+\textheight 650pt 
+\frenchspacing 
+
+\pagestyle{empty}
+\def\ki#1#2{\hfill {\it #1 (#2)}\medskip}
+
+\def\tg{\, \hbox{tg} \,}
+\def\ctg{\, \hbox{ctg} \,}
+\def\arctg{\, \hbox{arctg} \,}
+\def\arcctg{\, \hbox{arcctg} \,}
+
+\begin{document}
+\begin{center} \Large {\em XIII. Nemzetközi Magyar Matematika Verseny} \end{center}
+\begin{center} \large{\em Nagydobrony, 2004. márc. 15-20.} \end{center}
+\smallskip
+\begin{center} \large{\bf 12. osztály} \end{center}
+\bigskip 
+
+{\bf 1. feladat: } Mennyi a legkisebb \'ert\'eke az $f\left(x\right)=\log_{x^2-2x+2005} \frac{\sqrt{2004}}{2004}$ f\"uggv\'enynek?
+
+
+\ki{Szabó Magda}{Szabadka}\medskip
+
+{\bf 1. feladat I. megoldása: } A logaritmus alapja $x^2-2x+2005 = \left(x-1\right)^2+2004$, ami $x$ b\'armely \'ert\'ek\'evel $1$-n\'el nagyobb.
+Tov\'abb\'a $\frac{\sqrt{2004}}{2004}<1$.
+A $\left(0;1\right)$ intervallumban az $1$-n\'el nagyobb alap mellett a kisebb alap\'u logaritmusf\"uggv\'eny grafikonja van alacsonyabban. Ez\'ert az adott f\"uggv\'eny \'ert\'eke akkor a legkisebb, ha $\left(x-1\right)^{2}+2004$ a legkisebb, vagyis $x = 1$-re.
+Teh\'at, $\min f\left(x\right)=\log_{2004}\frac{\sqrt{2004}}{2004} = \log_{2004}2004^{-\frac{1}{2}} = -\frac{1}{2}.$
+\'Altal\'anos\'itva, minden val\'os $x$ \'ert\'ekre $f\left(x\right)=\log_{x^2-2x+1+K}\frac{\sqrt{K}}{K}\geq -\frac{1}{2}$.
+
+\medskip
+
+
+\hbox to \hsize{\hskip2truecm\hrulefill\hskip2truecm}
+{\bf 2. feladat: } Oldja meg a k\"ovetkez\H o egyenletet:
+$$4^{\sin x} \cdot 5^{-\sin^{-1} x} + 4^{-\sin x}\cdot 5^{\sin^{-1} x} = \frac{629}{50}$$
+
+
+\ki{Bencze Mihály}{Brassó}\medskip
+
+{\bf 2. feladat I. megoldása: } A $4^{\sin x}\cdot 5^{-\sin^{-1}x}$ kifejez\'es inverze a $4^{-\sin x}\cdot 5^{\sin^{-1}x}$ kifejez\'esnek.
+Ez\'ert $4^{\sin x}\cdot 5^{-\sin^{-1}x}=y$ helyettes\'it\'essel az $y+\frac{1}{y}=\frac{629}{50}$ egyenlethez jutunk, melynek gy\"okei $\frac{2}{50}$ \'es $\frac{25}{2}$.
+Akkor el\H osz\"or: $4^{\sin x}\cdot 5^{-\sin^{-1}x}=\frac{2}{25}$.
+Vessz\"uk mindk\'et oldal $2$-es alap\'u logaritmus\'at:
+{\setlength\arraycolsep{2pt}\begin{eqnarray*}
+\sin x\cdot \log_{2}4-\frac{1}{\sin x}\cdot \log_{2}5&=&\log_{2}2-\log_{2}25 \\[6pt] 2\sin^{2}x+\left(2\log_{2}5-1\right)\sin x-\log_{2}5&=&0 \\[6pt]
+\sin x_{1, 2}&=&\frac{1-2\log_{2}5\pm\left(2\log_{2}5+1\right)}{4}.
+\end{eqnarray*}}
+
+$\sin x_{1}=\frac{1}{2} \iff x_{1}=\left(-1\right)^{k}\frac{\pi}{6} + k\pi, k\in \mathbb{Z}$; $\sin x_{2}=-\log_{2}5<-1$, ez\'ert innen nincs gy\"ok.
+M\'asodszor:
+{\setlength\arraycolsep{2pt}\begin{eqnarray*}
+4^{\sin x}\cdot 5^{-\sin^{-1}x}&=&\frac{25}{2} \\[6pt]
+\sin x\cdot \log_{2}4-\frac{1}{\sin x} \cdot \log_{2}5&=&\log_{2}25-\log_{2}2 \\[6pt]
+2\sin^{2}x-\left(2\log_{2}5-1\right)\sin x - \log_{2}5&=&0\\[6pt]
+\sin x_{1, 2} &=& \frac{2\log_{2}5-1\pm \left(2\log_{2}5+1\right)}{4}.
+\end{eqnarray*}}
+
+$x_{1}=\log_{2}5>1$, ez\'ert ebb\H ol nincs gy\"ok, $\sin x_{2}=-\frac{1}{2}\iff x_{2}=\left(-1\right)^{k+1}\frac{\pi}{6} + k\pi, k\in \mathbb{Z}$.
+Az $x_{1}=x_{2}$ sorok \"osszevonhat\'ok egy k\'epletbe: $\mathbf{\pm\frac{\pi}{6}+n\pi, \ n\in \mathbb{Z}}$.
+
+\medskip
+
+
+\hbox to \hsize{\hskip2truecm\hrulefill\hskip2truecm}
+{\bf 3. feladat: } Egy h\'aromsz\"og oldalai $13$~cm, $14$~cm \'es $15$~cm. Mekkora a t\'avols\'ag a h\'aromsz\"og s\'ulypontja \'es a k\"or\'e \'irt k\"or k\"oz\'eppontja k\"oz\"ott?
+
+
+\ki{Kicska György}{Munkács}\medskip
+
+{\bf 3. feladat I. megoldása: } Legyen az adott  $ABC$  h\'aromsz\"ogben $AB = 13$~cm, $AC = 14$~cm, $BC = 15$~cm. $O$ -- a k\"or\'e \'irt k\"or k\"oz\'eppontja, $S$ -- a h\'aromsz\"og s\'ulypontja, $H$ -- a magass\'agpontja. Ha a h\'aromsz\"oget egy $S$ k\"oz\'eppont\'u \'es $k = ­2$ ar\'any\'u homot\'eci\'aval lek\'epezz\"uk, akkor minden oldal a vele p\'arhuzamos \'es a szemben fekv\H o cs\'ucson \'athalad\'o oldalba k\'epez\H odik le, melynek felez\H opontja az adott h\'aromsz\"og cs\'ucsa lesz. De ekkor az oldalfelez\H o mer\H olegesek $O$ metsz\'espontja a $H$ magass\'agpontba k\'epez\H odik le, mik\"ozben $SH = 2SO$. Kisz\'am\'itjuk a $HO$ t\'avols\'agot, annak harmada lesz a keresett t\'avols\'ag.
+
+\centerline{\includegraphics{figures/2004-12-3}}
+
+A h\'aromsz\"og ter\"ulete Heron k\'eplet\'eb\H ol: $\sqrt{21\cdot 6\cdot 7\cdot 8} = 4\cdot 3 \cdot 7=84$.
+A k\"or\'e \'irt k\"or sugara $R=\frac{13\cdot 14\cdot 15}{4\cdot 84} = \frac{65}{8}$.
+Az $AM$ magass\'ag $\frac{2\cdot 84}{15} = \frac{56}{5}$.
+$AMB$ h\'aromsz\"ogben: $BM=\sqrt{13^{2}-\left(\frac{56}{5}\right)^{2}}=\sqrt{\frac{1089}{25}}=\frac{33}{5}$.
+$OP=FM=\frac{15}{2} - \frac{33}{5} = \frac{9}{10}$.
+
+$OFB$ der\'eksz\"og\H u h\'aromsz\"ogben $$OF = \sqrt{\left(\frac{65}{8}\right)^{2}-\left(\frac{15}{2}\right)^{2}} = \sqrt{\frac{625}{64}} = \frac{25}{8} = PM.$$
+ A homot\'eci\'ab\'ol: $AH = 2OF$, ez\'ert $$HP = AM - AH - PM =\frac{56}{5} - \frac{25}{4} - \frac{25}{8} = \frac{73}{40}.$$
+Most $HPO$ der\'eksz\"og\H u h\'aromsz\"ogb\H ol $HO=\sqrt{\left(\frac{73}{40}\right)^{2} + \left(\frac{9}{10}\right)^{2}} = \sqrt{\frac{6625}{1600}} = \frac{5\sqrt{265}}{40}=\frac{\sqrt{265}}{8}$.
+V\'eg\"ul $\mathbf{SO=\frac{\sqrt{265}}{24}\approx 0,6783}$.
+
+\medskip
+
+
+\hbox to \hsize{\hskip2truecm\hrulefill\hskip2truecm}
+{\bf 4. feladat: } Bizony\'itsa be, hogy egy hegyessz\"og radi\'anm\'ert\'eke kisebb, mint szinusz\'anak \'es tangens\'enek sz\'amtani k\"ozepe.
+
+
+
+\ki{Bogdán Zoltán}{Cegléd}\medskip
+
+{\bf 4. feladat I. megoldása: } Az $O\angle=\alpha$  sz\"ogben $O$ k\"oz\'epponttal egys\'egnyi sugar\'u k\"or\'ivet rajzolunk, \'es a sz\"og sz\'araival keletkezett $A$ \'es $B$ metsz\'espontokba megh\'uzzuk az \'erint\H oket.
+Azok metsz\'espontja legyen $C$, az $A$ ponton \'athalad\'o \'erint\H o \'es a sz\"og $OB$ sz\'ar\'anak metsz\'espontja $D$.
+
+\centerline{\includegraphics{figures/2004-12-4}}
+
+A $BCD$ der\'eksz\"og\H u h\'aromsz\"ogb\H ol $CD>BC=AC$, teh\'at a $BCD$ h\'aromsz\"og ter\"ulete nagyobb, mint az $ABC$ h\'aromsz\"og\'e.
+De $T_{BCD} = T_{OAD} + T_{OACB}$; ugyanakkor $T_{ABC} = T_{OACB} + T_{OAB}$, ez\'ert igaz a k\"ovetkez\H o egyenl\H otlens\'eg: $T_{OAD} - T_{OACB} > T_{OACB} - T_{OAB}$.
+Ebb\H ol $T_{OAD} - T_{OACB} > 2\cdot T_{OACB}$, ami pedig nagyobb az $OAB$ körcikk területének kétszeresénél.
+Az $OAD$ h\'aromsz\"og ter\"ulete $\frac{1}{2}\cdot OA\cdot AD=\frac{\mathrm{tg}\alpha}{2}$, az $OAB$ h\'aromsz\"og\'e $\frac{1}{2}\cdot 1\cdot 1\sin \alpha = \frac{\sin \alpha}{2}$, az $OAB$ k\"orcikk\'e pedig az $\frac{R^{2}}{2}\cdot \alpha$ radi\'anos ter\"uletk\'eplet alapj\'an $\frac{1^{2}}{2}\cdot \alpha=\frac{\alpha}{2}$.
+V\'eg\"ul, ${\mathrm{tg}\alpha \over 2} + \frac{\sin \alpha}{2} > 2\cdot \frac{\alpha}{2}=\alpha$
+\textbf{Az \'all\'it\'as bizony\'itott}.
+
+\medskip
+
+
+\hbox to \hsize{\hskip2truecm\hrulefill\hskip2truecm}
+{\bf 5. feladat: } Igazolja, hogy $\sin 1^{\circ}$, $\cos 1^{\circ}$ \'es $\tg 1^{\circ}$ sz\'amok irracion\'alisak!
+
+
+
+\ki{Gecse Frigyes}{Cegléd}\medskip
+
+{\bf 5. feladat I. megoldása: } A bizony\'it\'as sor\'an t\"obbsz\"or felhaszn\'aljuk majd a k\"ovetkez\H o \'all\'it\'ast:
+A racion\'alis sz\'amok halmaza z\'art a sz\'amtani m\H uveletekre n\'ezve.
+Tegy\"uk fel, hogy a $\sin 1^{\circ}$, $\cos 1^{\circ}$  \'es $\tg 1^{\circ}$  sz\'amok k\"oz\"ul legal\'abb az egyik racion\'alis sz\'am.
+Akkor a $\cos 2\alpha=2\cos ^{2}\alpha -1$; $\cos 2\alpha = 1-2\sin ^{2}\alpha$, $\cos 2\alpha =\frac{1-\tg^{2}\alpha}{1+\tg^{2}\alpha}$ k\'epletekb\H ol k\"ovetkezik, hogy $\cos 2^{\circ}$  szint\'en racion\'alis sz\'am.
+El\H obbi k\'epletek egym\'as ut\'ani tov\'abbi $11$-szeri alkalmaz\'as\'aval kapjuk, hogy $\cos 4^{\circ}$, $\cos 8^{\circ}$, $\cos 16^{\circ}$, \ldots $\cos 4096^{\circ}$ sz\'amok is racion\'alisak, ahol $4096=2^{12}$.
+
+De $$\cos 4096^{\circ}=\cos \left(4096^{\circ} - 360^{\circ}\cdot 11\right)=\cos 136^{\circ}=-\cos 44^{\circ},$$ ami azt jelenti, hogy $\cos 44^{\circ}$ szint\'en racion\'alis.
+Akkor viszont $\cos 88^{\circ}=\sin 2^{\circ}$ is racion\'alis.
+Most a $\sin 2\alpha=2\sin \alpha \cos \alpha$ k\'epletet egym\'as ut\'an $4$-szer alkalmazva azt tal\'aljuk, hogy $\sin 4^{\circ}$, $\sin 8^{\circ}$, $\sin 16^{\circ}$ \'es $\sin 32^{\circ}$ is racion\'alis.
+V\'eg\"ul, egyr\'eszt $\cos 30^{\circ}=\frac{\sqrt{3}}{2}$, ami nyilv\'an irracion\'alis, m\'asr\'eszt $$\cos 30^{\circ}=\cos \left(32^{\circ}-2^{\circ}\right)=\cos 32^{\circ}\cos 2^{\circ} + \sin 32^{\circ}\sin 2^{\circ},$$ami a fentebb bizony\'itottak alapj\'an racion\'alis sz\'am. A kapott ellentmond\'as azt mutatja, hogy feltev\'es\"unk helytelen volt, azaz \textbf{igaz a feladat \'all\'it\'asa}.
+
+\medskip
+
+
+\hbox to \hsize{\hskip2truecm\hrulefill\hskip2truecm}
+{\bf 6. feladat: } Bizony\'itsa be, hogy a h\'aromsz\"ogbe \'irt k\"or $r$ sugar\'ara, a hozz\'a\'irt k\"or\"ok $r_{a}, r_{b}, r_{c}$ sugaraira \'es a h\'aromsz\"og $p$ f\'elker\"ulet\'ere \'erv\'enyes a $\sqrt{r \cdot r_{a}} + \sqrt{r\cdot r_{b}} + \sqrt{r\cdot r_{c}} \leq p$ egyenl\H otlens\'eg. (A h\'aromsz\"og hozz\'a\'irt k\"or\'enek nevezz\"uk a h\'aromsz\"og egyik oldal\'at k\'iv\"ulr\H ol \'erint\H o, \'es a m\'asik k\'et oldal meghosszabb\'it\'as\'at \'erint\H o k\"ort.)
+
+
+
+\ki{Oláh György}{Komárom}\medskip
+
+{\bf 6. feladat I. megoldása: } {\setlength\arraycolsep{2pt}\begin{eqnarray*}
+\sqrt{r\cdot r_{a}} + \sqrt{r\cdot r_{b}} + \sqrt{r\cdot r_{c}} &=& \sqrt{\frac{pr^{2}}{p-a}} + \sqrt{\frac{pr^{2}}{p-b}} + \sqrt{\frac{pr^{2}}{p-c}} \\[6pt]
+&=& \sqrt{\frac{p^{2}r^{2}\left(p-b\right)\left(p-c\right)}{p\left(p-a\right)\left(p-b\right)\left(p-c\right)}} + \sqrt{\frac{p^{2}r^{2}\left(p-a\right)\left(p-c\right)}{p\left(p-a\right)\left(p-b\right)\left(p-c\right)}} + \sqrt{\frac{p^{2}r^{2}\left(p-a\right)\left(p-b\right)}{p\left(p-a\right)\left(p-b\right)\left(p-c\right)}} \\[6pt]
+&=& \sqrt{\left(p-b\right)\left(p-c\right)} + \sqrt{\left(p-a\right)\left(p-c\right)} + \sqrt{\left(p-a\right)\left(p-b\right)}
+\end{eqnarray*}}
+Az ut\'obbi egyszer\H us\'it\'esn\'el a h\'aromsz\"og ismert ter\"uletk\'epleteit alkalmaztuk: $T=pr$ \'es $T=\sqrt{p\left(p-a\right)\left(p-b\right)\left(p-c\right)}$.
+
+\centerline{\includegraphics{figures/2004-12-6}}
+
+V\'eg\"ul alkalmazzuk a $\sqrt{xy}\leq \frac{1}{2}\left(x+y\right)$ k\"ozismert \'all\'it\'ast: $${\setlength\arraycolsep{2pt}\begin{array}{rcl}
+\sqrt{r\cdot r_{a}} + \sqrt{r\cdot r_{b}} + \sqrt{r\cdot r_{c}} &\leq& \frac{1}{2}\left(p-b+p-c\right) + \frac{1}{2}\left(p-a+p-c\right) + \frac{1}{2}\left(p-a+p-b\right)= \\[6pt]
+&=&\frac{1}{2}\left(p-b+p-c+p-a+p-c+p-a+p-b\right)=\frac{1}{2}\left(6p-4p\right) = p.
+\end{array}}$$
+\textbf{Az \'all\'it\'as igazolt.}
+\medskip
+
+
+\hbox to \hsize{\hskip2truecm\hrulefill\hskip2truecm}
+{\bf 7. feladat: } Legyen $a_{n}=\frac{1}{n}\left(\sqrt{1\cdot 2} + \sqrt{2\cdot 3} + \ldots + \sqrt{n\cdot \left(n + 1\right)}\right)$, ahol $n$ null\'at\'ol k\"ul\"onb\"oz\H o term\'eszetes sz\'am. Bizony\'itsa be, hogy $a_{n}$  eg\'eszr\'esze egyenl\H o $\frac{n+1}{2}$ eg\'eszr\'esz\'evel!
+
+
+
+\ki{Kacsó Ferenc}{Marosvásárhely}\medskip
+
+{\bf 7. feladat I. megoldása: } Alkalmazva a $\sqrt{ab}\leq \frac{a+b}{2}$ ismert egyenl\H otlens\'eget, \'es azt, hogy az egyenl\H os\'eg csak $a=b$ esetben \'all fenn, \'ert\'ekelj\"uk az adott kifejez\'est fel\"ulr\H ol:
+{\setlength\arraycolsep{2pt}\begin{eqnarray*}
+a_{n}&<&\frac{1}{n}\left(\frac{1+2}{2} + \frac{2+3}{2} + \ldots + \frac{n+\left(n+1\right)}{2}\right)= \\
+&=&\frac{1}{2n}\left( \left( 1+2+\ldots + n\right) + \left(2 + 3 + \ldots + n + n+1\right) \right)= \\
+&=&\frac{1}{2n}\left(\frac{n\left(n+1\right)}{2}+\frac{n\left(n+3\right)}{2}\right)=\frac{n+2}{2}.\end{eqnarray*}}
+M\'asr\'eszt $a_{n}>\frac{1}{n}\left(1+2+\ldots +n\right) = \frac{n+1}{2}$.
+Teh\'at,
+$$\frac{n+1}{2}<a_{n}<\frac{n+2}{2}.$$
+
+Ha $n=2k$, ahol $k$ null\'at\'ol k\"ul\"onb\"oz\H o term\'eszetes sz\'am, akkor az el\H obbib\H ol k\"ovetkezik, hogy $k+\frac{1}{2}<a_{n}<k+1$, ami azt jelenti, hogy $\left[a_{n}\right]=k$.
+Ugyanakkor $\left[\frac{n+1}{2}\right]=\left[k+\frac{1}{2}\right]=k$, teh\'at, ebben az esetben $\left[a_{n}\right]=\left[\frac{n+1}{2}\right]$.
+Ha $n=2k+1$, ahol $k$ term\'eszetes sz\'am, akkor $k+1<a_{n}<k+1+\frac{1}{2}$, melyb\H ol k\"ovetkezik, hogy $\left[a_{n}\right]=k+1$.
+M\'asr\'eszt, ebben az esetben $\left[\frac{n+1}{2}\right]=\left[k+1\right]=k+1$, ami ism\'et azt jelenti, hogy $\left[a_{n}\right]=\left[\frac{n+1}{2}\right]$.
+\'Igy \textbf{az \'all\'it\'ast igazoltuk}!
+
+\medskip
+
+\vfill
+\end{document}
