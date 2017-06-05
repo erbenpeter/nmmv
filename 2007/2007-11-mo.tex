@@ -1,0 +1,243 @@
+\documentclass[a4paper,10pt]{article} 
+\usepackage[latin2]{inputenc}
+\usepackage{graphicx}
+\usepackage{amssymb}
+\voffset - 20pt
+\hoffset - 35pt
+\textwidth 450pt
+\textheight 650pt 
+\frenchspacing 
+
+\pagestyle{empty}
+\def\ki#1#2{\hfill {\it #1 (#2)}\medskip}
+
+\def\tg{\, \hbox{tg} \,}
+\def\ctg{\, \hbox{ctg} \,}
+\def\arctg{\, \hbox{arctg} \,}
+\def\arcctg{\, \hbox{arcctg} \,}
+
+\begin{document}
+\begin{center} \Large {\em XVI. Nemzetközi Magyar Matematika Verseny} \end{center}
+\begin{center} \large{\em Szeged, 2007. március 14-18.} \end{center}
+\smallskip
+\begin{center} \large{\bf 11. osztály} \end{center}
+\bigskip 
+
+{\bf 1. feladat: } Egy háromszög $a$, $b$ és $c$ hosszúságú oldalaira teljesül
+az
+$${1\over a+b}+{1\over a+c}={3\over a+b+c}$$
+összefüggés. Mekkor az $a$ hosszúságú oldallal szemközti szög?
+
+
+\ki{Bogdán Zoltán}{Cegléd}\medskip
+
+{\bf 1. feladat I. megoldása: } A nevezõkkel szorozva, majd rendezve egyenletünket az
+$$a^2=b^2+c^2-bc$$
+összefüggést kapjuk.
+A koszinusztételbõl
+$a^2=b^2+c^2-2bc\cos\alpha$, ahol $\alpha$ az $a$ hosszúságú 
+oldallal szemközti szög.
+A két összefüggés összevetésébõl
+$\cos\alpha=1/2$, azaz $\alpha=60^o$.
+\medskip
+
+
+\hbox to \hsize{\hskip2truecm\hrulefill\hskip2truecm}
+{\bf 2. feladat: } Egy $ABC$ háromszög köréírt köréhez $A$-ban húzott érintõ
+egyenes legyen $t$.
+Legyen $M$ a $BC$ oldalegyenes és $t$ metszéspontja.
+Határozzuk meg az ${MB\over MC}$ arányt
+$k$ függvényében, ha $k={AB\over AC}$.
+
+
+\ki{Sípos Elvira}{Zenta}\medskip
+
+{\bf 2. feladat I. megoldása: } $BCA\angle=BAM\angle$ hiszen mindkét szög a
+háromszögünk köréírt
+körében
+az $AB$ ívhez tartozó kerületi szög (az egyik érintõ szárú).
+
+\centerline{\includegraphics{figures/2007-11-2}}
+
+Ebbõl következik, hogy az
+$AMB$ háromszög hasonló
+a $CMA$ háromszöghöz.
+Így
+{\setlength\arraycolsep{2pt}\begin{eqnarray*}
+{CM\over MA}&=&{AM\over MB}\\[6pt]
+{MA\over AC}&=&{MB\over BA}.
+\end{eqnarray*}}
+A második egyenlet négyzetét
+az elsõ egyenlettel szorozva kapjuk:
+{\setlength\arraycolsep{2pt}\begin{eqnarray*}
+\left({MA\over AC}
+\right)^2
+{CM\over MA}
+&=&
+\left({MB\over BA}
+\right)^2
+{AM\over MB}
+\\[6pt]
+{MA\cdot CM\over AC^2}
+&=&
+{MB\cdot AM\over BA^2}.
+\end{eqnarray*}}
+Rendezés után adódik, hogy
+${MB\over MC}=k^2$.
+\medskip
+
+
+\hbox to \hsize{\hskip2truecm\hrulefill\hskip2truecm}
+{\bf 3. feladat: } Bizonyítsuk be, hogy bármely $n+2$ darab egész szám 
+közül kiválasztható kettõ, amelyek négyzetének
+különbsége osztható $2n+1$-gyel.
+
+
+\ki{Bencze Mihály}{Brassó}\medskip
+
+{\bf 3. feladat I. megoldása: } Az $a(2n+1)$, $a(2n+1)\pm 1$,
+$a(2n+1)\pm 2$, $a(2n+1)\pm 3$, $\ldots$,
+$a(2n+1)\pm n$ képletek az egész számok
+egy-egy halmazát adják, ha $a$ az egész számokon
+fut keresztül és $\pm$ a két lehetséges elõjel
+bármelyikének választását takarja.
+A $n+1$ képlet olyan, hogy
+minden egész számot
+pontosan egy
+képlet ír le (alkalmas $a$ egész számmal és
+alkalmas
+elõjellel).
+A skatulya-elvbõl $n+2$ egész szám esetén lesz kettõ, amelyeket
+ugyanaz a képlet ír le. Ekkor azonban
+a két szám négyzete ugyanazt a maradékot adja $2n+1$-gyel osztva.
+Másképpen négyzeteik különbsége
+osztható lesz $2n+1$-gyel.
+\medskip
+
+
+\hbox to \hsize{\hskip2truecm\hrulefill\hskip2truecm}
+{\bf 4. feladat: } Hány megoldása van az
+$$x^2+xy+y^2=27$$ 
+egyenletnek
+az egész számok között?
+Hány megoldás van a racionális számok között?
+
+
+\ki{Kovács Béla}{Szatmárnémeti}\medskip
+
+{\bf 4. feladat I. megoldása: } Az egyenletet négyszerezve és rendezve a következõ
+(az eredetivel ekvivalens formához jutunk):
+$$(2x+y)^2 +3y^2=108.$$
+
+Ha az egész számok körében dolgozunk, akkor
+az $N_1+3N_2=108$ formát használhatjuk, 
+ahol $N_1$ és $N_2$ két négyzetszám.
+$N_2$ a $0,1,4,9,16,25,36$ közül kerülhet
+ki.  A lehetõségek végigpróbálása
+az $N_1=81$ és $N_2=9$, illetve $N_1=0$ és $N_2=36$
+megoldásokhoz vezet.
+Az elsõ lehetõségbõl
+a $2x+y=\pm 9$, $y=\pm 3$ (négy darab) egyenletrendszerhez jutunk,
+a második lehetõségbõl
+a $2x+y=0$, $y=\pm6$ (két darab) egyenletrendszerhez jutunk.
+A lineáris egyenletrendszerek megoldása
+a következõ hat egész gyökhöz
+vezet $(x,y):(3,3),(-6,3),(6,-3),(-3,-3),(-3,6),(3,-6)$.
+
+Ha a racionális számok körében dolgozunk, akkor végtelen sok
+gyök lesz.  Ezt a következõképpen indokolhatjuk.  Az $(x,y)$
+gyököket a koordináta-rendszerben ábrázoljuk.  Egy racionális
+gyöknek megfelelõ $(r,r')$ pont a $(3,3)$ ponttal összekötve egy
+racionális ($m$) meredekségû egyenest határoz meg.  Ezen egyenes
+pontjainak koordinátáit az $x=3+t$, $y=3+t\cdot m$ formulákból
+kapjuk, ha $t$ végigfut a valós számok halmazán.  Keressük meg
+ezen egyenes és az $x^2+xy+y^2=27$ egyenlettel leírt megoldáshalmaz
+közös pontjait.
+Helyettesítés után
+a $(3+t)^2+(3+t)(3+t\cdot m)+(3+t\cdot m)^2=27$ egyenletet kapjuk.
+Rendezés után
+$$(9m+9)t+(m^2+m+1)t^2=0$$
+egyenletet kapjuk.
+Ennek egyik megoldása $t=0$, ami az egyenesünk $(3,3)$
+pontjának felel meg. Ami természetesen egyenesünk és a megoldáshalmaz
+általunk választott metszéspontja.
+A másik megoldás $t=-{9m+9\over m^2+m+1}$.
+Ez az $(3-{9m+9\over m^2+m+1},3-{9m^2+9m\over m^2+m+1})$
+pontnak felel meg.
+Minden $m$ racionális számra
+kapunk egy gyököt:
+$x=3-{9m+9\over m^2+m+1}={3m^2-6m-6\over m^2+m+1}$
+és
+$y=3-{9m^2+9m\over m^2+m+1}={-6m^2-6m+3\over m^2+m+1}$.
+\medskip
+
+
+\hbox to \hsize{\hskip2truecm\hrulefill\hskip2truecm}
+{\bf 5. feladat: } Egy háromszög súlyvonalának egyenesét 
+a vele azonos csúcsból ($A$-ból) induló
+szögfelezõ egyenesére tükrözzük.
+Bizonyítsuk be, hogy a tükörkép az $A$-val szemközti oldalt
+az $A$-ban összefutó két oldal négyzetének arányában osztja.
+
+
+\ki{Dr. Kántor Sándor}{Debrecen}\medskip
+
+{\bf 5. feladat I. megoldása: } Legyen a szóbanforgó háromszög $ABC$, ahol
+a jelöléseket úgy választottuk, hogy $ACB \angle
+\leq ABC \angle $ teljesüljön. 
+Az $A$ csúcsból
+induló súlyvonal $AF$, a szögfelezõ $AE$, a tükörkép és $BC$
+metszéspontja $T$.
+
+Az $AB$-vel $F$-en át húzott párhuzamos $AC$-t $G$-ben metszi, az
+$AC$-vel $T$-n át húzott párhuzamos $AB$-t $H$-ban metszi.
+
+\centerline{\includegraphics{figures/2007-11-5}}
+
+Nyilvánvaló, hogy $CFG \triangle \sim CBA \triangle $ és $TBH
+\triangle \sim CBA \triangle $.
+
+Könnyû belátni azt is, hogy $AGF \triangle \sim AHT \triangle $,
+mert az $A$-nál levõ szögeik egyenlõk a szögfelezés és a tükrözés
+miatt; továbbá $AGF \angle = AHT \angle $ a
+párhuzamosak miatt.
+
+Így ${AG\over GF}={AH\over HT}$, amit az $ABC$ háromszög
+oldalainak  szokásos $a, b, c$ jelölésével és a $TB=x$
+jelöléssel felírva:
+$${{b\over 2}\over {c\over 2}}={c-{cx\over a}\over {xb\over a}}.$$
+Ebbõl egyszerû számolással ${a-x\over x}= {b^2\over c^2 }$
+adódik, amit bizonyítani kellett.
+\medskip
+
+
+\hbox to \hsize{\hskip2truecm\hrulefill\hskip2truecm}
+{\bf 6. feladat: } Oldjuk meg a következõ egyenletet a valós
+számok halmazán:
+$$8x^2=2+{1\over \sqrt{1-x^2}}.$$
+
+
+\ki{Árokszállási Tibor}{Paks}\medskip
+
+{\bf 6. feladat I. megoldása: } A jobb oldal csak $|x| < 1$ esetén van értelmezve.
+A $x=\cos\alpha$ helyettesítéssel élünk.
+Egyenletünk új alakja:
+$$8\cos^2\alpha=2+{1\over |\sin\alpha |}.$$
+
+Ha $\sin\alpha > 0$, akkor egyenletünkben elhagyható az 
+abszolútérték jele és rendezés után a következõ alakhoz jutunk:
+$$3\sin\alpha-4\sin^3\alpha={1\over 2}.$$
+A bal oldali kifejezés $\sin 3\alpha$, amibõl
+$3\alpha$ értéke ${\pi\over6}+k\cdot2\pi$
+vagy ${5\pi\over6}+k\cdot2\pi$ valamely $k$ egész számra.
+Ebbõl $x=\cos\alpha$ értékei
+$\cos{\pi\over 18}$, $\cos{5\pi\over 18}$, $\cos{13\pi\over 18}$, 
+$\cos{17\pi\over 18}$ közül kerülnek ki.
+ 
+Ha $\sin\alpha< 0$, akkor egyenletünk
+teljesen hasonlóan kezelhetõ, 
+de új megoldásokat nem kapunk.
+\medskip
+
+\vfill
+\end{document}
