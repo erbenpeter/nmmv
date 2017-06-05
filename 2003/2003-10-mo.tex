@@ -1,0 +1,202 @@
+\documentclass[a4paper,10pt]{article} 
+\usepackage[latin2]{inputenc}
+\usepackage{graphicx}
+\usepackage{amssymb}
+\voffset - 20pt
+\hoffset - 35pt
+\textwidth 450pt
+\textheight 650pt 
+\frenchspacing 
+
+\pagestyle{empty}
+\def\ki#1#2{\hfill {\it #1 (#2)}\medskip}
+
+\def\tg{\, \hbox{tg} \,}
+\def\ctg{\, \hbox{ctg} \,}
+\def\arctg{\, \hbox{arctg} \,}
+\def\arcctg{\, \hbox{arcctg} \,}
+
+\begin{document}
+\begin{center} \Large {\em XII. Nemzetközi Magyar Matematika Verseny} \end{center}
+\begin{center} \large{\em Eger, 2003. ápr. 15-19.} \end{center}
+\smallskip
+\begin{center} \large{\bf 10. osztály} \end{center}
+\bigskip 
+
+{\bf 1. feladat: } Határozzuk meg az $a$ és $b$ egész számokat, amelyekre az $x^2-ax+2a+b^2=0$ egyenlet gyökei közvetlen egymás utáni természetes számok!
+
+
+\ki{Kacsó Ferenc}{Marosvásárhely}\medskip
+
+{\bf 1. feladat I. megoldása: } Ha az egyenlet gyökei $x_1 = n$ és $x_2 = n+1$, ahol $n$ természetes szám, akkor a gyökök és együtthatók összefüggései szerint:
+\begin{eqnarray}
+x_1 + x_2 = 2n+1 = a \\   
+x_1x_2 = n(n+1) = 2a+b^2
+\end{eqnarray}
+
+Kiküszöböljük az $n$-et:
+
+(1)-bõl ${n}={{a-1}\over 2}$, innen pedig (2) alapján ${{a-1}\over 2}{{a+1}\over 2}= 2a+b^2$, azaz $a^2-8a-1 = 4b^2$ illetve
+
+\begin{eqnarray}
+(a-4)^2-4b^2=17
+\end{eqnarray}
+
+Szorzattá alakítva (3) jobb oldalát:
+
+\begin{eqnarray}
+(a-4-2b)(a-4+2b) = 17
+\end{eqnarray}
+
+
+Mivel $a$ és $b$ egész számok, ezért (4) a következõ esetekben teljesülhet:
+\begin{enumerate}
+\renewcommand{\labelenumi}{\alph{enumi})}
+\item{a)} $a-4-2b = 1$ és $a-4+2b = 17$
+\item{b)} $a-4-2b = 17$ és $a-4+2b = 1$
+\item{c)} $a-4-2b = -1$ és $a-4+2b = -17$
+\item{d)} $a-4-2b = -17$ és $a-4+2b = -1$
+\end{enumerate}
+Az a) és b) esetekbõl $a=13$ és $b \pm 4$, a c) és d) esetekbõl pedig $a=-5$ és $b= \pm 4$ következik.
+
+Az $a=13$, $b \pm 4$ esetén az egyenlet a következõ: $x^2-13x+42 = 0$, ennek gyökei $x_1 = 6$, $x_2 = 7$, és ezek valóban egymás utáni természetes számok.
+
+Az $a=-5$, $b= \pm 4$ esetén az egyenlet: $x^2+5x+6 = 0$, amelynek gyökei $x_1 = -3$, $x_2 = -2$. Ezek nem természetes számok, ezért nem felelnek meg a feladat feltételeinek.
+
+A keresett egész számok tehát a $a=13$ és $b= \pm 4$.
+\medskip
+
+
+\hbox to \hsize{\hskip2truecm\hrulefill\hskip2truecm}
+{\bf 2. feladat: } Az $AB$ és $CD$ egy $O$ középpontú körnek két, egymásra merõleges átmérõje. Az $OD$ szakaszt felezõ $E$ ponton halad át az $AF$ húr, az $AB$ és $CF$ szakaszok metszéspontja $G$. Bizonyítsuk be, hogy
+$$\begin{array}{l}
+OB = 3 \cdot OG \\[6pt]
+CF = 3 \cdot DF.
+\end{array}
+$$
+
+
+
+\ki{Pintér Ferenc}{Nagykanizsa}\medskip
+
+{\bf 2. feladat I. megoldása: } a./ Jelölje a kör sugarát $r$!
+
+\centerline{\includegraphics{figures/2003-10-2}}
+
+Az $AOE\triangle$ hasonló az $AFB\triangle$-höz mert két-két megfelelõ szögük egyenlõ ($AFB \angle$ a Thalesz-tétel miatt derékszög). Ugyanakkor $BFC \angle = CFA \angle = AFD \angle$ (azonos hosszúságú ívekhez tartozó kerületi szögek), ezért $GF$ szögfelezõ az $AFB\triangle$-ben, tehát
+$${{AG}\over{GB}}={{AF}\over{BF}}={2 \over 1},$$
+amibõl
+$$OG = r - {2 \over 3}r = {1 \over 3}r = {1 \over 3}OB,$$
+azaz $OB = 3 \cdot OG$ adódik.
+
+b./ Mivel $DE = {1 \over 2}r$ és $CE = {3 \over 2}r$, ezért ha figyelembe vesszük, hogy $EF$ szögfelezõ a $CFD\triangle$-ben, akkor ${DF \over CF}={DE \over CE}={1 \over 3}$, azaz $CF = 3 \cdot DF$, és ezzel a feladat mindkét állítását bebizonyítottuk.
+\medskip
+
+
+\hbox to \hsize{\hskip2truecm\hrulefill\hskip2truecm}
+{\bf 3. feladat: } Bizonyítsuk be, hogy $3^{2000}+4$ szám pozitív osztóinak száma összetett szám!
+
+
+\ki{Erdõs Gábor}{Nagykanizsa}\medskip
+
+{\bf 3. feladat I. megoldása: } Elõször lássuk be, hogy a $3^{2000}+4$ szám összetett szám!
+
+Tudjuk, hogy a 3 hatványainak utolsó számjegyei 4-esével periodikusan ismétlõdnek, ezért a $3^{2000}$ szám 1-re vagyis $3^{2000}+4$ szám 5-re végzõdik. A szám osztható 5-tel és nagyobb 5-nél, tehát összetett szám.
+Osztóinak száma ezért 2-nél több.
+
+Most lássuk be, hogy a $3^{2000}+4$ szám nem lehet négyzetszám!
+
+Alkalmazzunk indirekt bizonyítást!
+Tegyük fel, hogy van olyan $a$ egész szám, amelyre
+$$3^{2000}+4 = a^2$$
+Ekkor
+$$3^{2000} = a^2 -4 = (a-2) \cdot (a+2).$$
+A jobb oldali szorzat mindkét tényezõje a 3 hatványa, ami viszont nem lehetséges, mivel különbségük 4. Beláttuk tehát, hogy a $3^{2000}+4$ szám nem lehet négyzetszám, akkor viszont páros sok pozitív osztója van.
+
+A $3^{2000}+4$ pozitív osztóinak száma tehát 2-nél nagyobb és páros vagyis a pozitív osztók száma összetett szám.
+\medskip
+
+
+\hbox to \hsize{\hskip2truecm\hrulefill\hskip2truecm}
+{\bf 4. feladat: } Az $a_1,a_2, \dots , a_{16}$ sorozat bármely három szomszédos tagjának összege 5, 6, 7 vagy 8. Hány különbözõ értéke lehet az $a_{16} - a_7$ különbségnek?
+
+
+\ki{Szabó Magda}{Szabadka}\medskip
+
+{\bf 4. feladat I. megoldása: } Legyen
+
+$${\setlength\arraycolsep{2pt}\begin{array}{rcl}
+S_1 &=& a_1 + a_2 + a_3 \\[6pt]
+S_2 &=& a_2 + a_3 + a_4 \\[6pt]
+& \vdots & \\[6pt]
+S_{14} &=& a_{14} + a_{15} + a_{16}.
+\end{array}}$$
+
+Ebbõl a konstrukcióból következik, hogy $S_{14} - S_{13} = a_{16} - a_{13}$ és $S_{11} - S_{10} = a_{13} - a_{10}$, végül $S_{8} - S_{7} = a_{10} - a_{7}$.
+
+Eszerint:
+$$a_{16} - a_{7} = S_{14} + S_{11} + S_{8} - S_{7} - S_{10} - S_{13}.$$
+
+Mivel $S_i$ az 5, 6, 7, 8 számok bármelyike lehet ($i = 1, 2,3, \dots , 14$), ezért az $a_{16}-a_7$ különbség értéke a $-9$-tõl a $+9$-ig bármelyik egész számot felveheti, azaz 19 különbözõ érték lehetséges.
+\medskip
+
+
+\hbox to \hsize{\hskip2truecm\hrulefill\hskip2truecm}
+{\bf 5. feladat: } Melyek azok a szabályos sokszögek, amelyek hézag és átfedés nélkül összerakhatók más ugyanolyan oldalhosszúságú szabályos sokszögekbõl?
+
+
+\ki{Bogdán Zoltán}{Cegléd}\medskip
+
+{\bf 5. feladat I. megoldása: } A szabályos sokszög egy szöge kisebb $180^\circ$-nál, de $60^\circ$-nál nem kisebb, ezért egy csúcsánál lévõ szögét pontosan két lefedõ sokszög egy-egy szögének összege tölti ki. Az egyik lefedõ sokszög csak háromszög lehet, mert már két négyzetbeli szög összege $2 \cdot 90^\circ = 180^\circ$ lesz. Mivel a szabályos hatszög egy szöge $120^\circ$-os, a másik lefedõ sokszög oldalszáma 6-nál kisebb, hiszen $120^\circ+60^\circ = 180^\circ$. Ezért három eset lehetséges:
+
+a) A szabályos sokszög egy csúcsánál két szabályos háromszög találkozik. A sokszög egy szöge tehát  $120^\circ$, és az így lehetséges szabályos hatszög 6, ugyanolyan oldalhosszúságú szabályos háromszög lefedi.
+
+\centerline{\includegraphics{figures/2003-10-5A}}
+
+b) A csúcsnál lévõ szögtartományra egy $60^\circ$ és egy $90^\circ$-os szög illeszkedik. A sokszög egy szöge tehát $60^\circ + 90^\circ = 150^\circ$. A szögösszegre vonatkozó képletbõl: ${{(n-2) \cdot 180^\circ} \over n} = 150^\circ \Longrightarrow n=12$. Ez megvalósítható 6 szabályos háromszögbõl, 6 négyzetbõl és egy szabályos hatszögbõl összeillesztett szabályos 12-szöggel.
+A belsõ sokszög szabályos hatszög volta könnyen bizonyítható.
+
+\centerline{\includegraphics{figures/2003-10-5B}}
+
+c) Egy csúcsnál lévõ szögtartományt egy szabályos háromszög és egy szabályos ötszög egy-egy szöge fedi le. Így a létrehozandó sokszög belsejében lenne olyan pont, amelynél egy szögtartományt $84^\circ$-os szögû sokszögnek kellene lefedni, tehát most nincs megoldás, hiszen az ${{(n-2) \cdot 180^\circ} \over n} = 84^\circ$ egyenlet megoldása nem lehet egész szám.
+\medskip
+
+
+\hbox to \hsize{\hskip2truecm\hrulefill\hskip2truecm}
+{\bf 6. feladat: } Igazoljuk, ha $p$ pozitív prímszám, akkor
+$$\sqrt{p \cdot (p+1)} + \sqrt{(p+1) \cdot (p+3)} + \sqrt{p \cdot (p+5)} + \sqrt{(p+3) \cdot (p+5)}$$
+irracionális szám!
+
+
+\ki{Bencze Mihály}{Brassó}\medskip
+
+{\bf 6. feladat I. megoldása: } Legyen
+$x=\sqrt{p \cdot (p+1)} + \sqrt{(p+1) \cdot (p+3)} + \sqrt{p \cdot (p+5)} + \sqrt{(p+3) \cdot (p+5)}$!
+
+Ha $p = 2$, akkor $x = \sqrt{6} + \sqrt{15} + \sqrt{14}+\sqrt{35}$, vagy más alakban $x = (\sqrt2 + \sqrt5) \cdot (\sqrt3 + \sqrt7)$.
+Könnyen bizonyítható, hogy ekkor $x$ irracionális szám.
+
+Ha $p = 3$, akkor $x = \sqrt{12} + \sqrt{24} + \sqrt{24}+\sqrt{48}$, illetve szorzat alakban $x = \sqrt12 \cdot (3+2 \cdot \sqrt2)$. Errõl a számról ugyancsak könnyen belátható, hogy irracionális.
+
+Végül $p=5$ esetén $x = \sqrt{30} + \sqrt{48} + \sqrt{50}+\sqrt{80}$, vagy másként $x = (\sqrt5 + \sqrt8) \cdot (\sqrt6 + \sqrt{10})$, amely szintén irracionális.
+
+Legyen ezután $p > 5$ és tételezzük fel, hogy $x$ racionális. Ekkor:
+$${12 \over x} = {12 \over {(\sqrt{p+5} + \sqrt{p+1}) \cdot (\sqrt{p+3} + \sqrt{p})}} = {(\sqrt{p+5} - \sqrt{p+1}) \cdot (\sqrt{p+3} - \sqrt{p})}$$
+és így
+$${12 \over x} = {\sqrt{(p+3) \cdot (p+5)} - \sqrt{(p+1) \cdot (p+3)} - \sqrt{p \cdot (p+5)}- \sqrt{p \cdot (p+1)}}$$
+is racionális szám.
+
+Képezzük az $x+{12 \over x}$ számot!
+$$x+{12 \over x} = 2 \cdot (\sqrt{(p+3) \cdot (p+5)} + \sqrt{p(p+1)}).$$
+Ezért
+$${1 \over 4} \cdot \left(x+{12 \over x}\right)^2 = (p+3) \cdot (p+5) + p \cdot (p+1) + 2 \cdot \sqrt{p \cdot (p+1) \cdot (p+3) \cdot (p+5)}.$$
+
+A kapott egyenlõség bal oldala nyilvánvalóan racionális szám, ha $x$ az. A jobb oldal tényezói közül a $\sqrt{p \cdot (p+1) \cdot (p+3) \cdot (p+5)}$ kifejezés viszont irracionális, mert ellenkezõ esetben $p \cdot (p+1) \cdot (p+3) \cdot (p+5)$-nek négyzetszámnak kellene lennie, ez azonban csak úgy volna lehetséges, ha $p$ osztója volna $p+1$-nek, $p+3$-nak vagy $p+5$-nek. De ez $p > 5$ esetén nem valósulhat meg, mivel akkor $p$ osztója volna 1-nek, 3-nak, vagy 5-nek.
+Ellentmondásra jutottunk, ezzel beláttuk, hogy az $x$ kifejezés minden $p$ pozitív prímszámra irracionális szám.
+\newline
+
+{\em Megjegyzés}: a $p=2$-höz és a $p=5$-höz tartozó esetek bizonyítása a $p > 5$-nél követett gondolatmenettel is történhet, a $p=3$-nak megfelelõ $x$ szám esetén pedig (feltételezve, hogy $x$ racionális) négyzetre emelés után láthatjuk be, hogy $x^2$ nem lehet racionális, és így jutunk ellentmondásra.
+\medskip
+
+\vfill
+\end{document}

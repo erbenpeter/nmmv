@@ -1,0 +1,181 @@
+\documentclass[a4paper,10pt]{article} 
+\usepackage[latin2]{inputenc}
+\usepackage{graphicx}
+\usepackage{amssymb}
+\voffset - 20pt
+\hoffset - 35pt
+\textwidth 450pt
+\textheight 650pt 
+\frenchspacing 
+
+\pagestyle{empty}
+\def\ki#1#2{\hfill {\it #1 (#2)}\medskip}
+
+\def\tg{\, \hbox{tg} \,}
+\def\ctg{\, \hbox{ctg} \,}
+\def\arctg{\, \hbox{arctg} \,}
+\def\arcctg{\, \hbox{arcctg} \,}
+
+\begin{document}
+\begin{center} \Large {\em XII. Nemzetközi Magyar Matematika Verseny} \end{center}
+\begin{center} \large{\em Eger, 2003. ápr. 15-19.} \end{center}
+\smallskip
+\begin{center} \large{\bf 11. osztály} \end{center}
+\bigskip 
+
+{\bf 1. feladat: } Bizonyítsuk be, hogy a $23, 203, 2003, 20003 \dots$ sorozatban végtelen sok 7-tel osztható szám van!
+
+
+\ki{Benedek Ilona}{Budapest}\medskip
+
+{\bf 1. feladat I. megoldása: } Könnyen látható, hogy 203 osztható 7-tel.
+
+Tekintsük a $2000...03$ számot! Ez felírható $(203-3) \cdot 10^n -3$ alakban, és ebben a számban a 0-ák száma $n+1$ ($n$ természetes szám).
+
+Ezzel:
+$$(203-3) \cdot 10^n +3 = 203 \cdot 10^n - 3 \cdot (10^n -1).$$
+
+Azt kell megvizsgálni, hogy a $10^n-1$ milyen $n$-ekre osztható 7-tel.
+
+Megmutatjuk, hogy $n=6k$ megfelelõ. Ekkor:
+$${\setlength\arraycolsep{2pt}\begin{array}{rcl}
+10^{6k}-1 &=& (10^6)^k-1 = (10^6-1) \cdot (10^{6k-6}+10^{6k-12}+ \dots +1) \\[6pt]
+10^6-1 &=& (10^3-1)\cdot (10^3+1) = (10^3-1) \cdot 1001 = (10^3-1) \cdot 7 \cdot 143.
+\end{array}}
+$$
+
+Ebbõl látható, hogy $10^n-1$ mindig osztható 7-tel, ha $n=6k$, vagyis a sorozat minden olyan tagja osztható 7-tel, amelyben a 0-ák száma $6k+1$, ahol $k$ természetes szám. A sorozat nyilván végtelen sok ilyen számot tartalmaz.
+\medskip
+
+
+\hbox to \hsize{\hskip2truecm\hrulefill\hskip2truecm}
+{\bf 2. feladat: } Milyen tulajdonságú az a háromszög, amelynek két oldala és a harmadik oldalhoz tartozó $f_c$ szögfelezõje között a következõ összefüggés érvényes:
+$$\frac{1}{a}+\frac{1}{b}=\frac{1}{f_c}$$
+
+
+\ki{Pintér Ferenc}{Nagykanizsa}\medskip
+
+{\bf 2. feladat I. megoldása: } A feltételbõl következik, hogy $f_c=\frac{ab}{a+b}$.
+
+\centerline{\includegraphics{figures/2003-11-2}}
+
+Mérjük fel az $AC$ oldal meghosszabbítására a $CE = CB$ szakaszt!
+A $BCE$ háromszög egyenlõ szárú ezért a $BE$ alapon fekvõ szögei a külsõ szög tételébõl adódóan $\gamma \over 2$-vel egyenlõk. Így az $ADC\triangle$ hasonló az $ABE\triangle$-höz, ezért a megfelelõ oldalaik aránya is egyenlõ: $f_c: b=BE:(a+b)$, vagyis $f_c=\frac{BE \cdot b}{a+b}$.
+
+Utóbbi egyenlet és a feltételi egyenlet összehasonlításából adódik, hogy $BE = a$, tehát $BCE\triangle$ szabályos, és így ${1 \over 2}\gamma = 60^\circ$, azaz $\gamma=120^\circ$.
+
+Az $ABC\triangle$-rõl tehát annyit mondhatunk, hogy legnagyobb szöge $120^\circ$-os.
+\medskip
+
+
+\hbox to \hsize{\hskip2truecm\hrulefill\hskip2truecm}
+{\bf 3. feladat: } Oldjuk meg a valós számok halmazán a $\log_3(2^x+5) = \log_2(3^x-5)$ egyenletet!
+
+
+\ki{Orbán Edit}{Zalaegerszeg}\medskip
+
+{\bf 3. feladat I. megoldása: } Vizsgáljuk a következõ két függvényt:
+\begin{center}
+\begin{tabular}{ll}
+$f: \mathbb{R} \rightarrow \left]\log_{3}5;+\infty\right[$ & $f(x)=\log_{3}(2^x+5)$ \\
+$g:\left]\log_{3}5;+\infty\right[ \rightarrow \mathbb{R}$ & $g(x)=\log_{2}(3^x-5)$ \\
+\end{tabular}
+\end{center}
+
+Mivel a két függvény egymás inverze, ezért grafikonjuk az $y=x$ egyenletû egyenesre szimmetrikus, így grafikonjaik csak ezen az egyenesen metszhetik egymást. Ezért az egyenletnek olyan $x$ szám a megoldása, melyre $\log_{3}(2^x+5) = x = \log_{2}(3^x-5)$, vagyis $2^x+5 = 3^x$. Ebbõl a $3^x - 2^x = 5$ egyenletet kapjuk, aminek csak a pozitív számok halmazában lehet gyöke, hiszen $x \le 0$ esetén $3^x \le 2^x$.
+
+Az{ \em $x=2$} nyilván megoldás, több megoldás pedig azért nincs, mert a $3^x-2^x$ függvény a pozitív számok halmazán szigorúan monoton nõ, ezért minden értéket csak egyszer vesz fel.
+\medskip
+
+
+\hbox to \hsize{\hskip2truecm\hrulefill\hskip2truecm}
+{\bf 4. feladat: } Az $ABCD$ parallelogrammában $A$-nál hegyesszög van. Rajzoljunk a $BC$ és $CD$ oldalak, mint átmérõk fölé köröket, és az $A$ pontból húzzunk érintõket ezekhez a körökhöz, az érintési pontok legyenek $E$ és $F$. Bizonyítsuk be, hogy az $AC$, $AE$ és $AF$ szakaszokból derékszögû háromszög szerkeszthetõ!
+
+
+\ki{Balogh János}{Kaposvár}\medskip
+
+{\bf 4. feladat I. megoldása: } Készítsünk a feltételeknek megfelelõ ábrát!
+
+Legyen $P$ és $Q$ a $C$ pontból az $AB$ és $AD$ oldalegyenesekre állított merõlegesek talppontja. A Thalész-tétel miatt $P$ és $Q$ a körökön vannak. A külsõ pontból a körökhöz húzott szelõ-és érintõszakaszok tétele szerint $AE^2 = AB \cdot AP$ és $AF^2 = AD \cdot AQ$, ezért $AE^2 + AF^2 = AB \cdot AP + AD \cdot AQ$.
+
+\centerline{\includegraphics{figures/2003-11-4}}
+
+Ha a paralellogramma $A$-nál levõ szöge $\alpha$, akkor $BP = BC \cdot \cos\alpha$ és $DQ = DC \cdot \cos\alpha$, tehát
+$AP = AB + BP = AB + BC \cdot \cos\alpha$, illetve
+$AQ = AD + DQ = BC +DQ = BC + CD \cdot \cos\alpha = BC+ AB \cdot \cos\alpha$.
+
+Emiatt $AB \cdot AP = AB^2 + AB \cdot BC \cdot \cos\alpha$ és
+$AD \cdot AQ = BC \cdot AQ = BC^2 + AB \cdot BC \cdot \cos\alpha$.
+
+Ebbõl következik, hogy \begin{eqnarray}
+AB \cdot AP + AD \cdot AQ = AB^2 + BC ^2 + 2 \cdot AB \cdot BC \cdot \cos\alpha = AB^2 + BC ^2 - 2 \cdot AB \cdot BC \cdot \cos(180^\circ-\alpha)
+\end{eqnarray}
+
+Az (1) összefüggés viszont nem más, mint az $ABC\triangle$-ben az $AC$ oldalra felírt koszinusztétel, így tehát 
+\begin{equation}
+AE^2+AF^2 = AC^2
+\end{equation}
+
+A Pitagorasz tétel megfordítása miatt (2) éppen azt jelenti, hogy $AC$, $AE$ és $AF$ szakaszokból derékszögû háromszög szerkeszthetõ.
+\medskip
+
+
+\hbox to \hsize{\hskip2truecm\hrulefill\hskip2truecm}
+{\bf 5. feladat: } Melyik az a legkisebb $p$ pozitív prímszám, amelyre az $\frac{x^2-2x-13}{\sqrt{x^2-2x-14}}=2\cdot\sin\frac{\pi\cdot x + p\cdot \pi}{4}$ egyenletnek van olyan pozitív egész megoldása, hogy $x \le p$ teljesül?
+
+
+\ki{Bíró Bálint}{Eger}\medskip
+
+{\bf 5. feladat I. megoldása: } Nyilvánvaló, hogy $x^2-2x-14 > 0$. Az $f(x) = x^2-2x-14$ függvény zérushelyei: $x_1=1-\sqrt{15}$ és $x_2 = 1+\sqrt{15}$. Ebbõl következõen $x<1-\sqrt{15}$, vagy $x>1+\sqrt{15}$. Mivel x egész szám kell, hogy legyen és $1-\sqrt{15} > 1-\sqrt{16}$, illetve $1+\sqrt{15} <1+\sqrt{16}$, azaz $1-\sqrt{15}>-3$ és $1+\sqrt{15}<5$, ezért $x \le -3$ vagy $x \ge 5$, ugyanakkor $x$ pozitív egész, így csak az $x \ge 5$ feltételt vesszük figyelembe.
+
+A kiinduló egyenletet átalakítjuk:
+$$ \frac{x^2-2x-14+1}{\sqrt{x^2-2x-14}}=2\cdot\sin\frac{\pi\cdot x+p\cdot\pi}{4}.$$
+
+Legyen most $\sqrt{x^2-2x-14}=a$! Ekkor $\frac{a^2+1}{a} = 2\cdot\sin\frac{\pi\cdot x+p\cdot\pi}{4}$, vagyis $a+\frac{1}{a} = 2\cdot\sin\frac{\pi\cdot x+p\cdot\pi}{4}$.
+
+A feltételek miatt $a>0$, ezért $a+\frac{1}{a} \ge 2$ egy ismert egyenlõtlenség szerint. Ezért $2\cdot\sin\frac{\pi\cdot x+p\cdot\pi}{4} \ge 2$ azaz $\sin\frac{\pi\cdot x+p\cdot\pi}{4} \ge 1$. Ez csak úgy lehetséges, ha $\sin\frac{\pi\cdot x+p\cdot\pi}{4} = 1$, vagyis ha $\sin\frac{\pi\cdot x+p\cdot\pi}{4} = \frac{\pi}{2}+k\cdot2\cdot\pi$ ($k$ egész szám).
+
+Ebbõl rendezés után
+\begin{equation} x+p = 2+8k \end{equation}
+következik. Ugyanakkor $a+\frac{1}{a} = 2$ is igaz, ebbõl pedig $a = 1$ adódik.
+
+Eszerint $\sqrt{x^2-2x-14}=1$, ahonnan $x^2-2x-15=0$ kapható. Ennek az egyenletnek a gyökei $x_1 = 5$ és $x_2 = -3$. Ezek közül csak az $x_1=5$ pozitív egész szám, és ez megfelel az $x\ge5$ feltételnek is. Vessük ezt össze (1)-gyel!
+Ekkor $5+p = 2 + 8k$, tehát $p=8k-3$.
+
+Mivel $p$ pozitív prímszám, ezért a legkisebb keresett $p$ a $k=1$-bõl következõ $p=5$ prímszám. Erre az a feltétel is teljesül, hogy $x \leq p$. Végeredményünk szerint a $p=5$ az a legkisebb pozitív prímszám, amelyre a kiinduló egyenletnek van olyan pozitív egész megoldása, hogy $x \le p$ is igaz. Ez a megoldás az $x = 5$. Behelyettesítéssel ellenõrizhetõ, hogy ez valóban gyöke az eredeti egyenletnek.
+\medskip
+
+
+\hbox to \hsize{\hskip2truecm\hrulefill\hskip2truecm}
+{\bf 6. feladat: } Bizonyítsuk be, hogy ha $1\leq x_1\leq 2, 1\leq x_2 \leq 2, \dots, 1\leq x_n \leq 2$ ($n$ természetes szám), akkor
+$${\left(\frac{1}{2}\right)}^{x_1+\frac{2}{x_n}}+{\left(\frac{1}{2}\right)}^{x_2+\frac{2}{x_{n-1}}}+\dots+{\left(\frac{1}{2}\right)}^{x_n+\frac{2}{x_1}} \geq \frac{n}{8}!$$
+
+
+\ki{Kacsó Ferenc}{Marosvásárhely}\medskip
+
+{\bf 6. feladat I. megoldása: } Ha $1 \le x_k \le 2$, akkor $(x_k-1)\cdot(x_k-2)\le 0$, vagyis $x_k^2-3x_k+2\le0$, innen pedig \begin{eqnarray}
+\begin{tabular}{lr}
+$x_k+\frac{2}{x_k}\le3$ & $(k=1,2,...n)$
+\end{tabular}
+\end{eqnarray}
+Alkalmazzuk a számtani és mértani közép közötti egyenl\"otlenséget és az (1)-ben szerepl\"o összefüggéseket:
+$${\setlength\arraycolsep{2pt}\begin{array}{rcl}
+{\left(1 \over 2\right)}^{x_1+\frac{2}{x_{n}}}+{\left(1 \over 2 \right)}^{x_2+\frac{2}{x_{n-1}}}+\dots+{\left(1 \over 2\right)}^{x_n+\frac{2}{x_{1}}}
+&\geq& n\cdot\sqrt[n]{{\left(\frac{1}{2}\right)}^{\left(x_1+\frac{2}{x_n}\right)+
+\left(x_2+\frac{2}{x_{n-1}}\right)+\dots+\left(x_n+\frac{2}{x_1}\right)}}= \\[6pt]
+&=& n\cdot\sqrt[n]{{\left(\frac{1}{2}\right)}^{\left(x_1+\frac{2}{x_1}\right)+\left(x_2+\frac{2}{x_{2}}\right)+\dots+\left(x_n+\frac{2}{x_n}\right)}}
+\end{array}}$$
+
+ezért
+$${\setlength\arraycolsep{2pt}\begin{array}{rcl}
+{\left(1 \over 2\right)}^{x_1+\frac{2}{x_{n}}}+{\left(1 \over 2\right)}^{x_2+\frac{2}{x_{n-1}}}+\dots+{\left(1 \over 2\right)}^{x_n+\frac{2}{x_{1}}} &\ge&
+n\cdot\sqrt[n]{{\left(\frac{1}{2}\right)}^{\left(x_1+\frac{2}{x_1}\right)+\left(x_2+\frac{2}{x_{2}}\right)+\dots+\left(x_n+\frac{2}{x_n}\right)}} \ge \\[6pt]
+&\geq&
+n\cdot\sqrt[n]{{\left(\frac{1}{2}\right)}^{3+3+\dots+3}}=n\cdot\sqrt[n]{{\left(\frac{1}{2}\right)}^{3n}}={n \over 8}.
+\end{array}}$$
+
+Ezzel a feladat állítását bebizonyítottuk.
+\medskip
+
+\vfill
+\end{document}

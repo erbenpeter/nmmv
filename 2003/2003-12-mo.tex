@@ -1,0 +1,189 @@
+\documentclass[a4paper,10pt]{article} 
+\usepackage[latin2]{inputenc}
+\usepackage{graphicx}
+\usepackage{amssymb}
+\voffset - 20pt
+\hoffset - 35pt
+\textwidth 450pt
+\textheight 650pt 
+\frenchspacing 
+
+\pagestyle{empty}
+\def\ki#1#2{\hfill {\it #1 (#2)}\medskip}
+
+\def\tg{\, \hbox{tg} \,}
+\def\ctg{\, \hbox{ctg} \,}
+\def\arctg{\, \hbox{arctg} \,}
+\def\arcctg{\, \hbox{arcctg} \,}
+
+\begin{document}
+\begin{center} \Large {\em XII. Nemzetközi Magyar Matematika Verseny} \end{center}
+\begin{center} \large{\em Eger, 2003. ápr. 15-19.} \end{center}
+\smallskip
+\begin{center} \large{\bf 12. osztály} \end{center}
+\bigskip 
+
+{\bf 1. feladat: } Oldjuk meg a valós számok halmazán a $6\cdot\frac{x^2+1}{x^2+11}=\sqrt{\frac{11x-6}{6-x}}$ egyenletet!
+
+
+\ki{Kubatov Antal}{Kaposvár}\medskip
+
+{\bf 1. feladat I. megoldása: } Tekintsük a jobboldalt a függvényt, ennek egyenlete: $y=\sqrt{11x -6 \over 6-x}$.
+
+Ezt $x$-re rendezve $x=\frac{6\cdot(y^2+1)}{y^2+11}$  adódik.
+
+Látható tehát, hogy ha az egyik oldalt $x$ függvényének tekintjük, akkor a másik oldal az elõbbi inverz függvénye. A két függvény képe egymás tükörképe az $y=x$ egyenletû egyenesre, ezért a metszéspontjaik az $y=x$ egyenletû egyenesen vannak. Így elegendõ a $\frac{6(x^2+1)}{x^2+11}=x$ egyenletet vizsgálni.
+
+Rendezés után: \begin{equation} x^3-6x^2+11x-6=0. \end{equation}
+
+(1) bal oldala könnyen szorzattá alakítható: \begin{equation} (x-1)(x-2)(x-3)=0. \end{equation}
+
+Megoldásként $x=1$, $x=2$, $x=3$ adódik, melyek igazzá is teszik az eredeti egyenlõséget.
+
+\medskip
+
+
+\hbox to \hsize{\hskip2truecm\hrulefill\hskip2truecm}
+{\bf 2. feladat: } Az $f(x)$ függvényre tetszõleges $x$ valós szám esetén teljesül, hogy $2\cdot f(x)+f(1-x)=x^2$.
+
+Milyen $n$ pozitív egész számra igaz, hogy $f(1)+f(2)+\dots+f(n)=19\cdot n$?
+
+
+\ki{Némethy Katalin}{Budapest}\medskip
+
+{\bf 2. feladat I. megoldása: } A feltétel szerint minden valós $x$-re teljesül, hogy
+\begin{eqnarray} 2\cdot f(x)+f(1-x)=x^2. \end{eqnarray}
+
+Helyettesítsünk (1)-ben $x$ helyébe $1-x$-et!
+\begin{eqnarray} 2\cdot f(1-x)+f(x)={(1-x)}^2. \end{eqnarray}
+
+Szorozzuk be (1) mindkét oldalát 2-vel!
+\begin{eqnarray} 4\cdot f(x)+2\cdot f(1-x)=2\cdot x^2. \end{eqnarray}
+
+A (3) és (2) egyenletek megfelelõ oldalainak különbségét véve azt kapjuk, hogy: $3\cdot f(x) = 2\cdot x^2-{(1-x)}^2$, innen pedig
+\begin{eqnarray} f(x)=\frac{x^2+2x-1}{3}.\end{eqnarray}
+
+Mivel (4) bármely valós $x$-re igaz, ezért:
+
+$$\begin{array}{c}
+f(1)=\frac{1^2+2\cdot 1-1}{3}, \\
+f(2)=\frac{2^2+2\cdot 2-1}{3}, \\
+.\\
+.\\
+.\\
+f(n)=\frac{n^2+2\cdot n-1}{3}.
+\end{array}$$
+
+Adjuk össze a kapott egyenletek megfelelõ oldalait! Ekkor:
+\begin{eqnarray} f(1)+f(2)+\dots+f(n)=\frac{1^2+2^2+\dots+n^2+2\cdot (1+2+\dots+n)-n}{3}.\end{eqnarray}
+
+Ismeretes, hogy $1^2+2^2+\dots+n^2 = \frac{n\cdot (n+1) \cdot (2n+1)}{6}$ és $1+2+\dots+n=\frac{n\cdot (n+1)}{2}$ ezért
+$$f(1)+f(2)+\dots+f(n)=\frac{\frac{n\cdot (n+1) \cdot (2n+1)}{6}+2\cdot \frac{n\cdot (n+1)}{2}-n}{3},$$
+ahonnan rendezés után az alábbi összefüggés adódik:
+\begin{eqnarray} f(1)+f(2)+\dots+f(n)=\frac{2n^2+9n+1}{18}\cdot n.\end{eqnarray}
+
+A feltétel miatt $\frac{2n^2+9n+1}{18}\cdot n=19\cdot n$, ahonnan az $n \ne 0$-val való osztás után a $2n^2+9n-341=0$ egyenletre jutunk, amelynek megoldásai: $n_1=11$ és $n_2=-15,5$.
+
+Az $n_2$ nyilván nem felel meg a feltételnek, a feladat kérdésére tehát $n_1=11$ a válasz.
+
+Ellenõrizhetõ, hogy valóban $f(1)+f(2)+\dots+f(11) = 19\cdot 11 = 209$.
+
+
+
+
+\medskip
+
+
+\hbox to \hsize{\hskip2truecm\hrulefill\hskip2truecm}
+{\bf 3. feladat: } Az $x_n$ sorozatot a következõképpen definiáljuk: $x_1={1 \over 2}$, és $x_{k+1}={x_k}^2+x_k$.
+Határozzuk meg az $S_{100} = \frac{1}{x_1+1} +\frac{1}{x_2+1} + \dots + \frac{1}{x_{100}+1}$ összeg egész részét!
+
+
+\ki{Kántor Sándorné}{Debrecen}\medskip
+
+{\bf 3. feladat I. megoldása: } Az $x_1={1\over 2}$ értéke és a rekurziós feltétel miatt a sorozat minden tagja pozitív szám. A feltételt ennek figyelembevételével átalakítjuk:
+$$x_{k+1} = x_k(1+x_k)$$
+illetve
+$$\frac{1}{x_{k+1}}=\frac{1}{x_k \cdot (x_{k+1}+1)} = \frac{1}{x_k}-\frac{1}{x_k+1}.$$
+Így: $$\frac{1}{x_k+1} = \frac{1}{x_k}-\frac{1}{x_{k+1}}.$$
+
+Ezért $S_{100}=\frac{1}{x_1+1}+\frac{1}{x_2+1}+\dots+\frac{1}{x_{100}+1}=\frac{1}{x_1}-\frac{1}{x_2}+\frac{1}{x_2}-\frac{1}{x_3}+\dots+\frac{1}{x_{100}}-\frac{1}{x_{101}}=\frac{1}{x_1}-\frac{1}{x_{101}}=2-\frac{1}{x_{101}}$.
+
+Az $x_n$ sorozat szigorúan monoton növekvõ: pl $x_1 = {1\over 2}$; $x_2={3 \over 4}$; $x_3 = {21 \over 16} > 1$, és $x_{k+1}-x_k = {x_k}^2>0$ vagyis $x_{101} > x_3 > 1$; $0<\frac{1}{x_{101}}<1$.
+
+Tehát $S_{100} = 2- \frac{1}{x_{101}} < 2$, vagyis $S_{100}$ egész része: 1.
+\medskip
+
+
+\hbox to \hsize{\hskip2truecm\hrulefill\hskip2truecm}
+{\bf 4. feladat: } Az $ABC$ hegyesszögû háromszög magasságainak a $BC$, $CA$ és $AB$ oldalakon lévõ talppontjai rendre $T_1$, $T_2$ és $T_3$, a háromszög magasságpontja $M$, körülírt és beírt körének a sugara $R$ és $r$. Bizonyítsuk be, hogy
+$$MT_1 \cdot MT_2 \cdot MT_3 \le \frac{R\cdot r^2}{2}!$$
+
+
+\ki{Bíró Bálint}{Eger}\medskip
+
+{\bf 4. feladat I. megoldása: } Jelöléseink az ábrán láthatók.
+
+\centerline{\includegraphics{figures/2003-12-4}}
+
+Mivel ABC háromszög hegyesszögû, ezért az $M$ magasságpont és a körülírt kör $O$ középpontja a háromszög belsõ pontja. Felhasználjuk azt az ismert tételt, hogy az $M$ pontnak az oldalakra vonatkozó tükörképei a körülírt körön vannak (az ábrán $M_1$, $M_2$ és $M_3$ pontok), és hogy az $O$ pontból az oldalakra bocsátott merõlegesek felezik az oldalakat és a megfelelõ íveket ($D$, $E$, $F$, illetve $D_1$, $E_1$, $F_1$ pontok). A felhasznált tétel miatt $MT_1 = M_1T_1$, $MT_2 = M_2T_2$ és $MT_3=M_3T_3$. Nyilvánvaló, hogy $M_1T_1 \le DD_1$, $M_2T_2 \le EE_1$ és $M_3T_3 \le FF_1$. Így egyrészt $MT_1 \le DD_1$, $MT_2 \le EE_1$ és $MT_3 \le FF_1$, másrészt \begin{eqnarray} MT_1 \cdot MT_2 \cdot MT_3 \le DD_1 \cdot EE_1 \cdot FF_1. \end{eqnarray}
+
+A kerületi és a középponti szögek összefüggésébõl következik, hogy $BOD\angle = \alpha$, $COE\angle = \beta$, $AOF\angle = \gamma$, ezért $OD=R\cdot\cos\alpha$, $OE=R\cdot\cos\beta$ és $OF=R\cdot\cos\gamma$. Ekkor $DD_1 = R-R\cos\alpha = R\cdot (1-\cos\alpha)$, $EE_1 = R-R\cos\beta = R\cdot (1-\cos\beta)$ és $FF_1 = R-R\cos\gamma = R\cdot (1-\cos\gamma)$. A kapott eredményeket (1)-be írva \begin{eqnarray} MT_1 \cdot MT_2 \cdot MT_3 \le R^3 \cdot (1-\cos\alpha) \cdot (1-\cos\beta) \cdot (1-\cos\gamma).\end{eqnarray}
+
+Az $a$ oldalra felírt koszinusztételbõl következik, hogy $\cos\alpha = \frac{b^2+c^2-a^2}{2bc}$ és ezért $1-\cos\alpha = \frac{a^2+(b-c)^2}{2bc}$ azaz $1-\cos\alpha=\frac{\left(a+b-c\right)\left(a-b+c\right)}{2bc}$. A háromszög félkerületét $s$-sel jelölve $1-\cos\alpha=\frac{2\cdot (s-b)(s-c)}{bc}$ Hasonlóan kapjuk, hogy $1-\cos\beta=\frac{2\cdot (s-a)(s-c)}{ac}$ és $1-\cos\gamma=\frac{2\cdot (s-a)(s-b)}{ab}$. Ezért $(1-\cos\alpha)\cdot(1-\cos\beta)\cdot(1-\cos\gamma)=\frac{8\cdot (s-a)^2 \cdot (s-b)^2 \cdot (s-c)^2}{a^2 \cdot b^2 \cdot c^2}$.
+
+Felhasználva a háromszög területére vonatkozó Héron-képletet, az $a\cdot b \cdot c = 4R \cdot T$ és a ${T \over s}=r$ összefüggéseket, adódik, hogy $(1-\cos\alpha)\cdot(1-\cos\beta)\cdot(1-\cos\gamma) = \frac{r^2}{2R^2}$.
+Ezt (2)-be helyettesítve éppen a bizonyítandó $MT_1 \cdot MT_2 \cdot MT_3 \le \frac{Rr^2}{2}$ állítást kapjuk.
+
+Egyenlõség nyilván akkor van, ha $M_1T_1=DD_1$, $M_2T_2=EE_2$, $M_3T_3 = FF_1$, ez viszont csak szabályos háromszög esetén áll fenn.
+\medskip
+
+
+\hbox to \hsize{\hskip2truecm\hrulefill\hskip2truecm}
+{\bf 5. feladat: } Határozzuk meg azokat az $x$, $y$ valós számokat melyekre $x^{\log_3y}+y^{\log_x3}+3^{\log_3x} = x+y+3$!
+
+
+\ki{Kovács Béla}{Szatmárnémeti}\medskip
+
+{\bf 5. feladat I. megoldása: } Az egyenletben szereplõ kifejezések értelmezve vannak, ha $x$ és $y$ szigorúan pozitív és 1-tõl különbözõ valós számok.
+
+Vizsgáljuk az egyenlõséget, amikor $x$ és $y$ a $(0,1)$ illetve az $(1,\infty)$ intervallumok valamelyikéhez tartozik!
+
+Elõször legyenek $x$ és $y$ 1-nél nagyobb valós számok. Ekkor pozitív számokra alkalmazható számtani és mértani közép közötti egyenlõtlenség és az ugyancsak pozitív $a$ számra vonatkozó ismert $a+\frac{1}{a} \ge 2$ egyenlõtlenség alkalmazásával:
+$${\setlength\arraycolsep{2pt}\begin{array}{rcccl}
+x^{\log_3y}+x^{\log_y3} &\ge& 2 \cdot \sqrt{x^{\log_3y+\log_y3}} &\ge& 2 \cdot \sqrt{x^2} = 2x \\[6pt]
+y^{\log_x3}+y^{\log_3x} &\ge& 2 \cdot \sqrt{y^{\log_x3+\log_3x}} &\ge& 2 \cdot \sqrt{y^2} = 2y \\[6pt]
+3^{\log_yx}+3^{\log_xy} &\ge& 2 \cdot \sqrt{3^{\log_yx+\log_xy}} &\ge& 2 \cdot \sqrt{3^2} = 6.
+\end{array}}$$
+Összeadva a kapott egyenlõtlenségek megfelelõ oldalait és felhasználva az $a^{\log_bc} = c^{\log_ba}$ egyenlõséget, majd mindkét oldalt 2-vel osztva kapjuk, hogy:
+$$x^{\log_3y}+y^{\log_x3}+3^{\log_yx} \ge x+y+3.$$
+Egyenlõség csak $x=y=3$ esetén van.
+
+Ha $x$ és $y$ 1-nél kisebb pozitív valós számok, akkor $y^{\log_x3}+3^{\log_yx} = 3^{\log_xy} + 3^{\log_yx}\ge 2\cdot \sqrt{3^{\log_yx + \log_xy}} \ge 2 \cdot \sqrt{3^2} = 6$ és $x^{\log_3y} > 1$ alapján az egyenlet bal oldala 7-nél nagyobb, jobb oldala 5-nél kisebb, tehát egyenlõség nem lehetséges.
+
+Ha $x$ 1-nél kisebb, $y$ pedig 1-nél nagyobb, akkor $x^{\log_3y} <1$, $y^{\log_x3} <1$ és $3^{\log_yx} <1$ alapján az egyenlet bal oldala 3-nál kisebb, jobb oldala 4-nél nagyobb, egyenlõség ismét nem lehetséges. Hasonlóan nincs megoldás akkor sem, ha $x$ 1-nél nagyobb, $y$ pedig  1-nél kisebb.
+
+Az egyenlet megoldása tehát az $x=3$, $y=3$ számpár.
+
+\medskip
+
+
+\hbox to \hsize{\hskip2truecm\hrulefill\hskip2truecm}
+{\bf 6. feladat: } Oldjuk meg a valós számhármasok halmazán a következõ egyenletet:
+$$\sqrt{5\left(x^2+2yz\right)}+\sqrt{6\left(z^2+2zx\right)}+\sqrt{5\left(z^2+2xy\right)} = 4(x+y+z)!$$
+
+
+\ki{Pintér Ferenc}{Nagykanizsa}\medskip
+
+{\bf 6. feladat I. megoldása: } Egyrészt az egyenlet bal oldala miatt $x+y+z \ge 0$, másrészt ez az oldal felírható az $\left(\sqrt5; \sqrt6; \sqrt5\right)$ és a $\left(\sqrt{x^2+2yx}; \sqrt{y^2+2zx}; \sqrt{z^2+2xy}\right)$ vektorok skaláris szorzataként. A jobb oldalon pedig ezen vektorok nagyságának szorzata áll. Ez pedig a feltételek miatt akkor és csak akkor állhat fenn, ha
+$$\frac{x^2+2yz}{5} = \frac{y^2+2zx}{6} = \frac{y^2+2xy}{5}.$$
+Ebbõl az egyenletrendszerbõl $x^2-z^2 = 2y(x-z)$ adódik, így vagy $x=z$, vagy $x+z = 2y$ lehetséges.
+
+Ha $x=z$, akkor $\frac{x^2+2yz}{5} = \frac{y^2+2x^2}{6}$ azaz $4x^2-12xy+5y^2 = 0$, ahonnan $y={2 \over 5}x$ vagy $y=2x$ adódik. Ezekbõl kapjuk a következõ megoldásokat: $\left(a;{2 \over 5}a;a\right)$ és $(a;2a;a)$, ahol $a$ tetszõleges nemnegatív szám.
+
+Ha $x+z = 2y$, azaz $z=2y-x$, akkor visszahelyettesítve a következõkhöz jutunk: $\frac{x^2+2y(2y-x)}{5} = \frac{y^2+2x(2y-x)}{6}$, amelybõl $16x^2-32xy+19y^2 =0$ adódik. Ennek az egyenletnek csak az $x=y=0$ triviális megoldása van a valós számok körében, mert az egyenlet diszkriminánsa negatív: $D=4(16^2-16\cdot 19) <0$. Így ebben az esetben $z=0$, ekkor a megoldás tehát: $(0;0;0)$.
+
+\medskip
+
+\vfill
+\end{document}
