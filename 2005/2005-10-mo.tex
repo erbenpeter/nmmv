@@ -1,0 +1,142 @@
+\documentclass[a4paper,10pt]{article} 
+\usepackage[latin2]{inputenc}
+\usepackage{graphicx}
+\usepackage{amssymb}
+\voffset - 20pt
+\hoffset - 35pt
+\textwidth 450pt
+\textheight 650pt 
+\frenchspacing 
+
+\pagestyle{empty}
+\def\ki#1#2{\hfill {\it #1 (#2)}\medskip}
+
+\def\tg{\, \hbox{tg} \,}
+\def\ctg{\, \hbox{ctg} \,}
+\def\arctg{\, \hbox{arctg} \,}
+\def\arcctg{\, \hbox{arcctg} \,}
+
+\begin{document}
+\begin{center} \Large {\em XIV. Nemzetközi Magyar Matematika Verseny} \end{center}
+\begin{center} \large{\em Miskolc, 2005. márc. 20-23.} \end{center}
+\smallskip
+\begin{center} \large{\bf 10. osztály} \end{center}
+\bigskip 
+
+{\bf 1. feladat: } Adott öt szakasz, melyek közül bármely háromból háromszög szerkeszthetõ. Mutassuk meg, hogy a szakaszok közül kiválasztható három, melyekbõl hegyesszögû háromszöget lehet szerkeszteni.
+
+
+\ki{Bencze Mihály}{Brassó}\medskip
+
+{\bf 1. feladat I. megoldása: } Legyenek $x_{1}\leq x_{2} \leq x_{3} \leq x_{4} \leq x_{5}$ az öt szakasz.
+
+Ha feltételezzük, hogy az összes alkotható háromszögek tompák vagy derékszögûek, akkor
+$$x_{3}^{2}\geq x_{1}^{2}+x_{2}^{2}, \ x_{4}^{2}\geq x_{2}^{2}+x_{3}^{2}, \ x_{5}^{2}\geq x_{3}^{2}+x_{4}^{2},$$ innen
+$x_{3}^{2}+x_{4}^{2}\geq x_{1}^{2} + x_{2}^{2} + x_{2}^{2} + x_{3}^{2}$
+vagy
+$$x_{5}^{2}\geq x_{3}^{2}+x_{4}^{2}\geq x_{1}^{2} + 2x_{2}^{2} + x_{3}^{2}\geq x_{1}^{2} + 2x_{2}^{2} + x_{2}^{2}\geq \left(x_{1} + x_{2}\right)^{2}$$
+azaz
+$x_{5}\geq x_{1} + x_{2}$, ami ellentmondás, mert $x_{1}$, $x_{2}$, $x_{3}$ szakaszokkal szerkeszthetõ háromszög.
+
+
+\medskip
+
+
+\hbox to \hsize{\hskip2truecm\hrulefill\hskip2truecm}
+{\bf 2. feladat: } A sík két szabályos háromszög $ABC$ és $PRQ$ olyan helyzetben vannak, hogy az $R$ pont az $AB$ szakasz belsõ pontja, a $C$ pedig a $PQ$ belsõ pontja, miközben $A$ és $P$ a $CR$ egyenes azonos oldalán helyezkednek el. Bizonyítsuk, hogy az $AP$ és $BQ$ egyenesek párhuzamosak!
+
+
+
+
+\ki{Szabó Magda}{Szabadka}\medskip
+
+{\bf 2. feladat I. megoldása: } Mivel a $CAR\angle = RPC\angle = 60^{\circ}$ és az $ARCP$ húrnégyszög, így az $APR\angle = ACR\angle$, analóg módon
+ $BQR\angle = BCR\angle$, amelybõl következik, hogy
+{\setlength\arraycolsep{2pt}\begin{eqnarray*}
+APC\angle + BQC\angle &=& APR\angle + RPC\angle + BQR\angle + RQC\angle = \\
+&=& ACR\angle + 60^{\circ}+ BCR\angle + 60^{\circ} = ACB\angle + 120^{\circ} = 180^{\circ},
+\end{eqnarray*}}
+ezért AP párhuzamos BQ-val.
+\medskip
+
+
+\hbox to \hsize{\hskip2truecm\hrulefill\hskip2truecm}
+{\bf 3. feladat: } Bizonyítsuk be, hogy az $x^3-2004x^2+rx+2005=0$ egyenletnek minden $r$ valós együttható esetén legfeljebb egy egész megoldása van.
+
+
+\ki{Oláh György}{Komárom}\medskip
+
+{\bf 3. feladat I. megoldása: } Tételezzük fel, hogy az adott egyenletnek valamely $r$ szám esetén $a$, $b$ két egész gyöke van. Ennélfogva a harmadik $c$ gyöknek szintén egész kell, hogy legyen, mivelhogy $a+b+c=2004$.
+
+Az $a$, $b$, $c$ számok mindegyike nem lehet páratlan, mivel az összegük páros. A szorzatuk, $2005$ páratlan, ami lehetetlen. Tehát az egyenletnek legfeljebb egy egész gyöke lehet.
+
+\medskip
+
+
+\hbox to \hsize{\hskip2truecm\hrulefill\hskip2truecm}
+{\bf 4. feladat: } Határozzuk meg azokat az $m$ és $n$ pozitív egész számokat, melyekre teljesül az 
+$$(m^3+n)\cdot(m+n^3)=(m+n)^4$$
+egyenlõség.
+
+
+\ki{Erdõs Gábor}{Nagykanizsa}\medskip
+
+{\bf 4. feladat I. megoldása: } A mûveleteket elvégezve, a pozitív $a$ és $b$ számokkal osztva kapjuk, hogy 
+$\left(m\cdot n + 1\right)^{2} = 4\left(m+n\right)^{2}$, azaz $m\cdot n+1=\pm 2\cdot \left(m+n\right)$.
+
+A két diofantoszi egyenletet külön megoldva az $\left(5, 3\right)$ és $\left(3, 5\right)$ megoldások adódnak.
+\medskip
+
+
+\hbox to \hsize{\hskip2truecm\hrulefill\hskip2truecm}
+{\bf 5. feladat: } Az $ABC$ derékszögû háromszög $AC$ és $BC$ befogóira kifelé szerkesztett négyzetek $ACDE$ és a $CBGF$. Az $AGF$ és $BDE$ derékszögû háromszögek $AG$ és $BE$ átfogóinak metszéspontja legyen $P$, a $P$-n átmenõ $AC$-vel, illetve $BC$-vel párhuzamos egyenesek pedig messék az $ABC$ háromszög oldalait a $K$ és $M$, illetve az $L$ és $N$ pontokban. Mutassuk meg, hogy a $KLMN$ négyszög szimmetrikus trapéz!
+
+
+\ki{Bíró Bálint}{Eger}\medskip
+
+{\bf 5. feladat I. megoldása: } A $GAB$ háromszögben a $PK = x$ szakasz párhuzamos a $BG = a$ szakasszal, ezért felírhatjuk a párhuzamos szelõszakaszok tételét a következõképpen:
+(1) $\frac{x}{a} = \frac{AP}{AG}$.
+Ugyancsak a párhuzamos szelõszakaszok tétele miatt (vagy az $FAG$ és az $NAP$ háromszögek hasonlósága következtében):
+(2) $\frac{v}{a} = \frac{AP}{AG}$.
+(1) és (2) összevetésébõl $x=v$ következik.
+Mivel a $PK$ és a $PN$ szakaszok párhuzamosak az $ABC$ háromszög befogóival, ezért a fentiekre is tekintettel kijelenthetjük, hogy a $KNP$ háromszög egyenlõszárú derékszögû háromszög.
+
+Hasonlóképpen láthatjuk be a párhuzamos szelõszakaszok tétele segítségével (vagy a $BMP$ és a $BDE$ illetve a $BPL$ és a $BEA$ háromszögek hasonlósága alapján), hogy:
+(3) $\frac{z}{b} = \frac{BP}{BE}$ és $\frac{y}{b} = \frac{BP}{BE}$,
+ahonnan $\frac{z}{b} = \frac{y}{b}$, illetve $z=y$ adódik.
+
+Ebbõl pedig az következik, hogy az $LMP$ derékszögû háromszög is egyenlõ szárú.
+
+Ezért pl. az $MN$ szakasz a $K$ és az $L$ pontból is $45^{\circ}$-os szögben látszik, tehát a $K$ és az $L$ pontok rajta vannak az $MN$ szakasz fölé rajzolt $45^{\circ}$-os látószögköríven, így a $K$, $L$, $M$, $N$ pontok egy körön vannak, vagyis valóban egy húrnégyszög csúcsai.
+
+\underline{Megjegyzés:} a bizonyítás menete alapján könnyen belátható, hogy $KLMN$ szimmetrikus trapéz is.
+\medskip
+
+
+\hbox to \hsize{\hskip2truecm\hrulefill\hskip2truecm}
+{\bf 6. feladat: } Ezer birkát, melyek a 000, 001, 002, $\ldots$, 998, 999 számokkal vannak megjelölve, este a juhászkutyák száz olyan akolba terelnek be, melyek ajtajain a 00, 01, 02, $\ldots$, 98, 99 kódok olvashatók. Minden birkának olyan akolban kell éjszakáznia, melynek kódját megkapjuk, ha a birka számának valamelyik számjegyét töröljük. (Az 537-es birka tehát csak az 53, 57 vagy a 37 kódszámú akolba mehet.) Sötétedés elõtt minden birka bekerült valamelyik akolba. Mutassuk meg, hogy legfeljebb 50 akol maradhatott üresen!
+
+
+\ki{Erdõs Gábor}{Nagykanizsa}\medskip
+
+{\bf 6. feladat I. megoldása: } A keresett maximum értéke $50$.
+
+Mivel minden háromjegyû számban van két azonos paritású számjegy, ezért ha azokat hagyjuk meg, akkor minden birka beterelhetõ egy olyan akolba, amelynek két számjegye azonos paritású, az ilyen akolok száma $50$. Ekkor $50$ akol üresen marad.
+
+A bizonyítás nehezebb része annak belátása, hogy több üres akol nem lehet, mivel legalább $50$ akolra szükség van.
+
+Válasszuk ki a birkák $3$ csoportját. Hívjuk konstans birkának azokat, akiknek mindhárom számjegye azonos, optimista birkának, akiknek számjegyei növekvõ sorrendben követik egymást, és pesszimistának, akiknek számjegyei csökkenõ sorrendben követik egymást.
+
+A konstans birkáknak $10$ karámra van szükségük: $00$, $11$, $22$, \ldots, $99$. Ide a másik két csoport egyik birkája sem mehet be. (De a csoportok egyikébe sem tartozó igen, pl. $199$ számú.) Hasonlóan nyilvánvaló, hogy optimista birka nem keveredhet a pesszimisták akoljába és fordítva. Elég tehát belátni, hogy az optimistáknak legalább $20$ akol kell, mert akkor szimmetria okokból ugyanez elmondható a pesszimistákra is, így összesen $10 + 20 + 20 = 50$ tele akolnak legalább kell lennie.
+
+Legyen $S_{n}$ $2n$ darab nem negatív egész szám halmaza. Nevezzük $S_{n}$-birkának azokat a birkákat, akiknek a kódjának mindhárom számjegye ebbõl a halmazból való. Lássuk be, hogy az optimista $S_{n}$-birkák számára legalább $n\cdot \left(n-1\right)$, vagyis az eredeti feladatban $5\cdot 4=20$ akolra van szükség.
+
+A bizonyításhoz alkalmazzunk teljes indukciót. $n = 1$-re az állítás triviálisan igaz, és $n = 2$-re is könnyen átgondolható. Tegyük fel, hogy $n-1$-re igaz, és lássuk be, hogy $n$-re is az.
+
+Legyen $S_{n}$ legkisebb eleme $a$. Ha feltesszük, hogy mindegyik $ac$ jelû akol foglalt, ahol $c$ az $S_{n}$ valamelyik eleme, akkor ez $2n-1$ tele akolt jelent, így mivel $S_{n}$-bõl $a$-t és bármely másik elemet elhagyva egy $2n-2$ elemû $S_{n}$ halmazt kapunk, az indukciós feltétel szerint ebben a halmazban már biztosan van legalább $\left(n-1\right)\cdot \left(n-2\right)$ darab foglalt akol, így a foglalt akolok száma legalább $\left(n-1\right)\cdot \left(n-2\right) + 2n-1>n\cdot \left(n-1\right)$. Tegyük fel most, hogy lesz olyan üres akol, amelynek a kódja $a$-val kezdõdik. Ha több van, a legnagyobb kódút hívjuk $ac$-nek. Hagyjuk most el az $S_{n}$-bõl $a$-t és $c$-t. Az így kapott $S_{n-1}$-hez tartozó optimista birkák számára az indukciós feltétel szerint legalább $\left(n-1\right)\cdot \left(n-2\right)$ akol szükséges, míg az ide nem tartozó $S_{n}$-birkák, akiknek a kódja $abc$, csak az $ab$ vagy $bc$ akolba mehetnek ($ac$ üres), ezért ezen két akol egyikében lesz birka, így mivel $b$ helyére $S_{n-1}$ mind a $2n-2$ eleme beírható, az optimista $S_{n}$-birkák számára legalább $\left(n-1\right)\cdot \left(n-2\right)+2n-2=n\cdot \left(n-1\right)$ akol szükséges.
+
+
+\medskip
+
+\vfill
+\end{document}
