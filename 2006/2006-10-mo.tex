@@ -1,0 +1,159 @@
+\documentclass[a4paper,10pt]{article} 
+\usepackage[latin2]{inputenc}
+\usepackage{graphicx}
+\usepackage{amssymb}
+\voffset - 20pt
+\hoffset - 35pt
+\textwidth 450pt
+\textheight 650pt 
+\frenchspacing 
+
+\pagestyle{empty}
+\def\ki#1#2{\hfill {\it #1 (#2)}\medskip}
+
+\def\tg{\, \hbox{tg} \,}
+\def\ctg{\, \hbox{ctg} \,}
+\def\arctg{\, \hbox{arctg} \,}
+\def\arcctg{\, \hbox{arcctg} \,}
+
+\begin{document}
+\begin{center} \Large {\em XV. Nemzetközi Magyar Matematika Verseny} \end{center}
+\begin{center} \large{\em Zenta, 2006. márc. 18-22.} \end{center}
+\smallskip
+\begin{center} \large{\bf 10. osztály} \end{center}
+\bigskip 
+
+{\bf 1. feladat: } Oldjuk meg a következõ egyenletet a valós számok körében ($a\in\mathbb R$, $\left(\sqrt[3]{a}\right)^3 = a$):
+\[ \sqrt[3]{\frac{2+x}{x}} - \sqrt[3]{\frac{2-6x}{x}} = 1. \]
+
+
+
+\ki{Pintér Ferenc}{Nagykanizsa}\medskip
+
+{\bf 1. feladat I. megoldása: } Végezzük el az alábbi átalakítást:
+{\setlength\arraycolsep{2pt}\begin{eqnarray*}
+\sqrt[3]{\frac{2+x}{x}} - \sqrt[3]{\frac{2-6x}{x}} &=& 1 \\
+\sqrt[3]{\frac{2}{x}+1} - \sqrt[3]{\frac{2}{x}-6} &=& 1.
+\end{eqnarray*}}
+Vezessünk be új változót, például legyen
+$y = \frac{2}{x} - 6,$
+s ekkor a
+\[ \sqrt[3]{y+7} - \sqrt[3]{y} = 1 \]
+egyenlethez jutunk. 
+Emeljük köbre a kapott egyenletet a következõ azonosság alapján:
+$(a-b)^3 = a^3 - b^3 + 3ab(a-b)$,
+és használjuk fel, hogy jelen esetben $a-b = 1$.  
+Ekkor a következõt kapjuk:
+\[ y + 7 - y -3\sqrt[3]{(y+7)y}\cdot 1 = 1, \]
+rendezve
+{\setlength\arraycolsep{2pt}\begin{eqnarray*}
+\sqrt[3]{y^2+7y} &=& 2 \\
+y^2 + 7y - 8 &=& 0 \\
+y_1 = 1 \hbox{ és } y_2 &=& -8.
+\end{eqnarray*}}                           
+Visszahelyettesítve x-re a következõt kapjuk:
+\[ x_1 = \frac{2}{7}, x_2 = -1. \]                           
+Ellenõrzéssel beláthatjuk, hogy mindkét gyök kielégíti az eredeti egyenletet.
+\medskip
+
+
+\hbox to \hsize{\hskip2truecm\hrulefill\hskip2truecm}
+{\bf 2. feladat: } Az $ABC$ háromszögben $AC=BC$, a $BC$, $CA$, $AB$ oldalakat a beírt kör rendre az $A'$, $B'$, $C'$ pontokban érinti. Az $AA'$ szakasz a beírt kört $D$-ben, a $B'D$ egyenes az $AB$ oldalt $E$-ben metszi. Mutassuk meg, hogy $AE$=$EC'$ . 
+
+
+
+\ki{Katz Sándor}{Bonyhád}\medskip
+
+{\bf 2. feladat I. megoldása: } Jelöljük az $ABC$ háromszög  alapon fekvõ szögeit $\alpha$-val,  az $A'AB$ szöget $\varphi$-vel. 
+
+\centerline{\includegraphics{figures/2006-10-2}}
+
+Szimmetria miatt $A'B' \| AB$, ezért $DA'B'\angle = \varphi$.
+
+$DA'B'$ a $DB'$ ívhez tartozó kerületi szög, ugyanezen ívhez tartozó érintõszárú kerületi szög az $AB'D$ szög. Így $AB'D\angle = \varphi$. 
+
+$AB'E D \sim ABA'D$, mert megegyeznek két szögben ($\alpha$ és $\varphi$). $B$-bõl és szimmetria miatt $A$-ból a körhöz húzott érintõ szakaszok egyenlõk, ezért $A'B:AB=1:2$. A hasonlóság miatt $AE:AB'=1:2$, tehát $AE=AC'/2$.
+
+\medskip
+
+
+\hbox to \hsize{\hskip2truecm\hrulefill\hskip2truecm}
+{\bf 3. feladat: } Legyen $A=3+3^2+3^3 + \dots + 3^{2005} + 3^{2006}$ és $B = 2+2^2 + 2^3 + \dots + 2^{2005} + 2^{2006}$. Bizonyítsuk be, hogy nincs olyan $C$ pozitív egész szám, amelyre $B^2+C^2 = A^2$.
+
+
+
+
+\ki{Bíró Bálint}{Eger}\medskip
+
+{\bf 3. feladat I. megoldása: } Ismeretes, hogy a $2$  pozitív egész kitevõjû hatványainak utolsó számjegyeibõl álló sorozat periodikus, mégpedig ez a periódus a $2;4;8;6$ számokból áll. Hasonlóképpen periodikus a $3$ pozitív egész kitevõjû hatványainak utolsó számjegyeibõl álló sorozat is, ez a periódus: $3;9;7;1$.
+
+Ha egy-egy perióduson belül összeadjuk a $2$ hatványait, akkor látható, hogy az így kapott szám $0$-ra végzõdik. Ugyancsak  $0$-ra végzõdik egy perióduson belül a  $3$   hatványainak összege is. Mivel $2006=4\cdot 501+2$, ezért $A$     utolsó számjegyét az egy perióduson belüli elsõ két számjegy összege dönti el. Eszerint $A$    utolsó számjegye  $2$. Hasonlóan kapjuk, hogy $B$     utolsó számjegye  $6$. Mindebbõl következik, hogy $A^2$  és $B^2$ utolsó számjegyei  $4$   illetve  $6$. 
+
+Ha létezne olyan $C$    egész szám, amelyre a feltétel szerint   $B^2 + C^2 = A^2$  teljesülne, akkor az elõzõek szerint  $C^2$ utolsó számjegye   $8$  volna, hiszen ekkor  $C^2=A^2-B^2$   is igaz lenne. De $C^2$    négyzetszám és a négyzetszámok végzõdése nem lehet  $8$ . 
+
+Ezzel beláttuk, hogy nincs olyan $C$  pozitív egész szám, amelyre  $B^2+C^2 = A^2$.
+
+{ \it Megjegyzés}: ezzel azt is bebizonyítottuk, hogy nincs olyan egész szám oldalhosszúságú derékszögû háromszög, amelynek egyik befogója $B$, átfogója pedig  $A$. 
+
+\medskip
+
+
+\hbox to \hsize{\hskip2truecm\hrulefill\hskip2truecm}
+{\bf 4. feladat: } Az $ABCD$ négyzet $AB$ oldalán legyen $E$ az $A$-hoz közelebbi harmadoló pont, $F$ a $CD$ oldal felezõpontja. Az $ED$, illetve $BF$ egyenesek messék az $AC$ átlót az $M$, illetve az $N$ pontban. Hasonlók lesznek-e az $AEM$ és a $CNF$ háromszögek? Indokoljuk.   
+
+
+
+\ki{Kántor Sándorné és Sípos Elvira}{Debrecen illetve Zenta}\medskip
+
+{\bf 4. feladat I. megoldása: } \def\degrees{{}^\circ}
+Az $AEM$ és a $CNF$ háromszögben $EAM\angle  = FCN\angle  = 45\degrees$, valamint az $AEM$ és $MDC$ háromszögek hasonlóak. Így $|AB| : |AC|=  \sqrt{2}:2$, $|AM|:|MC| =|AE|:|CD|=1:3$, ezért $|AE|:|AM|=1/3|AB|:1/4|AC|=2\sqrt{2}/3$.
+
+Másrészt $|CN|:|N A|=|CF|:|AB|=1:2$ és $|CN|:|CF|=1/3|AC|:1/2|AB|=2\sqrt{2}/3$. 
+
+$|AE|:|AM|=|CN|:|CF|$, amibõl következik az $AEM$ és a $CNF$ háromszögek hasonlók (két oldal aránya és a közbezárt szög megegyezik).
+
+\medskip
+
+{\bf 4. feladat II. megoldása: } \def\degrees{{}^\circ}
+Az $AEM$ és a $CNF$ háromszögben $EAM\angle  = FCN\angle  = 45\degrees$. 
+
+$\tg AEM\angle  = 3$, $\tg CFN\angle =2$,  $AME\angle  = 180\degrees - 45\degrees - AEM\angle$,
+
+$\tg AME\angle  = - \tg ( 45\degrees + AEM\angle  ) = -\frac{1+3}{1-3} = 2$.  Ezért $AME\angle  =CFN\angle$, tehát az $AEM$ és a $CNF$ háromszögek hasonlók (két-két szögük megegyezik).
+
+\medskip
+
+
+\hbox to \hsize{\hskip2truecm\hrulefill\hskip2truecm}
+{\bf 5. feladat: } Ha az adott $a_1, a_2, a_3$ valós számokra és $b_1, b_2, b_3\in\mathbb R\setminus\{0\}$ számokra fennáll az $1\leq\frac{a_i}{b_i}\leq 2$ ($i=1,2,3$)  egyenlõtlenség, akkor bizonyítsuk be, hogy 
+\[ a_1^2 + a_2^2 + a_3^2 + 2(b_1^2+b_2^2+b_3^2) \leq 3(a_1b_1 + a_2b_2 + a_3b_3). \] 
+
+
+
+
+\ki{Szabó Magda}{Szabadka}\medskip
+
+{\bf 5. feladat I. megoldása: } Az $x^2-3x+2\leq 0$  egyenlõtlenség az $x\in[1,2]$ esetén  teljesül, tehát  az  $i=1,2,3$
+értékeire teljesülnek  a következõ egyenlõtleségek: 
+\[ \left(\frac{a_i}{b_i}\right)^2 - 3\frac{a_i}{b_i} + 2\leq 0, \]
+amelynek átalakításával  $a_i^2+2b_i^2 \leq 3a_ib_i$ az $i=1,2,3$ értékeire, és ezen egyenlõtlenségek összeadása eredményezi a bizonyítandó egyenlõtlenséget.
+
+\medskip
+
+
+\hbox to \hsize{\hskip2truecm\hrulefill\hskip2truecm}
+{\bf 6. feladat: } Vonalas füzetünkben a szomszédos egyenesek távolsága $1$ egység. Létezik-e olyan téglalap, amely oldalainak hossza egész és csúcsai négy különbözõ vonalra illeszkednek?
+
+
+\ki{Bogdán Zoltán}{Cegléd}\medskip
+
+{\bf 6. feladat I. megoldása: } Az ábrán $x, y$ egész, a két, $\alpha$ szöget tartalmazó derékszögû háromszög hasonló. Az $\frac{x}{a}=\cos\alpha$  és $\frac{y}{b}=\sin\alpha$ összefüggés-ben  $\alpha$-t úgy kell megválasztani, hogy $\sin\alpha$ és $\cos\alpha$  racionális legyen.
+
+\centerline{\includegraphics{figures/2006-10-6}}
+
+Ekkor $a$ és $b$ is racionális. Ha legalább egyik nem egész, akkor az $a$ és $b$ számokat közös nevezõre hozva, a nevezõnek megfelelõ arányú $C$ középpontú középpontos hasonlósággal a téglalapot felnagyítva egy kívánt megoldást kapunk. Meg kell mutatni, hogy van olyan $\alpha$, amelyre $\sin\alpha$, $\cos\alpha$ racionális. Ilyen például a $\sin\alpha = \frac{3}{5}$, $\cos\alpha=\frac{4}{5}$, a $3$, $4$, $5$ pitagoraszi számhármasból. Elképzelhetõ olyan megoldás is, hogy valamely pitagoraszi számhármasból spekulatív úton ad valaki megoldást (például egy $5$ egység oldalán négyzetet). 
+
+\medskip
+
+\vfill
+\end{document}

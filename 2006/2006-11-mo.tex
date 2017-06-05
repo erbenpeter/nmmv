@@ -1,0 +1,249 @@
+\documentclass[a4paper,10pt]{article} 
+\usepackage[latin2]{inputenc}
+\usepackage{graphicx}
+\usepackage{amssymb}
+\voffset - 20pt
+\hoffset - 35pt
+\textwidth 450pt
+\textheight 650pt 
+\frenchspacing 
+
+\pagestyle{empty}
+\def\ki#1#2{\hfill {\it #1 (#2)}\medskip}
+
+\def\tg{\, \hbox{tg} \,}
+\def\ctg{\, \hbox{ctg} \,}
+\def\arctg{\, \hbox{arctg} \,}
+\def\arcctg{\, \hbox{arcctg} \,}
+
+\begin{document}
+\begin{center} \Large {\em XV. Nemzetközi Magyar Matematika Verseny} \end{center}
+\begin{center} \large{\em Zenta, 2006. márc. 18-22.} \end{center}
+\smallskip
+\begin{center} \large{\bf 11. osztály} \end{center}
+\bigskip 
+
+{\bf 1. feladat: } Ha tudjuk, hogy $\cos x+\sin x=a$, akkor fejezzük ki $a$ függvényeként az $S_3 = \cos^3 x+\sin^3 x$, illetve $S_4 = \cos^4 x+\sin^4 x$ összeget. Keressük meg az összefüggést az $S_n$, $S_{n-1}$  és  $S_{n-2}$ összegek között, ha $S_n = \cos^n x+\sin^n x$, ahol $n$ tetszõleges pozitív egész szám. 
+
+
+
+\ki{Péics Hajnalka}{Szabadka}\medskip
+
+{\bf 1. feladat I. megoldása: } A $\cos x+\sin x = a$  összefüggés mindkét oldalának négyzetre emelésébõl adódik, hogy 
+\[ \cos^2 x + \sin^2 x + 2\sin x\cos x = a^2, \]
+illetve ebbõl az, hogy 
+\[ \sin x\cos x = \frac{a^2-1}{2}. \]
+Továbbá,
+\[ S_3 = (\cos x+\sin x)^3 - 3\cos x\sin x(\cos x+\sin x) = a^3 - 3\frac{a^2-1}{2}a = \frac{-a^3+3a}{2}. \]
+\[ S_4 = (\cos^2 x+\sin^2 x)^2 - 2\sin^2 x\cos^2 x = 1-2\cdot\left(\frac{a^2-1}{2}\right)^2 = \frac{-a^4+2a^2 + 1}{2}.\]
+Végül pedig,
+\[ \cos^n x + \sin^n x = (\cos^{n-1} x + \sin^{n-1} x)(\cos x + \sin x) - \cos x\sin x (\cos^{n-2} x + \sin^{n-2} x) \]
+miatt 
+\[ S_n = S_{n-1}\cdot a - \frac{a^2-1}{2}\cdot S_{n-2} \]
+a keresett összefüggés. 
+
+\medskip
+
+
+\hbox to \hsize{\hskip2truecm\hrulefill\hskip2truecm}
+{\bf 2. feladat: } Az $ABCD$ paralelogrammáról tudjuk, hogy $AC=6$~cm, és $|DB|=|AD|$. Legfeljebb mekkora lehet a paralelogramma területe?
+
+
+
+\ki{Katz Sándor}{Bonyhád}\medskip
+
+{\bf 2. feladat I. megoldása: } Legyen az átlók metszéspontja $F$, legyen $AD=DB=b$, és jelöljük az $AFD$ szöget $\alpha$-val, a paralelogramma területét $T$-vel!
+
+\centerline{\includegraphics{figures/2006-11-2A}}
+
+Az $AFD$ háromszögre koszinusz-tételt felírva: $b^2=\frac{b^2}{4} + 9 - 3b\cos\alpha$. Ebbõl $\cos\alpha = \frac{12-b^2}{4b}$. Ebbõl $\sin^2\alpha = \frac{40b^2-b^4-144}{16b^2}$. 
+\[ T^2 = \frac{AC^2b^2\sin^2\alpha}{4} = 9b^2\sin^2\alpha = 
+\frac{9}{16}(40b^2-b^4-144) = -\frac{9}{16}(b^2-20)^2 + 144 \leq 144. \]
+Tehát $T$ maximuma $12$, ha $b=\sqrt{20}$ . 
+
+\medskip
+
+{\bf 2. feladat II. megoldása: } Az $AEC$ háromszögben $m^2 + \left(\frac{3a}{2}\right)^2 = 6^2$. 
+Ebbõl $m=\sqrt{\frac{144-9a^2}{4}}$.
+{\setlength\arraycolsep{2pt}\begin{eqnarray*}
+T &=& a\cdot m = a\cdot\sqrt{\frac{144-9a^2}{4}} =
+\sqrt{\frac{a^2(144-9a^2)}{4}} = \\[6pt]
+&=& \sqrt{\frac{9a^2(144-9a^2)}{36}} =
+\frac{\sqrt{9a^2(144-9a^2)}}{6}.
+\end{eqnarray*}}
+A számtani és mértani közép összefüggését használva adódik 
+$$ T = \frac{\sqrt{9a^2(144-9a^2)}}{6} \leq \frac{\frac{9a^2+(144-9a^2)}{2}}{6} = 12. $$
+Tehát $T$ maximuma $12$, ha $9a^2 = 144-9a^2$, azaz $a=\sqrt{8}$  és $m=\sqrt{18}$.
+
+\medskip
+
+{\bf 2. feladat III. megoldása: } $FD = \frac{b}{2}$, ezért  $FD:AD =1:2$.
+
+\centerline{\includegraphics{figures/2006-11-2B}}
+
+Ha az $AF=3$ szakaszt rögzítjük, akkor $D$ az $AF$ szakaszhoz tartozó $1:2$ arányú Apollóniusz-körön helyezkedhet el, amely illeszkedik azokra az $S$ és $R$ pontokra, amelyekre $AS:SF=2:1$, azaz $FS=1$, és $AR:FR=2:1$, azaz $FR=3$.
+
+Tehát a kör átmérõje $4$, sugara $2$. Az $AFD$ háromszögben $AF=3$, ezért területe akkor a legnagyobb, ha magassága a legnagyobb, vagyis $m=2$ esetén. 
+
+Ekkor $T_{AFD\triangle}=3^2/2 = 3$.  $T= 4T_{AFD\triangle} = 12$. 
+
+\medskip
+
+{\bf 2. feladat IV. megoldása: } Húzzuk be az $ABD$ háromszög másik két súlyvonalát is! Mivel a háromszög egyenlõ szárú, ezért  $SA=SB=2$.
+
+\centerline{\includegraphics{figures/2006-11-2C}}
+
+Az $ABS$ háromszög területe akkor a legnagyobb, ha a két súlyvonal merõleges egymásra, ekkor $T_{SBA\triangle} = 2^2 /2 =2$, viszont 
+\[ T_{SBA\triangle} =  \frac{1}{3}T_{ABD\triangle}  =  \frac{1}{6}T. \]
+Tehát $T$ maximuma $12$, ha az $ABD$ háromszög $s_a$  és  $s_b$  súlyvonalai merõlegesek egymásra.
+
+\medskip
+
+
+\hbox to \hsize{\hskip2truecm\hrulefill\hskip2truecm}
+{\bf 3. feladat: } Adjuk meg a $\sqrt{x}+\sqrt[4]{x} + \sqrt[8]{x} = \sqrt[4]{x^3}$   egyenlet összes olyan valós megoldását, amelyekre $x<1$  teljesül. 
+
+
+
+
+\ki{Bíró Bálint}{Eger}\medskip
+
+{\bf 3. feladat I. megoldása: } A négyzetgyök értelmezése miatt  $x\geq 0$.
+Az $x=0$ nyilvánvalóan gyöke az egyenletnek, ez megfelel az  $x<1$ feltételnek is. Legyen most  $\sqrt[8]{x} = a$, ezzel $\sqrt{x} = a^4$, $\sqrt[4]{x} = a^2$ és $\sqrt[4]{x^3} = a^6$.
+Ezzel a jelöléssel:
+\[ a^4 + a^2 + a = a^6, \]
+azaz
+\begin{equation}
+a(a^3+a+1) = a^6.
+\end{equation}
+Mivel $a=0$   esetén $x=0$    lehet csak, és azt az esetet már vizsgáltuk, ezért a továbbiakban $x\neq 0$  és így $a\neq 0$. Ekkor viszont (1) helyett az
+\begin{equation}
+a^3+a+1 = a^5
+\end{equation}
+egyenletet kapjuk. (2) átalakítható:
+{\setlength\arraycolsep{2pt}\begin{eqnarray*}
+a+1 &=& a^3\cdot(a^2-1) \\
+a+1 &=& a^3\cdot(a+1)(a-1).
+\end{eqnarray*}}
+Mivel $x>0$  miatt most $a>0$, ezért $a+1\neq 0$, s így
+\[ a^3\cdot(a-1) = 1, \]
+vagyis
+\[ a^4 - a^3 = 1, \]
+tehát
+\begin{equation}
+a^4 = a^3 + 1.
+\end{equation}
+Osszuk el (4) mindkét oldalát $2$-vel!
+\begin{equation}
+\frac{a^4}{2} = \frac{a^3+1}{2}.
+\end{equation}
+Alkalmazva az $a^3$  és $1$  számokra a számtani és mértani közép közötti egyenlõtlenséget:
+\[ \frac{a^4}{2} = \frac{a^3+1}{2} \geq \sqrt{a^3}, \]
+ahonnan
+\[ \frac{a^8}{4} \geq a^3, \]
+majd a pozitív $a^3$-el való osztás után:
+\[ a^5 \geq 4, \]
+ezután pedig $a\geq\sqrt[5]{4}$ következik. Ez azt jelenti, hogy
+$\sqrt[8]{x} \geq \sqrt[5]{4}$,
+azaz
+$\sqrt[40]{x^5} \geq \sqrt[40]{4^8}$,
+és ezért
+$x^5 \geq 2^{16}$
+teljesül. Eszerint:
+$x\geq 8\cdot\sqrt[5]{2}$, 
+ugyanakkor
+$\sqrt[5]{2} > 1$, és  $x\geq 8$,
+ez azonban ellentmond $x<1$-nek.
+
+Eszerint feltételeink mellett a kiinduló egyenletnek egyetlen megoldása van, mégpedig $x=0$.
+
+\medskip
+
+
+\hbox to \hsize{\hskip2truecm\hrulefill\hskip2truecm}
+{\bf 4. feladat: } \def\degrees{{}^\circ}
+Egy tetszõleges $\triangle_0$ háromszögbe beírjuk a $\triangle_1$ háromszöget úgy, hogy csúcsai az elõbbi háromszögbe írt körvonal és a háromszög oldalainak érintési pontjai. A $\triangle_1$ háromszögbe beírjuk a $\triangle_2$ háromszöget ugyanilyen módon. Ezt az eljárást a $\triangle_7$ háromszög megszerkesztéséig folytatjuk. Bizonyítsuk be, hogy a $\triangle_7$ háromszög bármelyik szöge nagyobb $59\degrees$-nál és kisebb $61\degrees$-nál. 
+
+
+
+
+\ki{Neubauer Ferenc}{Munkács}\medskip
+
+{\bf 4. feladat I. megoldása: } \def\degrees{{}^\circ}
+Legyen $ABC$ az adott háromszög, $O$ a beírt kör középpontja, $A_1B_1C_1$ az elsõ beírt háromszög. Akkor $AB_1OC_1$ négyszög húrnégyszög, mivel $B_1$ és $C_1$ szögeinek összege $180\degrees$, ezért $B_1OC_1\angle=180\degrees-A\angle$.
+\centerline{\includegraphics{figures/2006-11-4}}
+Ezért 
+$B_1A_1C_1\angle=A1\angle =0,5B_1OC_1\angle =90\degrees -0,5A\angle$. Hasonlóképpen $A_{i+1}\angle =90\degrees -0,5A_i\angle$, ahol $i=1,2,\dots,6$. Ha 
+\begin{equation}
+60\degrees -\varepsilon<A\angle <60\degrees +\varepsilon,
+\end{equation}
+akkor $A_1$ szögre igaz a következõ egyenlõtlenség: 
+\[ 30\degrees - \frac{\varepsilon}{2} < 0,5A\angle < 30\degrees + \frac{\varepsilon}{2} \iff -30\degrees - \frac{\varepsilon}{2} < -0,5A\angle < -30\degrees + \frac{\varepsilon}{2} \]
+\[ 60\degrees - \frac{\varepsilon}{2} < 90\degrees - 0,5A\angle < 60\degrees + \frac{\varepsilon}{2} \iff 60\degrees - \frac{\varepsilon}{2} < A_1\angle < 60\degrees + \frac{\varepsilon}{2}. \]
+Ebben az esetben viszont az $A_i$ szögek mindegyikére igaz: $60\degrees - \frac{\varepsilon}{2^i} < A_i\angle < 60\degrees + \frac{\varepsilon}{2^i}$, ahol $i =1,2,\dots,7$. 
+Tehát  
+\[ 60\degrees - \frac{\varepsilon}{2^7} < A_7\angle < 60\degrees + \frac{\varepsilon}{2^7}. \]
+
+Mivel az (1) egyenlõtlenség teljesül a $\triangle_0$ háromszögre $\varepsilon=120\degrees$  esetében, ezért a $\triangle_7$ háromszögre kapjuk:
+\[ 60\degrees - \frac{120\degrees}{2^7} < A_7\angle < 60\degrees + \frac{120\degrees}{2^7} \iff
+60\degrees - \frac{120\degrees}{128} < A_7\angle < 60\degrees + \frac{120\degrees}{128} \iff 59\degrees < A_7\angle < 61\degrees. \]
+Nyilvánvaló, hogy a $B_7$ és $C_7$ szögekre ugyanez az értékelés érvényes.
+
+\medskip
+
+{\bf 4. feladat II. megoldása: } \def\degrees{{}^\circ}
+
+Lépésenként kifejezzük az $A_i$ ($i=1,2,\dots,7$) szögeket az $A\angle$  segítségével:
+$${\setlength\arraycolsep{2pt}\begin{array}{rcl} 
+A_1\angle &=&90\degrees -0,5A\angle; \\[6pt]
+A_2\angle &=&90\degrees -0,5A_1\angle =90\degrees -0,5(90\degrees -0,5A\angle )=45\degrees +0,5^2A\angle; \\[6pt]
+A_3\angle &=&67,5\degrees -0,5^3A\angle; \\[6pt]
+A_4\angle &=&56,25\degrees +0,5^4 A\angle; \\[6pt]
+A_5\angle &=&61,875\degrees -0,5^5A\angle; \\[6pt]
+A_6\angle &=&59,0625\degrees +0,5^6A\angle; \\[6pt]
+A_7\angle &=&60,46875\degrees -0,5^7A\angle. 
+\end{array}}$$
+Mivel $0\degrees < A\angle <180\degrees$ , ezért  $0\degrees < {0,5}^7A\angle <1,40625\degrees \iff -1,40625\degrees <-{0,5}^7A\angle < 0\degrees  \iff 59,0625\degrees  < A_7\angle < 60,46875\degrees \iff 59\degrees < A_7\angle < 61\degrees$.
+\medskip
+
+
+\hbox to \hsize{\hskip2truecm\hrulefill\hskip2truecm}
+{\bf 5. feladat: } Van $n^2$  darab egységnégyzetünk, ezekbõl egy $n\times n$-es nagyobb négyzetet raktunk össze. Legfeljebb hány kis négyzetet lehet elvenni úgy, hogy a megmaradó alakzat kerülete ugyanannyi legyen, mint a nagy négyzeté, de összefüggõ maradjon a következõ értelemben: az alakzat bármely kis négyzetének bármely belsõ pontjából bármely másik kis négyzet bármely belsõ pontjába el lehessen jutni olyan úton, amely teljes egészében az alakzathoz tartozik és nem halad át egyik kis négyzetcsúcson sem. 
+
+
+
+
+
+\ki{Urbán János}{Budapest}\medskip
+
+{\bf 5. feladat I. megoldása: } Az $n^2$ darab kis négyzetbõl $(n-1)^2$ darabot el lehet venni, például úgy, hogy a bal oldali oszlop és az alsó sor megmaradjon.
+
+Így $2n-1$ kis négyzet maradt. 
+
+$2n-2$ kis négyzet már kevés, mert az összefüggõség miatt a $4(2n-2)=8n-8$ összkerületbõl a csatlakozások miatt $2(2n-3)=4n-6$-ot kell levonni, így az alakzat kerületére csak $4n-2$ marad. 
+
+\medskip
+
+
+\hbox to \hsize{\hskip2truecm\hrulefill\hskip2truecm}
+{\bf 6. feladat: } Hányféle módon lehet a természetes számokat pirossal és zölddel színezni úgy, hogy teljesüljenek a következõ feltételek: a 6-os piros; létezik olyan természetes szám, amely zöld színû; bármely két különbözõ színû szám összege zöld, a szorzatuk pedig piros?
+
+
+
+\ki{Szabó Magda}{Szabadka}\medskip
+
+{\bf 6. feladat I. megoldása: } A harmadik feltétel ekvivalens a következõ állítással: minden piros szám osztható valamilyen egynél nagyobb számmal. A jobbról balra terjedõ implikáció direkt közvetkezik, tehát csupán a balról jobbra történõ következtetést kell igazolni. 
+
+Legyen az $n$ a legkisebb piros szám és a feltétel alapján minden $kn$ is piros, tetszõleges $k$ természetes szám esetén. Bizonyítani kell, hogy más fajta számok nem léteznek és ezt indirekt úton tesszük. Tegyük fel az ellenkezõjét, vagyis hogy van olyan piros $m$ szám, amely $qn+r$ alakú ($0<r<n$). A $qn$ piros, ezért az $r$ is piros, hiszen ellenkezõ esetben, $qn$ piros voltából és abból, hogy $r$ zöld, az összegnek is zöldnek  kell lenni. Tehát ellentmondáshoz jutottunk, mert a feltétel alapján $n$ a legkisebb piros szám. 
+
+Ezután levonhatjuk a következtetést, hogy háromféle színezés lehetséges:
+\begin{enumerate}
+\item A pirosak a páros számok, míg a zöldek a páratlanok.
+\item A pirosak a hárommal osztható számok, míg a többi szám zöld.
+\item A pirosak a hattal osztható számok, míg a többiek a zöldek.
+\end{enumerate}
+
+\medskip
+
+\vfill
+\end{document}
