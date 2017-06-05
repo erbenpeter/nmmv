@@ -1,0 +1,269 @@
+\documentclass[a4paper,10pt]{article} 
+\usepackage[latin2]{inputenc}
+\usepackage{graphicx}
+\usepackage{amssymb}
+\voffset - 20pt
+\hoffset - 35pt
+\textwidth 450pt
+\textheight 650pt 
+\frenchspacing 
+
+\pagestyle{empty}
+\def\ki#1#2{\hfill {\it #1 (#2)}\medskip}
+
+\def\tg{\, \hbox{tg} \,}
+\def\ctg{\, \hbox{ctg} \,}
+\def\arctg{\, \hbox{arctg} \,}
+\def\arcctg{\, \hbox{arcctg} \,}
+
+\begin{document}
+\begin{center} \Large {\em XVI. Nemzetközi Magyar Matematika Verseny} \end{center}
+\begin{center} \large{\em Szeged, 2007. március 14-18.} \end{center}
+\smallskip
+\begin{center} \large{\bf 10. osztály} \end{center}
+\bigskip 
+
+{\bf 1. feladat: } Hány olyan részhalmaza
+van az $\{1,2,3,4\}$
+halmaznak, amely nem tartalmaz három szomszédos számot?
+Válaszoljuk meg a kérdést
+az $\{1,2,3,4,5\}$ és $\{1$,$2$,$3$,$4$,$5$,$6$,$7$,$8$,$9$,$10\}$
+halmazok esetén is.
+
+
+\ki{Erdõs Gábor}{Nagykanizsa}\medskip
+
+{\bf 1. feladat I. megoldása: } Az $\{1,2,3,4\}$ halmaznak $2^4=16$ részhalmaza van,
+amibõl kettõ háromelemû és egy négyelemû tartalmaz
+három szomszédos számot. A többi $16-3=13$ részhalmaz
+olyan, hogy nem tartalmaz
+három egymást követõ elemet.
+
+Az $\{1,2,3,4,5\}$ halmaz esetén külön számoljuk azokat
+a részhalmazokat, amelyeknek
+$5$ az eleme és külön azokat, amelyeknek nem eleme.
+Ha $5$ nem tartozik a részhalmazhoz, akkor az elõzõ
+részfeladat $13$ részhalmaza adja a hozzájárulást az összeszámoláshoz.
+Ha $5$ eleme a részhalmaznak, akkor két alesetet
+különböztetünk meg aszerint, hogy $4$ részhalmazunkhoz tartozik-e.
+Ha nem, akkor az $5$ nevû elem mellett $\{1,2,3\}$ halmaz
+összes valódi részhalmaza szerepelhet. Ez $7$ további 
+összeszámolandó halmazt ad.
+Ha a $4$ és $5$  is részhalmazunkhoz tartozik, akkor $3$
+nem lehet benne, de $\{1,2\}$ tetszõleges részhalmaza
+szerepelhet. Ez további $4$ lehetõség.
+Összesen $13+7+4=24$ megfelelõ részhalmazunk van.
+
+Általában legyen $r_n$
+az $\{1,2,3,\ldots,n-1,n\}$ halmaz
+azon részhalmazainak száma, amelyek
+nem tartalmaznak három szomszédos számot.
+A számolandó részhalmazokat a következõ három
+tulajdonság három diszjunkt halmazba osztja:
+
+a) $n$ nem eleme,
+
+b) $n$ eleme, de $n-1$ nem eleme,
+
+c) $n$ és $n-1$ is eleme.
+
+(ez utóbbi tulajdonság esetén $n-2$ szükségszerûen nem tartozik
+a megszámolandó részhalmazhoz).
+Az elsõ tulajdonsággal rendelkezõ részhalmazok
+száma $r_{n-1}$,
+a második tulajdonsággal rendelkezõ részhalmazok
+száma $r_{n-2}$,
+a harmadik tulajdonsággal rendelkezõ részhalmazok
+száma $r_{n-3}$.
+Így $r_n=r_{n-1}+r_{n-2}+r_{n-3}$.
+Tudjuk, hogy $r_3=7$, $r_4=13$ és $r_5=24$.
+Ebbõl az $r_n$ sorozat további elemei és köztük $r_{10}$ is számolható:
+$\{r_n\}_{n=3}^{10}=7,13,24,44,81,149,274,504$.
+Azaz az
+$\{1,2,3,4,5,6,7,8,9,10\}$ halmaznak $504$ részhalmaza
+nem tartalmaz három szomszédos számot.
+\medskip
+
+
+\hbox to \hsize{\hskip2truecm\hrulefill\hskip2truecm}
+{\bf 2. feladat: } Egy $ABCD$ négyzet $AB$ oldalára mint átmérõre egy félkört rajzolunk
+a négyzeten kívülre.
+Legyen $P$ a félkör egy tetszõleges
+pontja. Kössük össze $P$-t a négyzet $C$, illetve $D$
+csúcsával. Az összekötõ 
+szakaszok egy-egy pontban metszik az $AB$ oldalt és
+ezzel három szakaszra bontják.
+Bizonyítsuk be, hogy a három szakasz közül a középsõ hossza
+a két szélsõ szakasz
+hosszának mértani közepe.
+
+
+\ki{Dr. Katz Sándor}{Bonyhád}\medskip
+
+{\bf 2. feladat I. megoldása: } $P$-t kössük össze az $A$ és $B$ csúccsal.
+Az összekötõ egyenesek
+messék a $DC$ egyenest rendre
+az $A'$ és $B'$ pontokban.
+
+\centerline{\includegraphics{figures/2007-10-2}}
+
+Az $AB$ szakasz három részre osztását a $P$ pontból a $DC$
+egyenesre
+vetítve
+a három részszakasz vetített képe $A'D$, $DC$ és $CB'$
+lesz. Mivel az $AB$ vetített szakasz párhuzamos
+azzal az egyenessel, amelyre vetítettünk, ezért
+$A'D$, $DC$ és $CB'$ hossza arányos
+az $AB$ szakasz három részének hosszaival.
+Elég belátni, hogy
+$A'D$ és $CB'$ mértani közepe $DC$.
+
+Az $ADA'$ háromszöget vízszintesen
+toljuk el úgy, hogy az $AD$ oldal a $BC$ pozícióba kerüljön.
+Az eltolt
+háromszög a $BCB'$ háromszöggel
+együtt egy derékszögû háromszöget alkot
+(a $B$-nél kialakuló szög egyenlõ az $APB\angle$ szöggel, ami
+Thalesz tétele alapján derékszög).
+Erre a háromszögre a magasságtételt alkalmazva
+adódik az állítás, hiszen a háromszög átfogójához
+tartozó magassága $BC$, amely $DC$-vel azonos hosszúságú.
+\medskip
+
+
+\hbox to \hsize{\hskip2truecm\hrulefill\hskip2truecm}
+{\bf 3. feladat: } Egy $ABC$ háromszög belsejében felveszünk
+egy $M$ pontot, majd összekötjük
+a három csúccsal.
+Az $AM$ egyenes messe a szemközti ($BC$) oldalt az $A'$
+pontban. Hasonlóan legyenek $B'$ és $C'$ a $BM$ és $CM$ egyenesek
+és a megfelelõ
+csúcsokkal szemközti oldalak metszéspontjai.
+Tudjuk, hogy $M$ felezi
+az $AA'$ szakaszt.
+Bizonyítsuk be, hogy 
+$${AB'\over B'C}+{AC'\over C'B}=1.$$
+
+
+\ki{Dr. Pintér Ferenc és Bíró Bálint}{Nagykanizsa, Eger}\medskip
+
+{\bf 3. feladat I. megoldása: } $A'$-n keresztül húzzunk párhuzamost
+az $AB$ oldallal. Ez messe $P$ pontban a $CC'$ szakaszt.
+Az $AC'M$ háromszög és $MPA'$ háromszög
+hasonló és az $AM=MA'$ feltétel miatt egybevágó.
+Így az $A'P$ szakasz hossza azonos
+az $AC'$ szakasz hosszával.
+$AC'/C'B$ a $CPA'$ és $CC'B$ hasonló háromszögek
+hasonlósági aránya. Ez másképpen $A' C/BC$.
+
+\centerline{\includegraphics{figures/2007-10-3}}
+
+Teljesen hasonlóan $AB'/B'C=BA'/BC$.
+Így
+$${AB'\over B'C}+{AC'\over C'B}={BA'\over BC}
++{A'C\over BC}
+={BA'+A'C\over BC}=1.$$
+\medskip
+
+
+\hbox to \hsize{\hskip2truecm\hrulefill\hskip2truecm}
+{\bf 4. feladat: } Határozzuk meg azokat a $p$ és $q$
+természetes számokat, amelyekre
+a $p$, $q$, $p+q$ és $p^2+q^2-p-q-1$ négy szám
+mindegyike prím.
+
+
+\ki{Oláh György}{Komárom}\medskip
+
+{\bf 4. feladat I. megoldása: } Legyen $p$ és $q$ olyan, hogy a feladatbeli négy szám prím.
+Ekkor $p$ és $q$ legalább $2$, $p+q$ legalább $4$.
+Mivel $p+q$ prím, ezért páratlan, azaz $p$ és $q$ paritása különbözik.
+Szimmetria okokból feltehetjük, hogy $q$ páros ($p$ páratlan).
+$q$ prímsége miatt $q=2$ és tudjuk, hogy
+$p$, $p+2$, $p^2-p+1$ prímszámok.
+
+$p$, $p+1$ és $p+2$ közül az egyik hárommal osztható.
+$p+2$ legalább négy és prím, így nem lehet hárommal osztható.
+Két eset marad.
+
+{\sl 1.~eset: $p$ osztható hárommal.}
+$p$ prím, így csak $p=3$
+lehetséges. Ellenõrizhetõ, hogy ez megoldást is ad.
+
+{\sl 2.~eset: $p+1$ osztható hárommal.}
+Ekkor $p^2-p+1=(p+1)^2-3p$ egyrészt prím, másrészt hárommal osztható.
+Így $p^2-p+1=3$, ahonnan a $p$ természetes szám értéke
+csak $2$ lehet. Ekkor azonban $p+q=4$, így
+nem kapunk új megoldást.
+
+Csak a $p=3$, $q=2$ , illetve $p=2$, $q=3$ számpárok a
+megfelelõek.
+\medskip
+
+
+\hbox to \hsize{\hskip2truecm\hrulefill\hskip2truecm}
+{\bf 5. feladat: } Oldjuk meg a következõ egyenletet a valós számok halmazán:
+$${1\over 1-x}+{3\over 3-x}+{5\over 5-x}+{7\over 7-x}=(x-2)^2.$$
+
+
+\ki{Kacsó Ferenc}{Marosvásárhely}\medskip
+
+{\bf 5. feladat I. megoldása: } Rendezve:
+{\setlength\arraycolsep{2pt}\begin{eqnarray*}
+\left({1\over 1-x}-1\right)+\left({3\over 3-x}-1\right)+
+\left({5\over 5-x}-1\right)+\left({7\over 7-x}-1\right)
+&=&
+(x-2)^2-4,\\[6pt]
+x\left({1\over 1-x}+{1\over 3-x}+{1\over 5-x}+{1\over 7-x}+4-x
+\right)&=&0.
+\end{eqnarray*}}
+A szorzat úgy lehet $0$, ha az elsõ tényezõ $0$
+(ezzel megkaptuk az $x_1=0$ elsõ gyököt),
+vagy a második tényezõ $0$.
+A második lehetõségre vonatkozó egyenletet továbbalakítjuk:
+$$\left({1\over 1-x}+{1\over 7-x}\right)+
+\left({1\over 3-x}+{1\over 5-x}\right)+(4-x)=0.$$
+A két zárójelben a törteket közös nevezõre hozva
+$4-x$ közös tényezõ
+lesz mindegyik tagban:
+$$(4-x)
+\left({2\over x^2-8x+7}+{2\over x^2-8x+15}+1\right)=0.$$
+A szorzat ismét akkor lesz $0$, ha elsõ tényezõje $0$
+(ez adja második gyököt, $x_2=4$-et),
+vagy a második tényezõje $0$.
+A második lehetõséghez tartozó gyökök megkereséséhez
+vezessük be a $t=x^2-8x+11$ új változót:
+$${2\over t-4}+{2\over t+4}+1=0.$$
+Ebbõl $t^2+4t-16=0$, $t_{1,2}=-2\pm2\sqrt5$.
+A $t=x^2-8x+11$ összefüggés
+$t+5=(x-4)^2$ alakban is írható.
+Valós $x$-gyököt akkor kapunk, ha $t+5$ nem-negatív, azaz
+$t=-2+2\sqrt5$.
+Ekkor $x_{3,4}=4\pm\sqrt{3+2\sqrt5}$.
+\medskip
+
+
+\hbox to \hsize{\hskip2truecm\hrulefill\hskip2truecm}
+{\bf 6. feladat: } A pozitív egész számok $A$ és $B$ halmaza
+hasonló, ha vannak olyan $a, b\geq 2$ természetes
+számok, hogy $A$ mindegyik elemét $a$-val szorozva ugyanahhoz a
+halmazhoz jussunk mintha $B$ mindegyik elemét $b$-vel szoroznánk.
+Bizonyítsuk be, hogy a pozitív egész számok halmaza nem bontható
+fel két diszjunkt halmazra úgy, hogy azok hasonlók legyenek.
+
+
+\ki{Farkas Csaba}{Kolozsvár}\medskip
+
+{\bf 6. feladat I. megoldása: } A feladat hibásan lett kitûzve, az $(a,b) = 1$ feltétel kimaradt. Ebben az esetben a megoldás a következõ:
+Tegyük fel, hogy mégis ketté tudjuk osztani két diszjunkt hasonló
+($A$ és $B$) halmazra a pozitív egészek halmazát.
+Legyen $a$ és $b$ a hasonlóságot bizonyító számok.
+Feltehetõ, hogy $1 \in A$. Ekkor $a \cdot 1$  a $B$ halmaz $b$-szeresei között lenne, ez azonban ellentmondás, hiszen $b \not | a$.
+
+A kitûzött feladatra azonban lehet ellenpéldát találni, legyen $A$ azon pozitív egészek halmaza, melyek prímtényezõs felbontásában a 2 páros kitevõn szerepel, $B$ pedig azoké, melyekben nem. Ebben az esetben $a=4$, $b=2$ választással a halmazok láthatóan hasonlók lesznek.
+
+
+\medskip
+
+\vfill
+\end{document}

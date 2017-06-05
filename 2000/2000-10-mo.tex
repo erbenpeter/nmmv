@@ -1,0 +1,126 @@
+\documentclass[a4paper,10pt]{article} 
+\usepackage[latin2]{inputenc}
+\usepackage{graphicx}
+\usepackage{amssymb}
+\voffset - 20pt
+\hoffset - 35pt
+\textwidth 450pt
+\textheight 650pt 
+\frenchspacing 
+
+\pagestyle{empty}
+\def\ki#1#2{\hfill {\it #1 (#2)}\medskip}
+
+\def\tg{\, \hbox{tg} \,}
+\def\ctg{\, \hbox{ctg} \,}
+\def\arctg{\, \hbox{arctg} \,}
+\def\arcctg{\, \hbox{arcctg} \,}
+
+\begin{document}
+\begin{center} \Large {\em IX. Nemzetközi Magyar Matematika Verseny} \end{center}
+\begin{center} \large{\em Dunaszerdahely, 2000. március 23-27.} \end{center}
+\smallskip
+\begin{center} \large{\bf 10. osztály} \end{center}
+\bigskip 
+
+{\bf 1. feladat: } Oldjuk meg az egész számok körében az
+$${\setlength\arraycolsep{2pt}\begin{array}{rcl}
+x^2-y^2-z^2 &=& 1 \\[6pt]
+y+z-x &=& 3
+\end{array}}
+$$
+egyenletrendszert! 
+
+
+\ki{Neubauer Ferenc}{Munkács}\medskip
+
+{\bf 1. feladat I. megoldása: } Fejezzük ki $x$-et a második egyenletbõl és helyettesítsük be az elsõbe! Azt kapjuk: 
+$$(y + z -3)^2 - y^2 - z^2 = 1$$
+Végezzük el a mûveleteket, ekkor az adódik:
+$$yz - 3z - 3y + 4 = 0$$
+Ezt átalakítva $z(y-3) = 3y - 4$-et kapjuk. $y = 3$-ra ez nyilván nem igaz. Ha $y \not = 3$, akkor átrendezve $z = {3y - 4 \over y - 3} = 3 + {5 \over y-3}$
+Ez láthatóan csak akkor lesz egész, ha $y-3 | 5$, ez azt jelenti, hogy $y-3$ lehetséges értékei 1, 5, $-1$, $-5$. Ezekre az adott képletek alapján kiszámolva a változók értékét négy megoldást kapunk: $x = 9, y = 4, z = 8$, $x = -3; y = 2; z = -2$, $x = 9; y = 8; z = 4$ és $x = -3; y = -2; z = 2$.
+\medskip
+
+
+\hbox to \hsize{\hskip2truecm\hrulefill\hskip2truecm}
+{\bf 2. feladat: } Az $ABC$ derékszögû háromszögben ($ACB\angle=90^\circ$) a beírt kör $K$ középpontját a háromszög köré írt kör $F$ középpontjával összekötõ egyenes az átfogóval $45^\circ$-os szöget zár be. Számítsuk ki az átfogó és a beírt kör sugarának arányát!
+
+
+\ki{Mészáros József}{Galánta}\medskip
+
+{\bf 2. feladat I. megoldása: } %Ábra a jelölésekkel
+Jelöljük $\rho$-val a beírt kör sugarát! Ekkor $FD = KD = CE = \rho$ (a $KCE$ és $KFD$ szögek is $45^{\circ}$-osak), tehát $FCB$ egyenlõszárú háromszög, hiszen az érintõszakaszok egyenlõségébõl $BD = BE$ is teljesül. $AF = FB$, és a két elõzõ egyenlõségünk miatt $FB = BC$. Ez azt jelenti, hogy $BAC \angle = 30^{\circ}$, $ABC \angle = 60^{\circ}$. Az $AF$ szakasz hosszát $c$-vel jelölve $BC = c$ és $AC = c \sqrt{3}$. Derékszögû háromszögben ismert összefüggés, hogy $CB + AC - AB = 2 \rho$. Ez pedig azt jelenti, hogy $c + c \sqrt{3} - 2c = 2 \rho$, ebbõl pedig $p = {c \sqrt{3} - c \over 2} = \rho$, ebbõl $c$-t kiemelve ${2c(\sqrt{3} - 1) \over 4} = \rho$. Ezt átrendezve pedig ${2c \over \rho} = {4 \over \sqrt{3} - 1}$, ezt gyöktelenítve pedig a kérdéses hányados $2 \sqrt{3} + 1$.
+\medskip
+
+
+\hbox to \hsize{\hskip2truecm\hrulefill\hskip2truecm}
+{\bf 3. feladat: } Számítsuk ki az $a_1+a_2+\dots+a_{2000}$ összeget, ha
+$a_n=\frac{1}{(n+1)\sqrt n + n\sqrt{n+1}} \ \ (n \in {\mathbb{N^+}})$!
+
+
+\ki{Kántor Sándorné}{Debrecen}\medskip
+
+{\bf 3. feladat I. megoldása: } Bontsuk szét az $a_n$-t definiáló törtet!
+$${1 \over (n+1) \sqrt{n} + n \sqrt{n+1}} = {(n+1) \sqrt{n} - n \sqrt{n+1} \over (n+1)^2n - n^2(n+1)} = {1 \over \sqrt{n}} - {1 \over \sqrt{n+1}}$$
+Így a feladatban szereplõ összeg teleszkopikus:
+{\setlength\arraycolsep{2pt}\begin{eqnarray*}
+&&a_1 + a_2 + a_3 + \ldots + a_{1999} + a_{2000} = \\[6pt]
+&&= \left({1 \over \sqrt{1}} - {1 \over \sqrt{2}} \right) + \left({1 \over \sqrt{2}} - {1 \over \sqrt{3}} \right) + \ldots + \left({1 \over \sqrt{1999}} - {1 \over \sqrt{2000}} \right) + \left({1 \over \sqrt{2000}} - {1 \over \sqrt{2001}} \right) = \\[6pt]
+&&= 1 - {1 \over \sqrt{2001}} \approx 0,9977645
+\end{eqnarray*}}
+\medskip
+
+
+\hbox to \hsize{\hskip2truecm\hrulefill\hskip2truecm}
+{\bf 4. feladat: } Az $ABC$ háromszög $BC$ oldalán úgy vettük fel az $A_1, A_2, \dots, A_{n-1}$ pontokat, hogy az $AA_1, AA_2, \dots, AA_{n-1}$ félegyenesek a $BAC\angle=\alpha$ szöget $n$ egyenlõ részre osztják. Igazoljuk, hogy
+$$AB \cdot AA_1+AA_1\cdot AA_2+\dots+AA_{n-1}\cdot AC=AB\cdot AC\cdot \frac{\sin \alpha}{\sin{\frac{\alpha}{n}}} .$$
+
+
+\ki{Bencze Mihály}{Brassó}\medskip
+
+{\bf 4. feladat I. megoldása: } %Esetleg egy vázlatos ábra a pontok elhelyezkedésérõl
+A $BAA_1, A_1AA_2, \ldots , A_{n-1}AC$ háromszögek együttesen kiadják az $ABC$ háromszög területét. A trigonometrikus területképlettel ($\alpha$ az $A$-nál lévõ szöget is jelöli)
+$$T_{ABC} = {1 \over 2} AB \cdot AA_1 \sin {\alpha \over n} + {1 \over 2} AA_1 \cdot AA_2 \sin {\alpha \over n} + \ldots + {1 \over 2} AA_{n-1}\cdot AC \sin {\alpha \over n} = {1 \over 2}AB \cdot AC \sin \alpha$$
+Ebbõl pedig átrendezve azt kapjuk, hogy
+$$AB \cdot AA_1 + AA_1 \cdot AA_2 + \ldots + AA_{n-1} \cdot AC = AB \cdot AC {\sin \alpha \over \sin {\alpha \over n}},$$
+és éppen ezt kellett igazolnunk.
+\medskip
+
+
+\hbox to \hsize{\hskip2truecm\hrulefill\hskip2truecm}
+{\bf 5. feladat: } A táblára felírtak 3 pozitív számot. Egy lépésben a táblára felírt számok közül egyet letörölhetünk és helyére a megmaradt két szám összegénél 1-gyel kisebb számot írhatunk. Néhány lépés után a táblán ez a három szám áll: 17, 75, 91. Lehetett-e a kiinduló számhármas a) 2, 2, 2; és b) 3, 3, 3 ?
+
+
+\ki{Szabó Magda}{Szabadka}\medskip
+
+{\bf 5. feladat I. megoldása: } Nézzük meg elõször az a.) esetet! Ekkor három páros számból indulunk ki, egyet letörölve a helyére páratlant írunk, így lesz két páros és egy páratlan számunk. Ezek közül ha a páratlant töröljük le, a helyére páros kerül, de ha valamelyik párost, annak a helyébe páros fog kerülni. Ez pedig azt jelenti, hogy akárhány lépést is végzünk el, a kapott számhármas még mindig két páros és egy páratlan számot fog tartalmazni. Mivel pedig a feladat által megadott eredmény nem ilyen, azért nem lehetséges, hogy a $(2,2,2)$-bõl indulva eljussunk ahhoz.
+A b.) esetben léteznek ilyen lépések. Egy lehetséges sorozatot megadunk:
+$$(3,3,3), (5,3,3), (5,3,7), (5,11,7), (17,11,7), (17,11,27), (17,43,27), (17,43,59), (17,75,59), (17,75,91)$$
+\medskip
+
+
+\hbox to \hsize{\hskip2truecm\hrulefill\hskip2truecm}
+{\bf 6. feladat: } Az $ABCD$ négyzet $AB$ oldalának $A$-hoz közelebbi harmadolópontja $H$. A $H$ pont tükörképe $A$-ra $H_1$, $B$-re $H_2$. A $CH_1$ és $AD$ egyenesek metszéspontja $E$, a $DH_2$ és $BC$ egyenesek metszéspontja $F$, végül a $CH_1$ és $DH_2$ egyenesek metszéspontja $M$. Hányad része az $ABCD$ négyzet területének a $DEM$ és $CFM$ háromszögek területének összege?
+
+
+\ki{Bíró Bálint}{Eger}\medskip
+
+{\bf 6. feladat I. megoldása: } Jelöljük az $AH = AH_1$ távolságot $x$-szel! Ekkor $BH = BH_1 = 2x$. A $BH_2F$ és $CDF$ háromszögek hasonlók lesznek, mivel szögeik egyenlõ nagyságúak. Ha most $BF$ felét $y$-nal jelöljük, akkor a hasonlóság miatt $CF = 3y$. Ugyanígy az $AH_1E$ és $CDE$ háromszögek is hasonlók, tehát ha az $AE$ hosszúságot $z$-vel jelöljük, akkor $DE = 3z$. Mivel a négyzet minden oldala egyenlõ, azért $3x = 5y = 4z$.
+
+\centerline{\includegraphics{figures/2000-10-6}}
+
+Húzzunk $M$-en át párhuzamost $AB$-vel, legyenek ennek metszéspontjai $AD$-vel és $BC$-vel $G$ és $K$! Legyen a $GM$ szakasz hossza $v$, az $MK$-é $v'$! Ekkor írjuk fel a $DEM$ és $CFM$ háromszögek területösszegét!
+$$T_{DEM} + T_{CFM} = {3zv \over 2} + {3yv' \over 2} = {3 \over 2} \left[zv + y(3x-v) \right],$$
+hiszen az nyilvánvaló, hogy $v + v' = 3x$. Tekintve, hogy $z = {3 \over 4} x$, és $y = {3 \over }x$ (ezt láttuk be az elõbb), azért
+{\setlength\arraycolsep{2pt}\begin{eqnarray*}
+T_{DEM} + T_{CFM} &=& {3 \over 2}\left[ {3 \over 4}xv + {3 \over 5}x \cdot 3x - {3 \over 5} xv \right] = \\[6pt]
+&=& {3 \over 2}\left[ {3 \over 20}xv + {9 \over 5}x^2 \right] = {3 \over 2} \left[{3 \over 20}xv + {36 \over 20}x^2\right] = {9 \over 40}x[v + 12x]
+\end{eqnarray*}}
+Ebben már csak két ismeretlen van, $x$ és $v$. A négyzet területe $9x^2$, tehát elegendõ meghatároznunk a ${v \over x}$ hányadost. Jelöljük ehhez a $GE$ szakasz hosszát $t$-vel! A $GEM$ és $AEH_1$ háromszögek hasonlók, mivel szögeik megegyeznek. Ez azt jelenti, hogy ${v \over t} = {x \over z} = {4 \over 3}$, tehát $3v = 4t$. Látható az is, hogy a $DGM$ és $DAH_2$ háromszögek is hasonlók, hiszen szögeik megegyeznek. Ezért ${3z - t \over v} = {3x \over 5x} = {3 \over 5}$. Ezt átrendezve $3z - {3 \over 4}v = {3 \over 5}v$, tehát $20z = 9v$. Tudjuk azonban, hogy $4z = 3x$, ebbõl $5 \cdot 3x = 9v$, vagyis $5x = 3v$. Ezt beírva a korábban kapott területképletbe
+$$T_{DEM} + T_{CFM} = {9 \over 40}x \left[ v + 12x \right] = {9 \over 40}x \left[{5 \over 3}x + {36 \over 3}x \right] = 9x^2 {41 \over 120}$$
+Mivel pedig az $ABCD$ négyzet területe $9x^2$, azért a két háromszög területösszege a négyzet területének ${41 \over 120}$-ad része.
+\medskip
+
+\vfill
+\end{document}

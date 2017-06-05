@@ -1,0 +1,120 @@
+\documentclass[a4paper,10pt]{article} 
+\usepackage[latin2]{inputenc}
+\usepackage{graphicx}
+\usepackage{amssymb}
+\voffset - 20pt
+\hoffset - 35pt
+\textwidth 450pt
+\textheight 650pt 
+\frenchspacing 
+
+\pagestyle{empty}
+\def\ki#1#2{\hfill {\it #1 (#2)}\medskip}
+
+\def\tg{\, \hbox{tg} \,}
+\def\ctg{\, \hbox{ctg} \,}
+\def\arctg{\, \hbox{arctg} \,}
+\def\arcctg{\, \hbox{arcctg} \,}
+
+\begin{document}
+\begin{center} \Large {\em XI. Nemzetközi Magyar Matematika Verseny} \end{center}
+\begin{center} \large{\em Sepsiszentgyörgy, 2002. márc. 16-20.} \end{center}
+\smallskip
+\begin{center} \large{\bf 12. osztály} \end{center}
+\bigskip 
+
+{\bf 1. feladat: } Tudjuk, hogy $1000$ darab természetes szám reciprokának összege nagyobb mint $10$. Bizonyítsuk be, hogy van közöttük legalább két egyenlõ szám.
+
+
+\ki{Szabó Magda}{Szabadka}\medskip
+
+{\bf 1. feladat I. megoldása: } Bizonyítsunk indirekten! Tegyük fel, hogy $x_1, x_2, \ldots , x_{1000}$ páronként különbözõ számok, ekkor feltehetjük azt is, hogy $x_1 < x_2 < \ldots < x_{1000}$. Ebbõl már következik, hogy $x_1 \geq 1, x_2 \geq 2, \ldots , x_{1000} \geq 1000$, ebbõl pedig
+$${1 \over x_1} + {1 \over x_2} + \ldots + {1 \over x_{1000}} \leq 1 + {1 \over 2} + \ldots + {1 \over 1024} =$$
+$$1 + \left( {1 \over 2} + {1 \over 3} \right) + \left( {1 \over 4} + {1 \over 5} + {1 \over 6} + {1 \over 7}\right) + \ldots + \left( {1 \over 2^9} + \ldots + {1 \over 2^{10} - 1} \right) <$$
+$$1 + \left( {1 \over 2} + {1 \over 2} \right) + \left( {1 \over 4} + {1 \over 4} + {1 \over 4} + {1 \over 4} \right) + \ldots + \left( {1 \over 2^9} + \ldots {1 \over 2^9}\right) = 10$$
+Ez ellentmond a feladat feltételének, ami azt jelenti, hogy a számok nem lehetnek páronként különbözõk.
+\medskip
+
+
+\hbox to \hsize{\hskip2truecm\hrulefill\hskip2truecm}
+{\bf 2. feladat: } Az $XOY$ derékszögû koordináta rendszerben adottak az $A\left(0, 51\right)$ és $B\left(78, 51\right)$ pontok. Létezik-e az $OX$ tengelyen olyan $M$ pont, melyre az $MAB$ háromszög belsejében elhelyezkedõ rácspontok száma pontosan $2002$? (A rácspontok azon pontok melyek koordinátái egész számok.)
+
+
+\ki{Kacsó Ferenc}{Marosvásárhely}\medskip
+
+{\bf 2. feladat I. megoldása: } Bármely $M$ pontra egészítsük ki az $MAB$ háromszöget egy $MABD$ paralelogrammává, amelyben a $D$ pont is az $x$ tengelyen helyezkedik el! Az ebben elhelyezkedõ rácspontok 50 sort alkotnak, és minden sorban legfeljebb 78 rácspont van, hiszen a sorban behúzott egyenes csak 79 egység hosszan halad a paralelogrammán belül. Ez azt jelenti, hogy a paralelogramma belsejébe legfeljebb 3900 pont esik, és a két háromszögbe esõ rácspontok száma legfeljebb 50-ben különbözhet (az $MB$ átló legfeljebb 1 ponttal juttat többet az egyik háromszögbe, mint a másikba). Így az $MAB$ háromszögbe legfeljebb 1975 rácspont eshet, ami kisebb a 2002-nél.
+\medskip
+
+
+\hbox to \hsize{\hskip2truecm\hrulefill\hskip2truecm}
+{\bf 3. feladat: } Igazoljuk, hogy a $b_{1}, b_{2}, \ldots, b_{m}$ pozitív valós számok akkor és csakis akkor alkotnak mértani haladványt (mértani sorozatot), ha
+\begin{displaymath}\sum_{k=1}^{n}b_{k}^{2}b_{n-k+1}^{2}=nb_{1}^{2}b_{n}^{2},\quad n\in\left\{1, 2, \ldots, m\right\}.\end{displaymath}
+
+
+\ki{Bencze Mihály}{Brassó}\medskip
+
+{\bf 3. feladat I. megoldása: } Tudjuk, hogy ha a $b_1, b_2, \ldots , b_n$ számok mértani sorozatot alkotnak, akkor bármely $k$-ra
+$$b_k \cdot b_{n-k+1} = b_1 \cdot b_n,$$
+amibõl az következik, hogy $\sum_{k = 1}^n b_k^2 b_{n-k+1}^2 = nb_1^2b_n^2$.
+
+A másik irány bizonyításában $n = 3$-ra azt kapjuk, hogy $b_2^2 = b_1b_3$, amibõl következik, hogy $b_1, b_2, b_3$ mértani sorozatot alkot. Most tegyük fel, hogy $b_1, b_2, \ldots ,b_n$ mértani sorozat, és lássuk be, hogy a következõ tag éppen $b_{n+1}$ lesz. Írjuk fel az összefüggést $n+1$-re, és helyettesítsük be az elsõ $n$ elemre kapott képleteket ($b_2 = b_1 \cdot q$, $b_3 = b_1 \cdot q^2$, stb.)!
+$${\setlength\arraycolsep{2pt}\begin{array}{rcl}
+b_2^2 b_n^2 + b_3^2b_{n-1}^2 + \ldots + b_n^2 b_2^2 + b_{n+1}^2b_1^2 &=& (n+1)b_1^2b_{n+1}^2 \\[6pt]
+b_1^2 q^2b_1^2q^{2n-2} + b_1^2q^4b_1^2q^{2n-4} + \ldots + b_1^2q^{2n-2}b_1^2q^2 &=& (n-1)b_1^2b_{n+1}^2,
+\end{array}}$$
+ebbõl pedig a bal oldalon összevonva és egyszerûsítve $b_{n+1} = b_1 q^n$ adódik, épp amit be akartunk látni.
+\medskip
+
+
+\hbox to \hsize{\hskip2truecm\hrulefill\hskip2truecm}
+{\bf 4. feladat: } Oldjuk meg a pozitív egész számok halmazán a következõ egyenletet
+\begin{displaymath}\left[\frac{x_{1}^{2}}{x_{2}+x_{3}}\right]+\left[\frac{x_{2}^{2}}{x_{3}+x_{4}}\right]+\cdots+\left[ \frac{x_{n}^{2}}{x_{1}+x_{2}}\right]=\left[\frac{n-1}{x_{1}+x_{2}+\cdots +x_{n}}\right],\end{displaymath}
+ahol $n\in \mathbb{N} ^*,\; n\geq 3$ és $\left[x\right]$ az $x$ szám egész részét jelöli. 
+
+
+\ki{Bencze Mihály}{Brassó}\medskip
+
+{\bf 4. feladat I. megoldása: } Minden $x_i$ pozitív egész, ami azt jelenti, hogy mindegyik legalább 1, ebbõl következõen az összegük legalább $n$. Ez azt jelenti, hogy $\left[ {n-1 \over x_1 + x_2 + \ldots + x_n} \right] = 0$. Ebbõl az következik, hogy
+$$\left[ {x_1^2 \over x_2 + x_3} \right] = \left[ {x_2^2 \over x_3 + x_4} \right] = \ldots = \left[ {x_n^2 \over x_1 + x_2} \right] = 0$$
+Ez pedig az egészrész definícióját felhasználva azt jelenti, hogy a számlálók kisebbek a megfelelõ nevezõknél, és mivel egész számokról van szó, azért
+$$\left\{ 
+\begin{array}{rcl}
+x_1^2 &\leq& x_2 + x_3 - 1 \\
+x_2^2 &\leq& x_3 + x_4 - 1 \\
+&\vdots& \\
+x_n^2 &\leq& x_1 + x_2 - 1
+\end{array}
+\right.
+$$
+A megfelelõ oldalakat összeadva azt kapjuk, hogy $\sum_{k = 1}^n(x_k - 1)^2 \leq 0$. Ez pedig csak akkor teljesülhet, ha minden ismeretlen 1-gyel egyenlõ.
+\medskip
+
+
+\hbox to \hsize{\hskip2truecm\hrulefill\hskip2truecm}
+{\bf 5. feladat: } Legyenek az $x_{1},\; x_{2}, \ldots , x_{11}$ tetszõleges egész számok. Az $a_{1},\; a_{2}, \ldots , a_{11}$ számok a $\left\{-1,0,1\right\}$ halmazbeli értékeket vehetik fel, de úgy, hogy nem mind egyenlõk $0$-val.
+Igaz-e, hogy van olyan értéke az
+$$a_{1}x_{1}+a_{2}x_{2}+\cdots +a_{11}x_{11}$$
+kifejezésnek, amely $2002$-vel osztható? 
+
+
+\ki{Róka Sándor}{Nyíregyháza}\medskip
+
+{\bf 5. feladat I. megoldása: } Tekintsük az összes olyan összeget, amely
+$$b_1x_1 + b_2x_2 + \ldots + b_{11}x_{11}$$
+alakú, ahol minden $b_i$ 0 vagy 1 lehet. Ez összesen $2^{11} = 2048$ különbözõ összeg. A skatulyaelv szerint ezek között van kettõ, amelyek 2002-vel vett osztási maradéka megegyezik. Legyenek ezek $c_1x_1 + c_2x_2 + \ldots + c_{11}x_{11}$ és $d_1x_1 + d_2x_2 + \ldots + d_{11}x_{11}$. A két kifejezés különbsége formálisan $(c_1 - d_1)x_1 + (c_2 - d_2)x_2 + \ldots + (c_{11} - d_{11})x_{11}$. Ez az elõbbiek miatt osztható lesz 2002-vel, és mivel minden $c_i - d_i$ érték az $a_i$-k értékkészletébe tartozik, azért lesznek megfelelõ $a_i$-k, melyekre az összeg 2002-vel osztható lesz.
+\medskip
+
+
+\hbox to \hsize{\hskip2truecm\hrulefill\hskip2truecm}
+{\bf 6. feladat: } Egy táblára felírtuk az egész számokat $-6$-tól $6$-ig ($13$ számot). Egy lépésben két kiválasztott szám, $a$ és $b$ helyett felírhatjuk az
+$$A=\frac{5a-12b}{13}\mbox{ \'es }B=\frac{12a+5b}{13}$$
+számokat. Elérhetjük-e azt, hogy bizonyos számú lépés után 13 egyforma szám álljon a táblán? 
+
+
+\ki{dr. Katz Sándor}{Bonyhád}\medskip
+
+{\bf 6. feladat I. megoldása: } Ha megvizsgáljuk a lehetséges lépés után keletkezõ számokat, azt találjuk, hogy négyzetösszegük megegyezik az eredeti számokéval. A számok négyzetösszege így mindvégig változatlan, és mivel eredetileg 182 volt, azért ha léteznének ilyen átalakítások, akkor minden szám $\sqrt{{182 \over 13}} = \sqrt{14}$ lenne, de mivel minden átalakítás után racionális számokat kapunk, azért ez lehetetlen.
+\medskip
+
+\vfill
+\end{document}

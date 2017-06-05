@@ -1,0 +1,118 @@
+\documentclass[a4paper,10pt]{article} 
+\usepackage[latin2]{inputenc}
+\usepackage{graphicx}
+\usepackage{amssymb}
+\voffset - 20pt
+\hoffset - 35pt
+\textwidth 450pt
+\textheight 650pt 
+\frenchspacing 
+
+\pagestyle{empty}
+\def\ki#1#2{\hfill {\it #1 (#2)}\medskip}
+
+\def\tg{\, \hbox{tg} \,}
+\def\ctg{\, \hbox{ctg} \,}
+\def\arctg{\, \hbox{arctg} \,}
+\def\arcctg{\, \hbox{arcctg} \,}
+
+\begin{document}
+\begin{center} \Large {\em VII. Nemzetközi Magyar Matematika Verseny} \end{center}
+\begin{center} \large{\em Szabadka, 1998. ápr. 23-26.} \end{center}
+\smallskip
+\begin{center} \large{\bf 11. osztály} \end{center}
+\bigskip 
+
+{\bf 1. feladat: } Adottak az $a_1, a_2, \ldots , a_{37}, b_1, b_2, \ldots , b_{37}, c_1, c_2, \ldots , c_{37}$ egész számok. Bizonyítsuk be, hogy létezik olyan $i,j,k$ egész szám, hogy $i \not = j, i \not = k, j \not = k, 1 \leq i,j,k \leq 37$, továbbá
+$${a_i + a_j + a_k \over 3}, {b_i + b_j + b_k \over 3}, {c_i + c_j + c_k \over 3}$$
+egészek!
+
+
+\ki{Kiss Sándor}{Nyíregyháza}\medskip
+
+{\bf 1. feladat I. megoldása: } Többszörösen alkalmazzuk a skatulyelvet. Az $a_i$-k száma 37, tehát lesz 13 olyan, amely ugyanazt a maradékot adja 3-mal osztva. Vegyük az ugyanezen indexekhez tartozó $b_i$-ket! Ezek között lesz legalább 5 olyan, amelyek 3-mal osztva ugyanazt adják maradékul. Vegyük az ehhez az 5 indexhez tartozó $c$-ket, ezek között lesz legalább 3 olyan, amelynek ugyanaz lesz a 3-as maradéka. Az ehhez a három indexhez tartozó $a_i$-kre, $b_i$-kre és $c_i$-kre is igaz lesz, hogy ugyanakkora 3-as maradékkal rendelkeznek, tehát összegük biztosan osztható 3-mal, vagyis ez a három index a feladat megoldását adja.
+\medskip
+
+
+\hbox to \hsize{\hskip2truecm\hrulefill\hskip2truecm}
+{\bf 2. feladat: } Igazoljuk, hogy bármely háromszögben érvényes a
+$${bc \over \varrho_a^2} + {ac \over \varrho_b^2} + {ab \over \varrho_c^2} \geq {abc \over 2 \varrho T}$$
+egyenlõtlenség, ahol $a,b,c$ a háromszög oldalai, $\varrho_a, \varrho_b, \varrho_c$ a megfelelõ oldalakhoz hozzáírt körök sugarai, $\varrho$ a háromszögbe írható kör sugara, $T$ pedig a háromszög területe.
+
+
+\ki{Oláh György}{Révkomárom}\medskip
+
+{\bf 2. feladat I. megoldása: } Osszunk le az $abc$ pozitív kifejezéssel!
+$${1 \over a \varrho_a^2} + {1 \over b \varrho_b^2} + {1 \over c \varrho_c^2} \geq {1 \over 2 \varrho T}$$
+Használjuk most fel az ismert
+$$\varrho_a = {T \over s-a}, \ \varrho_b = {T \over s-b}, \ \varrho_c = {T \over s-c}, \ \varrho = {T \over s}$$
+összefüggéseket, helyettesítsük be õket, és szorozzunk be $T^2$-tel!
+$${(s-a)^2 \over a} + {(s-b)^2 \over b} + {(s-c)^2 \over c} \geq {s \over 2}$$
+Itt pedig a mûveleteket elvégezve a következõt kapjuk:
+$$(a+b+c) \left( {1 \over a} + {1 \over b} + {1 \over c} \right) \geq 9$$
+
+Ez pedig azért igaz, mivel ${a \over b} + {b \over a} \geq 2$, ${b \over c} + {c \over b} \geq 2$, ${a \over c} + {c \over a} \geq 2$. Egyenlõség csak akkor állhat fenn, ha $a = b = c$.
+\medskip
+
+
+\hbox to \hsize{\hskip2truecm\hrulefill\hskip2truecm}
+{\bf 3. feladat: } Adottak az $a, a+d, a+2d, \ldots , a+(n-1)d$ pozitív egész számok ($n > 1$, egész). Igazoljuk, hogy ha az adott számok egyike sem osztható $n$-nel, akkor $n$ és $d$ nem relatív prímek!
+
+
+\ki{Zolnai Irén}{Újvidék}\medskip
+
+{\bf 3. feladat I. megoldása: } Ha valóban nincs olyan szám, amely osztható $n$-nel, akkor az $n$ darab szám közül biztosan van kettõ, amelyeknek megegyezik az $n$-es maradéka, hiszen $n$ darab számunk van, amelyek csak $n-1$-féle maradékot vehetnek föl. Legyen ez a két szám $a+id$ és $a+jd$ ($i > j$). Ekkor a két szám különbsége osztható lesz $d$-vel, tehát $(i-j)d$ osztható lesz $n$-nel, mivel pedig $i-j < n$, azért $d$-nek kell közös prímtényezõt tartalmaznia $n$-nel, tehát $d$ és $n$ legnagyobb közös osztója egész biztosan nagyobb lesz, mint 1.
+\medskip
+
+
+\hbox to \hsize{\hskip2truecm\hrulefill\hskip2truecm}
+{\bf 4. feladat: } Egy derékszögû koordináta-rendszerben úgy helyeztünk el végtelen sok téglalapot, hogy mindegyiknek egyik oldala az $x$, egy másik oldala pedig az $y$ tengelyre illeszkedjék. A téglalapok origóval szemközti csúcsának koordinátái egész számok. Mutassuk meg, hogy van a téglalapok között két olyan, amelyek közül egyik tartalmazza a másikat!
+
+
+\ki{Bogdán Zoltán}{Cegléd}\medskip
+
+{\bf 4. feladat I. megoldása: } Az általánosság megszorítása nélkül föltehetjük, hogy az elsõ síknegyedben fölvettünk végtelen sok téglalapot (a végtelen sok téglalapból valamelyik síknegyedbe mindenképpen jutnia kell végtelen soknak). Legyen az egyik ilyen téglalap csúcspontjának koordinátája $(a;b)$.
+
+Bármely $i,j > 0$-ra igaz az, hogy legfeljebb 1 olyan téglalap lehet, amely csúcsának elsõ koordinátája pontosan $i$, illetve olyan is, amelynek második koordinátája pontosan $j$. Ha lenne két ilyen ugyanis, akkor azok közül valamelyik biztosan tartalmazná a másikat.
+
+Ez viszont azt jelenti, hogy legfeljebb $a + b$ olyan téglalap lehet, amely csúcsának elsõ koordinátája legfeljebb $a$, vagy második koordinátája legfeljebb $b$. Mivel pedig a síknegyedben végtelen sok téglalap van, azért lesz olyan téglalap, amely nem teljesíti ezt a feltételt, tehát csúcsának elsõ koordinátája nagyobb, mint $a$, a második pedig nagyobb, mint $b$. Ekkor pedig ez a téglalap tartalmazni fogja az eredeti $(a;b)$ csúcsú téglalapunkat. Ezzel pedig beláttuk, hogy mindenképp van két olyan téglalap, melyek közül az egyik tartalmazza a másikat.
+\medskip
+
+
+\hbox to \hsize{\hskip2truecm\hrulefill\hskip2truecm}
+{\bf 5. feladat: } Legyenek $k \geq 1$, $n \geq 2$ adott egész számok. Számítsuk ki
+$$\left( \root n \of{k} - \root n \of{k+1} + \root n \of{k+2} \right)^n$$
+egész részét (egy $x$ szám egész része az a legnagyobb egész szám, amely nem nagyobb $x$-nél)!
+
+
+\ki{Bencze Mihály}{Brassó}\medskip
+
+{\bf 5. feladat I. megoldása: } A kifejezés alakjából az a sejtés fogalmazódhat meg, hogy a kérdéses egészrész $k$ lesz. Ehhez elegendõ lenne, ha belátnánk, hogy
+$$k < \left( \root n \of {k} - \root n \of {k+1} + \root n \of {k+2} \right)^n < k+1$$
+A két egyenlõtlenség közül az elsõ nyilvánvaló, hiszen $\root n \of {k+1} < \root n \of {k+2}$, így a zárójelen belül $\root n \of {k}$-nál nagyobb szám áll.
+
+A második egyenlõtlenséghez elegendõ, hogy
+$$\root n \of {k+2} - \root n \of {k+1} < \root n \of {k+1} - \root n \of {k}$$
+Felhasználva ez után az $a - b = {a^n - b^n \over a^{n-1} + a^{n-2}b + \ldots + b^{n-1}}$ azonosságot, az egyenlõtlenség
+
+$${1 \over \left( \root n \of {k+2} \right)^{n-1} + \left( \root n \of {k+2} \right)^{n-2} \root n \of {k+1} + \ldots + \left( \root n \of {k+1} \right)^{n-1}} <$$
+$$ <{1 \over \left( \root n \of {k+1} \right)^{n-1} + \left( \root n \of {k+1} \right)^{n-2} \root n \of {k} + \ldots + \left( \root n \of {k} \right)^{n-2}}$$
+formára hozható, ami pedig nyilvánvalóan igaz, hiszen a bal oldal nevezõjében minden tag határozottan nagyobb, mint a jobb oldal nevezõjében a megfelelõ tag.
+\medskip
+
+
+\hbox to \hsize{\hskip2truecm\hrulefill\hskip2truecm}
+{\bf 6. feladat: } Adottak a $2,3,4, \ldots , 1998, 1999$ számok és a belõlük képezett összes különbözõ tényezõkbõl álló két, három, \ldots ,1998-tényezõs szorzat (összesen $2^{1998} - 1$ szám). Mutassuk meg, hogy ezen számok reciprokainak összege egész szám.
+
+
+\ki{Katz Sándor}{Bonyhád}\medskip
+
+{\bf 6. feladat I. megoldása: } Bizonyítsuk teljes indukcióval, hogy ha $n+1$ a legnagyobb szám, akkor a reciprokösszeg ${n-1 \over 2}$! $n=1$ és $n = 2$ esetén igaz lesz az állítás. Tegyük fel, hogy $n-1$-re is igaz, és ebbõl bizonyítsuk be $n$-re.
+
+Az $n-1$-re szereplõ számokból összeállított szorzatok itt is fel fognak lépni, hozzá kell venni mindegyikhez az $n+1$-szeresét, illetve magát az $n+1$-et. Így a reciprokösszeg
+$${n-1 \over 2} + {1 \over n+1} + {1 \over n+1} \cdot {n-1 \over 2} = {(n-1)(n+1) + n + 1 \over 2(n+1)} = {n \over 2}$$
+A feladatban $n = 1998$ szerepel, ebben az esetben pedig az összeg 99, ami valóban egész szám.
+\medskip
+
+\vfill
+\end{document}

@@ -1,0 +1,121 @@
+\documentclass[a4paper,10pt]{article} 
+\usepackage[latin2]{inputenc}
+\usepackage{graphicx}
+\usepackage{amssymb}
+\voffset - 20pt
+\hoffset - 35pt
+\textwidth 450pt
+\textheight 650pt 
+\frenchspacing 
+
+\pagestyle{empty}
+\def\ki#1#2{\hfill {\it #1 (#2)}\medskip}
+
+\def\tg{\, \hbox{tg} \,}
+\def\ctg{\, \hbox{ctg} \,}
+\def\arctg{\, \hbox{arctg} \,}
+\def\arcctg{\, \hbox{arcctg} \,}
+
+\begin{document}
+\begin{center} \Large {\em XV. Nemzetközi Magyar Matematika Verseny} \end{center}
+\begin{center} \large{\em Zenta, 2006. márc. 18-22.} \end{center}
+\smallskip
+\begin{center} \large{\bf 9. osztály} \end{center}
+\bigskip 
+
+{\bf 1. feladat: } Igazoljuk, hogy végtelen sok olyan négyzetszám van, amely felírható a 2 két nemnegatív egész kitevõjû hatványának összegeként. Igaz-e a megfelelõ állítás a 3 hatványaira is?
+
+
+
+\ki{Urbán János}{Budapest}\medskip
+
+{\bf 1. feladat I. megoldása: } $2^0+2^3=9$, és tetszõleges $n\geq1$ egészre $2^{2n}+2^{2n+3}=2^{2n}\cdot9=(2^n\cdot3)^2$.
+
+$3^2+3^3=9+27=36=6^2$, és tetszõleges $n\geq1$ egészre
+$3^{2n+2}+3^{2n+3}=3^{2n}(3^2+3^3)=(3^n\cdot6)^2,$
+tehát a megfelelõ állítás a 3 hatványaira is igaz.
+\medskip
+
+
+\hbox to \hsize{\hskip2truecm\hrulefill\hskip2truecm}
+{\bf 2. feladat: } A nyáron egy kis faluban volt az osztály kirándulni. Az egyetlen bolt árukészlete minden reggel ugyanaz volt. Mi voltunk az elsõ vásárlók és a kiflik felét, a zsemlék negyedét, a tej egyötödét elvittük, és ezért 1800 Ft-ot fizettünk. Másnap az elõzõ napival azonos árukészletbõl a kifliknek és a zsemléknek is a harmadát, a tejnek negyedét vittük el, és most 1500 Ft-ot fizettünk. Harmadnap megint másként rendeltek az osztálytársak, és most a kiflik hatodát, a zsemlék öt tizenketted részét, a tejnek három tized részét vittük el. Mennyit fizettünk a harmadik napon?
+
+
+\ki{Katz Sándor}{Bonyhád}\medskip
+
+{\bf 2. feladat I. megoldása: } Ha a kiflik, a zsemlék és a tej teljes napi árukészletének árát $k$, $z$ és $t$ betûkkel jelöljük, akkor
+\begin{eqnarray*}
+\frac{k}{2}+\frac{z}{4}+\frac{t}{5}&=&1800,\\
+\frac{k}{3}+\frac{z}{3}+\frac{t}{4}&=&1500.
+\end{eqnarray*}
+Arra vagyunk kíváncsiak, mennyi $\frac{k}{6}+\frac{5z}{12}+\frac{3t}{10}$ értéke.
+
+Az elsõ két feltételbõl közvetlenül nem tudjuk meghatározni $k$, $z$ és $t$ értékét. Azonban látható, hogy ha a második kétszeresébõl kivonjuk az elsõt, akkor a harmadikat kapjuk. Valóban: $\frac{2k}{3}-\frac{k}{2}=\frac{k}{6}$, 
+$\frac{2z}{3}-\frac{z}{4}=\frac{5z}{12}$, 
+$\frac{2t}{4}-\frac{t}{5}=\frac{3t}{10}$.
+
+Eszerint a harmadik napon $2\cdot1500-1800=1200$ Ft-ot fizettünk.
+\medskip
+
+
+\hbox to \hsize{\hskip2truecm\hrulefill\hskip2truecm}
+{\bf 3. feladat: } Az $ABC$ háromszögben $D$ az $AB$ oldal felezõpontja, $E$ az $AC$ oldal, $F$ pedig a $BC$ oldal egy-egy tetszõleges pontja. Bizonyítsuk be, hogy a $DEF$ háromszög területe kisebb az $AED$ és $BFD$ háromszögek területeinek összegénél.
+
+
+
+\ki{Neubauer Ferenc}{Munkács}\medskip
+
+{\bf 3. feladat I. megoldása: } Szerkesszünk az $FD$ egyenes meghosszabbítására X pontot úgy, hogy $DX=DF$ teljesüljön. Ekkor a $DEF$ háromszög területe egyenlõ lesz a $DEX$ háromszög területével.
+
+\centerline{\includegraphics{figures/2006-9-3}}
+
+Az $AXD$ és $BFD$ háromszögek egybevágóak két oldal és a közbezárt szög egyenlõsége alapján, ezért szintén egyenlõ területûek. Az EAXD négyszög mindig konvex, mivel $EAX\angle=EAB\angle+BAX\angle=CAB\angle+ABC\angle<180°$. Így a $DEX$ háromszög területe mindig kisebb a $DEAX$ négyszög területénél, ami viszont pontosan az $AED$ és $AXD$, vagyis a $BFD$ háromszögek területeinek összegével azonos. Az állítás bizonyított.
+\medskip
+
+
+\hbox to \hsize{\hskip2truecm\hrulefill\hskip2truecm}
+{\bf 4. feladat: } Legyen egy háromszög oldalainak hossza rendre $a$, $b$, illetve $c$. Igazoljuk, hogy ha    
+$$\left(a\sqrt2+b\sqrt3+c\sqrt5\right)^2=10(a^2+b^2+c^2),$$
+akkor a háromszög derékszögû.
+
+
+\ki{Kovács Béla}{Szatmárnémeti}\medskip
+
+{\bf 4. feladat I. megoldása: } Végezzük el a feltételi egyenletben a mûveleteket és alakítsunk át ekvivalensen:
+$${\setlength\arraycolsep{2pt}\begin{array}{rcl}
+2a^2 + 3b^2 + 5c^2 + 2\sqrt{6}ab + 2 \sqrt{10}ac + 2 \sqrt{15}bc &=& 10a^2 + 10b^2 + 10c^2 \\[6pt]
+8a^2 + 7b^2 + 5c^2 - 2\sqrt{2}\sqrt{3}ab - 2\sqrt{2}\sqrt{5}ac - 2\sqrt{3}\sqrt{5}bc &=& 0 \\[6pt]
+\left(a \sqrt{3} - b \sqrt{2} \right)^2 + \left( a \sqrt{5} - c \sqrt{2} \right)^2 + \left( b \sqrt{5} - c \sqrt{3}\right)^2 &=& 0 \iff {a \over \sqrt{2}} = {b \over \sqrt{3}} = {c \over \sqrt{5}}.
+\end{array}}
+$$
+Eszerint a háromszögünk hasonló a $\sqrt{2}$, $\sqrt{3}$, $\sqrt{5}$ oldalhosszúságú háromszöghöz, amely Pitagorasz tételének megfordítása alapján derékszögû. Így tehát valóban derékszögû lesz a háromszög.
+\medskip
+
+
+\hbox to \hsize{\hskip2truecm\hrulefill\hskip2truecm}
+{\bf 5. feladat: } Adott a síkban 2006 pont úgy, hogy bármely három által meghatározott háromszög területe legfeljebb 1 egység. Bizonyítsuk be, hogy ezek a pontok lefedhetõk egy 4 egységnyi területû háromszöggel.
+
+
+\ki{Óváriné Csabai Mária}{Kecskemét}\medskip
+
+{\bf 5. feladat I. megoldása: } A pontok véges sok háromszöget határoznak meg, tehát van köztük maximális területû, jelöljük ezt $ABC$-vel! Húzzunk mindhárom csúcsán át párhuzamost a szemközti oldallal, $A$-n át $a$-t, $B$-n át $b$-t, $C$-n át $c$-t! Az $a$ egyenesnek a $BC$-vel szemközti oldalán nem lehet pont, mivel az a $B$ és $C$ pontokkal $ABC$-nél nagyobb területû háromszöget alkotna. Hasonló állítás lesz igaz a másik két egyenesre is, tehát az összes pont az $a$, $b$ és $c$ egyenesek által határolt síktartományban fog elhelyezkedni, ennek területe viszont az $ABC$ háromszög területének négyszerese lesz, vagyis legfeljebb 4 egység, ezt a síktartományt tehát le tudjuk fedni egy legfeljebb 4 egység területû háromszöggel, és minden pont benne lesz. Ezzel a feladatot megoldottuk.
+\medskip
+
+
+\hbox to \hsize{\hskip2truecm\hrulefill\hskip2truecm}
+{\bf 6. feladat: } Jancsi egy $6\times7$-es négyzetrács valamelyik mezejére gondolt. Peti szeretné kitalálni, hogy melyik mezõre. Peti rámutat egy mezõre, majd Jancsi a következõ válaszok valamelyikét mondja: forró, meleg, langyos, hideg. A válaszadás szabálya a következõ: Jancsi forrót mond, ha Peti eltalálta a gondolt mezõt, meleget mond, ha a gondolt mezõvel élben szomszédosra mutatott Peti, langyost mond, ha csúcsban szomszédosra mutatott. Végül hideget mond, ha a gondolt és a mutatott mezõnek nincs közös pontja. Ha Peti ügyesen kérdez, akkor legrosszabb esetben hány mutatásra lehet szüksége, hogy ki tudja találni a gondolt mezõt?
+
+
+\ki{Kiss Sándor}{Nyíregyháza}\medskip
+
+{\bf 6. feladat I. megoldása: } A tábla 42 mezõbõl áll. Ha Peti rámutat egy mezõre, azzal arról a mezõrõl és a körülötte lévõ nyolcról kaphatunk közvetlen információt. A legrosszabb esetben egy mezõ kivételével mindegyikrõl kell közvetlen információt kapnunk (esetleg jó taktikával el lehet érni, hogy kizárásos módszerrel csak 41 mezõre kérdezzünk rá). Ez azt jelenti, hogy legalább 6 kérdést föl kell tennünk a legrosszabb esetben, mivel 4 kérdéssel 36 mezõrõl szerezhet Peti információt, a kimaradó 6 mezõnek viszont akármilyen elhelyezkedése esetén elképzelhetõ, hogy 2 rámutatásra van szükségünk ahhoz, hogy kitaláljuk, melyik mezõre gondolt Jancsi.
+
+\centerline{\includegraphics{figures/2006-9-6}}
+
+6 rámutatás viszont biztosan elegendõ lesz, mivel ha a táblázatból "levágjuk" a jobb oldali oszlopot és a megmaradt $6 \times 6$-os táblázatot négy db $3 \times 3$-as részre osztjuk. Ezek középsõ mezõjére mutatva Peti megtudhatja, a $3 \times 3$-as négyzetben van-e a gondolt mezõ. Ha igen, akkor vagy a középsõ mezõ az, ekkor megtalálta, vagy valamelyik másik, ekkor a választól függõen négy lehetõsége maradt: a négy sarokmezõ vagy a négy oldal középsõ mezõje. Mindkét esetben valamelyik oldal középsõ mezõjére mutatva két lehetõség kiejthetõ, a maradék kettõbõl pedig egy rámutatással Peti megtalálhatja az igazit, ez legfeljebb $4+2 = 6$ rámutatás.
+
+Ha a $3 \times 3$-as táblázatok mindegyikében "hideg" választ kap, akkor a gondolt mezõ a "levágott" oszlopban van. Ennek két középsõ mezõje közül mutasson rá Peti az egyikre! Ha "meleg" vagy "forró" választ kap, legfeljebb két lehetõség maradt, ezekbõl egyetlen rámutatással bizonyosságra juthat. Ha a válasz "hideg", az oszlop egyik végén 1 mezõ marad ki, a másikon kettõ. E közül a kettõ közül valamelyikre rámutatva egyértelmûen meg tudja mondani, hogy melyik volt a gondolt mezõ: "forró" válasz esetén az, amire mutatott, "meleg"-nél a szomszédos, "hideg"-nél pedig a harmadik kimaradt mezõ. Láthatóan ebben az esetben is legfeljebb 6 mezõre kellett rámutatnia. Ez pedig azt jelenti, hogy a válaszhoz legfeljebb 6 mezõre kell rámutatnia Petinek, és ez a szám tovább már nem csökkenthetõ.
+\medskip
+
+\vfill
+\end{document}

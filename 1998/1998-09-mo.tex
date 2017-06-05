@@ -1,0 +1,108 @@
+\documentclass[a4paper,10pt]{article} 
+\usepackage[latin2]{inputenc}
+\usepackage{graphicx}
+\usepackage{amssymb}
+\voffset - 20pt
+\hoffset - 35pt
+\textwidth 450pt
+\textheight 650pt 
+\frenchspacing 
+
+\pagestyle{empty}
+\def\ki#1#2{\hfill {\it #1 (#2)}\medskip}
+
+\def\tg{\, \hbox{tg} \,}
+\def\ctg{\, \hbox{ctg} \,}
+\def\arctg{\, \hbox{arctg} \,}
+\def\arcctg{\, \hbox{arcctg} \,}
+
+\begin{document}
+\begin{center} \Large {\em VII. Nemzetközi Magyar Matematika Verseny} \end{center}
+\begin{center} \large{\em Szabadka, 1998. ápr. 23-26.} \end{center}
+\smallskip
+\begin{center} \large{\bf 9. osztály} \end{center}
+\bigskip 
+
+{\bf 1. feladat: } Ismeretes, hogy
+$$35! = 10333147966386144929ab6651337523200000000.$$
+Milyen számjegyek állnak az $a$ és $b$ helyén?
+
+
+\ki{Szabó Magda}{Szabadka}\medskip
+
+{\bf 1. feladat I. megoldása: } Tudjuk, hogy $35!$ osztható 9-cel, így igaz ez a számjegyösszegre is. A meglévõ számjegyek összeg 132, ebbõl pedig $a+b = 3$ vagy $a+b = 12$ következik.  $35!$ osztható továbbbá 11-gyel, tehát igaz lesz ez a páros helyen álló számok összegének és a páratlan helyen álló számok összegének különbségére. Így $a+66 - (b+66) = a-b$ osztható lesz 11-gyel, tehát $a-b = 0$, amibõl $a = b = 6$ adódik.
+\medskip
+
+
+\hbox to \hsize{\hskip2truecm\hrulefill\hskip2truecm}
+{\bf 2. feladat: } Az $AEF$ hegyesszögû háromszög $ED$ és $FB$ magasságvonalai a $C$ pontban metszik egymást. Az $M, N, P, Q$ pontok rendre az $FC$, $EC$, $AE$ és $AF$ szakaszok felezõpontjai. Bizonyítsuk be, hogy az $MNPQ$ négyszög téglalap!
+
+
+\ki{Kórizs Júlia}{Bácskatopolya}\medskip
+
+{\bf 2. feladat I. megoldása: } A $PQ$ szakasz középvonala az $AFE$ háromszögnek, hasonlóképp $MN$ a $CFE$ háromszögnek. Ez azt jelenti, hogy $PQ \parallel MN$ és $PQ = MN$. Mivel pedig $PN$ az $ACE$, $QM$ pedig az $ACF$ háromszögben középvonal, azért $PN \parallel QM$ és $PN = QM$. Ez azt jelenti, hogy az $MNQP$ négyszög biztosan paralelogramma. Mivel azonban az $AC$ és $EF$ szakaszok merõlegesek, azért ugyanez fog teljesülni az $MN$ és $PN$ szakaszokra. Így az $MNPQ$ paralelogrammának van egy derékszöge, tehát biztosan téglalap lesz.
+\medskip
+
+
+\hbox to \hsize{\hskip2truecm\hrulefill\hskip2truecm}
+{\bf 3. feladat: } Határozzuk meg a következõ egyenlõtlenségrendszer összes megoldását a pozitív valós számok halmazán:
+{\setlength\arraycolsep{2pt}\begin{eqnarray*}
+x_1 + {1 \over x_2} & \leq & 2 \\
+x_2 + {1 \over x_3} & \leq & 2 \\
+& \vdots & \\
+x_{1997} + {1 \over x_{1998}} & \leq & 2 \\
+x_{1998} + {1 \over x_1} & \leq & 2
+\end{eqnarray*}}
+
+
+\ki{Oláh György}{Révkomárom}\medskip
+
+{\bf 3. feladat I. megoldása: } Adjuk össze az egyenlõtlenségek megfelelõ oldalait és csoportosítsunk:
+$$\left(x_1 + {1 \over x_1} \right) + \left(x_2 + {1 \over x_2} \right) + \ldots + \left(x_{1998} + {1 \over x_{1998}} \right) \leq 1998 \cdot 2$$
+Az összeadásban a tagok ismert egyenlõtlenség szerint mind legalább 2 nagyságúak, tehát az egyenlõtlenség csak akkor teljesülhet (mégpedig az egyenlõség esetében), ha $x_1 = x_2 = \ldots = x_{1998}$. Ekkor pedig valóban megoldást kapunk.
+\medskip
+
+
+\hbox to \hsize{\hskip2truecm\hrulefill\hskip2truecm}
+{\bf 4. feladat: } Az $A_1A_2 \ldots A_n$ és $B_1B_2 \ldots B_n$ szabályos $n$-szögek úgy metszik egymást, hogy az $A_1A_2$ és $B_nB_1$ oldalak közös pontja $K_1$, az $A_1A_2$ és $B_1B_2$ közös pontja $K_2$, az $A_2A_3$ és $B_1B_2$ közös pontja $K_3$, és így tovább, $A_nA_1$ és $B_{n-1}B_n$ közös pontja $K_{2n-1}$, $A_nA_1$ és $B_nB_1$ közös pontja $K_{2n}$. Bizonyítsuk be, hogy
+$${A_1K_1 \over B_1K_1} \cdot {B_1K_2 \over A_2K_2} \cdot {A_2K_3 \over B_2K_3} \cdot {B_2K_4 \over A_3K_4} \cdot \ldots \cdot {A_nK_{2n-1} \over B_nK_{2n-1}} \cdot {B_nK_{2n} \over A_1K_{2n}} = 1$$
+(A $K_i$ pontok az oldalak belsõ pontjai, $i = 1, 2, \ldots , 2n$.)
+
+
+\ki{Bencze Mihály}{Brassó}\medskip
+
+{\bf 4. feladat I. megoldása: } Mind a két sokszög szabályos, ezért belsõ szögeik egyenlõk. A metszéspontokkal alkotott bármely két szomszédos háromszög így hasonló egymáshoz, hiszen megegyezik az egyik sokszögcsúcsnál lévõ szögük, valamint a közös csúcsnál lévõ szögeik megegyeznek. Így
+$$A_1K_1K_{2n} \triangle \sim B_1K_1K_2 \triangle, \ A_2K_2K_3 \triangle \sim B_2K_3K_4 \triangle, \ldots , A_nK_{2n-1}K_{2n-2} \triangle \sim B_nK_{2n-1}K_{2n} \triangle$$
+Ez pedig azt jelenti, hogy 
+$${A_1K_1 \over B_1K_1} = {A_1K_{2n} \over B_1K_2}, \ {A_2K_3 \over B_2K_3} = {A_2K_{2} \over B_2K_4}, \ldots, {A_nK_{2n-1} \over B_nK_{2n-1}} = {A_nK_{2n-2} \over B_nK_{2n}} = 1$$
+Ez viszont azt jelenti, hogy a feladatban szereplõ szorzatban a páratlan helyen lévõ tényezõk szorzata megegyezik a páros helyen lévõ tényezõk szorzatának reciprokával, tehát összességében a szorzat értéke valóban 1 lesz.
+\medskip
+
+
+\hbox to \hsize{\hskip2truecm\hrulefill\hskip2truecm}
+{\bf 5. feladat: } Egy négyzet alakú, $1998 \times 1998$ egybevágó, négyzet alakú mezõbõl álló táblán 1997 mezõt már befestettek. Befesthetõ minden olyan, eddig még be nem festett mezõ, amelynek legalább két szomszédja már be van festve. Két mezõt akkor tekintünk szomszédosnak, ha van közös oldaluk. Bizonyítsuk be, hogy az egész táblát nem lehet befesteni. 
+
+
+\ki{Balázsi Borbála}{Beregszász}\medskip
+
+{\bf 5. feladat I. megoldása: } Legyen az egység egy mezõ oldala! Ekkor a befestett részek összesített külsõ kerülete nyilvánvalóan legfeljebb $4 \cdot 1997$ egység. Mikor befestünk egy mezõt, ez a szám vagy nem változik (ha két befestett szomszédja van a mezõnek), vagy 2-vel csökken (ha három szomszédja volt), vagy pedig 4-gyel csökken (ha négy szomszédja volt). Így az összesített kerület soha nem nõhet, viszont teljesen befestett táblánál $4 \cdot 1998$ lenne, ami azt jelenti, hogy nem festhetjük be az egész táblát.
+\medskip
+
+
+\hbox to \hsize{\hskip2truecm\hrulefill\hskip2truecm}
+{\bf 6. feladat: } Nevezzük "szépnek" az $a^2 + 2b^2$ alakú számokat, ahol $a$ és $b$ pozitív egész számokat jelöl. Bizonyítsuk be, hogy az így értelmezett "szép" számok közül akárhányat összeszorozva újra "szép" számot kapunk!
+
+
+\ki{Kiss Sándor}{Nyíregyháza}\medskip
+
+{\bf 6. feladat I. megoldása: } Szorozzuk össze az $a^2 + 2b^2$ és $c^2 + 2d^2$ szép számokat!
+{\setlength\arraycolsep{2pt}\begin{eqnarray*}
+(a^2 + 2b^2)(c^2 + 2d^2) &=& (a^2c^2 + 4b^2d^2) + (2b^2c^2 + 2a^2d^2) = \\[6pt]
+&=& (a^2c^2 - 4abcd + 4b^2d^2) + (2b^2c^2 + 4abcd + 2a^2d^2) = \\[6pt]
+&=& (ac + 2bd)^2 + 2(ad-bc)^2,
+\end{eqnarray*}}
+így a szorzat is szép szám lesz. Ez pedig azt jelenti, hogy akárhány szép számot szorzunk is össze, eredményül mindig szép számot kapunk.
+\medskip
+
+\vfill
+\end{document}

@@ -1,0 +1,200 @@
+\documentclass[a4paper,10pt]{article} 
+\usepackage[latin2]{inputenc}
+\usepackage{graphicx}
+\usepackage{amssymb}
+\voffset - 20pt
+\hoffset - 35pt
+\textwidth 450pt
+\textheight 650pt 
+\frenchspacing 
+
+\pagestyle{empty}
+\def\ki#1#2{\hfill {\it #1 (#2)}\medskip}
+
+\def\tg{\, \hbox{tg} \,}
+\def\ctg{\, \hbox{ctg} \,}
+\def\arctg{\, \hbox{arctg} \,}
+\def\arcctg{\, \hbox{arcctg} \,}
+
+\begin{document}
+\begin{center} \Large {\em XV. Nemzetközi Magyar Matematika Verseny} \end{center}
+\begin{center} \large{\em Zenta, 2006. márc. 18-22.} \end{center}
+\smallskip
+\begin{center} \large{\bf 12. osztály} \end{center}
+\bigskip 
+
+{\bf 1. feladat: } Legyen $x_1,x_2,\dots,x_n$  egész számok olyan sorozata, amelyre fennáll, hogy $-1\leq x_i\leq 2$, ha $i=1,2,\dots,n$, $x_1+x_2+\dots+x_n = 19$  és $x_1^2+x_2^2+\dots x_n^2 = 99$. Legyen az $x_1^3+x_2^3+\dots x_n^3$  kifejezés lehetséges legkisebb értéke $m$, illetve lehetséges legnagyobb értéke $M$.  Mivel egyenlõ $\frac{M}{m}$  értéke? 
+
+
+
+\ki{Kiss Sándor}{Nyíregyháza}\medskip
+
+{\bf 1. feladat I. megoldása: } A feltételek szerint $x_i$  értéke $-1$, $0$, $1$ és $2$ lehet. Tegyük fel, hogy $a$ darab  $-1$-est, $b$ darab $1$-est és $c$ darab $2$-est használtunk fel. A $0$-ákkal nem kell törõdnünk. Ekkor $x_1+x_2+\dots+x_n=19$  és $x_1^2+x_2^2+\dots+x_n^2 = 99$  alapján, 
+{\setlength\arraycolsep{2pt}\begin{eqnarray*}
+-a + b + 2c &=& 19 \\
+a + b + 4c &=& 99.
+\end{eqnarray*}}
+Vonjuk ki a második egyenletbõl az elsõt: $a=40-c$. Adjuk õket össze: $b=59-3c$. Mivel $b\geq 0$, ezért $0\leq c\leq 19$. Vizsgáljuk ezek után a $x_1^3+x_2^3+x_3^3 + \dots + x_n^3$  kifejezés értékét. A fentieket behelyettesítve kapjuk, hogy: $x_1^3+x_2^3 +x_3^3 + \dots + x_n^3 = -a+b+8c$. Viszont az $a=40-c$ és a $b-59-3c$  értékeket behelyettesítve ide azt kapjuk, hogy:
+\[ x_1^3+x_2^3 +x_3^3 + \dots + x_n^3 = 19 + 6c. \]
+A korábban $c$-re tett feltétel miatt ez akkor minimális, ha $c=0$. Ekkor $a=40$, $b=59$. Így $m=19$.  Akkor maximális a vizsgált kifejezés, ha $c=19$, s így $a=21$, $b=2$, $M=133$. 
+
+A keresett tört értéke: $\frac{M}{m} = 7$.
+
+\medskip
+
+
+\hbox to \hsize{\hskip2truecm\hrulefill\hskip2truecm}
+{\bf 2. feladat: } Az adott konvex $\alpha$ szög belsõ tartományában van a $P$ pont. Hogyan kell a $P$ ponton keresztül meghúzni egy olyan egyenest, hogy a szög szárait $B$ és $C$ pontban messe, és az $\frac{1}{|BP|} + \frac{1}{|PC|}$ a lehetõ legnagyobb legyen? 
+
+
+
+
+\ki{Szabó Magda}{Szabadka}\medskip
+
+{\bf 2. feladat I. megoldása: } Az  $\alpha$ szöget az $AP$ egyenes két részre osztja $\varphi$  és $\alpha-\varphi$  szögekre, míg az $ABP\angle$  a $\beta$  és a  szinusz-tétel alapján: 
+\[ |BP| = \frac{|AP|\sin(\alpha-\varphi)}{\sin\beta} \hbox{ és }
+|PC| = \frac{|AP|\sin\varphi}{\sin(\alpha+\beta)}. \]
+\centerline{\includegraphics{figures/2006-12-2A}}
+Ebbõl pedig a következõ számolás adódik: 
+{\setlength\arraycolsep{2pt}\begin{eqnarray*}
+\frac{1}{|BP|} + \frac{1}{|PC|}
+&=& \frac{\sin\beta}{|AP|\sin(\alpha-\varphi)} + \frac{\sin(\alpha+\beta)}{|AP|\sin\varphi} = \\[6pt]
+&=&\frac{\sin\varphi\sin\beta+\sin(\alpha-\varphi)\sin(\alpha+\beta)}{|AP|\sin\varphi\sin(\alpha-\varphi)}= \\[6pt]
+&=& \frac{\frac{1}{2}[\cos(\varphi-\beta)-\cos(\varphi+\beta)]}{|AP|\sin\varphi\sin(\alpha-\varphi)} + \frac{\frac{1}{2}[\cos(\varphi+\beta)-\cos(2\alpha-\varphi+\beta)]}{|AP|\sin\varphi\sin(\alpha-\varphi)}= \\[6pt]
+&=& \frac{\sin\alpha\sin(\alpha+\beta-\varphi)}{|AP|\sin\varphi\sin(\alpha-\varphi)}.
+\end{eqnarray*}}
+Mivel a $\frac{\sin\alpha}{|AP|\sin\varphi\sin(\alpha-\varphi)}$ kifejezés állandó, ezért meg kell vizsgálni, hogy $\sin(\alpha-\varphi+\beta)$  mikor lesz maximális vagyis $1$. Ez akkor áll fenn, ha $\alpha-\varphi+\beta = 90^\circ$. 
+
+Mivel $PAB\angle + ABP\angle = \alpha-\varphi+\beta = 90^\circ$, tehát $APB\angle = 90^\circ$, ezért a keresett irány merõleges az $AP$ egyenesre, és ekkor teljesülnek a feltételek.
+
+\medskip
+
+{\bf 2. feladat II. megoldása: } Ha $PC'\|AB$  és $C'P'\|BC$, akkor '$AP'C'\triangle\sim APC\triangle$ és $PC'P'\triangle\sim ABP\triangle$. 
+\centerline{\includegraphics{figures/2006-12-2B}}
+Ebbõl következik: 
+\[ \frac{|P'C'|}{PC} = \frac{|AP'|}{|AP|} \quad\hbox{és}\quad
+\frac{|P'C'|}{| PB|} = \frac{|PP'|}{|AP|}, \]
+azaz 
+\[ \frac{|P'C'|}{|PC|} + \frac{|P'C'|}{|PB|} = \frac{|AP'| + |P'P|}{|AP|} = 1, \]
+tehát 
+\[ \frac{1}{|BP|} + \frac{1}{|PC|} = \frac{1}{|P'C'|}, \]
+amelynek bal oldala  akkor a legnagyobb amikor $|C'P'|$ a lehetõ legkisebb, ez pedig azt jelenti, hogy $P'C'\bot AP$, azaz $BC\bot AP$.
+
+\medskip
+
+
+\hbox to \hsize{\hskip2truecm\hrulefill\hskip2truecm}
+{\bf 3. feladat: } Hozzuk a legegyszerûbb alakra a $3+2\cdot 3^2 + 3\cdot 3^3 + \dots + 2005\cdot 3^{2005} + 2006\cdot 3^{2006}$ összeget. 
+
+
+
+
+
+\ki{Oláh György}{Komárom}\medskip
+
+{\bf 3. feladat I. megoldása: } Tekintsük az összeg következõ felbontását: 
+$${\setlength\arraycolsep{2pt}\begin{array}{rcl}
+3^1 + 3^2 + 3^3 + 3^4 + \dots + 3^{2005} &+& 3^{2006} \\[6pt]
+3^2 + 3^3 + 3^4 + \dots + 3^{2005} &+& 3^{2006} \\[6pt]
+3^3 + 3^4 + \dots + 3^{2005} &+& 3^{2006} \\[6pt]
+3^4 + \dots + 3^{2005} &+& 3^{2006} \\[6pt]
+&\vdots& \\[6pt]
+3^{2005} &+& 3^{2006}  \\[6pt]
+&&3^{2006} 
+\end{array}}
+$$
+Ha minden oszlopban összeadjuk a számokat éppen a keresett összeg tagjait kapjuk. A feladat tehát a táblázatban levõ számok összegének meghatározása.
+
+Adjuk össze a számokat soronként, majd összegezzük a sorösszegeket! Ez azért elõnyös, mert minden sorban egy-egy mértani sorozat tagjai állnak. A $k$-adik sorban levõ számok összege a mértani sorozat összegképlete szerint: 
+\[ 3^k + 3^{k+1} + \dots + 3^{2006} 
+= 3^k \frac{3^{2007-k}-1}{3-1} = \frac{3^{2007} - 3^k}{2}, \]
+a sorösszegek összege pedig, ismét felhasználva a mértani sorozat összegképletét, 
+{\setlength\arraycolsep{2pt}\begin{eqnarray*}
+\frac{3^{2007}-3^1}{2} + \frac{3^{2007}-3^2}{2} + \dots + \frac{3^{2007}-3^{2006}}{2} &=& 1003\cdot 3^{2003} - \frac{3}{2}\left(1+3+3^2+\dots+3^{2005}\right) = \\[6pt]
+&=& 1003\cdot 3^{2007} - \frac{3}{2} \cdot \frac{3^{2006}-1}{3-1} = 
+\frac{4011\cdot 2^{2007}+3}{4}.
+\end{eqnarray*}}
+
+{ \it Általánosítás}. Ha $n$ pozitív egész és $q\neq 1$, akkor 
+\[ q+2q^2 + 3q^3 + \dots + nq^n = q\frac{nq^{n+1}-(n-1)q^n+1}{(q-1)^2}. \]
+
+\medskip
+
+{\bf 3. feladat II. megoldása: } Tekintsük az $f(x) = 1+x+x^2 + \dots + x^{2006}$  függvényt. 
+Könnyû ellenõrizni, hogy  $xf'(x) = x+2x^2 + 3x^3 + \dots + 2006x^{2006}$.
+Tehát a feladat $3f'(3)$ értékének a meghatározása. ($f'$ az $f$ polinom deriváltja)
+
+\medskip
+
+
+\hbox to \hsize{\hskip2truecm\hrulefill\hskip2truecm}
+{\bf 4. feladat: } Az $ABCD$ paralelogrammában a $BD$ átló $12$, az átlók metszéspontja $O$. Az $AOD$ és $COD$ háromszögek köré írható körök középpontjainak a távolsága $16$. Az $AOB$ háromszög köré írt kör sugara $5$. Határozzuk meg a paralelogramma területét.   
+
+
+
+\ki{Pintér Ferenc}{Nagykanizsa}\medskip
+
+{\bf 4. feladat I. megoldása: } Legyen $ABCD$ a paralelogramma, jelölje $O_1$, $O_2$, $O_3$ és $O_4$ az $AOB$, $BOC$, $COD$ és $AOD$ háromszögek köré írható körök középpontját. Jelölje továbbá $\varphi$  az $AOB$ szöget, azaz $AOB\angle = \varphi$, ($0<\varphi<\pi$). (lásd az ábrát)      
+
+\centerline{\includegraphics{figures/2006-12-4}}
+
+Tekintettel arra, hogy az $O_1O_2$, $O_2O_3$, $O_3O_4$ és $O_1O_4$ egyenesek a $BO$, $CO$, $DO$ és $AO$ szakaszok szakaszfelezõ merõlegesei, ezért az $O_1O_2O_3O_4$ négyszög paralelog­ram­ma, továbbá $O_1O_4O_3\angle = AOB\angle = \varphi$.        Legyen az $E$ pont az $O_3$ pont merõleges vetülete az $O_1O_4$ egyenesre. Mivel $AO = OC$, ezért $O_3E = AO$. Így $AO = O_3O_4\cdot\sin\varphi = 16\sin\varphi$.          
+A húrképlet alapján az $ABO$ háromszögbõl --- melyben a köré írt kör sugara $5$ --- kapjuk,
+hogy $AB=2R\sin\varphi = 10\sin\varphi$.  Mivel $BO = \frac{BD}{2} = 6$, felírható a koszinusz tétel:
+$${\setlength\arraycolsep{2pt}\begin{array}{rcl}
+AB^2 &=& AO^2 + BO^2 - 2AO\cdot BO\cos\varphi, \\[6pt]
+100\sin^2\varphi &=& 256\sin^2\varphi + 36-192\sin\varphi\cos\varphi.
+\end{array}}
+$$
+Utóbbi egyenletet eloszthatjuk $12\sin^2\varphi$-vel, mivel az nem lehet nulla, és akkor a következõ egyenlethez jutunk:      
+\[ 3\ctg^2\varphi - 16\ctg\varphi + 16 = 0, \]                                                  
+melybõl két érték adódik: $\ctg\varphi = \frac{4}{3}$ vagy $\ctg\varphi = 4$.          
+Ennek megfelelõen két érték adódik a területre:        
+$\frac{192}{17}$ vagy $\frac{1728}{25}=69,12$.
+
+\medskip
+
+
+\hbox to \hsize{\hskip2truecm\hrulefill\hskip2truecm}
+{\bf 5. feladat: } Bizonyítsuk be, hogy nincs olyan $P(x)$  egész együtthatós (nem azonosan nulla) polinom, amelyre léteznek $x_1,x_2,\dots,x_n$ ($n>2$) különbözõ egész számok úgy, hogy $P(x_1) = x_2, P(x_2) = x_3, \dots, P(x_n) = x_1$ teljesül.   
+
+
+
+
+
+\ki{Kántor Sándor}{Debrecen}\medskip
+
+{\bf 5. feladat I. megoldása: } Ha létezne ilyen polinom és ilyen egészek, akkor, felhasználva azt a tételt, hogy egész együtthatós (nem azonosan nulla) polinom és $a$, $b$  különbözõ egész számok esetén $(a-b)|(P(a)-P(b))$, teljesülne: 
+$$\begin{array}{rcl}
+(x_1-x_2) | (P(x_1)-P(x_2)), &\quad\hbox{s így}\quad& (x_1-x_2)|(x_2-x_3),  \\
+(x_2-x_3) | (P(x_2)-P(x_3)), &\quad\hbox{s így}\quad& (x_2-x_3)|(x_3-x_4), \\
+&\dots& \\
+(x_n-x_1) | (P(x_n)-P(x_1)), &\quad\hbox{s így}\quad& (x_n-x_1)|(x_1-x_2).
+\end{array}
+$$
+Ebbõl $|x_1-x_2|\leq|x_2-x_3|\leq\dots \leq|x_1-x_2|$, így 
+$|x_1-x_2| = |x_2-x_3| = \dots = |x_1-x_2|$  következik. 
+
+Ez pedig $n>2$  esetén különbözõ $x_1,x_2,\dots,x_n$ értékekre nem állhat fenn. 
+
+\medskip
+
+
+\hbox to \hsize{\hskip2truecm\hrulefill\hskip2truecm}
+{\bf 6. feladat: } Egy $10\times 10$-es négyzetbe beírjuk az $1, 2, 3,\dots, 100$ számokat úgy, hogy bármely két egymás utáni szám élben szomszédos négyzetbe kerüljön. Igazoljuk, hogy létezik legalább egy sor vagy oszlop, amelyik legalább két teljes négyzetet tartalmaz. 
+
+
+
+
+\ki{Bence Mihály}{Brassó}\medskip
+
+{\bf 6. feladat I. megoldása: } $10$ teljes négyzetünk van, ezek közül $5$ páros. Tegyük fel, hogy a négyzetszámok különbözõ sorokban és különbözõ oszlopokban vannak. Kifestjük a táblázatot, mint egy sakktáblát, fehérre és feketére. A páros és páratlan számok ugyanolyan színû négyzetben lesznek. 
+
+Legyenek $(x_1,y_1), (x_2,y_2),\dots,(x_{10},y_{10})$  azon négyzetek koordinátái, ahol a teljes négyzetek helyezkednek el. Mivel a feltétel szerint a teljes négyzetek külön sorban és oszlopban helyezkednek el, ezért $x_1,x_2,\dots,x_{10}$ páronként különbözõ és $\{x_1,x_2,\dots,x_{10}\} = \{1,2,\dots,10\}$. Hasonlóan, $\{y_1,y_2,\dots,y_{10}\} = \{1,2,\dots,10\}$  is teljesül. Így 
+\[ (x_1+y_1) + (x_2+y_2) + \dots + (x_{10} + y_{10}) = 2(1+2+\dots+10) \]
+páros szám. A páros kombinációjú párok összege ugyanolyan színû, ezért létezik páros számú teljes négyzet, ami ellentmondás. 
+
+\medskip
+
+\vfill
+\end{document}

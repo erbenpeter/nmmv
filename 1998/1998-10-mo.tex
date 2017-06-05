@@ -1,0 +1,116 @@
+\documentclass[a4paper,10pt]{article} 
+\usepackage[latin2]{inputenc}
+\usepackage{graphicx}
+\usepackage{amssymb}
+\voffset - 20pt
+\hoffset - 35pt
+\textwidth 450pt
+\textheight 650pt 
+\frenchspacing 
+
+\pagestyle{empty}
+\def\ki#1#2{\hfill {\it #1 (#2)}\medskip}
+
+\def\tg{\, \hbox{tg} \,}
+\def\ctg{\, \hbox{ctg} \,}
+\def\arctg{\, \hbox{arctg} \,}
+\def\arcctg{\, \hbox{arcctg} \,}
+
+\begin{document}
+\begin{center} \Large {\em VII. Nemzetközi Magyar Matematika Verseny} \end{center}
+\begin{center} \large{\em Szabadka, 1998. ápr. 23-26.} \end{center}
+\smallskip
+\begin{center} \large{\bf 10. osztály} \end{center}
+\bigskip 
+
+{\bf 1. feladat: } Oldjuk meg a pozitív egész számok körében a következõ egyenletet:
+$$\sqrt{13 + 30\sqrt{2 + \sqrt{9 + 4 \sqrt{2}}}} = a + b \sqrt{2}$$
+
+
+\ki{Kórizs Júlia}{Bácskatopolya}\medskip
+
+{\bf 1. feladat I. megoldása: } Vegyük észre, hogy $9 + 4 \sqrt{2} = (1 + 2\sqrt{2})^2$, és mivel $1 + 2\sqrt{2}$ pozitív, azért $\sqrt{9+4\sqrt{2}} = 1 + 2\sqrt{2}$. Hasonló módon igaz lesz, hogy $\sqrt{2 + \sqrt{9 + 4\sqrt{2}}} = 1 + \sqrt{2}$. Ez pedig azt jelenti, hogy
+$$\sqrt{13 + 30 \sqrt{2 + \sqrt{9 + 4 \sqrt{2}}}} = \sqrt{13 + 30 + 30 \sqrt{2}} = 5 + 3 \sqrt{2},$$
+ebbõl pedig $a=5$ és $b = 3$ következik.
+\medskip
+
+
+\hbox to \hsize{\hskip2truecm\hrulefill\hskip2truecm}
+{\bf 2. feladat: } Igazoljuk, hogy ha $n$ egész szám, akkor az
+$${n^4 + 4n^2 + 3 \over n^4 + 10n^2 + 16}$$
+tört nem egyszerûsíthetõ!
+
+
+\ki{Balázsi Borbála}{Beregszász}\medskip
+
+{\bf 2. feladat I. megoldása: } Bontsuk szorzattá a számlálót és a nevezõt is!
+$${n^4 + 4n^2 + 3 \over n^4 + 10n^2 + 16} = {(n^2 + 1)(n^2 + 3) \over (n^2 + 2)(n^2 + 8)}$$
+Mivel pedig $n^2 + 2$ relatív prím mind $n^2 + 1$-hez, mind $n^2 + 3$-hoz, azért a tört csak akkor lesz egyszerûsíthetõ, hogyha $n^2 + 8$-nak van közös valódi osztója a számláló valamelyik tényezõjével. Ha van ilyen, akkor ez osztója a különbségnek is, tehát vagy $n^2 + 8 - (n^2 + 1) = 7$ lehet, vagy pedig $n^2 + 8 - (n^2 + 3) = 5$ (hiszen mindkét szám prím). Minden lehetséges esetre megvizsgálva $n^2 + 1$ 7-es maradékát azt kapjuk, hogy $n^2 + 1$ soha nem lesz 7-tel osztható, és hasonló módon kapjuk azt is, hogy $n^2 + 3$ soha nem lesz 5-tel osztható. Így tehát a lehetséges közös osztók biztosan nem lépnek föl, ami azt jelenti, hogy a tört valóban nem egyszerûsíthetõ.
+\medskip
+
+
+\hbox to \hsize{\hskip2truecm\hrulefill\hskip2truecm}
+{\bf 3. feladat: } Határozzuk meg az összes olyan pozitív egész $x,y,z$ számokból álló számhármast, amelyre teljesül a következõ két egyenlet:
+{\setlength\arraycolsep{2pt}\begin{eqnarray*}
+x^3 + 3y^3 + z^5 + z & = & 1998 \\
+y^2z & = & x
+\end{eqnarray*}}
+
+
+\ki{Oláh György}{Révkomárom}\medskip
+
+{\bf 3. feladat I. megoldása: } Helyettesítsünk be $x$ helyébe az elsõ egyenletben! Azt kapjuk, hogy $y^6z^3 + 3y^3 + z^5 + z = 1998$, ezt $y^3$-ban másodfokú egyenletként megoldva:
+$$y^3 = {-3 \pm \sqrt{9 - 4z^3(z^5 + z - 1998)} \over 2z^3}$$
+Ebbõl (illetve már az eredeti elsõ egyenletbõl is) következik, hogy $z$ értéke legfeljebb 4 lehet, mivel $z > 4$ esetén $z^5 + z > 1998$, és így az elsõ egyenlet nyilvánvalóan nem teljesülhet, továbbá a megoldóképletben a gyökjel alatt negatív szám áll. A megoldóképletbe a négy megmaradt értéket behelyettesítve csak $z = 3$ esetén kapunk $y$-ra pozitív egész értéket, ekkor $y = 2$ és $x = 12$, ez a számhármas pedig valóban teljesíti a feladatban szereplõ egyenlõségeket.
+\medskip
+
+
+\hbox to \hsize{\hskip2truecm\hrulefill\hskip2truecm}
+{\bf 4. feladat: } Legyen $d$ egy $A$ kezdõpontú félegyenes és $\alpha$ egy olyan változó szög, amely $0^{\circ}$ és $90^{\circ}$ között minden értéket felvesz. A $d$ félegyenesen úgy választjuk ki a $B$ pontot, hogy $AB = \tg \alpha$ teljesüljön, és úgy szerkesztjük meg $AB$ fölé az $ABC$ háromszöget, hogy $BAC \angle = \alpha$, $AC = \sin \alpha$ teljesüljön. Mit írnak le a $C$ pontok, ha $\alpha$ minden lehetséges értéket felvesz?
+
+
+\ki{Kovács Béla}{Szatmárnémeti}\medskip
+
+{\bf 4. feladat I. megoldása: } Alkalmazzuk az $ABC$ háromszögben az $A$ csúcsnál a koszinusztételt!
+$$BC^2 = \sin ^2 \alpha + \tg ^2 \alpha - 2 \sin \alpha \tg \alpha \cos \alpha = AB^2 - AC^2$$
+(az oldalak hosszát behelyettesítve és felhasználva, hogy a kivonandó egyszerûsítések után $2 \sin ^2 \alpha$). Ez azt jelenti, hogy az $ABC$ háromszögnek $C$-nél derékszöge van. A $C$ pont így mindig rajta van azon a Thalész-körön, amely egyik átmérõjének végpontja az $A$ pont, a másik végpontja pedig az $A$-ban $d$-re állított merõleges és a $BC$ egyenes metszéspontja, jelöljük ezt $D$-vel! $ADC \angle = \alpha$ nyilván igaz lesz, hiszen a $DAC$ szög $90^{\circ} - \alpha$ nagyságú. Ez azt jelenti, hogy ${AC \over CD} = {\sin \alpha \over CD} = \tg \alpha$, ez pedig azt jelenti, hogy $CD = \cos \alpha$, tehát $AD = \sqrt{\sin ^2 \alpha + \cos ^2 \alpha} = 1$. Így tehát $C$ minden $\alpha$-ra rajta van az $AD$ félkörön. Nyilvánvaló továbbá, hogy a gondolatmenetünk megfordítható, tehát a félkör minden belsõ pontjára van megfelelõ $\alpha$ és így $ABC$ háromszög.
+\medskip
+
+
+\hbox to \hsize{\hskip2truecm\hrulefill\hskip2truecm}
+{\bf 5. feladat: } Egy háromszög oldalainak $a,b,c$ mértékszámai egész számok és tudjuk, hogy az egyik magasság a másik két magasság összegével egyenlõ. Bizonyítsuk be, hogy $a^2 + b^2 + c^2$ négyzetszám.
+
+
+\ki{Katz Sándor}{Bonyhád}\medskip
+
+{\bf 5. feladat I. megoldása: } Az általánosság megszorítása nélkül tegyük fel, hogy $m_a = m_b + m_c$. Jelöljük $t$-vel a háromszög területét! Ekkor
+$${2t \over a} = {2t \over b} + {2t \over c}$$
+ami átrendezve azt jelenti, hogy
+$$bc = ac + ab$$
+Ebbõl pedig az következik, hogy
+$$(b+c-a)^2 = a^2 + b^2 + c^2 + 2bc - ac - ab = a^2 + b^2 + c^2,$$
+tehát $a^2 + b^2 + c^2$ valóban négyzetszám lesz.
+\medskip
+
+
+\hbox to \hsize{\hskip2truecm\hrulefill\hskip2truecm}
+{\bf 6. feladat: } Oldjuk meg a valós számok halmazán a következõ egyenletet:
+$$n^{4(x_1^2 + x_2)} + n^{4(x_2^2 + x_3)} + \ldots + n^{4(x_n^2 + x_1)} = 1,$$
+ahol $n \geq 2$ egész szám.
+
+
+\ki{Bencze Mihály}{Brassó}\medskip
+
+{\bf 6. feladat I. megoldása: } Alkalmazzuk a számtani és mértani közepek közti egyenlõtlenséget!
+{\setlength\arraycolsep{2pt}\begin{eqnarray*}
+1 = n^{4(x_1^2 + x_2)} + n^{4(x_2^2 + x_3)} + \ldots + n^{4(x_n^2 + x_1)} &\geq& n \left( \root n \of {n^{4(x_1^2 + x_2) + 4(x_2^2 + x_3) + \ldots + 4(x_n^2 + x_1)}}\right) = \\[6pt]
+&=& n \left( \root n \of {(n^4)^{(x_1^2 + x_2) + (x_2^2 + x_3) + \ldots  + (x_n^2 + x_1)}} \right) = \\[6pt]
+&=& n \left( \root n \of {(n^4)^{\left(x_1 + {1 \over 2}\right)^2 + \left(x_2 + {1 \over 2}\right)^2 + \ldots + \left(x_n + {1 \over 2}\right)^2 - {n \over 4}}}\right) \geq \\[6pt]
+&\geq& n \left(\root n \of {(n^4)^{-{n \over 4}}}\right) = 1
+\end{eqnarray*}}
+
+Tehát mindenhol egyenlõségnek kell lennie, ami az utolsó becslést figyelembe véve csakis akkor teljesülhet, ha bármely $i$-re $x_i = - {1 \over 2}$. Ekkor pedig láthatóan minden becslésben egyenlõség teljesül, és az eredeti egyenletünk $n \cdot {1 \over n} = 1$ formába alakul, ami valóban igaz.
+\medskip
+
+\vfill
+\end{document}

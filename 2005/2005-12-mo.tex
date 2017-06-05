@@ -1,0 +1,173 @@
+\documentclass[a4paper,10pt]{article} 
+\usepackage[latin2]{inputenc}
+\usepackage{graphicx}
+\usepackage{amssymb}
+\voffset - 20pt
+\hoffset - 35pt
+\textwidth 450pt
+\textheight 650pt 
+\frenchspacing 
+
+\pagestyle{empty}
+\def\ki#1#2{\hfill {\it #1 (#2)}\medskip}
+
+\def\tg{\, \hbox{tg} \,}
+\def\ctg{\, \hbox{ctg} \,}
+\def\arctg{\, \hbox{arctg} \,}
+\def\arcctg{\, \hbox{arcctg} \,}
+
+\begin{document}
+\begin{center} \Large {\em XIV. Nemzetközi Magyar Matematika Verseny} \end{center}
+\begin{center} \large{\em Miskolc, 2005. márc. 20-23.} \end{center}
+\smallskip
+\begin{center} \large{\bf 12. osztály} \end{center}
+\bigskip 
+
+{\bf 1. feladat: } Hány megoldása van az egész számok körében az $x^2 + y^2 = 3(u^2 + v^2)$ egyenletnek?
+
+
+\ki{Szabó Magda}{Szabadka}\medskip
+
+{\bf 1. feladat I. megoldása: } Csak egy megoldás van még pedig a $(0,0,0,0)$, mert az egész számok négyzetének $3$-mal vett osztási maradéka $0$ és $1$ lehet, ezért az $x^{2} + y^{2}$ csak akkor lehetne hárommal osztható szám, ha az $x$ és az $y$ is hárommal osztható szám, tehát
+
+$$x = 3x_{1}, \  y = 3y_{1} \hbox{, vagyis } u^{2} + v^{2}=3\left(x_{1}^{2} + y_{1}^{2} \right),$$
+akkor pedig
+$$u^{2} + v^{2} = \frac{1}{3}\left(x^{2}+y^{2}\right) < \left(x^{2}+ y^{2}\right).$$
+
+\medskip
+
+
+\hbox to \hsize{\hskip2truecm\hrulefill\hskip2truecm}
+{\bf 2. feladat: } A 100 oldalú $K$ konvex sokszög az 1 méter oldalú négyzet belsejében fekszik. Mutassuk meg, hogy $K$ csúcsai közül kiválasztható három úgy, hogy az általuk meghatározott háromszög területe kisebb, mint 8 $\hbox{cm}^2$.
+
+
+\ki{Bencze Mihály}{Brassó}\medskip
+
+{\bf 2. feladat I. megoldása: } Mivel a sokszög benne van a négyzetben, kerülete legfeljebb $400$-zal egyenlõ.
+Legyenek $A_{1}$, $A_{2}$, $\ldots$, $A_{100}$ a sokszög csúcsai.
+Tekintsük az $A_{1}A_{2} + A_{2}A_{3}$; $A_{2}A_{3} + A_{3}A_{4}$; $\ldots$; $A_{99}A_{100} + A_{100}A_{1}$ számokat.
+Ezen $100$ számnak az összege a sokszög területének a kétszerese, tehát $\leq 800$.
+A Dirichlet-elv szerint létezik egy olyan $n$ index, hogy $A_{n}A_{n+1}+A_{n+1}A_{n+2}\leq 8$.
+Igazoljuk, hogy az $A_{n}A_{n+1}A_{n+2}$ háromszög területe $\leq 0,0008$.
+A háromszög területe $\leq$ két oldala szorzatának a felénél,
+$$\hbox{Ter}\left(A_{n}A_{n+1}A_{n+2}\right)\leq \frac{A_{n}A_{n+1}\cdot A_{n+1}A_{n+2}}{2}\leq \frac{\left(A_{n}A_{n+1}+A_{n+1}A_{n+2}\right)^{2}}{4} \leq \frac{\left(0,08\right)^2}{8}=0,0008.$$
+
+\medskip
+
+
+\hbox to \hsize{\hskip2truecm\hrulefill\hskip2truecm}
+{\bf 3. feladat: } Az $a_n$ sorozatot a következõ módon definiáljuk:
+$$a_1=1,\quad a_n=\frac{n+1}{n-1}(a_1+a_2+\ldots a_{n-1}),\hbox{ ha } n>1.$$
+Határozzuk meg $a_{2005}$ értékét!
+
+
+\ki{Péics Hajnalka}{Szabadka}\medskip
+
+{\bf 3. feladat I. megoldása: } Határozzuk meg a sorozat elsõ néhány elemét.
+$${\setlength\arraycolsep{2pt}\begin{array}{rcrcl}
+a_{1}&=&1&=&2\cdot \frac{1}{2},\\[6pt]
+a_{2}&=&3&=&3\cdot 1\\[6pt]
+a_{3}&=&8&=&4\cdot 2\\[6pt]
+a_{4}&=&20&=&5\cdot 4\\[6pt]
+a_{5}&=&48&=&6\cdot 8 \\[6pt]
+&&\vdots&&
+\end{array}}$$
+
+Vegyük észre, hogy a sorozat általános eleme: $a_{n}=\left(n+1\right)\cdot 2^{n-2}$ Igazoljuk észrevételünket matematikai indukcióval!
+$n=1$-re $a_{1}=\left(1+1\right)\cdot 2^{1-2}=1$.
+Tegyük fel, hogy az állítás igaz minden $k=1, 2, \ldots, n$ esetén.
+Igazoljuk, hogy az állítás igaz $\left(n+1\right)$-re, azaz $a_{n+1}=\left(n+2\right)\cdot 2^{n-1}$. Ekkor
+{\setlength\arraycolsep{2pt}\begin{eqnarray*}
+a_{n+1}&=&\frac{n+2}{n}\left(a_{1}+a_{2}+\ldots + a_{n}\right)= \\[6pt]
+&=&\frac{n+2}{n}\left(2\cdot 2^{-1}+3\cdot 2^{0} + 4\cdot 2^{1}+5\cdot 2^{2} + \ldots + \left(n+1\right)\cdot 2^{n-2}\right).
+\end{eqnarray*}}
+
+Ha $S=2\cdot 2^{-1}+3\cdot 2^{0} + 4\cdot 2^{1}+5\cdot 2^{2}+ \ldots + \left(n+1\right)\cdot 2^{n-2}$, akkor
+$2S=2\cdot 2^{0}+3\cdot 2^{1} + 4\cdot 2^{2}+ \ldots + \left(n+1\right)\cdot 2^{n-1}$, majd a következõ gondolatmenettel adódik, hogy
+{\setlength\arraycolsep{2pt}\begin{eqnarray*}
+S &=& 2S-S = -1-\left(2^{0}+2^{1}+2^{2}+\ldots + 2^{n-2}\right) + \left(n+1\right)\cdot 2^{n-1}= \\
+&=&-1-1\cdot \frac{2^{n-1}-1}{2-1}+\left(n+1\right)\cdot 2^{n-1}=n\cdot 2^{n-1}.
+\end{eqnarray*}}
+Végül, $a_{n+1}=\frac{n+2}{n}\cdot S=\left(n+2\right)\cdot 2^{n-1}$, amit igazolni is akartunk.
+Most pedig $a_{2005}=2006\cdot 2^{2003}$.
+\medskip
+
+
+\hbox to \hsize{\hskip2truecm\hrulefill\hskip2truecm}
+{\bf 4. feladat: } Bizonyítsuk be, hogy ha egy háromszögben az $a$ és a $b$ oldalakhoz tartozó súlyvonalak merõlegesek egymásra, akkor 
+$$5(a^2+b^2+c^2)\ge 8ab,$$
+ahol $c$ a háromszög harmadik oldala.
+
+
+\ki{Oláh György}{Komárom}\medskip
+
+{\bf 4. feladat I. megoldása: } Vezessük be a következõ jelöléseket: $\overrightarrow{BC} = \mathbf{a}$, $\overrightarrow{CA}=\mathbf{b}$.
+A további jelöléseket a 2. ábrán találjuk, ahol $E$ és $F$ oldalfelezõ pontok.
+$\overrightarrow{AF}=\frac{1}{2}\mathbf{a}+\mathbf{b}$, $\overrightarrow{BE}=\mathbf{a}+\frac{1}{2}\mathbf{b}$.
+
+\centerline{\includegraphics{figures/2005-12-4}}
+
+Tudjuk, hogy ezek a vektorok merõlegesek egymásra, ezért skaláris szorzatuk zérus: $$\left(\frac{1}{2}\mathbf{a}+\mathbf{b}\right)\left(\mathbf{a}+\frac{1}{2}\mathbf{b}\right) = 0, \hbox{ azaz } \frac{1}{2}\left(\mathbf{a}^{2}+\mathbf{b}^{2}\right)+\frac{5}{4}\mathbf{a}\cdot \mathbf{b} = 0.$$
+Kiszámítjuk az $\mathbf{a}\cdot \mathbf{b}$ skaláris szorzatot, $\mathbf{a}\cdot \mathbf{b}=a\cdot b\cdot \cos \left(180^{\circ}-\gamma\right)=-a\cdot b\cdot \cos \gamma$,
+ahol közben bevezettük az $\left|\mathbf{a}\right|=a$, $\left|\mathbf{b}\right|=b$ jelölést.
+Ezután elõbbi egyenletünk így írható: $\frac{1}{2}\left(a^{2}+b^{2}\right)-\frac{5}{4}a\cdot b\cdot \cos \gamma = 0$, amibõl $\cos \gamma = \frac{4}{5}\cdot \frac{a^{2} + b^{2}}{2ab}$.
+Mivel $a$ és $b$ pozitív, és $a^{2}+b^{2}\geq 2ab$, ezért $\cos \gamma \geq \frac{4}{5}$.
+A cosinus-tételbõl: $\cos \gamma=\frac{a^{2}+b^{2}-c^{2}}{2ab}$, ezt az elõzõ egyenlõtlenségbe helyettesítve kapjuk:
+$\frac{a^{2}+b^{2}-c^{2}}{2ab}\geq\frac{4}{5}$, ebbõl $5\left(a^{2}+b^{2}-c^{2}\right)\geq 8ab$, ami nem más, mint a bizonyítandó egyenlõtlenség.
+
+\medskip
+
+
+\hbox to \hsize{\hskip2truecm\hrulefill\hskip2truecm}
+{\bf 5. feladat: } Igazoljuk, hogy az 
+$$x^5-10x^4+10x^3-20x^2+5x-2=0$$
+ egyenlet egyetlen valós gyöke $x= 2+\sqrt[5]{3} + \sqrt[5]{9} + \sqrt[5]{27} + \sqrt[5]{81}$.
+
+
+\ki{Kovács Béla}{Szatmárnémeti}\medskip
+
+{\bf 5. feladat I. megoldása: } $$x=2+\sqrt[5]{3}+\sqrt[5]{9} + \sqrt[5]{27} + \sqrt[5]{81} = 1 + 1 + \sqrt[5]{3}+\sqrt[5]{9} + \sqrt[5]{27} + \sqrt[5]{81}  = 1 + \frac{2}{\sqrt[5]{3}-1} = \frac{\sqrt[5]{3} + 1}{\sqrt[5]{3}-1}$$
+Legyen $t = \sqrt[5]{3}$, az $x = \frac{t+1}{t-1}$ helyettesítéssel az adott egyenlet: $t^{5} - 3 = 0$ , melynek egyetlen valós gyöke az $\sqrt[5]{3}$.
+Az $f : \mathbb{R} \backslash \left\{ 1 \right\} \times \mathbb{R} \backslash \left\{ 1 \right\}, f\left(t\right) = \frac{t+1}{t-1}$ függvény bijektív, ebbõl következik hogy az adott egyenlet egyetlen valós gyöke: $\frac{\sqrt[5]{3} + 1}{\sqrt[5]{3}-1}$, ami pontosan az adott $x$ valós szám.
+
+{\it Megjegyzés}: Az adott egyenlet ekvivalens az $\left(x+1\right)^{5}=3\left(x-1\right)^{5}$ egyenlettel.
+
+{ \it Általánosítás}: Az $\left(x+1\right)^{5}=a\left(x-1\right)^{5}$ egyenletnek egyetlen valós gyöke van:
+$$x = \frac{\sqrt[5]{a} + 1}{\sqrt[5]{a}-1} = 1 + \frac{2}{a-1}\left(1+\sqrt[5]{a} + \sqrt[5]{a^{2}} + \sqrt[5]{a^{3}} + \sqrt[5]{a^{4}}\right)$$
+\medskip
+
+
+\hbox to \hsize{\hskip2truecm\hrulefill\hskip2truecm}
+{\bf 6. feladat: } Mutassuk meg, hogy minden pozitív egész n esetén fennállnak a
+\begin{eqnarray}
+2\sum_{k=1}^n \frac{1}{k{n+1\choose k}} & = & \sum_{k=1}^n \frac{1}{k{n\choose k}} \\[6pt]
+ \sum_{k=1}^n \frac{1}{k{n\choose k}} & = & \sum_{k=1}^n \frac{1}{k2^{n-k}}
+\end{eqnarray}
+azonosságok.
+
+
+\ki{Dályai Pál Péter}{Szeged}\medskip
+
+{\bf 6. feladat I. megoldása: } Igazoljuk az (1) azonosságot:
+{\setlength\arraycolsep{2pt}\begin{eqnarray*}
+2\sum_{k=1}^{n}{\frac{1}{k{n+1\choose k}}}-\sum_{k=1}^{n}{\frac{1}{k{n\choose k}}}&=&\sum_{k=1}^{n}{\left(2\frac{\left(k-1\right)!}{V_{n+1}^{k}}-\frac{\left(k-1\right)!}{V_{n}^{k}}\right)}= \\[6pt]
+&=&\sum_{k=1}^{n}{\frac{\left(k-1\right)!\left(n-k+1-k\right)}{V_{n+1}^{k+1}}}=\sum_{k=1}^{n}{\left(\frac{\left(k-1\right)!}{V_{n+1}^{k}}-\frac{k!}{V_{n+1}^{k+1}}\right)}= \\[6pt]
+&=&\frac{1}{n+1}-\frac{n!}{\left(n+1\right)!} = 0.
+\end{eqnarray*}}
+
+A második azonosságot teljes indukcióval igazoljuk. $n = 1$ estén a (2)
+összefüggés az $\frac{1}{1\cdot 1}=\frac{1}{1\cdot 2^{0}}$ alakot ölti, ami igaz. Most tételezzük fel, hogy a (2)
+igaz $n = m$ pozitív egészre, azaz fennáll a $\sum_{k=1}^{m}{\frac{1}{k{m\choose k}}} = \sum_{k=1}^{m}{\frac{1}{k2^{m-k}}}$ (3)
+összefüggés. Igazoljuk, hogy ekkor fennáll a (2) összefüggés $n = m+1$ esetén
+is. Valóban 
+{\setlength\arraycolsep{2pt}\begin{eqnarray*}
+\sum_{k=1}^{m+1}{\frac{1}{k{m+1\choose k}}} &=& \sum_{k=1}^{m}{\frac{1}{k{m+1\choose k}}} + \frac{1}{m+1} = \frac{1}{2}\sum_{k=1}^{m}{\frac{1}{k{m\choose k}}} + \frac{1}{m+1} =\\
+&=&\frac{1}{2}\sum_{k=1}^{m}{\frac{1}{k2^{m-k}}} + \frac{1}{m+1} = \sum_{k=1}^{m+1}{\frac{1}{k2^{m-k+1}}},
+\end{eqnarray*}}
+ami igazolja állításunkat. Tehát a teljes indukció elve alapján következik, hogy a (2) azonosság fennáll bármely $n$ pozitív egész szám esetén.
+
+
+\medskip
+
+\vfill
+\end{document}

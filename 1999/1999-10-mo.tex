@@ -1,0 +1,110 @@
+\documentclass[a4paper,10pt]{article} 
+\usepackage[latin2]{inputenc}
+\usepackage{graphicx}
+\usepackage{amssymb}
+\voffset - 20pt
+\hoffset - 35pt
+\textwidth 450pt
+\textheight 650pt 
+\frenchspacing 
+
+\pagestyle{empty}
+\def\ki#1#2{\hfill {\it #1 (#2)}\medskip}
+
+\def\tg{\, \hbox{tg} \,}
+\def\ctg{\, \hbox{ctg} \,}
+\def\arctg{\, \hbox{arctg} \,}
+\def\arcctg{\, \hbox{arcctg} \,}
+
+\begin{document}
+\begin{center} \Large {\em VIII. Nemzetközi Magyar Matematika Verseny} \end{center}
+\begin{center} \large{\em Debrecen, 1999. márc. 25-29.} \end{center}
+\smallskip
+\begin{center} \large{\bf 10. osztály} \end{center}
+\bigskip 
+
+{\bf 1. feladat: } Bizonyítsuk be, hogy $1997^{1999}+1999^{1997}$ osztható $3996$-tal.
+
+
+\ki{Benedek Ilona}{Vác}\medskip
+
+{\bf 1. feladat I. megoldása: } Alakítsuk át a kifejezést alkalmas módon!
+{\setlength\arraycolsep{2pt}\begin{eqnarray*}
+1997^{1999} + 1999^{1997} &=& 1997^{2 + 1997} + 1999^{1997} = (1997^2 - 1) \cdot 1997^{1997} + 1997^{1997} + 1999^{1997} = \\[6pt]
+&=& 1996 \cdot 1998 \cdot 1997^{1997} + 3996(1997^{1996} - 1997^{1995} \cdot 1999 + \ldots + 1999^{1996}) = \\[6pt]
+&=& 3996 \cdot (998 \cdot 1997^{1997} + 1997^{1996} - 1997^{1995} \cdot 1999 + \ldots + 1999)^{1996}
+\end{eqnarray*}}
+Ez pedig jól láthatóan azt jelenti, hogy a kifejezés valóban osztható 3996-tal.
+\medskip
+
+
+\hbox to \hsize{\hskip2truecm\hrulefill\hskip2truecm}
+{\bf 2. feladat: } Az $ABCD$ trapéz csúcsai egy körre illeszkednek. A trapéz $AD$ és $BC$ szárainak meghosszabbításai az $M$ pontban metszik egymást. A körhöz a $B$, illetve $D$ pontokban húzott érintõk metszéspontja $N$. Bizonyítsuk be, hogy $MN$ párhuzamos $AB$-vel.
+
+
+\ki{Neubauer Ferenc}{Munkács}\medskip
+
+{\bf 2. feladat I. megoldása: } %Ábra
+Mivel a trapéz húrnégyszög, azért egyenlõszárú, tehát az $AD$ és $BC$ ívek megegyeznek, tehát egyenlõk lesznek az $ABD$ és $BDC$ szögek, valamint mindkettõ egyenlõ lesz a $BC$ ívhez tartozó $CBN$ érintõ szárú kerületi szöggel. Hasonló okok miatt $ABD \angle = ADP \angle = MDN \angle$. A kettõbõl azt kapjuk, hogy $MDN \angle = MBN \angle$, tehát $B$ és $D$ is ugyanazon az $MN$ fölé emelt látóköríven vannak, ami azt jelenti, hogy $BDMN$ húrnégyszög lesz. Ezért a $DBC$ és $DNM$ szögek meg fognak egyezni. Mivel pedig $NDC$ a $DC$ ívhez tartozó érintõ szárú kerületi szög, azért meg fog egyezni $DBC$-vel, tehát $NDC \angle = DMN \angle$, vagyis $DC \parallel MN$, $ABCD$ trapéztulajdonsága miatt pedig $AB \parallel MN$, amit bizonyítani kellett.
+\medskip
+
+
+\hbox to \hsize{\hskip2truecm\hrulefill\hskip2truecm}
+{\bf 3. feladat: } Határozzuk meg az $m$ valós paraméternek azokat az értékeit, amelyekre a $9mx(3x-1)(3x-2)(x-1)=1$ egyenletnek négy (nem feltétlenül különbözõ) valós gyöke van.
+
+
+\ki{Péter András}{Arad}\medskip
+
+{\bf 3. feladat I. megoldása: } %Ábra a hosszúságokkal
+Rendezzük át az egyenletet, ekkor azt kapjuk, hogy
+$$m(9x^2 - 9x)(9x^2 - 9x + 2) = 1$$
+Vezessük be most a $t = 9x^2 - 9x + 1$ jelölést! Ennek segítségével az egyenlet $m(t^2 - 1) = 1$ alakba írható. Ez pedig azt jelenti, hogy $t_1 = - \sqrt{{m+1 \over m}}$, vagy pedig $t_2 = \sqrt{{m+1 \over m}}$. Mindkettõnek valósnak kell lennie, ami azt jelenti, hogy $m \leq -1$ vagy $m > 0$ szükséges a megoldhatósághoz.
+
+a.) Ha $9x^2 - 9x + 1 = t_1$, akkor a diszkriminánsnak nemnegatívnak kell lennie. Ez azt jelenti, hogy $t_1 \geq {5 \over 4}$, ami ${m + 1 \over m} \leq {25 \over 16}$-ot jelenti, ami átrendezve akkor lesz igaz, ha $m < 0$ vagy $m \geq {16 \over 9}$.
+
+b.) Ha $9x^2 - 9x + 1 = t_2$, akkor teljesen hasonló megfontolások alapján $t_2 \geq -{5 \over 4}$, tehát $\sqrt{{m+1 \over m}} \geq - {5 \over 4}$, ez pedig minden olyan $m$-re igaz, ahol a gyökvonás értelmezve van.
+
+A kapott két feltételt összevetve azt kapjuk, hogy akkor lesz 4 valós megoldása az egyenletnek, ha $m \leq -1$ vagy pedig $m \geq {16 \over 9}$.
+\medskip
+
+
+\hbox to \hsize{\hskip2truecm\hrulefill\hskip2truecm}
+{\bf 4. feladat: } Adott az $ABC$ egyenlõ oldalú háromszög belsejében a $P$ pont úgy, hogy $PA=6$, $PB=8$, $PC=12$. Határozzuk meg az $ABC$ háromszög területét.
+
+
+
+\ki{Kántor Sándorné}{Debrecen}\medskip
+
+{\bf 4. feladat I. megoldása: } Szerkesszünk $AP$, $PB$ és $PC$ fölé szabályos háromszögeket, legyen ezeknek a harmadik csúcsa rendre $P_1$, $P_2$, $P_3$. Be fogjuk látni, hogy az $AP_1BP_2CP_3$ hatszög területe egyenlõ lesz az $ABC$ háromszög területének kétszeresével, továbbá a három szabályos háromszög mellett kialakuló háromszögek páronként egybevágók lesznek.
+
+Ehhez elõször lássuk be, hogy az $AP_1B$ és $APC$ háromszögek egybevágók. Ez belátható azzal, hogy egy $A$ körüli $+60^{\circ}$-os forgatás az elsõt a másodikba viszi. Ez azt jelenti, hogy a $P_1B$ szakasz hossza is 12, mint a $PC$ szakaszé. Teljesen hasonlóan adódik, hogy a $CBP_2$ és $APB$ háromszögek is egybevágók, tehát $P_2C = 6$, továbbá a $PBC$ és $ACP_3$ háromszögek egybevágók, és így $P_3A = 8$. Ezek szerint a szabályos háromszögek mellett kialakuló háromszögek mind egybevágók, mert 6, 8 és 12 hosszúságú oldalakkal rendelkeznek. Következik továbbá az is, hogy a hatszög területe $ABC$ területének kétszerese, mivel a "kimaradó" háromszögek rendre egybevágók egy-egy olyan háromszöggel, melyek együttesen lefedik az $ABC$-t. 
+Mindhárom 6, 8, 12 oldalú háromszög területe a Héron-képlet szerint $\sqrt{455}$, a szabályos háromszögek területét pedig az oldalhosszukból tudjuk, ami azt jelenti, hogy
+$$T_{ABC} = {1 \over 2}T_{AP_1BP_2CP_3} = {61 \sqrt{3} \over 2} + {3 \sqrt{455} \over 2} \approx 84,8$$
+\medskip
+
+
+\hbox to \hsize{\hskip2truecm\hrulefill\hskip2truecm}
+{\bf 5. feladat: } Legyenek $x>0$, $y>0$, $z>0$ valós számok. Határozzuk meg az $x$, $y+{1 \over z}$, $z+{1 \over x}$ és ${1\over y}$ számok legkisebbikének lehetõ legnagyobb értékét!
+
+
+\ki{András Szilárd}{Kolozsvár}\medskip
+
+{\bf 5. feladat I. megoldása: } Jelöljük $m$-mel a kifejezések minimumát! Mivel $m \leq x$, azért ${1 \over x} \leq {1 \over m}$, ez azt jelenti, hogy $m \leq z + {1 \over x} \leq z + {1 \over m}$. Mivel $m \leq {1 \over y}$, azért $y \leq {1 \over m}$, tehát $m \leq y + {1 \over z} \leq {1 \over m} + {1 \over z}$. Ez a két egyenlõtlenség pedig azt jelenti, hogy egyrészrõl $m  - {1 \over m} \leq z$, másrészrõl $m - {1 \over m} \leq {1 \over z}$, tehát $m- {1 \over m} \leq 1$, ami átrendezve $m^2 - m - 1 \leq 0$. Ez a másodfokú egyenlõtlenség $m \in \left[ {1 - \sqrt{5} \over 2}; {1 + \sqrt{5} \over 2}\right]$-t jelenti, tehát $m \leq {1 + \sqrt{5} \over 2}$.
+
+Tekintsük továbbá a $z = 1$, $x = {1+\sqrt{5} \over 2}$, $y = {1 - \sqrt{5} \over 2}$ értékeket! Ezekre a feladatban szereplõ összes kifejezés megegyezik, és mindegyik ${1 + \sqrt{5} \over 2}$. Ez pedig azt jelenti, hogy a minimum legkisebb felsõ korlátja ${1 + \sqrt{5} \over 2}$ lesz.
+\medskip
+
+
+\hbox to \hsize{\hskip2truecm\hrulefill\hskip2truecm}
+{\bf 6. feladat: } Hány részre osztják fel a síkot egy 1999 oldalú szabályos sokszög oldalegyenesei?
+
+
+\ki{Oláh György}{Révkomárom}\medskip
+
+{\bf 6. feladat I. megoldása: } Tetszõleges $n$-re vegyünk fel $n$ db egyenest úgy, hogy ne legyen két párhuzamos, és ne menjen át három egy ponton (nyilvánvalóan a sokszög oldalai is ilyen egyenesek lesznek). Jelöljük $p(n)$-nel a kialakult síktartományok számát. 3 egyenes könnyen látható módon 7 részre osztja a síkot. Ha behúzunk egy új egyenest a meglévõ $n$ mellé, amely minden egyenest metsz, akkor az egyenes mindkét partján $n+1$ síktartomány jön létre, és megszûnik $n+1$, tehát összesen $n+1$ új síktartományunk lesz, azaz $p(n+1) = p(n) + n + 1$. Ebbõl pedig már felírható a következõ:
+$$p(n) = n + p(n-1) = n + (n-1) + \ldots + 4 + p(3) = {n(n+1) \over 2} + 1$$
+Ezt pedig $n = 1999$ esetére kiszámolva azt kapjuk, hogy $p(1999) = 1999001$.
+\medskip
+
+\vfill
+\end{document}

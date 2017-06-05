@@ -1,0 +1,167 @@
+\documentclass[a4paper,10pt]{article} 
+\usepackage[latin2]{inputenc}
+\usepackage{graphicx}
+\usepackage{amssymb}
+\voffset - 20pt
+\hoffset - 35pt
+\textwidth 450pt
+\textheight 650pt 
+\frenchspacing 
+
+\pagestyle{empty}
+\def\ki#1#2{\hfill {\it #1 (#2)}\medskip}
+
+\def\tg{\, \hbox{tg} \,}
+\def\ctg{\, \hbox{ctg} \,}
+\def\arctg{\, \hbox{arctg} \,}
+\def\arcctg{\, \hbox{arcctg} \,}
+
+\begin{document}
+\begin{center} \Large {\em XIV. Nemzetközi Magyar Matematika Verseny} \end{center}
+\begin{center} \large{\em Miskolc, 2005. márc. 20-23.} \end{center}
+\smallskip
+\begin{center} \large{\bf 11. osztály} \end{center}
+\bigskip 
+
+{\bf 1. feladat: } A valós számok $x_n$ sorozata a következõ módon van definiálva:
+$$x_1=a>0,\quad x_2=b>0,\quad x_n=\frac{1+x_{n-1}}{x_{n-2}},\hbox{ ha } n\ge3.$$
+Határozzuk meg az $x_{2005}$ értékét az $a$ és $b$ függvényeként!
+
+
+\ki{Szabó Magda}{Szabadka}\medskip
+
+{\bf 1. feladat I. megoldása: } $x_{3}=\frac{1+b}{a}$, $x_{4}=\frac{1+a+b}{ab}$, $x_{5}=\frac{1+a}{b}$, $x_{6}=a$, $x_{7}=b$ tehát a sorozat tagjai ötös periódusban ismétlõdnek, ezért az $x_{2005}=x_{5}=\frac{1+a}{b}$.
+\medskip
+
+
+\hbox to \hsize{\hskip2truecm\hrulefill\hskip2truecm}
+{\bf 2. feladat: } %\newcommand\tg{\mathrm{tg}\,}
+
+Egy háromszög oldalaira teljesül az $a^4+b^4=c^4$ összefüggés. Bizonyítsuk be, hogy ekkor a háromszög szögeire 
+$\tg\alpha\cdot\tg\beta=2\sin^2\gamma$, ahol $\gamma$ a c oldallal szemközti szög.
+
+
+
+\ki{Bogdán Zoltán}{Cegléd}\medskip
+
+{\bf 2. feladat I. megoldása: } A koszinusztétel szerint $a^{2}+b^{2}-2ab\cdot \cos \gamma=c^{2}$, ezt négyzetre emelve és $2ab$-val osztva: $$ab-2\cdot \left(a^{2}+b^{2}\right)\cos \gamma+2ab\cdot \cos^{2}\gamma=0,$$ ahol fölhasználtuk az $a^{4}+b^{4}=c^{4}$ feltételt is.
+
+Utóbbi alakban a koszinusztétel szerint $a^{2}+b^{2}=c^{2}+2ab\cdot \cos \gamma$ felhasználásával $ab=2c^{2}\cdot \cos \gamma + 2ab\cos^{2}\gamma$ adódik.
+
+Írjunk $\cos^{2}\gamma$ helyett $1-\sin^{2}\gamma$-t és osszuk $c^{2}$-tel:
+
+$$2\cos \gamma + \frac{ab}{c^{2}}-2\frac{ab}{c^{2}}\cdot \sin^{2}\gamma = 0.$$
+
+Alkalmazzuk ebben az összefüggésben a szinusztételt:
+$$2\cos \gamma+\frac{\sin \alpha \cdot \sin \beta}{\sin^{2}\gamma}-2\sin \alpha \cdot \sin \beta = 0,$$ amibõl
+$2\cdot \left(\cos \gamma - \sin \alpha \cdot \sin \beta\right)+\frac{\sin \alpha \cdot \sin \beta}{\sin^{2}\gamma} = 0$, és nyilván $\sin \gamma \neq 0$.
+
+Mivel $\cos \gamma=-\cos \left(\alpha + \beta \right)$, az összegzési tétel szerint a zárójelben lévõ kifejezés $\left(-\cos \alpha \cdot \cos \beta\right)$ lesz. Ezt fölhasználva
+$2\left(-\cos \alpha \cdot \cos \beta\right) + \frac{\sin \alpha \cdot \sin \beta}{\sin^{2}\gamma} = 0$ kapható.
+
+Mivel az oldalak nagyságviszonyából következik, hogy $\alpha$ és $\beta$ csak hegyesszög lehet, $\cos \alpha \cdot \cos \beta$-val oszthatunk és még $\sin^{2}\gamma$-val szorozva $\tg \alpha \cdot \tg \beta = 2\cdot \sin^{2}\gamma$ adódik.
+
+Tekintve, hogy átalakításaink megfordíthatók, a feladat állításának megfordítása is igaz.
+
+A létezés kérdésére igennel válaszolhatunk. Tekintsük pl. az $a = 1$, $b = 1$, $c = \sqrt[4]{2}$ esetet. Itt az $a + b > c$ és $a^{4}+b^{4}=c^{4}$ is fennáll.
+\medskip
+
+
+\hbox to \hsize{\hskip2truecm\hrulefill\hskip2truecm}
+{\bf 3. feladat: } Bizonyítsuk be, hogy ha $a$, $b$ és $c$ pozitív valós számok, akkor 
+$$\sqrt{\frac{a}{b+c}} + \sqrt{\frac{b}{c+a}} + \sqrt{\frac{c}{a+b}} >2.$$
+
+
+\ki{Neubauer Ferenc}{Munkács}\medskip
+
+{\bf 3. feladat I. megoldása: } A kifejezésnek akkor van értelme, ha vagy mindhárom változó egyszerre pozitív, vagy mindhárom egyszerre negatív, vagy az egyikük egyenlõ nullával, a másik kettõ pedig nem. Ez utóbbi esetben, pl. ha $c = 0$, a $\sqrt{\frac{a}{b}}+\sqrt{\frac{b}{a}}>2$ egyenlõtlenséget kapjuk, ami közismert. Ha mindhárom változó negatív, akkor ugyan azt az esetet kapjuk, mint három pozitív esetében. Ezért elegendõ ebben az egy esetben a bizonyítást elvégezni.
+
+Alkalmazzuk a Cauchy-féle egyenlõtlenséget a $\frac{b+c}{a}$ és $1$ számokra:
+
+$$\sqrt{\frac{b+c}{a}\cdot 1}\leq \frac{\frac{b+c}{a} + 1}{2}=\frac{a+b+c}{2a}, \hbox{ ahonnan } \sqrt{\frac{a}{b+c}}\geq \frac{2a}{a+b+c}.$$
+
+Ugyanígy: $$\sqrt{\frac{b}{a+c}}\geq \frac{2b}{a+b+c} \hbox{ és } \sqrt{\frac{c}{a+b}}\geq \frac{2c}{a+b+c}.$$
+
+Végül: $$\sqrt{\frac{a}{b+c}}+\sqrt{\frac{b}{a+c}}+\sqrt{\frac{c}{a+b}}\geq \frac{2a}{a+b+c}+\frac{2b}{a+b+c}+\frac{2c}{a+b+c} = 2.$$
+\medskip
+
+
+\hbox to \hsize{\hskip2truecm\hrulefill\hskip2truecm}
+{\bf 4. feladat: } Mennyi a tízes számrendszerben felírt $1\cdot 1! + 2\cdot 2! + 3\cdot 3! +\ldots + 2005\cdot 2005!$ szám utolsó 500 számjegyének összege?
+
+
+\ki{Kacsó Ferenc}{Marosvásárhely}\medskip
+
+{\bf 4. feladat I. megoldása: } Mivel $k \cdot  k! = (k + 1)! - k!$, ezért az összeg
+$$(2! - 1!) + (3! - 2!) + \ldots + (2006! - 2005!) = 2006! - 1.$$
+
+Megállapíthatjuk, hogy $2006!$ hány nullában végzõdik. Mivel $2006!$ prímtényezõs felbontásában $2$ hatványkitevõje nagyobb, mint $5$ hatványkitevõje, a nullák száma $5$ hatványkitevõjével egyenlõ:
+
+$1$, $2$, $3$, $\ldots$, $2006$ közül $5$-tel oszthatók:
+$\\\underline{1} \cdot  5$, $\underline{2} \cdot  5$, $\underline{3} \cdot  5,$ $\ldots$, $\underline{401} \cdot  5$; összesen $401$ szám.
+
+Az $5$-öt szorzó (aláhúzott) számok közül $5$-tel osztható számok:
+$\\\underline{1} \cdot  5$, $\underline{2} \cdot  5$, $\ldots$, $\underline{80} \cdot  5$; összesen $80$ szám.
+
+Az aláhúzott számok közül $5$-tel osztható számok:
+$\\\underline{1} \cdot  5$, $\underline{2} \cdot  5$, $\underline{3} \cdot  5$, $\ldots$, $\underline{16} \cdot  5$; összesen $16$ szám.
+
+Az itt aláhúzott számok közül $5$-tel osztható számok:
+$\underline{1} \cdot  5$, $\underline{2} \cdot  5$, $\underline{3} \cdot  5$; összesen $3$ szám,
+az aláhúzott számok nem oszthatók $5$-tel.
+
+Ennek alapján $2006!$ prímtényezõs felbontásában az $5$ hatványkitevõje
+$$401 + 80 + 16 + 3 = 500,$$
+ami azt jelenti, hogy $2006!$ utolsó $500$ számjegye nulla, s így $2006! - 1$ utolsó $500$ számjegye
+$9$-cel egyenlõ. Tehát a szám utolsó $500$ számjegyének összege:
+$$500 \cdot  9 = 4500.$$
+
+\medskip
+
+
+\hbox to \hsize{\hskip2truecm\hrulefill\hskip2truecm}
+{\bf 5. feladat: } Ezer birkát, melyek a 000, 001, 002, $\ldots$, 998, 999 számokkal vannak megjelölve, este a juhászkutyák száz olyan akolba terelnek be, melyek ajtajain a 00, 01, 02, $\ldots$, 98, 99 kódok olvashatók. Minden birkának olyan akolban kell éjszakáznia, melynek kódját megkapjuk, ha a birka számának valamelyik számjegyét töröljük. (Az 537-es birka tehát csak az 53, 57 vagy a 37 kódszámú akolba mehet.) Sötétedés elõtt minden birka bekerült valamelyik akolba. Mennyi az üresen maradó aklok számának lehetõ legnagyobb értéke?
+
+
+\ki{Erdõs Gábor}{Nagykanizsa}\medskip
+
+{\bf 5. feladat I. megoldása: } A keresett maximum értéke $50$.
+
+Mivel minden háromjegyû számban van két azonos paritású számjegy, ezért ha azokat hagyjuk meg, akkor minden birka beterelhetõ egy olyan akolba, amelynek két számjegye azonos paritású, az ilyen akolok száma $50$. Ekkor $50$ akol üresen marad.
+
+A bizonyítás nehezebb része annak belátása, hogy több üres akol nem lehet, mivel legalább $50$ akolra szükség van.
+
+Válasszuk ki a birkák $3$ csoportját. Hívjuk konstans birkának azokat, akiknek mindhárom számjegye azonos, optimista birkának, akiknek számjegyei növekvõ sorrendben követik egymást, és pesszimistának, akiknek számjegyei csökkenõ sorrendben követik egymást.
+
+A konstans birkáknak $10$ karámra van szükségük: $00$, $11$, $22$, \ldots, $99$. Ide a másik két csoport egyik birkája sem mehet be. (De a csoportok egyikébe sem tartozó igen, pl. $199$ számú.) Hasonlóan nyilvánvaló, hogy optimista birka nem keveredhet a pesszimisták akoljába és fordítva. Elég tehát belátni, hogy az optimistáknak legalább $20$ akol kell, mert akkor szimmetria okokból ugyanez elmondható a pesszimistákra is, így összesen $10 + 20 + 20 = 50$ tele akolnak legalább kell lennie.
+
+Legyen $S_{n}$ $2n$ darab nem negatív egész szám halmaza. Nevezzük $S_{n}$-birkának azokat a birkákat, akiknek a kódjának mindhárom számjegye ebbõl a halmazból való. Lássuk be, hogy az optimista $S_{n}$-birkák számára legalább $n\cdot \left(n-1\right)$, vagyis az eredeti feladatban $5\cdot 4=20$ akolra van szükség.
+
+A bizonyításhoz alkalmazzunk teljes indukciót. $n = 1$-re az állítás triviálisan igaz, és $n = 2$-re is könnyen átgondolható. Tegyük fel, hogy $n-1$-re igaz, és lássuk be, hogy $n$-re is az.
+
+Legyen $S_{n}$ legkisebb eleme $a$. Ha feltesszük, hogy mindegyik $ac$ jelû akol foglalt, ahol $c$ az $S_{n}$ valamelyik eleme, akkor ez $2n-1$ tele akolt jelent, így mivel $S_{n}$-bõl $a$-t és bármely másik elemet elhagyva egy $2n-2$ elemû $S_{n}$ halmazt kapunk, az indukciós feltétel szerint ebben a halmazban már biztosan van legalább $\left(n-1\right)\cdot \left(n-2\right)$ darab foglalt akol, így a foglalt akolok száma legalább $\left(n-1\right)\cdot \left(n-2\right) + 2n-1>n\cdot \left(n-1\right)$. Tegyük fel most, hogy lesz olyan üres akol, amelynek a kódja $a$-val kezdõdik. Ha több van, a legnagyobb kódút hívjuk $ac$-nek. Hagyjuk most el az $S_{n}$-bõl $a$-t és $c$-t. Az így kapott $S_{n-1}$-hez tartozó optimista birkák számára az indukciós feltétel szerint legalább $\left(n-1\right)\cdot \left(n-2\right)$ akol szükséges, míg az ide nem tartozó $S_{n}$-birkák, akiknek a kódja $abc$, csak az $ab$ vagy $bc$ akolba mehetnek ($ac$ üres), ezért ezen két akol egyikében lesz birka, így mivel $b$ helyére $S_{n-1}$ mind a $2n-2$ eleme beírható, az optimista $S_{n}$-birkák számára legalább $\left(n-1\right)\cdot \left(n-2\right)+2n-2=n\cdot \left(n-1\right)$ akol szükséges.
+
+\medskip
+
+
+\hbox to \hsize{\hskip2truecm\hrulefill\hskip2truecm}
+{\bf 6. feladat: } Bizonyítsuk be, hogy minden x, y valós számpár esetén fennáll a 
+$$\sqrt{9 + x^2 - 3x\sqrt{3}} + \sqrt{x^2 + y^2 - xy\sqrt{3}} + \sqrt{16 + y^2 - 4y\sqrt{3}} \ge 5$$
+egyenlõtlenség.
+
+
+\ki{Dr. Kiss Sándor}{Nyíregyháza}\medskip
+
+{\bf 6. feladat I. megoldása: } Adjunk geometriai tartalmat a problémának!
+
+Vegyünk fel egy $ABC$ derékszögû háromszöget, amelyben $AC=3$, $BC=4$, $AC=5$ egység. Az $ACB$ derékszöget osszuk $3$ egyenlõ részre. A most kapott szögharmadoló félegyeneseken vegyük fel a $D$ és az $E$ pontokat tetszõlegesen. Legyen $CD = x$ és $CE = y$. Írjunk fel egy-egy cosinus tételt az $ACD$ háromszögben az $AD$ oldalra, a $DCE$ háromszögben a $DE$ oldalra és az $ECB$ háromszögben az $EB$ oldalra.
+{\setlength\arraycolsep{2pt}\begin{eqnarray*}
+AD&=&\sqrt{9+x^{2}-3x\sqrt{3}} \\
+DE&=&\sqrt{x^{2}+y^{2}-xy\sqrt{3}} \\
+EB&=&\sqrt{16+y^{2}-4y\sqrt{3}}. \end{eqnarray*}} Használjuk fel, hogy a törött vonal hossza legalább annyi, mint a végpontjait összekötõ egyenes szakasz. Ezeket összeadva kapjuk a bizonyítandó összefüggést.
+
+Egyenlõség csak akkor áll fenn, ha a $D$ és $E$ pontot az átfogón vesszük fel.
+\medskip
+
+\vfill
+\end{document}

@@ -1,0 +1,127 @@
+\documentclass[a4paper,10pt]{article} 
+\usepackage[latin2]{inputenc}
+\usepackage{graphicx}
+\usepackage{amssymb}
+\voffset - 20pt
+\hoffset - 35pt
+\textwidth 450pt
+\textheight 650pt 
+\frenchspacing 
+
+\pagestyle{empty}
+\def\ki#1#2{\hfill {\it #1 (#2)}\medskip}
+
+\def\tg{\, \hbox{tg} \,}
+\def\ctg{\, \hbox{ctg} \,}
+\def\arctg{\, \hbox{arctg} \,}
+\def\arcctg{\, \hbox{arcctg} \,}
+
+\begin{document}
+\begin{center} \Large {\em VIII. Nemzetközi Magyar Matematika Verseny} \end{center}
+\begin{center} \large{\em Debrecen, 1999. márc. 25-29.} \end{center}
+\smallskip
+\begin{center} \large{\bf 12. osztály} \end{center}
+\bigskip 
+
+{\bf 1. feladat: } Az $ABC$ háromszög belsejében lévõ $P$ pontra igaz, hogy $PAB\angle = PBC\angle = PCA\angle$ . Mivel egyenlõ a $PAB$ szög tangensének értéke, ha $AB=13$, $BC=14$ és $AC=15$?
+
+
+
+\ki{Kiss Sándor}{Nyíregyháza}\medskip
+
+{\bf 1. feladat I. megoldása: } Jelöljük a $PAB$ szöget $\phi$-vel, a $PA$ szakasz hosszát $x$-szel, $PB$-ét $y$-nal, $PC$-ét $z$-vel! Ez azt jelenti, hogy a háromszög területe a trigonometrikus területképlet alapján
+$$T = {1 \over 2}\left( (13x + 14y + 15z) \sin \phi \right),$$
+ebbõl átrendezve pedig $\sin \phi = {2T \over 13x + 14y + 15z} = {168 \over 13x + 14y + 15z}$, hiszen a háromszög területe a Héron-képlet alapján számolható, éspedig 84 egység.
+
+Írjuk fel most a koszinusztételt a $PAB$, $PBC$, $PCA$ háromszögekben.
+{\setlength\arraycolsep{2pt}\begin{eqnarray*}
+y^2 &=& 13^2 + x^2 - 26x \cos \phi \\[6pt]
+z^2 &=& 14^2 + y^2 - 28 \cos \phi \\[6pt]
+x^2 &=& 15^2 + z^2 - 30x \cos \phi
+\end{eqnarray*}}
+Adjuk össze a három egyenletet:
+$$13^2 + 14^2 + 15^2 = (26x + 28y + 30z) \cos \phi.$$ Átrendezve $\cos \phi = {13^2 + 14^2 + 15^2 \over 2(13x + 14y + 15z)}$. Ez pedig azt jelenti, hogy $\tg \phi = {\sin \phi \over \cos \phi} = {168 \over 295}$.
+\medskip
+
+
+\hbox to \hsize{\hskip2truecm\hrulefill\hskip2truecm}
+{\bf 2. feladat: } Egy minden valós számra értelmezett $f$ függvény minden $x$ és $y$ értékre kielégíti a következõ egyenlõtlenségeket:
+$${\setlength\arraycolsep{2pt}\begin{array}{rcl}
+f(x) &\leq& x, \\[6pt]
+f(x+y) &\leq& f(x)+f(y).
+\end{array}}
+$$
+Bizonyítsuk be, hogy minden $x$ valós számra $f(x)=x$!
+
+
+\ki{Kántor Sándorné}{Debrecen}\medskip
+
+{\bf 2. feladat I. megoldása: } Helyettesítsünk az elsõ feltételbe $x = 0$-t, ekkor $f(x) \leq 0$ adódik. $y = 0$-ra pedig a második feltételbõl $f(x) = f(x + 0) \leq f(x) + f(0)$, ami pedig azt jelenti, hogy $f(0) \geq 0$. Így tehát $f(0) = 0$. Behelyettesítve $y = -x$-et a második feltételbe $0 = f(x - x) \leq f(x) + f(-x)$, és mivel $f(x) \leq x$, valamint $f(-x) \leq -x$, azért $f(x) + f(-x) \leq 0$, így tehát $f(x) + f(-x) \leq 0$, és így mindkét egyenlõtlenségben egyenlõségnek kell fennállnia, vagyis $f(x) = x$ és $f(-x) = -x$, és éppen ezt kellett bizonyítanunk. 
+\medskip
+
+
+\hbox to \hsize{\hskip2truecm\hrulefill\hskip2truecm}
+{\bf 3. feladat: } Oldjuk meg a következõ egyenletet, ha $x$ és $y$ egész számok:
+$$x^3-23x^2-23y^2+y^2x+2x=1849.$$
+
+
+\ki{Bíró Bálint}{Eger}\medskip
+
+{\bf 3. feladat I. megoldása: } Végezzünk ekvivalens átalakításokat az egyenleten!
+$${\setlength\arraycolsep{2pt}\begin{array}{rcl}
+x(x^2 + y^2) - 23(x^2 + y^2) + 2x &=& 1849 \\[6pt]
+(x-23)(x^2 + y^2) + 2x &=& 1849 \\[6pt]
+(x-23)(x^2 + y^2) + 2(x-23) &=& 1803 \\[6pt]
+(x-23)(x^2 + y^2 + 2) &=& 1803 \\[6pt]
+\end{array}}$$
+Az 1803 prímfelbontása $3 \cdot 601$. A második tényezõ biztosan pozitív, tehát az elsõ is biztosan az lesz. Négy lehetõség adódik ekkor:
+
+a.) $x-23 = 1$, ekkor $x = 24$, emellett $x^2 + y^2 + 2 = 1803$, ezt megoldva $y^2 = 1225$, így az egyenlet megoldásai az $x_1 = 24, y_1 = 35$ és $x_2 = 24, y_2 = -35$ számpárok. 
+
+b.) $x - 23 = 1803$, vagyis $x = 1826$ és $x^2 + y^2 + 2 = 1$. Ez viszont $y^2 \geq 0$ miatt biztosan nem teljesülhet.
+
+c.) $x-23 = 3$, vagyis $x = 26$ és $x^2 + y^2 + 2 = 601$. Azonban $26^2 > 601$, tehát ismét nem lesz megfelelõ $y$.
+
+d.) $x - 23 = 601$, vagyis $x = 624$ és $x^2 + y^2 + 2 = 3$. Látható módon $y^2 \geq 0$ miatt ez is ellentmondás.
+
+Összességében véve azt kaptuk tehát, hogy csak két megoldás van: $x = 24, y = 35$, valamint $x = 24, y = -35$.
+\medskip
+
+
+\hbox to \hsize{\hskip2truecm\hrulefill\hskip2truecm}
+{\bf 4. feladat: } Legyen $A$ a tízes számrendszerben felírt $1997^{1999}$ szám számjegyeinek az összege, $B$ pedig az $A$ számjegyeinek az összege. Számítsuk ki $B$ számjegyeinek összegét!
+
+
+\ki{Boros Zoltán}{Debrecen}\medskip
+
+{\bf 4. feladat I. megoldása: } Az egyszerûbb jelölések kedvéért legyen $N = 1997^{1999}$, és jelöljük a $B$ szám keresett számjegyösszegét $C$-vel! Egy szám jegyei összegének 9-es maradéka ismeretesen megegyezik a szám 9-es maradékával. Ez azt jelenti, hogy $N, A, B, C$ 9-es maradékai mind megegyeznek. 1997-nek 8 a 9-cel vett osztási maradéka, így páros hatványaié 1 lesz, páratlan hatványaié pedig 8 (ez teljes indukcióval például könnyen belátható).
+
+Nyilvánvaló, hogy $N < 10000 ^{1999} = 10^{4 \cdot 1999} = 10^{7996}$. Ez pedig azt jelenti, hogy $N$ legfeljebb 7996-jegyû, így számjegyösszege legfeljebb $9 \cdot 7996 = 71964$, vagyis $A$ legfeljebb ötjegyû, így jegyeinek összege, azaz $B$ nem lehet több, mint 45. Az ilyen számok között a 39-nek a legnagyobb a számjegyösszege, ennek pedig 12, tehát $B$ számjegyösszege, azaz $C$ legfeljebb 12, és mivel láttuk, hogy a 9-es maradéka 8 lesz, azért csak $C = 8$ lehet, ez lesz a feladat megoldása.
+\medskip
+
+
+\hbox to \hsize{\hskip2truecm\hrulefill\hskip2truecm}
+{\bf 5. feladat: } Bizonyítsuk be, hogy ha az $ABC$ háromszög hegyesszögû, akkor létezik olyan $P$ pont a térben, amelybõl az $ABC$ háromszög bármely csúcsát a szemközti oldalegyenes bármely pontjával összekötõ szakasz derékszögben látszik!
+
+
+\ki{Kántor Sándor}{Debrecen}\medskip
+
+{\bf 5. feladat I. megoldása: } Emeljünk gömböket az $AB$, $BC$, $CA$ szakaszokra! Ezek metszéspontját jelöljük $P$-vel, ilyen pont létezik, mivel $ABC$ hegyesszögû. A Thalész-tétel szerint $APB$, $BPC$, $CPA$ derékszögek, mivel a három pont a gömbök egy-egy fõkörét határozza meg. Válasszunk ki most egy tetszõleges $M$ pontot a $BC$ egyenesen! A $P$, $B$ és $C$ pontok meghatároznak egy síkot, ebben nyilván benne lesz $M$ is, továbbá ebbõl következõen a $PM$ szakasz is. Mivel azonban a $PA$ egyenes merõleges a $PB$ és $PC$ egy síkban fekvõ egyenesekre, melyek egy pontban metszik egymást, azért merõleges a síkra is, tehát derékszöget zár be annak minden egyenesével, tehát speciálisan $PM$-mel is.
+\medskip
+
+
+\hbox to \hsize{\hskip2truecm\hrulefill\hskip2truecm}
+{\bf 6. feladat: } Legyen $a>0$ és $b>0$ adott valós számok, valamint $f(x,y,z)= \max\left\{ax+\frac{b}{y}, ay+\frac{b}{z}, az+\frac{b}{x}\right\}$, ahol $(x>0, y>0, z>0)$.
+Igazoljuk, hogy az $f$ függvénynek van minimuma, és határozzuk meg ezt a minimumot!
+
+
+\ki{Szász Róbert és Dáné Károly}{Marosvásárhely}\medskip
+
+{\bf 6. feladat I. megoldása: } Használjuk fel a számtani és mértani közepek közti egyenlõtlenséget!
+$$\left( ax + {b \over y} \right) + \left( ay + {b \over z} \right) + \left( az + {b \over x} \right) = \left( ax + {b \over x}\right) + \left( ay + {b \over y} \right) + \left( az + {b \over z}\right) \geq $$
+$$\geq 2 \sqrt{ab} + 2 \sqrt{ab} + 2 \sqrt{ab} = 6 \sqrt{ab}$$
+Ez azt jelenti, hogy az összeg három tagjának a maximuma legalább ennek a számnak a harmada lesz, vagyis $2 \sqrt{ab}$. Ezt az értéket azonban föl is veszi a függvény, mégpedig $x = y = z = \sqrt{{b \over a}}$ választással, tehát ennyi lesz a minimum, és ez el is érhetõ.
+\medskip
+
+\vfill
+\end{document}

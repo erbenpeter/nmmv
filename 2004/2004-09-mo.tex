@@ -1,0 +1,165 @@
+\documentclass[a4paper,10pt]{article} 
+\usepackage[latin2]{inputenc}
+\usepackage{graphicx}
+\usepackage{amssymb}
+\voffset - 20pt
+\hoffset - 35pt
+\textwidth 450pt
+\textheight 650pt 
+\frenchspacing 
+
+\pagestyle{empty}
+\def\ki#1#2{\hfill {\it #1 (#2)}\medskip}
+
+\def\tg{\, \hbox{tg} \,}
+\def\ctg{\, \hbox{ctg} \,}
+\def\arctg{\, \hbox{arctg} \,}
+\def\arcctg{\, \hbox{arcctg} \,}
+
+\begin{document}
+\begin{center} \Large {\em XIII. Nemzetközi Magyar Matematika Verseny} \end{center}
+\begin{center} \large{\em Nagydobrony, 2004. márc. 15-20.} \end{center}
+\smallskip
+\begin{center} \large{\bf 9. osztály} \end{center}
+\bigskip 
+
+{\bf 1. feladat: } Egy kis erdei tavat egy forr\'as t\'apl\'al friss v\'izzel. Egyszer megjelent egy $183$ tag\'u elef\'antcsorda \'es egy nap alatt kiitta a t\'o viz\'et. K\'es\H obb, mikor \'ujra megtelt a t\'o, egy $37$ tag\'u csorda $5$ nap alatt itta ki a vizet. Egy elef\'ant h\'any nap alatt inn\'a ki a t\'o viz\'et?
+
+
+
+\ki{Dr. Katz Sándor}{Bonyhád}\medskip
+
+{\bf 1. feladat I. megoldása: } Legyen a teli t\'o v\'iztartalma $S$ l, az egy napi n\"ovekm\'eny a forr\'asokb\'ol $n$ l. Mivel $183$ elef\'ant $1$ nap alatt issza ki a t\'o viz\'et, ez azt jelenti, hogy kiissza a m\'ar megl\'ev\H o $S$ litert \'es az egy nap alatt m\'eg hozz\'a befoly\'o $n$ litert. Azaz $183$ elef\'ant egy nap alatt  $S+n$ liter vizet iszik meg. Ekkor, felt\'etelezve, hogy minden elef\'ant egyenl\H o mennyis\'eget iszik meg, egy nap alatt egy elef\'ant $\frac{S+n}{183}$ l vizet iszik meg. A m\'asik felt\'etelb\H ol $37$ elef\'ant $5$ nap alatt $S+5n$ l-t iszik meg, ez\'ert egy elef\'ant egy nap alatt $\frac{S+5n}{37\cdot 5}=\frac{S+5n}{185}$ l-t. Ebb\H ol ad\'odik, hogy $\frac{S+n}{183}=\frac{S+5n}{185}$, ahonnan $S=365n$. Teh\'at $183$ elef\'ant egy nap folyam\'an $365n + n = 366n$ liter vizet iszik meg, amib\H ol viszont az is k\"ovetkezik, hogy egy elef\'ant egy nap alatt pontosan $2n$ litert iszik meg. Ez gyakorlatilag azt jelenti, hogy $1n$ litert fogyaszt el a teli t\'o viz\'eb\H ol \'es plusz azt az $1n$ litert, ami a nap folyam\'an befolyik a t\'oba. Mivel a teli t\'o tartalma $365n$ liter, ez\'ert pontosan a $\mathbf{365}$\textbf{. nap} v\'eg\'ere \"ur\"ul ki teljesen a t\'o, ha csak egy elef\'ant iszik bel\H ole.
+
+\medskip
+
+
+\hbox to \hsize{\hskip2truecm\hrulefill\hskip2truecm}
+{\bf 2. feladat: } Az  $1$, $2$, $3$, $\ldots$, $2000$, $2001$, $2002$, $2003$, $2004$ sz\'amokat valamilyen sorrendben egym\'as mell\'e \'irjuk. Lehet-e az \'igy kapott \'uj sz\'am n\'egyzetsz\'am?
+
+
+\ki{Dr. Kántor Sándorné}{Debrecen}\medskip
+
+{\bf 2. feladat I. megoldása: } Kisz\'am\'itjuk az \'uj sz\'am sz\'amjegyeinek \"osszeg\'et. El\H osz\"or \"osszeadjuk a sz\'amjegyeket $1$-t\H ol $1999$-ig. Ezt legk\"onnyebben \'ugy tehetj\"uk meg, ha a sz\'amokat t\'izes csoportonk\'ent t\'abl\'azatszer\H uen egym\'as al\'a \'irjuk pl. a k\"ovetkez\H o form\'aban:
+
+\begin{tabular}{|r|r|r|r|r|r|r|r|r|r|}
+\hline
+0&1&2&3&4&5&6&7&8&9\\
+\hline
+10&11&12&13&14&15&16&17&18&19\\
+\hline
+20&21&22&23&24&25&26&27&28&29\\
+\hline
+\ldots&\ldots&\ldots&\ldots&\ldots&\ldots&\ldots&\ldots&\ldots&\ldots\\
+\hline
+90&91&92&93&94&95&96&97&98&99\\
+\hline
+100&101&102&103&104&105&106&107&108&109\\
+\hline
+110&111&112&113&114&115&116&117&118&119\\
+\hline
+\ldots&\ldots&\ldots&\ldots&\ldots&\ldots&\ldots&\ldots&\ldots&\ldots\\
+\hline
+1000&1001&1002&1003&1004&1005&1006&1007&1008&1009\\
+\hline
+\ldots&\ldots&\ldots&\ldots&\ldots&\ldots&\ldots&\ldots&\ldots&\ldots\\
+\hline
+1990&1991&1992&1993&1994&1995&1996&1997&1998&1999\\
+\hline
+\end{tabular}
+
+
+Ez a t\'abl\'azat $200$ sort tartalmaz. Mind az egyesek, mind a tizesek, mind pedig a sz\'azasok hely\'en $200$-szor szerepel a $0$, $1$, $2$, $3$, $4$, $5$, $6$, $7$, $8$ \'es $9$ sz\'amjegy. Ez\'ert ezek \"osszege $3\cdot 200 \cdot \left(0+1+2+3+4+5+6+7+8+9\right)=600\cdot 45=27000$ Az ezresek hely\'en van $1000$ db. egyes, ezek \"osszege $1000$. A tov\'abbi $5$ sz\'am sz\'amjegyeinek \"osszege: $2+3+4+5+6=20$ V\'eg\"ul az \"osszeg $28020$. De ez a sz\'am oszthat\'o $3$-mal \'es nem oszthat\'o $9$-cel, ugyanis $2+8+2=12$. Ebb\H ol k\"ovetkezik, hogy a kapott sz\'am \textbf{nem lehet n\'egyzetsz\'am}.
+
+\medskip
+
+
+\hbox to \hsize{\hskip2truecm\hrulefill\hskip2truecm}
+{\bf 3. feladat: } Az ABCD t\'eglalapban AD = 3AB. Az E \'es F pontok AD-t h\'arom egyenl\H o r\'eszre osztj\'ak. Mennyi a BEA, BFA \'es BDA sz\"ogek \"osszege?
+
+
+\ki{Balázsi Borbála}{Beregszász}\medskip
+
+{\bf 3. feladat I. megoldása: } \'Abr\'azoljuk az adott t\'eglalapot, \'es rajzolunk mell\'e egy m\'asikat, mely az els\H o ,,megdupl\'az\'asa''.
+
+\centerline{\includegraphics{figures/2004-9-3}}
+
+Azt tal\'aljuk, hogy $PLK\angle=BFA\angle$; $MLR\angle=BDA\angle$; $KL=KM$, ez\'ert $KLM\angle=45^\circ$ V\'eg\"ul $BEA\angle+BFA\angle+BDA\angle=KLM\angle+PLK\angle+MLR\angle=90^\circ$.
+
+\medskip
+
+
+\hbox to \hsize{\hskip2truecm\hrulefill\hskip2truecm}
+{\bf 4. feladat: } Az $a$, $b$ \'es $c$ pozit\'iv sz\'amok egy h\'aromsz\"og oldalainak hossz\'at jel\"olik, \'es \'erv\'enyes r\'ajuk a k\"ovetkez\H o \"osszef\"ugg\'es: $3b^2=2(c^2-a^2)$. Mekkora lehet a $\frac{b}{a}$ t\"ort \'ert\'eke?
+
+
+\ki{Bogdán Zoltán}{Cegléd}\medskip
+
+{\bf 4. feladat I. megoldása: } A felt\'etelb\H ol $2c^2=2a^2+3b^2\iff c^2=a^2+b^2+\frac{1}{2}b^2$. L\'athat\'o, hogy $\frac{1}{2}b^2$ a cosinus t\'etel fel\'ir\'as\'aban a $-2ab\cos\gamma$ hely\'et foglalja el. Ha az $\frac{1}{2}b^2=-2ab\cos\gamma$  egyenl\H os\'eg mindk\'et oldal\'at $ab$-vel elosztjuk, a $\frac{b}{a}=-4\cos\gamma\leq 4$ \"osszef\"ugg\'est kapjuk.  De a h\'aromsz\"og $180^\circ$-os sz\"oget nem tartalmazhat, ez\'ert az egyenl\H os\'eg nem \'allhat fenn.
+\medskip
+
+
+\hbox to \hsize{\hskip2truecm\hrulefill\hskip2truecm}
+{\bf 5. feladat: } Igazolja, hogy a h\'aromsz\"og sz\"ogfelez\H oinek metsz\'espontja \'es a h\'aromsz\"og cs\'ucsai k\"oz\"otti t\'avols\'agok n\'egyzeteinek \"osszege nem kevesebb a h\'aromsz\"og k\'etszeres ter\"ulet\'en\'el!
+
+
+\ki{Bencze Mihály}{Brassó}\medskip
+
+{\bf 5. feladat I. megoldása: } A sz\"ogfelez\H ok metsz\'espontja a be\'irt k\"or k\"oz\'eppontja. Az \'abra jel\"ol\'eseivel meghat\'arozzuk az \'erint\'esi pontok \'es a h\'aromsz\"og cs\'ucsai k\"oz\"otti t\'avols\'agokat. Az $a-x+b-x=c$ egyenletb\H ol $x$-et kifejezve $x=\frac{a+b-c}{2}=\frac{a+b+c}{2}-c=p-c$ ad\'odik, ahol $p$ a h\'aromsz\"og f\'elker\"ulete.
+
+\centerline{\includegraphics{figures/2004-9-5}}
+
+U. i. a m\'asik k\'et t\'avols\'ag  $p - a$  illetve  $p - b$.
+A feladat szerint az $IA^2+IB^2+IC^2\geq 2T_{ABC}$ \'all\'it\'ast kell igazolnunk. Pitagorasz t\'etel\'et \'es az $a^2+b^2\geq2ab$ k\"ozismert egyenl\H otlens\'eget alkalmazva fel\'irhatjuk: 
+{\setlength\arraycolsep{2pt}\begin{eqnarray*}
+IA^2&=&r^2+\left(p-a\right)^2\geq 2r\left(p-a\right) \\
+IB^2&=&r^2+\left(p-b\right)^2\geq 2r\left(p-b\right) \\
+IC^2&=&r^2+\left(p-c\right)^2\geq 2r\left(p-c\right).
+\end{eqnarray*}}
+M\'asr\'eszt $T_{ABC}=p\cdot r=\left(p-a+a\right)r=\left(p-a\right)r+ar$, ahonnan $\left(p-a\right)r=T_{ABC}-ar$.
+Ugyan\' \i gy: 
+{\setlength\arraycolsep{2pt}\begin{eqnarray*}
+\left(p-b\right)r&=&T_{ABC}-br \\
+\left(p-c\right)r&=&T_{ABC}-cr.
+\end{eqnarray*}} 
+
+Ezekb\H ol 
+{\setlength\arraycolsep{2pt}\begin{eqnarray*}
+IA^2+IB^2+IC^2 &\geq& 2\left(T_{ABC}-ar+T_{ABC}-br+T_{ABC}-cr\right)= \\
+&=&2\left(3T_{ABC}-2pr\right)=2\left(3T_{ABC}-2T_{ABC}\right)=2T_{ABC}
+\end{eqnarray*}}
+
+\medskip
+
+
+\hbox to \hsize{\hskip2truecm\hrulefill\hskip2truecm}
+{\bf 6. feladat: } Bizony\'itsa be, hogy ha $p$ \'es $q$ h\'aromn\'al nagyobb pr\'imsz\'am, akkor $7p^2+11q^2-39$ nem pr\'imsz\'am.
+
+
+\ki{Oláh György}{Komárom}\medskip
+
+{\bf 6. feladat I. megoldása: } Minden $3$-n\'al nagyobb pr\'imsz\'am fel\'irhat\'o vagy $6k + 1$, vagy $6k - 1$ alakban, ahol $k$ pozit\'iv eg\'esz. Legyen $p=6k\pm 1$ \'es $q=6m\pm 1$.  Akkor {\setlength\arraycolsep{2pt}\begin{eqnarray*}
+7p^2+11q^2-39&=&7\left(6k\pm 1\right)^2+11\left(6m\pm 1\right)^2-39=\\
+&=&7\left(36k^2\pm 12k+1\right)+11\left(36m^2\pm 12m+1\right)-39=\\
+&=&12\left(21k^2\pm k+33m^2\pm m\right)-21.\end{eqnarray*}}
+Ez oszthat\'o $3$-mal \'es nagyobb $3$-n\'al, teh\'at nem pr\'imsz\'am.
+
+\medskip
+
+
+\hbox to \hsize{\hskip2truecm\hrulefill\hskip2truecm}
+{\bf 7. feladat: } Oldja meg a $\left(p-x\right)^2+\frac{2}{x}+4p=\left(p+\frac{1}{x}\right)^2+2x$  egyenletet az eg\'esz sz\'amok halmaz\'an, ha a $p$ param\'eter eg\'esz sz\'am!
+
+
+\ki{Bíró Bálint}{Eger}\medskip
+
+{\bf 7. feladat I. megoldása: } V\'egezz\"uk el a kijel\"olt m\H uveleteket: $p^2-2px+x^2+\frac{2}{x}+4p = p^2+\frac{2p}{x}+\frac{1}{x^2}+2x$. Ebb\H ol \'atrendez\'essel: $$x^2-\frac{1}{x^2}-2\left(x-\frac{1}{x}\right)=2p\left(x+\frac{1}{x}\right)-4p,$$ vagy m\'ask\'eppen
+{\setlength\arraycolsep{2pt}\begin{eqnarray*}
+\left(x-\frac{1}{x}\right)\left(x+\frac{1}{x}\right)-2\left(x-\frac{1}{x}\right)&=&2p\left(x+\frac{1}{x}\right)-4p \\
+\left(x+\frac{1}{x}-2\right)\left(x-\frac{1}{x}-2p\right)&=&0.\end{eqnarray*}}
+Ebb\H ol vagy $x+\frac{1}{x}-2=0$, vagy $x-\frac{1}{x}-2p=0$ . Az el\H obbi egyenletb\H ol $x = 1$, \'es ez eg\'esz gy\"oke az egyenletnek b\'armely $p$ eset\'eben. Ut\'obbi egyenletb\H ol $x-\frac{1}{x}=2p$. Mivel $x$ is \'es $p$ is eg\'esz sz\'am, ez\'ert $x$ csak $1$ vagy $-1$ lehet. Az $1$-et m\'ar el\H obb figyelembe vett\"uk, $x = -1$ eset\'ere $p$-nek null\'anak kell lennie.
+
+\medskip
+
+\vfill
+\end{document}

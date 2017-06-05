@@ -1,0 +1,146 @@
+\documentclass[a4paper,10pt]{article} 
+\usepackage[latin2]{inputenc}
+\usepackage{graphicx}
+\usepackage{amssymb}
+\voffset - 20pt
+\hoffset - 35pt
+\textwidth 450pt
+\textheight 650pt 
+\frenchspacing 
+
+\pagestyle{empty}
+\def\ki#1#2{\hfill {\it #1 (#2)}\medskip}
+
+\def\tg{\, \hbox{tg} \,}
+\def\ctg{\, \hbox{ctg} \,}
+\def\arctg{\, \hbox{arctg} \,}
+\def\arcctg{\, \hbox{arcctg} \,}
+
+\begin{document}
+\begin{center} \Large {\em XIV. Nemzetközi Magyar Matematika Verseny} \end{center}
+\begin{center} \large{\em Miskolc, 2005. márc. 20-23.} \end{center}
+\smallskip
+\begin{center} \large{\bf 9. osztály} \end{center}
+\bigskip 
+
+{\bf 1. feladat: } Egy egyetemista ötéves tanulmányai alatt összesen 31 vizsgát tett le. Minden évben több vizsgát tett le, mint az azt megelõzõ évben, ötödéves korában pedig éppen háromszor annyit, mint az elsõ éven. Hány tárgyból vizsgázott a negyedik évben?
+
+
+
+
+\ki{Szabó Magda}{Szabadka}\medskip
+
+{\bf 1. feladat I. megoldása: } Legyenek az évenkénti vizsgák számát $a < b < c < d < e$ és $a + b + c + d +e = 31$, 
+\begin{itemize}
+\item{} ha az $a\ge 4$, akkor $b \ge 5$; $c \ge 6$; $d \ge 7$; $e \ge12$, de az $a + b + c + d + e \ge 34 > 31$ és ez lehetetlen.
+\item{} Ha az $a = 1$ akkor az $e = 3$ és $1 < b < c < d < 3$ , ez is lehetetlen.
+\item{} Ha az $a = 2$, akkor $e = 6$ és $2 < b < c < d < 6$, így a $b = 3$, $c = 4$, $d = 5$, de akkor $a + b + c + d + e = 20 \ne 31$;
+\item{} tehát az $a = 3$, $e = 9$ esetén $d \le 7$, $c \le 6$, $b\le 5$, amelybõl az következik, hogy\\
+$a + b + c + d + e \le 3 + 5 + 6 + 7 + 9 = 30 < 31$ tehát $d = 8$.
+\end{itemize}
+
+\noindent A lehetséges vizsgaeloszlás:
+
+$a = 3$, $b = 4$; $c = 7$, $d = 8$, $e = 9$ vagy $a = 3$, $b = 5$; $c = 6$, $d = 8$, $e = 9$.
+\medskip
+
+
+\hbox to \hsize{\hskip2truecm\hrulefill\hskip2truecm}
+{\bf 2. feladat: } Bizonyítsuk be, hogy az $ABC$ háromszög $A$ csúcsából induló magasságvonalának hossza legfeljebb akkora, mint a háromszög $AB$ és $AC$ oldalaihoz hozzáírt körök sugarainak számtani közepe!
+
+
+\ki{Vass Iván}{Miskolc}\medskip
+
+{\bf 2. feladat I. megoldása: } A szokásos jelölésekkel a bizonyítandó állítás
+$$m_a\le\frac{\rho_b+\rho_c}{2}$$
+$$\Updownarrow$$
+$$\frac{2T}{a}\le\frac{\displaystyle{\frac{T}{s-b} + \frac{T}{s-c}}}{2},$$
+ami egyszerûsítés és átalakítások után
+$$(s-b)\cdot(s-c)\le\frac{a^2}{4}.$$
+De ez igaz a
+$$\sqrt{(s-b)\cdot(s-c)}\le\frac{(s-b)+(s-c)}{2}=\frac{a}{2}$$
+mértani és számtani közepek közti egyenlõtlenség alapján.
+\medskip
+
+
+\hbox to \hsize{\hskip2truecm\hrulefill\hskip2truecm}
+{\bf 3. feladat: } Az $ABCD$ téglalap köré írt kör kisebbik $AB$ ívén lévõ $P$ pontból a téglalap $AC$ és $BD$ átlóira bocsátott merõlegesek talppontjai legyenek $M$ és $N$. Mutassuk meg, hogy az $MN$ szakasz hossza független a $P$ pont választásától.
+
+
+\ki{Sipos Elvira}{Zenta}\medskip
+
+{\bf 3. feladat I. megoldása: } Legyen $O$ pont $k$ kör középpontja. Ekkor a $PMON$ négyszög húrnégyszög, 
+mert $ONP \angle + OMP \angle = 180°$. Mivel az $ONP \angle$ és $OMP \angle$ derékszögek, az $OP$ átmérõ fölé $l$ kört szerkesztünk, amely a $PMON$ négyszög körülírt köre, de az $OP$ szakasz $k$ körnek is sugara. Ekkor az $NM$ szakasz az $l$ körben az $AOB \angle$ kerületi szögnek megfelelõ húr. Tehát függetlenül a $P$ pont választásától, $NM$ húr az $OA$ átmérõjû kör $AOB \angle$ szögének felel meg (illetve a megfelelõ állandó középponti szögnek). Az egybevágó körök egybevágó középponti szögeihez egybevágó húrok tartoznak, ezért az $NM$ szakasz hossza nem függ a $P$ pont választásától.
+\medskip
+
+
+\hbox to \hsize{\hskip2truecm\hrulefill\hskip2truecm}
+{\bf 4. feladat: } Vannak-e olyan $m$ és $n$ pozitív egész számok, melyekre teljesül az 
+$$m(m+1)(m+2)(m+3)=n(n+1)$$
+egyenlõség?
+
+
+\ki{Oláh György}{Komárom}\medskip
+
+{\bf 4. feladat I. megoldása: } Végezzük el a két oldalon a beszorzásokat és adjunk hozzá mindkét oldalhoz 1-et!
+Ekkor az egyenlet a következõ alakban írható:
+$$(m^2+3m+1)^2=n^2+n+1.$$
+Itt a bal oldal teljes négyzet, tehát a jobb oldalnak is annak kellene lennie.
+De ha $n>0$, akkor
+$$n^2<n^2+n+1<(n+1)^2.$$
+Mivel pedig $n^2$ és $(n+1)^2$ között nem lehet négyzetszám, ezért az egyenlet a természetes számok körében nem oldható meg.
+\medskip
+
+
+\hbox to \hsize{\hskip2truecm\hrulefill\hskip2truecm}
+{\bf 5. feladat: } Az $ABCD$ trapéz $AC$ átlója 12, a $BD$ pedig 9 egység hosszú, s ez a két átló merõleges egymásra. Tudjuk még, hogy $AB\cdot CD=50$. Határozzuk meg az $AB^2+BC^2+CD^2+DA^2$ összeg értékét!
+
+
+\ki{Dr. Kiss Sándor}{Nyíregyháza}\medskip
+
+{\bf 5. feladat I. megoldása: } Készítsünk ábrát, s rajzoljuk be az $ACD$ és $BCD$ háromszögek $MP$ és $NP$ középvonalait. Az átlók metszéspontja legyen $O$.
+Az átlók merõlegessége miatt $AD^2+BC^2=AB^2+CD^2$, hiszen $AD^2=AO^2+DO^2$ és $BC^2=BO^2+CO^2$. Hasonlóan írjuk fel a Pythagorasz tételt a másik két oldalra is. Ezzel beláthatjuk, hogy elegendõ az $AB^2+BC^2+CD^2+DA^2$  helyett a $2(AB^2+CD^2)$ értékét meghatározni.
+
+Az $MN$ hossza a középvonal tulajdonság miatt $MN=\frac{AB+CD}{2}$, továbbá
+$MP=\frac{AC}{2}=6$ és $NP=\frac{BD}{2}=4,\!5$. Az $MNP$ háromszög a feladat feltételei alapján derékszögû lesz, ezért $$MN^2=MP^2+NP^2=6^2+4,\!5^2=56,\!25,$$ amibõl $MN=7,\!5$. Tehát $MN=\frac{AB+CD}{2}=7,\!5$, amibõl $AB+CD=15$.
+
+Ezt négyzetre emelve: $$AB^2+CD^2+2\cdot AB\cdot CD=225.$$
+
+A feltételek alapján $$AB^2+CD^2+2\cdot 50=225,$$ tehát $$AB^2+CD^2=125.$$
+
+Tehát a keresett $AB^2+BC^2+CD^2+DA^2$ érték 250.
+\medskip
+
+
+\hbox to \hsize{\hskip2truecm\hrulefill\hskip2truecm}
+{\bf 6. feladat: } Egységnyi élû fakockákból álló téglatestet építettünk, melynek méretei $10\times 802\times 2005$. Hány kis kockát lyukaszt ki az a pontszerû szú, amelyik a téglatest egyik testátlója mentén végigrágja magát?
+
+
+\ki{Fejér Szabolcs}{Miskolc}\medskip
+
+{\bf 6. feladat I. megoldása: } $20=5\cdot 5, \quad 802=2\cdot 401,\quad 2005=5\cdot 401$
+
+Legyen a ,,start'' csúcsból kiinduló 3 él a 3 koordinátatengely pozitív fele. Jellemezzük az egységkockákat az origótól legtávolabbi csúcsuk koordinátáival! A ,,start'' kocka az $(1;1;1)$ , ,,cél'' a $(2005;802;10)$. Minden ,,határátlépés'' során új kockába jut a szú.
+Ez történhet
+
+$$\begin{array}{rl}
+a) & \hbox{csúcson (3 koordináta nõ)} \\
+b) & \hbox{élen, de nem csúcson (2 koordináta nõ)} \\
+c) & \hbox{lapon, de nem élen (1 koordináta nõ)}.
+\end{array}$$
+Csúcson akkor lépünk át, ha van hasonló rész-téglatest az eredetihez. 
+Mivel (10;802;2005)=1, így ilyen nincs.
+
+Ha vizsgáljuk a különbözõ koordinátasíkokkal párhuzamos síkmetszeteket, akkor a síkra merõleges élek a téglalapban rácspontokat alkotnak. 
+Például a $802\times 2005$-ös téglalaphoz hasonló a $2\times 5$-ös.
+A szú mozgása során 401 ilyen téglalapot érint (400 lépés).
+A $10\times 802$-esben (hozzá hasonló $5\times 401$) kettõt (1 lépés).
+A $10\times 2005$-ösben (hozzá hasonló $2\times 401$) ötöt (4 lépés). Mivel a koordináták összváltozása $2004+801+9=2814$, amibõl éleken át történik $400 + 4 + 1= 405$, ami 810 koordinátaváltozás, így $2814 - 810 = 2004$ lépés történik csak lapon.
+
+Az összes lépések száma $2004 + 405 = 2409$.
+
+Így a bejárt egységkockák száma a kiindulásival együtt 2410. 
+\medskip
+
+\vfill
+\end{document}

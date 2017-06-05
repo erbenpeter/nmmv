@@ -1,0 +1,209 @@
+\documentclass[a4paper,10pt]{article} 
+\usepackage[latin2]{inputenc}
+\usepackage{graphicx}
+\usepackage{amssymb}
+\voffset - 20pt
+\hoffset - 35pt
+\textwidth 450pt
+\textheight 650pt 
+\frenchspacing 
+
+\pagestyle{empty}
+\def\ki#1#2{\hfill {\it #1 (#2)}\medskip}
+
+\def\tg{\, \hbox{tg} \,}
+\def\ctg{\, \hbox{ctg} \,}
+\def\arctg{\, \hbox{arctg} \,}
+\def\arcctg{\, \hbox{arcctg} \,}
+
+\begin{document}
+\begin{center} \Large {\em XIII. Nemzetközi Magyar Matematika Verseny} \end{center}
+\begin{center} \large{\em Nagydobrony, 2004. márc. 15-20.} \end{center}
+\smallskip
+\begin{center} \large{\bf 10. osztály} \end{center}
+\bigskip 
+
+{\bf 1. feladat: } K\'et g\'epkocsi halad az aut\'op\'aly\'an egy ir\'anyban. A k\"ozt\"uk l\'ev\H o t\'avols\'ag jelenleg $2$~km, \'es minden $n$-edik percben $\frac{1}{n^2}$~km-rel cs\"okken. Utol\'eri-e a m\'asodik j\'arm\H u az el\H otte halad\'ot?
+
+
+\ki{Gecse Frigyes}{Ungvár}\medskip
+
+{\bf 1. feladat I. megoldása: } A k\'et j\'arm\H u k\"oz\"otti t\'avols\'ag $n$ perc alatt $\left(\frac{1}{1^2} + \frac{1}{2^2} + \frac{1}{3^2} + \ldots + \frac{1}{n^2}\right)$-tel cs\"okken, ez\'ert ez a t\'avols\'ag $$D_{n} = 2-\left(\frac{1}{1^2} + \frac{1}{2^2} + \frac{1}{3^2} + \ldots + \frac{1}{n^2}\right)=1-\left(\frac{1}{2^2} + \frac{1}{3^2} + \ldots + \frac{1}{n^2}\right) \ \hbox{km}.$$ De 
+{\setlength\arraycolsep{2pt}\begin{eqnarray*}
+\frac{1}{2^2} + \frac{1}{3^2} + \ldots + \frac{1}{n^2}&<&\frac{1}{1\cdot 2} + \frac{1}{2\cdot 3} + \ldots + \frac{1}{\left(n-1\right)\cdot n} = \\
+&=&1 - \frac{1}{2} + \frac{1}{2} - \frac{1}{3} + \ldots + \frac{1}{n-1} -\frac{1}{n} = 1-\frac{1}{n}.\end{eqnarray*}} Ez\'ert $D_{n}>1-\left(1-\frac{1}{n}\right) = \frac{1}{n}>0$ $n$ minden term\'eszetes \'ert\'ek\'evel. Teh\'at a m\'asik j\'arm\H u \textbf{soha nem \'eri utol az el\H otte halad\'ot}.
+
+\medskip
+
+
+\hbox to \hsize{\hskip2truecm\hrulefill\hskip2truecm}
+{\bf 2. feladat: } A $k_{1}$ \'es $k_{2}$ k\"or\"ok az $A$ \'es $B$ pontokban metszik egym\'ast.
+
+\centerline{\includegraphics{figures/2004-10-2}}
+
+A $k_{1}$ k\"or tetsz\H oleges ($A$-t\'ol \'es $B$-t\H ol k\"ul\"onb\"oz\H o) $K$ pontj\'at \"osszek\"otj\"uk az $A$ \'es $B$ pontokkal. A $KA$ \'es $KB$ egyenesek a $k_{2}$ k\"ort m\'asodszor a $P$ \'es $Q$ pontokban metszi. Bizony\'itsa be, hogy a $PQ$ h\'ur mer\H oleges a $k_{1}$ k\"or $KM$ \'atm\'er\H oj\'ere.
+
+
+\ki{Dr. Pintér Ferenc}{Nagykanizsa}\medskip
+
+{\bf 2. feladat I. megoldása: } Legyen $E$ a $PQ$ egyenes \'es $MK$ egyenes metsz\'espontja. Akkor elegend\H o bizony\'itani, hogy $QEK$ h\'aromsz\"ogben az $E$ sz\"og der\'eksz\"og, vagy $EKQ\angle+EQK\angle=90^{\circ}$.
+
+\centerline{\includegraphics{figures/2004-10-2}}
+
+Fel\'irhatjuk: $EKQ\angle + EQK\angle = MKA\angle + AKB\angle + BAK\angle$ Ugyanis $EQK$ \'es $BAK$ sz\"ogek a $k_{2}$ k\"or $PB$ \'iv\'ere t\'amaszkod\'o ker\"uleti sz\"ogek, ez\'ert egyenl\H ok. De a fel\'irt h\'arom sz\"og \"osszege a $k_{1}$ k\"or\"on sorban az $MA$, $AB$ \'es $BK$ \'ivekre t\'amaszkodnak, melyek \"osszesen egy f\'elk\"ort tesznek ki, teh\'at fokm\'ert\'ek\"uk \"osszege $180^{\circ}$. Ez\'ert a h\'arom sz\"og \"osszege ennek a fele, teh\'at $90^{\circ}$.
+\medskip
+
+
+\hbox to \hsize{\hskip2truecm\hrulefill\hskip2truecm}
+{\bf 3. feladat: } Melyek azok a term\'eszetes $n$ sz\'amok, melyekre $n^2-440$ teljes n\'egyzet!
+
+
+\ki{Dr. Kántor Sándorné}{Debrecen}\medskip
+
+{\bf 3. feladat I. megoldása: } Legyen $n^{2}-440=m^{2}$, $m$ eg\'esz.
+Ebb\H ol $n^{2}-m^{2}=440\iff \left(n+m\right)\left(n-m\right)=2^{3}\cdot 5\cdot 11$.
+Az $n + m$ valamint $n - m$ sz\'amokra fenn\'all\'o lehet\H os\'egek kiv\'alaszt\'asakor most azt vessz\"uk figyelembe, hogy $n+m>n-m$ tov\'abb\'a mindkett\H o p\'aros, mert szorzatuk p\'aros. Ez\'ert a k\"ovetkez\H o lehet\H os\'egeket kapjuk:
+$$\begin{array}{llll}
+\left\{\begin{array}{l}
+n+m=4\cdot 5\cdot 11,\\
+n-m=2;
+\end{array}
+\right.&\left\{
+\begin{array}{l}
+n+m=4\cdot 11,\\
+n-m=2\cdot 5;
+\end{array}
+\right.&\left\{
+\begin{array}{l}
+n+m=2\cdot 11,\\
+n-m=4\cdot 5;
+\end{array}
+\right.&\left\{
+\begin{array}{l}
+n+m=2\cdot 5\cdot 11,\\
+n-m=4.
+\end{array}
+\right.\\
+\end{array}$$
+
+Megoldva a n\'egy egyenletrendszert, n\'egy $n$-\'ert\'eket kapunk: $\textbf{111}$, $\textbf{27}$, $\textbf{21}$ \'es $\textbf{57}$. Mindegyikre teljes\"ul a k\"ovetelm\'eny: $111^{2}-440=11881=109^{2}$; $27^{2}-440=289=17^{2}$; $21^{2}-440=1=1^{2}$; $57^{2}-440=2809=53^{2}$.
+\medskip
+
+
+\hbox to \hsize{\hskip2truecm\hrulefill\hskip2truecm}
+{\bf 4. feladat: } L\'etezik-e olyan $x$ \'es $y$ term\'eszetes sz\'am, melyekre $7^x-5^y=2004$?
+
+
+\ki{Kacsó Ferenc}{Marosvásárhely}\medskip
+
+{\bf 4. feladat I. megoldása: } Felhaszn\'aljuk a sz\'amelm\'elet ismert \'all\'it\'asait: b\'armely term\'eszetes $n$-re $a^{n} - b^{n}$ oszthat\'o $\left(a - b\right)$-vel, p\'aratlan $n$-re pedig  oszthat\'o $\left(a + b\right)$-vel, ahol $a$ \'es $b$ eg\'esz sz\'amok.
+Fel\'irjuk az egyenletet m\'ask\'eppen: $\left(7^{x} + 1\right)-\left(5^{y}-1\right)=2006$.
+Itt p\'aratlan $x$-re \'es b\'armilyen $y$-ra a baloldal mindk\'et tagja oszthat\'o $4$-gyel, a jobb oldal $2006$ viszont nem.
+Teh\'at $x$ nem lehet p\'aratlan.
+Ha az egyenletet $\left(7^{x}-1\right)-\left(5^{y}+1\right)=2002$ alakban \'irjuk fel, akkor a bal oldal mindk\'et tagja oszthat\'o $6$-tal, a jobb oldal viszont $2002$ nem oszthat\'o $6$-tal.
+Teh\'at $y$ sem lehet p\'aratlan.
+Ha $x$ \'es $y$ p\'arosak, akkor $x = 2k$, $y = 2m$, \'es az egyenletet ilyen alakban \'irhatjuk: $\left(49^{k}-1\right)-\left(25^{m}-1\right)=2004$.
+A bal oldalon $49^{k}-1$ oszthat\'o $48$-cal, $25^{m}-1$ pedig $24$-gyel, vagyis a bal oldal oszthat\'o $8$-cal a jobb oldal $2004$ pedig nem.
+Teh\'at, a \textbf{keresett $x$ \'es $y$ nem l\'etezik}.
+
+\medskip
+
+
+\hbox to \hsize{\hskip2truecm\hrulefill\hskip2truecm}
+{\bf 5. feladat: } Adott a t\'erben hat tetsz\H oleges pont. Ezeket \"osszek\"otj\"uk az \"osszes lehets\'eges m\'odon. Igazolja, hogy azon h\'arom szakasz felez\H opontjai \'altal alkotott h\'aromsz\"ogek s\'ulypontjai, amely szakaszoknak p\'aronk\'ent nincs egy k\"oz\"os v\'egpontja, egybeesnek.
+
+
+
+\ki{Bencze Mihály}{Brassó}\medskip
+
+{\bf 5. feladat I. megoldása: } Legyen $A$, $B$, $C$, $D$, $E$, $F$ az adott hat pont, $AB$, $CD$ \'es $EF$ a h\'arom kiv\'alasztott, a felt\'etelnek megfelel\H o szakasz.
+$M$, $K$ \'es $P$ sorban e szakaszok felez\H opontjai, az $MKP$ h\'aromsz\"og s\'ulypontja pedig $S$. Akkor a t\'er tetsz\H oleges $O$ pontj\'ara a h\'aromsz\"og s\'ulypontj\'anak valamint a szakasz felez\H opontj\'anak ismert vektork\'epleteit alkalmazva fel\'irhatjuk:
+{\setlength\arraycolsep{2pt}\begin{eqnarray*}
+\overrightarrow{OS}&=&\frac{1}{3}\left(\overrightarrow{OM} + \overrightarrow{OK} + \overrightarrow{OP}\right)=\\[6pt]
+&=& \frac{1}{3}\left(\frac{1}{2}\left(\overrightarrow{OA} + \overrightarrow{OB}\right) + \frac{1}{2}\left(\overrightarrow{OC}+\overrightarrow{OD}\right) + \frac{1}{2}\left(\overrightarrow{OE} + \overrightarrow{OF}\right)\right)=\\[6pt]
+&=&\frac{1}{6}\left(\overrightarrow{OA} + \overrightarrow{OB} + \overrightarrow{OC}+\overrightarrow{OD} + \overrightarrow{OE} + \overrightarrow{OF}\right).
+\end{eqnarray*}}
+K\"onny\H u bel\'atni, hogy ugyanezt az eredm\'enyt kapjuk, ha az $AB$, $CD$ \'es $EF$ szakaszok helyett b\'armely m\'asik h\'arom alkalmas szakaszt v\'alasztjuk. Ebb\H ol k\"ovetkezik, hogy az $S$ pont minden esetben ugyanaz.
+
+\medskip
+
+
+\hbox to \hsize{\hskip2truecm\hrulefill\hskip2truecm}
+{\bf 6. feladat: } Egy trap\'ezba, melynek egyik sz\'ara $40$~cm, ter\"ulete $1280$~\mbox{cm${}^2$}, k\"or \'irhat\'o. A trap\'ez magass\'aga az alapok m\'ertani k\"ozepe. Bizony\'itsa be, hogy a trap\'ez k\"or\'e is \'irhat\'o k\"or, \'es sz\'am\'itsa ki a be\'irt \'es k\"or\'e \'irt k\"or\"ok k\"oz\'eppontjai k\"oz\"otti t\'avols\'agot!
+
+
+\ki{Gecse Frigyes}{Ungvár}\medskip
+
+{\bf 6. feladat I. megoldása: } Az \'abra jel\"ol\'eseivel: $PC=\sqrt{40^{2}-ab}$; $BM=a-b-\sqrt{40^{2}-ab}$.
+Figyelembe vessz\"uk, hogy a trap\'ezba k\"or \'irhat\'o, vagyis a szemben fekv\H o oldalak \"osszege egyenl\H o, az $AMB$ der\'eksz\"og\H u h\'aromsz\"ogben alkalmazzuk a Pitagorasz-t\'etelt, fel\'irjuk a trap\'ez ter\"ulet\'et, kapjuk az al\'abbi egyenletrendszert:
+$$\left\{
+\begin{array}{l}
+a+b=40 + c;\\
+\left(\sqrt{ab}\right)^{2} + \left(a - b - \sqrt{40^{2} - ab}\right)^2 = c^2;\\
+\left(a + b\right)\sqrt{ab}=2560.
+\end{array}
+\right.$$
+
+\centerline{\includegraphics{figures/2004-10-6A}}
+
+Az els\H o egyenletb\H ol $c=a+b-40$, ebb\H ol $c^{2}=a^{2}+b^{2}+1600 + 2ab-80a-80b$.
+Ezt az eredm\'enyt a m\'asodik egyenletbe helyettes\'itve, \'es elv\'egezve az \'atalak\'it\'asokat, a $\sqrt{1600 - ab}\left(a-b\right)=40\left(a + b\right) - 2ab$ egyenlethez jutunk, amit n\'egyzetre emelve csak $\left(a + b\right)$ \'es $ab$  alak\'u kifejez\'eseket tartalmaz\'o egyenlet ad\'odik:
+$$\left(1600 - ab\right)\left(\left(a+b\right)^{2}-4ab\right)=1600\left(a+b\right)^{2}-160ab\left(a+b\right) + 4a^{2}b^{2}.$$
+
+Ebb\H ol egyszer\H us\'it\'esekkel az $\left(a+b\right)^{2}-160\left(a+b\right)+6400=0$ egyenletet kapjuk, ahonnan $a+b=80$.
+Ezut\'an a rendszer harmadik egyenlet\'eb\H ol $\sqrt{ab}=32\iff ab=1024$.
+Felt\'etelezve, hogy $a>b$, az alapokra $a = 64$cm \'es $b = 16$cm \'ert\'ekeket kapjuk.
+A $c$ sz\'arra $c = 80-40=40$(cm) \'ert\'eket kapjuk, ami annyit jelent, hogy a trap\'ez egyenl\H o sz\'ar\'u.
+Teh\'at, k\"or\'e is \'irhat\'o k\"or.
+Mind a be\'irt, mind a k\"or\'e \'irt k\"or k\"oz\'eppontja a szimmetriatengelyen fekszik.
+Legyen $GK = y$, akkor $KE = 32 - y$.
+Az $AEK$ \'es $BGK$ der\'eksz\"og\H u h\'aromsz\"ogekb\H ol a k\"or\'e \'irt k\"or sugar\'anak n\'egyzet\'et kifejezve az $y^{2}+32^{2}=\left(32-y\right)^{2}+8^{2}$ egyenlet ad\'odik, melyet megoldva $y = 1$ \'ert\'eket kapjuk.
+Ez azt jelenti, hogy a $K$ pont val\'oban a trap\'ez belsej\'eben van.
+V\'eg\"ul
+$\textbf{OK = 16-1 = 15}$\textbf{~(cm)}.
+\medskip
+
+{\bf 6. feladat II. megoldása: } El\H osz\"or igazoljuk, hogy a trap\'ez egyenl\H o sz\'ar\'u.
+Ehhez elegend\H o bizony\'itani, hogy a be\'irt k\"or az alapokat a felez\H opontokban \'erinti.
+A trap\'ez alapon fekv\H o sz\"ogeinek \"oszege $180^{\circ}$, a be\'irt k\"or k\"oz\'eppontja pedig a sz\"ogfelez\H ok metsz\'espontja, ez\'ert $AOB\angle=COD\angle=90^{\circ}$.
+Az $AOB$ \'es $COD$ der\'eksz\"og\H u h\'aromsz\"ogekb\H ol $r^{2}=xu=yv$, ahonnan $\frac{x}{y}=\frac{v}{u}$ (*).
+
+\centerline{\includegraphics{figures/2004-10-6B}}
+
+A felt\'etel szerint a magass\'ag az alapok m\'ertani k\"ozepe: $\left(2r\right)^2=\left(x + y\right)\left(u + v\right)$, vagyis $xu + xv + yu + yv = 4xu$.
+De $xu=yv$ miatt $xv-2xu+yu=0$, melyet $\left(yu\right)$-val osztva (*) figyelembev\'etel\'evel az ${\left(\frac{x}{y}\right)}^{2} - 2\left(\frac{x}{y}\right) + 1 = 0 \iff \left(\frac{x}{y} - 1\right)^2 = 0$ egyenlethez jutunk.
+Ebb\H ol $\frac{x}{y} = 1$, azaz $x=y$ \'es akkor $u=v$.
+A tov\'abbi sz\'am\'it\'asokat az olvas\'ora b\'izzuk.
+\medskip
+
+
+\hbox to \hsize{\hskip2truecm\hrulefill\hskip2truecm}
+{\bf 7. feladat: } Az $\frac{a}{b}$ k\"oz\"ons\'eges t\"ort tizedes t\"ort alakja olyan v\'egtelen szakaszos tizedes t\"ort, amelynek szakasza $\left(b-1\right)$ sz\'amjegyb\H ol \'all.
+Az $a$ \'es $b$ sz\'amok pozit\'iv eg\'eszek.
+Fejezzük ki az egy szakaszban l\'ev\H o jegyek \"osszeg\'et $b$-vel!
+
+
+\ki{Bogdán Zoltán}{Cegléd}\medskip
+
+{\bf 7. feladat I. megoldása: } V\'egezz\"uk el n\'eh\'any t\"ort tizedess\'e alak\'it\'as\'at! Pl. $\frac{1}{7}=0,142857142857\ldots= 0,\left(142857\right)$, $\frac{1}{6}=0,1666\ldots=0,1\left(6\right)$, $\frac{1}{13}=0,076923076923\ldots=0,\left(076923\right)$.
+Azt tal\'aljuk, hogy csak az els\H o p\'eld\'ara teljes\"ul a feladat felt\'etele: a nevez\H o $7$, \'es $\left(7-1\right)$ sz\'amjegyb\H ol \'all a szakasz.
+Ebben az esetben az oszt\'as folyamatos elv\'egz\'esekor minden lehets\'eges marad\'ekot megkapunk (term\'eszetesen a $0$ kiv\'etel\'evel).
+Ezek a marad\'ekok: $1$, $2$, $3$, $4$, $5$, $6$ (m\'as sorrendben).
+Az oszt\'askor mindig egy $0$-t \'irunk jobbr\'ol a marad\'ekhoz, vagyis a tizedes t\"ort sz\'amjegyei \'ugy \'allnak el\H o, hogy 10-et, 20-at, 30-at, stb. osztjuk 7-tel, mik\"ozben a  szakasz sz\'amjegyei a nem teljes h\'anyadosok lesznek, \'ugy is mondhatjuk, a $\left[\frac{10}{7}\right]$;$\left[\frac{20}{7}\right]$ stb. sz\'amjegyek.
+\'Altal\'anos alakban ha $b$-vel osztunk, a marad\'ekok az $1$, $2$, $3$, \ldots , $\left(b - 1\right)$ sz\'amok lesznek, a szakasz sz\'amjegyei pedig $\left[\frac{10}{b}\right]$;$\left[\frac{20}{b}\right]$;\ldots;$\left[\frac{10\left(b-1\right)}{b}\right]$ sz\'amok.
+De $\frac{10k}{b} = \left[\frac{10k}{b}\right]+\frac{r_k}{b}\qquad \left(k\leq b-1\right)$, ahol az $r_k$ sz\'am a $10k$ sz\'am  $b$-vel val\'o oszt\'as\'anak marad\'eka.
+
+\'Igy $\frac{10}{b} + \frac{20}{b} + \ldots + \frac{10\left(b-1\right)}{b} = \left[\frac{10}{b}\right] + \frac{r_1}{b} + \left[\frac{20}{b}\right] + \frac{r_2}{b} + \ldots + \left[\frac{10\left(b-1\right)}{b}\right] + \frac{r_{b-1}}{b}.$
+
+De {\setlength\arraycolsep{2pt}\begin{eqnarray*}
+r_1 + r_2 + \ldots + r_{b-1} &=& 1 + 2 + \ldots + \left(b - 1\right)=\frac{\left(1+b-1\right)\left(b-1\right)}{2}=\frac{b\left(b-1\right)}{2} \\
+\frac{10}{b} + \frac{20}{b} + \ldots + \frac{10\left(b-1\right)}{b} &=& \frac{10\left(1+2+\ldots + \left(b-1\right)\right)}{b} = \frac{10b\left(b-1\right)}{2b} = 5\left(b-1\right) \\
+\frac{r_1}{b} + \frac{r_2}{b} + \ldots + \frac{r_{b-1}}{b} &=& \frac{1}{b}\cdot \frac{b\left(b-1\right)}{2} = 0,5\left(b-1\right).\end{eqnarray*}}
+
+V\'eg\"ul $\left[\frac{10}{b}\right] + \left[\frac{20}{b}\right] + \ldots + \left[\frac{10\left(b-1\right)}{b}\right] = 5\left(b-1\right)-0,5\left(b-1\right)=4,5\left(b-1\right)$.
+A megold\'ast nem befoly\'asolja a szakasz \'es a tizedes vessz\H o k\"oz\"ott esetleg el\H ofordul\'o sz\'amcsoport.
+
+\medskip
+
+\vfill
+\end{document}

@@ -1,0 +1,124 @@
+\documentclass[a4paper,10pt]{article} 
+\usepackage[latin2]{inputenc}
+\usepackage{graphicx}
+\usepackage{amssymb}
+\voffset - 20pt
+\hoffset - 35pt
+\textwidth 450pt
+\textheight 650pt 
+\frenchspacing 
+
+\pagestyle{empty}
+\def\ki#1#2{\hfill {\it #1 (#2)}\medskip}
+
+\def\tg{\, \hbox{tg} \,}
+\def\ctg{\, \hbox{ctg} \,}
+\def\arctg{\, \hbox{arctg} \,}
+\def\arcctg{\, \hbox{arcctg} \,}
+
+\begin{document}
+\begin{center} \Large {\em X. Nemzetközi Magyar Matematika Verseny} \end{center}
+\begin{center} \large{\em Nagykanizsa, 2001. ápr. 6-10.} \end{center}
+\smallskip
+\begin{center} \large{\bf 11. osztály} \end{center}
+\bigskip 
+
+{\bf 1. feladat: } Hány megoldása van az
+$$x^{2}+y^{2}+z^{2}=2^{2001}$$
+egyenletnek az egész számok körében?
+
+
+\ki{Szabó Magda}{Szabadka}\medskip
+
+{\bf 1. feladat I. megoldása: } Az $x^2 + y^2 + z^2 = 2^n$ háromismeretlenes diofantoszi egyenlet megoldásai csupa páros számok. Ez a következõképp látható be: tegyük fel, hogy két páratlan és egy páros szám van, azaz $x = 2x_1 + 1$, $y = 2y_1 + 1$, $z = 2z_1$. Ekkor az egyenlet alakja a következõ:
+$$(2x_1 + 1)^2 + (2y_1 + 1)^2 + (2z)^2 = 2^n$$
+$$2(x_1^2 + x_1 + y_1^2 + y_1 + z_1) = 2^{n-1} - 1$$
+Tehát egy páros szám egyenlõ lenne egy páratlannal, ami létezhetetlen. Ez azt jelenti, hogy mindhárom ismeretlennek párosnak kell lennie. Ekkor az egyenlet mindkét oldalát leoszthatjuk 4-gyel:
+$$x_1^2 + y_1^2 + z_1^2 = 2^{n-2}$$
+Ismételjük meg ugyanezt az eljárást, végül arra jutunk $n = 2001$ esetén, hogy
+$$a^2 + b^2 + c^2 = 2,$$
+ahol $x = a \cdot 2^{1000}$, $y = b \cdot 2^{1000}$, $z = c \cdot 2^{1000}$. Az egyenlet egész megoldásai úgy adódnak, hogy két változó értéke $\pm 1$, a harmadik pedig 0. Ennek alapján az eredeti egyenlet megoldását úgy kapjuk, hogy két változó $\pm 2^{1000}$, a harmadik pedig 0.
+\medskip
+
+
+\hbox to \hsize{\hskip2truecm\hrulefill\hskip2truecm}
+{\bf 2. feladat: } Az $ABC$ derékszögû háromszög $AB$ átfogójához tartozó magasságának talppontja $T$. Mekkora az $ABC$, $ATC$ és $BTC$ háromszögekbe írható körök sugarainak összege, ha $TC = 5$~cm?
+
+
+\ki{dr. Katz Sándor}{Bonyhád}\medskip
+
+{\bf 2. feladat I. megoldása: } % Ide kell egy ábra a háromszögrõl a körökkel
+Felhasználjuk azt a jól ismert összefüggést, miszerint egy derékszögû háromszögben a beírt háromszög sugarának kétszerese megegyezik a két befogó összegének és az átfogónak a különbségével, a szokásos jelölésekkel $2r = a + b - c$. Írjuk fel ezt az összefüggést mindhárom háromszögre! $2r = a+b-c$, $2r_1 = p + m - a$, $2r_2 =q + m - a$, ahol $r_1$ az $ATC$, $r_2$ a $TCB$ háromszög beírt körének sugara, $m$ a $c$ oldalhoz tartozó magasság, $TB = q$, $AT = p$.
+
+Adjuk össze a fenti egyenleteket:
+$$2(r + r_1 + r_2) = 2m + p + q - c = 2m,$$
+mivel $p + q = AT + TB = AB = c$. Ez pedig azt jelenti, hogy $r + r_1 + r_2 = m = 5 \ \hbox{cm}.$
+\medskip
+
+
+\hbox to \hsize{\hskip2truecm\hrulefill\hskip2truecm}
+{\bf 3. feladat: } Az $a$, $b$, $c$ oldalú $ABC$ háromszög szögei $\alpha$, $\beta$, $\gamma$. Igazoljuk, hogy ha $3\alpha + 2\beta = 180^{\circ}$, akkor $a^{2} + bc-c^{2} = 0$.
+
+
+\ki{dr. Pintér Ferenc}{Nagykanizsa}\medskip
+
+{\bf 3. feladat I. megoldása: } %Esetleg vázlatos ábra a szögekkel és a D ponttal
+Rendezzük át a bizonyítandó egyenlõséget! Azt kapjuk, hogy ${a \over c} = {c-b \over a}$. Forgassuk el a $C$ pontot $A$ körül az $AB$ egyenesre! Jelöljük a kapott pontot $D$-vel! Mivel a háromszög szögeinek összege $180^{\circ}$, azért $3 \alpha + 2 \beta = \alpha + \beta + \gamma$, azaz $\gamma = 2 \alpha + \beta$, amibõl azt kapjuk, hogy $\gamma$ a háromszög legnagyobb szöge. Ez azt jelenti, hogy $c$ a legnagyobb oldal, tehát $D$ az $AB$ oldal belsõ pontja lesz. Ekkor $DB = c-b$. A $CDA$ háromszög egyenlõszárú, így $CDA \angle = {180^{\circ} - \alpha \over 2}$. Tudjuk továbbá, hogy $180^{\circ}- \alpha = 2(\alpha + \beta)$, vagyis $CDB \angle = 180^{\circ} - {180^{\circ} - \alpha \over 2} = 180^{\circ} - (\alpha + \beta) = \gamma$.
+Ez azt jelenti, hogy a $DBC$ és $CBA$ háromszögek hasonlók, mivel szögeik megegyeznek, tehát a megfelelõ oldalak aránya egyenlõ:
+$${a \over c}={CB \over AB} = {DB \over CB} = {c-b \over a},$$
+és éppen ezt akartuk belátni.
+\medskip
+
+
+\hbox to \hsize{\hskip2truecm\hrulefill\hskip2truecm}
+{\bf 4. feladat: } Hány különbözõ szám van a következõ $2001$ szám között?
+$$\left[\frac{1^{2}}{2001}\right], \left[\frac{2^{2}}{2001}\right], \ldots, \left[\frac{2001^{2}}{2001}\right], $$
+($\left[x\right]$ jelöli az $x$ szám egészrészét, azaz azt a legnagyobb egész számot, amely $x$-nél még nem nagyobb.)
+
+
+\ki{dr. Katz Sándor}{Bonyhád}\medskip
+
+{\bf 4. feladat I. megoldása: } Két szomszédos négyzetszám különbsége $(n+1)^2 - n^2 = 2n+1$. $n$ függvényében ez szigorúan monoton nõ. Mivel $1001^2 - 1000^2 = 2001$, azért ${1001^2 \over 2001} - {1000^2 \over 2001} = 1$
+Amennyiben $n<1000$, úgy ${(n+1)^2 \over 2001} - {n^2 \over 2001} < 1$ az elõzõekbõl következõen. Ez azt jelenti, hogy az
+$$\left[ {1^2 \over 2001} \right] + \left[ {2^2 \over 2001} \right] + \ldots + \left[ {1000^2 \over 2001} \right]$$
+számok sorozatában az elsõ szám, azaz 0, és az utolsó szám, azaz 499 között minden lehetséges egész érték elõfordul, ez összesen 500 különöbözõ egész szám.
+
+$n > 1000$ esetén ${(n+1)^2 \over 2001} - {n^2 \over 2001} > 1$. Az egymást követõ törtek különbsége így 1-nél nagyobb, tehát az
+$$\left[ {1001^2 \over 2001} \right] + \left[ {1002^2 \over 2001} \right] + \ldots + \left[ {2001^2 \over 2001} \right]$$
+számok mind különbözõk lesznek, és mivel az elsõ értéke 500, azért mindegyik különbözni fog az imént számbavett számoktól. Összesen ezekbõl 1001 darab lesz, tehát mindent egybevéve 1501 különbözõ szám lesz a feladat által megadott sorozatban.
+\medskip
+
+
+\hbox to \hsize{\hskip2truecm\hrulefill\hskip2truecm}
+{\bf 5. feladat: } Adott a síkon $2001$ pont és egy egységnyi sugarú körvonal. Bizonyítsuk be, hogy található a körvonalon olyan pont, amelytõl az adott pontokig mért távolságok összege legalább $2001$.
+
+
+\ki{Balázsi Borbála}{Beregszász}\medskip
+
+{\bf 5. feladat I. megoldása: } Válasszuk ki a körvonal tetszõleges $A$ pontját! Amennyiben $\sum_{i = 1}^{2001}AM_i \geq 2001$, akkor az állítás igaz lesz. Ha nem így van, akkor húzzuk be az $A$-n áthaladó átmérõt, és jelöljük a másik végpontját $B$-vel! Tudjuk, hogy $AB = 2$ és így a háromszögegyenlõtlenség miatt $AM_i + M_iB \geq 2$ bármely $i$-re, ez pedig azt jelenti, hogy
+$$\sum_{i = 1}^{2001}AM_i + \sum_{i = 1}^{2001}M_iB = \sum_{i = 1}^{2001}(AM_i + M_iB) \geq 2 \cdot 2001$$
+Mivel pedig tudjuk, hogy $\sum_{i = 1}^{2001}AM_i < 2001$, azért $\sum_{i = 1}^{2001}M_iB > 2001$, ezzel pedig az állítást beláttuk.
+\medskip
+
+
+\hbox to \hsize{\hskip2truecm\hrulefill\hskip2truecm}
+{\bf 6. feladat: } Igazoljuk, hogy ha $x_{1}, x_{2}, \ldots, x_{n}\in \left[\frac{4}{5}, 1\right]$, akkor
+$$\frac{3-\sqrt{1-x_{1}^2}}{x_{2}+4} + \frac{3-\sqrt{1-x_{2}^2}}{x_{3}+4} + \ldots + \frac{3-\sqrt{1-x_{n}^2}}{x_{1}+4} \geq \frac{n}{2} .$$
+
+
+\ki{Bencze Mihály}{Brassó}\medskip
+
+{\bf 6. feladat I. megoldása: } Bizonyítsunk elõször egy változóra!
+{\setlength\arraycolsep{2pt}\begin{eqnarray*}
+{3 - \sqrt{1-x^2} \over x+4} &\geq& {1 \over 2} \\[6pt]
+2 - x &\geq& 2 \sqrt{1 - x^2} \\[6pt]
+x(5x-4) &\geq& 0,
+\end{eqnarray*}}
+ami $x \in \left[ {4 \over 5}; 1 \right]$ esetén mindig igaz lesz. 
+Használjuk most föl a számtani és mértani közepek közti egyenlõtlenséget!
+$${3 - \sqrt{1 - x_1^2} \over x_2 + 4} + {3 - \sqrt{1 - x_2^2} \over x_3 + 4} + \ldots + {3 - \sqrt{1 - x_n^2} \over x_1 + 4} \geq n \root n \of {\prod_{k = 1}^n {3 - \sqrt{1 - x_k^2} \over x_k + 4}} \geq {n \over 2},$$
+ezzel pedig beláttuk az állítást.
+\medskip
+
+\vfill
+\end{document}

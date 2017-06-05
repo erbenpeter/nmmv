@@ -1,0 +1,151 @@
+\documentclass[a4paper,10pt]{article} 
+\usepackage[latin2]{inputenc}
+\usepackage{graphicx}
+\usepackage{amssymb}
+\voffset - 20pt
+\hoffset - 35pt
+\textwidth 450pt
+\textheight 650pt 
+\frenchspacing 
+
+\pagestyle{empty}
+\def\ki#1#2{\hfill {\it #1 (#2)}\medskip}
+
+\def\tg{\, \hbox{tg} \,}
+\def\ctg{\, \hbox{ctg} \,}
+\def\arctg{\, \hbox{arctg} \,}
+\def\arcctg{\, \hbox{arcctg} \,}
+
+\begin{document}
+\begin{center} \Large {\em IX. Nemzetközi Magyar Matematika Verseny} \end{center}
+\begin{center} \large{\em Dunaszerdahely, 2000. március 23-27.} \end{center}
+\smallskip
+\begin{center} \large{\bf 12. osztály} \end{center}
+\bigskip 
+
+{\bf 1. feladat: } Oldjuk meg a valós számok körében a következõ egyenletrendszert:
+$${\setlength\arraycolsep{2pt}\begin{array}{rcl}
+4xy(x^2-y^2) &=&-1\\[6pt]
+x^2+y^2 &=& 1
+\end{array}}
+$$
+
+
+\ki{Katz Sándor}{Bonyhád}\medskip
+
+{\bf 1. feladat I. megoldása: } Mindkét egyenletet négyzetre emelve a következõt kapjuk:
+$$\left\{{\setlength\arraycolsep{2pt}\begin{array}{rcl}
+16x^2y^2(x^4 - 2x^2y^2 + y^4) &=& 1 \\[6pt]
+x^4 + 2x^2y^2 + y^4 &=& 1
+\end{array}}\right.$$
+Vezessük be az $a = 2x^2y^2$ és $b = x^4 + y^4$ jelöléseket! Ekkor
+$$\left\{{\setlength\arraycolsep{2pt}\begin{array}{rcl}
+8a(b-a) &=& 1 \\[6pt]
+a+b &=& 1
+\end{array}}\right.$$
+Ennek a másodfokúra vezetõ egyenletrendszernek a megoldása $a = {1 \over 4}, b = {3 \over 4}$. Helyettesítsünk vissza!
+$$\left\{{\setlength\arraycolsep{2pt}\begin{array}{rcl}
+2x^2y^2 &=& {1 \over 4} \\[6pt]
+x^4 + y^4 &=& {3 \over 4}
+\end{array}}\right.$$
+Kifejezve az elsõ egyenletbõl $x^2$-et és beírva a másodikba azt kapjuk, hogy $x^4 = {3 \mp \sqrt{8}}$, továbbá $y^4 = {3 \pm \sqrt{8}}$. Ez pedig azt jelenti, hogy $x^2 = {2 \mp \sqrt{2} \over 4}$ és $y^2 = {2 \pm \sqrt{2} \over 4}$. Ez összesen nyolc megoldáspárt enged meg, mivel $\sqrt{{2 \pm \sqrt{2} \over 4}} = {\sqrt{2 \pm \sqrt{2}}\over 2}$, és ennek az ellentettje is szóba jöhet. A lehetséges megoldáspárok közül négy fogja kielégíteni az eredeti egyenletet is: $x_1 = {\sqrt{2 + \sqrt{2}} \over 2}, y_1 = -{\sqrt{2 - \sqrt{2}}\over 2}$; $x_2 = -{\sqrt{2 + \sqrt{2}} \over 2}, y_2 = {\sqrt{2 - \sqrt{2}}\over 2}$; $x_3 = {\sqrt{2 - \sqrt{2}} \over 2}, y_3 = {\sqrt{2 + \sqrt{2}}\over 2}$; $x_4 = -{\sqrt{2 - \sqrt{2}} \over 2}, y_4 = -{\sqrt{2 + \sqrt{2}}\over 2}$.
+\medskip
+
+
+\hbox to \hsize{\hskip2truecm\hrulefill\hskip2truecm}
+{\bf 2. feladat: } Az $ABCD$ konvex négyszög $AC$ és $BD$ átlói az $O$ pontban metszik egymást, tegyük fel, hogy $DO>BO$. Legyen $P$ az $OD$ szakasznak az a pontja, amelyre $2\cdot DP^2=DO \cdot DB$ teljesül. Igazoljuk, hogy a $P$ ponton át az $AC$ átlóval párhuzamosan húzott egyenes a négyszöget két egyenlõ területû részre bontja!
+
+
+\ki{Szász Róbert}{Marosvásárhely}\medskip
+
+{\bf 2. feladat I. megoldása: } %Ábra a jelölésekkel
+A bizonyításban felhasználjuk, hogy bármely trapézban a két szár az átlók metszéspontjával, mint harmadik csúccsal, egymással egyenlõ területû háromszögeket alkot.
+
+Jelöljük a négyszögünkben a $BD$ átló felezõpontját $Q$-val! Mivel az $ABD$ és $BCD$ háromszögekben egyaránt a súlyvonal felezi a területet, azért az $ABCQ$ és $AQCD$ négyszögek területe megegyezik. Legyen a $P$-n át $AC$-vel húzott párhuzamos metszéspontja az $AD$ szakasszal $M$, a $CD$ szakasszal $N$! A feltételünk szerint $DP^2 = {DO \cdot DB \over 2}$, ami azt jelenti, hogy $DP^2 = DO \cdot DQ$, vagyis átrendezve ${DQ \over DP} = {DP \over DO}$. A párhuzamos szelõk tétele szerint ${DQ \over DP} = {DP \over DO} = {DM \over DA}$. Ez azt jelenti, hogy a tétel megfordítása miatt $MQ$ és $AP$ párhuzamosak egymással. Ez azt jelenti, hogy az $APQM$ négyszög trapéz. Jelöljük $AQ$ és $PM$ metszéspontját $R$-rel, $CQ$-ét és $PN$-ét $S$-sel! A megoldás elején említett állítás szerint $T_{AMR} = T_{PQR}$, és hasonló gondolatmenet után $T_{PQS} = T_{NSC}$. Ez a két állítás pedig együtt már éppen az adja, amit bizonyítani akartunk, hiszen azt már tudtuk, hogy az $ABCQ$ és $ADCQ$ négyszögek területe megegyezik.
+\medskip
+
+
+\hbox to \hsize{\hskip2truecm\hrulefill\hskip2truecm}
+{\bf 3. feladat: } Igazoljuk, hogy ha $n \ge 1$, egész számok, akkor
+$$1^5+2^5+3^5+ \ldots +n^5={1 \over 3}\Bigl(4(1+2+3+ \ldots +n)^3-(1+2+3+\ldots +n)^2\Bigr).$$
+
+
+\ki{Bencze Mihály}{Brassó}\medskip
+
+{\bf 3. feladat I. megoldása: } Teljes indukcióval bizonyítunk. Az állítás igaz $n = 1$-re. Tegyük most fel, hogy igaz egy $n$ pozitív egészre, és lássuk be $n+1$-re! A feltevés szerint
+$$\sum_{k = 1}^{n} k^5 = -{1 \over 3} \left(\sum_{k=1}^{n} k\right)^2 + {4 \over 3} \left(\sum_{k = 1}^{n} k\right)^3$$
+Írjuk fel az összeget $n+1$-re!
+$$\sum_{k = 1}^{n+1} k^5 = \sum_{k = 1}^{n} k^5 + (n+1)^5 = -{1 \over 3} \left(\sum_{k = 1}^{n} k\right)^2 + {4 \over 3}\left(\sum_{k = 1}^{n} k \right)^3 + (n+1)^5$$
+Írjuk fel továbbá a bizonyítandó egyenlõtlenség másik felét is $n+1$-re!
+{\setlength\arraycolsep{2pt}\begin{eqnarray*}
+-{1 \over 3}\left( \sum_{k = 1}^{n+1} k\right)^2 + {4 \over 3} \left( \sum_{k = 1}^{n+1} k \right)^3 &=& -{1 \over 3} \left( \left(\sum_{k = 1}^{n}k \right)^2 + 2(n+1) \sum_{k = 1}^{n} k + (n+1)^2 \right) + \\[6pt]
+&& + {4 \over 3} \left( \left(\sum_{k = 1}^{n} k \right)^3 + 3(n+1) \left( \sum_{k = 1}^{n} k \right)^2 + 3(n+1)^2 \sum_{k = 1}^{n} k + (n+1)^3 \right) = \\[6pt]
+&=& - {1 \over 3} \left( \sum_{k = 1}^{n} k\right)^2 + {4 \over 3}\left(\sum_{k = 1}^{n} k\right)^3 - {2n+2 \over 3} \cdot {n(n+1) \over 2} - {(n+1)^2 \over 3} +  \\[6pt]
+&& + 4(n+1){n^2(n+1)^2 \over 4} + 4(n+1)^2{n(n+1) \over 2} + {4(n+1)^3 \over 3} = \\[6pt]
+&=& -{1 \over 3}\left( \sum_{k = 1}^{n} k \right)^2 + {4 \over 3}\left( \sum_{k = 1}^{n} k \right)^3 + (n+1)^5,
+\end{eqnarray*}}
+és ez láthatóan éppen az, amit be kellett bizonyítanunk.
+\medskip
+
+
+\hbox to \hsize{\hskip2truecm\hrulefill\hskip2truecm}
+{\bf 4. feladat: } Bizonyítsuk be, hogy ha $x_1>x_2> \cdots >x_n>0$ valós számok ($n>1$), akkor
+$$\frac{x_1^3-x_2^3}{x_1^4+x_2^4}+\frac{x_2^3-x_3^3}{x_2^4+x_3^4}+\dots+\frac{x_{n-1}^3-x_n^3}{x_{n-1}^4+x_n^4} <{3\over 2}\cdot \frac{x_1-x_n}{x_1x_n}.$$
+
+
+\ki{Kacsó Ferenc}{Marosvásárhely}\medskip
+
+{\bf 4. feladat I. megoldása: } Elõször is bizonyítsuk az egyenlõtlenséget két változóra. Vegyük észre, hogy a jobb oldali kifejezés második tényezõje ${1 \over x_n} - {1 \over x_1}$ formába írható, bizonyítandó tehát, hogy ha $x_1 > x_2$, akkor igaz lesz az egyenlõtlenség:
+$${x_1x_2(x_1^2 + x_1x_2 + x_2^2)\over a^4 + b^4} < {3 \over 2}$$
+Ezt beláthatjuk például a számtani és négyzetes közép közti egyenlõtlenség alapján:
+$${x_1x_2(x_1^2 + x_1x_2 + x_2^2) \over x_1^4 + x_2^4} < {{x_1^2 + x_2^2 \over 2}\left(x_1^2 + x_2^2 + {x_1^2 + x_2^2 \over 2}\right) \over x_1^4 + x_2^4} = {3 \over 2} \cdot {(x_1^2 + x_2^2)^2 \over 2(x_1^4 + x_2^4)} < {3 \over 2},$$
+hiszen $2(x_1^4 + x_2^4) > (x_1^2 + x_2^2)^2$, ez ekvivalens azzal, hogy $(x_1^2 - x_2^2) > 0$, ami $x_1 \not = x_2$ miatt nyilvánvaló. Ez azt jelenti, hogy bármely $1 < k \leq n$ esetén ${x_{k-1}^3 - x_{k}^3 \over x_{k-1}^4 + x_k^4} < {3 \over 2} \left({1 \over x_k} - {1 \over x_{k-1}} \right)$. Összeadva ezen egyenlõtlenségek megfelelõ oldalait
+$$\sum_{k = 2}^n{x_{k-1}^3 - x_k ^3 \over x_{k-1}^4 + x_k^4} < {3 \over 2}\sum_{k = 2}^{n} \left( {1 \over x_k} - {1 \over x_{k-1}}\right) = {3 \over 2}\left( {1 \over x_n} - {1 \over x_{n-1}}\right) = {3(x_1 - x_n) \over 2x_1x_n},$$
+és éppen ez volt a bizonyítandó állítás.
+\medskip
+
+
+\hbox to \hsize{\hskip2truecm\hrulefill\hskip2truecm}
+{\bf 5. feladat: } Igazoljuk, hogy ha $P(x)$ egy legalább elsõfokú egész együtthatós polinom és $x_1, x_2, \dots ,x_n$ ($n \ge 3$) különbözõ egész számok, akkor a következõ egyenlõségek nem lehetnek egyszerre igazak:
+$$P(x_1)=x_2;\ P(x_2)=x_3; \ \ldots \ ;\ P(x_n)=x_1.$$
+
+
+\ki{Pintér Ferenc}{Nagykanizsa}\medskip
+
+{\bf 5. feladat I. megoldása: } %Megegyezik a 2006-ban a 12.-eseknek kitûzött 5. feladattal, átmásoltam a megoldást.
+Ha létezne ilyen polinom és ilyen egészek, akkor, felhasználva azt a tételt, hogy egész együtthatós (nem azonosan nulla) polinom és $a$, $b$  különbözõ egész számok esetén $(a-b)|(P(a)-P(b))$, teljesülne: 
+$$\begin{array}{rcl}
+(x_1-x_2) | (P(x_1)-P(x_2)), &\quad\hbox{s így}\quad& (x_1-x_2)|(x_2-x_3),  \\
+(x_2-x_3) | (P(x_2)-P(x_3)), &\quad\hbox{s így}\quad& (x_2-x_3)|(x_3-x_4), \\
+&\vdots& \\
+(x_n-x_1) | (P(x_n)-P(x_1)), &\quad\hbox{s így}\quad& (x_n-x_1)|(x_1-x_2).
+\end{array}
+$$
+Ebbõl $|x_1-x_2|\leq|x_2-x_3|\leq\dots \leq|x_1-x_2|$, így 
+$|x_1-x_2| = |x_2-x_3| = \dots = |x_1-x_2|$  következik. 
+
+Ez pedig $n>2$  esetén különbözõ $x_1,x_2,\dots,x_n$ értékekre nem állhat fenn. 
+
+\medskip
+
+
+\hbox to \hsize{\hskip2truecm\hrulefill\hskip2truecm}
+{\bf 6. feladat: } Az $A_1, A_2, A_3, \ldots, A_n $ pontok egy körvonalon helyezkednek el. Hányféleképpen lehet legfeljebb 100 szín felhasználásával kiszínezni a pontokat úgy, hogy a szomszédos pontok különbözõ színûek legyenek?
+
+
+
+\ki{Erdõs Gábor}{Nagykanizsa}\medskip
+
+{\bf 6. feladat I. megoldása: } Jelöljük $a_n$-nel a kérdéses számot! Nyilvánvalóan $a_2 = 100 \cdot 99$ és $a_3 = 100 \cdot 99 \cdot 98$. $n \geq 4$ esetén próbáljuk meg elõállítani $a_n$-et $a_{n-1}$-bõl és $a_{n-2}$-bõl!
+
+Ha az $A_{n-2}$ és $A_{n}$ pontok azonos színûek, akkor a köztük lévõ $A_{n-1}$ színe 99-féle lehet, és a fennmaradó $n-2$ pontot $a_{n-2}$-képp lehet színezni ($A_{n-2}$ és $A_{n}$ színe megegyezik). Ez $99a_{n-2}$ lehetõség.
+
+Ha $A_{n-2}$ és $A_{n}$ színe nem egyezik meg, akkor $A_{n-1}$ 98-féle színt kaphat, a maradék $n-1$ pontot pedig $a_{n-1}$-féleképp színezhetjük ki. Ez összesen $98a_{n-1}$ lehetõséget jelent.
+
+Ezekbõl azt a következtetést vonhatjuk le, hogy $a_n = 98a_{n-1} + 99a_{n-2}$. A másodrendû rekurziót még meg kell oldanunk. A karakterisztikus egyenlet 
+$$x^2 - 98x - 99 = 0,$$
+ennek a gyökei 99 és $-1$, tehát $a_n = A \cdot 99^n + B\cdot (-1)^n$. $a_2$ és $a_3$ vizsgálata alapján $A = 1$ és $B = 99$. Tehát $a_n = 99^n + (-1)^n \cdot 99$.
+\medskip
+
+\vfill
+\end{document}

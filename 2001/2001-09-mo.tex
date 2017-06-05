@@ -1,0 +1,99 @@
+\documentclass[a4paper,10pt]{article} 
+\usepackage[latin2]{inputenc}
+\usepackage{graphicx}
+\usepackage{amssymb}
+\voffset - 20pt
+\hoffset - 35pt
+\textwidth 450pt
+\textheight 650pt 
+\frenchspacing 
+
+\pagestyle{empty}
+\def\ki#1#2{\hfill {\it #1 (#2)}\medskip}
+
+\def\tg{\, \hbox{tg} \,}
+\def\ctg{\, \hbox{ctg} \,}
+\def\arctg{\, \hbox{arctg} \,}
+\def\arcctg{\, \hbox{arcctg} \,}
+
+\begin{document}
+\begin{center} \Large {\em X. Nemzetközi Magyar Matematika Verseny} \end{center}
+\begin{center} \large{\em Nagykanizsa, 2001. ápr. 6-10.} \end{center}
+\smallskip
+\begin{center} \large{\bf 9. osztály} \end{center}
+\bigskip 
+
+{\bf 1. feladat: } Az $ABCD$ konvex négyszög átlói merõlegesek egymásra. Az $AB$ és $AD$ oldal $E$ és $F$ felezõpontjából merõlegest állítunk a szemközti $CD$ és $CB$ oldalegyenesekre. Mutassuk meg, hogy a két merõleges az $AC$ átlón metszi egymást!
+
+
+\ki{Dr. Katz Sándor}{Bonyhád}\medskip
+
+{\bf 1. feladat I. megoldása: } %Ábra a jelölésekkel
+Jelöljük az $AC$ szakasz felezõpontját $G$-vel! Ekkor a $GE$ és $CB$, $EF$ és $BD$, valamint a $GF$ és $CD$ szakaszok párhuzamosak lesznek egymással, mivel az elsõként említett szakaszok rendre az $ABC$, $ABD$ és $ADC$ háromszögek középvonalai lesznek. Az átlók merõlegessége miatt a $GA$ és $EF$ szakaszok merõlegesek, továbbá az $F$-bõl $BC$-re állított merõleges egyszersmind merõleges lesz a $GE$ szakaszra is, ugyanez mondható el az $E$-bõl $CD$-re állított merõlegesrõl és a $GF$ szakaszról. Ez azt jelenti, hogy a feladatban említett két egyenes és az $AC$ átló a $GEF$ háromszög magasságvonalait alkotják, így valóban egy ponton mennek át. Az egyetlen lehetõség, hogy ez ne így legyen, az lenne, ha a $GEF$ háromszög nem jönne létre, de a három pont nem eshet egy egyenesre, mert akkor a párhuzamos szelõk tétele miatt a $BD$ átló átmenne $C$-n, ami lehetetlen.
+\medskip
+
+
+\hbox to \hsize{\hskip2truecm\hrulefill\hskip2truecm}
+{\bf 2. feladat: } Adjuk meg mindazokat a pozitív egész $x$, $y$, $z$ számhármasokat, amelyekre
+$$xyz+xy+xz+yz+x+y+z+1=2001.$$
+
+
+\ki{Oláh György}{Rév-Komárom}\medskip
+
+{\bf 2. feladat I. megoldása: } Alakítsuk át az egyenletet!
+$$(x+1)(y+1)(z+1) = 2001$$
+Mindhárom tényezõ 1-nél nagyobb, és mivel a 2001 prímtényezõs felbontása $2001 = 3 \cdot 23 \cdot 29$, azért ez csak egyféleképp tehetõ meg, így az $(x,y,z)$ hármas a 2, 22, 8 számokat fogja tartalmazni valamilyen sorrendben. Ez hat megoldást jelent, és mivel az egyenlet láthatóan szimmetrikus a változókra, azért mindegyik valóban megoldás is lesz.
+\medskip
+
+
+\hbox to \hsize{\hskip2truecm\hrulefill\hskip2truecm}
+{\bf 3. feladat: } Lefedhetõ-e az $5$~cm sugarú körlap $3$~olyan kisebb körlappal, amelyek sugarai $2$, $3$ és $4$~cm?
+
+
+\ki{Szabó Magda}{Szabadka}\medskip
+
+{\bf 3. feladat I. megoldása: } A körlap helyett vizsgáljuk a körvonal lefedhetõségét!
+
+\centerline{\includegraphics{figures/2001-9-3}}
+
+Bármelyik körlap legfeljebb akkora ívet tud lefedni a körvonalból, amekkorához $2r$ hosszúságú ív tartozik ($r$ a lefedõ kör sugara). Mivel a körlap lefedéséhez le kell fedni a körvonalat is (az eltérõ sugarak miatt a kis körök vonalai nem illeszkedhetnek a nagy körére), azért nem lesz megoldható a feladat, hiszen a két nagyobb kör átmérõi összeilleszthetõk egy derékszögû háromszöggé, melynek átfogója a nagy kör átmérõje, így az általuk együtt maximálisan lefedett ívhossz a nagy kör kerületének fele, a kimaradt ívhosszt pedig a 2 egység sugarú körrel már nem tudjuk lefedni.
+\medskip
+
+
+\hbox to \hsize{\hskip2truecm\hrulefill\hskip2truecm}
+{\bf 4. feladat: } A kétjegyû számokat $35$-tõl $42$-ig egymás mellé írjuk tetszés szerinti sorrendben. Hány prímszám van az így kapható számok között?
+
+
+\ki{Balázsi Borbála}{Beregszász}\medskip
+
+{\bf 4. feladat I. megoldása: } A számokban a páros és páratlan helyeken álló jegyek összege mindig ugyanannyi, a páros helyeken állóké $5+6+7+8+9+0+1+2 = 38$, a páratlan helyeken állóké $5\cdot 3  + 3 \cdot 4 = 27$. A két összeg különbsége 11, tehát a számok mind osztható lesznek 11-gyel, és mivel nyilvánvalóan nagyobbak 11-nél, azért egyik sem lesz prím közülük.
+\medskip
+
+
+\hbox to \hsize{\hskip2truecm\hrulefill\hskip2truecm}
+{\bf 5. feladat: } Határozzuk meg az összes olyan pozitív egész számot, amelynek $4$ pozitív egész osztója van, és ezen osztóinak összege $108$.
+
+
+\ki{Maus Pál}{Budapest}\medskip
+
+{\bf 5. feladat I. megoldása: } Ismert, hogy egy szám prímtényezõs felbontásából hogy lehet megkapni az osztóinak a számát: minden prímtényezõ kitevõjéhez egyet adunk, majd a kapott számokat összeszorozzuk. Mivel ez a szorzat 4, ez csak kétféleképp fordulhat elõ:
+
+a.) a szám egy prímszám harmadik hatványa. Az osztók összege ennek a prímnek a függvényében nyilván monoton nõ. Ha a prím 3, az összeg kisebb, ha 5, akkor pedig nagyobb 108-nál. Ez azt jelenti, hogy nem lesz olyan prím, amelyre az összeg pontosan 108 lenne, tehát ilyen alakú megoldás nem létezik.
+
+b.) a szám két prímszám szorzata. Legyenek ezek $p$ és $q$. Az általánosság megszorítása nélkül tegyük fel, hogy $p \leq q$. Az osztók összege $p + q + pq + 1 = (p+1)(q+1) = 108$. A prímtényezõs felbontást elkészítve $108 = 2^2 \cdot 3^3$. Ha $p = 2$, akkor $q = 35$-öt kapunk, de a 35 nem prímszám. Ez azt jelenti, hogy $p \leq q$ miatt mindkét szám legalább 3, vagyis a $(p+1)(q+1)$ szorzatban mind a két tényezõ páros és legalább 4. Ez a prímfelbontás alapján csak azt az esetet engedi meg, hogy $p+1 = 6$ és $q+1 = 18$, tehát $p = 5$, $q = 17$, vagyis az egyetlen, a követelményeknek megfelelõ szám az $5 \cdot 17 = 85$.
+\medskip
+
+
+\hbox to \hsize{\hskip2truecm\hrulefill\hskip2truecm}
+{\bf 6. feladat: } Egy nemzetközi labdarúgó tornán minden csapat minden csapattal pontosan egyszer játszott. Gyõzelemért $3$, döntetlenért $1$, vereségért $0$ pont járt. A bajnokság végén a csapatok pontszámainak összege $15$ pont volt. Az utolsó helyezett $1$ pontot gyûjtött, az utolsó elõtti egyszer sem kapott ki. Hány pontot gyûjtött a második helyen végzett csapat ?
+
+
+\ki{Erdõs Gábor}{Nagykanizsa}\medskip
+
+{\bf 6. feladat I. megoldása: } Ha egy mérkõzés döntetlen, akkor 2, egyébként 3 pontot osztanak ki a csapatok közt. 3 csapat között a lejátszott 3 mérkõzésen legfeljebb 9 lehetett volna az összpontszám. 5 csapat között viszont 10 mérkõzésen már legalább 20 pontot kaptak volna a csapatok. Ez azt jelenti, hogy a tornán 4 együttes vett részt.
+
+A hat mérkõzésen maximálisan 18 pontot oszthattak volna ki, ezt a számot minden egyes döntetlen eggyel csökkenti, tehát 3 döntetlenre végzõdött összecsapás volt. Az utolsó elõtti csapat nem kapott ki, ha viszont nyert volna legalább egyszer, akkor minimum 5 pontja lenne, de ekkor az elsõ három csapat összesen legalább 15 pontot gyûjtött volna, a negyedikkel együtt pedig 16-ot, ami lehetetlen. Ez azt jelenti, hogy a harmadik helyezett mindhárom mérkõzése döntetlen lett. Ezzel arra jutunk, hogy az utolsó helyezett a két elsõtõl kikapott, az egyetlen kérdéses eredmény az elsõ és második között lejátszott mérkõzésé. A feladat ugyan nem állítja kifejezetten, de feltehetjük, hogy a sorrend mindenhol pontszámkülönbség alapján jött létre, tehát az elsõ csapat megverte a másodikat, így a második helyezett 4 pontot szerzett.
+\medskip
+
+\vfill
+\end{document}
