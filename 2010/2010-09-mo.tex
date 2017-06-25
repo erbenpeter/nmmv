@@ -1,0 +1,331 @@
+\documentclass[a4paper,10pt]{article} 
+\usepackage[utf8]{inputenc}
+\usepackage{t1enc}
+\usepackage{graphicx}
+\usepackage{amssymb}
+\voffset - 20pt
+\hoffset - 35pt
+\textwidth 450pt
+\textheight 650pt 
+\frenchspacing 
+
+\pagestyle{empty}
+\def\ki#1#2{\hfill {\it #1 (#2)}\medskip}
+
+\def\tg{\, \hbox{tg} \,}
+\def\ctg{\, \hbox{ctg} \,}
+\def\arctg{\, \hbox{arctg} \,}
+\def\arcctg{\, \hbox{arcctg} \,}
+
+\begin{document}
+\begin{center} \Large {\em XIX. Nemzetközi Magyar Matematika Verseny} \end{center}
+\begin{center} \large{\em Szatmárnémeti, 2010. március 19-22.} \end{center}
+\smallskip
+\begin{center} \large{\bf 9. osztály} \end{center}
+\bigskip 
+
+{\bf 1. feladat: } Mennyi a következő tört értéke?
+
+$$\frac{2010201020102011\cdot4020402040204021-2010201020102010}{2010201020102010\cdot4020402040204021+2010201020102011}$$
+
+\ki{dr. Katz Sándor}{Bonyhád}\medskip
+
+{\bf 1. feladat megoldása: } Látható, hogy a törtkifejezésben szereplő számok a 2010201020102010,
+az ennél eggyel nagyobb és a kétszeresénél eggyel nagyobb szám.
+Jelöljük ezért a 2010201020102010 számot $n$-nel. Ekkor a tört:
+$$\frac{(n+1)(2n+1)-n}{n(2n+1)+n+1}=\frac{2n^2+2n+n+1-n}{2n^2+n+n+1}=$$
+$$=\frac{2n^2+2n+1}{2n^2+2n+1}=1.$$
+
+\smallskip\textbf{Megjegyzés: } Ha a $2010201020102011$ számot jelöljük $m$-mel,
+akkor a $$\frac{m(2m-1)-(m-1)}{(m-1)(2m-1)+m}=1$$ törtet kapjuk
+és ha a $4020402040204021$ számot jelöljük $p$-vel, akkor a
+$$\frac{\frac{p+1}{2}p-\frac{p-1}{2}}{\frac{p-1}{2}p+\frac{p+1}{2}}=1$$ törthöz jutunk.
+Minden esetben a törtben megjelenő számok közti
+összefüggések észrevétele a lényeges.
+
+\medskip
+{\bf 2. feladat: } Meseországban fityinggel és fabatkával lehet vásá\-rolni, ahol $1$
+fitying $2010$ fabatkát ér. Fajankó és Vasgyúró összehasonlítják
+megtakarított pénzüket. Mindketten megszámolják fityingjeiket és
+fabatkáikat, majd megállapítják, hogy egyiküknek sincs $2010$-nél
+több fityingje, és hogy Vasgyúró va\-gyo\-na $1003$ fabatkával több,
+mint Fajankó vagyonának kétszerese. Fajankónak annyi fityingje van,
+ahány fabatkája van Vasgyúrónak, és annyi fabatkája, ahány
+fityingje van Vasgyúrónak. Mennyi megtakarított pénze van
+Fajankónak?
+
+\ki{dr. Péics Hajnalka}{Szabadka}\medskip
+
+{\bf 2. feladat megoldása: }Legyen Fajankónak $x$ fityingje és $y$ fabatkája. Ekkor Vasgyúrónak
+$y$ fityingje és $x$  fabatkája van. A megadott feltétel szerint
+ekkor
+\[2010y+x-1003=2(2010x+y),\]
+ahonnan rendezés után $2008(y-2x)=3x+1003$ adódik. Két esetet
+különböztetünk meg:
+
+1. eset.  Ha  $y-2x=1$, akkor  $3x+1003=2008$, ahonnan $x=335$ és
+$y=671$.
+
+2. eset.  Ha  $y-2x\ge2$, akkor  $3x+1003\ge2\cdot2008=4016$, azaz
+$x\ge\frac{3013}{3}$. Ekkor
+$y\ge2+2x\ge2+2\cdot\frac{3013}{3}\ge2010$, ami ellentmondást jelent
+a feltételekkel.
+
+Tehát Fajankónak 335 fityingje és 671 fabatkája van.
+
+\medskip
+
+{\bf 3. feladat: } Oldjuk meg az
+$\displaystyle{\frac{1}{x}-\frac{1}{y}+\frac{1}{z}=\frac{1}{xy}+\frac{1}{yz}-1}$
+egyenletet, ha $x,\ y,\ z$ egész számok!
+
+\ki{Bíró Bálint}{Eger}\medskip
+
+{\bf 3. feladat I. megoldása: } Nyilvánvaló, hogy az $x,\ y,\ z $ egész számok egyike sem lehet 0.
+Szorozzuk be az egyenletet az $xyz\neq0$  kifejezéssel! Ekkor
+először az $yz-xz+xy=z+x-xyz$, majd 0-ra rendezve az
+\[yz-z+xyz-xz+xy-x=0\]
+egyenletet kapjuk. A bal oldalon $(y-1)$ kiemelhető és így az
+$$(y-1)(z+xz+x)=0$$ egyenlethez jutunk.
+
+1. eset. Ha $y-1=0$, akkor $y=1$ és a $z+xz+x$ kifejezés értéke
+tetszőleges egész szám lehet, tehát $x$ és $z$ értékének is
+tetszőleges, $0$-tól különböző egész számot választhatunk.
+
+2. eset. Ha $z+xz+x=0$, akkor $$z+xz+x+1=(x+1)(z+1)=1.$$ Mivel $x$
+és $y$ egész számok, ezért $x+1=1$ és $z+1=1$ vagy  $x+1=-1$ és
+$z+1=-1.$ Az első esetben $x=z=0$ adódik és ez nem
+lehetséges. A második esetben $x=z=-2$ és
+visszahelyettesítve az eredeti egyenletbe látható, hogy
+tetszőleges $y\neq0$ esetén teljesül az egyenlőség,
+tehát a feladat megoldásainak halmaza
+$$M=\left \{(x,1,z)|x,z\in \mathbb{Z}^*\right \}\cup \left \{(-2,y,-2)|y\in\mathbb{Z}^*\right \}.$$
+
+\medskip
+
+{\bf 3. feladat II. megoldása: } A tagok csoportosításával az
+$$\frac 1x \left(1-\frac 1y \right)+\frac 1z \left(1-\frac 1y \right)+ \left(1-\frac 1y \right)=0$$
+egyenlethez jutunk, tehát az $$ \left(1-\frac 1y \right)\left(
+\frac 1x+\frac 1z+1\right)=0$$ egyenletet kell megoldanunk. Ha
+$y=1,$ akkor $x$ és $z$ tetszőleges lehet, különben az
+$\frac 1x+\frac 1z=1$ egyenlőségnek kell teljesülnie. $|x|>2$
+és $|z|>2$ esetén $\frac 1x+\frac 1z<1.$ Ugyanakkor ha $|x|=1$
+vagy $|z|=1,$ akkor ellentmondáshoz jutunk, tehát csak a $|x|=2$
+esetet kell megvizsgálni. Ebben az esetben az $x=z=-2$
+megoldáshoz jutunk, tehát
+$$M=\left \{(x,1,z)|x,z\in \mathbb{Z}^*\right \}\cup \left \{(-2,y,-2)|y\in\mathbb{Z}^*\right \}.$$
+
+\medskip
+
+
+{\bf 4. feladat: } A dubai Burj Khalifa felhőkarcoló $160$ emele\-tes.  Induljon el egy
+lift a föld\-szint\-ről, és tételezzük fel, hogy útja során minden
+emeleten pontosan egyszer áll meg. Mennyi az a leghosszabb út,
+amit eközben megtehet, ha két szomszédos emelet közti
+távolság $4$ méter?
+
+\ki{Fejér Szabolcs}{Miskolc}\medskip
+
+{\bf 4. feladat I. megoldása: } Vizsgáljuk meg például, hogy legfeljebb hányszor te\-heti meg a
+$[20,21]$  emeleti intervallumot! Ha a lift felfelé mozog, akkor a
+,,START'' állomás lehet a $0,1,\dots,20$ sorszámú emelet, a ,,CÉL''
+pedig a $21,22,\dots,160.$ Mivel minden emeleten pontosan egyszer
+állhat meg, ezért legfeljebb $21$-szer mehet át ezen a szakaszon
+úgy, hogy felfele halad. Ha lefelé mozog, akkor a ,,START''
+állomás a $21,22,\dots,160$ emeletek, a ,,CÉL'' pedig az
+$1,2,\dots,20$ emelet, így lefelé legfeljebb $20$-szor haladhat át.
+Ez összesen ma\-xi\-mum $41$ eset. A $[79,80]$ intervallumon felfelé
+a ,,START'' lehet $0,1,\dots,79$ (ez $80$ eset), a ,,CÉL'' pedig
+$80,81,\dots,160$ ($81$ eset), ezért legfeljebb $80$-szor haladhat
+át ezen a szakaszon. Lefelé a ,,START'' ugyancsak 81, a ,,CÉL''
+pedig 79, így összesen legfeljebb 80+79-szer mehet át. Ha egy
+emelettel feljebb megyünk, a $[80,81]$ szakaszra, akkor felfelé
+,,START'' $81$ féle, ,,CÉL'' $80$ féle, tehát maximum $80$-szor
+mehet át felfelé menetben. Lefelé ,,START'' $80$ féle, ,,CÉL'' $80$
+féle, tehát összesen legfeljebb $80+80$ féleképpen mehet át ezen a
+szakaszon. Minden e fölötti szintre igaz, hogy az intervallum fölött
+kevesebb megálló van, így ez határozza meg a lehetséges maximális
+esetek számát.
+
+Összefoglalva tehát az $[i-1,i]$ szintek között a lift legfeljebb
+$2i-1$-szer mehet át, ha $1\leq i\le80$, és $2(161-i)$-szer, ha
+$81\leq i\leq 161.$ így a lehető leghosszabb út nem haladhatja meg
+a
+\[4(1+3+\ldots+159+160+158+\ldots+2)\]
+métert, vagyis a $\frac{4\cdot160\cdot161}{2}=51520$ métert.
+
+Másrészt ez létre is jöhet, ha a megállók sorban $0, 160, 1,
+159,$ $2,158,\ldots, 79, 81, 80.$
+
+\medskip
+
+{\bf 4. feladat II. megoldása: } Jelölje $x_i$ az $i$-edik
+megállónak megfelelő eme\-let számát. Két
+egymás\-utáni megálló közti távolság $4|x_i-x_{i+1}|.$
+Másrészt
+$$|x_i-x_{i+1}|+|x_{i+1}-x_{i+2}|=|x_{i}-x_{i+2}|$$ ha az
+$(i+1)$-edik megállónál a lift nem változtat irányt. Ez
+azt mutatja, hogy $x_i<x_{i+1}<x_{i+2}$ vagy $x_i>x_{i+1}>x_{i+2}$
+ese\-tén növelhető az útvonal hossza, ha az $(i+1)$-edik
+megállót máshová tennénk a megállók sorozatában.
+így a leghosszabb útvonal esetén (ami létezik, mivel véges
+sok különböző útvonal van) az
+$$S=4\left(|x_1-x_2|+|x_2-x_3|+\ldots +|x_{160}-x_{161}|\right)$$
+kifejezésben a moduluszok felbontása után az $x_i,$ $2\leq
+i\leq 160$ számok kétszerese jelenik meg pozitív vagy
+negatív előjellel és kifejtésben szereplő
+együtthatók összege $0$ (pozitív előjelű $80$ da\-rab
+van, mindegyik $+2$ együtthatóval, míg negatív $81$ darab van,
+ebből $79$ együtthatója $-2$ és $2$ együtthatója $-1$).
+Ez akkor a leg\-na\-gyobb, ha a nagy számok jelennek meg pozitív
+előjellel és a ki\-csik negatív előjellel. Pontosabban
+akkor a lehető leg\-na\-gyobb, ha a $81,82,\ldots ,160$ számok
+vannak pozitív előjellel és a $0,1,2,\ldots, 80$ számok
+negatív előjellel. Ez el is érhető ha a megállókat
+úgy rakjuk sorba, hogy bármely két egymásutáni megálló
+közt ha\-ladjon át a $80$-as szinten. Ebben az esetben ugyanis a
+modu\-luszok felbontása után a $80$-nál nagyobbak mind
+pozitív előjelűek lesznek és a $80$-nál nem nagyobbak
+mind negatív előjelűek.
+
+\medskip
+
+\textbf{Megjegyzés: } A második megoldás mutatja, hogy nemcsak az első
+megoldásban megadott sorrend esetén jön ki a leghosszabb
+útvonal, hanem sok más esetben is.
+
+\medskip
+{\bf 5. feladat: } Az $ABC$ háromszög $AC$ és $BC$ oldalán felvesszük a
+$C$-hez, illetve $B$-hez közelebb eső $N$ és $M$
+harmadolópontot, valamint az $AB$ oldal $P$ felezőpontját,
+majd az eredeti háromszöget kitöröljük. Szer\-kesszük
+vissza az $M,N$ és $P$ pont alapján az eredeti háromszöget!
+
+\ki{Kovács Lajos}{Székelyudvarhely}\medskip
+
+{\bf 5. feladat I. megoldása: } Képzeljük el, hogy a háromszög a mellékelt ábrán lát\-ható vég\-telen
+rács része. így, ha $Q$ az $N$ szimmetrikusa az $M$-re
+nézve, akkor a $PQ$ egyenes egybeesik az $AB$ egyenessel, és $B$
+a $PQ$-t öt egyenlő részre osztó pontok közül a
+második (a $Q$-tól kezdve). Ez viszont megszerkeszthető és
+a szerkesztés a következő lépésekre bontható:
+\begin{itemize}\item megszerkesztjük az $N$-nek az $M$-re
+vonatkozó $Q$ szimmet\-rikusát;
+\item megszerkesztjük a $PQ$ szakasznak azt a $B$ pontját, amelyre $QB=\frac 25 PQ;$
+\item a $QP$ meghosszabbításán felmérjük a $PA=PB$
+szakaszt;
+\item a $BM$ és $AN$ egyenesek metszéspontja a $C$ pont.
+\end{itemize}
+
+\centerline{\includegraphics[width=0.8\textwidth]{racs2.eps}}
+
+\medskip
+
+{\bf 5. feladat II. megoldása: } Ha a megfelelő kisbetűkkel jelöljük a
+csúcsok helyzetvektorait, akkor $3m=2b+c,$ $3n=2c+a$ és
+$2p=a+b.$ így $b=\frac 15 (2p-3n+6m),$ vagyis ha $M$-et
+választjuk a helyzetvektorok kezdőpontjának, akkor
+$b=\frac{1}{5}(2p-3n)$ és ez éppen az első bizonyításbeli
+tulajdonság (vagyis $B$ a $PQ$-t $3:2$ arányban osztó pont).
+ Ha nem választjuk $M$-et
+kezdőpontnak, akkor az $N$-nek az $O$ kezdőpontra vonatkozó
+$Q$ szimmetrikusa esetén megszerkesztendő a $PQ$-nak az $R$
+pontja, amely a $PQ$ szakaszt $3:2$ arányban osztja, majd az
+$r$-hez hozzá kell adni a $\frac 65m$ vektort.
+
+\medskip
+
+
+
+\textbf{Megjegyzés: } A második megoldáshoz hasonló
+gondolatme\-ne\-tet használhatunk akkor is, ha ana\-litikus
+geometriai eszközöket (koordinátákat) használunk (vagy
+akár komplex számokat). A megoldás lényege abban áll, hogy
+az eredeti szerkesztés alapján kifejezzük az $A,B$ és $C$
+koordinátáinak függ\-vényében az $M,N$ és $P$
+koordinátáit, majd a kapott összefüggésekből
+kifejezzük az eredeti csúcsok koordinátáit az $M,N,P$
+koordinátái függvényében (ez egy egyenletrendszer
+megoldása), és végül a kapott összefüggések alapján
+megszerkesztjük a pontokat.
+
+
+\medskip
+{\bf 6. feladat: } Színezzük ki egy szabályos $2010$-szög csú\-csait $3$ színnel,
+mindhárom színt ugyanannyiszor használva.  Igaz-e, hogy bár\-mely
+színezés esetén lesz olyan szabályos háromszög, amelynek vagy minden
+csúcsa azonos színű,  vagy a három csúcsa három különböző
+színű?
+
+\ki{Fejér Szabolcs}{Miskolc}\medskip
+
+{\bf 6. feladat I. megoldása: } Az állítás nem igaz, ugyanis van olyan színezés, mely esetén minden
+szabályos háromszög csúcsai kétféle színűek. Egy ilyen színezést
+megkaphatunk, ha számozzuk a csúcsokat $1$-től $2010$-ig (az
+óramutató járásával ellentétes sorrendben), majd az
+$1,2,\ldots,670$ sorszámú csúcsokat az egyik színnel (pl.
+pi\-ros\-sal) színezzük, a következő $335$ csúcsot a második
+színnel (pl. kékkel), a következő $335$ csúcsot a harmadik
+színnel (pl. sárgával), a következő $335$ csúcsot ismét
+a második színnel (kékkel) és végül az utolsó $335$
+csúcsot a harmadik színnel (sárgával). A szabályos háromszögek
+csúcsainak sorszáma mindig $i,i+670,i+1340$ alakú, ahol  $i\leq
+670,$ tehát az egyik csúcs mindig piros és a másik kettő
+mindig azonos színű, mivel $i+1340=i+670+2 \cdot 335.$
+
+\medskip
+
+{\bf 6. feladat II. megoldása: } Jelöljük a színeket $p,k$ és
+$s$-sel. összesen $670$ egyenlő oldalú háromszög van,
+amelynek a csúcsai a sokszög csú\-csai közül kerülnek
+ki. Ha ezek között nincs olyan, amelynek azonos színűek a
+csúcsai, vagy mind különbözőek, akkor a csú\-csok
+szí\-ne\-zése szerint a $670$ háromszög a következő hat
+osztályba sorolható:
+
+\centerline{$\{p,k,k\},$ $\{p,s,s\},$ $\{s,p,p\},$ $\{k,p,p\},$
+$\{k,s,s\}$ és $\{s,k,k\}$}
+
+\noindent (a $\{p,k,k\}$ azt jelenti, hogy két csúcs $k$
+színű és egy csúcs $p$ színű stb.). Ha ezeknek az
+osztályoknak a számosságát rendre $a,b,c,d,e$ és  $f$
+jelöli, akkor a színek összeszámlálása és a feltétel
+alapján írhatjuk, hogy
+\begin{equation}\left \{ \begin{array}{ccc}
+a+b+2c+2d=670\\
+d+e+2f+2a=670\\
+c+f+2b+2e=670
+\end{array}
+\right .
+\end{equation}
+Ha ebből az egyenletrendszerből kifejezzük az $a$-t, a $b$-t
+és a $d$-t a többi változó függvényében, akkor az
+\begin{equation}\left \{ \begin{array}{l}
+a=335-e-\frac 32 f+\frac c2\\
+b=335-e-\frac c2 -\frac f2\\
+d=-c+e+f
+\end{array}
+\right .
+\end{equation}
+ egyenlőségekhez jutunk. Ez mutatja, hogy több olyan
+ színezés is van, amelyben nincs sem egyszínű szabályos
+ háromszög, sem olyan, amelynek a csúcsai mind különböz\H
+ o színűek. Például $c=f=0$ és $e<335$ esetén
+ $a=335-e,$ $b=335-e$ és $d=e$ egy ilyen színezést ír le.
+ Világos, hogy a csúcsok színezését elvégezhetjük
+ úgy, hogy kiválasztjuk a $670$ egyenlő oldalú
+ háromszögből (tetszőlegesen) azt az $a$ darabot, amelyet
+ az első osztálynak megfelelően színezünk, aztán a
+ maradékból azt a $b$ darabot, amelyet a második osztálynak
+ megfelelően színezünk és a többit a negyedik
+ osztálynak megfelelően színezzük.
+
+\medskip
+
+\textbf{Megjegyzés: } A második megoldás rávilágít arra, hogy nagyon
+sok olyan színezés létezik, amelyben nincs sem egyszínű
+szabályos
+ háromszög, sem olyan, amelynek a csúcsai mind különböz\H
+ o színűek, és ugyanakkor megmutatja az összes ilyen színezés
+ szer\-kezetét is.
+\end{document}

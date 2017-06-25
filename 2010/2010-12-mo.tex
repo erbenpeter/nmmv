@@ -1,0 +1,358 @@
+\documentclass[a4paper,10pt]{article} 
+\usepackage[utf8]{inputenc}
+\usepackage{t1enc}
+\usepackage{graphicx}
+\usepackage{amssymb}
+\voffset - 20pt
+\hoffset - 35pt
+\textwidth 450pt
+\textheight 650pt 
+\frenchspacing 
+
+\pagestyle{empty}
+\def\ki#1#2{\hfill {\it #1 (#2)}\medskip}
+
+\def\tg{\, \hbox{tg} \,}
+\def\ctg{\, \hbox{ctg} \,}
+\def\arctg{\, \hbox{arctg} \,}
+\def\arcctg{\, \hbox{arcctg} \,}
+
+\begin{document}
+\begin{center} \Large {\em XIX. Nemzetközi Magyar Matematika Verseny} \end{center}
+\begin{center} \large{\em Szatmárnémeti, 2010. március 19-22.} \end{center}
+\smallskip
+\begin{center} \large{\bf 12. osztály} \end{center}
+\bigskip 
+
+{\bf 1. feladat: } Határozzuk meg az $E(x)=(1+\cos{x})\sin{x}$ kifejezés legnagyobb
+értékét, ha $x$ tetszőleges valós szám! Milyen $x$ esetén veszi ezt
+fel?
+
+\ki{Kovács Béla}{Szatmárnémeti}\medskip
+
+\textbf{1. feladat I. megoldása: } A $\sin$ és $\cos$ függvény
+periodikussága alapján elég\-séges a kifejezés maximumát
+a $[0,2\pi]$ intervallumon meghatá\-rozni. Ugyanakkor látható,
+hogy ha $x\not \in \left [0,\frac{\pi}{2}\right ],$ akkor a
+kifejezés értéke növelhető azáltal, hogy $x$ helyett
+$\pi-x$-et vagy $x-\pi$-t vagy $2\pi-x$-et helyettesítünk
+(vagyis a változót visszavezetjük az első ne\-gyed\-re).
+így feltételezhetjük, hogy $x\in \left [0,\frac{\pi}{2}\right
+],$ azaz $t=\cos x\geq 0.$ A kifejezés ebben az esetben
+$$E_1(t)=(1+t)\sqrt{1-t^2}$$ alakban írható. A számtani és a
+mértani középarányos közti egyenlőtlenség
+alapján
+$$\sqrt[4]{\left(\frac{1+t}{3}\right )^3(1-t)}\leq \frac{1}{2},\mbox{ tehát }$$
+ $$(1+t)\sqrt{1-t^2}\leq \frac{3\sqrt{3}}{4},$$ és egyenl\H
+oség pontosan akkor teljesül, ha $\frac{1+t}{3}=1-t,$ vagyis ha
+$t=\frac 12.$ Ez mutatja, hogy a kifejezés maximuma
+$\frac{3\sqrt{3}}{4}$ és ezt a $\frac{\pi}{3}$-ban (illetve a
+$\frac{\pi}{3}+2k\pi,$ $k\in \mathbb{Z}$ pontokban) veszi fel.
+
+\medskip
+
+\textbf{1. feladat II. megoldása: } A $\sin$ és $\cos$ periodikus függvények, főperiódusuk $2\pi$, ezért
+elégséges, ha vizsgáljuk a kifejezés értékét a $[0,2\pi]$
+intervallumon. A $[\pi,2\pi]$ intervallumon a $\sin{x}$ negatív, az
+$1+\cos{x}$ pedig pozitív, ezért a kifejezés értéke is negatív, így
+itt nem kapjuk meg a legnagyobb értéket. A $[\frac{\pi}{2},\pi]$
+intervallumon $\sin{x}$ értéke po\-zi\-tív, $\cos{x}$ értéke
+negatív, $1+\cos{x}$ értéke kisebb, mint $1,$ így a kifejezés
+értéke a $[\frac{\pi}{2},\pi]$ intervallumon nem nagyobb, mint
+$x=\frac{\pi}{2}$-ben. Emiatt a kifejezés legnagyobb értékét csak a
+$[0,\frac{\pi}{2}]$ intervallumon kap\-hat\-juk meg. Itt $\sin{x}$
+és $\cos{x}$ értéke is pozitív. Legyen tehát $x\in[0,\frac{\pi}{2}]$
+és $t:=\mathrm{tg}\frac{x}{2}$. Ekkor
+\[\sin{x}=\frac{2t}{1+t^2} \quad\mathrm{\acute{e}s}\quad \cos{x}=\frac{1-t^2}{1+t^2},\quad \mathrm{ahol} \quad t\in[0,1]. \]
+Így az adott kifejezés:
+\[\Bigg{(}1+\frac{1-t^2}{1+t^2}\Bigg{)}\cdot\frac{2t}{1+t^2}=\frac{4t}{(1+t^2)^2}.\]
+
+Alkalmazzuk 4 pozitív valós szám számtani és mértani
+középará\-nyosai közötti egyenlőtlenséget:
+$$1+t^2=\frac{1}{3}+\frac{1}{3}+\frac{1}{3}+t^2\ge4\sqrt[4]{\frac{t^2}{27}}$$
+$$(1+t^2)^2\ge16\sqrt{\frac{t^2}{27}}=\frac{16t}{3\sqrt{3}}$$
+$$\frac{4t}{(1+t^2)^2}\le\frac{3\sqrt{3}}{4}$$
+Egyenlőség $t=\frac{1}{\sqrt{3}}$ esetén áll fenn. Az alkalmazott
+helyettesí\-tés kölcsönösen egyértelmű, tehát
+$(1+\cos{x})\sin{x}\le\frac{3\sqrt{3}}{4}$, így a kifejezés
+legnagyobb értéke $\frac{3\sqrt{3}}{4}$, amit $x=\frac{\pi}{3}$
+esetén (vagyis általánosan $x=2k\pi+\frac{\pi}{3},$ $k\in
+\mathbb{Z}$ esetén) vesz fel.
+
+\medskip
+
+\textbf{1. feladat III. megoldása: } A $\sin$ és $\cos$ periodikus függvények, fő\-pe\-ri\-ó\-du\-suk
+$2\pi$, ezért elég, ha vizsgáljuk a kifejezés értékét a $[0,2\pi]$
+intervallumon.
+
+Legyen $f:[0,2\pi]\longrightarrow\mathbb{R}, \quad
+f(x)=(1+\cos{x})\sin{x}$. Ekkor
+$f'(x)=\cos{2x}+\cos{x}=2\cos{\frac{3x}{2}}\cos{\frac{x}{2}}$. A
+Fermat-tétel alapján a függvény szélsőértékeit a
+$2\cos{\frac{3x}{2}}\cos{\frac{x}{2}}=0$ egyenlet megoldásai között
+ke\-res\-sük. A gyökök: $x_1=\frac{\pi}{3},$ $x_2=\pi$ és
+$x_3=\frac{5\pi}{3}$. Mivel $f(\frac{\pi}{3})=\frac{3\sqrt{3}}{4},$
+$f(\pi)=0$ és $f(x_3)<0$, így a kifejezés legnagyobb értéke
+$\frac{3\sqrt{3}}{4}$, amit $x=\frac{\pi}{3}$ esetén vesz fel.
+
+\medskip
+
+{\bf 2. feladat: } Határozzuk meg azt a három különböző
+$\displaystyle\frac{n}{n-1},\ (n\in\mathbb{N}, \, n>1)$
+alakú törtet, amelyek összege egész szám!
+
+\ki{Nemecskó István}{Budapest}\medskip
+
+\textbf{2. feladat megoldása: } Legyen a három tört $\frac{x}{x-1},\ \frac{y}{y-1},\ \frac{z}{z-1}$.
+Feltehetjük, hogy $x<y<z$.\\
+Tudjuk, hogy
+$\frac{x}{x-1}+\frac{y}{y-1}+\frac{z}{z-1}-\bigg{(}\frac{1}{x-1}+\frac{1}{y-1}+\frac{1}{z-1}\bigg{)}=3$.
+Mivel a három keresett tört összege egész, ezért a zárójelben álló
+kifejezés is egész. Továbbá akkor a legnagyobb, ha $x=2,\ y=3,\
+z=4$, vagyis $\frac{1}{1}+\frac{1}{2}+\frac{1}{3}=\frac{11}{6}$,
+tehát
+\[\Bigg{(}\frac{1}{x-1}+\frac{1}{y-1}+\frac{1}{z-1}\Bigg{)}\le\frac{11}{6}.\]
+
+Mivel  egész, akkor csak 1-gyel lehet egyenlő. Így megoldandó az
+\[\Bigg{(}\frac{1}{x-1}+\frac{1}{y-1}+\frac{1}{z-1}\Bigg{)}=1\]
+egyenlet.
+
+1. eset. Ha $x=2$, akkor $\frac{1}{1}+\frac{1}{y-1}+\frac{1}{z-1}=1$
+egyenlőségnek kell teljesülnie, de ez nem lehetséges.
+
+2. eset. Ha $x=3$, akkor
+$$\frac{1}{2}+\frac{1}{y-1}+\frac{1}{z-1}=1\Longleftrightarrow
+\frac{y-1+z-1}{(y-1)(z-1)}=\frac{1}{2}.$$
+
+Keresztbeszorzás és rendezés után:
+$$yz-3y-3z+5=0\Longleftrightarrow
+(y-3)(z-3)=4.$$
+
+Mivel $y$ és $z$ egészek és $y<z$, ezért csak  az $y-3=1$ és $z-3=4$
+lehetséges. Ebből $y=4$ és $z=7$, amelyek valóban megoldások.
+
+3. eset: ha $x\ge4$, akkor a legnagyobb összeg
+$\frac{1}{3}+\frac{1}{4}+\frac{1}{5}=\frac{47}{60}$ lehet. De ez
+kisebb, mint 1, tehát nem lehetséges.
+
+Következésképpen a feladatnak csak a $\frac{3}{2},\ \frac{4}{3},\
+\frac{7}{6}$ törtek tesznek eleget.
+
+\medskip
+
+
+{\bf 3. feladat: } Keressük meg azt a leghosszabb, szigorúan növekvő, egészekből álló
+mértani sorozatot, amelynek tagjai a $[100,1000]$ intervallumban
+vannak!
+
+\ki{Szabó Magda}{Szabadka}\medskip
+
+\textbf{3. feladat megoldása: } Meg kell keresni azt a legnagyobb $n$ természetes számot, amelyre teljesül:
+$$100\leq c<cq<cq^2<\dots<cq^{n-1}\leq1000,$$ ahol $c$ természetes szám, a $q$ pedig 1-nél nagyobb racionális szám.
+Ha a $q=\frac{a}{b},$ ahol $a$ és $b$ relatív prímek és $a>b$, akkor
+belátható, hogy $a=b+1$ esetén lesz a sorozat a leghosszabb, így
+
+\centerline{$100\leq
+c<c\left(\frac{b+1}{b}\right)<c\left(\frac{b+1}{b}\right)^2<\ldots<c\left(\frac{b+1}{b}\right)^{n-1}\leq1000,$}
+
+\noindent ahol $ b^{n-1}|c.$ Ha $b=1$, akkor
+
+\centerline{$1000\geq
+c\left(\frac{b+1}{b}\right)^{n-1}=c\cdot2^{n-1}\geq100\cdot2^{n-1},$}
+ezért $n\leq4.$
+
+Ha $b=2$, akkor $$1000\geq
+c\left(\frac{b+1}{b}\right)^{n-1}=c\cdot\left(\frac{3}{2}\right)^{n-1}\geq100\cdot\left(\frac{3}{2}\right)^{n-1},$$
+ezért $n\leq6$.
+
+Ha $b\geq3$, akkor $\frac{c}{b^{n-1}}\geq1$, mert $c\geq b^{n-1}$,
+így $$1000\geq c\left(\frac{b+1}{b}\right)^{n-1}\geq(b+1)^{n-1}\geq
+4^{n-1},$$ ezért $n\leq5$.
+
+Tehát a leghosszabb mértani sorozat $6$ tagú és ez a következő:
+$128, 192, 288, 432, 648, 972,$ mert $c=128$ és $q=\frac{3}{2}$.
+
+\medskip
+
+{\bf 4. feladat: } Az $(x_n)_{n\geq 1}$ valós számsorozat teljesíti az
+$$(1+x_n)x_{n+1}=n, n\geq 1$$ rekurziót és $x_1=1.$ Igazoljuk,
+hogy $n\geq 2$ esetén
+$$\left (\sqrt{\frac{n+1}{2}}-1 \right)^2<1+\frac 1n\sum\limits_{k=1}^n x_k^2<\frac{n^2+n+2}{2n}.$$
+
+
+\ki{Bencze Mihály}{Brassó}\medskip
+
+\textbf{4. feladat megoldása: } A sorozat első néhány tagja: $x_1=1, x_2=\frac
+12,$ $x_3=\frac 43,$ $x_4=\frac 97,$ $x_5=\frac 74.$ Vizsgáljuk
+meg, hogy mi lenne elégséges a második egyenlőtlenség
+induktív bizonyításához. Az indukciós feltevés az
+$$n+\sum\limits_{k=1}^n x_k^2<\frac{n^2+n+2}{2}$$ egyenl\H
+otlenség lenne és ebből kellene belátni az
+$$n+1+x_{n+1}^2+\sum\limits_{k=1}^n x_k^2<\frac{(n+1)^2+(n+1)+2}{2}$$
+egyenlőtlenséget. így elégséges volna belátni, hogy
+$$1+x_{n+1}^2<\frac{(n+1)^2+(n+1)+2-n^2-n-2}{2}$$ vagyis $x_{n+1}^2<n.$
+Másrészt a rekurzió alapján ezt csak akkor egyszerű
+igazolni, ha alsó becslésünk is van, pontosabban ha
+teljesülne az $x_n>\sqrt{n}-1$ egyenlőtlenség is. $n=1$
+esetén ez nem teljesül, de $n=2$-re már igen, emiatt előbb
+meg\-pró\-báljuk mate\-matikai indukció segítségével
+belátni, hogy
+\begin{equation}\label{segedegy}\sqrt{n}-1<x_n<\sqrt{n-1},\quad
+n\geq 2.\end{equation} $n\in \{2,3\}$ esetén a kiszámított
+értékek alapján látható, hogy az egyenlőtlenségek
+teljesülnek. Ugyanakkor ha rögzített $n$ esetén
+$$\sqrt{n}-1<x_n<\sqrt{n-1},$$ akkor
+$$\frac{n}{1+\sqrt{n-1}}<\frac{n}{1+x_n}<\frac{n}{\sqrt{n}},$$
+tehát a felső korlát megvan, és az alsóhoz elégséges
+belátni, hogy $$\sqrt{n+1}-1<\frac{n}{1+\sqrt{n-1}}.$$ Ez viszont
+igaz, mert
+$$\displaystyle\sqrt{n+1}-1=\frac{n}{1+\sqrt{n+1}}<\frac{n}{1+\sqrt{n-1}},$$
+tehát a matematikai indukció elve alapján  (\ref{segedegy})
+igaz.
+
+Az (\ref{segedegy}) alapján $$k-2\sqrt{k}+1<x_k^2<k-1,\quad k\geq
+2,$$ tehát
+$$\frac{n(n+1)}{2}-1-2\sum_{k=2}^n \sqrt{k}<\sum\limits_{k=2}^n (k+1-2\sqrt{k})<\sum\limits_{k=2}^n x_k^2<\frac{(n-1)n}{2}.$$
+A jobb oldali egyenlőtlenség alapján $$1+\frac 1n
+\sum\limits_{k=1}^n x_k^2<1+\frac{n^2-n+2}{2n}=\frac{n^2+n+2}{2n},$$
+ami a bizonyítandó egyenlőtlenség jobb oldala. A másik
+egyenlőtlenség igazolásához elégséges lenne belátni,
+hogy $$\sum\limits_{k=1}^n\sqrt{k}<n\sqrt{\frac{n+1}{2}}$$ és ez
+igaz a számtani és négyzetes középarányos közti
+egyenlőtlenség alapján (vagy direkt módon is igazolható
+például matematikai indukcióval). így
+
+$$\frac{n(n+1)}{2}-2n\sqrt{\frac{n+1}{2}}<\frac{n(n+1)}{2}-2\sum_{k=2}^n \sqrt{k}<\sum\limits_{k=1}^n x_k^2$$
+vagyis
+$$\frac{n+1}{2}- 2\sqrt{\frac{n+1}{2}} +1<1+\frac 1n \sum\limits_{k=1}^n
+x_k^2$$ ami épp a bizonyítandó egyenlőtlenség.
+
+\medskip
+
+
+
+{\bf 5. feladat: } Bizonyítsuk be, hogy négy különböző, nemnegatív valós szám közül
+kiválasztható  kettő ($x$ és $y$), amelyekre
+$$\frac{1+xy}{\sqrt{1+x^2}\cdot\sqrt{1+y^2}}>\frac{\sqrt{3}}{2}.$$
+
+\ki{dr. Minda Mihály}{Vác}\medskip
+
+\textbf{5. feladat I. megoldása: } Minden $a$ valós számhoz kölcsönösen egyértel\-mű\-en
+hozzárendelhető az $\overrightarrow{a}(1,a)$ vektor. Így az $x$-hez az $\overrightarrow{x}(1,x)$, az $y$-hoz pedig az $\overrightarrow{y}(1,y)$ vektorok rendelhetők.\\
+Legyen a két vektor hajlásszöge $\alpha$. Két vektor skaláris
+szorzatának segítségével felírható, hogy
+$$\cos{\alpha}=\frac{\overrightarrow{x}\cdot\overrightarrow{y}}{|\overrightarrow{x}|\cdot|\overrightarrow{y}|}=
+\frac{1+xy}{\sqrt{1+x^2}\cdot\sqrt{1+y^2}}.$$ Tehát a feladat
+állítása ekvivalens a $\cos\alpha> \frac{\sqrt{3}}{2}$
+egyenlőtlenséggel, ahol $\alpha$ a két vektor hajásszögének
+mértéke. Az $\overrightarrow{a}(1,a)$ ,,típusú'' vektorok
+végpontjai az $x=1$ egyenes I. sík\-ne\-gyedben lévő pontjai,
+valamint az abszcisszára eső pontja. Osszuk fel az I. síknegyedet 3
+darab $O$ középpontú, $30^\circ$-os szögtartományra. A skatulya-elv
+értelmében a négy vektorból legalább kettő ugyanabba a
+szögtartományba (vagy annak határvonalára) esik. Így a két vektor
+hajlásszögére igaz, hogy $\alpha\leq 30^\circ$, azaz
+$\cos\alpha\geq\frac{\sqrt{3}}{2}$. Ugyanakkor az $Oy$ tengelyre nem
+illeszkedhet a szerkesztett vektorok közül egyik sem, tehát
+nem lehetséges az, hogy a négy vektor közül bármely kett\H
+o szögének mértéke $\geq 30^{\circ}.$ Emiatt az egyenl\H
+otlenség szigorú.
+
+\medskip
+
+
+\textbf{5. feladat II. megoldása: } Minden $x\geq 0$ valós szám
+esetén létezik $\varphi\in \left [0,\frac{\pi}{2}\right)$ úgy,
+hogy $x=\tg \varphi.$ Ugyanakkor, ha $x=\tg \varphi$ és $y=\tg
+\omega,$ akkor
+$$\frac{1+xy}{\sqrt{1+x^2}\cdot\sqrt{1+y^2}}=\frac{1+\tg \varphi \cdot \tg \omega}{\frac{1}{\cos \varphi}\frac{1}{\cos \omega}}=\cos|\varphi-\omega|.$$
+így a feladat egyenértékű a következő
+állítással:
+
+Ha $\varphi_1,\varphi_2,\varphi_3$ és $\varphi_4$ a $\left
+[0,\frac{\pi}{2} \right )$ intervallum elemei, akkor létezik
+$i,j\in \{1,2,3,4\}$ úgy, hogy
+$\cos|\varphi_i-\varphi_j|>\frac{\sqrt{3}}{2}.$
+
+Ennek igazolása érdekében feltételezhetjük, hogy
+$\varphi_1<\varphi_2<\varphi_3<\varphi_4,$ tehát a
+$\varphi_{i+1}-\varphi_i$ különbségek közül a legkisebb
+biztosan kisebb, mint $\frac{\pi}{6}.$ Ez viszont azt jelenti, hogy
+
+\centerline{$\cos \min \limits_{1\leq i\leq
+3}|\varphi_{i+1}-\varphi_i|>\cos \frac{\pi}{6}=\frac{\sqrt{3}}{2}.$}
+
+\medskip
+
+{\bf 6. feladat: } Egy laktanya udvarán 2010 katona magasság szerint
+  áll sorban. Egy perc alatt bármelyik két katona egymással helyet
+  cserélhet (tudnak elég gyorsan futni). Egyszerre több helycsere
+  is történhet, de egy katona egy perc alatt csak egy helycserében
+  vehet részt. Legfeljebb hány perc szükséges ahhoz, hogy névsor
+  szerint álljanak sorba? (A katonák különböző magasságúak, és a
+  nevük is különbözik.)
+
+\ki{dr. Kántor Sándor}{Debrecen}\medskip
+
+\textbf{6. feladat I. megoldása: } Megmutatjuk, hogy 2 perc elegendő ahhoz, hogy névsor szerint álljanak sorba.
+Jelölje a katonákat nagyság sze\-rinti sorrendben $A_1, A_2, \ldots
+,$ $A_{2010}.$ Készítsük el azt az irányított gráfot, amelynek ezek
+a csúcsai, és $A_i$-ből $A_j$-be akkor vezet nyíl (irányított él),
+ha az $A_i$ katona névsorban a $j$-edik. Azt mondjuk, hogy az
+$A_{i_1}, A_{i_2}, \dots , A_{i_k}$ csúcsok ciklust alkotnak, ha
+$A_{i_1}\rightarrow A_{i_2}\rightarrow \dots \rightarrow
+A_{i_k}\rightarrow A_{i_1}$ (esetleg $k=1$). Nyilvánvaló, hogy
+gráfunk diszjunkt ciklusok uniójára bomlik. Elegendő tehát egy
+ciklusra igazolni, hogy az előírt cserék két perc alatt párcserékkel
+megvalósíthatók, hiszen a diszjunkt ciklusokban egymástól
+függet\-lenül, egy\-szerre történhetnek a cserék.
+
+Az \ $A_{i_1}\rightarrow A_{i_2}\rightarrow \dots \rightarrow
+A_{i_k}\rightarrow A_{i_1}$ \ ciklusban az első percben az $m$-edik
+$\left (m = 1, 2, \dots , [\frac{k-1}{2}]\right )$ helyen álló
+$A_{i_m}$ katona cseréljen helyet a $(k-m)$-edik helyen állóval, a
+második percben pedig az $m$-edik $\left (m = 1, 2, \dots ,
+[\frac{k}{2}]\right )$ helyen álló katona cseréljen helyet a
+$(k-m+1)$-edik helyen állóval. A két csere végeredményeként az
+eredetileg az $m$-edik helyen álló $A_{i_m}$ katona a
+$k-(k-m)+1=(m+1)$-edik helyre kerül, az $A_{i_k}$ pedig az első
+helyre, $A_{i_1}$ helyére. Tehát megvalósult a kívánt csere.
+Háromtagú ciklusnál a csere egy lépésben nem valósítható meg, tehát
+legalább két perc szükséges a cseréhez.
+
+\medskip
+
+
+\textbf{6. feladat II. megoldása: } A katonákat számozzuk meg a
+nagyság sze\-rinti sorrendnek megfelelően $1$-től $2010$-ig
+és jelöljük $\sigma(i)$-vel a névsor szerinti sorrendben
+elfoglalt helyének sorszámát. így egy $\sigma$
+permutációt értelmeztünk, amely diszjunk ciklusok
+szorzatára bomlik, tehát elégséges a cseréket ciklusokon
+belül elvégezni. ábrázoljuk a ciklus elemeit egy szabályos
+sokszög csúcsaiban (a ciklusban elfoglalt sorrendnek megfelel\H
+oen, trigonometrikus irányban) és számozzuk meg a sokszög
+csúcsait ugyanazokkal a számokkal.
+
+\centerline{\includegraphics[width=0.4\textwidth]{permut1.eps}}
+
+így kezdetben minden csúcsnak a száma talál a csúcsba
+írt számmal. A cserék végrehajtása után az $i$ csúcsra
+a $\sigma(i)$ szám kerül, tehát gyakorlatilag a cserékkel a
+csúcsokba írt számoknak a középpont körüli
+$\frac{2\pi}{k}$ szögű elforgatását kell elérni, ahol $k$
+a ciklus hossza. Ez viszont két tengelyes tükrözés
+összetételével is elérhető. A tükrözések
+leírásából az első megoldásban leírt cseréket
+kapjuk.
+
+\medskip
+
+\textbf{Megjegyzés: } A mellékelt ábrán a $\sigma=\left (\begin{array}{ccccc} 1&2&3&4&5\\ 3&5&2&1&4 \end{array} \right )$
+ciklus esetén szemléltettük a cseréket. Látható, hogy a
+permutációnak transzpozíciókra való felbontását kell
+létrehozni. Az ábrának megfelelő felbontás:
+
+\centerline{$\sigma=(1,2)\cdot(4,5)\cdot(1,3)\cdot(2,4).$}
+
+\end{document}

@@ -1,0 +1,385 @@
+\documentclass[a4paper,10pt]{article} 
+\usepackage[utf8]{inputenc}
+\usepackage{t1enc}
+\usepackage{graphicx}
+\usepackage{amssymb}
+\usepackage{pstricks, pstricks-add}
+\voffset - 20pt
+\hoffset - 35pt
+\textwidth 450pt
+\textheight 650pt 
+\frenchspacing 
+
+\pagestyle{empty}
+\def\ki#1#2{\hfill {\it #1 (#2)}\medskip}
+
+\def\tg{\, \hbox{tg} \,}
+\def\ctg{\, \hbox{ctg} \,}
+\def\arctg{\, \hbox{arctg} \,}
+\def\arcctg{\, \hbox{arcctg} \,}
+
+\begin{document}
+\begin{center} \Large {\em XIX. Nemzetközi Magyar Matematika Verseny} \end{center}
+\begin{center} \large{\em Szatmárnémeti, 2010. március 19-22.} \end{center}
+\smallskip
+\begin{center} \large{\bf 10. osztály} \end{center}
+\bigskip 
+
+{\bf 1. feladat: }  Legalább hány szeget kell beütni az alábbi
+farács rácspontjaiba ahhoz, hogy biztosan legyen köztük $4$
+szeg, amely egy téglalapot feszít ki?
+
+\smallskip
+\centerline{
+\psset{xunit=0.5cm,yunit=0.5cm}
+\begin{pspicture}(12,4)
+\psgrid[gridlabels=0pt,subgriddiv=0]
+\end{pspicture}
+}
+
+\ki{Nagy Örs}{Kolozsvár}\medskip
+
+
+\textbf{1. feladat megoldása: } Tételezzük fel, hogy a lehető legtöbb szeget beütöttük a rácspontokba anélkül, hogy azok valamilyen
+téglalapot feszíte\-nének ki. Jelöljük $m$-mel az egy
+függőleges (lásd a mellékelt ábrát) rácsegyenesre
+illeszkedő szegek maximális számát.
+
+Ha $m=5,$ akkor $12$ függőleges rácsegyenes csak egy-egy
+szeget tartalmazhat, különben keletkezne olyan téglalap,
+amely\-nek olda\-lai párhuzamosak a rácsegyenesekkel és a
+csúcsaiban van egy-egy szeg. így $m=5$ esetén $18$ szeg már
+biztosítaná a téglalap keletkezését.
+
+Ha $m=4,$ akkor további $4$ függőleges rácsegyenes
+tartalmazhat $2-2$ szeget és a többi legfeljebb $1$-et
+(különben ismét keletkezne olyan téglalap, amelynek oldalai
+a rácsegyenesekkel párhuza\-mo\-sak). így ebben az esetben
+$21$ szeg biztosítaná a tég\-la\-lap keletke\-zé\-sét.
+
+
+Ha $m=3,$ akkor két esetet kell megvizsgálni aszerint, hogy
+hány függőleges rács\-egyenes tartalmaz $3$ szeget. Ha
+két ilyen rács\-egyenes is van, akkor csak további $4$
+függőleges rácsegyenes tartalmazhat $2$ szeget és az
+összes többi legfeljebb $1$-et (különben ismét keletkezne
+olyan téglalap, amelynek oldalai a rácsegyenesekkel
+párhuzamosak). Ebben az esetben $22$ szeg esetén már
+megjelenne legalább egy téglalap. Ha csak egy függőleges
+rács\-egyenes tartalmaz $3$ szeget, akkor további $7$ függ\H
+oleges rácsegyenes tartalmazhat $2-2$ szeget és az összes
+többi legfeljebb $1$-et. Ebben az esetben $23$ szeg esetén
+megjelenne olyan téglalap, amelynek oldalai párhuzamosak a
+rácsegyenesekkel.
+
+Ha $m=2,$ akkor mivel az $5$ vízszintes egyenesből $10$
+féleképpen választhatunk ki kettőt, ezért $10$ függ\H
+oleges rácsegyenesen lehet $2-2$ pont és a többin $1-1.$ Ez
+összesen $23$ pont, tehát itt csak $24$ pont esetén jelenne
+meg olyan téglalap, amelynek oldalai párhuzamosak a
+rácsegyenesekkel. Ugyanakkor természetes, hogy más
+téglalapok is keletkezhetnek, tehát ahhoz, hogy a megoldás
+teljes legyen kell egy olyan elhelyezést találni a $23$ szegre,
+amikor semmilyen téglalapot nem feszítenek ki (tehát nemcsak
+olyat nem, amelynek az oldalai a rácsegyenesekkel párhuzamosak).
+Egy ilyen elhelyezés látható a mellékelt ábrán.
+
+\centerline{\includegraphics[width=0.45\textwidth]{szegek.eps}}
+
+Ha $m=1,$ akkor világos, hogy legfeljebb $13$ szeg lenne a
+farácson, tehát a feladatban megfogalmazott kérdésre a
+válasz $24.$
+
+\medskip
+
+{\bf 2. feladat: } Határozzuk meg azokat
+az $x,y\in \mathbb{N}$ számokat, amelyekre
+$$xy(x-y)=13x+15y.$$
+
+\ki{Kacsó Ferenc}{Marosvásárhely}\medskip
+
+\textbf{2. feladat I. megoldása: } A $(0,0)$ megoldása az egyenletnek és ha $x,y$ közül az
+egyik nulla, akkor a másik is nulla, tehát a továbbiakban
+feltételezhetjük, hogy $x\neq 0\neq y.$ Két esetet tárgyalunk
+aszerint, hogy $y$ osztható $13$-mal vagy sem.
+
+1. eset. Ha $y$ osztható $13$-mal, akkor létezik
+$a\in\mathbb{N}$ úgy, hogy $y=13a,$ tehát $x=a(x^2-13ax-15).$ Ez
+csak akkor lehetséges ha $a|x,$ vagyis létezik $b\in\mathbb{N}$
+úgy, hogy $x=ab.$ Visszahelyettesítés után a
+$$15=b(a^2b-13a^2-1)$$ egyenlőséghez jutunk és innen következik, hogy $b|15,$ ezért
+$b\in\{1,\ 3,\ 5,\ 15\}.$ A négy eset kipróbálása után
+csak $b=15$ esetén kapunk $a$-nak is természetes értéket,
+tehát $x=15$ és $y=13.$
+
+2. eset. Ha $y$ nem osztható $13$-mal, akkor
+$$13x=y(x^2-xy-15)$$ alakba írható, és mivel $y$ relatív prím a $13$-mal, az $x$ osztható kell legyen az $y$-nal.
+így létezik $k\in\mathbb{N}$ úgy, hogy $x=ky$ és ezt
+visszahelyettesítve a $15=k(ky^2-y^2-13)$ egyenlethez jutunk,
+ahonnan $k|15,$ tehát $k\in\{1,\ 3,\ 5,\ 15\}.$ Innen a megoldások
+$x=9,\ y=3;\ x=10,\ y=2;\ x=15,\ y=1.$
+
+összesítve, az egyenletnek a következő megoldásai
+lehetségesek:
+$$M=\{(0,0),(15,13),(9,3),(10,2),(15,1)\}.$$
+
+\medskip
+
+\textbf{2. feladat II. megoldása: } Az egyenlet alapján $x|15y$
+és $y|13x.$ Ha $d$ az $x$ és $y$ legnagyobb közös osztója
+és $d=1,$ akkor $y\in \{1,13\}.$ $y=1$ esetén $x=15$ és $y=13$
+esetén szintén az $x=15$ megoldáshoz jutunk. Ha $d>1,$ akkor
+létezik olyan $x_1,y_1\in \mathbb{N},$ amelyre $x_1$ és $y_1$
+relatív prímek valamint  $x=dx_1$ és $y=dy_1,$ tehát az
+egyenlet $$d^2x_1y_1(x_1-y_1)=13x_1+15y_1$$ alakban írható. Ez
+alapján $y_1|13,$ tehát $y_1\in \{1,13\}.$
+
+$y_1=1$ esetén az $$x_1\left(d^2(x_1-1)-13 \right )=15$$
+egyenlethez jutunk, ahonnan $x_1\in \{1,3,5,15\}.$ Az $x_1=1$ eset
+nem felel meg és a többi esetből rendre a $d=3,$ $d=2,$
+illetve $d=1$ értékekhez jutunk.
+
+$y_1=13$ esetén az $$x_1\left (d^2(x_1-13)-1 \right )=15$$
+egyenlethez jutunk, ahonnan $x_1\geq 14$ és $x_1|15,$ tehát csak
+az $x_1=15$ esetet szükséges vizsgálni. Ebben az esetben
+$d=1,$ tehát nem jutunk újabb megoldáshoz. összesítve
+
+\centerline{$M=\{(0,0),(15,13),(9,3),(10,2),(15,1)\}.$}
+%\vspace*{-1cm}
+
+\medskip
+
+
+{\bf 3. feladat: }  Adott a síkon négy pont úgy, hogy közülük semelyik három sincs egy egyenesen.
+Kiszíneztük a négy pontot négy színnel: pirossal, kékkel, zölddel,
+és sárgával. Ezután kiszíneztük a pontok által meghatá\-rozott
+szaka\-szo\-kat is úgy, hogy azok színe megegyezett valamelyik
+vég\-pont\-juk színével, és közben mind a négy színt újra
+felhasználtuk. Igaz-e, hogy mindig van olyan pont, hogy
+
+(1) vagy a belőle kiinduló szakaszok közül,
+
+(2) vagy a másik három pont közti szakaszok közül
+
+\noindent az egyik piros, a másik kék, a harmadik zöld?
+
+\ki{dr. Kántor Sándorné}{Debrecen}\medskip
+
+\textbf{3. feladat megoldása: } Tekintsük a piros, kék és zöld pontokat. Ha az ezek által
+meghatározott három szakasz piros, kék, illetve zöld színű, akkor a
+feladat második állítása igaz a sárga pontra. Vizsgáljuk azokat az
+eseteket, amelyekre nem teljesül a (2) állítás a sárga pontra. Mivel
+minden szakasz színe megegyezik valamelyik végpontjának a színével,
+ez csak úgy lehet, ha a piros, kék és zöld pontok által
+meghatározott 3 szakasz közül 2 azonos színű. Mivel a színek szerepe
+azonos, feltehetjük, hogy a 3 szakasz közül 2 piros, 1 pedig kék
+színű. Tekintsük ezután a zöld pontot. Mivel minden pontból indul
+saját színű szakasz (hisz a színezés során mind a $4$ színt
+felhasználjuk), ezért a zöld pontból indul ki zöld szakasz. Ezek
+szerint a zöld pontban egy piros, egy kék és egy zöld szakasz
+találkozik, tehát a zöld pontra az (1) állítás igaz.
+
+\medskip
+
+
+{\bf 4. feladat: } Mennyi azoknak a pozitív egészeknek az összege,
+amelyek $2010$-nél nem nagyobbak, és számjegyeik összege
+páratlan?
+
+\ki{Fejér Szabolcs}{Miskolc}\medskip
+
+\textbf{4. feladat megoldása: } Jelölje $S(n)$ az $n$ szám számjegyeinek összegét! Legyen $n<1000.$
+Ekkor két fontos állítást fogalmazhatunk meg.
+
+1) Ha $S(n)$ páros, akkor $S(999-n)$ páratlan (a kivonásnál sehol
+sincs átvitel).
+
+2) Ha $S(n)$ páros, akkor $S(1000+n)$ páratlan.
+
+Tehát az első állítás miatt a $H=\{0,\ 1,\dots,999\}$ halmaz elemei
+közül pontosan 500 páros összegű, 500 páratlan. A második állítás
+miatt a $H$ halmaz páros összegű számaihoz 1000-t adva kapunk
+páratlan összegű számot (szintén 500-at), ezek lesznek a $K=\{1000,\
+1001,\dots,1999\}$ halmaz páratlan összegű számai. A kívánt összeget
+2000-ig, úgy kapjuk, hogy a $H$ halmaz elemeinek összegéhez
+hozzáadunk $500\cdot1000$-t. A keresett összeg tehát
+\[\frac{1000\cdot999}{2}+500\cdot1000+2001+2003+2005+2007+2009+2010,\] vagyis
+$1011535.$
+
+\medskip
+
+
+{\bf 5. feladat: } Legyen hat, nem feltétlenül egyforma sugarú, kör
+egy síkban. Igazoljuk, hogy ha a hat körnek van közös belső pontja, 
+akkor az egyik kör középpontja egy másik
+belsejében van.
+
+\ki{Mátyás Mátyás}{Brassó}\medskip
+
+\textbf{5. feladat megoldása: } Legyen $P$ egy pont, amelyik mind a hat kör belsejében megtalálható.
+Az egyik tetszőlegesen választott körtől elindulva, és az óramutató
+járásával ellentétes irányba haladva $P$ körül, jelölje
+$\mathcal{C}_i(O_i,R_i),1\leq i\leq 6$ a köröket. Ekkor
+\[m(\widehat{O_1PO_2})+m(\widehat{O_2PO_3})+\dots+m(\widehat{O_5PO_6})+m(\widehat{O_6PO_1})=2\pi.\]
+Ha mind a hat fenti szög mértéke megegyezik $\frac{\pi}{3}$-mal
+akkor az $O_iPO_{i+1},$ $1\leq i\leq 6$ ($O_7=O_1$)
+háromszögekben
+$$O_iO_{i+1}\leq \max\{PO_i,PO_{i+1}\}<\max \{R_i,R_{i+1}\}.$$  Ha
+$R_i\le R_{i+1},$ akkor az $O_i$ pont a
+$\mathcal{C}_{i+1}(O_{i+1},R_{i+1})$ kör belsejében található,
+különben az $O_{i+1}$ pont található a $\mathcal{C}_i(O_i,R_i)$
+kör belsejében.
+
+Ha nem mind a hat szög mértéke $\frac{\pi}{3},$ akkor
+létezik $1\leq i\leq 6$ úgy, hogy
+$m(\widehat{O_iPO_{i+1}})<\frac{\pi}{3}$. Az $O_iO_{i+1}P$
+háromszögben teljesül, hogy
+\[m(\widehat{O_iPO_{i+1}})<\max\{m(\widehat{PO_iO_{i+1}}),\ m(\widehat{PO_{i+1}O_i})\}\]
+
+Mivel a háromszögben nagyobb szöggel szemben nagyobb ol\-dal
+fekszik, ezért az $O_iO_{i+1}P$ háromszögben teljesül, hogy
+$$O_iO_{i+1}<\max\{PO_i,\ PO_{i+1}\}.$$ Ugyanakkor a $P$ pont a
+$\mathcal{C}_i(O_i,R_i)$ és a $\mathcal{C}_{i+1}(O_{i+1},R_{i+1})$
+körök belsejében található, tehát $PO_i<R_i$ és
+$PO_{i+1}<R_{i+1}.$ így
+\[O_iO_{i+1}<\max\{R_i, R_{i+1}\}.\]
+Ha $R_i\le R_{i+1},$ akkor az $O_i$ pont a
+$\mathcal{C}_{i+1}(O_{i+1},R_{i+1})$ kör belsejében található,
+különben az $O_{i+1}$ pont található a $\mathcal{C}_i(O_i,R_i)$
+kör belsejében.
+
+\medskip
+
+
+{\bf 6. feladat: } Adott az $ABC$ háromszög, amelyben $AB=AC$ és
+$BAC\sphericalangle=20^{\circ}.$ Az $AC$ oldalon felvesszük a $D$
+és $E$ pontokat úgy, hogy $AD=BC$ és $BE$ az $ABC\sphericalangle$
+szögfelezője. Legyen $F$ és $K$ a $BD,$ illetve $DE$ szakasz
+felezőpontja. Bizonyítsuk be, hogy az $EFK_{\triangle}$
+egyenlő oldalú.
+
+\ki{Olosz Ferenc}{Szatmárnémeti}\medskip
+
+\textbf{6. feladat I. megoldása: } Segédszerkesztést végzünk:
+megszerkesztjük az\linebreak  $ABC$ háromszöggel kongruens
+(egybevágó) $LDA$ háromszöget ($L$ és $B$ az $AC$ egyeneshez
+viszonyítva ugyanabban a félsíkban helyezkednek el).
+
+Az $ABC$ és $LDA$ egyenlő szárú háromszögekben
+$$AB=AC=LA=LD,$$ az alapokon fekvő szögek $80^{\circ}$-osak. $AL=AB$
+és $m(\widehat{LAB})=80^{\circ}-20^{\circ}=60^{\circ}$, innen
+következik, hogy az $ALB_{\triangle}$ egyenlő oldalú, tehát
+$LA=LB=LD$ és $m(\widehat{DLB})=60^{\circ}-20^{\circ}=40^{\circ}$.
+
+\centerline{\includegraphics[width=0.4\textwidth]{olosz1.eps}}
+
+
+Az $LBD$ egyenlő szárú háromszögben az alapon fekvő szögek
+$m(\widehat{LBD})=m(\widehat{LDB})=70^{\circ}$, ahonnan következik,
+hogy
+$$m(\widehat{BDC})=180^{\circ}-(80^{\circ}+70^{\circ})=30^{\circ}$$ és
+$m(\widehat{ABD})=70^{\circ}-60^{\circ}=10^{\circ}$, így
+$m(\widehat{DBE})=\frac{80^{\circ}}{2}-10^{\circ}=30^{\circ}.$
+
+Tehát $EBD$ egyenlő szárú háromszög és a $BD$ alap felező\-pontja
+$F$, így $EF$ merőleges a $BD$-re, ahonnan következik, hogy $FK$ az
+$EFD$ derékszögű háromszögben oldalfelező (súlyvonal), tehát $FK=KE$
+és $m(\widehat{FED})=90^{\circ}-30^{\circ}=60^{\circ}$ vagyis $EFK$
+egyenlő oldalú háromszög.
+
+\medskip
+
+\textbf{6. feladat II. megoldása: } Gondolkodjunk visszafele: Mire
+lenne szükség ahhoz, hogy $EFK$ egyen\-lő oldalú legyen?
+Mivel $BE$ felezi az $ABC$ szöget, ezért
+$m(\widehat{EBC})=40^{\circ},$ tehát $m(\widehat{BEC})=60^{\circ}$
+és így az $\widehat{FEK}$ mértéke pontosan akkor lenne
+$60^{\circ},$ amikor $FE$ szögfelező is a $DEB$
+háromszögben. Mivel $F$ a $BD$ felezőpontja, ez pontosan
+akkor teljesül, ha a $BED$ háromszög egyenlő szárú.
+Ehhez elégséges belátni, hogy a $\widehat{DBE}$ mértéke
+$30^{\circ}$ vagy az $\widehat{ABD}$ mértéke $10^{\circ}.$
+Tehát a feladat visszavezetődik a következő
+tulajdonságra:
+
+Tekintjük az $ABC$ háromszöget, amelyben $AB=AC$ és
+\linebreak $m(\widehat{BAC})=20^{\circ}.$ Az $AC$ oldalon
+felvesszük a $D$ pontot. Igazoljuk, hogy az $AD=BC$ egyenl\H
+oség pontosan akkor teljesül, ha $m(\widehat{ABD})=10^{\circ}.$
+
+Amiatt, hogy a $D$ pont egyértelműen szerkeszthető az
+$AD=BC$ egyenlőség alapján is és a
+$m(\widehat{ABD})=10^{\circ}$ egyenlőség alapján is,
+elégséges igazolni, hogy ha $m(\widehat{ABD})=10^{\circ},$ akkor
+$AD=BC.$ Ez belátható a szinusztétel segítségével, hisz
+az $ABD$ háromszögben $AD=AB\frac{\sin 10^{\circ}}{\sin
+30^{\circ}}.$ Másrész $\frac{BC}{2}=AB\sin 10^{\circ},$ tehát
+$AD=BC.$
+
+\medskip
+
+\textbf{Megjegyzés: } Az $AD=BC$ egyenlőség belátható csak
+kong\-ru\-encia segítségével, ha megszerkesztjük az
+$A$-ból a $BD$-re és a $BC$-re húzott merőlegeseket.
+
+\medskip
+\textbf{6. feladat III. megoldása: } Az $ABC$ háromszög
+tekinthető egy szabályos $18$ oldalú sokszög részének,
+amint a mellékelt ábra mutatja ($A$ a sokszög köré írt
+kör középpontja, $B$ és $C$ két egymás melletti
+csúcs). Ha ebben a sokszögben meghúzzuk az $X_1X_9$ átlót
+és az $AX_5$ szakaszt, akkor $AX_5 \perp X_1X_9$ (mert
+$X_5X_1=X_5X_9$). Ugyan\-akkor az $X_1X_9$ és $X_2X_{11}$
+átlók szöge $30^{\circ}$-os, tehát ha \linebreak
+$\{D\}=X_1X_9\cap X_2X_{11}$ és $\{M\}=AX_5\cap X_1X_9,$ akkor az
+$ADM$ derékszögű háromszögben $AM=\frac{AD}{2}.$
+Másrészt az $X_1X_9X_{10}$ háromszögben $AM$ középvonal,
+tehát $AM=\frac{X_9X_{10}}{2}.$ Ez alapján
+$AD=X_9X_{10}=X_1X_2=BC,$ tehát az $X_2X_{11}$ és $X_1X_9$
+átlók metszéspontja megegyezik a feladatban (az $AD=BC$
+feltétel alapján) megszerkesztett $D$ ponttal. így világos,
+hogy $m(\widehat{DBE})=m(\widehat{EDB})=30^{\circ},$ és ez
+alapján következik, hogy az $EFK$ háromszög egyenlő
+oldalú.
+
+\centerline{\includegraphics[width=0.7\textwidth]{sokszog18.eps}}
+
+\medskip
+
+
+\textbf{6. feladat IV. megoldása: } Szerkesszük meg az $M$ pontot
+úgy, hogy \linebreak $m(\widehat{MAB})=80^{\circ}$ és $MB=AB$
+($M$ és $C$ az $AB$-hez viszonyítva ugyanabban a félsíkban
+van). A szerkesztés alapján a $BAM$ háromszög egybevágó
+az $ABC$ háromszöggel, tehát $MA=BC.$ A szerkesztés
+alapján $m(\widehat{MAC})=60^{\circ},$ tehát az $MAD$
+háromszög egyenlő oldalú. így $D$ és $B$ az $MA$
+oldalfelező merőlegesén van, tehát a $BAM$ egyenlő
+szárú háromszögben $BD$ az $ABM$ szög szögfelezője.
+Ez alapján  $m(\widehat{ABD})=10^{\circ},$ tehát
+$m(\widehat{BDE})= m(\widehat{DBE})=30^{\circ}$ és ebből
+következik, hogy $EFK_{\triangle}$ egyenlő oldalú.
+
+\centerline{\includegraphics[width=0.9\textwidth]{sokszog18_2.eps}}
+
+\medskip
+
+\textbf{Megjegyzések: } A jobb oldali ábrán látható, hogy a negyedik megoldás alapötlete ugyanaz, mint a
+harmadik megoldás alapöt\-lete, pontosabban a szabályos $18$
+oldalú sokszögbe való beágyazás. A két beágyazás a
+sokszögnek a háromszöghöz viszonyított hely\-zetében
+különbözik.
+
+\smallskip
+A második megoldásban, ha nem a fordított irányt
+vizsgáljuk, hanem az $AD=BC$ feltétel alapján szeretnénk
+meghatározni a $\widehat{ABD}$ szög mértékét, akkor az
+$\alpha=m(\widehat{ABD})$ jelöléssel a $$\frac{\sin
+\alpha}{\sin(\alpha+20^{\circ})}=\frac{\sin 10^{\circ}}{\sin
+30^{\circ}}$$ egyenlethez jutunk (az $ABD_{\Delta}$ és az eredeti
+háromszögben felírt szinusztétel alapján).
+Származtatással a $\tg \alpha=\tg 10^{\circ}$ egyenlőséget
+kapjuk, ahonnan $\alpha=10^{\circ}.$
+
+
+\end{document}
