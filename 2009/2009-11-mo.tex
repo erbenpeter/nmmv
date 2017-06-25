@@ -1,0 +1,466 @@
+\documentclass[a4paper,10pt]{article} 
+\usepackage[utf8]{inputenc}
+\usepackage[a4paper]{geometry}
+\usepackage[magyar]{babel}
+\usepackage{t1enc}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{caption}
+\usepackage{pgf,tikz}
+\usepackage{pstricks,pstricks-add}
+\frenchspacing 
+\pagestyle{empty}
+\newcommand{\ki}[2]{\hfill {\it #1 (#2)}\medskip}
+\newcommand{\vonal}{\hbox to \hsize{\hskip2truecm\hrulefill\hskip2truecm}}
+\newcommand{\degre}{\ensuremath{^\circ}}
+\newcommand{\tg}{\mathop{\mathrm{tg}}\nolimits}
+\newcommand{\ctg}{\mathop{\mathrm{ctg}}\nolimits}
+\newcommand{\arc}{\mathop{\mathrm{arc}}\nolimits}
+\renewcommand{\vec}[1]{\mathbf{#1}}
+
+\begin{document}
+
+
+\begin{center} \Large {\em XVIII. Nemzetközi Magyar Matematika Verseny} \end{center}
+\begin{center} \large{\em Gyula, 2009. március 12--16. } \end{center}
+\smallskip
+\begin{center} \large{\bf 11. osztály} \end{center}
+\bigskip 
+
+
+{\bf 1. feladat:} Állítsuk öt párba az $1, 2, 3, 4, 5, 6, 7, 8, 9, 10$ számokat úgy, hogy a
+párokban lévő számok különbségeinek abszolút értékei rendre $1, 2, 3, 4, 5$-t adjanak!
+Megtehető-e ez a párosítás (természetesen hat párba), ha az $1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12$
+számokkal dolgozunk, úgy hogy ezek a különbségek $1, 2, 3, 4, 5, 6$ legyenek? Indokoljuk a
+választ!
+
+\ki{Hajnal Péter }{Szeged}\medskip
+
+{\bf Megoldás:} Az {\bf első esetben a kért párosítás lehetséges.} Íme egy megoldás:
+
+$$(2-1);(9-7);(6-3);(8-4);(10-5)$$
+
+A második esetben úgy kell kialakítanunk a párokat, hogy a párokban szereplő számok különbségeinek abszolút értékei rendre $1, 2, 3, 4, 5, 6$ legyenek.
+
+Legyen $x_k$ a $k$-dik párban szereplő két szám közül a kisebb, így a másik szám $x_k+k$ lesz, ahol $k\in {1; 2; 3; 4; 5; 6}$- A kapott párokban szereplő számokat összeadva 
+$$(2x_1+1), (2x_2+2), (2x_3+3), (2x_4+4), (2x_5+5), (2x_6+6)$$ 
+számokat kapunk, melyeknek összege éppen $1+2+3+...+12$ kell legyen. Ha $X$-szel jelöljük a $\sum\limits_{k=1}^{6} x_k$ összeget, akkor
+
+$$\sum_{k=1}^6 (2x_k+k)=2\sum_{k=1}^6 x_k+\sum_{k=1}^6 k=2X+\frac{6\cdot 7}{2},$$
+
+innen
+
+$$2X+\frac{6\cdot 7}{2}=\frac{12\cdot 13}{2} \Rightarrow 2X+21=78 \Rightarrow 2X=57.$$
+
+A kapott egyenletnek nincs megoldása a természetes számok halmazán, tehát a {\bf második esetben a kért párosítás nem lehetséges.}
+
+\medskip
+\vonal
+
+{\bf 2. feladat:} Létezik-e két olyan egymástól különböző, pozitív racionális szám,
+amelyeknek számtani, mértani és harmonikus közepe egy derékszögű háromszög
+oldalhosszai?
+
+\ki{Olosz Ferenc }{Szatmárnémeti}\medskip
+
+{\bf Megoldás:} Legyen $a, b \in \mathbb{Q}$ úgy, hogy $a>b>0$. Az $\frac{a+b}{2}>\sqrt{ab}>\frac{2ab}{a+b}$ egyenlőtlenségek alapján az átfogó hossza csak $\frac{a+b}{2}$ lehet.
+
+Felírjuk a Pitagorasz-tételt $\left(\frac{a+b}{2}\right)^2=\left(\sqrt{ab}\right)^2+\left(\frac{2ab}{a+b}\right)^2$, majd közös nevezőre hozás után, egyenértékű átalakításokkal rendre kapjuk, hogy
+
+\begin{eqnarray*}
+(a+b)^4&=&4ab(a+b)^2+16a^2b^2\cr
+(a+b)^2[(a+b)^2-4ab]&=&16a^2b^2\cr
+(a+b)^2(a-b)^2&=&16a^2b^2\cr
+(a^2-b^2)^2&=&16a^2b^2
+\end{eqnarray*}
+
+ahonnan következik, hogy $a^2-b^2=4ab$ (mivel $a>b$). \*
+Átrendezve az $a^2-4ab-b^2=0$ egyenlethez jutunk, melyet végigosztunk $b^2$-tel (mert $b\neq0$).\*
+Az $(\frac{a}{b})^2-4(\frac{a}{b})-1=0$ egyenletet megoldva kapjuk, hogy $\frac{a}{b}=2\pm\sqrt{5}$
+
+Az $a>b>0$ feltétel alapján csak az $\frac{a}{b}=2+\sqrt{5}$ lehetséges.
+
+Az $\frac{a}{b}-2=\sqrt{5}\not\in \mathbb{Q}$ ellentmond annak a feltételnek, hogy $a,b \in Q$, azaz $\frac{a}{b}-2\in \mathbb{Q}$.
+
+Tehát nem létezik a feltételeknek megfelelő két különböző pozitív racionális szám.
+
+
+\medskip
+\vonal
+
+{\bf 3. feladat:} Egy osztály minden tanulója vagy úszik, vagy kosarazik, esetleg
+mindkettőt csinálja.
+Lehetséges-e, hogy az osztályban több a lány, mint a fiú a következő esetekben:
+
+a) ha az úszóknak és a kosarasoknak is $60 \%$-a fiú?
+
+b) ha az úszók $60 \%$-a és a kosarasok $75 \%$-a fiú ?
+
+
+\ki{Katz Sándor }{Bonyhád}\medskip
+
+
+{\bf Megoldás:} Az a kérdés, hogy lehetséges-e, hogy $d+e+f>a+b+c$.
+
+\begin{center}
+\psset{xunit=1.0cm,yunit=1.0cm,algebraic=true,dimen=middle,dotstyle=o,dotsize=3pt 0,linewidth=0.8pt,arrowsize=3pt 2,arrowinset=0.25}
+\begin{pspicture*}(-2.2,-0.24)(4.18,5.16)
+\psline(-2,5)(4,5)
+\psline(4,5)(4,0)
+\psline(4,0)(-2,0)
+\psline(-2,0)(-2,5)
+\pscircle(0.04,2.5){1.64}
+\pscircle(1.96,2.5){1.64}
+\rput[tl](-1.7,4.88){Fiúk}
+\rput[tl](-1.7,0.52){Lányok}
+\psline(-2,2.5)(4,2.5)
+\rput[tl](-0.48,3.5){$a$}
+\rput[tl](0.88,3.5){$b$}
+\rput[tl](2.34,3.5){$c$}
+\rput[tl](-0.54,2.3){$d$}
+\rput[tl](0.84,2.3){$e$}
+\rput[tl](2.3,2.3){$f$}
+\rput[tl](-0.6,4.5){Úszik}
+\rput[tl](1.76,4.5){Kosarazik}
+\end{pspicture*}
+\end{center}
+
+a)
+   
+        $a+b=0,6(a+b+d+e)\enspace\enspace$ és $\enspace\enspace c+b=0,6(c+b+f+e)$
+        
+        $0,4a+0,4b=0,6d+0,6e\enspace\enspace$ és $\enspace\enspace0,4e+0,4b=0,6f+0,6e$.
+        
+        $d+e=\frac{2}{3} a+\frac{2}{3} b \enspace (1) \enspace $ és $ \enspace \enspace f+e=\frac{2}{3} c + \frac{2}{3} b \enspace \enspace (2)$
+        
+        Az (1) és (2) alapján: $d+2e+f=\frac{2}{3} a +\frac{4}{3} b+\frac{2}{3} c$.
+        
+        Innen
+        
+        $$d+e+f=\frac23 a+\frac43 b+\frac23 c-e=a+b+c-\frac13 a+\frac13 b-\frac13 c-e$$
+        
+$$(d+e+f)-(a+b+c)=-\frac13 a+\frac13 b - \frac13 c-e$$
+        
+        A kért egyenlőtlenség akkor teljesül, ha $-\frac13 a+\frac13 b - \frac13 c-e >0$, azaz $b>a+c-3e$.
+        
+        Tehát úgy lehet a teljes létszám nagyobb része lány, hogy a fiúk (mindegyike vagy nagy része) mindkét sportot űzik, a lányok meg csak az egyiket. \\*
+        Ha pl. $a=c=e=0$, akkor $2b=3d=3f$. Így, hogy ,,osztálynyian'' legyenek $b=15$ és $d=f=10$. (De nem szükséges, hogy $a=c=e=0$ legyen, pl. $a=c=2$, $e=1$, $b=10$ és $d=f=7$ esetén még mindig több a lány (15), mint a fiú (14) az osztályban.) \\*
+        Összefoglalva, tehát ennél az aránynál {\bf lehetséges}, hogy több a lány, mint a fiú.
+  
+\medskip        
+b)
+
+$a+b=0,6(a+b+d+e)\enspace\enspace$ és $\enspace\enspace c+b=0,75(c+b+f+e)$
+        
+        $0,4a+0,4b=0,6d+0,6e\enspace\enspace$ és $\enspace\enspace 0,25c+0,25b=0,75f+0,75e$.
+        
+        $d+e=\frac{2}{3} a+\frac{2}{3} b \enspace (3) \enspace $ és $ \enspace \enspace f+e=\frac{1}{3} c + \frac{1}{3} b \enspace \enspace (4)$
+        
+        A (3) és (4) alapján: $d+2e+f=\frac{2}{3} a + b+\frac{1}{3} c$.
+        
+        Innen
+        
+        $$d+e+f=\frac23 a+ b+\frac 13 c-e=a+b+c-\frac13 a-\frac 23 c-e$$
+        
+$$(d+e+f)-(a+b+c)=-\frac13 a - \frac 23 c-e$$
+        
+        A kért egyenlőtlenség akkor teljesül, ha $-\frac13 a+ - \frac 23 c-e >0$, ami nyilván nem lehetséges.
+        
+        Összefoglalva, tehát ennél az aránynál már \textbf{nem lehetséges}, hogy több a lány, mint a fiú.
+\medskip
+\vonal
+
+{\bf 4. feladat:} Legyen $ABCD$ egy olyan téglalap, amelybe szabályos háromszög írható
+úgy, hogy a háromszög egyik csúcsa az $A$ pont, a másik kettő pedig a téglalap egy-egy olyan
+oldalán fekszik, amelyen az $A$ pont nincs rajta. Bizonyítsuk be, hogy ekkor a téglalapból a
+szabályos háromszög által lemetszett háromszögek egyikének a területe a két másik lemetszett
+háromszög területének összegével egyenlő!
+
+\ki{Pintér Ferenc }{Nagykanizsa}\medskip
+
+
+{\bf I. megoldás:} Legyen $AB = a$ és $BC = b$, az $M$ pont pedig az $AFE$ szabályos háromszög $AF$
+oldalának felezőpontja.
+
+\begin{center}
+\psset{xunit=1.0cm,yunit=1.0cm,algebraic=true,dimen=middle,dotstyle=o,dotsize=3pt 0,linewidth=0.8pt,arrowsize=3pt 2,arrowinset=0.25}
+\begin{pspicture*}(-1.24,-0.24)(2.58,3.94)
+\psline(-0.84,0.36)(2.16,0.36)
+\psline(2.16,0.36)(2.16,3.49)
+\psline(2.16,3.49)(-0.84,3.49)
+\psline(-0.84,3.49)(-0.84,0.36)
+\psline(-0.84,0.36)(2.16,1.42)
+\psline(2.16,1.42)(-0.26,3.49)
+\psline(-0.26,3.49)(-0.84,0.36)
+\psline(-0.84,3.49)(0.66,0.89)
+\psline(0.66,0.89)(2.16,3.49)
+\psline[linestyle=dashed,dash=1pt 1pt](-0.26,3.49)(0.66,0.89)
+\psline(0.66,0.89)(0.66,0.36)
+\begin{scriptsize}
+\psdots[dotstyle=*](-0.84,0.36)
+\rput[bl](-0.94,-0.06){$A$}
+\psdots[dotstyle=*](2.16,1.42)
+\rput[bl](2.24,1.54){$F$}
+\psdots[dotstyle=*](-0.26,3.49)
+\rput[bl](-0.18,3.6){$E$}
+\psdots[dotstyle=*](-0.84,3.49)
+\rput[bl](-0.76,3.6){$B$}
+\psdots[dotstyle=*](2.16,3.49)
+\rput[bl](2.24,3.6){$C$}
+\psdots[dotstyle=*](2.16,0.36)
+\rput[bl](2.1,-0.12){$D$}
+\psdots[dotstyle=*](0.66,0.89)
+\rput[bl](0.84,0.64){$M$}
+\psdots[dotstyle=*](0.66,0.36)
+\rput[bl](0.58,-0.06){$K$}
+\end{scriptsize}
+\end{pspicture*}
+\end{center}
+
+Mivel $ABE\sphericalangle  = 90^\circ  = AME \sphericalangle$, 
+ezért a $B$ és $M$ pontok rajta vannak az $AE$ szakasz Thalész-körén. De $MAE \sphericalangle  = 60 ^\circ$, ezért a kerületi szögek tétele miatt az $EBM\sphericalangle  = 60^\circ$.
+Mivel $ECF\sphericalangle  = 90^\circ = FME\sphericalangle$, 
+ezért a $C$ és $M$ pontok rajta vannak az $FE$ szakasz Thalész-körén. De $MFE \sphericalangle  = 60^\circ$, ezért a kerületi szögek tétele miatt az $ECM\sphericalangle  = 60^\circ$.
+Az $EBM\sphericalangle  = 60^\circ = ECM\sphericalangle$, tehát a $BMC$ háromszög szabályos.
+
+Ez azt jelenti, hogy $M$ pont a $BC$ oldaltól $\frac{b\sqrt 3}{2}$, míg
+az $AD$ oldaltól $a-\frac{b\sqrt 3}{2}$ távolságra van. Az $AFD$ háromszögben $MK$ középvonal, így $DF=2\left(a- \frac{b\sqrt 3}{2}\right)=2a-b\sqrt 3$. 
+
+Hasonló gondolatmenettel vagy az $ABE$ és az $AFD$ háromszögekben felírt Pitagorasz-tétel
+segítségével belátható, hogy $BE = 2b-a\sqrt 3$. Következésképpen:
+
+$\displaystyle{T_{ABE\Delta}=\frac{1}{2}a\left(2b-a\sqrt 3\right)=ab-\frac{a^2\sqrt 3}{2}}$
+
+$\displaystyle{T_{ADF\Delta}=\frac{1}{2}b\left(2a-b\sqrt 3\right)=ab-\frac{b^2\sqrt 3}{2}}$
+
+$\displaystyle{
+T_{ECF\Delta}=
+\frac{1}{2}\left(a\sqrt 3-b\right)\left(b\sqrt 3-a\right)
+=2ab-\frac{a^2\sqrt 3}{2}-\frac{b^2\sqrt 3}{2}
+=T_{ABE\Delta}+T_{ADF\Delta}}$, 
+
+amit igazolni kellett.
+\medskip
+
+
+{\bf II. megoldás:} Legyen $BAE \sphericalangle  = \alpha$. Felhasználva, hogy az $AFE$ szabályos háromszög
+($AE = EF = AF = x$) következik, hogy $FAD \sphericalangle  = 30 ^\circ-\alpha$, illetve $CEF \sphericalangle  = 30 ^\circ+\alpha$.
+
+\begin{center}
+\psset{xunit=1.0cm,yunit=1.0cm,algebraic=true,dimen=middle,dotstyle=o,dotsize=3pt 0,linewidth=0.8pt,arrowsize=3pt 2,arrowinset=0.25}
+\begin{pspicture*}(-1.24,-0.24)(2.58,3.94)
+\psline(-0.84,0.36)(2.16,0.36)
+\psline(2.16,0.36)(2.16,3.49)
+\psline(2.16,3.49)(-0.84,3.49)
+\psline(-0.84,3.49)(-0.84,0.36)
+\psline(-0.84,0.36)(2.16,1.42)
+\psline(2.16,1.42)(-0.26,3.49)
+\psline(-0.26,3.49)(-0.84,0.36)
+\psline(-0.84,3.49)(0.66,0.89)
+\psline(0.66,0.89)(2.16,3.49)
+\psline[linestyle=dashed,dash=1pt 1pt](-0.26,3.49)(0.66,0.89)
+%\psline(0.66,0.89)(0.66,0.36)
+\begin{scriptsize}
+\psdots[dotstyle=*](-0.84,0.36)
+\rput[bl](-0.94,-0.06){$A$}
+\psdots[dotstyle=*](2.16,1.42)
+\rput[bl](2.24,1.54){$F$}
+\psdots[dotstyle=*](-0.26,3.49)
+\rput[bl](-0.18,3.6){$E$}
+\psdots[dotstyle=*](-0.84,3.49)
+\rput[bl](-0.76,3.6){$B$}
+\psdots[dotstyle=*](2.16,3.49)
+\rput[bl](2.24,3.6){$C$}
+\psdots[dotstyle=*](2.16,0.36)
+\rput[bl](2.1,-0.12){$D$}
+\psdots[dotstyle=*](0.66,0.89)
+\rput[bl](0.84,0.64){$M$}
+%\psdots[dotstyle=*](0.66,0.36)
+%\rput[bl](0.58,-0.06){$K$}
+\end{scriptsize}
+\end{pspicture*}
+\end{center}
+
+Az $ABE$ derékszögű háromszögben
+$AB = x\cos(\alpha)$ és
+$BE = x\sin(\alpha)$, tehát
+$T_{ABE\Delta} = \frac{1}{2}x^2\sin(\alpha)\cos(\alpha) = 
+\frac{1}{4}x^2\sin(2\alpha)$ 
+(ahol felhasználtuk, hogy $\sin( \alpha  ) \cos( \alpha  ) =
+\frac{\sin(2\alpha)}{2}$).
+
+Az $ADF$ derékszögű háromszögben 
+$AD = x\cos( 30 ^\circ  - \alpha  )$ 
+és 
+$FD = x \sin( 30 ^\circ  - \alpha  )$, tehát
+$T_{ADF\Delta} = \frac 12 x^2 \sin( 30 ^\circ  - \alpha)\cos( 30 ^\circ-\alpha) = \frac 14 x^2 \sin( 60 ^\circ  - 2 \alpha)$.
+
+Az $ECF$ derékszögű háromszögben $CE = x \cos( 30 ^\circ+\alpha)$ és 
+$FC = x\sin( 30 ^\circ+\alpha)$, tehát
+$T_{ECF\Delta}= \frac 12 x^2 \sin( 30 ^\circ  + \alpha  ) \cos( 30 ^\circ  + \alpha  ) = \frac 14 x^2 \sin( 60 ^\circ  + 2 \alpha  )$.
+
+Felhasználva, hogy $\sin( p + q ) - \sin( p - q ) = 
+2 \cos( p ) \sin( q )$, következik, hogy
+
+$$T_{ECF\Delta}-T_{ADF\Delta} =\frac{1}{4}
+x^2 \sin( 60 ^\circ  + 2 \alpha  ) -\frac{1}{4} x^2 \sin( 60 ^\circ  - 2 \alpha  ) = 
+\frac 14 x^2\left[ \sin( 60 ^\circ  + 2 \alpha  ) - \sin( 60 ^\circ  - 2 \alpha  )\right] =$$
+$$= \frac 14 x^2 2 \cos( 60 ^\circ  ) \sin( 2 \alpha  ) 
+= \frac 14 x^2 2 \frac{1}{2} \sin( 2 \alpha  ) 
+= \frac 14 x^2 \sin( 2 \alpha  ) = T_{ABE\Delta},$$
+
+azaz $T_{ECF\Delta} = T_{ABE\Delta}+T_{ADF\Delta}$, amit igazolni kellett.
+
+\medskip
+
+\vonal
+
+{\bf 5. feladat:} Bizonyítsuk be, hogy a $3^k+3^n$ alakban felírt négyzetszámokból végtelen
+sok van, ahol $k$ és $n$ különböző pozitív egész számok! Mi a helyzet, ha a 3 helyett a 4, az 5, a
+6 és a 7 számokat írjuk?
+ 
+\ki{Kántor Sándor }{Debrecen}\medskip
+
+{\bf Megoldás:} Azt kell megvizsgálnunk, hogy 
+az $a^m+a^k$ (ahol $m \ne k$ és $a, m, k \in \mathbb{N}^{+}$) alakú
+számok a kért esetekben mikor lesznek négyzetszámok. Ha ugyanis 
+egy $a^m+a^k$ alakú szám
+négyzetszám, akkor végtelen sok ilyen alakú négyzetszám van, mert minden $n$ pozitív egész
+szám esetén 
+$a^{m+2n}+a^{k+2n} = a^m \cdot a^{2n}+a^k \cdot a ^{2n} 
+= a^{2n}\left(a^m+a^k\right) = 
+\left(a^n\right)^2\left(a^m+a^k\right)$.
+
+\medskip
+Az $a = 3$ eset.
+
+Mivel $3^3+3^2 = 27 + 9 = 36 = 6^2$, 
+ezért végtelen sok $3^m+3^k$ alakú négyzetszám van.
+
+\medskip\newpage
+Az $a = 4$ eset.
+
+Az általánosság leszűkítése nélkül
+feltételezhetjük, hogy $m>k$.
+
+Ekkor $4^m+4^k = 4^k\left(4^{m-k}+1\right) = \left(2^k\right)^2\left(4^{m-k}+1\right)$, azaz azt kell megvizsgálnunk, mikor lesz a 
+$4^{m-k}+1$ teljes négyzet. 
+Ha $4^{m-k}+1=c^2$, akkor $c^2-4^{m-k} = c^2 -\left(2^{m-k}\right)^2
+= \left(c-2^{m-k}\right)\left(c+2^{m-k}\right) = 1$.
+
+Felhasználva, hogy a $c$ és a $2^{m-k}$ egész számok, 
+innen a $2^{m-k} = 0$ következne, ami nem
+lehetséges. Tehát a 4 két különböző pozitív egész kitevős hatványának összege nem lehet
+négyzetszám.
+
+\medskip
+Az $a = 5$ eset.
+
+Az $5^n$ szám minden $n > 1$ esetben 25-re végződik, míg $5^1 = 5$. Ezek alapján az $5^m+5^k$ szám
+vagy 30-ra vagy 50-re végződik. Viszont ha egy négyzetszám 10-el osztható, akkor 100-al is
+osztható, így nem végződhet sem 30-ra, sem 50-re. Tehát az 5 két különböző pozitív egész
+kitevős hatványának összege nem lehet négyzetszám.
+
+\medskip
+Az $a = 6$ eset.
+
+A 6-nak bármely pozitív egész hatványa 6-ra végződik. Így a 
+$6^m+6^k$ szám utolsó számjegye
+2 lesz, de négyzetszám 2-re nem végződhet. Tehát a 6 két különböző pozitív egész kitevős
+hatványának összege nem lehet négyzetszám.
+
+\medskip
+Az $a = 7$ eset.
+
+A 7-nek 3-al való osztási maradéka 1, ezért a 7 minden pozitív egész kitevős hatványának a
+3-mal való osztási maradéka szintén 1 
+(hiszen a $7^n = \left( 2 \cdot  3 + 1\right)^n = 3 M + 1$ alakú lesz). Így a $7^m + 7^k$ szám 3-al osztva 2-t ad maradékul.
+
+Ha $c$ egy természetes szám és 3-nak többszöröse, akkor $c^2$ is 3 többszöröse lesz, míg ha
+$c = 3 n \pm 1$ alakú, akkor a négyzetének 3-al való osztási maradéka 1 lesz. Összegezve, egy
+négyzetszám hárommal osztva csak 0 vagy 1 maradékot adhat.
+
+Tehát a 7 két különböző pozitív egész kitevős hatványának összege nem lehet négyzetszám.
+
+\medskip
+\vonal
+
+
+{\bf 6. feladat:} Adott háromszögbe szerkesztettünk két egybevágó, közös belső pont
+nélküli, maximális sugarú kört. Mekkora ez a sugár? Hogyan történhet a szerkesztés?
+
+
+\ki{Bogdán Zoltán }{Cegléd}\medskip
+
+
+{\bf Megoldás:} Legyen $ABC$ az adott háromszög, melynek oldalai $a$, $b$, $c$. Nyilván mindkét kör
+érinti például az $a$ oldalt és az egyik a $b$-t, a másik a $c$-t, valamint egymást is érintik. Az egyik
+kör középpontja a $B$ csúcsból, a másiké a $C$ csúcsból kiinduló belső szögfelezőn lesz. A körök
+középpontjai legyenek $E$ és $F$, míg a szögfelezők metszéspontja (a háromszögbe írható kör
+középpontja) pedig $O$.
+
+\centerline{
+\psset{xunit=1.0cm,yunit=1.0cm,algebraic=true,dimen=middle,dotstyle=o,dotsize=3pt 0,linewidth=0.8pt,arrowsize=3pt 2,arrowinset=0.25}
+\begin{pspicture*}(-0.54,0.5)(7.86,5.2)
+\psline(2.84,4.64)(7.26,1.26)
+\psline(7.26,1.26)(0.18,1.26)
+\psline(0.18,1.26)(2.84,4.64)
+\psline(0.18,1.26)(4.51,3.36)
+\psline(7.26,1.26)(1.67,3.15)
+\psline(2.26,2.27)(4.28,2.27)
+\psline(4.28,2.27)(4.28,1.26)
+\psline(2.26,2.27)(2.26,1.26)
+\pscircle(2.26,2.27){1.01}
+\pscircle(4.28,2.27){1.01}
+\psline(3.09,2.67)(3.09,1.26)
+\begin{scriptsize}
+\psdots[dotstyle=*](2.84,4.64)
+\rput[bl](2.92,4.76){$A$}
+\psdots[dotstyle=*](7.26,1.26)
+\rput[bl](7.24,0.8){$B$}
+\psdots[dotstyle=*](0.18,1.26)
+\rput[bl](0.14,0.86){$C$}
+\psdots[dotstyle=*](3.09,2.67)
+\rput[bl](3.16,2.8){$O$}
+\psdots[dotstyle=*](2.26,2.27)
+\rput[bl](2.34,2.38){$E$}
+\psdots[dotstyle=*](2.26,1.26)
+\rput[bl](2.16,0.86){$M$}
+\psdots[dotstyle=*](4.28,2.27)
+\rput[bl](4.36,2.38){$F$}
+\psdots[dotstyle=*](4.28,1.26)
+\rput[bl](4.22,0.84){$N$}
+\psdots[dotstyle=*](3.09,1.26)
+\rput[bl](3.02,0.82){$D$}
+\end{scriptsize}
+\end{pspicture*}
+}
+
+Legyen a háromszögbe írható kör sugara $r$, a keresett sugár pedig $x$. Ekkor az 
+$EM = FN = x$,
+illetve az $EMN\sphericalangle = FNM \sphericalangle = 90^\circ$ összefüggések alapján következik, hogy az $EFNM$
+négyszög egy téglalap. Mivel $EF \parallel BC$, könnyen belátható a $BCO$ és $FEO$ háromszögek
+hasonlósága. Figyelembe véve, hogy $OD = r$, a két háromszög hasonlóságából felírható,
+hogy $\frac{r-x}{r}=\frac{2x}{a}$, ahonnan az $x=\frac{ar}{a+2r}$ lesz.
+
+Ha $x$ kifejezésében $a$-val egyszerűsítünk, azaz $x =\frac{r}{1+\frac{2r}{a}}$ 
+lesz, akkor az látszik, hogy a
+nevező akkor a legkisebb, ha a mindkét kört érintő $a$ oldal a három oldal közül a legnagyobb.
+Ekkor lesz az $x$ sugár az adott háromszögben maximális.
+
+Az $x$ egy lehetséges megszerkesztése:
+\begin{itemize}
+\item adott $a$, $b$, $c$ hosszúságú szakaszokkal megszerkesztjük az $ABC$ háromszöget
+\item  megszerkesztjük a háromszög két belső szögfelezőjét, így azok metszéspontjából
+megkapjuk a háromszögbe írható kör középpontját, illetve sugarát
+\item  egy szög egyik szárára felmérjük az $a+2r$ és az $a$ hosszúságú szakaszokat, a másik
+szárára pedig egy $r$ hosszúságút, majd párhuzamos szelők segítségével megkapjuk az
+$x$ hosszúságú szakaszt
+\item  a $BC$-vel párhuzamost húzunk $x$ távolságra, a párhuzamos és a belső szögfelezők
+metszéspontjai megadják a keresett középpontokat
+
+\end{itemize}
+
+
+
+\end{document}

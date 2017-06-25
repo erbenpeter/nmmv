@@ -1,0 +1,439 @@
+\documentclass[a4paper,10pt]{article} 
+\usepackage[utf8]{inputenc}
+\usepackage[a4paper]{geometry}
+\usepackage[magyar]{babel}
+\usepackage{t1enc}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{caption}
+\usepackage{verbatim}
+\usepackage{pgf,tikz}
+\usepackage{pstricks,pstricks-add}
+\frenchspacing 
+\pagestyle{empty}
+\newcommand{\ki}[2]{\hfill {\it #1 (#2)}\medskip}
+\newcommand{\vonal}{\hbox to \hsize{\hskip2truecm\hrulefill\hskip2truecm}}
+\newcommand{\degre}{\ensuremath{^\circ}}
+\newcommand{\tg}{\mathop{\mathrm{tg}}\nolimits}
+\newcommand{\ctg}{\mathop{\mathrm{ctg}}\nolimits}
+\newcommand{\arc}{\mathop{\mathrm{arc}}\nolimits}
+\renewcommand{\vec}[1]{\mathbf{#1}}
+
+\begin{document}
+
+
+\begin{center} \Large {\em XVIII. Nemzetközi Magyar Matematika Verseny} \end{center}
+\begin{center} \large{\em Gyula, 2009. március 12--16. } \end{center}
+\smallskip
+\begin{center} \large{\bf 12. osztály} \end{center}
+\bigskip 
+
+
+{\bf 1. feladat:} 
+Igazoljuk, hogy tetszőleges $x$ valós számra teljesülnek a következő
+egyenlőtlenségek!
+$$ -\frac 54\leq \sin{x}+\cos{x}+\sin{2x}\leq 1+\sqrt{2}. $$
+
+\ki{Kovács Béla }{Szatmárnémeti}\medskip
+
+{\bf Megoldás:} Legyen $T = \sin x + \cos x + \sin 2x$. Ekkor
+
+$$
+T=\sin x + \cos x +\sin 2x = 
+\sqrt 2\left(\frac{\sqrt 2}{2}\sin x+\frac{\sqrt 2}{2}\cos x\right)+\sin 2x =
+\sqrt 2 \sin\left(x+\frac{\pi}{4}\right)+\sin 2x.
+$$
+
+Ebből az alakból nyilvánvaló, hogy $T \le \sqrt 2 + 1$.
+
+\begin{eqnarray*}
+T&=& 
+\sqrt 2 \sin\left(x+\frac{\pi}{4}\right)+\sin 2x =
+\sqrt 2 \cos\left(\frac{\pi}{4}-x\right)+\cos\left(\frac{\pi}{2}-2x\right)=\cr
+&=&
+\sqrt 2 \cos\left(\frac{\pi}{4}-x\right)+\cos 2\left(\frac{\pi}{4}-x\right)=
+\sqrt 2 \cos\left(\frac{\pi}{4}-x\right)+2\cos^2\left(\frac{\pi}{4}-x\right)-1=\cr
+&=&
+2\left(\frac{\sqrt 2}{2}\cos\left(\frac{\pi}{4}-x\right)+\cos^2\left(\frac{\pi}{4}-x\right)\right)-1=
+2\left(\frac{\sqrt 2}{4}+\cos\left(\frac{\pi}{4}-x\right)\right)^2-\frac{5}{4}.
+\end{eqnarray*}
+
+
+Ebből az alakból nyilvánvaló, hogy $T \ge -5/4$.
+
+\textit{Megjegyzés}: Az alsó becslést a 
+$T = \left(\sin x + \cos x\right)^2+\left(\sin x+\cos x\right)-1$ 
+alakból is kihozhatjuk,
+ugyanis $\sin x + \cos x = a$ jelöléssel 
+$T = a^2+a-1$, ami $T = \left(a+\frac{1}{2}\right)^2-\frac{5}{4}$ alakra hozható.
+
+
+\medskip
+\vonal
+
+
+{\bf 2. feladat:} 
+2009 számjegyei három ,,köz''-t határoznak meg: $2\_0\_0\_9$.
+A számon a következő átalakítást végezzük: kiválasztunk egy tetszőleges 10-es
+számrendszerbeli számjegyet, az első közbe beírjuk, a második közbe kétszer írjuk be, a
+harmadik közbe háromszor. Így egy következő számhoz jutunk. Ez persze hosszabb és így
+számjegyei több közt határoznak meg. Újból elvégezzük a fenti átalakítást: újból választunk
+egy számjegyet és a közökbe ezt írjuk (az $i$-edik közbe $i$ darabot). Ezt az eljárást folytatjuk.
+Igazoljuk, hogy eljárásunk során soha sem kaphatunk 3-mal osztható számot.
+
+
+\ki{Bíró Bálint }{Eger}\medskip
+
+{\bf Megoldás:} Ha egy $3l+1$ jegyű számon végezzük el az átalakítást, akkor $3l$ közbe írunk
+számjegyeket, összesen $1+2+3+\ldots+3l$ darabot. 
+A beírt számjegyek száma 3-mal osztható,
+hiszen az ezt a számot megadó összeg $l$ darab három tagú összeg összege
+$((1+2+3)+(4+5+6)+\ldots+(3l-2+3l-1+3l))$, amelyben minden tag három szomszédos egész
+összege, azaz hárommal osztható. (Természetesen a beírt számjegyek száma a számtani sorozat összegzési képlete alapján $(3l+1)3l/2$, amiből szintén könnyen látható a hárommal
+való oszthatóság.) Így az új szám számjegyeinek száma is 1 maradékot ad hárommal osztva.
+Sőt, ha a számjegyek összegét nézzük, akkor az új szám a régi számjegyeinek összegéhez
+képest hárommal osztható számmal növekszik (az új számjegyek ugyanazok). Így az új szám
+ugyanazt adja maradékul hárommal osztva, mint amiből képeztük.
+
+A kiinduló szám négyjegyű $(4=3\cdot 1+1)$. Így a számjegyek 
+száma végig $3l+1$ alakú
+szám lesz. A kiinduló szám $3s+2$ alakú. Így az átalakítások során végig olyan számot kapunk,
+ami hárommal osztva 2-t ad maradékul.
+
+
+\medskip
+\vonal
+
+
+{\bf 3. feladat:} 
+Jelölje $AC$ és $BD$ az egység sugarú kör két merőleges átmérőjét.Az $AB, BC,
+CD$ és $DA$ negyedköríveken felvesszük a $P, Q, R$ és $T$ pontokat úgy, hogy $APBQCRDT$ egy
+konvex nyolcszög lesz. Hogyan válasszuk meg a $P, Q, R, T$ pontokat ahhoz, hogy a kialakított
+nyolcszög oldalainak négyzetösszege minimális legyen.
+
+\ki{Bíró Bálint }{Eger}\medskip
+
+
+{\bf I. megoldás:} 
+
+\begin{center}
+\psset{xunit=1.0cm,yunit=1.0cm,algebraic=true,dimen=middle,dotstyle=o,dotsize=3pt 0,linewidth=0.8pt,arrowsize=3pt 2,arrowinset=0.25}
+\begin{pspicture*}(-1.98,-1.62)(3.75,3.29)
+\pscircle(1,1){2}
+\psline(-1,1)(1,1)
+\psline(1,1)(1,-1)
+\psline(-0.74,0.01)(1,0.01)
+\psline(-0.74,0.01)(-0.74,1)
+\psline(-0.74,0.01)(1,1)
+\parametricplot{3.141592653589793}{3.6567791053055254}{1.02*cos(t)+1|1.02*sin(t)+1}
+\parametricplot{1.5707963267948966}{3.141592653589793}{0.41*cos(t)+1|0.41*sin(t)+0.01}
+\psellipse*(0.84,0.16)(0.04,0.04)
+\parametricplot{-1.5707963267948966}{0.0}{0.41*cos(t)+-0.74|0.41*sin(t)+1}
+\psellipse*(-0.6,0.84)(0.04,0.04)
+\begin{scriptsize}
+\psdots[dotstyle=*](1,1)
+\rput[bl](1.09,1.12){$O$}
+\psdots[dotstyle=*](-1,1)
+\rput[bl](-1.32,0.89){$X$}
+\psdots[dotstyle=*](1,-1)
+\rput[bl](0.99,-1.44){$Y$}
+\psdots[dotstyle=*](-0.74,0.01)
+\rput[bl](-0.98,-0.31){$Z$}
+\psdots[dotstyle=*](-0.74,1)
+\rput[bl](-0.65,1.12){{$Z'$}}
+\psdots[dotstyle=*](1,0.01)
+\rput[bl](1.09,0.14){$Z''$}
+\rput[bl](0.23,0.71){$\varphi$}
+\end{scriptsize}
+\end{pspicture*}
+\end{center}
+
+Elég $k$ egy ($X$ és $Y$ pontok által közrefogott) negyedkör ívében megkeresni azokat a $Z$
+pontokat, amelyek az $XZ^2+ZY^2$ kifejezést minimalizálják. Ezen feladat megoldását az $AB$, $BC$,
+$CD$ és $DA$ negyedkörívekre alkalmazva meg tudjuk válaszolni a feladat kérdését is.
+Jelöljük $\varphi$-vel a $ZOX\sphericalangle$-et. Legyen $Z$ vetülete $OX$-re 
+$Z'$, $OY$-ra $Z''$. Ekkor
+$Z'O = ZZ'' = \cos \varphi$  és $Z''O = ZZ' = \sin \varphi$. Így adódik, 
+hogy $XZ' = 1 - \cos \varphi$  és
+$YZ'' = 1 -\sin \varphi$. Az $XZ^2+ZY^2$ négyzet összeg két Pitagorasz-tétel összegeként adódik:
+
+\begin{eqnarray*}
+(1 - \cos \varphi)^2&+&\sin^2 \varphi+\cos^ 2 \varphi+(1-\sin \varphi)^2
+=\cr
+&=& 1 - 2 \cos \varphi  + \cos^2 \varphi  + \sin^2 \varphi  
++ \cos^2 \varphi  + 1 - 2 \sin \varphi  + \sin^2 \varphi  =\cr
+&=& 4 - 2(\sin \varphi+\cos \varphi).
+\end{eqnarray*}
+
+Feladatunk $\sin \varphi +\cos \varphi$  maximalizálása, ahol 
+$\varphi \in (0; \pi/2)$.
+Ez a kifejezés akkor lesz
+maximális, ha négyzete maximális, ami $\sin^2 \varphi+2 \sin \varphi  \cos \varphi  + \cos^ 2 \varphi  = 1 + \sin 2 \varphi$. Ez akkor
+lesz maximális, ha $\sin 2\varphi  = 1$, azaz $\varphi  = \pi/4$, azaz $Z$ az $XY$ ív felezőpontja.
+
+A negyedkörre vonatkozó optimalizálási kérdésre adott válaszból következik, hogy a
+négy ismeretlen csúcs választása akkor lesz optimális, ha szabályos nyolcszöget alakítanak ki
+(mindegyikük a megfelelő negyedkörív felezőpontja).
+
+
+\textit{Megjegyzés}: Hasonlóan járhatunk el úgy is, hogy az $OXZ$ és az $OYZ$ háromszögekben
+alkalmazzuk a koszinusz tételt (a megfelelő szögek $\varphi$, ill. 
+$90^\circ - \varphi$). Ekkor szintén azonnal
+adódik, hogy a $\sin \varphi + \cos \varphi$  mennyiség maximumát kell meghatározni, ha $\varphi  \in (0; \pi/2)$.
+
+\medskip
+
+\newpage
+{\bf II. megoldás:} Jelöléseink az ábrán láthatók. (Itt az egyes negyedkörökön felvett pontokat $P_1$, $P_2$, $P_3$ és $P_4$ jelöli.)
+
+\begin{center}
+\psset{xunit=1.0cm,yunit=1.0cm,algebraic=true,dimen=middle,dotstyle=o,dotsize=3pt 0,linewidth=0.8pt,arrowsize=3pt 2,arrowinset=0.25}
+\begin{pspicture*}(-1.67,-1.5)(3.68,3.35)
+\pscircle(1,1){2}
+\psline(-1,1)(1,1)
+\psline(1,1)(1,-1)
+\psline(-0.74,0.01)(1,1)
+\psline(1,1)(1,3)
+\psline[linestyle=dashed,dash=1pt 1pt 3pt 1pt ](-0.24,2.57)(1,3)
+\psline[linestyle=dashed,dash=1pt 1pt 3pt 1pt ](1,3)(2.69,2.08)
+\psline[linestyle=dashed,dash=1pt 1pt 3pt 1pt ](2.69,2.08)(3,1)
+\psline[linestyle=dashed,dash=1pt 1pt 3pt 1pt ](3,1)(2.7,-0.05)
+\psline[linestyle=dashed,dash=1pt 1pt 3pt 1pt ](2.7,-0.05)(1,-1)
+\psline[linestyle=dashed,dash=1pt 1pt 3pt 1pt ](1,-1)(-0.74,0.01)
+\psline[linestyle=dashed,dash=1pt 1pt 3pt 1pt ](-0.74,0.01)(-1,1)
+\psline[linestyle=dashed,dash=1pt 1pt 3pt 1pt ](-1,1)(-0.24,2.57)
+\psline(-1,1)(1,-1)
+\psline(1,1)(3,1)
+\parametricplot{3.1415926535897922}{3.6567791053055263}{1*1.18*cos(t)+0*1.18*sin(t)+1|0*1.18*cos(t)+1*1.18*sin(t)+1}
+\parametricplot{2.3561944901923444}{2.6137877160502105}{1*1.52*cos(t)+0*1.52*sin(t)+1|0*1.52*cos(t)+1*1.52*sin(t)+-1}
+\begin{scriptsize}
+\rput[tl](-0.86,0.6){$x$}
+\rput[tl](-0.46,0.11){$y$}
+\rput[tl](-0.14,-0.1){$\varphi $}
+\rput[tl](-0.04,0.9){$2\varphi $}
+\psdots[dotstyle=*](1,1)
+\rput[bl](1.07,1.1){$O$}
+\psdots[dotstyle=*](-1,1)
+\rput[bl](-1.27,0.92){$A$}
+\psdots[dotstyle=*](1,-1)
+\rput[bl](0.98,-1.35){$B$}
+\psdots[dotstyle=*](-0.74,0.01)
+\rput[bl](-0.99,-0.35){$P_1$}
+\psdots[dotstyle=*](3,1)
+\rput[bl](3.07,1.1){$C$}
+\psdots[dotstyle=*](1,3)
+\rput[bl](1.07,3.11){$D$}
+\psdots[dotstyle=*](2.7,-0.05)
+\rput[bl](2.83,-0.25){$P_2$}
+\psdots[dotstyle=*](2.69,2.08)
+\rput[bl](2.74,2.17){$P_3$}
+\psdots[dotstyle=*](-0.24,2.57)
+\rput[bl](-0.58,2.83){$P_4$}
+\end{scriptsize}
+\end{pspicture*}
+\end{center}
+
+Mivel $OA = OC = R = 1$, ezért a Pitagorasz-tétel miatt 
+$AC = \sqrt 2$.
+A $P_1$-et nem tartalmazó $AC$ ívhez $270^\circ$-os középponti szög tartozik, a kerületi és középponti
+szögek összefüggése miatt ezért $AP_1C \sphericalangle  = 135^\circ$. Ugyancsak a kerületi és középponti szögek
+összefüggéséből adódik, hogy ha $P_1CA \sphericalangle  = \varphi$, 
+akkor $P_1OA \sphericalangle  = 2 \varphi$, ahogy azt az ábrán is
+jelöltük.
+
+Felírhatjuk az $AP_1C$ háromszögre a koszinusztételt:
+
+$$
+x^2+y^2-2xy\cdot \cos 135^\circ=AC^2. \leqno{(1)}
+$$
+
+
+
+Tudjuk, hogy $AC = \sqrt 2$ és $\cos 135^\circ  = \frac{\sqrt 2}{2}$, 
+ezért (1)-ből következik, hogy
+
+$$
+x^2+y^2 +\sqrt 2 \cdot  xy = 2. \leqno{(2)}
+$$
+
+A (2) összefüggésből látható, hogy az $x^2$ és $y^2$ számok mindegyike kisebb 2-nél, erre az
+eredményre a megoldás során később lesz szükségünk.
+Az $OAP_1$ háromszögre felírt koszinusztétel miatt 
+$x^2 = 2 - 2 \cdot  \cos 2 \varphi$, amelyből
+
+$$
+\cos 2\varphi=\frac{2-x^2}{2}.\leqno{(3)}
+$$
+
+Egy trigonometriai azonosság szerint $\cos 2 \varphi  = 2 \cdot  \cos^2 \varphi -1$, azaz (3)-ból a műveletek
+elvégzése után
+
+$$
+\cos^2 \varphi  = \frac{4-x^2}{4}.\leqno{(4)}
+$$
+
+Az $AP_1C$ háromszögre ismét felírjuk a koszinusztételt, de most másik oldalra.
+Eszerint $x^2 = y^2+2-2 \cdot y \cdot  \sqrt 2 \cdot  \cos \varphi$,
+ebből $\cos \varphi  = \frac{2+y^2-x^2}{2y\cdot \sqrt 2}$, 
+ebből
+pedig
+négyzetre emeléssel, egyszerűsítés után:
+
+$$
+\cos^2\varphi = \frac{x^4+y^4-4x^2+4y^2-2x^2y^2+4}{8y^2}.\leqno{(5)}
+$$
+
+
+A (4) és (5) egyenlőségéből
+$\frac{4-x^2}{4}=\frac{x^4+y^4-4x^2+4y^2-2x^2y^2+4}{8y^2}$,
+illetve a műveletek
+elvégzése és rendezés után $(2-x^2)^2+(2-y^2)^2=4$, amelyből
+$$
+\sqrt{\frac{(2-x^2)^2+(2-y^2)^2}{2}}=\sqrt 2 \leqno{(6)}
+$$
+
+következik.
+
+
+Mivel a fentiek szerint az $x^2$ és $y^2$ számok mindegyike kisebb 2-nél, ezért a (6) összefüggés
+bal oldalán éppen a $2-x^2$ és $2-y^2$ pozitív számok négyzetes közepe áll.
+Erről tudjuk, hogy nagyobb, vagy egyenlő a kérdéses számok számtani közepénél, vagyis $\sqrt 2 \ge \frac{4-(x^2+y^2)}{2}$, amelyből
+$$
+x^2+y^2 \ge  4 - 2 \cdot  \sqrt 2.\leqno{(7)}
+$$
+
+
+
+A (7) eredmény azt jelenti, hogy az $AP_1CP_2BP_3DP_4$ nyolcszög 
+$P_1A$ és $P_1C$ oldalai
+négyzetösszegének minimális értéke $4-2 \cdot \sqrt 2$, ezt a minimumot 
+a $P_1A^2+P_1C^2$ összeg akkor
+éri el, ha a négyzetes és a számtani közép tagjai egyenlők, azaz, 
+ha $2-x^2 = 2-y^2$, vagyis, ha
+$PA_1 = x = y = PC_1$.
+
+Ekkor $P_1$ éppen az $AC$ negyedkörív felezőpontja.
+
+Hasonlóképpen látható be, hogy a $P_2C^2+P_2B^2$, 
+$P_3B^2+P_3D^2$ és 
+$P_4D^2+P_4A^2$ összegek
+mindegyikének minimális értéke is $4-2 \cdot \sqrt 2$, ez pedig azt jelenti, hogy az $AP_1CP_2BP_3DP_4$
+nyolcszög oldalai négyzetösszegének minimális értéke 
+$16 - 8 \cdot \sqrt 2$, ez akkor valósul meg, ha a
+$P_1$; $P_2$; $P_3$ és $P_4$ pontok a megfelelő negyedkörívek felezőpontjai.
+
+
+\medskip
+\vonal
+
+
+{\bf 4. feladat:} 
+Az $a_1, a_2, a_3, a_4,\dots, a_{101}, a_{102}$ az $1, 2, 3, 4,\dots, 101, 102$ számok egy
+tetszőleges sorbaállítása. Igazoljuk, hogy az $a_1+1, a_2+2, a_3+3, a_4+4,\dots, a_{101}+101, a_{102}+102$
+számok közt lesz két olyan, amelyek 102-vel osztva azonos maradékot adnak!
+
+\ki{Balázsi Borbála }{Beregszász}\medskip
+
+{\bf Megoldás:} Tegyük fel, hogy $a_1, a_2,\ldots, a_{102}$ ellenpélda az állításra. 102-vel osztva egy egész
+számot 102-féle maradékot kaphatunk. Ha a 102 darab $a_i+i$ számunk közt nincs kettő
+ugyanazzal a maradékkal, akkor az csak úgy lehet, hogy mindegyik maradék pontosan
+egyszer fordul elő. Tehát az $a_i+i$ számaink összege ugyanazt adja maradékul 102-vel osztva,
+mint $0+1+2+3+\ldots+101=51\cdot 101$. Számaink összege
+
+\begin{eqnarray*}
+(a_1+1)+(a_2+2)+\ldots+(a_{102}+102)&=&
+(a_1+a_2+\ldots+a_{102})+(1+2+\ldots+102) =\cr
+&=& 2(1+2+\ldots+102)= 102 \cdot 103,
+\end{eqnarray*}
+
+hiszen az $a_i$-k is 1-től 102-ig az egészek, csak esetleg más sorrendben. Tehát számaink
+összege osztható 102-vel, míg $0+1+2+\ldots+101$ nem. Ez ellentmondás, ami az állítást igazolja.
+
+
+\medskip
+\vonal
+
+
+{\bf 5. feladat:} 
+Egy $ABCD$ négyzet alakú papír $A$ csúcsát a $BC$ oldal egy $X$ belső pontjához
+mozgatjuk és a papírlapot behajtjuk. A behajtott $AD$ oldal az ábrán látható módon a $C$
+csúcsnál levág egy $XEC$ háromszöget. Hogyan válasszuk meg az $X$ pontot ahhoz, hogy a
+levágott háromszög beírt körének sugara a lehető legnagyobb legyen?
+
+\centerline{\psset{xunit=0.4cm,yunit=0.4cm,algebraic=true,dotstyle=o,dotsize=3pt 0,linewidth=0.8pt,arrowsize=3pt 2,arrowinset=0.25}
+\begin{pspicture*}(1.27,-3.63)(12.71,6.54)
+\psline(2.98,-3)(11.1,-3)
+\psline(2.98,-3)(2.98,5.12)
+\psline(11.1,5.12)(11.1,-3)
+\psline(2.98,5.12)(11.1,5.12)
+\psline(11.1,0.81)(7.93,-3)
+\psline(4.85,6)(11.1,0.81)
+\psline(4.85,6)(4.12,5.12)
+\psline(4.12,5.12)(7.93,-3)
+\psdots[dotstyle=*](2.98,-3)
+\rput[bl](2,-3.29){$A$}
+\psdots[dotstyle=*](11.1,-3)
+\rput[bl](11.3,-3.14){$B$}
+\psdots[dotstyle=*](2.98,5.12)
+\rput[bl](2.68,5.26){$D$}
+\psdots[dotstyle=*](11.1,5.12)
+\rput[bl](11.2,5.26){$C$}
+\psdots[dotstyle=*](11.1,0.81)
+\rput[bl](11.37,0.68){$X$}
+\psdots[dotstyle=*](5.91,5.12)
+\rput[bl](6,5.26){$E$}
+\end{pspicture*}}
+ 
+\ki{Egyed László }{Baja}\medskip
+
+{\bf Megoldás:} Az $A$ csúcs az $X$ pontba kerül. A hajtás egyenese az $AX$ szakasz felező merőlegese.
+Erről könnyű látni, hogy az $AB$ és $DC$ oldalakat metszi. A metszéspontok legyenek rendre $M$
+és $N$. Legyen $XAB \sphericalangle  = \alpha$.
+
+Az $AMX$ háromszög egyenlőszárú, alapon fekvő szögei $\alpha$  nagyságúak. Az $XMB\sphericalangle$  a
+háromszög egyik külső szöge, nagysága $2\alpha$. Az $EXC\sphericalangle$  és az $XMB\sphericalangle$  merőleges szárú szögek,
+így $EXC\sphericalangle =XMB\sphericalangle =2\alpha$. Legyen $O$ az $EXC$ háromszög beírt körének középpontja. A $CX$ oldal
+a beírt kört érintse az $O'$ pontban. Ekkor az $XOO'$ háromszög egy derékszögű háromszög és
+$X$-nél lévő szöge $EXC\sphericalangle /2= \alpha$. Így hasonló az $ABX$ háromszöghöz.
+
+Legyen 1 a kiinduló négyzet oldala és az $XB$ hosszát jelöljük $x$-szel. Így az $ABX$
+háromszög két befogója 1 és $x$. Ha az $EXC$ háromszög beírt körének sugara $r$, akkor az $OXO'$
+háromszög befogói $1-x-r$ és $r$. A hasonlóság miatt $x:1=r:1-x-r$. Ebből $r$ kifejezhető:
+
+$$
+r=\frac{x-x^2}{1+x}=\frac{(2+x+-x^2)-2}{1+x}
+=2-x-\frac{2}{1+x}=3-\left(1+x+\frac{2}{1+x}\right).
+$$
+
+Ez a sugár akkor lesz a legnagyobb, amikor a 3-ból levont kifejezés a legkisebb. Ez a
+kifejezés egy összeg, amely tagjainak szorzata állandó. A számtani és mértani közép közötti
+egyenlőtlenségből és abban az egyenlőség esetének analíziséből következik, hogy a levont
+kifejezés pontosan akkor a legkisebb, amikor 
+$1+x=\frac{2}{1+x}$, azaz $1+x=\sqrt 2$, $x=-1+\sqrt 2$.
+
+
+\medskip
+\vonal
+
+
+{\bf 6. feladat:} 
+Egy $n$ elemű halmaz három elemű részhalmazaiból kiválasztunk néhányat
+úgy, hogy semelyik három ne tartalmazzon egynél több közös elemet. Igazoljuk, hogy a
+kiválasztott hármasok száma nem haladhatja meg $\displaystyle{\frac {n(n-1)}{3}}$-at!
+
+\ki{Róka Sándor }{Nyíregyháza}\medskip
+
+{\bf Megoldás:} Alaphalmazunk összes kételemű részhalmazára írjuk fel a kiválasztott
+elemhármasok közül azokat, amelyek a két elemű halmazt tartalmazzák.
+Feltételeink szerint egy kételemű halmaz esetén se írhattunk fel három vagy több
+kiválasztott elem-hármast, azaz az $\binom{n}{2}$ elempár mindegyike legfeljebb 2 elem-hármast ad a
+listára. Így listánk legfeljebb $\binom{n}{2}\cdot 2$ hosszú lesz.
+
+Másrészt minden kiválasztott három-elemű részhalmaz háromszor szerepel a listán, a
+három két elemű részhalmaza miatt.
+A kétféle gondolatmenet összevetéséből kapjuk, hogy a kiválasztott részhalmazok
+száma legfeljebb
+$$\frac{\binom{n}{2}\cdot 2}{3}=\frac{n(n-1)}{3}.$$
+
+
+\end{document}

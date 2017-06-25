@@ -1,0 +1,182 @@
+\documentclass[a4paper,10pt]{article} 
+\usepackage[utf8]{inputenc}
+\usepackage{graphicx}
+\usepackage{amssymb}
+\voffset - 20pt
+\hoffset - 35pt
+\textwidth 450pt
+\textheight 650pt 
+\frenchspacing 
+\usepackage[shortlabels]{enumitem}
+
+\pagestyle{empty}
+\def\ki#1#2{\hfill {\it #1 (#2)}\medskip}
+
+
+\def\tg{\, \hbox{tg} \,}
+\def\ctg{\, \hbox{ctg} \,}
+\def\arctg{\, \hbox{arctg} \,}
+\def\arcctg{\, \hbox{arcctg} \,}
+
+\begin{document}
+
+
+\begin{center} \Large {\em XVIII. Nemzetközi Magyar Matematika Verseny} \end{center}
+\begin{center} \large{\em Gyula, 2009. március 12--16. } \end{center}
+\smallskip
+\begin{center} \large{\bf 10. osztály} \end{center}
+\bigskip 
+
+
+{\bf 1. feladat:} Egy háromszög belsejében felvett tetszőleges ponton át a háromszög oldalaival párhuzamosan egyeneseket húzunk. Ezek az egyenesek a háromszög területét 6 részre osztják. A keletkezett háromszögek területeit jelöljük $t_1$, $t_2$ és $t_3$-mal és az eredeti háromszög területét pedig $T$-vel. \\*
+Bizonyítsuk be, hogy $\sqrt{T}=\sqrt{t_1}+\sqrt{t_2}+\sqrt{t_3}$!
+
+\ki{Oláh György}{Komárom}\medskip
+
+{\bf Megoldás: } Legegyszerűbben úgy jutunk célhoz, ha felhasználjuk azt az ismert tételt, mely szerint hasonló háromszögek területeinek négyzetgyökei úgy aránylanak egymáshoz, mint a megfelelő oldalak. Jelölje $a_1$, $a_2$, $a_3$ egy kiszemelt oldalból a megfelelő egyenesekkel kimetszett szakaszok hosszát. Ekkor
+
+\begin{center}
+$\sqrt{t_1}:\sqrt{T}=a_1:(a_1+a_2+a_3)$ \\*
+$\sqrt{t_2}:\sqrt{T}=a_2:(a_1+a_2+a_3)$ \\*
+$\sqrt{t_3}:\sqrt{T}=a_3:(a_1+a_2+a_3)$ \\*
+\end{center}
+
+Összeadva:
+
+\begin{center}
+$\frac{\sqrt{t_1}}{\sqrt{T}}+\frac{\sqrt{t_2}}{\sqrt{T}}+\frac{\sqrt{t_3}}{\sqrt{T}}=\frac{a_1+a_2+a_3}{a_1+a_2+a_3}=1$,
+\end{center}
+
+ahonnan
+
+\begin{center}
+$\sqrt{t_1}+\sqrt{t_2}+\sqrt{t_3}=\sqrt{T}$.
+\end{center}
+\medskip
+\hbox to \hsize{\hskip2truecm\hrulefill\hskip2truecm}
+
+{\bf 2. feladat:} Az $f$ függvény értelmezési tartománya a 0-tól különböző valós számok halmaza. Az értelmezési tartomány minden $x$ elemére teljesül az $f(x)+2f(\frac{1}{x})=3x$ összefüggés. Mely $x$ valós számokra áll fenn az $f(x)=f(-x)$ egyenlőség?
+
+\ki{Kántor Sándorné}{Debrecen}
+
+{\bf Megoldás:} Helyettesítsünk $x$ helyére $\frac{1}{x}$-et! Ekkor $f(\frac{1}{x})=3\cdot \frac{1}{x}-2f(x)$. \\*
+Visszahelyettesítve az eredeti egyenletbe: \\*
+\begin{center}
+$f(x)+2(\frac{3}{x}-2f(x))=3x$, \\*
+\end{center}
+amiből $-3f(x)+\frac{6}{x}=3x$, azaz \\*
+\begin{center}
+$f(x)=\frac{2-x^2}{x}$, $f(-x)=\frac{x^2-2}{x}$.
+\end{center}
+
+A $\frac{2-x^2}{x}=\frac{x^2-2}{x}$ egyenlet megoldásai $x=\pm\sqrt{2}$, amik valóban megoldásak, és ebben az esetben fennáll az $f(x)=f(-x)$ egyenlőség.
+
+\medskip
+\hbox to \hsize{\hskip2truecm\hrulefill\hskip2truecm}
+
+{\bf 3. feladat} Legyen $p\ge3$ egy adott prímszám. Oldjuk meg az egész számok halmazán az
+$$x^3+y^3=x^2y+xy^2+p^2009$$
+egyenletet!
+\ki{Bencze Mihály}{Brassó}
+
+{\bf Megoldás: }
+
+$$x^3+y^3-x^2-xy^2=p^{2009} \Leftrightarrow (x-y)^2(x+y)=p^{2009}$$
+
+Ha $x-y=\pm p^k$, akkor $x+y==p^{2009-2k}$, azaz
+
+
+$$\left\{ 
+  \begin{array}{l l}
+    x= & \frac{p^{2009-2k}+p^k}{2} \\
+    y= & \frac{p^{2009-2k}-p^k}{2}
+  \end{array} \right.
+  \quad
+  \mbox{vagy}
+  \quad
+  \left\{ 
+  \begin{array}{l l}
+    x= & \frac{p^{2009-2k}-p^k}{2} \\
+    y= & \frac{p^{2009-2k}+p^k}{2}
+  \end{array} \right.
+  \quad
+  k\in \{0,1,...,2009\}.
+  $$
+  
+$x, y$ egész, mivel $p^{2009-2k}$, $p^k$ páratlan, így $2|p^{2009-2k}\pm p^k$.
+
+\medskip
+\hbox to \hsize{\hskip2truecm\hrulefill\hskip2truecm}
+{\bf 4. feladat:} Oldjuk meg a pozitív vaqlós számok halmazán a következő egyenletrendszert!
+
+$$\left\{ 
+  \begin{array}{l l}
+    x+y+z=9 \\
+    \frac{1}{x}+\frac{1}{y+1}+\frac{1}{z+3}=\frac{9}{13}
+  \end{array} \right.$$
+
+\ki{Kovács Béla}{Szatmárnémeti}
+
+{\bf Megoldás:}
+
+Az első egyenlet: $x+y+1+z+3=13$ alakban írható. \*
+A két egyenletet összeszorozva, a számtani és a harmonikus középarányosok közötti egyenlőtlenség alapján:
+
+$$9=(x+y+1+z+3)(\frac{1}{x}+\frac{1}{y+1}+\frac{1}{z+3}\ge 9.$$
+  
+Egyenlőség csak egyenlő számok esetén lehet.
+
+Következik: $x=y+1=z+3=\frac{13}{3}$.
+
+Megoldás: $(\frac{13}{3}, \frac{10}{3}, \frac43)$, ami az egyetlen pozitív megoldás.
+
+\medskip
+\hbox to \hsize{\hskip2truecm\hrulefill\hskip2truecm}
+{\bf 5. feladat:} Jelölje $H$ az $ABC$ háromszög magasságpontját, $O$ pedig a köré írt körének középpontját. Az $A$ csúcsból a $BC$ egyenesre bocsájtott merőleges talppontja rajta van az $AC$ oldal felező merőlegesén. Határozzuk meg a $\frac{CH}{BO}$ arányt!
+
+\ki{R. Sipos Elvira} {Zenta}
+
+{\bf Megoldás:}
+
+1. eset: Tegyük fel, hogy $\gamma<90^{\circ}$. Legyen $A'$ az $A$ csúcs merőleges vetülete a $BC$ oldalra, $B_1$ az $AC$ oldal felezőpontja, $C_1$ pedig az $AB$ oldal felezőpontja. A feladat feltételei alapján $AA'C$ háromszög derékszögű, miközben $A'$ illeszkedik az $AC$szakasz szimmetriatengelyére, vagyis egyenlőszárú is egyben. Tehát $BCA\angle=45^{\circ}$. Ezért a neki megfelelő középponti szög $BOA\angle=90^{\circ}$.
+
+Az $AOB$ háromszög derékszögű és egyenlő szárő ($AO=BO=R$: a körülírt kör sugara), vagyis $BOC_1\angle=45^{\circ}$, azaz $C_1O$ és $BO$ az egyenlő szárú derékszögű háromszög befogója és átfogója, azaz $\sqrt{2}CO_1=OB$.
+
+2. eset: Ha $\gamma=90^{\circ}$, akkor hasonlóan az előzőkhöz $\gamma=135^{\circ}$, így is $BOA\angle=90^{\circ}$, tehát $BOC_1\angle=45^{\circ}$, így $BO=\sqrt{2}\cdot OC_1$ fennáll akkor is.
+
+%TRIANGLE?????????????????
+Ha $O$-ból a $CB$ oldalra merőlegest bocsájtunk és a talppontját $C_2$-vel jelöljük, akkor a $C_1OC_2\triangle$ hasonló a $HCA\triangle$-höz, a hasonlósági arány $1:2$, így $CH=2OC_1$, vagyis $\frac{CH}{BO}=2\cdot\frac{C_1O}{BO}=2\cdot \frac{1}{\sqrt{2}}=\sqrt2$
+
+\medskip
+\hbox to \hsize{\hskip2truecm\hrulefill\hskip2truecm}
+
+{\bf 6. feladat:} Legalább hány számot kell kihúznunk az $1, 2, 3, ..., 2009$ számok közül ahhoz, hogy a megmaradó számok egyike se legyen két másik, tőle különböző megmaradó szám szorzata?
+
+\ki{Katz Sándor}{Bonyhád}
+
+{\bf Megoldás:}
+
+I.: A $2, 3, ..., 44$ számokat elegendő kihúzni. \\*
+$45\cdot 46=2070$, ezért a megmaradók szorzata nem lehet a megmaradók között.
+
+II.: 43-náől kevesebb szám nem elég.
+Képezzük a következő számhármast:
+
+$$(2, 87, 2\cdot 87), (3, 86, 3\cdot 86), ..., (44, 45, 44\cdot 45),$$ \\*
+ahol $45, 46, .. 87$ a legkisebb 43 db egytől különböző megmaradó szám. \\*
+Ezek mind különböző számok, mert az első és második elemek növekvő, ill. csökkenő sorozatot alkoznak. A harmadik elemek is növekvő sorozatot adnak, mert $44<45$ és ha $x<y$ , akkor
+
+$$(x-1)(y-1)<xy$$
+$$xy-y+x-1<xy$$
+$$x<y+1$$
+valóban igaz.
+
+Ha csak 43-nál kevesebbet húzok ki, akkor valamelyik háőrmas együtt a megmaradók közt lest olyan 2 szám, melyek szorzata is a megmaradók közt lesz.
+
+Tehát legalább 43 számot ki kell húzni.
+
+{\bf Megjegyzés:} $1, 2, ..., 43$ számokat kihúzva a $44\cdot 45=1980$ miatt $44, 45, 1980$ is a megmaradók közt lenne.
+
+\vfill
+
+\end{document}
