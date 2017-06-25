@@ -1,0 +1,377 @@
+\documentclass[a4paper,10pt]{article} 
+\usepackage[utf8]{inputenc}
+\usepackage[a4paper]{geometry}
+\usepackage[magyar]{babel}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{graphics}
+\frenchspacing 
+\pagestyle{empty}
+\newcommand{\ki}[2]{\hfill {\it #1 (#2)}\medskip}
+\newcommand{\vonal}{\hbox to \hsize{\hskip2truecm\hrulefill\hskip2truecm}}
+\newcommand{\degre}{\ensuremath{^\circ}}
+\newcommand{\tg}{\mathop{\mathrm{tg}}\nolimits}
+\newcommand{\ctg}{\mathop{\mathrm{ctg}}\nolimits}
+\newcommand{\arc}{\mathop{\mathrm{arc}}\nolimits}
+\begin{document}
+\begin{center} \Large {\em 25. Nemzetközi Magyar Matematika Verseny} \end{center}
+\begin{center} \large{\em Budapest, 2016. március 11-15.} \end{center}
+\smallskip
+\begin{center} \large{\bf 12. osztály} \end{center}
+\bigskip 
+
+{\bf 1. feladat: } Az $ABC$ szabályos háromszög köré írt körön a rövidebb $AB$ íven
+kijelölünk egy $M$ pontot. Bizonyítsa be, hogy $AB^2\ge 3\cdot AM\cdot MB$.
+
+\ki{Olosz Ferenc}{Szatmárnémeti}\medskip
+
+{\bf 1. megoldás: } Használjuk az ábra jelöléseit.
+
+\begin{center}
+\includegraphics{12-1_1-eps-converted-to.pdf}
+\end{center}
+
+\noindent Fejezzük ki $AB^2$-et az $ABM$ háromszögből a koszinusztétellel: 
+\[AB^2=AM^2+MB^2-2\cdot AM\cdot MB\cdot\cos \mu,\]
+ahol $\mu$ jelöli az $AMB$ szöget.
+
+\smallskip
+
+\noindent Mivel az $AMBC$ négyszög húrnégyszög, és az $ACB$ szög
+60 fokos, ezért $\mu=120^\circ$, és így $\cos\mu=-1/2$.
+
+\smallskip
+
+\noindent Innen $AB^2=AM^2+MB^2+AM\cdot MB$. 
+
+\smallskip
+
+\noindent A jobb oldalt átalakítjuk: 
+\[AB^2=AM^2+MB^2+AM\cdot MB=(AM-MB)^2+3\cdot AM\cdot MB.\]
+
+\noindent Mivel $(AM-MB)^2\ge 0$, innen a kívánt $AB^2\ge 3\cdot AM\cdot MB$ egyenlőtlenség
+adódik.
+
+\medskip
+
+\emph{Megjegyzés}: Az utolsó rész helyettesíthető a négyzetes
+és a mértani közép közötti  
+$\displaystyle \sqrt{\frac{AM^2+MB^2}2}\ge \sqrt{AM\cdot MB}$ 
+egyenlőtlenségre történő hivatkozással is.
+
+\medskip
+
+{\bf 2. megoldás: } Használjuk az előző megoldás ábráját. Legyen a körülírt kör sugara $r$, középpontja $O$, és fejezzük ki az $AM, MB,
+ AB$ szakaszok hosszát $r$ és a $2\delta=AOM$, $2\varepsilon=MOB$, valamint $AOB$
+ szögek segítségével. 
+
+\smallskip
+
+\noindent Az $AOB$ szög 120 fokos, és így $\delta+\varepsilon=60^\circ$.
+
+\smallskip
+
+\noindent Az $AOM, MOB$ és $AOB$ egyenlő szárú háromszögekből
+\[AM=2r\sin\delta,\quad MB=2r\sin\varepsilon,\quad AB=2r\sin 60^\circ=r\sqrt
+3.\]
+
+
+\noindent A bizonyítandó egyenlőtlenség ennek megfelelően
+\[3r^2\ge 3\cdot4\cdot r^2\sin\delta\cdot\sin\varepsilon,\quad\text{ azaz }\quad {\frac14}\ge \sin\delta\cdot\sin\varepsilon.\]
+
+\noindent Az ismert trigonometrikus összefüggés alapján
+\[\sin\delta\cdot\sin\varepsilon=\frac{\cos(\delta-\varepsilon)-\cos(\delta+\varepsilon)
+}2.\]
+
+
+\noindent A jobb oldalt tovább alakítva, majd felülről becsülve a bizonyítandó egyenlőtlenséget kapjuk:
+\[\sin\delta\cdot\sin\varepsilon=\frac{\cos(\delta-\varepsilon)-\cos 60^\circ}2\le \frac{1-\frac12}2=\frac14.\]
+
+
+\medskip
+
+{\bf 3. megoldás:} Használjuk az ábra jelöléseit.
+
+\begin{center}
+\includegraphics{12-1_2-eps-converted-to.pdf}
+\end{center}
+
+\noindent Hosszabbítsuk meg az $MB$ szakaszt $M$-en túl $MA$ hosszúsággal, így az $A'$
+pontot kapjuk. Mivel az $AMB$ szög 120 fokos, ezért az $AMA'$ szög 60 fokos,
+tehát $AM\MathBrk{=}A'M$ miatt az $AMA'$ háromszög szabályos, és így az $AA'B$ szög is
+60 fokos. 
+
+\smallskip
+
+\noindent Ez azt jelenti, hogy $A'$ rajta van az $AB$ fölé írt (másik) $60^\circ$-os
+látóköríven. 
+
+\smallskip
+
+\noindent Ez az $ACB$ ív tükörképe, sugara tehát szintén $r$. 
+
+\smallskip
+
+\noindent Ez utóbbi kör középpontját jelölje $O'$, az $O'M$ egyenes (illetve $O'=M$
+esetén, tetszőleges átmérő) messe ezt a kört az
+$X$ és $Y$ pontokban. Mivel az $M$ ponton át húzott szelőkön a szelődarabok szorzata állandó, ezért
+\[AM\cdot MB=A'M\cdot MB=XM\cdot MY=(r-d)(r+d)=r^2-d^2\le r^2,\]
+ahol $d$ az $O'$ és $M$ pontok távolsága.
+
+\smallskip
+
+\noindent Mivel $r^2=AB^2/3$, az előző egyenlőtlenségből a kívánt $3\cdot
+AM\cdot MB\le AB^2$ összefüggés adódik.
+
+\vonal
+
+{\bf 2. feladat: } Az ötös lottón 5 számot kell megjelölni az
+$1,2,\dots,90$ számok közül. Peti egy olyan szelvénnyel játszik, amelyen az 5
+megjelölt számban  az $1,2,\dots,9$ számjegyek mindegyike pontosan egyszer
+szerepel, és a 0 számjegy nem fordul elő. Petinek szól a barátja, hogy
+az aznapi sorsoláson ilyen 5 számot húztak ki, de magukról a kihúzott
+számokról nem tud semmit sem mondani. Mi a valószínűsége annak, hogy
+Petinek legalább 4 találata van?
+
+\ki{Remeténé Orvos Viola}{Debrecen}\medskip
+
+{\bf Megoldás:} Határozzuk meg az ilyen típusú húzások számát. 
+Az öt kihúzott
+számból egy egyjegyű, a többi kétjegyű. 
+
+\medskip
+\noindent
+Ha az egyjegyű szám a 9-es, akkor
+a kétjegyűeket egymás után leírva egy 8 különböző számjegyből álló 
+számsorozatot kapunk, ez $8!$-féle lehet. 
+
+\medskip
+\noindent
+Ha az egyjegyű szám nem a 9-es, akkor 8-féle lehet, a 9-es pedig csak a
+kétjegyűek egyes helyiértékénél szerepelhet, vagyis 4 helyen, a maradék 7
+számjegy $7!$-féleképpen tehető le, ez összesen $8\cdot4\cdot7!=4\cdot8!$ 
+lehetőség. 
+
+\medskip
+\noindent
+Mivel a kétjegyű számok egymás közötti sorrendje nem számít, ezért a fent
+kapott két szám összegét $4!$-sal osztani kell. 
+
+\medskip
+\noindent
+Innen a lehetséges húzások száma $\displaystyle \frac{8!+4\cdot8!}{4!}=\frac{5\cdot8!}{4!}(=8400)$, tehát $\displaystyle \frac{4!}{5\cdot 8!}$ annak a valószínűsége, hogy
+Petinek 5 találata van.
+
+\medskip
+\noindent
+Ha Peti egyjegyű száma a 9-es, akkor 4 találat úgy lehetséges, hogy Peti 
+egyik kétjegyű száma helyett annak ,,fordítottját'' húzták ki (tehát a két 
+számjegyet felcserélték), ez négyféleképpen valósulhat meg.
+
+
+\medskip
+\noindent
+Emiatt ekkor a 4 találat 4-szer olyan valószínű, mint a telitalálat, 
+vagyis a legalább 4 találat valószínűsége $\displaystyle
+\frac{5\cdot4!}{5\cdot8!}=\frac{1}{5\cdot6\cdot7\cdot8}=\frac{1}{1680}$. 
+
+
+\medskip
+\noindent
+Ha Petinél valamelyik kétjegyű számban szerepel a 9-es, akkor 4 találat úgy 
+lehetséges, hogy Peti valamelyik másik kétjegyű száma helyett annak 
+,,fordítottját'' húzták ki (tehát a két számjegyet felcserélték), ez
+háromféleképpen valósulhat meg. 
+
+
+\medskip
+\noindent
+Emiatt ekkor a 4 találat 3-szor olyan valószínű, mint a telitalálat, 
+vagyis a legalább 4 találat valószínűsége $\displaystyle
+\frac{4\cdot4!}{5\cdot8!}=\frac{1}{5\cdot6\cdot7\cdot10}=\frac{1}{2100}$. 
+
+
+\medskip
+\noindent \emph{Megjegyzés:} Ha a feladatot úgy értelmezzük, hogy anélkül kell megmondani a
+valószínűséget, hogy tudnánk, hol van Petinél a 9-es, akkor a teljes valószínűség tétele alapján az imént kiszámolt
+két valószínűség súlyozott átlagát kell vennünk aszerint, hogy a kétféle
+feltétel bekövetkezésének mi a valószínűsége. A levezetés alapján ez az
+arány $1:4$, tehát a kérdéses valószínűség  $\displaystyle
+\frac{1}{5}\cdot\frac{5\cdot4!}{5\cdot8!}+\frac{4}{5}\cdot
+\frac{4\cdot4!}{5\cdot8!}=\frac{1}{2000}$.
+
+\vonal
+
+{\bf 3. feladat: } Igazolja, hogy
+$1992\cdot2012\cdot2016\cdot2022\cdot2042+5^6$ összetett szám.
+
+\ki{Kovács Béla}{Szatmárnémeti}\medskip
+
+{\bf Megoldás:} Írjuk át az összeg első tagját képező
+öttényezős szorzatot a következő alakba:
+\[(2017-25)(2017-5)(2017-1)(2017+5)(2017+25).\]
+
+\noindent A beszorzásokat elvégezve minden tag osztható lesz $2017$-tel, kivéve a
+\[(-25)\cdot(-5)\cdot(-1)\cdot5\cdot25=-5^6\] 
+tagot.
+
+\smallskip
+
+\noindent Ennek alapján az eredményhez $5^6$-t hozzáadva egy $2017$-tel osztható (és
+$2017$-nél nagyobb) számot kapunk, ami emiatt szükségképpen összetett.
+
+\vonal
+
+{\bf 4. feladat: } Igazolja, hogy ha a $P$ polinom minden együtthatója nemnegatív valós szám, akkor $x>0$ esetén $P(x)P(\frac1x)\geq (P(1))^2$.
+
+\ki{Keke\v{n}ák Szilvia}{Kassa}\medskip
+
+{\bf Megoldás: }
+Legyen $P(x)=a_nx^n+a_{n-1}x^{n-1}+\ldots+a_1x+a_0$, ahol $a_k\geq0$ minden $k$-ra. Ekkor
+\[P(x)P\left(\frac1x\right)=\sum_{k=0}^na_kx^k\cdot\sum_{\ell=0}^n\frac{a_\ell}{x^\ell}.\]
+
+\noindent A szorzás elvégzése során $a_ka_\ell x^{k-\ell}$ alakú tagok keletkeznek, ahol $k,\ell=0,\ldots,n$. Ha $k=\ell$, akkor ebből $a_k^2$ adódik, különben pedig a $k, \ell$ indexek cseréjével párba állíthatunk tagokat. Így
+\[P(x)P\left(\frac1x\right)=\sum_{k=0}^na_k^2+\sum_{0\leq \ell<k\leq n}a_ka_\ell\left(x^{k-\ell}+\frac1{x^{k-\ell}}\right).\]
+
+\noindent A számtani és mértani közepek közötti egyenlőtlenség alapján pozitív $x$-ekre
+\[x^{k-\ell}+\frac1{x^{k-\ell}}\geq2\sqrt{x^{k-\ell}\cdot \frac1{x^{k-\ell}}}=2.\]
+
+\noindent Ebből az együthatók nemnegativitásának felhasználásával kapjuk, hogy $x>0$ esetén
+\[P(x)P\left(\frac1x\right)\geq\sum_{k=0}^na_k^2+2\cdot\sum_{0\leq \ell<k\leq n}a_ka_\ell=\left(\sum_{k=0}^na_k\right)^2=(P(1))^2.\]
+
+\medskip
+
+\emph{Megjegyzés:} A számtani és mértani közepek egyenlőtlenségére való hivatkozás helyettesíthető azzal, hogy egy pozitív szám és reciprokának összege legalább $2$.
+
+\vonal
+
+{\bf 5. feladat: } Egy konvex négyszög oldalainak és átlóinak
+hossza racionális szám. Mutassa meg, hogy az átlókat a metszéspontjuk
+racionális hosszúságú szakaszokra osztja.
+
+\ki{Tóth Sándor}{Kisvárda}\medskip
+
+{\bf Megoldás:}  Az ábra jelöléseit használjuk: az $ABCD$ négyszögben
+az átlók metszéspontja $M$, az $ABM$, $CBM$, $CBA$ és $AMB$ szögek rendre
+$\beta_1$, $\beta_2$, $\beta$, illetve $\varepsilon$. Az $AM$ szakaszról látjuk
+be, hogy a hossza racionális szám, a többi ugyanígy igazolható.
+
+\begin{center}
+\includegraphics{12-5-eps-converted-to.pdf}
+\end{center}
+
+\noindent Mivel $AC=AM+MC$ hossza racionális, elég az $AM/MC$ arányról megmutatni, hogy
+racionális. 
+
+\smallskip
+
+\noindent Az $ABM$ és $CBM$ háromszögekre felírjuk a szinusztételt:
+\[\frac{AM}{AB}=\frac{\sin\beta_1}{\sin\varepsilon};\qquad \frac{MC}{
+BC}=\frac{\sin\beta_2}{\sin(180^\circ-\varepsilon)}.\]
+
+\smallskip
+
+\noindent A két egyenlőséget elosztva, rendezve, és felhasználva, hogy
+$\sin\varepsilon=\sin(180^\circ-\varepsilon)$, kapjuk, hogy
+\[\frac{AM}{MC}=\frac{AB}{BC}\cdot\frac{\sin\beta_1}{\sin\beta_2}.\]
+
+\smallskip
+
+\noindent Mivel $\displaystyle\frac{AB}{BC}$ racionális, ezért elég igazolni, hogy
+$\displaystyle\frac{\sin\beta_1}{\sin\beta_2}$ racionális.
+
+\smallskip
+
+\noindent Az $ABC$, $ABD$ és $BCD$ racionális oldalú háromszögekre felírva a
+koszinusztételt kapjuk, hogy $\cos\beta$, $\cos\beta_1$ és $\cos\beta_2$ is racionális.  
+
+\smallskip
+
+\noindent Felhasználva, hogy
+$\cos\beta=\cos(\beta_1+\beta_2)=
+\cos\beta_1\cos\beta_2-\sin\beta_1\sin\beta_2$, innen adódik, hogy
+$\sin\beta_1\sin\beta_2$ is racionális.
+
+\smallskip
+
+\noindent Továbbá $\sin^2\beta_2=1-\cos^2\beta_2$ is racionális.
+
+
+\smallskip
+
+\noindent Ezért
+$\displaystyle\frac{\sin\beta_1}{\sin\beta_2}=\frac{\sin\beta_1\sin\beta_2}{\sin^2\beta_2}$
+is racionális, és ezt kellett bizonyítani.
+
+\vonal
+
+{\bf 6. feladat: } Oldja meg az $x^3+2=5\sqrt[3]{5x-2}$ egyenletet a valós számok halmazán.
+
+\ki{Bíró Béla}{Sepsiszentgyörgy}\medskip
+
+{\bf 1.~megoldás:} Vezessük be az $y=\sqrt[3]{5x-2}$ segédismeretlent. Ekkor egyrészt $y^3+2\MathBrk{=}5x$, másrészt pedig a feladatban szereplő egyenlet az $x^3+2=5y$ alakot ölti, vagyis az alábbi egyenletrendszerhez jutunk:
+\[\left\{\begin{aligned}x^3+2&=5y,\\y^3+2&=5x.\end{aligned}\right.\]
+
+\noindent Az iménti két egyenletet egymásból kivonva $x^3-y^3=5(y-x)$ adódik, amit az $x^3-y^3\MathBrk{=}(x-y)(x^2+xy+y^2)$ nevezetes azonosság segítségével alakíthatunk tovább:
+\[(x-y)(x^2+xy+y^2+5)=0.\]
+
+\noindent Itt a szorzat második tényezője nem lehet 0, hiszen
+\[x^2+xy+y^2+5=\left(x+\frac12y\right)^2+\frac34y^2+5>0,\]
+ezért szükségképpen $x=y$. 
+
+\smallskip
+
+\noindent Az eredeti egyenletnek tehát csak olyan $x$ megoldásai lehetnek, amelyekre $x\MathBrk{=}\sqrt[3]{5x-2}$, azaz $x^3-5x+2=0$, és mivel ebben az esetben $x^3+2=5x=5\sqrt[3]{x-2}$, ezért pontosan az ilyen tulajdonságú $x$-ek a megoldásai. (Ezt a pontot akkor is megkapja a versenyző, ha a megoldás végén ellenőriz.)
+
+
+\smallskip
+
+\noindent Az $x^3-5x+2=0$ egyenletnek az $x=2$ gyöke. 
+
+
+\smallskip
+
+\noindent Ennek ismeretében
+\[0=x^3-5x+2=(x-2)(x^2+2x-1),\]
+ahonnan három valós gyököt kapunk: $2, -1+\sqrt{2}$ és $-1-\sqrt{2}$.
+
+\medskip
+
+\emph{Megjegyzés:} Az $x^3-y^3=5(y-x)$ egyenletet átrendezhetjük $x^3+5x=y^3+5y$ alakba is, és ekkor a $g(x)=x^3+5x$ függvény bevezetésével arról van szó, hogy $g(x)=g(y)$. Mivel $g$ két szigorúan monoton növő függvény összege, ezért maga is szigorúan monoton növő (ezt abból is láthatjuk, hogy $g'(x)=3x^2+5>0$), így szükségképpen $x=y$.
+
+\medskip
+\noindent A 6.~feladat kitűzésénél a gyökjel alatt az $x$ mellől lemaradt az 5-ös
+szorzó. Tehát a bizottság szándéka szerint az $x^3+2=5\root\scriptstyle
+3\of{5x-2}$ egyenlet megoldása lett volna a cél, a kötetben leírt megoldások
+is erre vonatkoznak. Sajnos, az így hibásan kitűzött feladat gyökeinek a
+megkeresésére nem is tudunk egzakt módszert. Ezt figyelembe véve a javítás
+az alábbi pontozást követte: Az egyenlet két oldalán szereplő
+függvények helyes grafikonja: 2--2 pont; ennek alapján csak egy gyök van: 2
+pont; ez $-3$ és $-2$ közé esik: 3 pont (+1 pont)=10 pont. Másik lehetőség:
+Az $y=\root\scriptstyle 3\of{x-2}$ segédismeretlen bevezetésével az
+$f(x)=x^3+2$ és $f^{-1}$ függvények kapcsolatának felírása: 3 pont; csak
+egy gyök létezik 3 pont; ez $-3$ és $-2$ közé esik: 3 pont (+1 pont)=10 pont.
+
+\medskip
+
+{\bf 2.~megoldás:} Vezessük be az $f\colon\mathbb{R}\to\mathbb{R},f(x)=(x^3+2)/5$ függvényt. Az $x^3$ függvény szigorúan monoton növekedő, ezért $f$ is az, tehát injektív. Az $y\MathBrk{=}(x^3+2)/5$ egyenletből $x$-et kifejezve nyerjük, hogy $f^{-1}(y)=\sqrt[3]{5y-2}$. 
+
+\smallskip
+
+\noindent Ebből következően a feladat egyenlete $f(x)=f^{-1}(x)$ alakba írható, ami egyenértékű azzal, hogy $f(f(x))=x$. 
+
+\smallskip
+
+\noindent Ennek pontosan azon $x_0$ számok a megoldásai, amelyekre $f(x_0)=x_0$. Ha ugyanis $f(x_0)\MathBrk{<}x_0$ lenne, akkor $f$ szigorú monoton növekedése folytán $f(f(x_0))=x_0\MathBrk{<}f(x_0)$, ami ellentmondás. Hasonlóan nem lehetséges $f(x_0)>x_0$ sem.
+ 
+\noindent Az eredeti egyenletnek tehát pontosan olyan $x$ megoldásai lehetnek, amelyekre $(x^3+2)/5\MathBrk{=}x$. 
+
+\smallskip
+
+\noindent  Innen az előző részhez hasonlóan fejezhetjük be a megoldást. 
+
+\medskip
+
+\emph{Megjegyzés.} Lényeges, hogy $f$ szigorúan monoton \emph{növekedő}, mert csökkenő esetben általában nem igaz, hogy az $f(x)=f^{-1}(x)$ egyenletnek csak olyan megoldásai lennének, amelyekre $f(x)=x$.
+
+\end{document}

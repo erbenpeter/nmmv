@@ -1,0 +1,296 @@
+\documentclass[a4paper,10pt]{article} 
+\usepackage[utf8]{inputenc}
+\usepackage[a4paper]{geometry}
+\usepackage[magyar]{babel}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{graphics}
+\frenchspacing 
+\pagestyle{empty}
+\newcommand{\ki}[2]{\hfill {\it #1 (#2)}\medskip}
+\newcommand{\vonal}{\hbox to \hsize{\hskip2truecm\hrulefill\hskip2truecm}}
+\newcommand{\degre}{\ensuremath{^\circ}}
+\newcommand{\tg}{\mathop{\mathrm{tg}}\nolimits}
+\newcommand{\ctg}{\mathop{\mathrm{ctg}}\nolimits}
+\newcommand{\arc}{\mathop{\mathrm{arc}}\nolimits}
+\begin{document}
+\begin{center} \Large {\em 25. Nemzetközi Magyar Matematika Verseny} \end{center}
+\begin{center} \large{\em Budapest, 2016. március 11-15.} \end{center}
+\smallskip
+\begin{center} \large{\bf 10. osztály} \end{center}
+\bigskip 
+
+{\bf 1. feladat: } Egy diák megírt már néhány dolgozatot, és az utolsó megírása előtt számolgat: Ha az utolsót $97$ pontosra írom, akkor az átlagom $90$ pont lesz, ha csak $73$ pontra sikerül, akkor $87$ pont lesz az átlagom. Hány dolgozatot írt eddig a diák, és mennyi volt az átlagpontszáma?
+
+\ki{Katz Sándor}{Bonyhád}\medskip
+
+{\bf 1. megoldás: } Ha a diák eddig $x$ dolgozatot írt, és az átlaga $y$ pont, akkor $xy$ pontja van. 
+
+\smallskip
+
+\noindent  Ha az utolsó dolgozatot $97$ pontra írja, akkor az átlaga
+\[
+\frac {xy+97}{x+1} =90,
+\]
+ha $73$ pontra, akkor
+\[
+\frac {xy+73}{x+1} =87.
+\]
+
+\noindent Az egyenleteket rendezve:
+\begin{align} 
+ xy+97&=90x+90\notag\\
+ xy+73&=87x+87.
+\end{align}%
+
+\noindent A két egyenletet kivonjuk egymásból:
+\begin{align}
+ 24&=3x+3\notag\\
+ x&=7.
+\end{align}%
+
+\noindent Így $xy=90x-7=623$, $y=623/7=89$. Tehát a diák eddig $7$ dolgozatot írt és az átlaga $89$ pont volt. 
+
+\smallskip
+
+\noindent Ellenőrzés: A  dolgozatok átlaga  $(623+97)/8=90$ és $(623+73)/8=87$ lehet az utolsó dolgozat megírása után, tehát a megoldás megfelel a feltételeknek.
+
+\medskip
+
+{\bf 2. megoldás: } Ha az utolsó dolgozaton $97$ pont helyett $73$ pontot szerez a diák, akkor az összpontszáma $24$-gyel lesz kevesebb. 
+
+\smallskip
+
+\noindent Az átlag így $90$-ről $87$-re csökken, azaz $3$ ponttal lesz kisebb. Ez  csak úgy lehetséges, ha az átlagot $8$ dolgozatra számoljuk. 
+
+\smallskip
+
+\noindent Tehát eddig $7$ dolgozatot írt a diák. 
+
+\smallskip
+
+\noindent Az utolsó dolgozat írása előtt $90 \cdot 8-97=623$ volt az összpontszáma, az átlaga pedig $623/7=89$ pont.
+
+\smallskip
+\noindent Ellenőrzés: Ha a $623$ ponthoz a $8$.~dolgozattal $73$ pontot szerez a diák, akkor valóban  $(623+73)/8=87$ pont lesz az átlaga.
+
+\vonal
+
+{\bf 2. feladat: } Hányféleképpen lehet sorrendbe állítani a RENDETLENÜL szó betűit úgy, hogy ne álljon két E betű egymás mellett?  (Minden betűt pontosan egyszer használunk fel.)
+
+\ki{Bálint Béla}{Zsolna}\medskip
+
+{\bf 1. megoldás: } Először rendezzük el az E-től különböző betűket,  nyolc betűt, köztük két-két azonosat: R D T Ü N N L L. 
+
+\smallskip
+
+\noindent A $8$ betűt $8!$ féle módon rendezhetjük sorba, de a két N betűt és a két L betűt egymás között felcserélve nem kapunk új esetet (ismétléses permutáció), ezért $\dfrac {8!}{2\cdot 2}$ lehetőségünk van ezeknek a betűknek a sorba rendezéséhez. 
+
+\smallskip
+
+\noindent Az E betűket az így kialakult ``szó'' elé, utána vagy a betűk közé, tehát $9$ helyre tehetjük le. $9$ helyből kell kiválasztanunk $3$-at úgy, hogy a sorrend nem számít. Ez $\displaystyle\binom 9 3$ lehetőség. 
+
+\smallskip
+
+\noindent Ezért $\displaystyle\frac {8!}{4} \cdot \binom 9 3 =10\ 080 \cdot 84=846\ 720$ esetet kapunk.
+
+\emph{Megjegyzés:} A végeredményt elfogadjuk $\displaystyle\frac {8!}{4} \cdot \binom 9 3$ alakban, a maximális pontszámot a tanuló akkor is megkapja, ha nem számolja ki ennek az értékét.
+
+\medskip
+
+{\bf 2. megoldás: } A RENDETLENÜL szó $11$ betűből áll, ezek között van három E betű, két N betű és két L betű. 
+A $11$ betűt $11!$ féle módon rendezhetjük sorba, a három E betűt, a két N betűt és a két L betűt egymás között felcserélve nem kapunk új esetet (ismétléses permutáció), ezért $\displaystyle\frac {11!}{3! \cdot  2\cdot 2}$ lehetőségünk van ezeknek a betűknek a sorba rendezéséhez.
+
+\smallskip
+
+\noindent Ezek között azok az esetek, amelyekben egymás mellett szerepelnek E betűk, számunkra rosszak, amelyeket le fogunk vonni. Ha két E betű szerepel egymás mellett, akkor tekintsük ezeket egy karakternek, a harmadik E betűt pedig egy szimpla jelnek.
+
+\smallskip
+
+\noindent Most $10$ karaktert rendezünk sorba, köztük kettő-kettő azonos. Ilyen eset $\dfrac {10!}{2\cdot 2}$ van.
+
+
+\noindent Ha három E betű szomszédos, akkor előbb az ilyen eseteket kétszer számoltuk, tehát ezek számát majd vissza kell adnunk. 
+
+\smallskip
+
+\noindent Legyen most  EEE  egyetlen jel, ilyen eset $\dfrac {9!}{2\cdot 2}$ van.
+
+\smallskip
+
+\noindent A feladat feltételeinek megfelelő sorbarendezések száma $\displaystyle\frac {11!}{3! \cdot  2\cdot 2}- \frac {10!}{2\cdot 2}+\frac {9!}{2\cdot 2}\MathBrk{=}846\ 720$. 
+
+\smallskip
+
+\emph{Megjegyzés:} A végeredményt elfogadjuk $\displaystyle\frac {11!}{3! \cdot  2\cdot 2}- \frac {10!}{2\cdot 2}+\frac {9!}{2\cdot 2}$ alakban, a maximális pontszámot a tanuló akkor is megkapja, ha nem számolja ki ennek az értékét.
+
+\vonal
+
+{\bf 3. feladat: } Adott a síkban két egymásra merőleges egyenes, $f$ és $g$, valamint a $g$ egyenesen két pont, $A$ és $B$, amelyek egymástól is és a két egyenes metszéspontjától is különböznek. Az $f$ egyenes egy tetszőleges $P$ pontját az adott pontokkal összekötő egyenesekre merőlegeseket állítunk az $A$ és $B$ pontokban. Határozza meg a merőlegesek metszéspontjainak a halmazát, ha $P$ végigfut az $f$ egyenesen.
+
+\ki{Kántor Sándorné}{Debrecen}\medskip
+
+{\bf 1. megoldás: } Jelöljük $O$-val $f$ és $g$ metszéspontját. A feladat szerinti $M$ metszéspont minden olyan esetben előáll, amikor $P\ne O$, hiszen ilyenkor $PA$ és $PB$ nem párhuzamos, és így a rájuk állított merőlegesek sem azok.
+
+\begin{center}
+\includegraphics{10-3-eps-converted-to.pdf}
+\end{center}
+
+\noindent Legyen $T$ az $M$ pont merőleges vetülete a $g$ egyenesen. Ekkor az $ATM$, $BTM$, $PAM$, $PBM$, $POA$ és $POB$ derékszögű háromszögekre a Pitagorasz-tételt fölírva
+\begin{align*}
+AT^2-BT^2 & =  (AM^2-TM^2)-(BM^2-TM^2)= AM^2-BM^2= \\
+& =  (PM^2-PA^2)-(PM^2-PB^2) = PB^2-PA^2= \\
+& =  (PO^2+OB^2)-(PO^2+OA^2) = OB^2-OA^2
+\end{align*}
+adódik, ami nem függ $P$ választásától.
+
+\smallskip
+\noindent Azt állítjuk, hogy a $T$ talppontot az $AT^2-BT^2$ mennyiség egyértelműen meghatározza. Valóban, ha a $g$ egyenes mentén az $O$, $A$, $B$ és $T$ pontot rendre a $0$, $a$, $b$ és $x$ koordináta adja meg, akkor 
+\[b^2-a^2=OB^2-OA^2=AT^2-BT^2=(x-a)^2-(x-b)^2=2(b-a)x+a^2-b^2,\]%
+ahonnan $a\ne b$ miatt $x$ egyértelműen kifejezhető: 
+\[x=\frac{2b^2-2a^2}{2(b-a)}=a+b.\]%
+
+\smallskip
+
+\noindent Az összes $M$ metszéspont ezért a $g$ egyenesre ugyanabban a $T$ pontban állított $h$ merőleges egyenesre illeszkedik. 
+
+\smallskip
+
+\noindent Ez a $T$ pont az $x=a+b$ összefüggés miatt az $O$ pontnak az $AB$ szakasz felezőpontjára vonatkozó tükörképe. 
+
+\smallskip
+
+\noindent A $h$ egyenesen tetszőlegesen kiszemelt $M\ne T$ pontból kiindulva a feladat konstrukcióját $P$ és $M$ szerepcseréjével végrehajtva visszakapjuk $P$-t. Ezért magát a $T$ pontot kivéve a $h$ egyenes minden pontja hozzátartozik a keresett halmazhoz.
+
+\medskip
+
+{\bf 2. megoldás: } Használjuk az 1.~megoldás jelöléseit. Ha $P\ne O$, akkor az $M$ pont előáll,
+valamint az $A$, $B$ pontok a $PM$ átmérőjű körre illeszkednek, hiszen a $PM$ szakasz $A$-ból is és $B$-ből is derékszög alatt látszik. 
+
+\smallskip
+
+\noindent Az $AB$ szakasz ennek a körnek húrja, tehát az azt merőlegesen felező $j$ egyenes áthalad a kör középpontján, vagyis $PM$ felezőpontján. 
+
+\smallskip
+
+\noindent Ezért $M$ rajta van az $f$ egyenes $j$-re vonatkozó tükörképén, a $h$ egyenesen. 
+
+\smallskip
+
+\noindent Az $M$ pont biztosan különbözik $g$ és $h$ metszéspontjától, azaz a $T$ ponttól, hiszen a $g$ egyenesnek a körrel csak két közös pontja ($A$ és $B$) lehet. 
+
+\smallskip
+
+\noindent Megfordítva, ha a $h$ egyenesen kiszemelt $M$ pont különbözik $T$-től, akkor tekintsük az $A$, $B$ és $M$ (nem kollineáris) pontokon áthaladó kört, és annak az $M$-mel átellenes $P$ pontját. Ez a $P$ egyrészt illeszkedik $f$-re, másrészt $P$-ből kiindulva a feladat konstrukciójával $M$-et származtatja. Ezért a $T$ pont kivételével $h$ minden pontja előáll $M$-ként.
+
+\vonal 
+
+
+{\bf 4. feladat: } Legyen az $AB$ átmérőjű $k_1$ kör egy $A$-tól és $B$-től különböző pontja $C$. \mbox{Bocsássunk} merőlegest a $C$ pontból $AB$-re, a merőleges talppontja $T$. A $C$ középpontú, $CT$ sugarú $k_2$ kör a $k_1$ kört a $D$ és $E$ pontokban metszi. A $DE$ és $CT$ szakaszok metszéspontja $M$, a $CA$ és $DE$, valamint a $CB$ és $DE$ szakaszok metszéspontjai rendre $X$ és $Y$. Bizonyítsa be, hogy $MX=MY$.
+
+\ki{Bíró Bálint}{Eger} \medskip
+
+{\bf Megoldás: } Használjuk az ábra jelöléseit.
+
+\begin{center}
+\includegraphics{10-4-eps-converted-to.pdf}
+\end{center}
+
+\noindent Az $AB$ szakasz $O$ felezőpontja a $k_1$ kör középpontja. A $CO$ szakasz a két kör középpontját köti össze, ezért merőleges a közös $DE$ húrra. 
+
+\smallskip
+
+\noindent Thalész tétele miatt az $ABC$ háromszög $C$-nél derékszögű. 
+
+\smallskip
+
+\noindent Az $XYC$ szög és az $OCA$ szög merőleges szárú hegyesszögek, ezért $XYC\sphericalangle \MathBrk{=}OCA\sphericalangle$. Ugyanígy $YXC\sphericalangle =OCB\sphericalangle$. 
+
+\smallskip
+
+\noindent A $CAO$ háromszög egyenlő szárú, ezért $OCA\sphericalangle =CAO\sphericalangle$. Ugyanígy $OCB\sphericalangle \MathBrk{=}OBC\sphericalangle$. 
+
+\smallskip
+
+\noindent A $CAB$ szög és a $BCT$ szög merőleges szárú hegyesszögek, ezért $CAB\sphericalangle =BCT\sphericalangle$. Ugyanígy $ABC\sphericalangle =TCA\sphericalangle$.
+
+\smallskip
+
+\noindent Az egyenlőségeket összevetve $MYC\sphericalangle =MCY\sphericalangle$ és $MXC\sphericalangle =MCX\sphericalangle$ következik, ami azt jelenti, hogy a $CXM$ és a $CYM$ háromszögek egyenlő szárúak. A szárak egyenlősége folytán $MX=MC=MY$.
+
+
+\vonal 
+
+{\bf 5. feladat: } Bizonyítsa be, hogy  $n+1$ darab különböző, $2n$-nél kisebb  pozitív egész szám közül kiválasztható  három különböző úgy, hogy ezek közül kettő összege megegyezzen a harmadikkal.
+
+\ki{Bencze Mihály}{Bukarest}\medskip
+
+{\bf Megoldás: } Legyen az adott $n+1$ szám: $a_1<a_2<\ldots<a_{n+1}$. Képezzük az $a_2-a_1,$ $a_3-a_1, \ldots,a_{n+1}-a_1$ számokat, amelyek különbözőek, pozitívak és kisebbek, mint $2n$. 
+
+\smallskip
+
+\noindent Tekintsük a következő $2n$ darab, $2n$-nél kisebb pozitív egész számot:
+\[ a_2, a_3, \ldots ,a_{n+1}, a_2-a_1, a_3-a_1,\ldots, a_{n+1}-a_1.\]
+
+\noindent A skatulyaelv szerint ezek közül kettő megegyezik.
+
+\smallskip
+
+\noindent A feltételekből következik, hogy az egyik szám az $a_2,a_3,\ldots, a_{n+1}$ számok közül való, a másik pedig az $a_2-a_1, a_3-a_1,\ldots, a_{n+1}-a_1$ számok közül.
+
+\smallskip
+
+\noindent Legyenek ezek $a_k$ és $a_m-a_1$. Ekkor $a_k=a_m-a_1$, azaz teljesül, hogy
+\[a_k+a_1=a_m.\]
+Ezzel a feladat állítását beláttuk.
+
+
+\vonal 
+
+{\bf 6. feladat: } Képezzük az $\{1, 2, 3, \ldots, 2016\}$ halmaz minden nemüres részhalmazát. Az egy részhalmazban lévő számokat  szorozzuk össze  és vegyük a szorzat reciprokát, majd ezeket adjuk össze. (Ha a halmaz egyelemű, akkor egytényezős szorzatnak tekintjük és ennek vesszük a reciprokát.) Mekkora az így kapott összeg?
+
+\ki{Kántor Sándor}{Debrecen}\medskip
+
+{\bf 1. megoldás: } Jelöljük $A_n$-nel az $\{1, 2, \ldots , n\}$ halmaz esetében az így elkészített összeget.
+\begin{gather}
+A_1=1, \qquad A_2=\frac 1 1+\frac 1 2+\frac 1{1 \cdot 2}=2,\notag\\  
+A_3=\frac 1 1+\frac 1 2+\frac 1 3+\frac 1 {1 \cdot 2}+\frac 1 {1 \cdot 3}+\frac 1 {2 \cdot 3}+\frac 1 {1 \cdot 2 \cdot 3}=3.
+\end{gather} 
+
+
+\smallskip
+
+\noindent Az a sejtésünk, hogy minden $n>0$ természetes szám esetén $A_n=n$, így $A_{2016}\MathBrk{=}2016$.  Teljes indukcióval bizonyítjuk állításunkat. 
+
+\smallskip
+
+\noindent A sejtés $n=1$-re igaz. Feltételezzük, hogy $n=k$-ra is teljesül:
+\[A_k=\frac 1 1+\frac 1 2+\frac 1 {1 \cdot 2}+\ldots+\frac1 {1\cdot2\cdot\ldots \cdot k}=k.\]
+
+\smallskip
+
+\noindent Bizonyítjuk az állítást $n=k+1$-re:
+\[A_{k+1}=A_k +\frac 1 {k+1}+A_k \cdot \frac 1 {k+1}.\]
+
+\noindent Felhasználjuk az indukciós feltételt:
+\[A_{k+1}=k +\frac 1 {k+1}+k \cdot \frac 1 {k+1}=k+\frac {k+1}{k+1}=k+1.\]
+
+\noindent Ezzel sejtésünket  beláttuk. Tehát a keresett összeg valóban $2016$.
+
+\medskip 
+
+{\bf 2. megoldás: } Jelöljük $A_n$-nel az $\{1, 2, \ldots , n\}$ halmaz esetében az így elkészített összeget. Ez az összeg egy többtényezős szorzat zárójelfelbontás utáni alakjára emlékeztet.
+
+\smallskip
+
+\noindent Valóban, ha az alábbi szorzatban minden tagot minden taggal szorozva felbontjuk a zárójeleket, akkor az $A_n$-nél $1$-gyel nagyobb számot kapunk:
+\[A_n +1=\left(1+1\right) \left(1+\frac1 2\right) \left(1+\frac 1 3\right) \cdot \ldots \cdot \left(1+\frac 1 n\right).\]
+
+\noindent A zárójeleken belül közös nevezőre hozva:
+\[A_n+1=2\cdot \frac 3 2 \cdot \frac 4 3\cdot \ldots \cdot \frac {n+1} n=n+1,\]
+tehát $A_n=n$. 
+
+\smallskip
+
+\noindent A feladat kérdésére $A_{2016}$ a válasz, amelynek az értéke a fentiek alapján $2016$.
+\end{document}

@@ -1,0 +1,419 @@
+\documentclass[a4paper,10pt]{article} 
+\usepackage[utf8]{inputenc}
+\usepackage[a4paper]{geometry}
+\usepackage[magyar]{babel}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{graphics}
+\frenchspacing 
+\pagestyle{empty}
+\newcommand{\ki}[2]{\hfill {\it #1 (#2)}\medskip}
+\newcommand{\vonal}{\hbox to \hsize{\hskip2truecm\hrulefill\hskip2truecm}}
+\newcommand{\degre}{\ensuremath{^\circ}}
+\newcommand{\tg}{\mathop{\mathrm{tg}}\nolimits}
+\newcommand{\ctg}{\mathop{\mathrm{ctg}}\nolimits}
+\newcommand{\arc}{\mathop{\mathrm{arc}}\nolimits}
+\begin{document}
+\begin{center} \Large {\em 25. Nemzetközi Magyar Matematika Verseny} \end{center}
+\begin{center} \large{\em Budapest, 2016. március 11-15.} \end{center}
+\smallskip
+\begin{center} \large{\bf 9. osztály} \end{center}
+\bigskip 
+
+{\bf 1. feladat: } Nevezzünk egy számot prímösszegűnek, ha a tízes számrendszerben felírt szám számjegyeinek összege prímszám. Legfeljebb hány prímösszegű szám lehet öt egymást követő pozitív egész szám között?
+
+\ki{Róka Sándor}{Nyíregyháza}\medskip
+
+{\bf 1. megoldás: } Az öt szám között van három olyan, amely ugyanabba a tízes blokkba tartozik. 
+
+\smallskip
+
+\noindent Ez a három szám egymástól csak az utolsó számjegyben különbözik, a számjegyösszegeiket kiszámolva tehát három egymást követő számot kapunk.
+
+
+\smallskip
+
+\noindent Három egymást követő szám nem lehet mind prímszám, tehát az ugyanabba a tízes blokkba tartozó három szám nem lehet mind prím. Ezért az öt egymást követő egész szám között legfeljebb négy prímösszegű szám lehet.
+
+
+\smallskip
+
+\noindent Megmutatjuk, hogy létezik öt olyan egymást követő egész szám, amelyek között négy prímösszegű szám van. Ilyenek például: $199, 200, 201, 202, 203$, ahol a számjegyösszegek rendre $19, 2, 3, 4, 5$; vagy $197, 198, 199, 200, 201$, ahol a számjegyösszegek rendre $17, 18, 19, 2, 3$.
+
+\medskip
+
+
+{\bf 2. megoldás: } Egy szám számjegyösszege $3$-mal osztva ugyanannyi maradékot ad, mint maga a szám. 
+Öt egymást követő szám számjegyösszegei között tehát mindig van $3$-mal osztható.
+
+\smallskip
+
+\noindent Ha a 3-mal osztható számjegyösszeg nem prím, akkor legfeljebb négy prímösszegű számunk lehet.
+Mind az öt összeg csak úgy lehet prím, ha a $3$-mal osztható számjegyösszeg a $3$.
+
+\smallskip
+
+\noindent Egy $n$ szám számjegyösszege háromféleképpen lehet $3$: egy $3$-as után valahány $0$; egy $2$-es, egy $1$-es és valahány $0$; vagy három $1$-es és valahány $0$.
+
+\smallskip
+
+\noindent Az $n$ végződése tehát $0, 1, 2$ vagy ($n = 3$ esetén) $3$. 
+
+\noindent Ezért $n+1$ számjegyösszege mindegyik esetben $4$ (hiszen nem történik tízes átlépés), vagyis nem prím. Mind az öt összeg csak úgy lehet prím, ha $n$ az ötödik helyen álló szám.
+
+\smallskip
+
+\noindent Az ötödik helyen álló $n$ szám nem lehet a $3$, mert akkor a számok között negatív számok is lennének.
+
+\noindent Minden más esetben $n$ legalább kétjegyű. A hárommal osztható $n-3$ szám végződése $7$, $8$ vagy $9$, számjegyeinek összege nem lehet $3$, ezért nem prím.\hfill (2~pont)%
+
+\smallskip
+
+\noindent Megmutatjuk, hogy létezik öt olyan egymást követő egész szám, amelyek között négy prímösszegű szám van.
+Ilyenek például: $199$, $200$, $201$, $202$, $203$, ahol a számjegyösszegek rendre $19$, $2$, $3$, $4$, $5$; vagy $197$, $198$, $199$, $200$, $201$, ahol a számjegyösszegek rendre $17$, $18$, $19$, $2$, $3$.\hfill (2~pont)%
+
+\medskip
+
+{\bf 3. megoldás: } Két egymást követő szám számjegyösszege tízes átlépéskor lehet azonos paritású (pl. $9$, $10$ vagy $19$, $20$), máskor mindig különböző, mert csak az utolsó számjegy különbözik $1$-gyel.
+Öt egymást követő szám számjegyösszegei között ezért mindig van legalább két páros.
+
+\smallskip
+
+\noindent Ez a két páros szám csak úgy lehetne egyaránt prím, ha mindegyikük $2$.
+Egy $n$ szám jegyeinek összege kétféleképpen lehet $2$: 
+egy $2$-es után valahány $0$; vagy két $1$-es és valahány $0$.
+
+\smallskip
+
+\noindent A szám végződése tehát $0, 1$ vagy ($n = 2$ esetén) $2$.
+
+\noindent Ha $n = 2$, akkor az $n + 2 = 4$ is a számok között van, amely nem prím.
+
+\noindent Minden más esetben az $n+1$-től $n+4$-ig terjedő számok számjegyösszege nagyobb, mint az $n$ számjegyösszege. Az $n-4$-től $n-1$-ig terjedő számoknak vagy $1$ a számjegyösszege, vagy pedig jegyeik között van $6$, $7$, $8$ vagy $9$, egyik esetben sem lehet az összeg $2$. 
+
+\noindent Nincs tehát $n-4$-től $n + 4$-ig más olyan szám, amelyben a számjegyösszeg 2.
+
+\noindent Ezért az öt egymást követő egész szám között legfeljebb négy prímösszegű szám lehet.
+
+\smallskip
+
+\noindent Megmutatjuk, hogy létezik öt olyan egymást követő egész szám, amelyek között négy prímösszegű szám van.
+Ilyenek például: $199$, $200$, $201$, $202$, $203$, ahol a számjegyösszegek rendre $19$, $2$, $3$, $4$, $5$; vagy $197$, $198$, $199$, $200$, $201$, ahol a számjegyösszegek rendre $17$, $18$, $19$, $2$, $3$.
+
+\vonal
+
+{\bf 2. feladat: } Melyek azok az $x$ egész számok, amelyekre $x^2+3x+24$ négyzetszám?
+
+\ki{Szabó Magda}{Zenta--Szabadka}\medskip
+
+{\bf 1. megoldás: } Keressük az $x^2+3x+24=y^2$ egyenlet egész megoldásait. Ezt 4-gyel szorozva:  $4x^2+12x+96=4y^2$. \hfill 
+
+\smallskip
+
+\noindent Átrendezve:
+\begin{align*}
+(2x+3)^2+87&=4y^2\\(2x+3)^2-4y^2&=-87.
+\end{align*} 
+Szorzattá alakítva:
+\[(2x+3-2y)(2x+3+2y)=-87.\]
+
+\noindent A $87$ osztói $\pm1$, $\pm3$, $\pm29$, $\pm87$, a két tényező ezek közül kerülhet ki.
+Feltehetjük, hogy $y$ pozitív, ekkor a második tényező a nagyobb.
+Megoldandók tehát a következő egyenletrendszerek:
+\[
+\left\{\begin{aligned}2x+3-2y&=-1\\2x+3+2y&=87,\end{aligned}\right.\qquad
+\left\{\begin{aligned}2x+3-2y&=-3\\2x+3+2y&=29,\end{aligned}\right.\]
+\[\left\{\begin{aligned}2x+3-2y&=-29\\2x+3+2y&=3,\end{aligned}\right.\qquad
+\left\{\begin{aligned}2x+3-2y&=-87\\2x+3+2y&=1.\end{aligned}\right.
+\]
+
+
+\noindent Ezek megoldása rendre:
+\[\begin{aligned}x&=20\\(y&=22),\end{aligned}\qquad
+\begin{aligned}x&=5\\(y&=8),\end{aligned}\qquad
+\begin{aligned}x&=-8\\(y&=8),\end{aligned}\qquad
+\begin{aligned}x&=-23\\(y&=22).\end{aligned}
+\] 
+A keresett $x$ egész számok $-23$, $-8$, $5$, $20$. Ezek valóban megoldásai az egyenletnek.
+
+\medskip
+
+{\bf 2. megoldás } Keressük az $x^2+3x+24=y^2$ egyenlet egész megoldásait. Ezt $4$-gyel szorozva:  $4x^2+12x+96=4y^2$. 
+
+\smallskip
+
+\noindent Átrendezve:
+\begin{align*}
+(2x+3)^2+87&=4y^2\\4y^2-(2x+3)^2&=87.
+\end{align*} 
+
+\noindent Két négyzetszám különbsége $87$. Tudjuk, hogy az egymást követő négyzetszámok különbségei a páratlan
+számok, $87$ tehát valahány egymást követő páratlan szám összege.
+
+
+
+\smallskip
+
+\noindent A $87$ páratlan, tehát páratlan darab páratlan számot keresünk, ezek összege osztható a tagok számával. A $87$ osztói $1, 3, 29, 87$. A tagok száma lehet $1$ és lehet $3$, de $29$ vagy $87$ nem lehet. 
+
+\smallskip
+
+\noindent Egy tag esetén: $87=44^2-43^2$, ekkor $2x+3=43$, azaz $x=20$; vagy $2x+3=-43$, azaz $x=-23$.
+
+\noindent Három tag esetén: $87=27+29+31=16^2-13^2$, ekkor $2x+3=13$, azaz $x=5$; vagy $2x+3=-13$, azaz $x=-8$.
+
+\noindent A keresett $x$ egész számok $-23$, $-8$, $5$, $20$. Ezek valóban megoldásai az egyenletnek. 
+
+\medskip
+
+{\bf 3. megoldás } Keressük az $x^2+3x+24$ négyzetszámot $(x+k)^2=x^2+2kx+k^2$ alakban.
+Ekkor $3x+24=2kx+k^2$.
+Átrendezve: $x(2k-3)=24-k^2$, vagyis $2k-3 \mid k^2-24$. 
+
+\smallskip
+
+\noindent Ekkor $2k-3\mid 2k^2-48$ következik, és $2k-3\mid 2k^2-3k$ is nyilván igaz.
+Ezekből $2k-3 \mid $ $\mid 48- 3k$, ezért $2k-3 \mid 96 -6k$.
+Ugyanakkor $2k-3\mid 9 -6k$,
+tehát $2k-3 \mid 96-9 =87$.
+
+\smallskip
+
+\noindent A $87$ osztói $+1$, $-1$, $+3$, $-3$, $+29$, $-29$, $+87$, $-87$, ezek közül kerülhet ki $2k-3$.
+Ekkor $k$ értéke rendre $2$, $1$, $3$, $0$, $16$, $-13$, $45$, $-42$, innen $x$ értéke rendre $20$, $-23$, $5$, $-8$, $-8$, $5$, $-23$, $20$. 
+
+\noindent A keresett $x$ egész számok $-23$, $-8$, $5$, $20$. Ezek valóban megoldásai az egyenletnek. 
+
+\medskip
+
+{\bf 4. megoldás: } Keressük az $x^2+3x+24=y^2$ egyenlet egész megoldásait.
+Átrendezve: $x^2+3x+(24-y^2)=0$. A másodfokú egyenlet megoldóképlete alapján
+\[x=\frac{-3\pm\sqrt{9-4(24-y^2)}}2=\frac{-3\pm\sqrt{4y^2-87}}2.\]
+Így $x$ csak akkor lehet egész, ha $4y^2-87$ négyzetszám: $4y^2-87=n^2$.
+
+\smallskip
+
+\noindent Átrendezve: 
+\begin{align}
+4y^2-n^2&=87\notag\\(2y-n)(2y+n)&=87.
+\end{align}
+
+\noindent Feltehetjük, hogy $y$ és $n$ pozitív, ekkor a második tényező a nagyobb, és pozitív. A $87$ pozitív osztói: $1,3,29,87$. Megoldandók tehát a következő egyenletrendszerek:
+\[\left\{\begin{aligned}2y-n&=1\\2y+n&=87,\end{aligned}\right.\qquad
+\left\{\begin{aligned}2y-n&=3\\2y+n&=29.\end{aligned}\right.\]
+
+\noindent Ezek megoldásai rendre: $y=22$, ekkor $x=-23$ vagy $x=20$; illetve $y=8$, ekkor $x=-8$ vagy $x=5$. 
+
+\noindent A keresett $x$ egész számok $-23$, $-8$, $5$, $20$. Ezek valóban megoldásai az egyenletnek. 
+
+\vonal
+
+{\bf 3. feladat: } Bizonyítsa be, hogy az 
+\[(n^2+7n)(n^2+7n+6)(n^2+7n+10)(n^2+7n+12)\] 
+kifejezés minden egész $n$ esetén osztható $2016$-tal.
+
+
+\ki{Nagy Piroska Mária}{Dunakeszi}
+
+\ki{Szoldatics József}{Budapest}\medskip
+
+{\bf 1. megoldás: } Alakítsuk szorzattá a tényezőket: 
+\begin{align*}
+n^2+7n&=n(n+7)\\
+n^2+7n+6&=n^2+n+6n+6=(n+1)(n+6)\\
+n^2+7n+10&=n^2+2n+5n+10=(n+2)(n+5)\\
+n^2+7n+12&=n^2+3n+4n+12=(n+3)(n+4).
+\end{align*}
+
+\noindent A kérdéses kifejezés tehát $n(n+1)(n+2)(n+3)(n+4)(n+5)(n+6)(n+7)$ alakban írható. Ez $8$ egymást követő egész szám szorzata. 
+
+\smallskip
+
+\noindent Belátjuk, hogy a szorzat osztható $2^5\cdot 3^2\cdot7=2016$-tal.
+
+\smallskip
+
+\noindent A $8$ egymást követő szám között biztosan van $7$-tel osztható, így a szorzat osztható $7$-tel. 
+
+
+
+\smallskip
+
+\noindent Van közöttük legalább $2$ darab $3$-mal osztható, így a szorzat osztható $3^2$-nel. 
+
+
+\smallskip
+
+\noindent Van $4$ darab páros szám és van $4$-gyel is osztható, ezzel megvan a hiányzó $2$-es prímtényező, így a szorzat osztható $2^5$-nel. 
+
+\smallskip
+
+\noindent A kifejezés tehát osztható $2016$-tal.
+
+\medskip
+
+{\bf 2. megoldás: } Belátjuk, hogy a szorzat osztható $2016 = 2^5\cdot3^2\cdot7$-tel.
+
+\smallskip
+
+\noindent Vizsgáljuk sorban a $2^5$, $3^2$, illetve $7$ tényezőkkel való oszthatóságot.
+
+\noindent Mivel $n^2$ és $7n$ azonos paritású, mind a négy tényező páros.
+Az $n^2+7n$ és $n^2+7n+6$ különböző maradékot adnak $4$-gyel osztva, egyikük tehát $4$-gyel osztható, ezzel megvan a hiányzó $2$-es prímtényező, így a szorzat osztható $2^5$-nel. 
+
+\smallskip
+
+\noindent Ha $n=3k$ alakú, akkor $n^2+7n$ és $n^2+7n+6$ egyaránt osztható $3$-mal, így a szorzat osztható $3^2$-nel.
+
+\noindent Ha  $n=3k-1$ alakú, akkor $n^2$-nek a $3$-as maradéka $1$, $7n$-nek a $3$-as maradéka $-1$. 
+Az $n^2+7n$  és $n^2+7n+6$ tehát ilyenkor is osztható $3$-mal, így a szorzat osztható $3^2$-nel.
+
+\noindent Ha $n=3k+1$ alakú, akkor $n^2+7n+10=9k^2+6k+1+21k+7+10\MathBrk{=}9k^2+27k+18=$ $=9(k^2+3k+2)$,
+ez $9$-cel osztható, így a szorzat is osztható $3^2$-nel. 
+
+\smallskip
+
+\noindent A $7$-tel való oszthatóság szempontjából elég az $n^2$, $n^2+6$, $n^2+10$, $n^2+12$ számokat vizsgálni.
+
+\noindent Ha  $n=7k$ alakú, akkor $n^2$ osztható $7$-tel.
+
+\noindent Ha $n=7k\pm1$  alakú, akkor $n^2$-nek a 7-es maradéka $1$, tehát $n^2+6$ osztható $7$-tel.
+
+\noindent Ha  $n=7k\pm2$ alakú, akkor $n^2$-nek a $7$-es maradéka $4$, tehát $n^2+10$ osztható $7$-tel.
+
+\noindent Ha  $n=7k\pm3$ alakú, akkor $n^2$-nek a $7$-es maradéka $2$, tehát $n^2+12$ osztható $7$-tel. 
+
+\smallskip
+
+\noindent A kifejezés tehát osztható $2^5\cdot 3^2\cdot7 = 2016$-tal.
+
+
+\vonal 
+
+{\bf 4. feladat: } Egy egyenlő szárú háromszög alapon fekvő szögének felezője kétszer olyan hosszú, mint a szárak szögének felezője. Mekkorák a háromszög szögei?
+
+\ki{Katz Sándor}{Bonyhád}\medskip
+
+{\bf 1. megoldás: } Legyen a szóban forgó $ABC$ háromszögben $AC=BC$, valamint $AD$ és $CE$ a két szögfelező szakasz, a feltevés szerint $AD=2\cdot CE$. Legyen $\alpha =BAC\sphericalangle =CBA\sphericalangle$. 
+
+\begin{center}
+\includegraphics{9-4_1-eps-converted-to.pdf}
+\end{center}
+
+\noindent Állítsunk merőlegest az $AB$ alapra az $A$ pontban, jelölje $F$ ennek metszéspontját a $BC$ egyenessel. Mivel az $E$ pont felezi az $AB$ szakaszt, a párhuzamos szelők tétele miatt (vagy az $EBC$ és $ABF$ háromszögek hasonlósága folytán) $FA=2\cdot CE$. 
+
+
+\smallskip
+
+\noindent Az $FAD$ háromszög tehát egyenlő szárú, és ezért $AFD\sphericalangle =ADF\sphericalangle$. 
+
+\smallskip
+
+\noindent Ezek a szögek $\alpha$-val kifejezhetők az $ABF$ és az $ABD$ háromszög szögösszegét felhasználva:
+\[AFD\sphericalangle =90^{\circ} -\alpha ,\quad\text{illetve}\quad ADF\sphericalangle =\frac{\alpha}{2}+\alpha\,.\]%
+
+\noindent Az $\alpha$ szögre ezekből a $90^{\circ} -\alpha =(3/2)\alpha$ egyenletet kapjuk, ahonnan $\alpha =36^{\circ}$. A háromszög szögei tehát $36^{\circ}$, $36^{\circ}$ és $108^{\circ}$. 
+
+\medskip
+
+{\bf 2. megoldás: } Használjuk az 1.~megoldásban bevezetett $A$, $B$, $C$, $D$, $E$ és $\alpha$ jelöléseket. Tükrözzük a háromszög $C$ csúcsát az $AB$ alapra, a tükörképet jelölje $C'$. Ekkor $AC'\parallel CB$, így az $AC'DC$ négyszög trapéz. 
+
+\begin{center}
+%\includegraphics[width=.45\hsize]{9-4_2.eps}
+\includegraphics{9-4_2-eps-converted-to.pdf}
+\end{center}
+
+\noindent A feltétel szerint $AD=2\cdot CE =CC'$, ezért az $AC'DC$ trapéz két átlója egyenlő, vagyis szimmetrikus trapézról van szó. 
+
+\smallskip
+
+\noindent Szimmetrikus trapézban az átlók egyenlő szögeket zárnak be az alapokkal, ezért $C'AD\sphericalangle =$ $=AC'C\sphericalangle$. 
+
+\smallskip
+
+\noindent Ezek a szögek $\alpha$-val kifejezve:
+\[C'AD\sphericalangle = C'AB\sphericalangle + BAD\sphericalangle = \alpha +\frac{\alpha}{2}\quad\text{és}\quad AC'C\sphericalangle = ACC'\sphericalangle = 90^{\circ}-\alpha ,\]%
+ahonnan $(3/2)\alpha =90^{\circ}-\alpha$, azaz $\alpha =36^{\circ}$. A háromszög szögei tehát $36^{\circ}$, $36^{\circ}$ és $108^{\circ}$. 
+
+\vonal
+
+
+{\bf 5. feladat: } Adva van a síkban $2016$ olyan pont, hogy minden ponthármasból kiválasztható két pont, amelyek $1$ egységnél kisebb távolságra vannak egymástól. Bizonyítsa be, hogy létezik olyan egységsugarú kör, amely a $2016$ pont közül legalább $1008$-at tartalmaz.
+
+\ki{Bálint Béla}{Zsolna}\medskip
+
+{\bf 1. megoldás: } Ha a pontok között nincs két olyan pont, amelyek távolsága legalább $1$, akkor készen vagyunk, a megadott pontok közül bármelyik körül rajzolt egységsugarú kör megfelel. 
+
+\smallskip
+
+\noindent Ha az $A$ és $B$ pontok távolsága legalább $1$, akkor tekintsük az $A$, illetve $B$ középpontú egységsugarú köröket. 
+
+\smallskip
+
+\noindent Ha egy $C$ pont egyik körben sincs benne, akkor az $ABC$ ponthármas ellentmond a feladat feltételeinek.
+
+\smallskip
+
+\noindent A $2016$ pontnak tehát mindegyike benne van a két kör közül legalább az egyikben.
+Nem lehet mindkét körben $1008$-nál kevesebb pont.
+(Legalább) az egyik kör tehát legalább 1008 pontot tartalmaz.
+
+\smallskip
+
+\noindent Létezik tehát olyan egységsugarú kör, amely a $2016$ pont közül legalább $1008$-at tartalmaz.
+
+\medskip
+
+{\bf 2. megoldás: } Legyen $A$ a $2016$ pont egyike. Tekintsük az $A$ körüli egységsugarú kört.
+Ha ebben van legalább $1008$ pont, akkor készen vagyunk. 
+
+\smallskip
+
+\noindent Ha nincs, akkor legyen $B$ és $C$ két pont a körön kívül lévő legalább $1009$ pont közül. 
+
+\smallskip
+
+\noindent Mivel $AB$ és $AC$ nagyobb $1$-nél, a feladat feltétele szerint $BC < 1$.
+
+\smallskip
+
+\noindent Ugyanígy bármely két kívül lévő pont távolsága $1$-nél kisebb. 
+A kívül lévő pontokat ezért tartalmazza például a $B$ körüli egységsugarú kör.
+
+\smallskip
+
+\noindent Létezik tehát olyan egységsugarú kör, amely a $2016$ pont közül legalább $1008$-at tartalmaz.
+
+\vonal
+
+{\bf 6. feladat: } Az $x_1, x_2, x_3, \ldots, x_n$ számok mindegyikének értéke $+1$ vagy $-1$. 
+Bizonyítsa be, hogy ha  
+\[x_1x_2x_3x_4+x_2x_3x_4x_5+x_3x_4x_5x_6+\ldots+x_{n-1}x_nx_1x_2+x_nx_1x_2x_3=0,\] 
+akkor az $n$ szám $4$-gyel osztható.
+
+\ki{Keke\v{n}ák Szilvia}{Kassa}\medskip
+
+{\bf Megoldás: } Az összeg mindegyik tagja $+1$ vagy $-1$.
+
+\smallskip
+
+\noindent Nézzük meg, mi történik, ha az egyik szám, $x_i$ előjelét megváltoztatjuk.
+
+\smallskip
+
+\noindent Az $x_i$ szám az összeg négy tagjában szerepel, ezen tagok előjele fog megváltozni.
+
+\noindent Ha mind a négy tag azonos előjelű, az összeg (valamelyik irányban) $8$-cal változik.
+
+\noindent Ha három tag azonos előjelű és a negyedik különböző, akkor az összeg (valamelyik irányban) $6-2 = 4$-gyel változik.
+
+\noindent Ha két-két tag pozitív, illetve negatív előjelű, az összeg nem változik.
+
+\smallskip
+
+\noindent Az egyes számok előjelének megváltoztatása tehát az összeg $4$-es maradékát nem befolyásolja.
+Ha minden szám értékét $+1$-re változtatjuk, az összeg értéke $n$ lesz.
+Mivel az összeg eredetileg $0$ volt, azaz $4$-gyel osztható, $n$ is osztható $4$-gyel.
+
+
+\end{document}
