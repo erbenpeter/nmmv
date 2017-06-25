@@ -1,0 +1,304 @@
+\documentclass[a4paper,10pt]{article} 
+\usepackage[utf8]{inputenc}
+\usepackage[a4paper]{geometry}
+\usepackage[magyar]{babel}
+\usepackage{t1enc}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{caption}
+\usepackage{pgf,tikz}
+\usepackage{pstricks-add}
+\frenchspacing 
+\pagestyle{empty}
+\newcommand{\ki}[2]{\hfill {\it #1 (#2)}\medskip}
+\newcommand{\vonal}{\hbox to \hsize{\hskip2truecm\hrulefill\hskip2truecm}}
+\newcommand{\degre}{\ensuremath{^\circ}}
+\newcommand{\tg}{\mathop{\mathrm{tg}}\nolimits}
+\newcommand{\ctg}{\mathop{\mathrm{ctg}}\nolimits}
+\newcommand{\arc}{\mathop{\mathrm{arc}}\nolimits}
+\renewcommand{\vec}[1]{\mathbf{#1}}
+\begin{document}
+\begin{center} \Large {\em XXII. Nemzetközi Magyar Matematikaverseny} \end{center}
+\begin{center} \large{\em Győr, 2013. március 14--18.} \end{center}
+\smallskip
+\begin{center} \large{\bf 12. osztály} \end{center}
+\bigskip
+
+{\bf 1. feladat: } Határozza meg az összes $k$ egész számot úgy, hogy az $E = k\cdot 3^{2013}-2012$ osztható legyen 11-gyel.
+
+
+\ki{Olosz Ferenc}{Erdély}\medskip
+
+{\bf Megoldás: } A feladat többféleképpen is megoldható. Az egyik lehetséges megoldási mód a következő:
+
+$3^5=243=22\cdot 11+1$, ezért jó lenne, ha az $E$-ben a $3^{2013}$ helyett $3^{2015}$
+szerepelne. Mivel 9 és 11 relatív prímek, ezért az $E$-nek 11-gyel való oszthatósága
+helyett tanulmányozhatjuk a $9E$-nek a 11-gyel való oszthatóságát. 
+
+$$9E=k\cdot 3^{2015}-9\cdot 2012=
+k\cdot \left(3^5\right)^{403}-
+18108=
+k\cdot\left( 22\cdot 11+ 1\right)^{403}-
+(1646\cdot 11+2)$$
+
+A binomiális képlet alapján
+$\left(22\cdot 11+1\right)^{403}=11\cdot k_1+1$, ahol
+$k_1\in \mathbb{Z}$.
+
+(Aki nem ismeri e képletet, az teljes indukcióval bizonyíthatja a fenti
+összefüggést.)
+
+$$9E=k(11\cdot k_1+1)-
+(1646\cdot 11+2)=
+(k\cdot k_1-1646)\cdot 11+k-2$$
+
+$9E$ akkor és csak akkor osztható 11-gyel, ha $k-2$ osztható 11-gyel, vagyis
+$k-2=11\cdot m, m\in \mathbb{Z}$. 
+
+Tehát $E = k \cdot  3^{2013}-2012$ akkor és csak akkor osztható 11-gyel, ha $k$ olyan
+egész szám, amelynek 11-gyel való osztási maradéka 2, vagyis $k = 11 \cdot m-2$,
+ahol $m$ tetszőleges egész szám.
+
+\medskip
+
+\vonal
+
+\smallskip
+
+{\bf 2. feladat: } Igazolja, hogy az
+$\displaystyle{y=\frac{5}{3}x+1}$
+ egyenletű egyenestől minden rácspont (olyan pont, amelynek mindkét koordinátája egész szám) 
+ $\displaystyle{\frac{1}{6}}$-nál távolabb van.
+
+
+\ki{Dr. Kántor Sándor}{Magyarország}\medskip
+
+{\bf Megoldás: } Az $y=\frac{5}{3}x+1$
+egyenletű egyenes áthalad például az $(x; y) = (0; 1), (3; 6)$ rácspontokon
+$(3; 5)$ irányvektorral. Ebben az irányban nincs rövidebb rácsvektor, mert 3-nak és 5-nek
+nincs 1-nél nagyobb közös osztója. 
+
+A párhuzamos rácsegyenesek távolságát abból az elvből határozhatjuk meg, hogy az üres
+rácsparalelogramma területe 1. (Ezt tényleg ismertnek tekintjük!)
+
+A fenti legrövidebb rácsvektor hossza $\sqrt{34}$, ezért a rácsegyenesek távolsága $\frac{1}{\sqrt{34}}$
+(az alap $\cdot$ magasság területképlet miatt). 
+
+Az
+$\frac{1}{\sqrt{34}}>\frac{1}{6}$
+egyenlőtlenségből következik a feladat állítása.
+
+\medskip
+
+\vonal
+
+\newpage
+
+{\bf 3. feladat: } Hány olyan háromszög van, amelynek oldalai centiméterben mérve egész számok és a
+területe 24 cm$^2$? Határozza meg ezeket a háromszögeket.
+
+
+\ki{Kallós Béla}{Magyarország}\medskip
+
+{\bf Megoldás: } Jelöljük a háromszög oldalait 
+$a$, $b$, $c$-vel, a félkerületét $s$-sel.
+Ekkor felírható (Héron-képlet), hogy 
+$\sqrt{s(s-a)(s-b)(s-c)}=24$, azaz
+$$s(s-a)(s-b)(s-c)=2^6\cdot 3^2=576.$$
+Itt $s$ értéke biztosan egész, ugyanis nem egész esetén a törtrésze $0{,}5$ lenne, de ekkor az
+$s(s-a)(s-b)(s-c)$ szorzat nem lenne 576, azaz egész.
+A baloldalon az utolsó három tényező összege egyenlő az első tényezővel, ugyanis $s-a+s-b+s-c=3s-2s=s$.
+Mivel $s > s - a$; $s > s - b$; és $s > s-c$,
+ezért végezzünk egy becslést számtani-mértani egyenlőtlenség segítségével az $s$ értékére:
+
+\begin{eqnarray*}
+\sqrt[4]{s(s-a)(s-b)(s-c)} &\le & \frac{s+(s-a)+(s-b)+(s-c)}{4}=\frac{s}{2}\cr
+\sqrt[4]{576} &\le & \frac{s}{2}\cr
+2\sqrt{24} &\le & s\cr
+10 &\le & s
+\end{eqnarray*}
+
+Ezért az 576-ot úgy kell felbontani négy tényező szorzatára, hogy három tényező összege a
+negyedikkel legyen egyenlő, ami viszont 10-nél nem kisebb. Az 576 szóba jöhető
+osztópárjai (amit tovább kell bontani): $1\cdot 576$, $2\cdot 288$, $3\cdot 192$, $4\cdot 144$, $6\cdot 96$, $8\cdot 72$, $9\cdot 64$,
+$12\cdot 48$, $16\cdot 36$, $18\cdot 32$, $24\cdot 24$.
+
+Ezek közül csak a $18\cdot 32$ és a $16\cdot 36$ írható fel a megfelelő négytényezős szorzatként:
+
+\underline{1. eset:} $12\cdot 48=12\cdot 6\cdot 4\cdot 2$,
+ahol $s=12$, $s-a=6$, $s-b=4$, $s-c=2$, azaz a háromszög oldalai 6~cm, 8~cm és 10~cm.
+
+\underline{2. eset:} $16\cdot 36=16\cdot 12\cdot 3\cdot 1$,
+ahol $s=16$, $s-a=12$, $s-b=3$, $s-c=1$, azaz a háromszög oldalai 4~cm, 13~cm és 151cm.
+
+Tehát két megfelelő háromszög létezik.
+
+\medskip
+
+\vonal
+
+
+{\bf 4. feladat: } A kúpba gömböt, majd ebbe a gömbbe kúpot szerkesztünk, amely hasonló az elsőhöz, a
+tengelyes metszetek szárszögei egyenlők, a nagyobb kúp térfogata 27-szer nagyobb a
+kisebb kúp térfogatánál. Határozza meg a kisebb kúp magasságának és sugarának az
+arányát.
+
+
+\ki{R. Sipos Elvira}{Délvidék}\medskip
+
+{\bf Megoldás: } $\frac{V_1}{V_2}=27\Rightarrow \lambda=3$. Az alábbi ábra jelöléseit használjuk:
+
+\begin{center}
+\psset{xunit=1.0cm,yunit=1.0cm,algebraic=true,dimen=middle,dotstyle=o,dotsize=3pt 0,linewidth=0.8pt,arrowsize=3pt 2,arrowinset=0.25}
+\begin{pspicture*}(-3.58,-0.04)(3.22,5.08)
+\pscircle(0,1.7){1.7}
+\psline(-3,0)(3,0)
+\psline(0,5.01)(3,0)
+\psline(0,5.01)(-3,0)
+\psline(0,5.01)(0,0)
+\psline(1.46,2.57)(0,1.7)
+\psline(0,3.4)(1.47,0.85)
+\psline(1.47,0.85)(-1.47,0.85)
+\psline(-1.47,0.85)(0,3.4)
+\psline(0,1.7)(1.47,0.85)
+\begin{scriptsize}
+\rput[tl](1.4,0.26){$3r$}
+\rput[tl](2.34,1.56){$3r$}
+\rput[tl](0.6,1){$r$}
+\rput[tl](0.82,2.64){$R$}
+\rput[tl](0.5,1.65){$R$}
+\rput[tl](0.06,2.62){$R$}
+\rput[tl](-0.42,2.56){$m$}
+%\psdots[dotstyle=*,linecolor=darkgray](0,1.7)
+\rput[bl](-0.32,1.64){{$O$}}
+%\psdots[dotstyle=*,linecolor=darkgray](0,5.01)
+\rput[bl](0.22,4.8){{$P_2$}}
+%\psdots[dotstyle=*,linecolor=darkgray](1.46,2.57)
+\rput[bl](1.54,2.7){{$P_1$}}
+%\psdots[dotstyle=*,linecolor=darkgray](1.47,0.85)
+\rput[bl](1.58,0.54){{$Q_2$}}
+%\psdots[dotstyle=*,linecolor=darkgray](0,0.85)
+\rput[bl](-0.36,0.48){{$Q_1$}}
+\end{scriptsize}
+\end{pspicture*}
+\end{center}
+
+$OQ_1Q_2$ háromszögben:
+
+\begin{eqnarray*}
+r^2+(m-R)^2&=&R^2\cr
+r^2+m^2-2mR+R^2&=&R^2\cr
+r^2+m^2&=&2mR
+\end{eqnarray*}
+
+$OP_1P_2$ háromszögben:
+$$\sqrt{(3r)^2+(3m)^2}-3r=
+3\left(\sqrt{r^2+m^2}-r\right)$$
+
+Így Pitagorasz-tétellel:
+
+\begin{eqnarray*}
+(3m-R)^2&=& R^2+9\left(\sqrt{r^2+m^2}-r\right)^2\cr
+9m^2-6mR &=& 9\left((r^2+m^2)-2r\sqrt{r^2+m^2}+r^2\right) \cr
+-3r^2-3m^2  &=& 18r^2-18r\sqrt{r^2+m^2}\cr
+18r\sqrt{r^2+m^2} &=& 21r^2+3m^2\cr
+6r\sqrt{r^2+m^2}  &=& 7r^2+m^2\cr
+36r^2(r^2+m^2)    &=& 49r^4+14m^2r^2+m^4\cr
+0 &=& m^4+22m^2r^2+13r^4\cr
+\left(\frac{m^2}{r^2}\right)^2-22\left(\frac{m^2}{r^2}\right)+13       &=& 0\cr
+\end{eqnarray*}
+
+Megoldóképlettel:
+
+$$\frac{m^2}{r^2}=11\pm 6\sqrt{3}$$
+
+$$\frac{m}{r}=\sqrt{11+6\sqrt{3}}\text{~illetve~}
+\frac{m}{r}=\sqrt{11-6\sqrt{3}}$$
+
+Mind a kettő jó!
+\medskip
+
+\vonal
+
+
+{\bf 5. feladat: } Van $n$ városunk ($n$ egynél nagyobb egész szám) úgy, hogy közülük bármely kettőt
+egyirányú vasútvonal köt össze. Bizonyítsa be, hogy a városok közt van olyan, ahonnan
+bármelyik városba legfeljebb egy átszállással (ezen a vasúthálózaton) el lehet jutni.
+
+
+\ki{Dr. Kántor Sándor}{Magyarország}\medskip
+
+{\bf I. megoldás: } Legyen $k$ az a legnagyobb pozitív egész szám, amelyre igaz, hogy van olyan város,
+amelyből $k$ városba el lehet jutni közvetlenül (átszállás nélkül).
+Legyen $A$ olyan város (vagy ha több ilyen is létezik, akkor közülük egy), amelyből az $A_1,
+A_2, \ldots, A_k$ (különböző) városokba közvetlenül el lehet jutni.
+
+Ha az összes város $A_i$-k között van, akkor innen minden város közvetlenül elérhető.
+
+Ellenkező esetben vegyünk egy tetszőleges, eddig kimaradó várost, legyen ez $B$.
+$A$-ból $B$-be nem lehet eljutni, hanem fordítva csak, $A$ meghatározása miatt.
+Ha az összes $A_i$-be $B$-ből vezetne út, akkor $B$-ből $k+1$
+út vezetne ki, ez a kezdeti
+feltételünknek ellent mondana, tehát valamelyik 
+$A_i$-ből vezet út $B$-be, tehát $B$ is 1
+átszállással elérhető $A$-ból.
+
+Ez a gondolat az összes, $A_i$-k között nem szereplő városra igaz, tehát készen vagyunk.
+
+
+
+\medskip
+
+{\bf II. megoldás: } Bizonyítsunk teljes indukcióval.
+$n = 2, 3$-ra könnyű látni, hogy igaz az állítás.
+
+Tegyük fel, hogy $n$-re is igaz ($n$-ig minden esetre igaz). Nézzük az $n+1$-es esetet.
+Tekintsünk elsőre csak $n$ várost, erre igaz a feltétel. Vagyis jelöljük $A$-val azt a várost,
+ahonnan minden további elérhető direkt vagy 1 átszállással. A direkt elérhető városok
+legyenek $D_1, D_2, \ldots, D_k$, a többiek (maradék) innen már direkt elérhető.
+
+Most tegyük be az $n+1$-edik várost és nézzük, hogy hogyan kapcsolódik $A$-hoz és a $D_i$
+városokhoz. Ha innen ezek közvetlenül elérhetők, akkor innen minden elérhető a feladat
+szerint.
+
+Ha csak 1 is olyan, hogy innen nem érhető el, akkor továbbra is az $A$ a jó város, hiszen
+vagy legújabb vagy közvetlenül ($A$-ból), vagy valamelyik $D_i$-n keresztül (1 átszállással)
+elérhető.
+
+\medskip
+
+\vonal
+
+
+{\bf 6. feladat: } Legyen $x_1$
+pozitív, 1-nél kisebb szám. Képezzük az
+$$x_{k+1}=x_k-x_k^2\quad (k=1,2,\ldots)\ \text{sorozatot.}$$
+Bizonyítsa, hogy minden pozitív $n$ egész számra
+$$x_1^2+x_2^2+\ldots+x_n^2<\frac{2014}{2013}.$$
+
+\ki{Oláh György}{Felvidék}\medskip
+
+{\bf Megoldás: } $x_{k+1}=x_k-x_k^2$ átrendezésével
+$x_k^2=x_k-x_{k+1}$.
+
+Írjuk fel ezt $k=1, 2, \ldots, n$-re, 
+
+\begin{eqnarray*}
+x_1^2 & = & x_1-x_2 \cr \cr
+x_2^2 & = & x_2-x_3 \cr \cr
+ & \ldots &  \cr \cr
+x_n^2 & = & x_n-x_{n+1},
+\end{eqnarray*}
+
+majd adjuk össze a fent felírt egyenleteket:
+
+$$x_1^2+x_2^2+\ldots+x_n^2= 
+x_1-x_{n+1}<x_1<1<\frac{2014}{2013}.
+$$
+
+Ugyanis a sorozat minden eleme, így $x_{n+1}$ is pozitív. Valóban $0<x_1<1$ miatt $x_2=x_1(1-x_1)$
+is 0 és 1 között van, és lépésről lépésre látható ugyanez a sorozat többi elemére is.
+
+
+
+\end{document}
