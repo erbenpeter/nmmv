@@ -1,0 +1,325 @@
+\documentclass[a4paper,10pt]{article} 
+\usepackage[utf8]{inputenc}
+\usepackage{t1enc}
+\usepackage[magyar]{babel}
+\usepackage{pstricks,pstricks-add,pst-math,pst-xkey}
+\usepackage{graphicx}
+\usepackage{amssymb}
+\voffset - 20pt
+\hoffset - 35pt
+\textwidth 450pt
+\textheight 650pt 
+\frenchspacing 
+
+\pagestyle{empty}
+\def\ki#1#2{\hfill {\it #1 (#2)}\medskip}
+
+\def\tg{\, \hbox{tg} \,}
+\def\ctg{\, \hbox{ctg} \,}
+\def\arctg{\, \hbox{arctg} \,}
+\def\arcctg{\, \hbox{arcctg} \,}
+
+\begin{document}
+\begin{center} \Large {\em XVII. Nemzetközi Magyar Matematika Verseny} \end{center}
+\begin{center} \large{\em Kassa, 2008. március 6-9.} \end{center}
+\smallskip
+\begin{center} \large{\bf 12. osztály} \end{center}
+\bigskip 
+
+{\bf 1. feladat: } $n$ darab ceruzát egyenként két részre törünk. Az így kapott $2n$ darab ceruzát kettesével találomra párosítjuk. Mi a valószínűsége annak, hogy minden így kapott párból összeragasztható az eredeti ceruza?
+
+\ki{Bencze Mihály}{Brassó}\medskip
+
+{\bf 1. feladat megoldása: } Annak a valószínűsége, hogy a $2n$ darab ceruzából egy a saját felével
+legyen összeragasztva $\frac{1}{2n-1}$. Ezek után még marad $2n-2$ ceruza. Kiválasztunk egyet; annak a valószínűsége, hogy ez a saját felével legyen összeragasztva $\frac{1}{2n-3}$.
+Hasonlóan folytatjuk a gondolatmenetet.
+
+Mivel függetlenek az események, a valószínűségeket összeszorozzuk. Így a keresett valószínűség:
+$$\frac{1}{2n-1}\cdot\frac{1}{2n-3}\cdot\dots \cdot\frac{1}{5}\cdot\frac{1}{3}\cdot\frac{1}{1}
+=\frac{2^n\cdot n!}{\left(2n\right)!1}.$$
+
+\medskip
+{\bf 2. feladat: } Az  háromszögben $B\angle=50^\circ$, $C\angle=70^\circ$, $H$ a magasságok metszéspontja és $I$ a háromszögbe írt kör középpontja. Számítsátok ki az $IHC$ háromszög belső szögeit.
+
+\ki{Neubauer Ferenc}{Munkács}\medskip
+
+{\bf 2. feladat megoldása: } Az $I$ pont egyúttal a szögfelezők metszéspontja is.
+Ezért $BCI\sphericalangle=35^\circ$, $IBC\sphericalangle=25^\circ$.
+$BCH\sphericalangle=90^\circ-50^\circ=40^\circ$. Ebből $ICH\sphericalangle=40^\circ-35^\circ=5^\circ$.
+$BIC\sphericalangle=180^\circ-(25^\circ+35^\circ)=120^\circ$;
+$BHC\sphericalangle=180^\circ-HBC\sphericalangle-HCB\sphericalangle
+=180^\circ-(90^\circ-70^\circ)-(90^\circ-50^\circ)=120^\circ$.
+
+\begin{center}
+\psset{xunit=1.0cm,yunit=1.0cm,algebraic=true,dotstyle=o,dotsize=3pt 0,linewidth=0.8pt,arrowsize=3pt 2,arrowinset=0.25}
+\begin{pspicture*}(-1.38,-0.54)(6.7,4.6)
+\psline(4.08,3.84)(0,0)
+\psline(4.08,3.84)(5,0)
+\psline(5,0)(0,0)
+\psline(0,0)(4.73,1.13)
+\psline(5,0)(2.65,2.5)
+\psline(0,0)(3.33,1.32)
+\psline(5,0)(3.33,1.32)
+\psline(3.33,1.32)(4.08,0.98)
+\pscustom{\parametricplot{5.467493383863363}{7.038289710658259}{0.4*cos(t)+2.65|0.4*sin(t)+2.5}\lineto(2.65,2.5)\closepath}
+\psellipse*(2.89,2.49)(0.04,0.04)
+\pscustom{\parametricplot{1.8059472965038403}{3.376743623298737}{0.4*cos(t)+4.73|0.4*sin(t)+1.13}\lineto(4.73,1.13)\closepath}
+\psellipse*(4.53,1.26)(0.04,0.04)
+\begin{scriptsize}
+\psdots[dotstyle=*](4.08,3.84)
+\rput[bl](4.16,3.96){$A$}
+\psdots[dotstyle=*](0,0)
+\rput[bl](-0.38,0.04){$B$}
+\psdots[dotstyle=*](5,0)
+\rput[bl](5.34,0.08){$C$}
+\psdots[dotstyle=*](3.33,1.32)
+\rput[bl](3,1.38){$I$}
+\psdots[dotstyle=*](4.08,0.98)
+\rput[bl](4,1.32){$H$}
+\end{scriptsize}
+\end{pspicture*}
+\end{center}
+
+Akkor $BIHC$ négyszög húrnégyszög, mivel a $BC$ oldal az $I$ és $H$
+csúcsokból egyaránt $120^\circ$-os szög alatt látszik.
+Ebben a négyszögben $IHC\sphericalangle=180^\circ-IBC\sphericalangle=180^\circ-25^\circ=155^\circ$, ami
+egyúttal az $IHC$ háromszögnek is egyik szöge. Végül
+$CIH\sphericalangle=180^\circ-(5^\circ+155^\circ)=20^\circ$.
+
+Felelet: $20^\circ, 155^\circ, 5^\circ$.
+
+
+\medskip
+{\bf 3. feladat: } Egy függvény minden valós  $x, y$ számpárra eleget tesz az $f(x)+f(y)=f(x+y)-xy-1$ függvényegyenletnek. Ha $f(1)=1$, akkor van-e olyan 1-től különböző $n$ egész szám, amelyre $f(n)=n$?
+
+\ki{Oláh György}{Komárom}\medskip
+
+{\bf 3. feladat megoldása: } Tudjuk, hogy $f(1)=1$, ezért 
+$f(0)+f(1)=f(1)- 1$, amiből $f(0)=-1$. 
+De $f(1)+f(1)=f(2)- 2$, ezért $f(2)=4$. Továbbá $f(1) + f(2) = f(3) - 3$, amiből
+$f(3) = 8$. Folytatva az eddigi eljárást: $f(4) = 13, f(5) = 19, f(6) = 26, \dots$.
+
+Konkrét eseteket vizsgálva azt sejteti, hogy bármely egész $n$ szám
+esetén, ha $f(1) = 1$, akkor $f(n) = f(n - 1) + n + 1$ .
+
+Ezt a sejtést könnyű ellenőrizni, ugyanis $f(1) + f(n - 1) = f(n) - (n-1) - 1$,
+ami $f(1) = 1$ miatt egyenértékű a következővel: $f(n) = f(n - 1) + n + 1$.
+Az is könnyen belátható, hogy minden egész $n$ számra
+$$f(n)=-1+\frac{n(n+3)}{2}.$$
+
+Ezután már egyszerű arra válaszolni, hogy létezik-e olyan $n$ egész
+szám, amelyre $f(n) = n\  (n\ne 1)$. A kérdés egyenértékű azzal, hogy van-e 1-től különböző egész
+megoldása az $n = -1 + \frac{n(n + 3)}{2}$ egyenletnek. Átalakítások után a
+következőt kapjuk: $(n - 1)(n + 2) = 0$,
+ami pontosan akkor teljesül, ha
+$n = 1$ v. $n = -2$. Tehát van 1-től különböző olyan egész szám, amelyre
+$f(n) = n$, mégpedig az $n = -2$.
+
+
+\medskip
+{\bf 4. feladat: } Az $x_1, x_2,\dots, x_n$  $(n\ge 2)$ egész számokra érvényes 
+     $$|x_1|+|x_2|+\dots+|x_n| - |x_1+ x_2+\dots+ x_n|\in
+     \{-2, 2\}. $$
+Igazoljátok, hogy létezik legalább egy $x_k$ ezek közül, amelyre $x_k\in \{-1, 1\}$.  
+
+\ki{Bencze Mihály}{Brassó}\medskip
+
+{\bf 4. feladat megoldása: } Legyen $A$ a pozitív egészek összege és
+$B$ a negatív egészek összege.
+
+Akkor $\displaystyle{\sum_{k=1}^n |x_k|-\left|\sum_{k=1}^n x_k\right|\in\{-2,2\}
+\Leftrightarrow A-B-\left|A+B\right|\in\{-2,2\}}$.
+
+\begin{enumerate}
+
+\item  Ha $A-B-\left|A+B\right|=-2$
+
+a) $A+B\ge 0\Rightarrow A-B-A-B=-2 \Rightarrow B=1$
+
+b) $A+B< 0\Rightarrow A-B+A+B=-2 \Rightarrow A=-1$
+
+\item  Ha $A-B-\left|A+B\right|=2$
+
+a) $A+B\ge 0\Rightarrow A-B-A-B=2 \Rightarrow B=-1$
+
+b) $A+B< 0\Rightarrow A-B+A+B=2 \Rightarrow A=1$ 
+\end{enumerate}
+
+Tehát $A, B \in \{-1,1\}\Rightarrow$ legalább egy $x_k\in\{-1,1\}$.
+
+
+\medskip
+{\bf 5. feladat: } Bizonyítsátok be, hogy ha egy háromszögben az egyik csúcsból induló magasságvonal, súlyvonal és szögfelező négy egyenlő részre osztja a szöget, akkor a háromszög derékszögű. 
+
+\ki{Egyed László}{Baja}\medskip
+
+{\bf 5. feladat megoldása: } Készítsünk egy ábrát!
+
+\begin{center}
+\psset{xunit=1.0cm,yunit=1.0cm,algebraic=true,dotstyle=o,dotsize=3pt 0,linewidth=0.8pt,arrowsize=3pt 2,arrowinset=0.25}
+\begin{pspicture*}(-1.08,-0.82)(8.86,4.6)
+\psline(0,0)(8,0)
+\psline(8,0)(1.24,3.98)
+\psline(1.24,3.98)(0,0)
+\psline(1.24,3.98)(4,0)
+\psline(1.24,3.98)(1.24,0)
+\psline(1.24,3.98)(2.48,0)
+\rput[tl](0.76,-0.12){$x$}
+\rput[tl](1.8,-0.12){$x$}
+\rput[tl](3.16,-0.08){$y$}
+\rput[tl](5.32,-0.1){$2x+y$}
+\rput[tl](1.4,1.6){$m$}
+\rput[tl](0.88,2.42){$\epsilon$}
+\rput[tl](1.44,2.36){$\epsilon$}
+\rput[tl](2,2.48){$\epsilon$}
+\rput[tl](2.44,2.94){$\epsilon$}
+\begin{scriptsize}
+\psdots[dotstyle=*](0,0)
+\rput[bl](-0.42,-0.04){$A$}
+\psdots[dotstyle=*](8,0)
+\rput[bl](8.26,-0.02){$B$}
+\psdots[dotstyle=*](1.24,3.98)
+\rput[bl](1.32,4.1){$C$}
+\psdots[dotstyle=*](4,0)
+\rput[bl](4.08,0.12){$F$}
+\psdots[dotstyle=*](1.24,0)
+\rput[bl](1.32,0.12){$T$}
+\psdots[dotstyle=*](2.48,0)
+\rput[bl](2.56,0.12){$D$}
+\end{scriptsize}
+\end{pspicture*}
+\end{center}
+
+A feltételek miatt: $AT = TD = x$ és $AF = FB = 2x+y$.
+
+\smallskip
+\indent\indent $CAT$ háromszögben: $\displaystyle{\tg \epsilon = \frac{x}{m}}$
+
+\smallskip
+\indent\indent $CTF$ háromszögben: $\displaystyle{\tg 2\epsilon = \frac{x+y}{m}}$
+
+\smallskip
+\indent\indent $CTB$ háromszögben: $\displaystyle{\tg 3\epsilon = \frac{3x+2y}{m}=
+2\cdot\frac{x+y}{m}+\frac{x}{m}=2\tg 2\epsilon+\tg \epsilon}$
+
+\smallskip
+Az addíciós tétel miatt:
+$\displaystyle{\tg 3\epsilon = \frac{\tg 2\epsilon+\tg \epsilon}{1-\tg 2\epsilon\cdot \tg \epsilon}}$
+
+\smallskip
+A kettőt összetéve: 
+$\displaystyle{2\tg 2\epsilon+\tg \epsilon=\frac{\tg 2\epsilon+\tg \epsilon}{1-\tg 2\epsilon\cdot \tg \epsilon}}$ és a $\displaystyle{\tg 2\epsilon=\frac{2\tg \epsilon}{1-\tg^2 \epsilon}}$
+addíciós tételt felhasználva adódik, hogy 
+$$2\cdot\frac{2\tg \epsilon}{1-\tg^2 \epsilon}+\tg\epsilon =
+\frac{\frac{2\tg \epsilon}{1-\tg^2 \epsilon}+\tg\epsilon}{1-\frac{2\tg \epsilon}{1-\tg^2 \epsilon}\cdot\tg \epsilon}.$$
+
+\smallskip
+$\tg\epsilon\ne 0$, mert háromszög belső szögének a negyedrésze. Ezzel elosztva
+az egyenlet mindkét oldalát és bevezetve a $\tg^2\epsilon= x$ jelölést a
+következő egyenlethez jutunk:
+
+\begin{eqnarray*}
+\frac{4}{1-x}+1&=&\frac{\frac{2}{1-x}+1}{1-\frac{2x}{1-x}}\cr\cr
+\frac{5-x}{1-x}&=&\frac{3-x}{1-3x}\cr\cr
+(5-x)\cdot(1-3x)&=&(3-x)\cdot(1-x)\cr\cr
+5-16x+3x^2&=&3-4x+x^2\cr\cr
+2x^2-12x+2&=&0\cr\cr
+x_{1,2}&=&\frac{6\pm\sqrt{36-4}}{2}=3\pm2\cdot\sqrt{2}.
+\end{eqnarray*}
+
+Mivel háromszög belső szögének negyedrészéről van szó, így
+$$0^\circ<\epsilon<45^\circ\Rightarrow 0<\tg \epsilon <1 \Rightarrow 0<\tg^2\epsilon<1,$$
+ezért csak $\tg^2\epsilon=3-2\cdot\sqrt 2$ jöhet szóba, amiből 
+$\tg\epsilon=\sqrt{3-2\cdot\sqrt 2}=\sqrt 2 -1$.
+
+Tehát $\epsilon=22,5^\circ \Rightarrow 4\cdot\epsilon =90^\circ$.
+
+
+
+
+\medskip
+{\bf 6. feladat: } Határozzátok meg azt az $(x, y)$  számpárt, amelyre az 
+$$f(x,y)=\sqrt{x^2+y^2-8x+16}+\sqrt{x^2+y^2-16x-18y+145}+$$ 
+$$+\sqrt{x^2+y^2+8x-24y+160}+\sqrt{x^2+y^2+4x+2y+5}$$
+		
+értéke minimális lesz.
+
+\ki{Olosz Ferenc}{Szatmárnémeti}\medskip
+
+{\bf 6. feladat megoldása: } Észrevesszük, hogy a gyökjelek alatt teljes négyzetek összegét
+alakíthatjuk ki:
+$$f(x,y) =
+\sqrt{(x-4)^2+y^2}+
+\sqrt{(x-8)^2+(y-9)^2}+
+\sqrt{(x+4)^2+(y-12)^2}+
+\sqrt{(x+2)^2+(y+1)^2}$$
+
+Ha vesszük az $A(4, 0), B(8, 9), C(-4, 12), D(-2,-1)$ pontokat és a
+tetszőleges $M(x, y)$ pontot a síkból, akkor $ABCD$ egy konvex
+négyszög és az $f(x, y)$ függvény az $MA+MB+MC+MD$ távolságok
+összegét adja meg.
+
+Annak az $(x, y)$ számpárnak a keresése, amelyre $f(x, y)$ minimális lesz
+megegyezik a következő mértanfeladattal: {\it Adott az $ABCD$ konvex négyszög és
+legyen $M$ a négyszög síkjának egy tetszőleges pontja.
+Határozzuk meg az $M$ helyzetét úgy, hogy az $MA+MB+MC+MD$ összeg a legkisebb
+legyen.}
+
+\begin{center}
+\psset{xunit=0.4cm,yunit=0.4cm,algebraic=true,dotstyle=o,dotsize=3pt 0,linewidth=0.8pt,arrowsize=3pt 2,arrowinset=0.25}
+\begin{pspicture*}(-6.52,-4.52)(12.35,14.12)
+\psaxes[labelFontSize=\scriptstyle,Dx=10,Dy=10,ticksize=-2pt 0,subticks=2]{->}(0,0)(-6.52,-4.52)(12.35,14.12)
+\psline(-4,12)(-2,-1)
+\psline(-2,-1)(4,0)
+\psline(4,0)(8,9)
+\psline(8,9)(-4,12)
+\psline[linestyle=dashed,dash=4pt 4pt](-4,12)(4,0)
+\psline[linestyle=dashed,dash=4pt 4pt](8,9)(-2,-1)
+\psline(8,9)(9.26,4.21)
+\psline(9.26,4.21)(-4,12)
+\psline(9.26,4.21)(4,0)
+\psline(9.26,4.21)(-2,-1)
+\begin{scriptsize}
+\psdots[dotstyle=*](4,0)
+\rput[bl](3.51,-1.63){$A(4,0)$}
+\psdots[dotstyle=*](8,9)
+\rput[bl](8.52,9.56){$B(8,9)$}
+\psdots[dotstyle=*](-4,12)
+\rput[bl](-4.94,12.82){$C(-4,12)$}
+\psdots[dotstyle=*](-2,-1)
+\rput[bl](-3.54,-2.1){$D(-2,-1)$}
+\psdots[dotstyle=*,linecolor=darkgray](2,3)
+\rput[bl](1.82,3.7){\darkgray{$P$}}
+\psdots[dotstyle=*](9.26,4.21)
+\rput[bl](9.48,4.54){$M$}
+\end{scriptsize}
+\end{pspicture*}
+\end{center}
+
+Bebizonyítjuk, hogy az összeg akkor a legkisebb,
+ha $M$ a négyszög átlóinak metszéspontjában található:
+
+Legyen $P$ az átlók metszéspontja. Ha $M$ az egyik átlón sincs rajta,
+akkor $MA+MC > AC$ és $MB+MD > BD$.
+Összeadva az egyenlőtlenségeket kapjuk:
+$MA+MB+MC+MD > AC+BD=PA+PB+PC+PD$.
+
+Ha $M$ az egyik átló, például a ($BD$), egy pontja, akkor
+$MB+MD=BD$ és $MA+MC > AC$, tehát
+$MA+MB+MC+MD > AC+BD=PA+PB+PC+PD$.
+
+Ha $M=P$, akkor $(MA+MB+MC+MD)_{min}= AC+BD$.
+
+\smallskip
+Tehát a feladat kérdésére megkapjuk a választ, ha meghatározzuk a
+négyszög átlóinak metszéspontját. Az $AC$ egyenes egyenlete
+$3x + 2y - 12 = 0$, a $BD$ egyenes egyenlete $x - y + 1 = 0$, a két egyenletből
+alkotott egyenletrendszer megoldásával kapjuk a metszéspont
+koordinátáit, vagyis $P(2, 3)$.
+
+Tehát a $(2, 3)$ számpárra lesz az $f(x, y)$ értéke minimális:$f(2, 3)= 4\sqrt{13} + 10\sqrt{2}$.
+
+
+\medskip
+
+\end{document}
