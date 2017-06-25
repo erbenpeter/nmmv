@@ -2,7 +2,7 @@
 A Nemzetközi Magyar Matematikaverseny archívumának másolata.
 
 | év | verseny leírás | feladatok | eredmények |
-|---|---|---|---|
+|---|---|---:|---|
 | 2017 |   | [2017](2017/2017.md) | |
 | 2016 |   | [2016](2016/2016.md) | |
 | 2015 |   | [2015](2015/2015.md) | |
