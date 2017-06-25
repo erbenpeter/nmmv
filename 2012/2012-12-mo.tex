@@ -1,0 +1,452 @@
+\documentclass[a4paper,10pt]{article} 
+\usepackage[utf8]{inputenc}
+\usepackage[a4paper]{geometry}
+\usepackage[magyar]{babel}
+\usepackage{t1enc}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{caption}
+\usepackage{pgf,tikz}
+\usepackage{pstricks-add}
+\frenchspacing 
+\pagestyle{empty}
+\allowdisplaybreaks
+\newcommand{\ki}[2]{\hfill {\it #1 (#2)}\medskip}
+\newcommand{\vonal}{\hbox to \hsize{\hskip2truecm\hrulefill\hskip2truecm}}
+\newcommand{\degre}{\ensuremath{^\circ}}
+\newcommand{\tg}{\mathop{\mathrm{tg}}\nolimits}
+\newcommand{\ctg}{\mathop{\mathrm{ctg}}\nolimits}
+\newcommand{\arc}{\mathop{\mathrm{arc}}\nolimits}
+\renewcommand{\vec}[1]{\mathbf{#1}}
+\begin{document}
+\begin{center} \Large {\em XXI. Nemzetközi Magyar Matematikaverseny} \end{center}
+\begin{center} \large{\em Kecskemét, 2012. március 14-18.} \end{center}
+\smallskip
+\begin{center} \large{\bf 12. osztály} \end{center}
+\bigskip
+
+{\bf 1. feladat: } A tízes számrendszerben háromjegyű pozitív egész számok közül véletlenszerűen választunk egyet. Mennyi annak a valószínűsége, hogy olyan néggyel osztható számot választunk, melynek jegyei páronként különbözőek?
+
+\ki{Tarcsay Tamás}{Szeged}\medskip
+
+{\bf Megoldás: } A tízes számrendszerben háromjegyű számok száma 900.
+Egy pozitív egész szám akkor és csak akkor osztható 4-gyel, ha az utolsó két jegyéből képzett
+kétjegyű szám osztható 4-gyel.
+
+25 különböző 4-gyel osztható végződés van, ezek közül a 00, 44 és 88 nem felel meg, mert
+ismétlődő számjegy van benne, így marad 22 darab ,,jó'' végződés.
+
+Ezek között 6 tartalmaz 0 számjegyet (04, 08, 20, 40, 60, 80). Ezek elé még 8 különböző
+számjegyet írhatunk, így 48 darab ,,kedvező'' számot kaphatunk.
+
+A fennmaradó 16 végződés elé 7 különböző számot írhatunk (a 0-t nem), így 112 darab
+,,kedvező'' számot kaphatunk.
+A ,,kedvező'' számok száma: $48 + 112 = 160$.
+
+A keresett valószínűség: $\displaystyle{P=
+\frac{160}{900}=\frac{8}{45}\approx 0{,}18}$.
+
+\medskip
+
+\vonal
+
+{\bf 2. feladat: } Határozzuk meg a
+$$ \sqrt{2012}\cdot x^{\log_{2012}x}=x^2$$
+egyenlet megoldásai szorzata egészrészének utolsó öt számjegyét!
+
+\ki{Kántor Sándorné}{Debrecen}\medskip
+
+{\bf Megoldás: } A logaritmus definíciója miatt $x > 0$. Vegyük az egyenlet mindkét oldalának 2012-es alapú logaritmusát, és használjuk fel a logaritmus azonosságait:
+$$
+\frac{1}{2}\log_{2012} 2012 + \log^2_{2012} x = 2 \log_{2012} x.
+$$
+
+A $\log_{2012} x = a$ jelölés bevezetésével kapjuk, hogy 
+$a^2-2a+\frac{1}{2}=0$. 
+
+Innen $a_1= \log_{2012} x_1 = 1+\sqrt{\frac{1}{2}}$
+és 
+$a_2= \log_{2012} x_2 = 1-\sqrt{\frac{1}{2}}$.
+
+Mindkét megoldás pozitív és összegük 2.
+$\log_{2012}\left(x_1\cdot x_2\right)=
+\log_{2012} x_1 + \log_{2012} x_2 = 2$ miatt
+$$x_1 \cdot x_2 = 2012^2 = (2000+12)^2 = 2000^2+48000+144= 4~048~144,$$
+vagyis a szorzat utolsó öt számjegye: $48~144$.
+
+\medskip
+
+\vonal
+
+
+\newpage
+{\bf 3. feladat: } Mutassuk meg, hogy
+$$\sin^{2010}x+\cos^{2011}x+\sin^{2012}x\le 2$$
+bármely valós $x$ esetén!
+
+\ki{Katz Sándor}{Bonyhád}\medskip
+
+{\bf Megoldás: } Bármely 1-nél nem nagyobb abszolútértékű valós $z$ és bármely $n \ge 2$ esetén
+teljesül a $z^n \le z^2$ összefüggés.
+
+Mivel $\left|\sin x\right|\le 1$ és $\left|\cos x \right|\le 1$, ezért bármely valós $x$ esetén
+$$\sin^{2010} x + \cos^{2011} x + \sin^{2012} x \le 
+\sin^2 x + \cos^2 x + \sin^{2012} x \le 1 + 1 = 2.$$
+Egyenlőség akkor és csak akkor teljesül, ha 
+$x=\frac{\pi}{2}+k\pi$, ($k$ egész szám).
+
+\medskip
+
+\vonal
+
+
+{\bf 4. feladat: } Az $ABC$ egyenlő szárú háromszögben $AC = BC$, 
+az $AB$ alap felezőpontja $D$, az $A$ és a $D$ pontból
+a $BC$ szakaszra bocsátott merőlegesek talppontja rendre a $BC$ szakasz $E$, illetve $F$ belső pontja. A $DF$ szakasz $G$ felezőpontját a $C$ ponttal összekötő szakasz és az $AF$ szakasz metszéspontja $H$.
+Bocsássunk merőlegeseket a $D$ pontból az $AE$ és az $AF$ egyenesekre, a merőlegesek talppontjai
+legyenek rendre $K$ és $L$! Bizonyítsuk be, hogy az $AF$, $EH$ és $KL$ egyenesek az $ABC$ háromszöghöz hasonló háromszöget zárnak közre!
+
+\ki{Bíró Bálint}{Eger}\medskip
+
+{\bf Megoldás: } Az állítás bizonyításához készített ábrán az $AC$ szakasz Thalész-körét $k$, a
+$CBA \sphericalangle = CAB \sphericalangle$ szögeket pedig $\beta$ jelöli.
+
+\begin{center}
+\newrgbcolor{qqwuqq}{0 0.39 0}
+\psset{xunit=2.0cm,yunit=2.0cm,algebraic=true,dimen=middle,dotstyle=o,dotsize=3pt 0,linewidth=0.8pt,arrowsize=3pt 2,arrowinset=0.25}
+\begin{pspicture*}(-1.38,-0.4)(4.26,4.35)
+\pspolygon[hatchcolor=black,fillstyle=hlines,hatchangle=95.0,hatchsep=0.09](1.9,0.43)(2.41,-0.17)(2.74,0.62)
+\psline(0,0)(4,0)
+\psline(4,0)(2,3.9)
+\psline(2,3.9)(0,0)
+\psline(2,0)(3.58,0.81)
+\psline(3.17,1.62)(0,0)
+\psline(2,3.9)(2,0)
+\pscircle(1,1.95){4.38}
+\psline(0,0)(3.58,0.81)
+\psline(2,0)(1.9,0.43)
+\psline(2,0)(1.58,0.81)
+\psline(2.74,0.62)(2,0)
+\psline(2,3.9)(2.79,0.41)
+\psline(1.58,0.81)(2.41,-0.17)
+\psline(3.17,1.62)(2.41,-0.17)
+\parametricplot{2.0446476632896573}{3.615443990084554}{0.13*cos(t)+3.17|0.13*sin(t)+1.62}
+\psellipse*[linewidth=0.4pt](3.09,1.65)(0.01,0.01)
+\pscustom[linewidth=0.4pt,linecolor=darkgray]{
+\parametricplot{-2.667741317095033}{-1.0969449903001363}{0.13*cos(t)+3.58|0.13*sin(t)+0.81}
+\lineto(3.58,0.81)\closepath}
+\psellipse*[linewidth=0.4pt,linecolor=darkgray](3.56,0.74)(0.01,0.01)
+\pscustom[linewidth=0.4pt,linecolor=darkgray]{
+\parametricplot{-2.667741317095033}{-1.0969449903001363}{0.13*cos(t)+1.58|0.13*sin(t)+0.81}
+\lineto(1.58,0.81)\closepath}
+\psellipse*[linewidth=0.4pt,linecolor=darkgray](1.56,0.74)(0.01,0.01)
+\pscustom[linewidth=0.4pt,linecolor=darkgray]{
+\parametricplot{-2.9187440037380674}{-1.347947676943171}{0.13*cos(t)+1.9|0.13*sin(t)+0.43}
+\lineto(1.9,0.43)\closepath}
+\psellipse*[linewidth=0.4pt,linecolor=darkgray](1.86,0.37)(0.01,0.01)
+\pscustom[linewidth=0.4pt,linecolor=darkgray]{
+\parametricplot{1.5707963267948966}{3.141592653589793}{0.13*cos(t)+2|0.13*sin(t)+0}
+\lineto(2,0)\closepath}
+\psellipse*[linewidth=0.4pt,linecolor=darkgray](1.94,0.06)(0.01,0.01)
+\pscustom[linecolor=qqwuqq,fillcolor=qqwuqq,fillstyle=solid,opacity=0.1]{
+\parametricplot{2.0446476632896573}{3.1415926535897936}{0.27*cos(t)+4|0.27*sin(t)+0}
+\lineto(4,0)\closepath}
+\psline(1.9,0.43)(2.41,-0.17)
+\psline(2.41,-0.17)(2.74,0.62)
+\psline(2.74,0.62)(1.9,0.43)
+\begin{scriptsize}
+\psdots[dotstyle=*](0,0)
+\rput[bl](-0.13,-0.17){$A$}
+\psdots[dotstyle=*](4,0)
+\rput[bl](4.08,-0.17){$B$}
+\psdots[dotstyle=*](2,3.9)
+\rput[bl](2.03,3.95){$C$}
+\psdots[dotstyle=*](2,0)
+\rput[bl](1.97,-0.19){$D$}
+\psdots[dotstyle=*](3.17,1.62)
+\rput[bl](3.2,1.68){$E$}
+\psdots[dotstyle=*](3.58,0.81)
+\rput[bl](3.62,0.86){$F$}
+\rput[bl](-0.1,3.64){$k$}
+\psdots[dotstyle=*](1.58,0.81)
+\rput[bl](1.62,0.9){$K$}
+\psdots[dotstyle=*](1.9,0.43)
+\rput[bl](1.87,0.52){$L$}
+\psdots[dotstyle=*](2.74,0.62)
+\rput[bl](2.57,0.7){$H$}
+\psdots[dotstyle=*](2.79,0.41)
+\rput[bl](2.87,0.3){$G$}
+\psdots[dotstyle=*](2.41,-0.17)
+\rput[bl](2.51,-0.21){$M$}
+\rput[bl](3.8,0.04){\qqwuqq{$\beta$}}
+\end{scriptsize}
+\end{pspicture*}
+\end{center}
+
+Mivel $ABE \sphericalangle = \beta$, ezért az $ABE$ derékszögű háromszögben $BAE \sphericalangle = 90 ^\circ  - \beta$, így a $DAK$
+derékszögű háromszögben $ADK \sphericalangle = \beta$, továbbá az egybevágó $ACD$ és $BCD$ derékszögű
+háromszögekben $ACD \sphericalangle = BCD \sphericalangle = 90 ^\circ- \beta$.
+
+Az $A$, $D$, $L$, $K$ pontok az $AD$ szakasz fölé rajzolt Thalész-körre illeszkednek, ezek a pontok
+tehát egy húrnégyszög csúcsai, ebből a kerületi szögek tétele miatt $ADK \sphericalangle = ALK \sphericalangle = \beta$ 
+következik.
+
+Az $AF$, $EH$ és $KL$ egyenesek által közrezárt $LMH$ háromszögben azonban $HLM \sphericalangle = \beta$, hiszen
+$ALK \sphericalangle$ és $HLM \sphericalangle$ csúcsszögek.
+
+A továbbiakban belátjuk, hogy a $H$ pont illeszkedik $k$-ra. Ehhez először igazoljuk, hogy az $AF$
+egyenes merőleges a $CG$ egyenesre.
+
+A $DF$ egyenes párhuzamos $AE$-vel, hiszen mindkettő merőleges $BC$-re, és mivel $D$ az $AB$
+felezőpontja, ezért $DF$ középvonala az $ABE$ háromszögnek, és így $F$ felezőpontja az $EF$
+szakasznak. A megfelelő szögek egyenlősége miatt az $ABE$ és $DBF$ háromszögek hasonlók (a
+hasonlóság aránya $2:1$).
+
+A $DF$ szakasz a $BCD$ derékszögű háromszög átfogójához tartozó magassága, és mint
+ismeretes, ez a magasság két hasonló háromszögre bontja az eredeti háromszöget, eszerint a
+$DBF$ és $CDF$ háromszögek hasonlók.
+A hasonlóság tranzitív tulajdonsága miatt ezért az $ABE$ és a $CDF$ háromszögek is hasonlók, a
+megfelelő oldalak aránya tehát egyenlő, azaz $\frac{AE}{EB}
+=\frac{CF}{FD}$.
+
+Mivel azonban $FD = 2 \cdot  FG$ és $EB = 2 \cdot  EF$, ezért
+\begin{equation} \label{eq:geo}
+\frac{AE}{EF} = \frac{CF}{FG}
+\end{equation}
+
+Az (\ref{eq:geo}) egyenlőség szerint az $AEF$ és $CFG$ háromszögekben két-két oldal aránya megegyezik,
+ugyanakkor ezekben a háromszögekben az $AE$; $EF$ illetve $CF$; $FG$ oldalak derékszöget zárnak
+be, így tehát az $AEF$ és $CFG$ háromszögek hasonlók.
+
+Hasonló háromszögekben a megfelelő szögek egyenlők, így $FAE \sphericalangle = GCF \sphericalangle = HCF \sphericalangle$ (az
+ábrán két ívvel jelölt szögek).
+
+Az $A$ és $C$ pontok az $EH$ egyenes ugyanazon oldalán vannak, az előzőek szerint pedig az $A$ és
+$C$ pontokból az $EH$ szakasz egyenlő nagyságú szögben látszik, így az $A$, $H$, $E$, $C$ pontok egy
+körre, a $k$ körre illeszkednek.
+
+Az $AHEC$ húrnégyszögben $ACE \sphericalangle = 180 ^\circ-2\beta$, ezért a vele szemközti szögre $AHE \sphericalangle = 2 \beta$ 
+teljesül. Az $AHE \sphericalangle$ mellékszöge az $LHM \sphericalangle$, és így $LHM \sphericalangle = 180 ^\circ-2\beta$.
+
+Az
+$LMH$
+háromszögben
+tehát
+$HLM \sphericalangle + LHM \sphericalangle + HML \sphericalangle = 180 ^\circ  $,
+azaz
+$\beta  + 180 ^\circ - 2 \beta  + HML \sphericalangle = 180 ^\circ$, innen pedig azonnal adódik, hogy $HML \sphericalangle = \beta$.
+
+Az $LMH$ háromszög szögei ezért $HLM \sphericalangle = HML \sphericalangle = \beta$  és $LHM \sphericalangle = 180 ^\circ- 2 \beta$, ezért az $ABC$
+háromszög, és az $AF$, $EH$ és $KL$ egyenesek által közrezárt $LMH$ háromszög valóban hasonlók.
+
+\textit{Megjegyzés}: A $KL$ egyenes az $AEH$ háromszögnek a $D$ ponthoz tartozó Simson-Wallace-egyenese.
+\medskip
+
+\vonal
+
+
+{\bf 5. feladat: } $A$, $B$, $C$ véges halmazok, amelyekre teljesül, 
+hogy $|A|=|B|=|C|=a$ és $|A \cap B \cap C|=b$, ahol $a$ és
+$b$ nemnegatív egészek. Adjuk meg $a$ és $b$ függvényeként az $|A \cup B \cup C|$ minimumát és maximumát! ( $|X|$ az $X$ halmaz elemeinek számát jelöli.)
+
+\ki{Gecse Frigyes}{Kisvárda}\medskip
+
+{\bf Megoldás: } Előbb a maximumot (jelölje $x$) határozzuk meg. Legyen 
+$M = A \cap  B \cap  C$,
+$A_1 = A \setminus  M$, $B_1 = B \setminus  M$, $C_1 = C \setminus  M$. 
+Mivel $A$ az $A_1$ és $M$ diszjunkt halmazok uniója, ezért
+$a = |A| = |A_1|+|M|$ és $b = |M|$ miatt $A_1 = a-b$. 
+Hasonlóan $B_1 = a-b$, $C_1 = a-b$.
+
+Nyilvánvaló, hogy
+\begin{equation} \label{eq:e51}
+A \cup  B \cup  C = M \cup  A_1 \cup  B_1 \cup  C_1.
+\end{equation}
+
+Az $|A \cup  B \cup  C|$ akkor a legnagyobb, 
+ha az $A_1, B_1, C_1$ halmazok páronként diszjunktak.
+
+Ekkor
+$$
+x = \max |A \cup  B \cup  C| = 
+|M|+|A_1|+|B_1|+|C_1| = b+3(a-b)= 3a-2b.$$
+
+Térjünk át a minimum (jelölje $y$) meghatározására! Az $M$ és az 
+$A_1 \cup  B_1 \cup  C_1$ halmazok
+diszjunktak, ezért (\ref{eq:e51}) alapján a 
+$z = |A_1 \cup  B_1 \cup  C_1|$ jelöléssel
+
+\begin{equation} \label{eq:e52}
+|A \cup  B \cup  C| = |M|+|A_1 \cup  B_1 \cup  C_1| = b+z.
+\end{equation}
+
+Nézzük, hogyan választható $z$ a legkisebbnek! Vezessük be 
+az $A_1 \cap  B_1 = D$, $A_2 = A_1 \setminus  D$,
+$B_2 = B_1 \setminus  D$, $D = u$, $v = a-b-u$ jelöléseket! Két esetet vizsgálunk.
+
+\begin{enumerate}
+\item Ha $u \ge  v$, akkor 
+$u \ge \frac 12(a-b)$. Ekkor a $C$ halmaz úgy választható, hogy 
+$A_2 \subset  C$, $B_2 \subset C$ legyen. Ekkor
+\begin{equation}\label{eq:e53}
+z = |A_1 \cup  B_1 \cup  C_1| = 
+|D|+|A_2|+|B_2|+|C_1 \setminus \left(A_2 \cup  B_2\right) 
+= u+2v+|C_1 \setminus  \left(A_2 \cup  B_2\right)|.
+\end{equation}
+
+De $|C_1 \setminus \left(A_2 \cup  B_2\right) 
+= a-b-2v$, mert $A_2$ és $B_2$ diszjunktak, 
+és így $A_2 \cap  B_2 \cap  C_1 = \emptyset$.
+
+Ennélfogva
+$$
+z = u+2v+a-b-2v = u+a-b \ge \frac 12 (a-b)+a-b 
+= \frac{3(a-b)}{2}.
+$$
+
+Ha $\frac 12(a-b)$ egész szám, 
+akkor $A_1$-et és $B_1$-et úgy választjuk ki, hogy 
+$u=\frac 12(a-b)$ legyen.
+
+Ekkor $z = \frac 12(a-b)$ és 
+$y = b+\frac 32(a-b)=
+\left[\frac{3a-b+1}{2}\right]
+$, 
+ahol [ ] az egészrész jele. Ha az
+$\frac 12(a-b)$ $\frac 12$-del különbözik egy egész számtól, akkor a halmazokat úgy kell megválasztani,
+hogy 
+$
+z = \frac{3a-b}{2}+\frac{1}{2}$
+legyen, és ismét 
+$y=b+\frac{3a-b}{2}+\frac{1}{2}
+=
+\left[
+\frac{3a-b+1}{2}
+\right]$.
+
+\item Ha $u > v$, akkor a halmazok úgy választhatók, 
+hogy $z = u+2v = a-b+v \ge \frac{3(a-b)}{2}$, és
+ismét $y = \left[\frac{3a-b+1}{2}\right]$
+\end{enumerate}
+
+
+
+Tehát a feladat megoldása: $x = 3a-2b$, $y =\left[\frac{3a-b+1}{2}\right]$.
+
+\medskip
+
+\vonal
+
+
+{\bf 6. feladat: } Legyen $a_1=1, a_2=2$ és
+$\displaystyle{\frac{1}{a_{n+2}}
+=\frac{1}{2}-\sum_{k=1}^{n}\frac{a_{k+2}}{a_{k+1}\cdot(a_k+a_{k+1}+a_{k+2})}}$
+($n \ge 1$ egész). 
+Adjuk meg $a_n$-t zárt formában, azaz $n$ függvényeként!
+
+\ki{Bencze Mihály}{Brassó}\medskip
+
+{\bf Megoldás: } A rekurzív definíció szerint:
+
+
+\begin{eqnarray*}
+\frac{1}{a_{1+2}}
+&=&
+\frac{1}{2}-\sum_{k=1}^1 \frac{a_{k+2}}{a_{k+1}\left(a_k+a_{k+1}+a_{k+2}\right)} =
+\frac{1}{2}-\frac{a_{1+2}}{a_{1+1}\left(a_1+a_{1+1}+a_{1+2}\right)}\\
+\frac{1}{a_{3}}
+&=&
+\frac{1}{2}-\frac{a_{3}}{a_{2}\left(a_1+a_{2}+a_{3}\right)}\\
+\frac{1}{a_{3}}
+&=&
+\frac{1}{2}-\frac{a_{3}}{2\left(1+2+a_{3}\right)}\\ 
+\frac{1}{a_{3}}
+&=&
+\frac{1}{2}-\frac{a_{3}}{2\left(3+a_{3}\right)}\\
+6+2a_3
+&=&
+a_3(3+a_3)-a_3^2\\
+6+2a_3
+&=&
+3a_3\\
+6
+&=&
+a_3
+\end{eqnarray*}
+
+
+Az előzmények alapján megfogalmazható a sejtés, 
+hogy $a_n = n!$. Bizonyítsuk az állítást teljes
+indukcióval!
+
+Láttuk, hogy $n = 1$, $n = 2$, $n = 3$ esetén igaz az állítás! Tegyük fel, hogy $a_t = t!$, ha $t$ $n$-nél
+nem nagyobb pozitív egész szám ($n \ge 4$)!
+A rekurzív definíció szerint:
+
+$$\frac{1}{a_{t+1}}=\frac{1}{a_{(t-1)+2}}=
+\frac{1}{2}-\sum_{k=1}^{t-1} \frac{a_{k+2}}{a_{k+1}(a_k+a_{k+1}+a_{k+2})}=
+$$
+$$
+=\frac{1}{2}-\sum_{k=1}^{t-2} \frac{a_{k+2}}{a_{k+1}(a_k+a_{k+1}+a_{k+2})}
+-\frac{a_{t+1}}{a_{t}(a_{t-1}+a_t+a_{t+1})}
+$$
+
+Alkalmazva az indukciós feltevést:
+
+\begin{eqnarray*}
+\frac{1}{a_{t+1}}&=& 
+\frac{1}{2}-\sum_{k=1}^{t-2} \frac{(k+2)!}{(k+1)!(k!+(k+1)!+(k+2)!)}
+-\frac{a_{t+1}}{t!\cdot((t-1)!+t!+a_{t+1})}\\
+\frac{1}{a_{t+1}}&=& 
+\frac{1}{2}-\sum_{k=1}^{t-2} \frac{k+2}{k!\cdot(1+k+1+(k+1)(k+2))}
+-\frac{a_{t+1}}{t!\cdot((t-1)!+t!+a_{t+1})}\\
+\frac{1}{a_{t+1}}&=& 
+\frac{1}{2}-\sum_{k=1}^{t-2} \frac{k+2}{k!\cdot(1+k+1+k^2+3k+2)}
+-\frac{a_{t+1}}{t!\cdot((t-1)!+t!+a_{t+1})}\\
+\frac{1}{a_{t+1}}&=& 
+\frac{1}{2}-\sum_{k=1}^{t-2} \frac{k+2}{k!\cdot(k^2+4k+4)}
+-\frac{a_{t+1}}{t!\cdot((t-1)!+t!+a_{t+1})}\\
+\frac{1}{a_{t+1}}&=& 
+\frac{1}{2}-\sum_{k=1}^{t-2} \frac{k+2}{k!\cdot(k+2)^2}
+-\frac{a_{t+1}}{t!\cdot((t-1)!+t!+a_{t+1})}\\
+\frac{1}{a_{t+1}}&=& 
+\frac{1}{2}-\sum_{k=1}^{t-2} \frac{1}{k!\cdot(k+2)}
+-\frac{a_{t+1}}{t!\cdot((t-1)!+t!+a_{t+1})}
+\end{eqnarray*}
+
+Ugyanakkor
+
+$$\frac{1}{(k+1)!}-\frac{1}{(k+2)!}=
+\frac{(k+2)!-(k+1)!}{(k+1)!\cdot(k+2)!}=
+\frac{(k+1)!(k+2-1)}{(k+1)!\cdot(k+2)!}=
+\frac{k+1}{(k+2)\cdot(k+1)\cdot k!}=
+\frac{1}{k!\cdot (k+2)}
+$$
+
+Ezt felhasználva
+
+$$\frac{1}{a_{t+1}}=\frac{1}{2}-\sum_{k=1}^{t-2}
+\left(\frac{1}{(k+1)!}-\frac{1}{(k+2)!}\right)-\frac{a_{t+1}}{t!\cdot((t-1)!+t!+a_{t+1})}$$
+
+$$\frac{1}{a_{t+1}} =
+\frac{1}{2}-\frac{1}{2!}+\frac{1}{3!}-\frac{1}{3!}+\frac{1}{4!}-
+\ldots 
+-\frac{1}{(t-2)!}+\frac{1}{(t-1)!}-\frac{1}{(t-1)!}+\frac{1}{t!}
+-\frac{a_{t+1}}{t!\cdot((t-1)!+t!+a_{t+1})}
+$$
+
+Teleszkópikus összeget kaptunk:
+
+\begin{eqnarray*}
+\frac{1}{a_{t+1}}&=&\frac{1}{t!}-\frac{a_{t+1}}{t!\cdot((t-1)!+t!+a_{t+1})}\\
+t!&=&a_{t+1}-\frac{a_{t+1}^2}{(t-1)!\cdot(t+1)+a_{t+1}}\\
+(t-1)!\cdot(t+1)!+t!\cdot a_{t+1} &=&(t-1)!\cdot(t+1)\cdot a_{t+1}\\
+(t-1)!\cdot(t+1)! &=&(t-1)!\cdot(t+1)\cdot a_{t+1}-t!\cdot a_{t+1}\\
+(t-1)!\cdot(t+1)! &=&(t-1)!\cdot a_{t+1}\cdot (t+1-t)\\
+(t+1)! &=& a_{t+1}
+\end{eqnarray*}
+
+Az állítást bebizonyítottuk.
+
+\vfill
+\end{document}

@@ -1,0 +1,623 @@
+\documentclass[a4paper,10pt]{article} 
+\usepackage[utf8]{inputenc}
+\usepackage{graphicx}
+\usepackage{pstricks-add}
+\usepackage{amssymb, amsmath}
+\voffset - 20pt
+\hoffset - 35pt
+\textwidth 450pt
+\textheight 650pt 
+\frenchspacing 
+
+\pagestyle{empty}
+\def\ki#1#2{\hfill {\it #1 (#2)}\medskip}
+
+\def\tg{\, \hbox{tg} \,}
+\def\ctg{\, \hbox{ctg} \,}
+\def\arctg{\, \hbox{arctg} \,}
+\def\arcctg{\, \hbox{arcctg} \,}
+
+\begin{document}
+\begin{center} \Large {\em XXII. Nemzetközi Magyar Matematikaverseny} \end{center}
+\begin{center} \large{\em Győr, 2013. március 14--18.} \end{center}
+\smallskip
+\begin{center} \large{\bf 10. osztály} \end{center}
+\bigskip 
+
+{\bf 1. feladat: }
+Határozza meg azt az $x$ valós számot, amelyre az
+$$f(x) = |8 – x| + | 11 – x | + | 13 – x | + | 16 – x | + | 19 – x |$$
+függvény értéke a legkisebb. Mennyi ez az érték?
+
+\ki{Kántor Sándorné}{Magyarország}\medskip
+
+{\bf 1. feladat megoldása: }
+\begin{equation*}
+|8-x|=\begin{cases}
+-x+8, & \text{ha } x < 8 \\
+x-8, & \text{ha } x\ge 8
+\end{cases}
+\end{equation*}
+\begin{equation*}
+|11-x|=\begin{cases}
+-x+11, & \text{ha } x < 11 \\
+x-11, & \text{ha } x\ge 11
+\end{cases}
+\end{equation*}
+\begin{equation*}
+|13-x|=\begin{cases}
+-x+13, & \text{ha } x < 13 \\
+x-13, & \text{ha } x\ge 13
+\end{cases}
+\end{equation*}
+\begin{equation*}
+|16-x|=\begin{cases}
+-x+16, & \text{ha } x < 16 \\
+x-16, & \text{ha } x\ge 16
+\end{cases}
+\end{equation*}
+\begin{equation*}
+|19-x|=\begin{cases}
+-x+19, & \text{ha } x < 19 \\
+x-19, & \text{ha } x\ge 19.
+\end{cases}
+\end{equation*}
+
+Így
+\begin{equation*}
+f(x)=\begin{cases}
+-5x+67, & \text{ha } x < 8 \\
+-3x+51, & \text{ha } 8\le x < 11\\
+-x+29, & \text{ha } 11\le x < 13\\
+x+3, & \text{ha } 13\le x < 16\\
+3x-29, & \text{ha } 16\le x < 19\\
+5x-67, & \text{ha } 19 \le x.
+\end{cases}
+\end{equation*}
+
+$$f(13)=16.$$
+Könnyen látható, hogy $f(x) > 16$ minden $x\in \mathbb{R} \setminus \{13\}$-ra. A függvény minimális értéke tehát 16, és ezt $x=13$-nál veszi fel.
+
+{\bf Általánosítás: }
+Ha $a_1\le a_2 \le \dots \le a_n$, akkor az $f(x)=|a_1-x|+|a_2-x|+\dots+|a_n-x|$ függvénynek, ha $n=2k-1$ ($k\in \mathbb{N}^+$), akkor az $x=a_k$ helyen van minimuma, ha pedig $n=2k$, akkor $f(x)$ értéke az $\left[a_k, a_{k+1}\right]$ intervallumon állandó, máshol pedig nagyobb.
+\medskip
+
+\hbox to \hsize{\hskip2truecm\hrulefill\hskip2truecm}
+{\bf 2. feladat: }
+Keresse meg azokat a pozitív egész számpárokat, amelyeknek a számtani közepe eggyel nagyobb a harmonikus közepüknél!
+(Emlékeztetőül: két pozitív valós szám harmonikus közepének reciproka egyenlő a számok reciprokainak számtani közepével.)
+
+\ki{Kallós Béla}{Magyarország}\medskip
+
+{\bf 2. feladat I. megoldása: }
+Jelöljük a két pozitív egész számot $a$-val és $b$-vel, ahol $a>b$ (egyenlők nem lehetnek,
+mert akkor megegyezik a számtani és a harmonikus közepük), és legyen a különbségük $k=a-b$. Ekkor felírhatók a következők:
+$$\frac{a+b}{2}=\frac{2ab}{a+b}+1$$
+$$(a+b)^2=4ab+2a+2b$$
+$$(a-b)^2=2a+2b$$
+$$k^2=4b+2k$$
+$$k(k-2)=4b$$
+$$b=\frac{k(k-2)}{4}$$
+$$a=\frac{k(k-2)}{4}+k=\frac{k(k+2)}{4}.$$
+
+Ekkor $a$ és $b$ csak úgy lehet pozitív egész, ha $k$ $2$-nél nagyobb páros szám.
+Vagyis $a$ és $b$ olyan számok lehetnek, amelyeket három szomszédos pozitív páros
+számból kapunk: $b$ a két kisebbik páros szám szorzatának negyede, $a$ a két nagyobbik
+páros szám szorzatának a negyede lehet, azaz $b=\frac{k(k-2)}{4}$ és $a=\frac{k(k+2)}{4}$, ahol $k\ge 4$
+páros szám.
+
+Megmutatjuk, hogy minden ilyen esetben a számtani közép $1$-gyel nagyobb lesz a
+harmonikus középnél. A harmonikus közép 
+$$\frac{2\cdot \frac{k(k+2)}{4}\cdot \frac{k(k-2)}{4}}{\frac{k(k+2)}{4}+\frac{k(k-2)}{4}}=\frac{\frac{k^2(k^2-4)}{8}}{\frac{2k^2}{4}}=\frac{k^2-4}{4}=\frac{k^2}{4}-1,$$
+a számtani közép $$\frac{\frac{k(k+2)}{4}+\frac{k(k-2)}{4}}{2}=\frac{k^2}{4}.$$
+
+{\bf 2. feladat II. megoldása: }
+Jelöljük a két pozitív egész számot $a$-val és $b$-vel, ahol $a>b$ (egyenlők nem lehetnek, mert akkor megegyezik a számtani és a harmonikus közepük). Ekkor felírhatók a kö\-vet\-ke\-zők:
+$$\frac{a+b}{2}=\frac{2}{\frac{1}{a}+\frac{1}{b}}+1$$
+$$\frac{a+b}{2}=\frac{2ab}{a+b}+1$$
+$$(a+b)^2=4ab+2a+2b$$
+$$(a-b)^2=2a+2b.$$
+
+A jobb oldal páros, tehát a bal oldal is. A négyzet miatt a számok különbsége is páros, azaz
+$$a-b =2t,$$ (ahol $t$ pozitív egész), és így $$a+b=2t^2.$$
+
+A két egyenlet összeadásával illetve kivonásával
+$$a=t^2+t,\qquad b=t^2-t.$$
+Mivel mind a két szám pozitív, ezért $t\ge 2$.
+
+Az ellenőrzés azt mutatja, hogy a kapott alakok jók, hiszen 
+$$\frac{a+b}{2}=t^2,$$
+$$\frac{2}{\frac{1}{a}+\frac{1}{b}}=\frac{2ab}{a+b}=\frac{2t^2(t^2-1)}{2t^2}=t^2-1=\frac{a+b}{2}-1.$$
+\medskip
+
+
+\hbox to \hsize{\hskip2truecm\hrulefill\hskip2truecm}
+{\bf 3. feladat: }
+Igazolja, hogy bármely $2 \le n$ egész számhoz léteznek olyan pozitív egész $x$, $y$, $z$ számok, melyekre teljesül, hogy
+$$x^2+y^2+z^2=25^n.$$
+
+\ki{Bencze Mihály}{Erdély}\medskip
+
+{\bf 3. feladat megoldása: }
+$$12^2+16^2+15^2=25^2$$
+$$72^2+96^2+35^2=25^3$$
+$$576^2+168^2+175^2=25^4$$
+$$\dots$$
+$$(x_2, y_2, z_2)=(12, 16, 15)$$
+$$(x_3, y_3, z_3)=(72, 96, 35)$$
+$$(x_4, y_4, z_4)=(576, 168, 175).$$
+
+Teljes indukcióval: ha $(x_n, y_n, z_n)$ megoldások, akkor
+$$x_{n+1}=5^2x_n, \quad y_{n+1}=5^2y_n, \quad z_{n+1}=5^2z_n$$
+szintén megoldások lesznek, ugyanis
+$$x_{n+1}^2+y_{n+1}^2+z_{n+1}^2=25\left(x_n^2+y_n^2+z_n^2\right)=25^{n+1}.$$
+
+Tehát minden $1<n$ természetes számhoz találtunk alkalmas $x$, $y$, $z$ természetes számokat a feladat követelményének megfelelően. (Három ilyen számhármas sorozatunk is van, az $n=1$-hez nincs ilyen $x$, $y$, $z$.)
+\medskip
+
+
+\hbox to \hsize{\hskip2truecm\hrulefill\hskip2truecm}
+{\bf 4. feladat: }
+Ha $x$, $y$, $z$ pozitív egész számok és $3x+668y=671z$, mutassa meg, hogy az $$n=x^2(y-z)+y^2(z-x)+z^2(x-y)$$ szám osztható $2013\cdot 668$-cal!
+
+\ki{Longáver Lajos}{Erdély}\medskip
+
+{\bf 4. feladat I. megoldása: }
+$3x+668y=671z\Leftrightarrow 3x-3z = 668z-668y \Leftrightarrow 3(x-z)=668(z-y)$.
+De $3$ és $668$ relatív prímek, ezért $x-z=668\cdot k_1$, $z-y=3\cdot k_2$, ahol $k_1, k_2 \in \mathbb{Z}$.
+
+$3x+668y=671z\Leftrightarrow 668y=671z-3x \Leftrightarrow 668y-668x=671z-671x\Leftrightarrow 668(y-x)=671(z-x)$.
+De $668$ és $671$ relatív prímek, ezért $y-x=671\cdot k_3$, ahol $k_3 \in \mathbb{Z}$.
+\begin{eqnarray*}
+n &=& x^2(y-z)+y^2(z-x)+z^2(x-y) \\ 
+&=& x^2(y-z)+y^2z-y^2x+z^2x-z^2y \\
+&=& x^2(y-z)+yz(y-z)-x(y-z)(y+z) \\
+&=& (y-z)(x^2+yz-xy-xz) \\
+&=& (y-z)(x-y)(x-z). 
+\end{eqnarray*}
+Így $3\cdot 671\cdot 668=2013\cdot 668 | n$.
+
+{\bf 4. feladat II. megoldása: }
+Alakítsuk át a vizsgálandó kifejezésünket:
+\begin{eqnarray*}
+n &=& x^2(y-z)+y^2(z-x)+z^2(x-y) \\ 
+&=& x^2(y-z)+y^2z-yz^2+xz^2-xy^2 \\
+&=& x^2(y-z)+yz(y-z)-x\left(y^2-z^2\right) \\
+&=& (y-z)\left(x^2+yz-x(y+z)\right) \\
+&=& (y-z)(x-y)(x-z). 
+\end{eqnarray*}
+
+Nézzük most a feltételt:
+$$3x+668y=671z$$
+$$3x-3y=671z-671y$$
+$$3(x-y)=671(z-y).$$
+Mivel $3$ és $671$ relatív prím, ezért 
+$$3|z-y \qquad 671|x-y.$$
+
+Nézzük most a feltételt ismét:
+$$3x+668y=671z$$
+$$668y-668z=671z-671x$$
+$$668(y-x)=671(z-x).$$
+Mivel $668$ és $671$ relatív prím, ezért
+$$668|z-x \qquad 671|x-y.$$
+
+Összefoglalva
+$$3|z-y \qquad 668|z-x \qquad 671|x-y \quad \Rightarrow \quad 3\cdot 668\cdot 671|(x-y)(y-z)(z-x),$$
+és ezt kellett bizonyítanunk.
+\medskip
+
+
+\hbox to \hsize{\hskip2truecm\hrulefill\hskip2truecm}
+{\bf 5. feladat: }
+Az $A$-ban derékszögű $ABC$ háromszögben a $BAC$ szög belső szögfelezője $BC$-t $D$-ben metszi. Az $ADB$ szög belső szögfelezője $AB$-t az $E$ pontban, míg az $ADC$ szög belső szögfelezője $AC$-t az $F$ pontban metszi.
+Igazolja, hogy a szokásos ($AB = c$, $BC = a$, $CA= b$) jelölésekkel: $BE+CF=\frac{a^2}{b+c}$.
+
+\ki{Molnár István}{Magyarország}\medskip
+
+{\bf 5. feladat I. megoldása: }
+Legyen $BE=x$ és $CF=y$. Ekkor $AE=c-x$, illetve $AF=b-y$ lesz.
+
+\begin{center}
+\psset{xunit=1.1cm,yunit=1.1cm,algebraic=true,dotstyle=o,dotsize=4pt 0,linewidth=0.8pt}
+\begin{pspicture*}(-0.74,-0.5)(3.74,5.18)
+\psline(3.36,0)(0,4.66)
+\psline(0,0)(1.95,1.95)
+\psline(1.95,1.95)(1.8,0)
+\psline(0,2.11)(1.95,1.95)
+\psline(1.8,0)(3.36,0)
+\psline(0,0)(1.8,0)
+\psline(0,4.66)(0,2.11)
+\psline(0,2.11)(0,0)
+\pscustom[fillcolor=black,fillstyle=solid,opacity=0.1]{\parametricplot{0.0}{0.7853981633974483}{0.68*cos(t)+0|0.68*sin(t)+0}\lineto(0,0)\closepath}
+\pscustom[fillcolor=black,fillstyle=solid,opacity=0.1]{\parametricplot{0.7853981633974483}{1.5707963267948966}{0.68*cos(t)+0|0.68*sin(t)+0}\lineto(0,0)\closepath}
+\pscustom[fillcolor=black,fillstyle=solid,opacity=0.1]{\parametricplot{-2.356194490192345}{-1.6511448606988508}{0.6*cos(t)+1.95|0.6*sin(t)+1.95}\lineto(1.95,1.95)\closepath}
+\parametricplot{-2.356194490192345}{-1.6511448606988508}{0.6*cos(t)+1.95|0.6*sin(t)+1.95}
+\parametricplot{-2.356194490192345}{-1.6511448606988508}{0.53*cos(t)+1.95|0.53*sin(t)+1.95}
+\pscustom[fillcolor=black,fillstyle=solid,opacity=0.1]{\parametricplot{-1.651144860698851}{-0.9460952312053572}{0.6*cos(t)+1.95|0.6*sin(t)+1.95}\lineto(1.95,1.95)\closepath}
+\parametricplot{-1.651144860698851}{-0.9460952312053572}{0.6*cos(t)+1.95|0.6*sin(t)+1.95}
+\parametricplot{-1.651144860698851}{-0.9460952312053572}{0.53*cos(t)+1.95|0.53*sin(t)+1.95}
+\pscustom[fillcolor=black,fillstyle=solid,opacity=0.1]{\parametricplot{3.061244119685839}{3.9269908169872414}{0.6*cos(t)+1.95|0.6*sin(t)+1.95}\lineto(1.95,1.95)\closepath}
+\parametricplot{3.061244119685839}{3.9269908169872414}{0.6*cos(t)+1.95|0.6*sin(t)+1.95}
+\psline(1.43,1.76)(1.35,1.73)
+\pscustom[fillcolor=black,fillstyle=solid,opacity=0.1]{\parametricplot{2.1954974223844363}{3.061244119685839}{0.6*cos(t)+1.95|0.6*sin(t)+1.95}\lineto(1.95,1.95)\closepath}
+\parametricplot{2.1954974223844363}{3.061244119685839}{0.6*cos(t)+1.95|0.6*sin(t)+1.95}
+\psline(1.47,2.23)(1.39,2.27)
+\psdots[dotstyle=*](0,0)
+\rput[bl](-0.36,-0.25){$A$}
+\psdots[dotstyle=*](0,4.66)
+\rput[bl](-0.11,4.82){$C$}
+\psdots[dotstyle=*](3.36,0)
+\rput[bl](3.44,-0.2){$B$}
+\rput[bl](1.77,2.28){$a$}
+\psdots[dotstyle=*](1.95,1.95)
+\rput[bl](2.04,1.95){$D$}
+\psdots[dotstyle=*](1.8,0)
+\rput[bl](1.8,-0.33){$E$}
+\psdots[dotstyle=*](0,2.11)
+\rput[bl](-0.35,2.15){$F$}
+\rput[bl](2.51,-0.3){$x$}
+\rput[bl](0.61,-0.27){$c-x$}
+\rput[bl](-0.23,3.2){$y$}
+\rput[bl](-0.74,1.02){$b-y$}
+\rput[bl](0.19,0.04){$45^\circ$}
+\rput[bl](0.01,0.3){$45^\circ$}
+\end{pspicture*}
+\end{center}
+
+Alkalmazva a szögfelezőtételt az $ABC$ háromszögben kapjuk, hogy $\frac{BD}{DC}=\frac{c}{b}$.
+Innen egyszerű szá\-mí\-tá\-sok\-kal felhasználva, hogy $BD+DC=a$, $BD=\frac{ac}{b+c}$ illetve $DC=\frac{ab}{b+c}$.
+
+Az $ABC$ háromszög területét kétféleképpen felírva:
+$$\left\{
+\begin{array}{l}
+T_{ABC}=\frac{bc}{2}\\
+T_{ABC}=T_{ADC}+T_{ADB}=\frac{AD\cdot b\cdot \sin 45^\circ}{2}+\frac{AD\cdot c\cdot \sin 45^\circ}{2}=AD\cdot \frac{\sqrt{2}}{4}\cdot (b+c),
+\end{array}
+\right.$$
+ahonnan $$\frac{bc}{2}=AD\cdot \frac{\sqrt{2}}{4}\cdot (b+c) \quad \Rightarrow \quad AD=\frac{bc\sqrt{2}}{b+c}.$$
+
+Vagy: hosszabbítsuk meg az $AB$ oldalt $A$-n túl $AC=b$-vel, így kapjuk a $C'$ pontot. $CC'=b\sqrt{2}$, hiszen egyenlő szárú derékszögű háromszöget kapunk. Ugyanakkor $CC'$ párhuzamos $AD$-vel, így alkalmazható rá a párhuzamos szelőszakaszok tétele:
+$$\frac{AD}{CC'}=\frac{AB}{C'B} \quad \Rightarrow \quad AD=CC'\cdot \frac{AB}{C'B}=b\sqrt{2}\cdot \frac{c}{b+c}=\frac{bc\sqrt{2}}{b+c}.$$
+
+(Ugyanezt az eredményt úgyis megkaphattuk volna, ha felhasználjuk a belső szögfelező hosszára vonatkozó összefüggést, mely alapján $AD=\frac{2}{b+c}\cdot \sqrt{bcs(s-a)}$, ahol $s$ az $ABC$ háromszög félkerülete, illetve az $a^2=b^2+c^2$ összefüggést a háromszög derékszögű volta miatt.)
+
+Alkalmazzuk a szögfelezőtételt az $ADB$ háromszögben:
+$$\frac{AE}{EB}=\frac{AD}{DB} \quad \Rightarrow \quad \frac{c-x}{x}=\frac{\frac{bc\sqrt{2}}{b+c}}{\frac{ac}{b+c}}=\frac{b\sqrt{2}}{a}.$$
+Innen egyszerű számításokkal kapjuk, hogy $x=\frac{ac}{a+b\sqrt{2}}$.
+
+Alkalmazzuk most a szögfelezőtételt az $ADC$ háromszögben:
+$$\frac{AF}{FC}=\frac{AD}{DC}\quad \Rightarrow \quad \frac{b-y}{y}=\frac{\frac{bc\sqrt{2}}{b+c}}{\frac{ab}{b+c}}=\frac{c\sqrt{2}}{a}.$$
+Innen egyszerű számításokkal kapjuk, hogy $y=\frac{ab}{a+c\sqrt{2}}$.
+
+A kapott eredményeket és az $a^2=b^2+c^2$ összefüggést felhasználva:
+\begin{eqnarray*}
+BE+CF & = & x+y = \frac{ac}{a+b\sqrt{2}}+\frac{ab}{a+c\sqrt{2}} = a\cdot \frac{ac+c^2\sqrt2+ab+b^2\sqrt2}{a^2+ab\sqrt2+ac\sqrt2+2bc} \\
+& = & a\cdot \frac{a(b+c)+(b^2+c^2)\sqrt2}{a^2+2bc+a(b+c)\sqrt2} = a\cdot \frac{a(b+c)+a^2\sqrt2}{b^2+c^2+2bc+a(b+c)\sqrt2} \\
+& = & a^2\cdot \frac{b+c+a\sqrt{2}}{(b+c)^2+a(b+c)\sqrt2} = \frac{a^2}{b+c}\cdot \frac{b+c+a\sqrt2}{b+c+a\sqrt2} = \frac{a^2}{b+c}.
+\end{eqnarray*}
+Tehát $BE+CF=\frac{a^2}{b+c}$.
+
+{\bf 5. feladat II. megoldása: }
+Az ábránkból készítsünk egy másolatot $+90^\circ$-kal elforgatott helyzetben az eredeti mellé úgy, hogy $C$ pont elforgatottja essen egybe $B$-vel.
+
+\begin{center}
+\psset{xunit=1.0cm,yunit=1.0cm,algebraic=true,dotstyle=o,dotsize=4pt,linewidth=0.8pt}
+\begin{pspicture*}(-0.54,-0.36)(8.52,5.35)
+\psline(3.36,0)(0,4.66)
+\psline(0,0)(1.95,1.95)
+\psline(1.95,1.95)(1.8,0)
+\psline(0,2.11)(1.95,1.95)
+\psline(1.8,0)(3.36,0)
+\psline(0,0)(1.8,0)
+\psline(0,4.66)(0,2.11)
+\psline(0,2.11)(0,0)
+\pscustom[fillcolor=black,fillstyle=solid,opacity=0.1]{\parametricplot{0.0}{0.7853981633974483}{0.82*cos(t)+0|0.82*sin(t)+0}\lineto(0,0)\closepath}
+\pscustom[fillcolor=black,fillstyle=solid,opacity=0.1]{\parametricplot{0.7853981633974483}{1.5707963267948966}{0.82*cos(t)+0|0.82*sin(t)+0}\lineto(0,0)\closepath}
+\pscustom[fillcolor=black,fillstyle=solid,opacity=0.1]{\parametricplot{-2.356194490192345}{-1.6511448606988508}{0.73*cos(t)+1.95|0.73*sin(t)+1.95}\lineto(1.95,1.95)\closepath}
+\parametricplot{-2.356194490192345}{-1.6511448606988508}{0.73*cos(t)+1.95|0.73*sin(t)+1.95}
+\parametricplot{-2.356194490192345}{-1.6511448606988508}{0.64*cos(t)+1.95|0.64*sin(t)+1.95}
+\pscustom[fillcolor=black,fillstyle=solid,opacity=0.1]{\parametricplot{-1.651144860698851}{-0.9460952312053572}{0.73*cos(t)+1.95|0.73*sin(t)+1.95}\lineto(1.95,1.95)\closepath}
+\parametricplot{-1.651144860698851}{-0.9460952312053572}{0.73*cos(t)+1.95|0.73*sin(t)+1.95}
+\parametricplot{-1.651144860698851}{-0.9460952312053572}{0.64*cos(t)+1.95|0.64*sin(t)+1.95}
+\pscustom[fillcolor=black,fillstyle=solid,opacity=0.1]{\parametricplot{3.061244119685839}{3.9269908169872414}{0.73*cos(t)+1.95|0.73*sin(t)+1.95}\lineto(1.95,1.95)\closepath}
+\parametricplot{3.061244119685839}{3.9269908169872414}{0.73*cos(t)+1.95|0.73*sin(t)+1.95}
+\psline(1.32,1.72)(1.22,1.68)
+\pscustom[fillcolor=black,fillstyle=solid,opacity=0.1]{\parametricplot{2.1954974223844363}{3.061244119685839}{0.73*cos(t)+1.95|0.73*sin(t)+1.95}\lineto(1.95,1.95)\closepath}
+\parametricplot{2.1954974223844363}{3.061244119685839}{0.73*cos(t)+1.95|0.73*sin(t)+1.95}
+\psline(1.37,2.28)(1.27,2.34)
+\psline(3.36,0)(8.02,0)
+\psline(8.02,0)(8.02,3.36)
+\psline(8.02,3.36)(3.36,0)
+\psline(6.07,1.95)(5.91,0)
+\psline(6.07,1.95)(8.02,0)
+\psline(6.07,1.95)(8.02,1.8)
+\psplot[linestyle=dashed,dash=2pt 2pt]{1.95}{8.52}{(-0--2.06*x)/2.06}
+\psplot[linestyle=dashed,dash=2pt 2pt]{-0.54}{6.07}{(-16.5--2.06*x)/-2.06}
+\psline(1.95,1.95)(6.07,1.95)
+\pscustom[fillcolor=black,fillstyle=solid,opacity=0.1]{\parametricplot{2.356194490192345}{3.141592653589793}{0.82*cos(t)+8.02|0.82*sin(t)+0}\lineto(8.02,0)\closepath}
+\pscustom[fillcolor=black,fillstyle=solid,opacity=0.1]{\parametricplot{1.5707963267948966}{2.356194490192345}{0.82*cos(t)+8.02|0.82*sin(t)+0}\lineto(8.02,0)\closepath}
+\pscustom[fillcolor=black,fillstyle=solid,opacity=0.1]{\parametricplot{-2.5168915580002533}{-1.6511448606988508}{0.73*cos(t)+6.07|0.73*sin(t)+1.95}\lineto(6.07,1.95)\closepath}
+\parametricplot{-2.5168915580002533}{-1.6511448606988508}{0.73*cos(t)+6.07|0.73*sin(t)+1.95}
+\psline(5.74,1.37)(5.68,1.27)
+\pscustom[fillcolor=black,fillstyle=solid,opacity=0.1]{\parametricplot{-1.6511448606988506}{-0.7853981633974483}{0.73*cos(t)+6.07|0.73*sin(t)+1.95}\lineto(6.07,1.95)\closepath}
+\parametricplot{-1.6511448606988506}{-0.7853981633974483}{0.73*cos(t)+6.07|0.73*sin(t)+1.95}
+\psline(6.3,1.32)(6.34,1.22)
+\pscustom[fillcolor=black,fillstyle=solid,opacity=0.1]{\parametricplot{-0.7853981633974483}{-0.08034853390395447}{0.73*cos(t)+6.07|0.73*sin(t)+1.95}\lineto(6.07,1.95)\closepath}
+\parametricplot{-0.7853981633974483}{-0.08034853390395447}{0.73*cos(t)+6.07|0.73*sin(t)+1.95}
+\parametricplot{-0.7853981633974483}{-0.08034853390395447}{0.64*cos(t)+6.07|0.64*sin(t)+1.95}
+\pscustom[fillcolor=black,fillstyle=solid,opacity=0.1]{\parametricplot{-0.08034853390395441}{0.6247010955895393}{0.73*cos(t)+6.07|0.73*sin(t)+1.95}\lineto(6.07,1.95)\closepath}
+\parametricplot{-0.08034853390395441}{0.6247010955895393}{0.73*cos(t)+6.07|0.73*sin(t)+1.95}
+\parametricplot{-0.08034853390395441}{0.6247010955895393}{0.64*cos(t)+6.07|0.64*sin(t)+1.95}
+\psdots[dotstyle=*](0,0)
+\rput[bl](-0.38,-0.2){$A$}
+\psdots[dotstyle=*](0,4.66)
+\rput[bl](-0.11,4.84){$C$}
+\psdots[dotstyle=*](3.36,0)
+\rput[bl](2.8,-0.3){$B\equiv C'$}
+\psdots[dotstyle=*](1.95,1.95)
+\rput[bl](1.86,2.09){$D$}
+\psdots[dotstyle=*](1.8,0)
+\rput[bl](1.81,-0.3){$E$}
+\psdots[dotstyle=*](0,2.11)
+\rput[bl](-0.36,2.14){$F$}
+\rput[bl](0.24,0.05){$45^\circ$}
+\rput[bl](0.02,0.37){$45^\circ$}
+\psdots[dotstyle=*](4.01,4.01)
+\rput[bl](3.92,4.16){$O$}
+\psdots[dotstyle=*](8.02,0)
+\rput[bl](8.09,-0.03){$A'$}
+\psdots[dotstyle=*](8.02,3.36)
+\rput[bl](8.08,3.46){$B'$}
+\psdots[dotstyle=*](8.02,1.8)
+\rput[bl](8.08,1.89){$E'$}
+\psdots[dotstyle=*](5.91,0)
+\rput[bl](5.98,-0.3){$F'$}
+\psdots[dotstyle=*](6.07,1.95)
+\rput[bl](6.02,2.11){$D'$}
+\rput[bl](7.25,0.05){$45^\circ$}
+\rput[bl](7.52,0.47){$45^\circ$}
+\end{pspicture*}
+\end{center}
+
+$AA'O$ egyenlő szárú derékszögű háromszög, hiszen az alapon ($AA’$-n) fekvő szögei $45^\circ$-osak. $AD=A'D'$, ezért $DD'$ párhuzamos $AA'$-vel. Mivel $DF$ merőleges $DE$-re, valamint $DF$ merőleges képére, $D'F'$-re, ezért $DE$ párhuzamos $D'F'$-vel, így az $EF'D'D$ négyszög paralelogramma.
+
+Tehát a keresett szakaszok összegére $$BE+CF=BE+BF'=EF'=DD'.$$
+
+Az $AD$ szakasz hossza az I. megoldás szerint $AD=\frac{bc\sqrt{2}}{b+c}$.
+
+Írjunk fel egy párhuzamos szelőszakaszok tételét az $OA$ és $OA'$ szögszáraknál:
+$$\frac{DD'}{AA'} =  \frac{DO}{AO} = \frac{AO-AD}{AO} = 1-\frac{AD}{AO}$$
+$$\frac{DD'}{b+c} = 1-\frac{\frac{bc\sqrt{2}}{b+c}}{(b+c)\frac{\sqrt{2}}{2}} = 1-\frac{\frac{2bc}{b+c}}{b+c}=1-\frac{2bc}{(b+c)^2},$$
+azaz
+$$DD'=b+c-\frac{2bc}{b+c}=\frac{(b+c)^2-2bc}{b+c}=\frac{b^2+c^2}{b+c}=\frac{a^2}{b+c}$$
+$$BE+CF=\frac{a^2}{b+c}.$$
+
+\medskip
+
+
+\hbox to \hsize{\hskip2truecm\hrulefill\hskip2truecm}
+{\bf 6. feladat: }
+Adott egy téglalap, amelynek oldalai $6$ és $3$ egység hosszúságúak és a belsejében $19$ egymástól különböző pont található. Igazolja, hogy létezik közöttük három olyan pont, amelyek által alkotott síkidom területe legfeljebb egy területegység.
+
+\ki{Olosz Ferenc}{Erdély}\medskip
+
+{\bf 6. feladat I. megoldása: }
+Az oldalakkal párhuzamos egyenesekkel az adott téglalapot felosztjuk $9$ darab $2\times 1$-es téglalapra. Mivel $19$ pontunk van, így biztosan lesz legalább $1$ olyan téglalap, ami a belsejében vagy a határán tartalmaz legalább $3$ pontot.
+
+Ha e három pont nem egy egyenesen helyezkedik el, akkor a háromszög csúcsain a téglalap egyik oldalával párhuzamosokat húzunk.
+
+\begin{center}
+\psset{xunit=2.5cm,yunit=2.5cm,algebraic=true,dotstyle=o,dotsize=4pt 0,linewidth=0.8pt}
+\begin{pspicture*}(-0.23,-0.27)(2.29,1.24)
+\psline[linewidth=1.6pt](0,0)(2,0)
+\psline[linewidth=1.6pt](2,0)(2,1)
+\psline[linewidth=1.6pt](2,1)(0,1)
+\psline[linewidth=1.6pt](0,1)(0,0)
+\psline[linewidth=1.6pt](0.31,0.46)(1.24,0.17)
+\psline[linewidth=1.6pt](1.24,0.17)(1.72,0.79)
+\psline[linewidth=1.6pt](1.72,0.79)(0.31,0.46)
+\psline(0,0.17)(2,0.17)
+\psline(0,0.46)(2,0.46)
+\psline(0,0.79)(2,0.79)
+\psline[linestyle=dashed,dash=2pt 2pt](1.24,0.17)(1.24,0.46)
+\psline[linestyle=dashed,dash=2pt 2pt](1.72,0.79)(1.72,0.46)
+\psdots[dotstyle=*](0,0)
+\rput[bl](-0.15,-0.14){$E$}
+\psdots[dotstyle=*](2,0)
+\rput[bl](2.04,-0.13){$F$}
+\psdots[dotstyle=*](2,1)
+\rput[bl](2.05,1.03){$G$}
+\psdots[dotstyle=*](0,1)
+\rput[bl](-0.13,1.04){$H$}
+\psdots[dotstyle=*](0.31,0.46)
+\rput[bl](0.19,0.5){$A$}
+\psdots[dotstyle=*](1.24,0.17)
+\rput[bl](1.24,0.04){$B$}
+\psdots[dotstyle=*](1.72,0.79)
+\rput[bl](1.72,0.83){$C$}
+\psdots[dotstyle=*](1.47,0.46)
+\rput[bl](1.46,0.33){$A'$}
+\psdots[dotstyle=*](1.24,0.46)
+\rput[bl](1.12,0.5){$B'$}
+\psdots[dotstyle=*](1.72,0.46)
+\rput[bl](1.75,0.5){$C'$}
+\end{pspicture*}
+\end{center}
+
+Először azt az esetet tanulmányozzuk, amikor három egymástól különböző párhuzamost húzhatunk. Ebben az esetben az egyik párhuzamos
+metszi az $ABC$ háromszög egyik oldalát. Például az $A$ csúcson átmenő $EF$-fel párhuzamos egyenes a $BC$ oldalt $A'$-ben metszi.
+
+Legyen $B'$ illetve $C'$ a $B$-ből illetve $C$-ből az $AA'$ egyenesre állított merőlegesek talppontja. Ekkor a területekre
+$$T_{ABC\triangle}=T_{AA'B\triangle}+T_{AA'C\triangle}=\frac{AA'\cdot BB'}{2}+\frac{AA'\cdot CC'}{2}=\frac{1}{2}\cdot AA'\cdot (BB'+CC')\le \frac{1}{2}\cdot EF\cdot FG=\frac{1}{2}\cdot 2\cdot 1 = 1.$$
+
+Vizsgáljuk azt az esetet, amikor a háromszög egy oldala párhuzamos a téglalap egyik oldalával. Például legyen $AB$ párhuzamos $EF$-fel.
+
+\begin{center}
+\psset{xunit=2.5cm,yunit=2.5cm,algebraic=true,dotstyle=o,dotsize=4pt 0,linewidth=0.8pt}
+\begin{pspicture*}(-0.23,-0.27)(2.29,1.24)
+\psline[linewidth=1.6pt](0,1)(0,0)
+\psline[linewidth=1.6pt](2,0)(2,1)
+\psline[linewidth=1.6pt](0,0)(2,0)
+\psline(0,0.17)(2,0.17)
+\psline[linewidth=1.6pt](2,1)(0,1)
+\psline[linewidth=1.6pt](0.25,0.17)(1.24,0.17)
+\psline[linewidth=1.6pt](1.24,0.17)(1.72,0.79)
+\psline[linewidth=1.6pt](1.72,0.79)(0.25,0.17)
+\psline(0,0.79)(2,0.79)
+\psline[linestyle=dashed,dash=1pt 1pt](1.72,0.79)(1.72,0.17)
+\psdots[dotstyle=*](1.24,0.17)
+\rput[bl](1.14,0.21){$B$}
+\psdots[dotstyle=*](2,1)
+\rput[bl](2.05,1.03){$G$}
+\psdots[dotstyle=*](0,1)
+\rput[bl](-0.13,1.04){$H$}
+\psdots[dotstyle=*](0,0)
+\rput[bl](-0.15,-0.14){$E$}
+\psdots[dotstyle=*](2,0)
+\rput[bl](2.04,-0.13){$F$}
+\psdots[dotstyle=*](0.25,0.17)
+\rput[bl](0.16,0.24){$A$}
+\psdots[dotstyle=*](1.72,0.79)
+\rput[bl](1.72,0.83){$C$}
+\psdots[dotstyle=*](1.72,0.17)
+\rput[bl](1.75,0.2){$C'$}
+\end{pspicture*}
+\end{center}
+
+Legyen $C'$ a $C$-ből az $AB$-re állított merőleges talppontja. Így 
+$$T_{ABC\triangle}=\frac{1}{2}\cdot AB\cdot CC' \le \frac{1}{2}\cdot EF\cdot FG = \frac{1}{2}\cdot 2\cdot 1 = 1.$$
+
+Ha az $A$, $B$, $C$ pontok egy egyenesen helyezkednek el, akkor $T_{ABC\triangle}=0\le 1$.
+
+Tehát létezik olyan $ABC$ valódi vagy elfajuló háromszög, amelyre $T_{ABC\triangle}\le 1$.
+
+{\bf 6. feladat II. megoldása: }
+Osszuk fel az adott téglalapot az oldalaival párhuzamos egyenesek segítségével $2\times 1$-es téglalapokra, kapunk $9$ darab téglalapot. Mivel $19$ pontunk van, így biztosan lesz legalább $1$ olyan téglalap, ami a belsejében vagy a határán tartalmaz legalább $3$ pontot.
+
+Most bebizonyítjuk, hogy ha egy téglalap belsejében vagy a határán tartalmaz $3$ pontot, akkor e három pont által meghatározott háromszög területe nem lehet nagyobb a téglalap területének a felénél. Ekkor a mi esetünkben e háromszög területe nem nagyobb $1$-nél, és ezt kell bizonyítanunk.
+
+Tekintsük az ábrát és ott a $3$ általánosan felvett pontot.
+
+\begin{center}
+\psset{xunit=2.5cm,yunit=2.5cm,algebraic=true,dotstyle=o,dotsize=4pt 0,linewidth=0.8pt}
+\begin{pspicture*}(-0.23,-0.27)(2.29,1.24)
+\psline[linewidth=1.6pt](0,0)(2,0)
+\psline[linewidth=1.6pt](2,0)(2,1)
+\psline[linewidth=1.6pt](2,1)(0,1)
+\psline[linewidth=1.6pt](0,1)(0,0)
+\psline[linewidth=1.6pt](0.31,0.46)(1.24,0.17)
+\psline[linewidth=1.6pt](1.24,0.17)(1.72,0.79)
+\psline[linewidth=1.6pt](1.72,0.79)(0.31,0.46)
+\psdots[dotstyle=*](0,0)
+\rput[bl](-0.15,-0.14){$E$}
+\psdots[dotstyle=*](2,0)
+\rput[bl](2.04,-0.13){$F$}
+\psdots[dotstyle=*](2,1)
+\rput[bl](2.05,1.03){$G$}
+\psdots[dotstyle=*](0,1)
+\rput[bl](-0.13,1.04){$H$}
+\psdots[dotstyle=*](0.31,0.46)
+\rput[bl](0.19,0.5){$A$}
+\psdots[dotstyle=*](1.24,0.17)
+\rput[bl](1.24,0.04){$B$}
+\psdots[dotstyle=*](1.72,0.79)
+\rput[bl](1.72,0.83){$C$}
+\end{pspicture*}
+\end{center}
+
+Húzzuk meg az $AB$ egyenesét és húzzunk párhuzamost ezzel $C$-n keresztül. Ekkor a téglalapnak van olyan csúcsa, amit a $C$-n át húzott egyenes az $AB$ egyenestől elválaszt. Mozgassuk ide a $C$ pontot (legyen ez $C'$), így a háromszögünk területét nem csökkentettük.
+
+\begin{center}
+\psset{xunit=2.5cm,yunit=2.5cm,algebraic=true,dotstyle=o,dotsize=4pt 0,linewidth=0.8pt}
+\begin{pspicture*}(-0.23,-0.27)(2.5,1.24)
+\psline[linewidth=1.6pt](0,0)(2,0)
+\psline[linewidth=1.6pt](2,0)(2,1)
+\psline[linewidth=1.6pt](2,1)(0,1)
+\psline[linewidth=1.6pt](0,1)(0,0)
+\psline[linewidth=1.6pt](0.31,0.46)(1.24,0.17)
+\psline[linewidth=1.6pt](1.24,0.17)(1.72,0.79)
+\psline[linewidth=1.6pt](1.72,0.79)(0.31,0.46)
+\psplot{-0.39}{2.5}{(--0.52-0.29*x)/0.94}
+\psplot{-0.39}{2.5}{(--1.24-0.29*x)/0.94}
+\psline[linewidth=1.6pt](0.31,0.46)(2,1)
+\psline[linewidth=1.6pt](1.24,0.17)(2,1)
+\psdots[dotstyle=*](0,0)
+\rput[bl](-0.15,-0.14){$E$}
+\psdots[dotstyle=*](2,0)
+\rput[bl](2.04,-0.07){$F$}
+\psdots[dotstyle=*](2,1)
+\rput[bl](2.05,1.03){$G\equiv C'$}
+\psdots[dotstyle=*](0,1)
+\rput[bl](-0.13,1.04){$H$}
+\psdots[dotstyle=*](0.31,0.46)
+\rput[bl](0.2,0.52){$A$}
+\psdots[dotstyle=*](1.24,0.17)
+\rput[bl](1.2,0.04){$B$}
+\psdots[dotstyle=*](1.72,0.79)
+\rput[bl](1.72,0.81){$C$}
+\end{pspicture*}
+\end{center}
+
+Ezt ismételjük meg az $A$ és $B$ csúcsokkal is, ekkor a háromszögünk területét nem csökkentettük és a következő ábrát kapjuk.
+
+\begin{center}
+\psset{xunit=2.5cm,yunit=2.5cm,algebraic=true,dotstyle=o,dotsize=4pt 0,linewidth=0.8pt}
+\begin{pspicture*}(-0.23,-0.27)(2.5,1.24)
+\psline[linewidth=1.6pt](0,0)(2,0)
+\psline[linewidth=1.6pt](2,0)(2,1)
+\psline[linewidth=1.6pt](2,1)(0,1)
+\psline[linewidth=1.6pt](0,1)(0,0)
+\psline[linewidth=1.6pt](0,1)(2,0)
+\psdots[dotstyle=*](0,0)
+\rput[bl](-0.15,-0.14){$E$}
+\psdots[dotstyle=*](2,0)
+\rput[bl](2.04,-0.07){$F \equiv B'$}
+\psdots[dotstyle=*](2,1)
+\rput[bl](2.05,1.03){$G\equiv C'$}
+\psdots[dotstyle=*](0,1)
+\rput[bl](-0.13,1.04){$H\equiv A'$}
+\end{pspicture*}
+\end{center}
+
+Most biztosan a téglalap területének felével egyezik meg a háromszög területe, tehát közben sem lehetett nagyobb, hiszen a mozgatások alkalmával nem csökkenhetett a terület. Készen vagyunk.
+
+{\bf 6. feladat III. megoldása:}
+Legyen az adott $19$ pont konvex burka $k$-szög, belsejében legyen $b$ pont, ekkor $$k+b=19.$$ Most osszuk fel az elrendezést háromszögekre, azaz kössük össze a pontokat egymást nem keresztező szakaszokkal addig, amíg már csak háromszögek nem lesznek.
+A keletkezett háromszögek számát jelöljük $h$-val. Ekkor a szögösszeget számolva:
+$$(k-2)\cdot 180^\circ+b\cdot 360^\circ = h\cdot 180^\circ $$
+$$k-2+2b=h$$
+$$(k+b)-2+b=h$$
+$$h=17+b.$$
+Kaptuk, hogy a keletkezett háromszögek száma csak a belső pontok számától függ.
+
+Amennyiben a belső pontok száma legalább $1$, akkor $18$ vagy több háromszög keletkezik. Amennyiben minden háromszögnek a területe nagyobb lenne, mint $1$, akkor az összes terület nagyobb lenne, mint $18$, ami ellentmond a feltételnek. Tehát létezik háromszög, aminek a területe legfeljebb $1$.
+
+Ha nincs belső pont, akkor a $19$ pont konvex burka $19$-szög. Válasszunk ki egy oldalt, végpontjai legyenek $A$ és $B$. Kössük össze $AB$ szakasz $F$ felezőpontját a többi, egymást követő csúcspárral, így $18$ darab háromszöget kapunk. Ezek nem lehetnek mind 1-nél nagyobb területűek, hiszen akkor az összterület $18$-nál nagyobb lenne. Tekintsük azt a háromszöget, melynek területe nem nagyobb $1$-nél, a csúcsai legyenek $F$, $C$ és $D$.
+
+\begin{center}
+\psset{xunit=2cm,yunit=2cm,algebraic=true,dotstyle=o,dotsize=4pt 0,linewidth=0.8pt}
+\begin{pspicture*}(0.47,0.38)(2.64,1.83)
+\psline(1.27,1.59)(2.37,1.11)
+\psline(1.82,1.35)(0.7,0.69)
+\psline(0.7,0.69)(1.5,0.5)
+\psline(1.5,0.5)(1.82,1.35)
+\psdots[dotstyle=*](1.27,1.59)
+\rput[bl](1.21,1.67){$A$}
+\psdots[dotstyle=*](2.37,1.11)
+\rput[bl](2.4,1.16){$B$}
+\psdots[dotstyle=*](1.82,1.35)
+\rput[bl](1.84,1.42){$F$}
+\psdots[dotstyle=*](0.7,0.69)
+\rput[bl](0.54,0.73){$C$}
+\psdots[dotstyle=*](1.5,0.5)
+\rput[bl](1.57,0.41){$D$}
+\end{pspicture*}
+\end{center}
+
+Ha $AB$ párhuzamos $CD$-vel, akkor az $ACD$ és $BCD$ háromszögek területe megegyezik az $FCD$ háromszög területével, azaz $1$-nél nem nagyobbak.
+
+Ha $AB$ nem párhuzamos $CD$-vel, akkor vagy $A$ vagy $B$ pont közelebb van a $CD$ egyeneshez, mint az $F$ pont. Amelyik közelebb van, azt választva a $C$ és $D$ csúcsokhoz, akkor $FCD$-nél kisebb területű háromszöget kapunk, tehát $1$-nél biztosan kisebb területűt.
+\medskip
+
+\vfill
+\end{document}

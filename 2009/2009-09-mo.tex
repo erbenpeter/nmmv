@@ -1,0 +1,125 @@
+\documentclass[a4paper,10pt]{article} 
+\usepackage[utf8]{inputenc}
+\usepackage{graphicx}
+\usepackage{amssymb}
+\voffset - 20pt
+\hoffset - 35pt
+\textwidth 450pt
+\textheight 650pt 
+\frenchspacing 
+\usepackage[shortlabels]{enumitem}
+
+\pagestyle{empty}
+\def\ki#1#2{\hfill {\it #1 (#2)}\medskip}
+
+
+\def\tg{\, \hbox{tg} \,}
+\def\ctg{\, \hbox{ctg} \,}
+\def\arctg{\, \hbox{arctg} \,}
+\def\arcctg{\, \hbox{arcctg} \,}
+
+\begin{document}
+\begin{center} \Large {\em XVIII. Nemzetközi Magyar Matematika Verseny} \end{center}
+\begin{center} \large{\em Gyula, 2009. március 12--16. } \end{center}
+\smallskip
+\begin{center} \large{\bf 9. osztály} \end{center}
+\bigskip 
+
+{\bf 1. feladat: } Oldjuk meg a természetes számok halmazán az $\frac1x+\frac1y=\frac{1}{2009}$
+
+\ki{Kántor Sándor}{Debrecen}\medskip
+
+
+{\bf Megoldás: } Megoldásként nyilván csak 2009-nél nagyobb egész számok jöhetnek szóba. Az egyenlet ekvivalens az $(x-2009)(y-2009)=2009^2$ egyenlettel. Annyi megoldás van, amennyi tényezője van $2009^2$-nek, mert ezeket a tényetőket $(x-2009)$-cel azonosítva $x$-et megkapjuk, és ehhez $y$ egyértelmű. Mivel $2009=7^2\cdot 41$, azaz $2009^2=7^4\cdot 41^2 $, ezért $2009^2$ pozitív osztóinak száma $(4+1)(2+1)=15$.
+
+Tehát az egyenlet keresett megoldásainak száma 15, amelyekhez az $x$ értékét az előbbiek szerint az\\*
+$x-2009=1;7;7^2;7^3;7^4;41;7\cdot41;7^2\cdot41;7^3\cdot41;7^4\cdot41;41^2;7\cdot41^2;7^2\cdot41^2;7^3\cdot41^2;7^4\cdot41^2$,  \\*
+egyenlőségekből az $x$-hez tartozó $y$ pár rendre az \\*
+$y-2009=7^4\cdot41^2;7^3\cdot41^2;7^2\cdot41^2;7\cdot41^2;41^2;7^4\cdot41;7^3\cdot41;7^2\cdot41;7^2\cdot41;7\cdot41;7^4;7^3;7^2;7;1$ \\*
+osztópárok egyenlőségeiből kapjuk.
+\medskip
+
+
+\hbox to \hsize{\hskip2truecm\hrulefill\hskip2truecm}
+{\bf 2. feladat: } Az $ABCD$ deltoidban az $A$ és $C$ csúcsnál derékszög van, és a $BD$ átló $12 cm$. Az ábra szerint a deltoidba három azonos oldalhosszúságú rombusz írható. Mekkora a deltoid $B$ és $D$ csúcsánál levő szöge és az $AC$ átló
+hossza?
+
+\ki{Bencze Mihály}{Brassó}\medskip
+
+{\bf Megoldás: } Legyen $DBA\angle=\alpha$.
+
+Sorban a $BEF$, $EFG$, $FGH$, $HAD$ egyenlő szárú háromszögekben a szögeket ill. a $BEF$, $BFG$, $BGH$, $BHA$ háromszögekben a külső szögeket kiszámolva a $BDA\angle=5\alpha=90^{\circ}$ értékig jutunk. \\*
+Innen $\alpha+5\alpha=90^\circ $, azaz $\alpha=15^\circ$. Tudjuk, hogy a $15^\circ$-os szöggel rendelkező ($ABD$) derékszögű hátomszögben az átfogóhoz tartozó magasság az átfogó negyedede, ezért $AC=6 cm$. A deltoid $b$ és $D$ csúcsnál lévő két szöge $30^\circ$ és $150^\circ$.
+\medskip
+
+
+\hbox to \hsize{\hskip2truecm\hrulefill\hskip2truecm}
+{\bf 3. feladat: } 
+Adjuk meg az összes olyan $n$ természetes számot, amelye $2^8+2^11+2^n$ négyzetszám!
+
+\ki{Eigel Ernő}{Gyula}\medskip
+
+{\bf Megoldás: } Mivel $2^{11}+2^8=2^8(2^3+1)=48^2$, akkor $2^n+48^27k^2$ (a keresett négyzetszám). Így $2^n=(k-48)(k+48)$, tehát a $k-48$ és a $k+48$ is 2-nek valamilyen egyész kitevős hatványa kell legyen, vagyis $k-48=2^p$, $k+48=2^q$. Egymásból kivonva, ($p<q$, $2^q-2^p=96=2^5\cdot 3$, azaz $2^p\cdot(2^{p-q}-1)=2^5\cdot 3$, vagyis ha $p=5$, akkor $2^{q-5}=2^2$, vagyis $q=7$, tehát $2^n=2^{p+q}=2^{12} \Leftarrow n=12$ a keresett természetes szám.
+\medskip
+
+
+\hbox to \hsize{\hskip2truecm\hrulefill\hskip2truecm}
+{\bf 4. feladat: } 
+Oldjuk meg az $\frac{x}{x+1}+\frac{2x}{(x+1)(2x+1)}+\frac{3x}{(x+1)(2x+1)(3x+1)}+...+\frac{2009x}{(x+1)(2x+1)...(2009x+1)}>1$ egyenlőtlenséget a valós számok halmazán.
+
+\ki{Balázsi Borbála}{Beregszász}\medskip
+
+{\bf Megoldás: } 
+
+Mivel $\frac{kx}{(x+1)(2x+1)...(kx+1)}=\frac{(kx+1)-1}{(x+1)(2x+1)...(kx+1)}=\frac{1}{(x+1)(2x+1)...((k-1)x+1)}-\frac{1}{(x+1)(2x+1)...(kx+1)}$, ezért az egyenlőtlenség bal oldala:
+
+$\frac{x}{x+1}+\frac{2x}{(x+1)(2x+1)}+\frac{3x}{(x+1)(2x+1)(3x+1)}+...+\frac{2009x}{(x+1)(2x+1)...(2009x+1)}=1-\frac{1}{x+1}+\frac{1}{x+1}-\frac{1}{(x+1)(2x+1)}+\frac{1}{(x+1)(2x+1)}-\frac{1}{(x+1)(2x+1)(3x+1)}+...+\frac{1}{(x+1)(2x+1)...(2008x+1)}-\frac{1}{(x+1)(2x+1)...(2009x+1)}=1-\frac{1}{(x+1)(2x+1)...(2009x+1})$, azaz az $\frac{1}{(x+1)(2x+1)...(2009x+1)}<0$ egyenlőtlenséget kell megoldani. A megoldás: $(-\infty;-1)\bigcup(-\frac12;-\frac13)\bigcup$ $(-\frac14;-\frac15)\bigcup...\bigcup(-\frac{1}{2008};-\frac{1}{2009})$.
+
+\medskip
+
+
+\hbox to \hsize{\hskip2truecm\hrulefill\hskip2truecm}
+{\bf 5. feladat: } 
+Húsz személy mindegyike a húszból tíz másiknak küld levelet. Van-e két olyan személy, akik között volt levélváltás?
+
+\ki{Szabó Magdolna}{Szabadka}\medskip
+
+{\bf Megoldás: } A csoportban {\bf van} olyan személy, aki legalább 10 levelet kapott, mert ellenkező esetben legfeljebb $9\cdot 20=180$ elküldött levél lenne, amely kevesebb 200-nál, az összes elküldött levelek számánál! Ez a személy levelet küldött a többi 19 személy közül 10-nek. Ha csak attól a 9-től kapott volna levelet, akinek ő nem küldött, akkor csak 9 levelet kapott volna, pedig legalább 10-et kapott, tehát kellett, hgoy olyantól is kapjon, akinek ő küldött, azaz volt levélváltás.
+\medskip
+
+
+\hbox to \hsize{\hskip2truecm\hrulefill\hskip2truecm}
+{\bf 6. feladat: } 
+Az $ABCF$ téglalap $DC$ oldala, mint átmérő fölé (átmérőre) kört rajzolunk. Húzzunk a körhöz a téglalap $A$ csúcsábül az $AD$ egyenesétől különbözp érintőt, az érintési pont legyen $E$. A téglalap $BC$ oldalegyenesét az $AE$ egyenes a $G$ pontban, a $DE$ egyenes a $H$ pontban metszi.
+
+\begin{enumerate} [a)]
+    \item Bizonyítsuk be, hogy az $EGH$ háromszög egyenlő szárú!
+    \item Mekkora a téglalap oldalainak aránya, ha az $EGH$ háromszög szabályos?
+    \item Bizonyítsuk be, hogy ha az $EGH$ háromszög szabályos, akkor a kör F középpontja, az $E$ érintési pont és a téglalap $B$ csúcsa egy egyenesen van!
+\end{enumerate}
+
+\ki{Nemecskó István}{Budapest}\medskip
+
+{\bf Megoldás: }
+\begin{enumerate} [a)]
+    {\item 
+        Legyen $EDF\angle=\alpha$. Mivel a $DFE$ háromszög egyenlő szárú, ezért $DEF\angle=\alpha$. Tehát $EGH$ háromszög egyelő szárú.
+    }
+\end{enumerate}
+Ha a téglalap $b$ oldala kisebb vagy ugyanakkora, mint $a/2$, tehát a körvonal metszi vagy érinti $AB$ oldalt, akkor is teljesül az állítás. Részletezzök a metszés esetét: az állítás ugyanazokkal a lépésekkel leolvasható az ábráról.
+\begin{enumerate} [b)]
+    \item Elég $b>\frac{a}{2}$ esetet nézni, mert ellenkező esetben az $EHG\bigtriangleup$ derékszögű vagy tompaszögű, tehát nem lehet szabályos.
+\end{enumerate}
+Ha az $EGH$ háromszög szabályos, akkor minden szöge $60^\circ$-os, tehát $GHE=60^\circ$. Így $HDF\angle=30^\circ$. Ekkor az $AED$ háromszögnek is minden szöge $60^\circ$, tehát szabályos háromszög, így $E$ pont rajta van a téglalap $AB$ oldalával párhuzamos szimmetriatengelyén. Legyen az $EGH$ szabályos háromszög oldalainak hossza $x$. Az $FEGC$ négyszög deltoid, tehát $GC=x$, a szimmetria miatt $BH=x$ is teljesól. Így a téglalap $b$ oldala az$EGH$ háromszög oldalának háromszorosa ($b=3x$). /**
+A $DHC$ háromszög szögei $30^\circ$, $60^\circ$ ill. $90^\circ$-osak, befogói $a$ és $2x$. Tudjuk, hogy az ilyen derékszögű háromsz9gek befogóinak aránya $\sqrt{3}$, tehát $\frac{a}{2x}=\sqrt{3}$, vagyis a keresett arány: $\frac{a}{b}=\frac{a}{3x}=\frac{a}{2x}\cdot\frac23=\frac23 \sqrt{3}=\frac{2}{\sqrt{3}}$.
+
+\begin{enumerate} [c)]
+\item A $BGE$ háromszög egyik szöge ($EGH\angle$) $60^\circ$-os és a közrezárt oldalak $x$ és $2x$, tehát ez egy derékszögű háromszög. Vagyis $BE$ merőleges az AG-re, de $FE$ sugár és $AG$ érintő, tehát $FE$ is merőleges $AG$-re. Ezzel beláttuk, hogy $F$, $E$ és $B$ egy egyenesbe esik.
+\end{enumerate}
+
+
+
+
+
+
+\end{document}

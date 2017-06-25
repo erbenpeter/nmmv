@@ -1,0 +1,493 @@
+\documentclass[a4paper,10pt]{article} 
+\usepackage[utf8]{inputenc}
+\usepackage[a4paper]{geometry}
+\usepackage[magyar]{babel}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{caption}
+\usepackage{pgf,tikz}
+\usetikzlibrary{arrows}
+\frenchspacing 
+\pagestyle{empty}
+\newcommand{\ki}[2]{\hfill {\it #1 (#2)}\medskip}
+\newcommand{\vonal}{\hbox to \hsize{\hskip2truecm\hrulefill\hskip2truecm}}
+\newcommand{\degre}{\ensuremath{^\circ}}
+\newcommand{\tg}{\mathop{\mathrm{tg}}\nolimits}
+\newcommand{\ctg}{\mathop{\mathrm{ctg}}\nolimits}
+\newcommand{\arc}{\mathop{\mathrm{arc}}\nolimits}
+\begin{document}
+\begin{center} \Large {\em XX. Nemzetközi Magyar Matematika Verseny} \end{center}
+\begin{center} \large{\em Bonyhád, 2011. március 11--15.} \end{center}
+\smallskip
+\begin{center} \large{\bf 11. osztály} \end{center}
+\bigskip 
+
+{\bf 1. feladat: }  Igazoljuk, hogy \[\frac{2}{1+2^2}+\frac{2^2}{1+2^{2^2}}+\ldots\frac{2^n}{1+2^{2^n}}<\frac23\] bármely $n\ge1$ természetes szám esetén.
+
+\ki{Kovács Béla}{Szatmárnémeti}\medskip
+
+{\bf Megoldás: } Az összeg tagjai $\frac{2^k}{1+2^{2^k}}$ alakúak, ezt alakítjuk át:
+\begin{align*}
+\frac{2^k}{1+2^{2^k}} &= \frac{2^k \cdot \left(2^{2^k}-1\right)}{\left(1+2^{2^k}\right)\left(2^{2^k}-1\right)} &&\text{$\left(2^{2^k}-1\right)$-gyel való szorzással}\\
+&= \frac{2^k \cdot 2^{2^k}-2^k}{\left(1+2^{2^k}\right)\left(2^{2^k}-1\right)} &&\text{a szorzás elvégzésével a számlálóban} \\
+&= \frac{2^k \cdot 2^{2^k}+2^k-2^{k+1}}{\left(1+2^{2^k}\right)\left(2^{2^k}-1\right)} &&\text{$-2^k=2^k-2^{k+1}$}\\
+&= \frac{2^k \cdot \left(2^{2^k}+1\right)-2^{k+1}}{\left(1+2^{2^k}\right)\left(2^{2^k}-1\right)} &&\text{$2^k$ kiemelésével}\\
+&= \frac{2^k \cdot \left(2^{2^k}+1\right)}{\left(1+2^{2^k}\right)\left(2^{2^k}-1\right)} - \frac{2^{k+1}}{\left(1+2^{2^k}\right)\left(2^{2^k}-1\right)} \\
+&= \frac{2^k}{2^{2^k}-1} - \frac{2^{k+1}}{2^{2^{k+1}}-1} &&\text{$(a+b)(a-b)=a^2-b^2$}
+\end{align*}
+Az átalakítást felhasználva:
+\begin{align*}
+\frac{2}{1+2^2}+\frac{2^2}{1+2^{2^2}}+\ldots\frac{2^n}{1+2^{2^n}}&=\sum_{k=2}^n \frac{2^k}{1+2^{2^k}} \\
+&= \sum_{k=1}^n \left(\frac{2^k}{2^{2^k}-1} - \frac{2^{k+1}}{2^{2^{k+1}}-1}\right) \\
+&= \frac23 - \frac{2^{n+1}}{2^{2^{n+1}}-1} &&\text{teleszkópikus összeg}
+\end{align*}
+Mivel $\frac{2^{n+1}}{2^{2^{n+1}}-1}>0$, 
+\[\frac{2}{1+2^2}+\frac{2^2}{1+2^{2^2}}+\ldots\frac{2^n}{1+2^{2^n}}=\frac23 - \frac{2^{n+1}}{2^{2^{n+1}}-1}<\frac23.\]
+
+Az állítás általánosítható: ugyanezen lépéseket a 
+\[\frac{2}{1+p^2}+\frac{2^2}{1+p^{2^2}}+\ldots\frac{2^n}{1+p^{2^n}}\]
+összegre elvégezve kapjuk, hogy kisebb, mint $\frac{2}{p^2-1}$ ($p>1$).
+\medskip
+
+\vonal
+{\bf 2. feladat: } Oldjuk meg a valós számok halmazán a
+\[6\sqrt{x-2}+10\sqrt{2x+3}+12\sqrt{3x+3}=6x+74\]
+egyenletet.
+
+\ki{Olosz Ferenc}{Szatmárnémeti}\medskip
+
+{\bf Megoldás: } Az egyenlet értelmezett, ha $x\in[2;\infty)$.
+
+$6x+74$ részekre bontásával teljes négyzetek összegére bontjuk az egyenletet.
+\begin{align*}
+6x+74&=6\sqrt{x-2}+10\sqrt{2x+3}+12\sqrt{3x+3}\\
+0&=\left(x-2-6\sqrt{x-2}+9\right)+\left(2x+3-10\sqrt{2x+3}+25\right)+\left(3x+3-12\sqrt{3x+3}+36\right)\\
+0&=\left(\sqrt{x-2}-3\right)^2+\left(\sqrt{2x+3}-5\right)^2+\left(\sqrt{3x+3}-6\right)^2
+\end{align*}
+Ez a valós számok halmazán akkor és csak akkor lehetséges, ha
+\[\sqrt{x-2}-3=0\text{ és }\sqrt{2x+3}-5=0\text{ és }\sqrt{3x+3}-6=0.\]
+Mindhárom egyenlet egyetlen megoldása $x=11$, így az eredeti egyenletnek is ez a megoldása.
+
+\medskip
+
+\vonal
+{\bf 3. feladat: } Egy négyzetbe az ábra szerint két egybevágó téglalapot írunk. Mekkora az $\alpha$ szög?
+\begin{figure}[hpb]
+\begin{center}
+\definecolor{wwwwww}{rgb}{0.4,0.4,0.4}
+\begin{tikzpicture}[line cap=round,line join=round,>=triangle 45,x=4.480825442550972cm,y=4.480825442550972cm]
+\clip(-0.0512,-0.0496) rectangle (1.0647,1.0574);
+\fill[color=wwwwww,fill=wwwwww,fill opacity=0.5] (0,0.2679) -- (0,0) -- (1,0) -- (1,0.2679) -- cycle;
+\fill[color=wwwwww,fill=wwwwww,fill opacity=0.5] (0.134,0.2679) -- (1,0.7679) -- (0.866,1) -- (0,0.5) -- cycle;
+\draw [shift={(0.134,0.2679)}] (0,0) -- (0:0.1785) arc (0:30:0.1785) -- cycle;
+\draw (1,0)-- (1,1);
+\draw (0,0)-- (1,0);
+\draw (1,1)-- (0,1);
+\draw (0,1)-- (0,0);
+\draw (0.866,1)-- (1,0.7679);
+\draw (0,0.2679)-- (1,0.2679);
+\draw (0,0.5)-- (0.134,0.2679);
+\draw (0.134,0.2679)-- (1,0.7679);
+\draw (0.866,1)-- (0,0.5);
+\begin{scriptsize}
+\draw[color=black] (0.267,0.3005) node {$\alpha$};
+\end{scriptsize}
+\end{tikzpicture}
+\end{center}
+\end{figure}
+
+\ki{Katz Sándor}{Bonyhád}\medskip
+
+{\bf I. megoldás: } $FQR\angle=EPQ\angle=\alpha$, mert a szögek merőleges szárúak. $EPQ\angle=CRS\angle=\alpha$, mert váltószögek. $EPQ\triangle\equiv CRS\triangle$, mert két szögük (a derékszög és $\alpha$) megegyezik és a derékszöggel szemközti oldalak ugyanolyan hosszúak ($b$). Ezért az ábrán $d$-vel jelölt szakaszok egyenlők.
+
+\begin{figure}[ht!]
+\begin{center}
+\definecolor{wwwwww}{rgb}{0.4,0.4,0.4}
+\begin{tikzpicture}[line cap=round,line join=round,>=triangle 45,x=4.480825442550972cm,y=4.480825442550972cm]
+\clip(-0.075,-0.0555) rectangle (1.0598,1.0614);
+\fill[color=wwwwww,fill=wwwwww,fill opacity=0.5] (0,0.2679) -- (0,0) -- (1,0) -- (1,0.2679) -- cycle;
+\fill[color=wwwwww,fill=wwwwww,fill opacity=0.5] (0.134,0.2679) -- (1,0.7679) -- (0.866,1) -- (0,0.5) -- cycle;
+\draw [shift={(0.134,0.2679)}] (0,0) -- (0:0.1785) arc (0:30:0.1785) -- cycle;
+\draw [shift={(0,0.5)}] (0,0) -- (-90:0.1785) arc (-90:-60:0.1785) -- cycle;
+\draw (1,0)-- (1,1);
+\draw (0,0)-- (1,0);
+\draw (1,1)-- (0,1);
+\draw (0,1)-- (0,0);
+\draw (0.866,1)-- (1,0.7679);
+\draw (0,0.2679)-- (1,0.2679);
+\draw (0,0.5)-- (0.134,0.2679);
+\draw (0.134,0.2679)-- (1,0.7679);
+\draw (0.866,1)-- (0,0.5);
+\draw (1,0.2679)-- (1,0);
+\draw (1,0.7679)-- (1,0.2679);
+\draw (1,1)-- (1,0.7679);
+\draw (0,0.5)-- (0,0.2679);
+\draw (0,0.2679)-- (0.134,0.2679);
+\draw (0.134,0.2679)-- (1,0.2679);
+%\begin{scriptsize}
+%\fill [color=black] (1,1) circle (0.5pt);
+\draw[color=black] (1.033,1.0306) node {$C$};
+%\fill [color=black] (0,0) circle (0.5pt);
+\draw[color=black] (-0.0333,-0.0139) node {$A$};
+%\fill [color=black] (1,0) circle (0.5pt);
+\draw[color=black] (1.033,-0.0139) node {$B$};
+%\fill [color=black] (0,1) circle (0.5pt);
+\draw[color=black] (-0.0333,1.0306) node {$D$};
+\draw[color=black] (0.5083,-0.0328) node {$a$};
+%\fill [color=black] (1,0.7679) circle (0.5pt);
+\draw[color=black] (1.033,0.7685) node {$R$};
+%\fill [color=black] (0.866,1) circle (0.5pt);
+\draw[color=black] (0.8891,1.0306) node {$S$};
+%\fill [color=black] (0,0.5) circle (0.5pt);
+\draw[color=black] (-0.0333,0.5028) node {$P$};
+%\fill [color=black] (0.134,0.2679) circle (0.5pt);
+\draw[color=black] (0.1333,0.228) node {$Q$};
+%\fill [color=black] (0,0.2679) circle (0.5pt);
+\draw[color=black] (-0.0333,0.2686) node {$E$};
+%\fill [color=black] (1,0.2679) circle (0.5pt);
+\draw[color=black] (1.033,0.2686) node {$F$};
+\draw[color=black] (0.0917,0.4087) node {$b$};
+\draw[color=black] (0.5975,0.5009) node {$a$};
+\draw[color=black] (0.267,0.3005) node {$\alpha$};
+\draw[color=black] (0.0339,0.3765) node {$\alpha$};
+\draw[color=black] (0.9606,0.1587) node {$b$};
+\draw[color=black] (0.9706,0.5226) node {$c$};
+\draw[color=black] (1.0256,0.9086) node {$d$};
+\draw[color=black] (-0.0393,0.4087) node {$d$};
+\draw[color=black] (0.0738,0.245) node {$e$};
+\draw[color=black] (0.5083,0.235) node {$f$};
+%\end{scriptsize}
+\end{tikzpicture}
+\end{center}
+\caption*{A 3.~feladat I.~megoldásához.}
+\end{figure}
+
+Az ábráról leolvasható, hogy
+\begin{align}
+b+c+d&=a\\
+e+f&=a
+\end{align}
+
+$EPQ\triangle\sim FQR\triangle$, mert szögeik megegyeznek. A hasonlóság miatt a megfelelő oldalak aránya egyenlő:
+\begin{align}
+\frac e b = \frac c a\\
+\frac d b = \frac f a
+\end{align}
+
+(1)-ből átrendezéssel és kiemeléssel
+\[b\left(1+\frac d b\right)=a\left(1-\frac c a\right),\]
+(4) felhasználásával pedig
+\[b\left(1+\frac f a\right)=a\left(1-\frac c a\right). \eqno{(5)}\]
+
+(2)-ből átrendezéssel és kiemeléssel
+\[a\left(1-\frac f a\right)=e,\]
+(3) felhasználásával
+\[a\left(1-\frac f a\right)=\frac{bc}{a}. \eqno{(6)}\]
+
+Szorozzuk össze (5)-öt és (6)-ot!
+\begin{align*}
+ab\left(1+\frac f a\right)\left(1-\frac f a\right)&=a\cdot\frac{bc}{a}\cdot\left(1- \frac c a\right)\\
+1-\frac{f^2}{a^2}&=\frac c a-\frac{c^2}{a^2}\\
+\frac{a^2-f^2}{a^2}&=\frac c a-\frac{c^2}{a^2}\\
+\frac{c^2}{a^2}&=\frac c a-\frac{c^2}{a^2}&\text{Pitagorasz-tétel $FQR\triangle$-re: $a^2-f^2=c^2$}\\
+2\cdot\frac{c^2}{a^2}&=\frac c a
+\end{align*}
+$\frac c a \ne 0$, ezért $c=\frac a 2$. Az $FQR\triangle$ derékszögű és az egyik befogó fele az átfogónak, ezért az említett befogóval szemközti szög, $\alpha$, 30\degre-os.
+
+\medskip
+
+{\bf II. megoldás: } Az ábrán jelölt szögek egyenlő nagyságúak, mert merőleges szárúak. Legyen a négyzet oldala $a$, a beírt téglalap másik oldala $b$.
+
+Írjuk fel a $BC$ oldalt az azt alkotó három szakasz összegeként!
+\begin{align}
+b+a\cdot\sin\alpha+b\cdot\cos\alpha&=a\\
+b\cdot\left(1+\cos\alpha\right)&=a\cdot\left(1-\sin\alpha\right)
+\end{align}
+
+\begin{figure}[htb!]
+\begin{center}
+\definecolor{wwwwww}{rgb}{0.4,0.4,0.4}
+\begin{tikzpicture}[line cap=round,line join=round,>=triangle 45,x=4.480825442550972cm,y=4.480825442550972cm]
+\clip(-0.1034,-0.1067) rectangle (1.0885,1.1281);
+\fill[color=wwwwww,fill=wwwwww,fill opacity=0.5] (0,0.2679) -- (0,0) -- (1,0) -- (1,0.2679) -- cycle;
+\fill[color=wwwwww,fill=wwwwww,fill opacity=0.5] (0.134,0.2679) -- (1,0.7679) -- (0.866,1) -- (0,0.5) -- cycle;
+\draw [shift={(0.134,0.2679)}] (0,0) -- (0:0.1785) arc (0:30:0.1785) -- cycle;
+\draw [shift={(0,0.5)}] (0,0) -- (-90:0.1785) arc (-90:-60:0.1785) -- cycle;
+\draw (1,0)-- (1,1);
+\draw (0,0)-- (1,0);
+\draw (1,1)-- (0,1);
+\draw (0,1)-- (0,0);
+\draw (0.866,1)-- (1,0.7679);
+\draw (0,0.2679)-- (1,0.2679);
+\draw (0,0.5)-- (0.134,0.2679);
+\draw (0.134,0.2679)-- (1,0.7679);
+\draw (0.866,1)-- (0,0.5);
+\draw (1,0.2679)-- (1,0);
+\draw (0.866,1)-- (1,0.7679);
+%\begin{scriptsize}
+%\fill [color=black] (1,1) circle (0.5pt);
+\draw[color=black] (1.033,1.0306) node {$C$};
+%\fill [color=black] (0,0) circle (0.5pt);
+\draw[color=black] (-0.0333,-0.0139) node {$A$};
+%\fill [color=black] (1,0) circle (0.5pt);
+\draw[color=black] (1.033,-0.0139) node {$B$};
+%\fill [color=black] (0,1) circle (0.5pt);
+\draw[color=black] (-0.0333,1.0306) node {$D$};
+\draw[color=black] (0.5083,-0.0328) node {$a$};
+%\fill [color=black] (1,0.7679) circle (0.5pt);
+%\draw[color=black] (1.033,0.7685) node {$R$};
+%\fill [color=black] (0.866,1) circle (0.5pt);
+%\draw[color=black] (0.8891,1.0306) node {$S$};
+%\fill [color=black] (0,0.5) circle (0.5pt);
+%\draw[color=black] (-0.0333,0.5028) node {$P$};
+%\fill [color=black] (0.134,0.2679) circle (0.5pt);
+%\draw[color=black] (0.1333,0.228) node {$Q$};
+%\fill [color=black] (0,0.2679) circle (0.5pt);
+\draw[color=black] (-0.0333,0.2686) node {$E$};
+%\fill [color=black] (1,0.2679) circle (0.5pt);
+\draw[color=black] (1.033,0.2686) node {$F$};
+\draw[color=black] (0.0917,0.4087) node {$b$};
+\draw[color=black] (0.5975,0.5009) node {$a$};
+\draw[color=black]  (0.267,0.3005) node {$\alpha$};
+\draw[color=black] (0.0339,0.3765) node {$\alpha$};
+\draw[color=black] (0.9606,0.1587) node {$b$};
+%\draw[color=black] (0.9706,0.5226) node {$c$};
+%\draw[color=black] (0.9606,0.9086) node {$d$};
+%\draw[color=black] (-0.0393,0.4087) node {$d$};
+%\draw[color=black] (0.0738,0.245) node {$e$};
+%\draw[color=black] (0.5083,0.235) node {$f$};
+\draw[color=black] (0.9081,0.8548) node {$b$};
+\draw[color=black] (0.9723,0.8831) node {$\alpha$};
+\draw [shift={(1,0.7679)}] (0,0) -- (90:0.1785) arc (90:120:0.1785) -- cycle;
+%\end{scriptsize}
+\end{tikzpicture}
+\end{center}
+\caption*{A 3.~feladat II.~megoldásához.}
+\end{figure}
+
+\medskip
+
+{\bf III. megoldás: } Húzzuk be a két egybevágó téglalapban az $EB$ és $PR$ átlókat, ezek nyilván egyenlők.
+
+Toljuk el a $PR$ átlót a $CR=PE=d$ szakasszal, ekkor az $ETB$ egyenlő szárú háromszöget kapjuk, amelyben az $EF$ magasság felezi a $TB$ alapot, tehát $TF=FB=b$. Így a $BC$ oldalon $2b+2d=a$, ahonnan $b+d=c=\frac a 2$.
+
+Az $RQF$ derékszögű háromszög $RF$ befogója fele az $RQ$ átfogónak, tehát $\alpha=30^\circ$.
+
+\begin{figure}[ht!]
+\begin{center}
+\definecolor{wwwwww}{rgb}{0.4,0.4,0.4}
+\begin{tikzpicture}[line cap=round,line join=round,>=triangle 45,x=4.480825442550972cm,y=4.480825442550972cm]
+\clip(-0.075,-0.0555) rectangle (1.0598,1.0614);
+\fill[color=wwwwww,fill=wwwwww,fill opacity=0.5] (0,0.2679) -- (0,0) -- (1,0) -- (1,0.2679) -- cycle;
+\fill[color=wwwwww,fill=wwwwww,fill opacity=0.5] (0.134,0.2679) -- (1,0.7679) -- (0.866,1) -- (0,0.5) -- cycle;
+\draw [shift={(0.134,0.2679)}] (0,0) -- (0:0.1785) arc (0:30:0.1785) -- cycle;
+%\draw [shift={(0,0.5)}] (0,0) -- (-90:0.1785) arc (-90:-60:0.1785) -- cycle;
+\draw (1,0)-- (1,1);
+\draw (0,0)-- (1,0);
+\draw (1,1)-- (0,1);
+\draw (0,1)-- (0,0);
+\draw (0.866,1)-- (1,0.7679);
+\draw (0,0.2679)-- (1,0.2679);
+\draw (0,0.5)-- (0.134,0.2679);
+\draw (0.134,0.2679)-- (1,0.7679);
+\draw (0.866,1)-- (0,0.5);
+\draw (1,0.2679)-- (1,0);
+\draw (1,0.7679)-- (1,0.2679);
+\draw (1,1)-- (1,0.7679);
+\draw (0,0.5)-- (0,0.2679);
+\draw (0,0.2679)-- (0.134,0.2679);
+\draw (0.134,0.2679)-- (1,0.2679);
+\draw[thick] (0,0.2679) -- (1,0);
+\draw[thick] (0,0.2679) -- (1,0.5358);
+\draw[thick] (0,0.5) -- (1,0.7679);
+%\begin{scriptsize}
+%\fill [color=black] (1,1) circle (0.5pt);
+\draw[color=black] (1.033,1.0306) node {$C$};
+%\fill [color=black] (0,0) circle (0.5pt);
+\draw[color=black] (-0.0333,-0.0139) node {$A$};
+%\fill [color=black] (1,0) circle (0.5pt);
+\draw[color=black] (1.033,-0.0139) node {$B$};
+%\fill [color=black] (0,1) circle (0.5pt);
+\draw[color=black] (-0.0333,1.0306) node {$D$};
+\draw[color=black] (0.5083,-0.0328) node {$a$};
+%\fill [color=black] (1,0.7679) circle (0.5pt);
+\draw[color=black] (1.033,0.7685) node {$R$};
+%\fill [color=black] (0.866,1) circle (0.5pt);
+\draw[color=black] (0.8891,1.0306) node {$S$};
+%\fill [color=black] (0,0.5) circle (0.5pt);
+\draw[color=black] (-0.0333,0.5028) node {$P$};
+%\fill [color=black] (0.134,0.2679) circle (0.5pt);
+\draw[color=black] (0.1833,0.26) node {$Q$};
+%\fill [color=black] (0,0.2679) circle (0.5pt);
+\draw[color=black] (-0.0333,0.2686) node {$E$};
+%\fill [color=black] (1,0.2679) circle (0.5pt);
+\draw[color=black] (1.033,0.2686) node {$F$};
+%\draw[color=black] (0.0917,0.4087) node {$b$};
+\draw[color=black] (0.5975,0.5009) node {$a$};
+\draw[color=black] (0.267,0.3005) node {$\alpha$};
+%\draw[color=black] (0.0339,0.3765) node {$\alpha$};
+%\draw[color=black] (0.9606,0.1587) node {$b$};
+\draw[color=black] (1.0306,0.5226) node {$c$};
+\draw[color=black] (1.0256,0.9086) node {$d$};
+\draw[color=black] (-0.0393,0.4087) node {$d$};
+%\draw[color=black] (0.0738,0.285) node {$e$};
+%\draw[color=black] (0.5083,0.235) node {$f$};
+\draw[color=black] (0.9706,0.6426) node {$d$};
+\draw[color=black] (0.9706,0.4926) node {$T$};
+\draw[color=black] (1.0306,0.1306) node {$b$};
+%\end{scriptsize}
+\end{tikzpicture}
+\end{center}
+\caption*{A 3.~feladat III.~megoldásához.}
+\end{figure}
+\medskip
+
+\vonal
+{\bf 4. feladat: } Legyen az $ABC$ háromszög $AB$ oldalának $A$-hoz közelebbi harmadolópontja $P$, az $A$-tól távolabbi harmadolópontja $Q$. Legyen továbbá a $BC$ oldalon a $B$-hez közelebbi harmadolópont $R$, a $B$-től távolabbi harmadolópont $S$. Legyen a $CA$ oldalon a $C$-hez közelebbi harmadolópont $T$, a $C$-től távolabbi harmadolópont $U$. Legyen a $PS$ és $BT$ szakaszok metszéspontját az $U$ ponttal összekötő egyenes és a $BC$ szakasz metszéspontja $V$. Határozzuk meg a $BUV$ háromszög és a $PQRSTU$ hatszög területének arányát.
+
+\ki{Bíró Bálint}{Eger}\medskip
+
+{\bf Megoldás: } Jelöléseink az ábrán láthatók.
+
+\begin{figure}
+\definecolor{ttttff}{rgb}{0.2,0.2,1}
+\definecolor{ffqqqq}{rgb}{1,0,0}
+\begin{center}
+\begin{tikzpicture}[line cap=round,line join=round,>=triangle 45,x=1.0cm,y=1.0cm]
+\clip(-4.12,-2.06) rectangle (4.4,5.32);
+\fill[color=ffqqqq,fill=ffqqqq,fill opacity=0.4] (-3.74,-0.62) -- (0.15,-1.09) -- (1.2,2.49) -- cycle;
+\fill[color=ttttff,fill=ttttff,fill opacity=0.25] (-1.15,-0.93) -- (1.45,-1.25) -- (2.62,0.47) -- (1.2,2.49) -- (-1.39,2.81) -- (-2.57,1.09) -- cycle;
+\draw (-0.22,4.52)-- (-3.74,-0.62);
+\draw (-3.74,-0.62)-- (4.04,-1.56);
+\draw (4.04,-1.56)-- (-0.22,4.52);
+\draw (-3.74,-0.62)-- (2.62,0.47);
+\draw (-1.39,2.81)-- (1.45,-1.25);
+\draw [domain=-4.12:4.4] plot(\x,{(--1.12-2.39*\x)/-0.7});
+\draw (1.45,-1.25)-- (2.62,0.47);
+\draw (-2.57,1.09)-- (-1.15,-0.93);
+\draw (-3.74,-0.62)-- (1.2,2.49);
+\draw (1.2,2.49)-- (-1.39,2.81);
+%\begin{scriptsize}
+%\fill [color=black] (-0.22,4.52) circle (1.5pt);
+\draw[color=black] (-.16,4.75) node {$A$};
+%\fill [color=black] (-3.74,-0.62) circle (1.5pt);
+\draw[color=black] (-3.95,-0.62) node {$B$};
+%\fill [color=black] (4.04,-1.56) circle (1.5pt);
+\draw[color=black] (4.25,-1.55) node {$C$};
+%\fill [color=black] (-1.39,2.81) circle (1.5pt);
+\draw[color=black] (-1.50,2.95) node {$P$};
+%\fill [color=black] (1.2,2.49) circle (1.5pt);
+\draw[color=black] (1.42,2.60) node {$U$};
+%\fill [color=black] (2.62,0.47) circle (1.5pt);
+\draw[color=black] (2.80,0.60) node {$T$};
+%\fill [color=black] (1.45,-1.25) circle (1.5pt);
+\draw[color=black] (1.48,-1.44) node {$S$};
+%\fill [color=black] (-1.15,-0.93) circle (1.5pt);
+\draw[color=black] (-1.2,-1.13) node {$R$};
+%\fill [color=black] (-2.57,1.09) circle (1.5pt);
+\draw[color=black] (-2.72,1.2) node {$Q$};
+%\fill [color=black] (0.5,0.1) circle (1.5pt);
+\draw[color=black] (0.76,0.4) node {$Z$};
+%\fill [color=black] (0.15,-1.09) circle (1.5pt);
+\draw[color=black] (0.3,-1.29) node {$V$};
+%\end{scriptsize}
+\end{tikzpicture}
+\end{center}
+\caption*{A 4.~feladathoz.}
+\end{figure}
+
+A párhuzamos szelők tételének megfordítása miatt a $TS$ szakasz párhuzamos az AB
+oldallal, továbbá a párhuzamos szelőszakaszok tételéből következően $TS=\frac13AB$. Mivel azonban $BP=\frac23AB$, ezért $\frac{TS}{BP}=\frac12$.
+
+A $TZS$ és $BZP$ háromszögek két-két szöge a $TS$ és $BP$ szakaszok párhuzamossága miatt
+egyenlő, tehát a $TZS$ és $BZP$ háromszögek megfelelő szögei egyenlők, vagyis a két
+háromszög hasonló. A hasonlóságból következik a megfelelő oldalak arányának egyenlősége,
+így ebből és előző eredményünkből \[\frac{TS}{BP}=\frac{ZS}{ZP}=\frac{ZT}{ZB}=\frac12\] következik, tehát a $Z$ pont a $PS$ szakasz $S$ ponthoz közelebb eső harmadolópontja.
+
+Ismét a párhuzamos szelők tételének megfordításából következik, hogy az $UP$ szakasz
+pár\-hu\-za\-mos a $BC$ oldallal, és a párhuzamos szelőszakaszok tétele miatt $UP=\frac13BC$.
+Az $UPZ$ és $VSZ$ háromszögekben két-két szög megegyezik, mert az $UP$ és $VS$ szakaszok
+párhuzamosak, a két háromszög megfelelő szögei egyenlők, tehát a két háromszög hasonló,
+ezért a megfelelő oldalak aránya is egyenlő, azaz $\frac{VS}{UP}=\frac{VZ}{UZ}=\frac{ZS}{ZP}$. Ugyanakkor az előzőekben igazoltuk, hogy $\frac{ZS}{ZP}=\frac12$, ezért
+\[\frac{VS}{UP}=\frac{VZ}{UZ}=\frac{ZS}{ZP}=\frac12.\]
+Eszerint a $VS$ szakasz hossza az $UP$ szakasz hosszának a felével egyenlő, de ebből $UP=\frac13BC$ miatt $VS=\frac16BC$ következik.
+
+Így $VS+SC=\frac16BC+\frac13BC=\frac12BC$, vagyis a $V$ pont a $BC$ szakasz felezőpontja.
+
+Az $UBC$ háromszögben tehát az $UV$ szakasz súlyvonal, amely felezi az $UBC$ háromszög
+területét, azaz $T_{BUV}=\frac12T_{UBC}$.
+
+Könnyen látható, hogy az $UBC$ háromszög területe az $ABC$ háromszög területének
+két\-har\-mad része, hiszen $\frac{UC}{AC}=\frac23$, és az $UC$ illetve $AC$ oldalakhoz tartozó magasság a két háromszögben egyenlő.
+
+Ebből rögtön következik, hogy $T_{BUV}=\frac12T_{UBC}=\frac12\cdot\frac23T_{ABC}=\frac13T_{ABC}$, vagyis a $BUV$ és az $ABC$ háromszögek területének aránya $1:3$.
+
+Nyilvánvaló, hogy $\frac{T_{APU}}{T_{ABC}}=\frac19$, hiszen a két háromszög
+szögei a megfelelő oldalak egy egyenesbe esése illetve párhuzamossága miatt egyenlők, ezért
+a két háromszög hasonló és a megfelelő oldalak aránya $1:3$. Hasonlóan látható be, hogy $\frac{T_{BRQ}}{T_{ABC}}=\frac19$ és $\frac{T_{CTS}}{T_{ABC}}=\frac19$.
+
+Ebből következik, hogy
+\[T_{PQRSTU}=T_{ABC}-T_{APU}-T_{BRQ}-T_{CTS}=\frac23T_{ABC}.\]
+
+Mivel előző eredményünk szerint $T_{BUV}=\frac13T_{ABC}$, ezért
+\[\frac{T_{BUV}}{T_{PQRSTU}}=\frac12.\]
+
+\medskip
+
+\vonal
+{\bf 5. feladat: } Egy $10\times10$-es táblázat minden sorába és minden oszlopába az ábrán látható módon beírjuk a számokat 0-tól 9-ig, majd minden sorban és minden oszlopban bekeretezünk pontosan 1 számot, tehát összesen 10-et. Van-e a bekeretezett számok között mindig legalább két azonos szám?
+
+\begin{table}[htbp]
+\begin{center}
+\begin{tabular}{|c|c|c|c|c|}
+\hline
+0 & 1 & 2 & \ldots & 9 \\ \hline
+9 & 0 & 1 & \ldots & 8 \\ \hline
+8 & 9 & 0 & \ldots & 7 \\ \hline
+\vdots & \vdots & \vdots & $\ddots$ & \vdots \\ \hline
+1 & 2 & 3 & \ldots & 0 \\ \hline
+\end{tabular}
+\end{center}
+\end{table}
+
+\ki{Szabó Magda}{Szabadka}\medskip
+
+{\bf Megoldás: } Vegyük észre, hogy a táblázat tetszőleges elemét megkaphatnánk úgy is, hogy a sorának az első eleméhez hozzáadnánk az oszlopának az első elemét és vennénk ennek az összegnek a 10-es maradékát.
+
+Most bebizonyítjuk, hogy lesz legalább két azonos szám.
+
+Bizonyítsunk indirekten, azaz tegyük fel, hogy mind a 10 kiválasztott szám különböző.
+
+Ekkor a kiválasztott számok összege $0+1+2+\ldots+9=45$, aminek a 10-zel vett osztási maradéka 5. A fentiek szerint ezt megkaphatjuk úgy is, hogy az első sor és az első oszlop elemeinek összegét vesszük, ami $2\cdot(0+1+2+\ldots+9)=90$, aminek a 10-zel vett osztási maradéka 0.
+
+Mivel a két maradék nem egyezik meg, ellentmondásra jutottunk. Tehát mindig van két azonos szám.
+
+\medskip
+
+\vonal
+{\bf 6. feladat: } 
+Jelölje tetszőleges pozitív egész $n$ szám esetén $t(n)$ az $n$ szám különböző prímosz\-tó\-i\-nak számát. Mutassuk meg, hogy végtelen sok olyan pozitív egész $n$ szám van, amelyre
+\begin{itemize}
+\item[a.)] $t\left(n^2+n\right)$ páratlan.
+\item[b.)] $t\left(n^2+n\right)$ páros.
+\end{itemize}
+
+\ki{Borbély József}{Tata}\medskip
+
+{\bf Megoldás: } Nyilvánvaló, hogy ha $(a;b)=1$, akkor $t(a;b)=t(a)+t(b)$.
+
+Mivel $(n;n+1)=1$ és $n^2+n=n\cdot(n+1)$, így
+\[t\left(n^2+n\right)=t(n)+t(n+1).\]
+
+Legyen $k>0$ egész szám. Ekkor igazak a kövektező álítások.
+\begin{itemize}
+\item Minden $n=2^k$-ra $t(n)=1$, azaz végtelen sok páros $n$-re $t(n)$ páratlan.
+\item Minden $n=2\cdot3^k$-ra $t(n)=2$, azaz végtelen sok páros $n$-re $t(n)$ páros.
+\item Minden $n=3^k$-ra $t(n)=1$, azaz végtelen sok páratlan $n$-re $t(n)$ páratlan.
+\item Minden $n=3\cdot5^k$-ra $t(n)=2$, azaz végtelen sok páratlan $n$-re $t(n)$ páros.
+\end{itemize}
+
+Másképpen fogalmazva: nem lehet, hogy páros $n$-re $t(n)$ csak páros vagy csak páratlan értéket vegyen fel; ugyancsak nem lehet, hogy páratlan $n$-re $t(n)$ csak páros vagy csak páratlan értéket vegyen fel.
+
+Könnyű látni, hogy ebből következik, hogy végtelen sok esetben két egymást követő számra $t(n)$ azonos, illetve különböző paritású. Innen következik a bizonyítandó állítás.
+\end{document}

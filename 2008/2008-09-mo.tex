@@ -1,0 +1,195 @@
+\documentclass[a4paper,10pt]{article} 
+\usepackage[utf8]{inputenc}
+\usepackage{t1enc}
+\usepackage{graphicx}
+\usepackage{amssymb}
+\usepackage{pstricks, pstricks-add}
+\voffset - 20pt
+\hoffset - 35pt
+\textwidth 450pt
+\textheight 650pt 
+\frenchspacing 
+
+\pagestyle{empty}
+\def\ki#1#2{\hfill {\it #1 (#2)}\medskip}
+
+\def\tg{\, \hbox{tg} \,}
+\def\ctg{\, \hbox{ctg} \,}
+\def\arctg{\, \hbox{arctg} \,}
+\def\arcctg{\, \hbox{arcctg} \,}
+
+\begin{document}
+\begin{center} \Large {\em XVII. Nemzetközi Magyar Matematika Verseny} \end{center}
+\begin{center} \large{\em Kassa, 2008. március 6-9.} \end{center}
+\smallskip
+\begin{center} \large{\bf 9. osztály} \end{center}
+\bigskip 
+
+{\bf 1. feladat: } Határozzuk meg az összes $p, q$ prímszám kettősöket, amelyekre érvényes:
+$$ 145p^2-p=q^2-q$$
+
+\ki{Oláh György}{Komárom}\medskip
+
+{\bf 1. feladat megoldása: } Az egyenlet átalakítva $q(q-1)=p(145p-1)$. Ebből következik, hogy 
+$p~|~q(q-1)$. Nem lehet $p~|~q$, mert $p~|~q$ esetén $p=q$, vagyis $145p=q$ lenne, ami lehetetlen.
+Ezért $p~|~q-1$ vagyis $q-1=kp$, $k\in\mathbb{N}$. Ezt az eredeti egyenletbe behelyettesítve, majd a $p$-t kifejezve,
+kapjuk, hogy $\displaystyle{p=\frac{k+1}{145-k^2}}$, $145-k^2>0 \Rightarrow k\le 12$. 
+
+Csupán $k=12$ esetén kapunk 
+$p$-re prímszámot, ekkor $p=13$ és $q=157$, ami szintén prím. Tehát a feladat egyedüli megoldása $p=13$ és $q=157$.
+
+
+
+\medskip
+{\bf 2. feladat: } 
+Jancsi unalmában 21 darab egybevágó négyzetre számokat írt, 
+mégpedig a következőképpen
+4 darabra 1-est, 
+2 darabra 2-est, 
+7 darabra 3-ast és 8 darabra 4-est írt. 
+Egy más alkalommal ezekből a négyzetekből 20 darabot felhasználva kirakott egy $4 \times 5$-ös téglalapot. 
+Amikor végzett a kirakással, nézegette a számokat és észrevette, hogy függőlegesen minden oszlopban egyezik az összeg. 
+Tovább nézegetve észrevette, hogy vízszintesen a sorokban is egyenlők az összegek. 
+Melyik kártyát nem használta fel Jancsi a kirakáshoz?
+
+\ki{Pintér Ferenc}{Nagykanizsa}\medskip
+
+{\bf 2. feladat megoldása: } Az, hogy az 5 oszlopban ugyanannyi az összeg, azt jelenti, hogy a kártyákra írt
+számok összege osztható 5-tel. Az, hogy a négy sorban is egyenlő az összeg, azt jelenti, hogy a kártyákra írt
+számok összege osztható 4-gyel is osztható. Mivel $(4;5)=1$, a leírtakból következik, hogy a számok összegének
+oszthatónak kell lennie 20-szal.
+
+Tekintettel arra, hogy a 21 kártyára írt szám összege 61, csak az 1-es maradhatott Jancsinál.
+
+Egy lehetséges elrendezés:
+
+\begin{center}
+\begin{tabular}{|c|c|c|c|c|}
+\hline
+1&3&4&4&3\cr
+\hline
+3&4&2&2&4\cr
+\hline
+4&4&3&3&1\cr
+\hline
+4&1&3&3&4\cr
+\hline
+\end{tabular}
+\end{center}
+
+
+{\bf 3. feladat: } Harry Potter a Roxfort Boszorkány- és Varázslóképző Szakiskolában öt év alatt összesen 31 vizsgát tett le. Mindegyik évben több vizsgája volt, mint az előző évben, az ötödik évben pedig háromszor annyi tárgyból vizsgázott le, mint az első évben. Hány vizsgát kellett teljesítenie Harry Potternek a negyedik évben?
+
+\ki{Péics Hajnalka}{Szabadka}\medskip
+
+{\bf 3. feladat megoldása: } Jelöljék $x_1, x_2, x_3, x_4, x_5$ Harry Potter első, második, harmadik, negyedik és ötödik
+évben letett vizsgáinak számát. Ekkor $x_1<x_2<x_3<x_4<x_5$, 
+$x_1+x_2+x_3+x_4+x_5=31$ és $x_5=3x_1$.
+
+Ha $x_1\ge 4$ lenne, akkor $x_2 \ge 5$, $x_3\ge 6$, $x_4\ge 7$ és $x_5\ge 12$ lenne, amiből
+$x_1+x_2+x_3+x_4+x_5\ge 34 \ne 31$ adódik, ami nem lehetséges.
+
+Ha $x_1=1$, akkor $x_5=3$, vagyis $1<x_2<x_3<x_4<3$, ami nem lehetséges.
+
+Ha $x_1=2$, akkor $x_5=6$, vagyis $2<x_2<x_3<x_4<6$, vagyis $x_2=3$, $x_3=4$, $x_4=5$ kellene, hogy 
+teljesüljön, de akkor $x_1+x_2+x_3+x_4+x_5=20\ne 31$, ami nem megoldás.
+
+Tehát csak $x_1=3$ és $x_5=9$ marad, ahol $x_4\le 7$ esetén $x_3\le 6$ és $x_2\le 5$ adódik, 
+s ekkor $x_1+x_2+x_3+x_4+x_5=3+5+637+9=30<31$, ami ellentmond a feltételeknek.
+
+Ezért csupán az $x_4=8$ az egyetlen választási lehetőség, amiből a lehetséges megoldások:
+$x_1=3, x_2=4, x_3=7, x_4=8, x_5=9$ vagy $x_1=3, x_2=5, x_3=6, x_4=8, x_5=9$. A feladatnak más megoldása nincs. 
+
+\medskip
+{\bf 4. feladat: } Egy konferenciának 2008 résztvevője van. Bármely három háromtagú csoportban van két olyan személy,  akik azonos nyelven beszélnek. Bizonyítsátok be, hogy ha minden résztvevő legfeljebb öt nyelvet beszél, akkor van legalább 202 olyan személy akik azonos nyelvet beszélnek.
+
+\ki{Szabó Magdi}{Szabadka}\medskip
+
+{\bf 4. feladat megoldása: } Figyeljük meg a következő két esetet:
+
+a) Ha bármely két személy azonos nyelvet beszél, akkor az $A$ személy a többi 2007 egyénnel kommunikál valamilyen nyelven, de legfeljebb öt nyelven. Így van olyan nyelv, amelyet legalább $\displaystyle{\frac{2007}{5}>202}$ résztvevő ismer.
+
+b) a másik lehetőség, hogy létezik két olyan személy: $A$ és $B$, akik nem beszélnek azonos nyelven. Akkor a többi 2006
+résztvevő beszél közös nyelvet az $A$, $B$ személyek (legalább) egyikével. Tehát van legalább 1003 egyén, akik azonos nyelvet beszélnek az egyik személlyel, például $A$-val. 
+
+Mivelhogy $5\cdot 200<1003$, így az $A$ azonos nyelven beszél legalább 201 egyénnel. Ezek $A$-val együtt alkotják azt a 
+202-es csoportot, akik egy nyelven beszélnek.
+
+\medskip
+{\bf 5. feladat: } Az $ABCD$ rombusz $AC$ átlóján tetszőlegesen választott $E$  pont különbözik az $A$ és  $C$ csúcstól. Legyenek  az $AB$ és $BC$  egyenesen rendre az $N$ és $M$ pontok olyanok, hogy $|AE|=|NE|$ és $|CE|=|ME|$. Jelölje  $K$ az $AM$ és $CN$  egyenesek metszéspontját. Igazoljuk, hogy a  $K, D$ és $E$  pontok kollineárisak (egy egyeneshez illeszkednek).
+
+\ki{Sipos Elvíra}{Zenta}\medskip
+
+{\bf 5. feladat megoldása: } Tegyük fel, hogy $|AE|\ge |CE|$, ahogyan az ábrán.
+
+\begin{center}
+\newrgbcolor{wwqqww}{0.4 0 0.4}
+\psset{xunit=1.0cm,yunit=1.0cm,algebraic=true,dotstyle=o,dotsize=3pt 0,linewidth=0.8pt,arrowsize=3pt 2,arrowinset=0.25}
+\begin{pspicture*}(-1.52,-1.52)(10.72,5.86)
+\psline[linewidth=1.6pt](1.16,4.86)(0,0)
+\psline[linewidth=1.6pt](1.16,4.86)(6.16,4.86)
+\psline[linewidth=1.6pt](6.16,4.86)(5,0)
+\psline[linewidth=1.6pt](0,0)(6.16,4.86)
+\psplot[linestyle=dotted]{0}{10.72}{(-0--2.08*x)/5.5}
+\psplot[linestyle=dotted]{6.16}{10.72}{(--46-4.86*x)/3.3}
+\pscircle[linestyle=dashed,dash=1pt 2pt 4pt 2pt ](2.5,1.7){3.02}
+\pscircle[linestyle=dashed,dash=1pt 2pt 4pt 2pt ](7.23,2.04){3.02}
+\psline[linestyle=dashed,dash=4pt 4pt,linecolor=wwqqww](1.16,4.86)(7.52,2.85)
+\psline[linewidth=1.6pt](0,0)(5,0)
+\psline(5,0)(9.46,0)
+\pscircle[linewidth=1.6pt,linecolor=red](4.73,-1.12){4.86}
+\psline[linestyle=dashed,dash=4pt 4pt,linecolor=wwqqww](4.73,3.74)(5,0)
+\begin{scriptsize}
+\psdots[dotstyle=*](0,0)
+\rput[bl](-0.38,-0.18){$A$}
+\psdots[dotstyle=*](5,0)
+\rput[bl](4.94,-0.38){$B$}
+\psdots[dotstyle=*](1.16,4.86)
+\rput[bl](1.14,5.1){$D$}
+\psdots[dotstyle=*](6.16,4.86)
+\rput[bl](6,5.22){$C$}
+\psdots[dotstyle=*](4.73,3.74)
+\rput[bl](4.62,4.12){$E$}
+\psdots[dotstyle=*](9.46,0)
+\rput[bl](8.96,0.14){$N$}
+\psdots[dotstyle=*](5.5,2.08)
+\rput[bl](5.1,2.28){$M$}
+\psdots[dotstyle=*](7.52,2.85)
+\rput[bl](7.6,2.98){$K$}
+\rput[bl](-0.58,3.52){$k_1$}
+\rput[bl](7.22,4.7){$k_2$}
+\end{scriptsize}
+\end{pspicture*}
+\end{center}
+
+Ekkor az  $ABME$ és $EBNC$ négyszögeket vizsgálva: $ABME$ húrnégyszög, mert $EAB\sphericalangle=ECM\sphericalangle$
+ (rombusz) $=ENB\sphericalangle$ (egyenlő szárú háromszög), legyen körülírt köre $k_1$.
+ $EBNC$ húrnégyszög, mert $ECB\sphericalangle=BAC\sphericalangle$ (rombusz) $=ENB\sphericalangle$ (egyenlő szárú háromszög), legyen 
+a körülírt köre $k_2$.
+
+Ekkor $CNB\sphericalangle=AEB\sphericalangle$.
+
+Vizsgáljuk az $ANKE$ négyszöget: $EAM\sphericalangle=EBM\sphericalangle$ ($EM$ húr felett a $k_1$ körben),
+és $EBM\sphericalangle = ENC\sphericalangle$ ($EC$ húr felett a $k_2$ körben), 
+tehát húrnégyszög, vagyis $CEK\sphericalangle=KNA\sphericalangle$. Mivel $AC$ a rombusz
+szimmetriatengelye, ezért $AEB\sphericalangle=AED\sphericalangle$. Tehát
+$AED\sphericalangle=AEB\sphericalangle=CNB\sphericalangle=KNA\sphericalangle=CEK\sphericalangle$, vagyis
+$K$, $D$ és $E$ egy egyenesen vannak.
+
+\medskip
+{\bf 6. feladat: } Bizonyítsátok be, hogy ha $x, y, z\ge 0$, akkor 
+$x+y+z+xyz(xy+yz+zx)\ge 6xyz$.\\ 
+Mikor áll fenn egyenlőség? 
+
+\ki{Bencze Mihály}{Brassó}\medskip
+
+{\bf 6. feladat megoldása: } Az egyenlőtlenséget ekvivalens rendezéssel a következőképpen alakíthatjuk:
+$$(x^2y^2z+z-2xyz)+(xy^2z^2+x-2xyz)+(x^2z^2y+y-2xyz)\ge 0,$$
+továbbá
+$$z(x^2y^2+1-2xy)+x(y^2z^2+1-2yz)+y(x^2z^2+1-2xz)\ge 0,$$
+és végül
+$$z(xy-1)^2+x(yz-1)^2+y(xz-1)^2\ge 0$$
+mivel $x,y,z \ge 0$.
+Az egyenlőség akkor áll fenn, ha $xy=1 \land yz=1 \land xz=1 \Leftrightarrow x=y=z=1$.
+
+\end{document}

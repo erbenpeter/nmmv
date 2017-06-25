@@ -1,0 +1,258 @@
+\documentclass[a4paper,10pt]{article} 
+\usepackage[utf8]{inputenc}
+\usepackage{t1enc}
+\usepackage{graphicx}
+\usepackage{amssymb}
+\usepackage{pstricks, pstricks-add}
+\voffset - 20pt
+\hoffset - 35pt
+\textwidth 450pt
+\textheight 650pt 
+\frenchspacing 
+
+\pagestyle{empty}
+\def\ki#1#2{\hfill {\it #1 (#2)}\medskip}
+
+\def\tg{\, \hbox{tg} \,}
+\def\ctg{\, \hbox{ctg} \,}
+\def\arctg{\, \hbox{arctg} \,}
+\def\arcctg{\, \hbox{arcctg} \,}
+
+\begin{document}
+\begin{center} \Large {\em XVII. Nemzetközi Magyar Matematika Verseny} \end{center}
+\begin{center} \large{\em Kassa, 2008. március 6-9.} \end{center}
+\smallskip
+\begin{center} \large{\bf 10. osztály} \end{center}
+\bigskip 
+
+{\bf 1. feladat: } Osztható-e $20^{2008}+16^{2008}-3^{2008}-1$  \  $323$-al? Az állításodat igazold!
+
+\ki{Oláh György}{Komárom}
+
+\medskip
+{\bf 1. feladat megoldása: } Megmutatjuk, hogy az adott szám osztható 323-al. A bizonyítást két
+részben végezzük el. A 323 felbontható két prímszám, a 17 és a 19
+szorzatára. Ha bebizonyítjuk, hogy a kifejezés mindkét számmal
+osztható, akkor megoldottuk a feladatot.
+Sőt ennél többet is: a 2008 helyett bármely páros hatványra is
+be tudjuk látni az oszthatóságot.
+
+Első lépésben nézzük meg a 17-el való oszthatóságot. 
+
+Ehhez
+csoportosítsuk át a tagokat így: $\left(20^{2k}-3^{2k}\right)+\left(16^{2k}-1\right)$.
+Ekkor ismert azonosság alapján mindkét zárójelből ki tudjuk emelni a
+17-et. Az első zárójelből kiemelhető a $20-3= 17$, a másikból pedig a
+$16^2-1= (16-1)\cdot(16+1)$. Ezzel a 17-el való oszthatóságot beláttuk.
+
+Most ismét átcsoportosítjuk a tagokat a 19
+kiemeléséhez: $\left(20^{2k}-1\right)+\left(16^{2k}-3^{2k}\right)$. Az előbbiek szerint az első tagból
+kiemelhető $20-1=19$, a másodikból pedig a $16+3=19$. Ezzel a 19-el
+való oszthatóságot beláttuk.
+
+
+
+\medskip
+{\bf 2. feladat: } Az $ABC$ háromszögben $|AB|=20e$, $|AC|=16e$  és 
+$|BC|=12e$. Egy $P$ középpontú és $2e$ sugarú kör végig gurul az $ABC$ háromszög belsejében úgy, hogy mindig érinti a háromszögnek legalább az egyik oldalát. Mekkora utat tesz meg $P$ addig, amíg először tér vissza a kiindulási helyzetébe? 
+
+\ki{Dr. Kántor Sándorné}{Debrecen}\medskip
+
+{\bf 2. feladat megoldása: } Az $ABC$ háromszög derékszögű, mert oldalainak hosszai pitagoraszi
+számhármast alkotnak és a derékszög a $C$ csúcsban van.
+Legyen a $BC$ befogó függőleges helyzetű (csak az egyszerűbb
+kifejezés lehetősége miatt). Tekintsük a guruló körnek azt a helyzetét,
+amikor a legfelső helyzetben érinti az $AB$ átfogót és $BC$ befogót.
+Jelöljük ekkor $O$-val a kör középpontját és $B’$-vel az $O$-ból a $BC$-re
+emelt merőleges talppontját, vagyis az érintési pontot.
+
+Nyilván $OB’ = 2$, $ABC\sphericalangle=2\cdot OBB\sphericalangle = 2\beta$.
+$$
+BB'= 2 \cdot \ctg \beta = 
+2 \cdot \frac{\cos \beta}{\sin \beta}=
+2 \cdot \frac{\sqrt{(1+\cos 2\beta)/2}}{\sqrt{(1-\cos 2\beta)/2}}=
+2 \cdot \frac{\sqrt{1+12/20}}{\sqrt{1-12/20}}=
+2 \cdot \frac{\sqrt{32}}{\sqrt{8}}=
+4.$$
+
+Így a $P$ pont által befutott függőleges távolság: $12 - 4 - 2 = 6$, ami
+éppen a fele az $ABC$ háromszög $BC$ oldala hosszának. Az $ABC$
+háromszög és a $P$ pont által befutott háromszög alakú pálya
+hasonlósága miatt, mivel a hasonlóság aránya $1:2$-höz, $P$ pályájának a
+hossza az $ABC$ háromszög kerületének a fele, vagyis: 24.
+
+
+
+{\bf 3. feladat: } Egy nagy táblázat ,,közepére'' beírjuk az 1-et, majd az ábrán látható módon ,,csiga\-vo\-nal\-ban'' folytonosan beírjuk az egymást követő egész számokat. Mivel egyenlő a közvetlenül 2008 felett, illetve alatt álló két szám összege?
+
+\centerline{
+\begin{tabular}{|c|c|c|c|c|c|}
+\hline
+17 & 16 & 15 & 14 & 13 &  \\ \hline
+$\downarrow $ & 5 & 4 & 3 & 12 &  \\ \hline
+ & 6 & 1 & 2 & 11 &  \\ \hline
+ & 7 & 8 & 9 & 10 & $\uparrow$ \\ \hline
+ &  &  &  &  &  \\ \hline
+\end{tabular}}
+
+
+\ki{Kiss Sándor}{Nyíregyháza}\medskip
+
+
+{\bf 3. feladat megoldása: } Folytassuk a táblázat kitöltését és keressünk szabályszerűséget!
+Látható, hogy a páratlan négyzetszámok egy ,,félátlóban''
+helyezkednek el. 
+
+A 2008 a $43^2=1849$ és $45^2=2025$ között helyezkedik el, ezért azt kell
+megvizsgálnunk, hogy melyik két szám helyezkedik el a 2008 alatt és
+felett a $43^2$ és a $47^2=2209$ sorában.
+
+17-tel kisebb a 2008 a 2025-nél, tehát a ,,felette'' lévő sorban az 1849-
+nél 16-tal kisebb szám van, azaz az 1833.
+Az ,,alatta'' lévő sorban a 2209-nél 18-cal kisebb szám, azaz a 2191
+látható.
+
+A keresett összeg tehát $1833 + 2191 = 4024$.
+
+A gondolatmenet lényegét az alábbi séma teszi szemléletessé.
+
+\begin{tabular}{cccccc}
+
+
+1833& \dots & 16-tal kisebb& $43^2$&& \cr
+2008& \dots & 17-tel kisebb& \dots & $45^2$ &\cr
+2191& \dots & 18-cal kisebb& \dots & \dots & $47^2$
+\end{tabular}
+
+\medskip
+{\bf 4. feladat: } Legyen $n$ tetszőleges pozitív egész szám. Oldjuk meg a pozitív egész számok halmazán a  következő egyenletet:
+
+$$\frac{n}{x_1+x_2+\dots+x_n} + \frac{1}{x_1\cdot x_2 \cdot \dots x_n} = 2. $$
+
+\ki{Bencze Mihály}{Brassó}\medskip
+
+
+
+{\bf 4. feladat megoldása: } Igazoljuk, hogy $x_k =1$, ( $k = 1,2,\dots, n$ ) az egyetlen megoldás. 
+
+Ha $\max\{x_1, x_2,\dots, x_n\}>1$, akkor $x_1+x_2+\dots+x_n>n \land x_1\cdot x_2\cdot \dots \cdot x_n>1$,
+
+így $2=\frac{n}{x_1+x_2+\dots+x_n}+\frac{1}{x_1\cdot x_2\cdot \dots \cdot x_n}<2$
+ellentmondás.
+
+
+\medskip
+{\bf 5. feladat: } Legyen az  $a$  adott valós szám és az  $f$ olyan valós függvény, amelyre teljesül a következő egyenlet tetszőleges valós $x, y$-ra:
+$$f(x+y)=f(x)f(a-y)+f(y)f(a-x).$$
+
+Mennyi az $f(2008)$ értéke, ha $f(0)=\frac{1}{2}$?
+
+\ki{Szabó Magdi}{Szabadka}\medskip
+
+
+{\bf 5. feladat I. megoldása: } Az $y = 0$ majd az $x = a$ helyettesítés után
+
+(1) $f(x)=f(x)f(a)+f(0)f(a-x)$
+
+majd $f(a)=[f(a)]^2 +1/4$,
+amiből következik, hogy $(f(a)-1/2)^2 =0$, azaz $f(a) =1/2$.
+
+Most az (1) és az $f(a) = 1/2 = f(0)$ alapján következik a
+
+(2) $f(x) = f(a-x)$.
+
+Így a feladatban leírt összefüggés a következőre alakul: $f(x+y) = 2f(x)f(y)$.
+
+Továbbá $1/2 = f(a) =2f(x)f(a-x) = 2[f(x)]^2$, amiből az következik, hogy
+$f(x)= \pm 1/2$.
+
+Az $f(b)= -1/2$ ellentmondásra vezet; ugyanis $-1/2 = f(b) = f(b/2 +b/2)= 2[f(b/2)]^2$, 
+ami lehetetlen, tehát $f(x)= 1/2$ minden valós $x$-re, így az $f(2008)=1/2$.
+
+
+\medskip
+
+{\bf 5. feladat II. megoldása: } Az $x = y = 0$ helyettesítésből megkapjuk, hogy $f(a) =1/2$.
+Azután $y$ helyére $0$-t ill. $a$-t helyettesítünk és azt kapjuk, hogy
+$f(x) = f(a-x)$ ill. $f(x) = f(a+x)$.
+
+Minden valós $x$-re teljesül, hogy $f(-x) = f(a-(-x)) = f(a+x) = f(x)$.
+A feladat feltétele alapján minden $x,y$-ra következik, hogy:
+$f(x-y) = f(x) f(a+y) + f(-y)f(a-x) = f(x+y) = f(x) f(a-y) + f(y)f(a-x) =
+f(x+y)$.
+
+
+Az $y=x$ helyettesítéssel $f(2x) = f(0) = 1/2$, azaz $f(x) = 1/2$, így az
+$f(2008)=1/2$.
+
+
+\medskip
+{\bf 6. feladat: } Az  $ABC$ háromszög  $A$ pontból induló belső szögfelezője a háromszög köré írható kört $E$ pontban metszi. A kör $E$-beli érintője $AC$ egyenest $D$-ben, $AB$ egyenest $F$-ben metszi. Bizonyítsátok be, hogy 
+$\displaystyle{\frac{|AD|+|AF|}{|AE|}=\frac{|FD|}{|BE|}}$.
+
+\ki{Egyed László}{Baja}
+
+
+\eject
+{\bf 6. feladat megoldása: } Készítsünk ábrát!
+
+\begin{center}
+\psset{xunit=1.0cm,yunit=1.0cm,algebraic=true,dotstyle=o,dotsize=3pt 0,linewidth=0.8pt,arrowsize=3pt 2,arrowinset=0.25}
+\begin{pspicture*}(-2.88,-0.74)(7.5,5.94)
+\pscircle(3.04,2.74){2.84}
+\psline(0.34,1.86)(5.64,1.6)
+\psline(4.36,5.26)(2.9,-0.09)
+\psline(-1.7,0.13)(6.29,-0.26)
+\psline(4.36,5.26)(-1.7,0.13)
+\psline(4.36,5.26)(6.29,-0.26)
+\rput[tl](0.84,2.25){$ \beta $}
+\rput[tl](3.78,4.75){$ \frac{\alpha}{2} $}
+\rput[tl](4.28,4.8){$ \frac{\alpha}{2} $}
+\begin{scriptsize}
+\psdots[dotstyle=*](4.36,5.26)
+\rput[bl](4.44,5.38){$A$}
+\psdots[dotstyle=*](0.34,1.86)
+\rput[bl](-0.04,1.8){$B$}
+\psdots[dotstyle=*](5.64,1.6)
+\rput[bl](5.98,1.5){$C$}
+\psdots[dotstyle=*](2.9,-0.09)
+\rput[bl](2.64,-0.48){$E$}
+\psdots[dotstyle=*](-1.7,0.13)
+\rput[bl](-1.94,-0.2){$F$}
+\psdots[dotstyle=*](6.29,-0.26)
+\rput[bl](6.54,-0.3){$D$}
+\end{scriptsize}
+\end{pspicture*}
+\end{center}
+
+A $CBE$ és $CAE$ kerületi szögek azonos ívhez tartoznak, így egyenlőek: 
+$CBE\sphericalangle = CAE\sphericalangle =\frac{\alpha}{2}$.
+
+Az $AED$ érintő szárú kerületi szög, valamint az $ABE$ kerületi szög azonos ívekhez tartoznak,
+így egyenlőek. $AED\sphericalangle = ABE\sphericalangle = \beta+\frac{\alpha}{2}$.
+
+Ebből viszont következik, hogy $AED$ és $ABE$
+háromszögek hasonlóak. Felírhatjuk tehát a hasonlóság arányát:
+$\frac{ED}{AD}=\frac{BE}{AE}$, ahonnan 
+$ED=\frac{AD\cdot BE}{AE}$.
+
+
+A szögfelező tételből:
+$\frac{FE}{ED}=\frac{AF}{AD}$, ahonnan $FE=\frac{AF\cdot ED}{AD}$.
+
+$FD=FE+ED=\frac{AF\cdot ED}{AD}+\frac{AD\cdot BE}{AE}$
+
+Osszuk el az egyenlet mindkét oldalát $BE$-vel.
+
+$\frac{FD}{BE}=\frac{AF\cdot ED}{AD\cdot BE}+\frac{AD}{AE} $, felhasználva hogy 
+
+$ED = \frac{AD\cdot BE}{AE}$, kapjuk:
+
+$\frac{FD}{BE}=\frac{AF}{AD}\cdot\frac{AD}{DE}+\frac{AD}{DE} $, amiből
+
+$\frac{FD}{BE}=\frac{AF+AD}{BE}$.
+
+Ezzel állításunkat bizonyítottuk.
+
+
+\end{document}

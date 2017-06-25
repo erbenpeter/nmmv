@@ -1,0 +1,443 @@
+\documentclass[a4paper,10pt]{article} 
+\usepackage[utf8]{inputenc}
+\usepackage{t1enc}
+\usepackage{graphics}
+\usepackage{amssymb}
+\usepackage{wrapfig}
+\usepackage{pstricks,pstricks-add}
+\voffset - 20pt
+\hoffset - 35pt
+\textwidth 450pt
+\textheight 650pt 
+\frenchspacing 
+
+
+\pagestyle{empty}
+\def\ki#1#2{\hfill {\it #1 (#2)}\medskip}
+
+\def\tg{\, \hbox{tg} \,}
+\def\ctg{\, \hbox{ctg} \,}
+\def\arctg{\, \hbox{arctg} \,}
+\def\arcctg{\, \hbox{arcctg} \,}
+
+\parindent=0pt
+\everymath{\displaystyle}
+
+\begin{document}
+\begin{center} \Large {\em XXI. Nemzetközi Magyar Matematikaverseny} \end{center}
+\begin{center} \large{\em Kecskemét, 2012. március 14--18.} \end{center}
+\smallskip
+\begin{center} \large{\bf 11. osztály} \end{center}
+\bigskip 
+
+{\bf 1. feladat: } Határozzuk meg azokat a pozitív egész 
+számpárokat, amelyek számtani közepe 1-gyel nagyobb a mértani 
+közepüknél!
+
+\ki{Kallós Béla}{Nyíregyháza}\medskip
+
+{\bf 1. feladat I. megoldása: } Vezessük be a következő jelöléseket: 
+$\frac{a+b}2=k+1, \sqrt{ab}=k$, ahol $a$ és $b$ pozitív egész 
+számok. Először azt igazoljuk, hogy a feltételek következményeként 
+$k$ csak egész szám lehet. Ugyanis két egész szám számtani közepe 
+vagy egész, vagy $n+\frac12$ alakú, ahol $n$ egész szám. A második 
+esetben azonban $ab=\left(n-\frac12\right)^2$ teljesülne, de itt a 
+bal oldal egész szám, míg a jobb oldal nem.
+
+Mivel $a+b=2k+2$, ezért $$b=2k+2-a.\eqno{(1)}$$
+Ezt a $k^2=ab$ egyenletbe helyettesítve:$$k^2=\left(2k+2-a\right)\cdot a$$
+$$k^2-2ka+a^2=2a$$
+$$\left(k-a\right)^2=2a$$
+Ebből következik, hogy ha létezik a feltételeknek megfelelő számpár, 
+akkor abban az a páros és egy négyzetszám kétszerese, azaz $a=2n$ (
+$n$ pozitív egész). Ekkor
+$$k-a=k-2n^2=2n \mbox{ vagy } k-a=k-2n^2=2n,$$
+ahonnan
+$$k=2n^2+2n \mbox{ vagy } k=2n^2-2n.$$
+Helyettesítsük a k-ra kapott kifejezéseket (1)-be:
+$$b=2\left(2n^2+2n\right)+2-2n^2=2\left(n+1\right)^2 
+\mbox{ vagy } b=2\left(2n^2-2n\right)+2-2n^2=2\left(n-1\right)^2.$$
+Tehát bármely két szomszédos pozitív négyzetszám kétszereseire
+teljesülhet csak, hogy számtani közepük 1-gyel nagyobb a mértani
+közepüknél.
+
+Számolással könnyen ellenőrizhető, hogy minden $n$ 
+pozitív egész szám esetén az $a=2n^2, b=2\left(n+1\right)^2$ 
+számpárra teljesül, hogy számtani közepük 1-gyel nagyobb a mértani 
+közepüknél.
+
+{\bf 1. feladat II. megoldása: } Legyen $\frac{a+b}{2}=x$. A 
+feltételek alapján $x$ egy pozitív egész szám fele! Legyen $y$ olyan 
+szám, hogy $b=x+y \mbox{ és } a=x-y$ teljesüljön ($y$ egy 
+természetes szám fele). Ekkor
+$$\frac{a+b}{2}-1=\sqrt{ab}$$
+$$x-1=\sqrt{\left(x-y\right)\left(x+y\right)}$$
+$$x^2-2x+1=x^2-y^2$$
+$$-2x+1=-y^2$$
+$$x=\frac{y^2+1}{2}.$$
+Így 
+$$a=x-y=\frac{y^2+1}{2}-y=\frac{\left(y-1\right)^2}{2}$$
+$$b=x+y=\frac{y^2+1}{2}+y=\frac{\left(y-1\right)^2}{2}.$$
+
+Látható, hogy $a$ és $b$ akkor pozitív egészek, ha $y$ páratlan 
+pozitív egész szám. Ekkor $a$ és $b$ egymást követő páros 
+négyzetszámok felei. 
+
+Számolással könnyen ellenőrizhető, hogy minden 
+ilyen $a$ és $b$ teljesíti a feltételt.
+
+\medskip
+
+
+\hbox to \hsize{\hskip2truecm\hrulefill\hskip2truecm}
+
+{\bf 2. feladat: }  Az $ABC$ háromszögben $H$ a $BC$ oldal $C$-hez 
+közelebbi harmadoló pontja, $N$ pedig az $AB$ oldal $B$-hez 
+közelebbi negyedelő pontja. Az $AH$ és $CN$ szakaszok metszéspontja 
+$M$.   
+ 
+ 
+ a) Milyen arányban osztja az $M$ pont az $AH$ és $CN$ szakaszokat?
+ 
+ 
+ b) Hányad része az $ABC$ háromszög területének a $HMNB$ négyszög területe?
+
+\ki{Katz Sándor}{Bonyhád}\medskip
+
+{\bf 2. feladat I. megoldása: } 
+
+
+\textit{a) I. megoldás:} Vektorok alkalmazásával.
+
+\begin{wrapfigure}{l}{0.5\textwidth}
+\begin{center}
+\psset{xunit=0.08cm,yunit=0.08cm,algebraic=true,dotstyle=o,
+dotsize=3pt 0,linewidth=1pt,arrowsize=3pt 2,arrowinset=0.25}
+\begin{pspicture*}(0,-5)(90,55)
+\psline[linewidth=2pt]{->}(40,50)(5,5)
+\psline[linewidth=1pt](40,50)(55,35)
+\psline[linewidth=1pt](5,5)(85,5)
+\psline[linewidth=1pt](55,35)(70,20)
+\psline[linewidth=1pt](70,20)(85,5)
+\psline[linewidth=2pt]{->}(40,50)(85,5)
+\psline[linewidth=1pt](40,50)(65,5)
+\psline[linewidth=1pt](5,5)(55,35)
+%\begin{scriptsize}
+\psdots[dotsize=4pt 0,dotstyle=*](40,50)
+\rput[bl](41,51){$C$}
+\psdots[dotsize=4pt 0,dotstyle=*](5,5)
+\rput[bl](1,0){$A$}
+\rput[bl](17,26){$\underline{a}$}
+\psdots[dotsize=4pt 0,dotstyle=*](55,35)
+\rput[bl](56,36){$H$}
+\psdots[dotsize=4pt 0,dotstyle=*](70,20)
+\rput[bl](71,21){$G$}
+\psdots[dotsize=4pt 0,dotstyle=*](40,50)
+\psdots[dotsize=4pt 0,dotstyle=*](85,5)
+\rput[bl](87,1){$B$}
+\rput[bl](43,-1){F}
+\psdots[dotsize=4pt 0,dotstyle=*](25,5)
+\psdots[dotsize=4pt 0,dotstyle=*](65,5)
+\rput[bl](64,-1){$N$}
+\rput[bl](65,27){$\underline{b}$}
+\psdots[dotsize=4pt 0,dotstyle=*](50,32)
+\rput[bl](47,24){$M$}
+%\end{scriptsize}
+\end{pspicture*}
+\vspace{-2cm}
+\end{center}
+\end{wrapfigure}
+
+Legyen, $\overrightarrow{CA}=\overrightarrow{a}$ és 
+$\overrightarrow{CB}=\overrightarrow{b}$. Ekkor 
+$\overrightarrow{AH}=-\overrightarrow{a}+\frac13\overrightarrow{b}$ 
+és 
+$\overrightarrow{CN}=\overrightarrow{CA}+\frac34\overrightarrow{AB}=
+\overrightarrow{a}+\frac34\left(\overrightarrow{b}-\overrightarrow{a}
+\right)=\frac14\overrightarrow{a}+\frac34\overrightarrow{b}.$ Ha 
+$\overrightarrow{AM}=x\cdot \overrightarrow{AH}$, akkor 
+$\overrightarrow{CM}=\overrightarrow{a}+\overrightarrow{AM}=
+\overrightarrow{a}+x\cdot 
+\overrightarrow{AH}=\overrightarrow{a}+x\left(-\overrightarrow{a}+
+\frac13\overrightarrow{b}\right)=\left(1-x\right)\overrightarrow{a}+\frac{x}{3}
+\overrightarrow{b}.$ Ha $\overrightarrow{CM}=y\cdot\overrightarrow{CN}$,
+ akkor 
+$\overrightarrow{CM}=\frac{y}{4}\overrightarrow{a}+\frac{3y}{3}
+\overrightarrow{b}.$ A vektorfelbontás egyértelműsége miatt 
+$\overrightarrow{CM}$ két felbontásában az $\overrightarrow{a}$ és 
+$\overrightarrow{b}$ együtthatói egyenlők:$1-x=\frac{y}{4}$ és 
+$\frac{x}{3}=\frac{3y}{4}$. Ebből $x=\frac{9}{10}$ és $y=\frac{2}{5}$.
+ Tehát $$AM:MH=9:1 \mbox{ és } CM:MN=2:3.$$
+
+\medskip
+\textit{a) II. megoldás:} A párhuzamos szelők tételének alkalmazásával.
+
+\begin{wrapfigure}{l}{0.5\textwidth}
+\begin{center}
+\psset{xunit=0.08cm,yunit=0.08cm,algebraic=true,dotstyle=o,dotsize=3pt 0,linewidth=1pt,arrowsize=3pt 2,arrowinset=0.25}
+\begin{pspicture*}(0,-2)(91,56)
+\psline[linewidth=0pt](5,5)(85,5)
+\psline[linewidth=0pt](40,50)(65,5)
+\psline[linewidth=0pt](5,5)(55,35)
+\psline[linewidth=2pt](40,50)(5,5)
+\psline[linewidth=2pt](40,50)(85,5)
+\psline[linewidth=0pt](65,5)(78,13)
+%\begin{scriptsize}
+\psdots[dotsize=2pt 0,dotstyle=*](40,50)
+\rput[bl](39,52){$C$}
+\psdots[dotsize=2pt 0,dotstyle=*](5,5)
+\rput[bl](3,1){$A$}
+\psdots[dotsize=2pt 0,dotstyle=*](55,35)
+\rput[bl](57,36){$H$}
+\psdots[dotsize=2pt 0,dotstyle=*](40,50)
+\psdots[dotsize=2pt 0,dotstyle=*](85,5)
+\rput[bl](85,1){$B$}
+\psdots[dotsize=2pt 0,dotstyle=*](25,5)
+\psdots[dotsize=2pt 0,dotstyle=*](65,5)
+\rput[bl](64,1){$N$}
+\psdots[dotsize=2pt 0,dotstyle=*](50,32)
+\rput[bl](47,26){$M$}
+\psdots[dotsize=1pt 0,dotstyle=*,linecolor=darkgray](45,5)
+\psdots[dotsize=1pt 0,dotstyle=*,linecolor=darkgray](78,13)
+\rput[bl](78,14){\darkgray{$D$}}
+%\end{scriptsize}
+\end{pspicture*}
+\vspace{-2cm}
+\end{center}
+\end{wrapfigure}
+
+Legyen $DN$ párhuzamos $HA$-val!
+Ekkor $BD:DH=BN:NA=1:3$.
+Mivel $HB=\frac23 BC$, ezért $HD=\frac34\cdot\frac23 BC=\frac12 BC.$
+Így $CM:MN=CH:HD=2:3$.
+Másrészt $MH:ND=CM:CN=2:5$, azaz $MH=\frac25 ND$, továbbá $ND:AH=BN:BA=1:4$, azaz $AH=4ND$. Ebből $AM=\left(4-\frac25\right)ND=\frac{18}{5} ND$, így $AM:MH=18:2=9:1.$
+
+\medskip
+\newpage
+\textit{a) III. megoldás:} Menelaosz tételének alkalmazásával.
+
+\begin{wrapfigure}{l}{0.5\textwidth}
+\vspace{-1cm}
+\begin{center}
+\psset{xunit=0.08cm,yunit=0.08cm,algebraic=true,dotstyle=o,dotsize=3pt 0,linewidth=1pt,arrowsize=3pt 2,arrowinset=0.25}
+\begin{pspicture*}(-8,-4)(97,58)
+\psline[linewidth=0pt](40,50)(55,35)
+\psline[linewidth=0pt](5,5)(85,5)
+\psline[linewidth=0pt](70,20)(85,5)
+\psline[linewidth=0pt](40,50)(65,5)
+\psline[linewidth=0pt](5,5)(55,35)
+\psline[linewidth=2pt](40,50)(5,5)
+\psline[linewidth=2pt](40,50)(85,5)
+%\begin{scriptsize}
+\psdots[dotsize=2pt 0,dotstyle=*](40,50)
+\rput[bl](41,51){$C$}
+\psdots[dotsize=2pt 0,dotstyle=*](5,5)
+\rput[bl](1,-1){$A$}
+\psdots[dotsize=2pt 0,dotstyle=*](55,35)
+\rput[bl](56,36){$H$}
+\psdots[dotsize=2pt 0,dotstyle=*](70,20)
+\psdots[dotsize=2pt 0,dotstyle=*](40,50)
+\psdots[dotsize=2pt 0,dotstyle=*](85,5)
+\rput[bl](87,0){$B$}
+\psdots[dotsize=2pt 0,dotstyle=*](25,5)
+\psdots[dotsize=2pt 0,dotstyle=*](65,5)
+\rput[bl](64,-2){$N$}
+\psdots[dotsize=2pt 0,dotstyle=*](50,32)
+\rput[bl](47,24){$M$}
+\psdots[dotsize=1pt 0,dotstyle=*,linecolor=darkgray](45,5)
+%\end{scriptsize}
+\end{pspicture*}
+\vspace{-2cm}
+\end{center}
+\end{wrapfigure}
+
+Az $NBC$ háromszögre:$\frac{BM}{HC}\cdot\frac{CM}{MN}\cdot\frac{NA}{AB}=1$, azaz $\frac{2}{1}\cdot\frac{CM}{MN}\cdot\frac34=1.$
+Ebből $CM:MN=2:3.$
+Az $ABH$ háromszögre:$\frac{BN}{NA}\cdot\frac{AM}{MH}\cdot\frac{HC}{CB}=1$, azaz $\frac{1}{3}\cdot\frac{AM}{MH}\cdot\frac13=1.$
+Ebből $AM:MH=9:1$.
+
+\medskip
+\textit{b) Megoldás:} Legyen az $ABC$ háromszög területe $T$!
+
+$NB=\frac14 AB \Longrightarrow T_{NBC\triangle}=\frac14 T.$
+Az $NBC$ háromszög $CB$ oldalát harmadára, $CN$ oldalát két ötödére csökkentve a $CMH$ háromszög $CH$ illetve $CM$ oldalait kapjuk. Mivel az $NBC$ és $CMH$ háromszögek $C$ csúcsánál lévő szöge közös, ezért a terület $\frac13\cdot\frac25=\frac{2}{15}$ részre csökken, tehát $T_{CMH\triangle}=\frac{2}{15}\cdot\frac14T=\frac{1}{30}T.$
+Ebből a $HMNB$ négyszög területe $t=\frac14T-\frac{1}{30}T=\frac{13}{60}T.$
+\medskip
+
+
+\hbox to \hsize{\hskip2truecm\hrulefill\hskip2truecm}
+
+{\bf 3. feladat: } Oldjuk meg a valós számok halmazán a következő egyenletet!
+$$3^{2x+1}-\left(x-1\right)3^x=10x^2+13x+4$$
+
+
+\ki{Bencze Mihály}{Brassó}\medskip
+
+{\bf Megoldás: } Redukáljuk 0-ra az egyenletet!
+$$3^{2x+1}-\left(x-1\right)3^x-\left(10x^2+13x+4\right)=0$$
+A bal oldalt szorzattá alakítjuk a másodfokú polinom gyöktényezős alakjára vonatkozó tétel alkalmazásával:
+\begin{eqnarray*}
+&&3^{2x+1}-\left(x-1\right)3^x-10\left(x+\frac12\right)\left(x+\frac45\right)=0\\
+&&3\left(3^x\right)^2-\left(x-1\right)3^x-\left(2x+1\right)\left(5x+4\right)=0\\
+&&3\left(3^x\right)^2-3\left(2x+1\right)3^x+\left(5x+4\right)3^x-\left(2x+1\right)\left(5x+4\right)=0\\
+&&3^{x+1}[3^x-\left(2x+1\right)]+\left(5x+4\right)[3^x-\left(2x+1\right)]=0\\
+&&[3^x-\left(2x+1\right)]\cdot[3^{x+1}+\left(5x+4\right)]=0.
+\end{eqnarray*}
+
+\begin{itemize}
+\item[1)] $3^x=2x+1$
+
+Grafikus megoldási mód alkalmazható.
+
+\begin{center}
+\newrgbcolor{qqqqcc}{0 0 1}
+\psset{xunit=1.3cm,yunit=1.3cm}
+\begin{pspicture*}(-5.2,-1)(3,4)
+\psgrid[subgriddiv=0,gridlabels=0,gridcolor=lightgray](0,0)(-5,-0.9)(3,4)
+\psset{xunit=1.3cm,yunit=1.3cm,algebraic=true,dotstyle=o,dotsize=3pt 0,linewidth=1pt,arrowsize=3pt 2,arrowinset=0.25}
+\psaxes[xAxis=true,yAxis=true,Dx=1,Dy=1,ticksize=-2pt 0,subticks=2]{->}(0,0)(-5,-0.99)(3,4)
+\psplot[linewidth=1pt,plotpoints=200]{-4.508306452642648}{3.3336906366322725}{3^x}
+\psplot[linewidth=1pt,linecolor=qqqqcc,plotpoints=200]{-4.508306452642648}{3.3336906366322725}{2*x+1}
+\rput[tl](-0.3,3.8){$y$}
+\rput[tl](2.7,-0.3){$x$}
+%\begin{scriptsize}
+\rput[bl](-4,0.2){$f(x)=3^x$}
+\rput[bl](-0.6,-0.8){\qqqqcc{$g(x)=2x+1$}}
+\psdots[dotsize=4pt 0,dotstyle=*,linecolor=red](0,1)
+\rput[bl](0.1,0.6){\red{$(0, 1)$}}
+\psdots[dotsize=4pt 0,dotstyle=*,linecolor=red](1,3)
+\rput[bl](1.1,2.6){\red{$(1, 3)$}}
+%\end{scriptsize}
+\end{pspicture*}
+\end{center}
+
+
+Két megoldás van: $x_1=0, x_2=1$. Ellenőrzéssel meggyőződhetünk a megoldások helyességéről.
+
+\item[2)] $3^x+1=-5x-4$
+
+Az egyenlet bal oldalán szigorúan monoton növekedő, a jobb oldalán szigorúan 
+monoton csökkenő függvény áll. Ebből következően az egyenletnek legfeljebb egy 
+megoldása lehet. Ez a megoldás az $x_3=-1$, aminek helyességéről behelyettesítéssel 
+meggyőződhetünk.
+\end{itemize}
+
+Így az egyenlet megoldáshalmaza: $\{-1;0;1\}$.
+
+
+\medskip
+
+
+\hbox to \hsize{\hskip2truecm\hrulefill\hskip2truecm}
+{\bf 4. feladat: } Az $ABC$ háromszög $AB$ oldalán vegyük fel a $D$ pontot, $AC$ oldalán pedig az $E$ és $F$ pontokat úgy, hogy ${\frac{AE}{AC}=\frac{CF}{AC}=\frac{AD}{AB}}$ teljesüljön! Az $F$ ponton keresztül húzzunk párhuzamost az $AB$ oldallal, messe ez a párhuzamos a $BC$ oldalt a $G$ pontban! Mely $D, E, F$ pontok esetén lesz a $DEFG$ négyszög területe a lehető legnagyobb?
+ 
+
+\ki{Nemecskó István}{Budapest}\medskip
+
+{\bf 4. feladat megoldása: } A párhuzamos szelők tételének megfordítása miatt $ED$ párhuzamos $BC$-vel. Hasonló okok miatt $DG$ párhozamos $AC$-vel, így az $ADGF$ négyszög paralelogramma, amiből következik, hogy $FG=AD$. Ebből következően az $ADE$ és $FGC$ háromszögek egybevágóak. Ugyanakkor $ABC_{\triangle}\sim FGC_{\triangle}\sim DBG_{\triangle}\sim ADE_{\triangle}$, oldalaik párhuzamosak.
+
+\begin{center}
+\psset{xunit=0.15cm,yunit=0.15cm,algebraic=true,dotstyle=o,dotsize=3pt 0,linewidth=1pt,arrowsize=3pt 2,arrowinset=0.25}
+\begin{pspicture*}(-3,-2)(43,36)
+\psline[linewidth=1pt](8,32)(0,0)
+\psline[linewidth=1pt](0,0)(40,0)
+\psline[linewidth=1pt](40,0)(8,32)
+\psline[linewidth=1pt](16,24)(10,0)
+\psline[linewidth=1pt](2,8)(10,0)
+\psplot[linewidth=1pt]{-3}{43}{(--240-0*x)/10}
+%\begin{scriptsize}
+\psdots[dotsize=4pt 0,dotstyle=*,linecolor=blue](0,0)
+\rput[bl](-2,-2){\blue{$A$}}
+\psdots[dotsize=4pt 0,dotstyle=*,linecolor=blue](8,32)
+\rput[bl](9,33){\blue{$C$}}
+\psdots[dotsize=4pt 0,dotstyle=*,linecolor=blue](40,0)
+\rput[bl](41,-2){\blue{$B$}}
+\psdots[dotsize=4pt 0,dotstyle=*,linecolor=darkgray](10,0)
+\rput[bl](10,-2){\darkgray{$D$}}
+\psdots[dotsize=4pt 0,dotstyle=*,linecolor=darkgray](6,24)
+\rput[bl](4,26){\darkgray{$F$}}
+\psdots[dotsize=4pt 0,dotstyle=*,linecolor=darkgray](2,8)
+\rput[bl](0,9){\darkgray{$E$}}
+\psdots[dotsize=4pt 0,dotstyle=*,linecolor=darkgray](16,24)
+\rput[bl](16,25){\darkgray{$G$}}
+%\end{scriptsize}
+\end{pspicture*}
+\vspace{-2mm}
+\end{center}
+
+Legyen: ${\frac{AE}{AC}=\frac{CF}{AC}=\frac{AD}{AB}=x}$! Annak a feltétele, hogy $DEFG$ négyszög létrejöjjön:\   $x<1/2$.
+Ekkor $\frac{T_{ADE}}{T_{ABC}}=\frac{T_{FGC}}{T_{ABC}}=x^2.$ Mivel $DB=AB-AD=AB\cdot\left(1-x\right),$ így $\frac{T_{DBG}}{T_{ABC}}=\left(1-x\right)^2.$
+$$T_{DEFG}=T_{ABC}-T_{ADE}-T_{FGC}-T_{DBG}=T_{ABC}\cdot\left(1-2x^2-\left(1-x\right)^2\right)=$$
+$$=T_{ABC}\cdot\left(-3x^2+2x\right)=T_{ABC}\cdot\left(-3\left(x-\frac13\right)^2+\frac13\right).$$
+Tehát akkor lesz a keresett terület maximális, ha $D, E$ és $F$ pontok a megfelelő oldalak harmadoló pontjai. A maximális terület az $ABC$ háromszög területének a harmada.
+
+\medskip
+
+
+\hbox to \hsize{\hskip2truecm\hrulefill\hskip2truecm}
+{\bf 5. feladat: } Mely $n$ pozitív egész számok esetén osztható az $1^n+2^n+3^2+4^n+5^n+6^n+7^n+8^n$ összeg $5$-tel?
+
+\ki{Oláh György}{Révkomárom}\medskip
+
+{\bf 5. feladat megoldása: } Bármely pozitív egész n esetén érvényesek a következők:
+\begin{eqnarray*}
+&&8^n=\left(5+3\right)^n=5k_1+3^n\\
+&&7^n=\left(5+2\right)^n=5k_2+2^n\\
+&&6^n=\left(5+1\right)^n=5k_3+1
+\end{eqnarray*}
+Ha $n$ páratlan, akkor 
+\begin{eqnarray*}
+&&4^n=\left(5-1\right)^n=5k_4-1\\
+&&3^n=\left(5-2\right)^n=5k_5-2^n\\
+&&2^n=\left(5-3\right)^n=5k_6-3^n
+\end{eqnarray*}
+Ha $n$ páros, akkor 
+\begin{eqnarray*}
+&&4^n=\left(5-1\right)^n=5k_7+1\\
+&&3^n=\left(5-2\right)^n=5k_8+2^n.
+\end{eqnarray*}
+Páratlan $n$ esetén a vizsgált összeg:
+$$1^n+2^n+3^2+4^n+5^n+6^n+7^n+8^n=5K+\left(1-3^n-2^n-1+1+2^n+3^n\right)=5K+1,$$
+azaz nem osztható $5$-tel.
+
+Páros $n$ esetén az összeg: 
+$$1^n+2^n+3^2+4^n+5^n+6^n+7^n+8^n=5M+\left(1+2^n+2^n+1+1+2^n+3^n\right
+)=5K+1.$$ Mivel $n+2$ páros, ezért $2^{n+2}$ $4$-re vagy $6$-ra 
+végződő szám, ami azt jelenti, hogy $5$-tel osztva $1$ vagy $4$ 
+maradékot ad. Ebből viszont következik, hogy $5$-ös maradéka $2$ 
+vagy $4$, tehát a tekintett összeg egyetlen páros $n$ esetén sem 
+osztható $5$-tel.
+
+Összegezve: A vizsgált összeg egyetlen pozitív egész $n$ esetén sem 
+osztható $5$-tel.
+
+\medskip
+
+
+\hbox to \hsize{\hskip2truecm\hrulefill\hskip2truecm}
+{\bf 6. feladat: } Aladár és Béla a következő játékot játsszák: a táblára felírják az $1, 2, \dots, 2012$ számokat, 
+melyek közül felváltva törölnek le egy-egy számot. Aladár kezd. A játék akkor ér véget, amikor két szám marad a táblán. Ha ezek különbségének abszolútértéke egy előre megadott rögzített pozitív egész $k$ számnál nagyobb prímszám, akkor Béla nyer, egyébként pedig 
+Aladár nyer. Döntsük el, hogy $k$ értékétől függően melyik játékosnak van nyerő stratégiája!
+
+\ki{Borbély József}{Tata}\medskip
+
+{\bf 6. feladat megoldása: } Be fogjuk bizonyítani, hogy ha $1\le k\le 996,$ akkor Bélának, minden más esetben pedig Aladárnak van nyerő stratégiája.
+
+Legyen először $k$ egy $996$-nál nem nagyobb pozitív egész szám! Bebizonyítjuk, hogy Béla tud úgy játszani, hogy a táblán maradó két szám abszolútértékének különbsége egy $996$-nál nagyobb prímszám legyen.
+
+Állítsuk párba az $\{1, 2, 3, \dots, 2012\}$ halmaz elemeit az alábbi szabály szerint:
+
+Minden $\{1, 2,\dots, 9\}$-beli $i$ szám párja legyen $i+2003$, és minden $\{10, 11, 12, \dots, 1006\}$-beli $j$ szám párja legyen $j+997$.
+
+Ezzel $\{1, 2, 3, \dots, 2012\}$ halmaz elemeit $1006$ db diszjunkt párba rendeztük, ahol minden páron belül a számok különbségének abszolútértéke egy $996$-nal nagyobb prímszám. Ezek után Béla játsszon a következő módon: ha Aladár letöröl egy számot, akkor Béla törölje le ennek a számnak a párját a következő lépésben. Ily módon végül két olyan szám marad a táblán, melyek párok voltak, így Béla nyer.
+
+Most legyen $997\le k$. Megmutatjuk, hogy ekkor Aladárnak van nyerő stratégiája. Vegyük észre, hogy a $998, 999, 1000, 1001, 1002, 1003, 1004, 1005, 1006$ számok egyike sem prím, mert $3|999, 7|1001,17|1003$, $5|1005$ és $2|998, 1000, 1002, 1004, 1006.$
+
+Emiatt Béla $997\le k$ esetén csak úgy nyerhetne, ha a két megmaradó szám különbségének abszolútértéke egy $1006$-nal nagyobb prímszám lenne.
+
+Játsszon Aladár a következő módon: minden lépésben törölje le a legkisebb számot, ami a táblán szerepel. Mivel összesen $1005$ db számot töröl le, ezért Aladár ilyen stratékiája mellett amegmaradó két szám eleme az $\{1006, 1007,\dots, 1012\}$ halmaznak, tehát így Béla semmiképpen sem nyerhet.
+
+\medskip
+
+\vfill
+\end{document}

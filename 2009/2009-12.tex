@@ -1,0 +1,103 @@
+\documentclass[a4paper,10pt]{article} 
+\usepackage[utf8]{inputenc}
+\usepackage{t1enc}
+\usepackage{graphicx}
+\usepackage{amssymb}
+\usepackage{pstricks, pstricks-add}
+\voffset - 20pt
+\hoffset - 35pt
+\textwidth 450pt
+\textheight 650pt 
+\frenchspacing 
+
+\pagestyle{empty}
+\def\ki#1#2{\hfill {\it #1 (#2)}\medskip}
+
+\def\tg{\, \hbox{tg} \,}
+\def\ctg{\, \hbox{ctg} \,}
+\def\arctg{\, \hbox{arctg} \,}
+\def\arcctg{\, \hbox{arcctg} \,}
+
+\begin{document}
+\begin{center} \Large {\em XVIII. Nemzetközi Magyar Matematika Verseny} \end{center}
+\begin{center} \large{\em Gyula, 2009. március 12-16.} \end{center}
+\smallskip
+\begin{center} \large{\bf 12. osztály} \end{center}
+\bigskip 
+
+{\bf 1. feladat: }
+Igazoljuk, hogy tetszőleges $x$ valós számra teljesülnek a következő
+egyenlőtlenségek!
+$$ -\frac 54\leq \sin{x}+\cos{x}+\sin{2x}\leq 1+\sqrt{2}. $$
+
+\ki{Kovács Béla }{Szatmárnémeti}\medskip
+
+{\bf 2. feladat: } 
+2009 számjegyei három ,,köz''-t határoznak meg: $2\_0\_0\_9$.
+A számon a következő átalakítást végezzük: kiválasztunk egy tetszőleges 10-es
+számrendszerbeli számjegyet, az első közbe beírjuk, a második közbe kétszer írjuk be, a
+harmadik közbe háromszor. Így egy következő számhoz jutunk. Ez persze hosszabb és így
+számjegyei több közt határoznak meg. Újból elvégezzük a fenti átalakítást: újból választunk
+egy számjegyet és a közökbe ezt írjuk (az $i$-edik közbe $i$ darabot). Ezt az eljárást folytatjuk.
+Igazoljuk, hogy eljárásunk során soha sem kaphatunk 3-mal osztható számot.
+
+
+\ki{Bíró Bálint }{Eger}\medskip
+
+{\bf 3. feladat: } 
+Jelölje $AC$ és $BD$ az egység sugarú kör két merőleges átmérőjét.Az $AB, BC,
+CD$ és $DA$ negyedköríveken felvesszük a $P, Q, R$ és $T$ pontokat úgy, hogy $APBQCRDT$ egy
+konvex nyolcszög lesz. Hogyan válasszuk meg a $P, Q, R, T$ pontokat ahhoz, hogy a kialakított
+nyolcszög oldalainak négyzetösszege minimális legyen.
+
+\ki{Bíró Bálint }{Eger}\medskip
+
+{\bf 4. feladat: }
+Az $a_1, a_2, a_3, a_4,\dots, a_{101}, a_{102}$ az $1, 2, 3, 4,\dots, 101, 102$ számok egy
+tetszőleges sorbaállítása. Igazoljuk, hogy az $a_1+1, a_2+2, a_3+3, a_4+4,\dots, a_{101}+101, a_{102}+102$
+számok közt lesz két olyan, amelyek 102-vel osztva azonos maradékot adnak!
+
+\ki{Balázsi Borbála }{Beregszász}\medskip
+
+%\eject
+{\bf 5. feladat: }
+Egy $ABCD$ négyzet alakú papír $A$ csúcsát a $BC$ oldal egy $X$ belső pontjához
+mozgatjuk és a papírlapot behajtjuk. A behajtott $AD$ oldal az ábrán látható módon a $C$
+csúcsnál levág egy $XEC$ háromszöget. Hogyan válasszuk meg az $X$ pontot ahhoz, hogy a
+levágott háromszög beírt körének sugara a lehető legnagyobb legyen?
+
+\centerline{\psset{xunit=0.4cm,yunit=0.4cm,algebraic=true,dotstyle=o,dotsize=3pt 0,linewidth=0.8pt,arrowsize=3pt 2,arrowinset=0.25}
+\begin{pspicture*}(1.27,-3.63)(12.71,6.54)
+\psline(2.98,-3)(11.1,-3)
+\psline(2.98,-3)(2.98,5.12)
+\psline(11.1,5.12)(11.1,-3)
+\psline(2.98,5.12)(11.1,5.12)
+\psline(11.1,0.81)(7.93,-3)
+\psline(4.85,6)(11.1,0.81)
+\psline(4.85,6)(4.12,5.12)
+\psline(4.12,5.12)(7.93,-3)
+\psdots[dotstyle=*](2.98,-3)
+\rput[bl](2,-3.29){$A$}
+\psdots[dotstyle=*](11.1,-3)
+\rput[bl](11.3,-3.14){$B$}
+\psdots[dotstyle=*](2.98,5.12)
+\rput[bl](2.68,5.26){$D$}
+\psdots[dotstyle=*](11.1,5.12)
+\rput[bl](11.2,5.26){$C$}
+\psdots[dotstyle=*](11.1,0.81)
+\rput[bl](11.37,0.68){$X$}
+\psdots[dotstyle=*](5.91,5.12)
+\rput[bl](6,5.26){$E$}
+\end{pspicture*}}
+ 
+\ki{Egyed László }{Baja}\medskip
+
+{\bf 6. feladat: } 
+Egy $n$ elemű halmaz három elemű részhalmazaiból kiválasztunk néhányat
+úgy, hogy semelyik három ne tartalmazzon egynél több közös elemet. Igazoljuk, hogy a
+kiválasztott hármasok száma nem haladhatja meg $\displaystyle{\frac {n(n-1)}{3}}$-at!
+
+\ki{Róka Sándor }{Nyíregyháza}\medskip
+
+\vfill
+\end{document}

@@ -1,0 +1,336 @@
+\documentclass[a4paper,10pt]{article} 
+\usepackage[utf8]{inputenc}
+\usepackage{graphicx}
+\usepackage{amssymb}
+
+\usepackage{wrapfig}
+\usepackage{pstricks, pstricks-add}
+\voffset - 20pt
+\hoffset - 35pt
+\textwidth 450pt
+\textheight 650pt 
+\frenchspacing
+
+\pagestyle{empty}
+\def\ki#1#2{\hfill {\it #1 (#2)}\medskip}
+
+\def\tg{\, \hbox{tg} \,}
+\def\ctg{\, \hbox{ctg} \,}
+\def\arctg{\, \hbox{arctg} \,}
+\def\arcctg{\, \hbox{arcctg} \,}
+
+\begin{document}
+\begin{center} \Large {\em XXI. Nemzetközi Magyar Matematikaverseny} \end{center}
+\begin{center} \large{\em Kecskemét, 2012. március 14--18.} \end{center}
+\smallskip
+\begin{center} \large{\bf 9. osztály} \end{center}
+\bigskip 
+
+{\bf 1. feladat: } A Gumimacik megszervezték a Nemzetközi Gumibogyó Szüreti Fesztivált, ahol minden
+résztvevő Gumimaci ugyanannyi üveg idei termésből készült gumibogyó szörpöt kapott ajándékba.
+Ha a Szüreti Fesztiválon tízzel kevesebb Gumimaci lett volna jelen, akkor az elkészített
+mennyiségből minden résztvevő két üveggel több gumibogyó szörpöt kaphatott volna. Amennyiben
+a Szüreti Fesztiválon nyolc Gumimacival többen vettek volna részt, akkor az idén sajtolt
+gumibogyó szörp mennyiségből mindannyian egy üveggel kevesebbet kaptak volna. Valójában
+hány Gumimaci vett részt a Nemzetközi Gumibogyó Szüreti Fesztiválon, és fejenként hány üveg
+gumibogyó szörpöt kapott ajándékba?
+
+\ki{Péics Hajnalka}{Szabadka}\medskip
+
+{\bf 1. feladat megoldása: }
+Jelölje $x$ a Nemzetközi Gumibogyó Szüreti Fesztiválon résztvevő Gumimacik
+számát, $y$ pedig azoknak a gumibogyó szörppel teli üvegeknek a számát, amennyit minden
+Gumimaci ajándékba kapott! A feladat feltételei alapján ekkor a következő egyenletrendszert állíthatjuk fel:
+
+\begin{center}
+$$(x-10)(y+2)=xy$$
+$$(x+8)(y-1)=xy$$
+\rule{3cm}{0.01cm}
+$$xy+2x-10y-20=xy$$
+$$xy-x+8y-8=xy$$
+\rule{4cm}{0.01cm}
+$$x-5y=10$$
+$$-x+8y=8$$
+\rule{2cm}{0.01cm}
+\end{center}
+
+Ebből következik, hogy $x=40$ és $y=6$.
+
+A Nemzetközi Gumibogyó Szüreti Fesztiválon tehát $40$ Gumimaci vett részt, és fejenként $6$
+üveg gumibogyó szörpöt kaptak ajándékba.
+\medskip
+
+\hbox to \hsize{\hskip2truecm\hrulefill\hskip2truecm}
+{\bf 2. feladat: } Az $ABCDE$ szabályos ötszög $AD$ és $EB$ átlóinak metszéspontja legyen $S$, az $AC$ és $EB$ szakaszok
+metszéspontja $P$, az $AD$ és $EC$ átlók metszéspontja $R$, a $DB$ és $EC$ szakaszok metszéspontja pedig
+$Q$! Határozzuk meg az $APQD$ négyszög területét, ha az átlók által meghatározott $ABCDE$
+csillagötszög (ötágú csillag) területe 2 egység!
+
+
+\ki{Nemecskó István}{Budapest}\medskip
+
+{\bf 2. feladat megoldása: }
+A $PQDR$ négyszög paralelogramma, tehát átlója felezi a területét:
+$$T_{PQD}=\frac{T_{PQDR}}2=T_{QDR}.$$
+\begin{wrapfigure}{r}{0.4\textwidth}
+\psset{xunit=0.7cm,yunit=0.7cm,algebraic=true,dotstyle=o,dotsize=3pt 0,linewidth=0.8pt,arrowsize=3pt 2,arrowinset=0.25}
+\begin{pspicture*}(-3.55,-0.39)(3.57,6.75)
+\psline(-2,0)(2,0)
+\psdots[dotstyle=*](-2,0)
+\rput(-2.4,-0.1){$A$}
+\psdots[dotstyle=*](2,0)
+\rput(2.3, -0.2){$B$}
+\psline(2,0)(3.24,3.8)
+\psdot[dotstyle=*](3.24, 3.8)
+\rput(3.4, 4.1){$C$}
+\psline(3.24,3.8)(0,6.16)
+\psdot[dotstyle=*](0,6.16)
+\rput(0, 6.5){$D$}
+\psline(0,6.16)(-3.24,3.8)
+\psdot[dotstyle=*](-3.24, 3.8)
+\rput(-3.34, 4.1){$E$}
+\psline(-3.24,3.8)(-2,0)
+\psline(-2,0)(3.24,3.8)
+\psline(2,0)(0,6.16)
+\psline(0,6.16)(-2,0)
+\psline(3.24,3.8)(-3.24,3.8)
+\psline(2,0)(-3.24,3.8)
+\psline(0,1.45)(0,6.16)
+\psline(0,1.45)(0.76,3.8)
+\psline(0,1.45)(-0.76,3.8)
+\psdot[dotstyle=*](0,1.45)
+\rput(0,1.05){$P$}
+\psdot[dotstyle=*](0.76,3.8)
+\rput(1, 4.1){$Q$}
+\psdot[dotstyle=*](-0.76, 3.8)
+\rput(-1, 4.1){$R$}
+\psdot[dotstyle=*](-1.24,2.35)
+\rput(-1.55, 2.15){$S$}
+\end{pspicture*}
+\end{wrapfigure}
+
+Az $RES$ háromszög egybevágó a $QDR$ háromszöggel, tehát területük egyenlő:
+$$T_{QDR}=T_{RES}.$$
+A keresett terület:
+$$T_{APQD}=T_{APQD}-T_{PQD}+T_{RES}.$$
+
+Az ábráról látszik, hogy ez a csillagötszög (ötágú csillag) fele, tehát a keresett terület 1
+egység.
+\bigskip
+
+\hbox to \hsize{\hskip2truecm\hrulefill\hskip2truecm}
+{\bf 3. feladat: } Az asztalon egy egyenes mentén 50 zsetont helyeztek el. Aladár és Bea a következő játékot
+játssza: felváltva vesznek el a zsetonok közül alkalmanként 3-3 darabot addig, amíg 2 zseton nem
+marad. Ha ezek nem szomszédosak, akkor a kezdő játékos győz, ha pedig szomszédosak, akkor a
+második játékos a győztes. Kinek van nyerő stratégiája, ha a játékot Bea kezdi?
+
+
+\ki{Szabó Magda}{Szabadka}\medskip
+
+{\bf 3. feladat megoldása: }
+Aladárnak van nyerő stratégiája. Ez a következő:
+
+Valamelyik irányból megszámozza és párba állítja a zsetonokat, az $(1; 2)$, $(3; 4)$, \dots , $(49; 50)$
+párokba, majd Bea választása után ő az alábbiak szerint kontrázik:
+\begin{itemize}
+\item[--] ha Bea választ 3 zsetont 3 különböző párból, akkor kiveszi mindhárom kiválasztott párból a
+másodikat;
+\item[--] ha Bea egy pár két zsetonját és egy tetszőleges harmadikat választ, akkor Aladár a harmadik
+zseton párját és egy tetszőleges pár két zsetonját veszi el.
+\end{itemize}
+
+Mivel $50=6\cdot 8+2$, ezért a nyolcadik lépés után két szomszédos zseton marad.
+
+Általában is igaz, hogy a másodikként elvevő játékosnak van nyerő stratégiája, ha a zsetonok
+száma $6k+2$.
+
+\medskip
+
+
+\hbox to \hsize{\hskip2truecm\hrulefill\hskip2truecm}
+{\bf 4. feladat: } Határozzuk meg azokat a pozitív egész $n$ számokat, amelyekre a $2^n-1$ és a $2^n+1$ számok közül
+legalább az egyik osztható 7-tel!
+
+
+\ki{Kántor Sándor}{Debrecen}\medskip
+
+{\bf 4. feladat megoldása: }
+Keressük a megfelelő $n$-eket a $3$-as maradékaik szerint megkülönböztetve, azaz
+$n=3k+r$ alakban, ahol $r\in\{0;1;2\}$!
+
+$2^n-1=2^r\cdot\left(8^k-1\right)+2^r-1$. Mivel $8^k-1$ osztható $7$-tel, ezért $2^n-1$ $7$-es maradéka egyenlő
+$2^r-1$ $7$-es maradékával, ami lehet $0$, $1$ vagy $3$. $2^n-1$ tehát pontosan akkor osztható $7$-tel, ha
+$n$ osztható $3$-mal.
+
+$2^n+1=2^r\cdot\left(8^k-1\right)+2^r+1$. Mivel $8^k-1$ osztható $7$-tel, ezért $2^n+1$ $7$-es maradéka egyenlő $2^r+1$ $7$-es maradékával, ami lehet $2$, $3$ vagy $5$. $2^n+1$ tehát egyetlen pozitív egész $n$ esetén sem osztható $7$-tel.
+
+Kaptuk, hogy a $2^n-1$ és $2^n+1$ számok közül legalább az egyik (ez mindig a $2^n-1$)
+pontosan a $3$-mal osztható pozitív egész $n$-ek esetén osztható $7$-tel.
+
+\medskip
+
+
+\hbox to \hsize{\hskip2truecm\hrulefill\hskip2truecm}
+{\bf 5. feladat: } Az $ABC$ háromszög $AB$ és $AC$ oldalainak belsejében úgy vesszük fel rendre a $D$ és $E$ pontokat,
+hogy $BD=CE$ teljesüljön. Legyen $F$ és $G$ rendre a $BC$ és $DE$ szakaszok felezőpontja, valamint
+legyen $M$ az $FG$ egyenesnek az $AC$ oldallal vett metszéspontja! Határozzuk meg az $AM$ szakasz
+hosszát az $AB$ és $AC$ oldalak hosszának függvényében!
+
+\ki{Olosz Ferenc}{Szatmárnémeti}\medskip
+
+{\bf 5. feladat I. megoldása: }
+A feladat lényegén nem változtat, ha feltételezzük, hogy $AB<AC$.
+
+\begin{wrapfigure}{r}{0.35\textwidth}
+\psset{xunit=0.72cm,yunit=0.72cm,algebraic=true,dotstyle=o,dotsize=3pt 0,linewidth=0.8pt,arrowsize=3pt 2,arrowinset=0.25}
+\begin{pspicture*}(-1.66,-0.35)(6.35,5.64)
+\psline[linewidth=1.5pt](1.66,3.17)(0,0)
+\psline[linewidth=1.5pt](0,0)(6,0)
+\psline[linewidth=1.5pt](6,0)(1.66,3.17)
+\psline(0.55,1.04)(5.05,0.69)
+\psline(3,0)(2.39,2.65)
+\rput[tl](0.4,0.75){$d$}
+\rput[tl](5,0.45){$d$}
+\rput[tl](-0.67,5.26){$d$}
+\psline[linewidth=1pt, linestyle=dashed,dash=1pt 1pt](1.66,3.17)(-1.23,5.29)
+\psline[linewidth=1pt, linestyle=dashed,dash=1pt 1pt](0,0)(-1.23,5.29)
+\psline[linewidth=1pt, linestyle=dashed,dash=1pt 1pt](0.55,1.04)(-0.28,4.6)
+\begin{scriptsize}
+\psdots[dotstyle=*](1.66,3.17)
+\rput[bl](1.75,3.26){$A$}
+\psdots[dotstyle=*](0,0)
+\rput[bl](-0.45,-0.15){$B$}
+\psdots[dotstyle=*](6,0)
+\rput[bl](5.75,0.25){$C$}
+\psdots[dotstyle=*](0.55,1.04)
+\rput[bl](0.1,1){$D$}
+\psdots[dotstyle=*](3,0)
+\rput[bl](3.07,0.12){$F$}
+\psdots[dotstyle=*](5.05,0.69)
+\rput[bl](5.14,0.81){$E$}
+\psdots[dotstyle=*](2.8,0.87)
+\rput[bl](2.88,0.98){$G$}
+\psdots[dotstyle=*](2.39,2.65)
+\rput[bl](2.47,2.76){$M$}
+\psdots[dotstyle=*](-0.28,4.6)
+\rput[bl](-0.2,4.71){$D'$}
+\psdots[dotstyle=*](-1.23,5.29)
+\rput[bl](-1.16,5.41){$B'$}
+\end{scriptsize}
+\end{pspicture*}
+\end{wrapfigure}
+
+Az $AC$ oldal $A$-n túli meghosszabbításán felvesszük a $B'$ és $D'$ pontokat úgy, hogy $AB'=AB$ és
+$AD'=AD$ teljesüljön. Könnyen látható, hogy $B'D'=BD=CE=d$ és $BB'$ párhuzamos $DD'$-vel.
+
+Ha $M'$ az $ED'$ szakasz felezőpontja, akkor $M'$ a $CB'$ szakasz felezőpontja is.
+
+Az $EDD'$ háromszögben $GM'$ középvonal, tehát $GM'$ párhuzamos $DD'$-vel.
+
+A $CBB'$ háromszögben $FM'$ középvonal, tehát $FM'$ párhuzamos $BB'$-vel.
+
+Mivel $GM'$ párhuzamos $DD'$-vel, $FM'$ párhuzamos $BB'$-vel és $BB'$ párhuzamos $DD'$-vel,
+ezért $F$, $G$, $M'$ egy egyenesen elhelyezkedő pontok, tehát $M'$ egybeesik az $M$ ponttal.
+$$ME=MD'=MA+AD'=AM+AD=AM+AB-BD=AM+AB-d$$
+és
+$$AC=AM+ME+EC=AM+(AM+AB-d)+d,$$
+ahonnan $AC=2AM+AB$ és $AM=\frac{AC-AB}2.$ Tehát $AM=\frac{|AB-AC|}2.$
+
+\medskip
+{\bf 5. feladat II. megoldása: }
+A feladat lényegén nem változtat, ha feltételezzük, hogy $AB<AC$.
+
+\begin{wrapfigure}{r}{0.35\textwidth}
+\psset{xunit=0.72cm,yunit=0.72cm,algebraic=true,dotstyle=o,dotsize=3pt 0,linewidth=0.8pt,arrowsize=3pt 2,arrowinset=0.25}
+\begin{pspicture*}(-0.59,-0.4)(6.52,4.45)
+\psline[linewidth=1.5pt](1.66,3.17)(0,0)
+\psline[linewidth=1.5pt](0,0)(6,0)
+\psline[linewidth=1.5pt](6,0)(1.66,3.17)
+\psline(0.55,1.04)(5.05,0.69)
+\psline(3,0)(2.39,2.65)
+\psline[linewidth=1pt, linestyle=dashed,dash=1pt 1pt](1.66,3.17)(2.08,3.97)
+\psline[linewidth=1pt, linestyle=dashed,dash=1pt 1pt](2.08,3.97)(2.39,2.65)
+\begin{scriptsize}
+\psdots[dotstyle=*](1.66,3.17)
+\rput[bl](1.4,3.26){$A$}
+\psdots[dotstyle=*](0,0)
+\rput[bl](-0.41,-0.15){$B$}
+\psdots[dotstyle=*](6,0)
+\rput[bl](5.75,0.25){$C$}
+\psdots[dotstyle=*](0.55,1.04)
+\rput[bl](0.1,1){$D$}
+\psdots[dotstyle=*](3,0)
+\rput[bl](3.07,0.12){$F$}
+\psdots[dotstyle=*](5.05,0.69)
+\rput[bl](5.14,0.81){$E$}
+\psdots[dotstyle=*](2.8,0.87)
+\rput[bl](2.88,0.98){$G$}
+\psdots[dotstyle=*](2.39,2.65)
+\rput[bl](2.47,2.76){$M$}
+\psdots[dotstyle=*](2.08,3.97)
+\rput[bl](2.08, 4.1){$L$}
+\end{scriptsize}
+\end{pspicture*}
+\end{wrapfigure}
+
+Legyen $L$ az $FG$ egyenes és az $AB$ egyenes metszéspontja.
+
+Az $ABC$ és $ADE$ háromszögekben alkalmazzuk Menelaosz tételét az $FG$ szelőre nézve:
+$$\frac{LB}{LA}\cdot\frac{MA}{MC}\cdot\frac{FC}{FB}=1 \quad \textrm{és} \quad \frac{LD}{LA}\cdot\frac{MA}{ME}\cdot\frac{GE}{GD}=1.$$
+
+Figyelembe véve az $FB=FC$ és $GD=GE$ egyenlőségeket, kapjuk, hogy
+$$\frac{LB}{LA}\cdot\frac{MA}{MC}=1 \quad \textrm{és} \quad \frac{LD}{LA}\cdot\frac{MA}{ME}=1.\qquad (*)$$
+
+$(*)$-ból következik, hogy $\frac{LB}{LA}=\frac{MC}{MA}$ és $\frac{LD}{LA}=\frac{ME}{MA}$, ahonnan az aránypárok megfelelő oldalait egymásból kivonva kapjuk,
+hogy $\frac{LB-LD}{LA}=\frac{MC-ME}{MA}$, vagyis $\frac{BD}{LA}=\frac{CE}{MA}$.
+Mivel $BD=CE$, ezért $LA=MA$.
+
+A $(*)$ egyenlőségek bal oldalainak egyenlőségéből következik $\frac{LB}{MC}=\frac{LD}{ME}$, vagyis $\frac{LB}{LD}=\frac{MC}{ME}$, amelyből származtatjuk az $\frac{LB}{LB-LD}=\frac{MC}{MC-ME}\Leftrightarrow\frac{LB}{BD}=\frac{MC}{CE}$ aránypárt.
+
+Mivel $BD=CE$, ezért $LB=MC$, amely felírható $LA+AB=AC-AM$ alakban.
+Figyelembe véve az $LA=MA$ egyenlőséget, kapjuk, hogy $AM=\frac{AC-AB}2$.
+Tehát $AM=\frac{|AB-AC|}2$.
+\medskip
+
+
+\hbox to \hsize{\hskip2truecm\hrulefill\hskip2truecm}
+{\bf 6. feladat: } Egy valós számokból álló $a_1, a_2, a_3,\dots, a_n$ véges sorozat tagjaira teljesül, hogy bármely 5 egymást
+követő tagjának összege negatív, és bármely 8 egymást követő tagjának összege pozitív. Legfeljebb
+hány tagja lehet egy ilyen sorozatnak?
+
+\ki{Kallós Béla}{Nyíregyháza}\medskip
+
+{\bf 6. feladat megoldása: }
+Megmutatjuk, hogy 12 tagja már nem lehet a sorozatnak.
+Vizsgáljuk meg a következő táblázatot:
+\begin{center}
+\begin{tabular}{|c|c|c|c|c|c|c|c|}
+\hline
+$a_1$ & $a_2$ & $a_3$ & $a_4$ & $a_5$ & $a_6$ & $a_7$ & $a_8$ \\
+\hline
+$a_2$ & $a_3$ & $a_4$ & $a_5$ & $a_6$ & $a_7$ & $a_8$ & $a_9$ \\
+\hline
+$a_3$ & $a_4$ & $a_5$ & $a_6$ & $a_7$ & $a_8$ & $a_9$ & $a_{10}$ \\
+\hline
+$a_4$ & $a_5$ & $a_6$ & $a_7$ & $a_8$ & $a_9$ & $a_{10}$ & $a_{11}$ \\
+\hline
+$a_5$ & $a_6$ & $a_7$ & $a_8$ & $a_9$ & $a_{10}$ & $a_{11}$ & $a_{12}$ \\
+\hline
+\end{tabular}
+\end{center}
+
+A feladat egyik feltétele miatt minden oszlop összege negatív, azaz a táblázatban szereplő
+összes szám összege negatív.
+
+A másik feltétel miatt azonban minden sor összege pozitív, azaz az összes szám összege
+pozitív.
+
+Ez az ellentmondás azt jelenti, hogy 12 tagja nem lehet a sorozatnak.
+11 tagja viszont már lehet a sorozatnak, amint ezt a következő példa is mutatja:
+$$5; –8; 5; 5; –8; 5; –8; 5; 5; –8; 5.$$
+\medskip
+
+\vfill
+\end{document}
+
+

@@ -1,0 +1,306 @@
+\documentclass[a4paper,10pt]{article} 
+\usepackage[utf8]{inputenc}
+\usepackage{t1enc}
+\usepackage{graphicx}
+\usepackage{amssymb}
+\usepackage{pstricks, pstricks-add}
+\voffset - 20pt
+\hoffset - 35pt
+\textwidth 450pt
+\textheight 650pt 
+\frenchspacing 
+
+\pagestyle{empty}
+\def\ki#1#2{\hfill {\it #1 (#2)}\medskip}
+
+\def\tg{\, \hbox{tg} \,}
+\def\ctg{\, \hbox{ctg} \,}
+\def\arctg{\, \hbox{arctg} \,}
+\def\arcctg{\, \hbox{arcctg} \,}
+\def\v#1#2{\overrightarrow{#1#2}}
+
+\begin{document}
+\begin{center} \Large {\em XVII. Nemzetközi Magyar Matematika Verseny} \end{center}
+\begin{center} \large{\em Kassa, 2008. március 6-9.} \end{center}
+\smallskip
+\begin{center} \large{\bf 11. osztály} \end{center}
+\bigskip 
+
+{\bf 1. feladat: } Fejeződhet-e a $3^n$ valamely természetes $n$ számra $0001$-re?
+
+\ki{Zolnai Irén}{Újvidék}
+
+\medskip
+{\bf 1. feladat megoldása: } Igen, mivel a $3, 3^2,\dots,3^n$ között a skatulya-elv alapján van két olyan,
+amelynek az utolsó négy számjegye megegyező. Ha ezt a kettőt
+kivonjuk egymásból, az utolsó négy számjegy nulla lesz.
+Ha ez a $3^k$ és $3^l$, $k>l$, akkor $3^k-3^l = 10^4\cdot m, m \in \mathbb{Z}$.
+
+Nem nehéz megmutatni, hogy a keresett szám $3^{k-l}$, mert
+
+$$3^{k-l}-1=\frac{3^k}{3^l}-1=\frac{3^k-3^l}{3^l}=\frac{10^4\cdot m}{3^l}=
+10^4\cdot p,$$
+ahol $p\in \mathbb{Z}$, mert $10^4$ nem osztható 3-mal.
+
+\medskip
+{\bf 2. feladat: } A  $K, L, M, N$ az $ABCDE$ ötszög  $BC$, $CD$, $DE$, $EA$  oldalainak felezőpontjai, a $Q$ és $P$ pontok pedig az $LN$, $KM$ szakaszok felezőpontjai. Bizonyítsátok be, hogy $PQ||AB$-vel és határozzátok meg a szakaszok hosszának arányát.
+
+\begin{center}
+\psset{xunit=0.6cm,yunit=0.6cm,algebraic=true,dotstyle=o,dotsize=3pt 0,linewidth=0.8pt,arrowsize=3pt 2,arrowinset=0.25}
+\begin{pspicture*}(-3.68,-2.8)(8.46,5.32)
+\psline(-0.38,-0.46)(4.78,-1.4)
+\psline(4.78,-1.4)(7.02,1.38)
+\psline(7.02,1.38)(0.86,4.16)
+\psline(0.86,4.16)(-2.04,1.9)
+\psline(-2.04,1.9)(-0.38,-0.46)
+\psline(-1.21,0.72)(3.94,2.77)
+\psline(-0.59,3.03)(5.9,-0.01)
+\psline(1.37,1.75)(2.66,1.51)
+%\psdots[dotstyle=*](-0.38,-0.46)
+\rput[bl](-0.76,-0.99){$A$}
+%\psdots[dotstyle=*](4.78,-1.4)
+\rput[bl](4.92,-1.9){$B$}
+%\psdots[dotstyle=*](7.02,1.38)
+\rput[bl](7.1,1.5){$C$}
+%\psdots[dotstyle=*](0.86,4.16)
+\rput[bl](0.94,4.28){$D$}
+%\psdots[dotstyle=*](-2.04,1.9)
+\rput[bl](-2.54,1.96){$E$}
+%\psdots[dotstyle=*](5.9,-0.01)
+\rput[bl](6.2,-0.22){$K$}
+%\psdots[dotstyle=*](3.94,2.77)
+\rput[bl](4.1,3){$L$}
+%\psdots[dotstyle=*](-0.59,3.03)
+\rput[bl](-0.86,3.24){$M$}
+%\psdots[dotstyle=*](-1.21,0.72)
+\rput[bl](-1.78,0.5){$N$}
+%\psdots[dotstyle=*](1.37,1.75)
+\rput[bl](1.22,1.04){$Q$}
+%\psdots[dotstyle=*](2.66,1.51)
+\rput[bl](2.74,1.62){$P$}
+\end{pspicture*}
+\end{center}
+
+\ki{Mészáros József}{Galánta}\medskip
+
+{\bf 2. feladat megoldása: } A feladatot vektorok segítségével oldjuk meg. Legyen az $O$ a sík
+tetszőleges pontja. Ekkor felírható:
+
+\smallskip$\displaystyle{\v OP = \frac 12\left(\v OK+\v OM\right)}$,
+
+\smallskip$\displaystyle{\v OL = \frac 12\left(\v OC+\v OD\right)}$,
+
+\smallskip$\displaystyle{\v ON = \frac 12\left(\v OA+\v OE\right)}$,
+
+\smallskip$\displaystyle{\v OK = \frac 12\left(\v OB+\v OC\right)}$,
+
+\smallskip$\displaystyle{\v OM = \frac 12\left(\v OD+\v OE\right)}$,
+
+\smallskip$\displaystyle{\v PQ=\v OQ-\v OP}$,
+
+\smallskip$\displaystyle{\v OQ =
+\v ON + \v NQ = \v ON +\frac 12 \v NL = \v ON +
+ \frac 12\left(\v OL-\v ON\right)=
+ \frac 12\left(\v ON+\v OL\right)}$.
+
+Továbbá
+
+\smallskip$\displaystyle{\v PQ=\v OQ-\v OP=
+\frac 12\left(\v ON+\v OL\right)-
+\frac 12\left(\v OK+\v OM\right)=}$
+
+\smallskip$\displaystyle{
+=\frac 12
+\left[
+\frac 12\left(\v OC+\v OD\right)+
+\frac 12\left(\v OA+\v OE\right)-
+\frac 12\left(\v OB+\v OC\right)-
+\frac 12\left(\v OD+\v OE\right)
+\right]=}$
+
+\smallskip$\displaystyle{\frac 14\left(\v OA-\v OB\right)=
+\frac 14\v AB}$.
+
+\smallskip
+Látható, hogy $PQ||AB$-vel és a szakaszok hosszának aránya: $\frac{1}{4}$.
+
+
+\medskip
+{\bf 3. feladat: } A természetes számok halmazán értelmezett $f$ függvényre teljesül a következő egyenlőség: $f(1)+2^2f(2)+\dots+n^2f(n)=n^3f(n)$  tetszőleges $n\ge 1$  esetén.
+Ha $f(1) = 2008$, határozzátok meg $f(2008)$ értéket.
+
+\ki{Kovács Béla}{Szatmárnémeti}\medskip
+
+
+{\bf 3. feladat megoldása: } 
+Az adott egyenlőséget felírjuk $(n+1)$-re és kivonjuk belőle az adott
+egyenlőséget:
+
+$$(n + 1)^2\cdot f(n+1) = (n+1)^3f(n+1)-n^3f(n)\Leftrightarrow
+n^3f(n)=n(n+1)^2f(n+1)\Leftrightarrow$$
+
+$$n^2\cdot f(n) = (n+1)^2f(n+1)\Leftrightarrow
+\frac{f(n+1)}{f(n)}
+=\frac{n^2}{(n+1)^2}$$
+bármely $n\ge 1$ esetén.
+
+A kapott összefüggést felírjuk $1, 2,\dots, n$ értékekre és összeszorozzuk:
+
+Kapjuk: $\frac{f(n+1)}{f(1)}=\frac{1}{(n+1)^2}\Rightarrow
+f(n)=\frac{1}{n^2}f(1)$ bármely $n\ge 1$ esetén.
+
+Mivel $f(1)=2008$, következik, hogy $f(n)=\frac{2008}{n^2}$.
+Ennek alapján $f(2008)=1/2008$.
+
+
+\medskip
+{\bf 4. feladat: } Oldjátok meg a $60p^2+57q=2007$ egyenletet, ha $p$ és $q$ pozitív prímszámok.
+
+\ki{Egyed László}{Baja}\medskip
+
+
+
+{\bf 4. feladat I. megoldása: } Nyilvánvaló, hogy a $60p^2 + 57q = 2007$ egyenletnél a $q$ nem lehet páros,
+mert akkor a bal oldal páros, míg a jobb oldal páratlan lenne.
+Ha $p=2$, akkor $q=31$, ami megoldása az egyenletnek.
+Ha $q=3$, akkor $p$-re nem egész számot kapunk, így $q>3$ lehet csak.
+
+A 3-nál nagyobb prímszámok $6k+1$ vagy $6k-1$ alakúak. 
+
+Legyen először
+$q=6k+1$. Ekkor $60p^2 + 57(6k+1) =2007$, vagyis $60p^2 + 342k = 1950$, azaz $10p^2 +
+57k = 325$. A $p=2$ esetet már vizsgáltuk, így $p \ge 3$. A $p=3$ nem ad egész megoldást $k$-ra, így $p>3$ és páratlan. A 3-nál nagyobb prímszámok négyzete 12-vel
+osztva 1 maradékot ad, és így $p^2 = 12n+1$.
+Ezt felhasználva az egyenletünk a következő lesz: $10(12n+1) + 57k =325$,
+azaz $120n + 57k = 315$. A pozitív egész számok halmazán ennek az egyenletnek nincs megoldása.
+Így $p \ge 3$ és $q=6k+1$ esetén az eredeti egyenletnek nincs megoldása.
+
+Legyen most $q=6k-1$.
+Ekkor $60p^2 +57(6k-1) =2007$, azaz $60p^2 +342k =2064$, amiből $10p^2 +57k
+=344$. A $p=3$ most sem ad egész megoldást, így felhasználhatjuk, hogy $p^2=12n+1$
+alakú lesz ismét. Így az egyenletünk: $120n +57k = 334$ alakú lesz. A bal oldal osztható 3-mal a jobb oldal viszont nem, így az egyenletnek a pozitív egész számok
+halmazán nincs megoldása. Tehát az eredeti egyenletnek csak egy
+megoldása van a prímszámok halmazán a $p=2$, $q=31$ számpár.
+
+
+
+\medskip
+{\bf 4. feladat II. megoldása: } $60p^2 \le 60p^2+57q=2007 \Rightarrow p<6$, 
+tehát $p\in\{2,3,5\}$. Az adott egyenletbe behelyettesítve $p$ helyett 3-t vagy 5-t nem kapunk megoldást, tehát $p=2, q=31$ az egyetlen megoldás.
+
+
+
+\medskip
+{\bf 5. feladat: } Oldjátok meg a  
+$\log_2\left(x^2+4\right)-\log_2 x=7x^2+4x-x^4-18$
+egyenletet.
+
+\ki{Olosz Ferenc}{Szatmárnémeti}\medskip
+
+
+{\bf 5. feladat megoldása: } Az egyenlet a $(0,\infty)$-en értelmezett.
+
+$$\log_2\left(x^2+4\right)-\log_2 x = \log_2\frac{x^2+4}{x} \ge \log_2 4 = 2,$$
+és egyenlőség akkor áll fenn, ha $x=2$.
+
+Tehát $7x^2+4x-x^4-18\ge 2$,
+$$x^4-7x^2-4x+20 \le 0 \Leftrightarrow 
+\left(x^4-8x^2+16\right)+\left(x^2-4x+4\right) \Leftrightarrow
+\left(x^2-4\right)^2+\left(x-2\right)^2\le 0$$
+amely csak $x=2$
+esetén teljesül. Az egyenlet megoldása $x = 2$.
+
+
+
+
+\medskip
+{\bf 6. feladat: }Az  $ABC$ szabályos háromszög oldalai $\sqrt{p}$ hosszúságúak. A háromszög egy  belső pontja az $A, B,C$ pontoktól rendre 1, $\sqrt{r}$, $\sqrt{r+1}$ egység távolságra van, ahol  $p$ és $r$  prímszámok. Mekkora az $ABC$ háromszög kerülete?
+
+\ki{Bíró Bálint}{Eger}\medskip
+
+
+
+{\bf 6. feladat megoldása: } Forgassuk el az $ACP$ háromszöget az $A$ pont körül $60^\circ$-kal negatív irányba! Az elforgatásnál az $A$ pont képe önmaga, a $C$ pont képe a $B$ pont, hiszen az $ABC$ háromszög szabályos, a $P$ pont képét pedig $R$-rel jelöltük.
+
+\begin{center}
+\psset{xunit=1.0cm,yunit=1.0cm,algebraic=true,dotstyle=o,dotsize=3pt 0,linewidth=0.8pt,arrowsize=3pt 2,arrowinset=0.25}
+\begin{pspicture*}(-1.22,-1.54)(3.92,3.18)
+\psline(1.5,2.6)(0,0)
+\psline(0,0)(3,0)
+\psline(3,0)(1.5,2.6)
+\psline[linestyle=dashed,dash=1pt 1pt,linecolor=red](1.5,2.6)(1.12,0.36)
+\psline(1.12,0.36)(0,0)
+\psline(0,0)(0.87,-0.79)
+\psline(0.87,-0.79)(1.12,0.36)
+\psline[linestyle=dashed,dash=1pt 1pt,linecolor=red](0.87,-0.79)(3,0)
+\psline[linestyle=dotted](1.12,0.36)(3,0)
+\begin{scriptsize}
+\psdots[dotstyle=*](0,0)
+\rput[bl](-0.4,0.04){$A$}
+\psdots[dotstyle=*](3,0)
+\rput[bl](3.08,0.12){$B$}
+\psdots[dotstyle=*](1.5,2.6)
+\rput[bl](1.58,2.72){$C$}
+\psdots[dotstyle=*](1.12,0.36)
+\rput[bl](0.82,0.44){$P$}
+\psdots[dotstyle=*,linecolor=blue](11.76,3.94)
+\rput[bl](11.84,3.7){\blue{$D$}}
+\psdots[dotstyle=*](0.87,-0.79)
+\rput[bl](0.82,-1.28){$R$}
+\end{scriptsize}
+\end{pspicture*}
+\end{center}
+
+Mivel  $AP = AR = 1$ és $PAR\sphericalangle = 60^\circ$, ezért a $PAR$ háromszög egy 1
+oldalú szabályos háromszög, ebből $PR = 1$ is következik. A $PC$ szakasz elforgatottja az
+$RB$ szakasz, így $PC = RB = \sqrt{r+1}$.
+
+Könnyen bizonyítható, hogy az ábrán szereplő $BRP$ háromszög
+létezik, hiszen a $PR = 1$, $PB = \sqrt r$ és $RB = \sqrt{r+1}$ szakaszokra rövid
+számolás után belátható, hogy teljesül az $1 +\sqrt r > \sqrt{r+ 1}$ egyenlőtlenség.
+
+Sőt, észrevehetjük, hogy $1+\sqrt r^2 = \left(\sqrt{r+1}\right)^2$, azaz 
+$PR^2+PB^2=RB^2$, így a Pitagorasz-tétel megfordításából következik, hogy a $BRP$
+háromszög derékszögű, melynek derékszögű csúcsa a $P$ pontban van.
+
+Tudjuk, hogy $APR\sphericalangle = 60^\circ$ és az előző megállapítás miatt
+$BPR\sphericalangle = 90^\circ$, így $APB\sphericalangle = 150^\circ$.
+
+Fölírhatjuk az $APB$ háromszögre a koszinusztételt:
+
+\begin{equation}
+AB^2 = AP^2+BP^2-2\cdot AP\cdot BP\cdot \cos 150^\circ .
+\end{equation}
+
+(1)-be a megfelelő adatokat behelyettesítjük és figyelembe
+vesszük, hogy $\cos 150^\circ = -\cos 30^\circ =-\frac{\sqrt 3}{2}$.
+
+Ezzel:
+\begin{equation}
+\sqrt p^2=1^2+\sqrt r^2+2\cdot \sqrt r\cdot \frac{\sqrt 3}{2}
+\end{equation}
+
+
+(2)-ből a műveletek elvégzése után $p=1+r+\sqrt{3r}$ adódik, ahonnan
+
+\begin{equation}
+\sqrt{3r}=p-r-1
+\end{equation}
+
+következik.
+
+(3) jobb oldala egész szám, tehát a bal oldalnak is egész számnak
+kell lennie. Ez úgy valósulhat meg, ha $3r$ négyzetszám, de mivel $r$
+prímszám, ezért csak $r=3$ lehetséges.
+
+Ebből azonnal következik, hogy következik $p=7$. 
+
+Az $ABC$ háromszög kerülete tehát
+ $AB + BC + CA = 3\cdot\sqrt{7}$ hosszúságegység.
+
+
+
+
+
+
+\end{document}

@@ -1,0 +1,292 @@
+\documentclass[a4paper,10pt]{article} 
+\usepackage[utf8]{inputenc}
+\usepackage[a4paper]{geometry}
+\usepackage[magyar]{babel}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{graphics}
+\frenchspacing 
+\pagestyle{empty}
+\newcommand{\ki}[2]{\hfill {\it #1 (#2)}\medskip}
+\newcommand{\vonal}{\hbox to \hsize{\hskip2truecm\hrulefill\hskip2truecm}}
+\newcommand{\degre}{\ensuremath{^\circ}}
+\newcommand{\tg}{\mathop{\mathrm{tg}}\nolimits}
+\newcommand{\ctg}{\mathop{\mathrm{ctg}}\nolimits}
+\newcommand{\arc}{\mathop{\mathrm{arc}}\nolimits}
+\begin{document}
+\begin{center} \Large {\em 25. Nemzetközi Magyar Matematika Verseny} \end{center}
+\begin{center} \large{\em Budapest, 2016. március 11-15.} \end{center}
+\smallskip
+\begin{center} \large{\bf 11. osztály} \end{center}
+\bigskip 
+
+{\bf 1. feladat: } Egy háromszög három oldalának mérőszáma, $a,b,c$ ebben a sorrendben egy mértani sorozat három egymást követő tagja. Bizonyítsa be, hogy $a^2+c^2<3ac$.
+
+\ki{Minda Mihály}{Vác}\medskip
+
+{\bf 1. megoldás: } A háromszög-egyenlőtlenség szerint $a+b>c$ és $b+c>a$, így $b>c-a$ és $b>a-c$, ami azt jelenti, hogy $|a-c|<b$. 
+
+\smallskip
+
+\noindent Mivel $a,b$ és $c$ egy pozitív tagú mértani sorozat három egymást követő tagja, ezért $b=\sqrt{ac}$. 
+
+\smallskip
+
+\noindent Így most $|a-c|<\sqrt{ac}$. 
+
+\smallskip
+
+\noindent Innen négyzetre emelés (mindkét oldal nemnegatív), majd átrendezés után a kívánt
+$a^2+c^2<3ac$ egyenlőtlenség adódik.
+
+
+\medskip
+
+\emph{Megjegyzés:} Mivel a háromszög-egyenlőtlenséget szokás úgy is kimondani, hogy a háromszög bármely oldala nagyobb, mint a másik két oldal különbsége, ezért a $b>c-a$ és $b>a-c$ összefüggések erre való hivatkozással is elfogadhatók. 
+
+\smallskip
+
+\noindent Ha a mértani sorozat hányadosa $q$, akkor $b=aq$, $c=aq^2$ és a megoldás könnyen átfogalmazható ezekkel a jelölésekkel, a megfelelő pontszámok ekkor is járnak.
+
+
+\medskip
+
+{\bf 2. megoldás: }  Ha $\beta$ jelöli az $a$ és $c$ oldalak által bezárt szöget, akkor a koszinusztétel alapján $a^2+c^2-2ac\cos\beta=b^2$. 
+
+\smallskip
+
+\noindent Mivel $a,b$ és $c$ egy pozitív tagú mértani sorozat három egymást követő tagja, ezért $b=\sqrt{ac}$. 
+
+\smallskip
+
+\noindent Így most $a^2+c^2=ac(1+2\cos\beta)$. 
+
+\smallskip
+
+\noindent Mivel $\cos\beta<1$, ezért $a^2+c^2<3ac$.
+
+\vonal
+
+{\bf 2. feladat: } Egy interneten lebonyolított bajnokságon minden
+résztvevő minden másik résztvevővel pontosan kétszer játszott. Egy
+mérkőzésen a győztes $2$, a vesztes 0 pontot kapott, döntetlen esetén
+mindkét játékosnak 1-1 pont járt. Az eredménylista összeállítói meglepve 
+tapasztalták,
+hogy az utolsó helyezett kivételével minden versenyző pontszáma úgy
+adódik, hogy a közvetlenül mögötte végző pontszámához mindig ugyanazt a
+páros számot hozzáadjuk. A győztes $2016$ pontot szerzett. Hányan vettek
+részt a versenyen? 
+
+\ki{Tóth Sándor}{Kisvárda}\medskip
+
+{\bf Megoldás:} Legyen a résztvevők száma $n$, ekkor összesen
+$n(n-1)$ mérkőzést játszottak, és így az összpontszám $2n(n-1)$.
+
+\smallskip
+\noindent Ha az utolsó helyezett $b$ pontot ért el, és minden versenyző $d$ ponttal
+többet kapott, mint a mögötte végző, akkor az összpontszám ennek a számtani
+sorozatnak az összege: $\displaystyle\frac{(2b+(n-1)d)n}2$.
+
+\smallskip
+\noindent Az összpontszám kétféle felírását összevetve és rendezve $2b=(n-1)(4-d)$
+adódik.
+
+
+\smallskip
+\noindent Innen $4-d\ge 0$ és $d$ párossága miatt csak $d=2$ és 4 lehetséges.
+
+\smallskip
+\noindent A győztes pontszáma $2016=b+(n-1)d$, ahonnan $b=2016-(n-1)d$.
+
+\smallskip
+\noindent Ezt a $2b=(n-1)(4-d)$ összefüggésbe beírva és rendezve $4032=(n-1)(d+4)$
+adódik. 
+
+
+\smallskip
+\noindent Ide $d=2$-t, illetve 4-et behelyettesítve  azt kapjuk, hogy a résztvevők
+száma $n\MathBrk{=}673$ vagy  $n=505$.
+
+\smallskip
+\noindent Ezek valóban megoldások, mert mindkét létszám esetén
+megvalósulhat a pontszámok között megadott összefüggés:
+
+\smallskip
+\noindent Ha $d=4$, $n=505$, akkor megfelel, ha mindenki mindkétszer legyőzi a nála
+kisebb rajtszámúakat, ekkor a pontszámok: $0, 4, 8, \dots, 2012, 2016$.
+
+\smallskip
+\noindent Ha $d=2$, $n=673$, akkor megfelel, ha mindenki egyszer megveri a nála kisebb
+rajtszámúakat, a második mérkőzés pedig mindenhol döntetlen.
+ 
+\noindent Ekkor a pontszámok: $672, 674,\dots, 2014, 2016$.
+
+\medskip
+
+\emph{Megjegyzés:} Ha $d$ páratlan is lehet, akkor még $d=1$ és
+$d=3$ jön szóba. Az elsőre $n$ nem lesz egész szám, a másodikból $n=577$. 
+Erre is teljesíthetők a pontszámokra előírt kikötések:
+Mivel $2b=n-1$, így $2b+1(=577)$ versenyző van, akiknek 
+rendre
+$b$, $b+3$, $b+6,\ \dots\ ,$ $7b(=2016)$ pontot kell elérniük. Az első mérkőzésen
+mindenki győzze le a nála kisebb rajtszámúakat, ekkor a kapott pontszámok:
+$0, 2, 4, \dots, 4b$. Ezért a második mérkőzés során rendre az alábbi
+pontszámokat kell megszerezniük: $b,b+1,b+2,\dots,3b$. Ez teljesül, ha az 
+azonos paritású rajtszámúak döntetlenre játszanak, a különböző paritásúak
+mérkőzésén pedig a nagyobb rajtszámú győz.
+
+
+\vonal
+
+{\bf 3. feladat: } Az $ABC$ derékszögű háromszögben az $A$ csúcsnál levő szög $\alpha$. Az $AB$ átfogóhoz tartozó magasság az átfogót a $D$ pontban metszi. Az $ADC$ háromszögbe olyan $DEFG$ négyzetet rajzolunk, amelynek $E$, $F$ és $G$ csúcsai rendre $DC$-re, $CA$-ra és $AD$-re illeszkednek, a $CDB$ háromszögbe pedig olyan $DHIJ$ négyzetet, amelynek $H$, $I$ és $J$ csúcsai $DB$-re, $BC$-re és $CD$-re esnek. Jelölje $t_1$ és $t_2$ a $DEFG$, illetve a $DHIJ$ négyzet területét. Bizonyítsa be, hogy 
+
+\[\cos\alpha =\sqrt{\frac{t_1}{t_1+t_2}}\,.\]
+
+\ki{Bíró Bálint}{Eger}\medskip
+
+{\bf 1. megoldás:} Használjuk az ábra jelöléseit.
+
+\begin{center}
+\includegraphics{11-3-eps-converted-to.pdf}
+\end{center}
+
+\noindent A $CDB$ és az $ADC$ részháromszögek hasonlók, és a hasonlóság aránya 
+\[\frac{CB}{AC}=\tg\alpha.\] 
+
+\noindent Ennél a hasonlóságnál a szóban forgó két négyzet is egymásnak van megfeleltetve, 
+
+\noindent ezért területeik aránya a hasonlóság arányának négyzetével egyenlő:
+\[\frac{t_2}{t_1}=\tg ^2\alpha .\]
+
+\noindent Innen a $t_2/t_1$ arányra a
+\[\frac{t_2}{t_1}=\frac{\sin ^2\alpha}{\cos ^2\alpha}=\frac{1-\cos ^2\alpha}{\cos ^2\alpha}=\frac{1}{\cos ^2\alpha}-1\]
+képletet kapjuk, amelyből átrendezéssel a feladat állítása közvetlenül következik.
+
+\medskip
+
+{\bf 2. megoldás:} Mivel $t_1=DF^2/2$ és $t_2=DI^2/2$, 
+
+\noindent ezért
+\[\sqrt{\frac{t_2}{t_1+t_2}}=\sqrt{\frac{DF^2}{DF^2+DI^2}}\,.\]
+
+\noindent Az $FDI$ háromszög $D$-nél derékszögű, így $DF^2+DI^2=FI^2$. A $DI/DF$ arány egyenlő a $CDB$ és $ADC$ háromszögek hasonlósági arányával, azaz a $CB/CA$ aránnyal. Ezért az $FDI$ háromszög hasonló az $ACB$ háromszöghöz. Emiatt $CFI\sphericalangle =\alpha$, és így $\cos\alpha =DF/FI$.  
+
+\smallskip
+
+\noindent Ezekből tehát valóban
+\[\sqrt{\frac{t_2}{t_1+t_2}}=\sqrt{\frac{DF^2}{FI^2}}=\frac{DF}{FI}=\cos\alpha .\]
+
+\vonal
+
+{\bf 4. feladat: } Az $a_n$ sorozatban $a_1=1$ és $a_n=n\left(a_1+a_2+a_3+\ldots+a_{n-1}\right)$, ha $n \geq 2$. Határozza meg $a_{2016}$ értékét.
+
+\ki{Nagy Piroska Mária}{Dunakeszi}
+
+\ki{Szoldatics József}{Budapest}\medskip
+
+{\bf 1. megoldás:} Legyen $n\geq 3$. Alkalmazzuk $(n-1)$-re és $n$-re a rekurziós összefüggést:
+\begin{gather}
+a_{n-1}=(n-1)(a_1+a_2+\ldots+a_{n-2}), \quad\text{így}\quad  a_1+a_2+\ldots+a_{n-2}=\frac {a_{n-1}} {n-1}\\
+a_n=n(a_1+a_2+\ldots+a_{n-2}+a_{n-1})=n \left(\frac {a_{n-1}} {n-1}+a_{n-1} \right)=\frac {n^2} {n-1} \cdot  a_{n-1}.
+\end{gather}
+
+\noindent Ezt az átalakítást tovább használva teleszkopikus szorzatot kapunk:
+\[ a_n=\frac {n^2} {n-1} \cdot \frac {(n-1)^2} {n-2} \cdot \frac {(n-2)^2} {n-3}\cdot \ldots \cdot\frac {3^2} 2 \cdot a_2. \]
+
+\noindent Az egyszerűsítéseket elvégezve, felhasználva az $a_2=2$ értéket $a_n$-et zárt alakban tudjuk kifejezni:
+\[ a_n=\frac {n\cdot n!} 2. \]
+
+\noindent Tehát $a_{2016}=1008 \cdot 2016!$.
+
+\medskip
+
+{\bf 2.~megoldás:} Használjuk az  $S_n=a_1+a_2+a_3+\ldots+a_n$ jelölést. Számoljunk ki néhány kezdőértéket:
+\begin{gather*}
+a_1=1, \quad a_2=2, \quad a_3=9, \quad a_4=48,\ldots \\
+ S_1=1, \quad S_2=3=\frac {3!} 2, \quad S_3=12=\frac {4!} 2, \ldots. 
+\end{gather*}
+
+\noindent Az a sejtésünk, hogy $S_n=\dfrac {(n+1)!} 2$. Ezt teljes indukcióval fogjuk belátni.
+
+
+\noindent Az összefüggés $n=1$-re igaz. Feltételezzük, hogy $n=k$-ra is teljesül:
+\[ S_k=a_1+a_2+a_3+ \ldots +a_k= \frac {(k+1)!} 2. \]
+
+\noindent Bizonyítjuk az állítást $n=k+1$-re.
+
+\smallskip
+
+\noindent A sorozat képzési szabálya és az indukciós feltétel alapján:
+\begin{gather}
+S_{k+1}=a_1+a_2+ \ldots +a_k+a_{k+1} =\frac {(k+1)!} 2+(k+1)(a_1+a_2+\ldots+a_k)=\notag\\
+=\frac {(k+1)!} 2+(k+1) \cdot S_k=\frac {(k+1)!} 2 \cdot (1+k+1)=\frac {(k+2)!}2. 
+\end{gather}
+
+
+\noindent Ezzel sejtésünket  beláttuk.
+
+\smallskip
+
+\noindent Felhasználva a most bizonyított összefüggést:
+\[a_n=n \cdot S_{n-1}=\frac{n\cdot n!} 2.\]
+Tehát $a_{2016}=1008 \cdot 2016!$.
+
+\vonal
+
+{\bf 5. feladat: } Jelölje $p_n$ az $n$-edik prímszámot ($p_1=2, p_2=3, \dots$). Bizonyítsa be, hogy minden $n$ pozitív egész szám esetén
+\[\frac{1}{p_1p_2}+\frac1{p_2p_3}+\ldots+\frac{1}{p_np_{n+1}}<\frac13.\]
+
+\ki{Bencze Mihály}{Bukarest}\medskip
+
+{\bf Megoldás:} Ha $S_n$ jelöli a feladatban szereplő összeget, akkor $S_1=1/6 < 1/3$, különben pedig 
+\[2S_n=\frac13+\frac2{p_2p_3}+\ldots+\frac{2}{p_np_{n+1}},\]
+
+\noindent Mivel $p_{k+1}-p_k\geq2$, ezért 
+\[
+\frac2{p_2p_3}+\ldots+\frac{2}{p_np_{n+1}}\leq\frac{p_3-p_2}{p_2p_3}+\ldots+\frac{p_{n+1}-p_n}{p_np_{n+1}},
+\]
+
+\noindent ahol a jobb oldalt teleszkopikus összegként írhatjuk fel:
+\[\frac{p_3-p_2}{p_2p_3}+\ldots+\frac{p_{n+1}-p_n}{p_np_{n+1}}=\frac1{p_2}-\frac1{p_3}+\frac1{p_3}-\frac1{p_4}+\ldots+\frac1{p_n}-\frac1{p_{n+1}}=\frac1{p_2}-\frac1{p_{n+1}}.\]
+
+
+\noindent Ebből következően 
+\[2S_n<\frac13+\frac1{p_2}=\frac23,\] 
+ahonnan a bizonyítandó $S_n<1/3$ egyenlőtlenséget nyerjük.
+
+\vonal
+
+{\bf 6. feladat: } Az $ABCD$ paralelogramma $A$ csúcsán áthaladó kör az $AB$, $AD$ oldalakat és az $AC$ átlót rendre az $M$, $N$, illetve $K$ pontokban metszi. Bizonyítsa be, hogy 
+\[AB\cdot AM + AD\cdot AN = AC\cdot AK.\]
+
+\ki{Róka Sándor}{Nyíregyháza}\medskip
+
+\newpage
+{\bf Megoldás:} Használjuk az ábra jelöléseit.
+
+\begin{center}
+\includegraphics{11-6-eps-converted-to.pdf}
+\end{center}
+
+\noindent A paralelogramma $B$-nél levő szöge is és az $AMKN$ húrnégyszög $K$-nál levő szöge is $180^{\circ}$-ra egészíti ki az $A$-nál levő szöget, ezért $ABC\sphericalangle = MKA\sphericalangle + AKN\sphericalangle$. 
+Felvehetünk tehát az $AC$ átlón egy olyan $X$ pontot, hogy a $BX$ szakasz az $ABC$ szöget az $ABX\sphericalangle = MKA\sphericalangle$ és $XBC\sphericalangle \MathBrk{=} AKN\sphericalangle$ részekre bontsa fel. 
+
+\smallskip
+
+\noindent Az $AMK$ háromszög és az $AXB$ háromszög hasonló, mert az $A$-nál levő szögük közös, és a $K$-nál, illetve $B$-nél levő szögük a konstrukció folytán egyenlő.
+
+\smallskip
+
+\noindent Emiatt 
+\[\frac{AM}{AK}=\frac{AX}{AB},\quad\text{azaz}\quad AB\cdot AM=AK\cdot AX.\]
+
+\noindent Az $ANK$ háromszög és a $CXB$ háromszög hasonló, mert az $A$-nál, illetve $C$-nél levő szögük két váltószög lévén egyenlő, valamint a $K$-nál, illetve $B$-nél levő szögük a konstrukció folytán egyenlő.
+
+\smallskip
+
+\noindent Ezért 
+\[\frac{AN}{AK}=\frac{CX}{CB},\quad\text{azaz}\quad (CB=AD\;\text{miatt})\quad AD\cdot AN=AK\cdot CX.\]
+
+
+\noindent A két egyenlőséget összeadva a kívánt $AB\cdot AM+AD\cdot AN=AK\cdot (AX+CX)\MathBrk{=}AK\cdot AC$ formula adódik.
+\end{document}

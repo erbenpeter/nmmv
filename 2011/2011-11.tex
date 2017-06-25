@@ -1,0 +1,93 @@
+\documentclass[a4paper,10pt]{article} 
+\usepackage[utf8]{inputenc}
+\usepackage[a4paper]{geometry}
+\usepackage[magyar]{babel}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{pgf,tikz}
+\usetikzlibrary{arrows}
+\frenchspacing 
+\pagestyle{empty}
+\newcommand{\ki}[2]{\hfill {\it #1 (#2)}\medskip}
+\newcommand{\vonal}{\hbox to \hsize{\hskip2truecm\hrulefill\hskip2truecm}}
+\newcommand{\degre}{\ensuremath{^\circ}}
+\newcommand{\tg}{\mathop{\mathrm{tg}}\nolimits}
+\newcommand{\ctg}{\mathop{\mathrm{ctg}}\nolimits}
+\newcommand{\arc}{\mathop{\mathrm{arc}}\nolimits}
+\begin{document}
+\begin{center} \Large {\em XX. Nemzetközi Magyar Matematika Verseny} \end{center}
+\begin{center} \large{\em Bonyhád, 2011. március 11--15.} \end{center}
+\smallskip
+\begin{center} \large{\bf 11. osztály} \end{center}
+\bigskip 
+
+{\bf 1. feladat: } Igazoljuk, hogy 
+\[\frac{2}{1+2^2}+\frac{2^2}{1+2^{2^2}}+\ldots\frac{2^n}{1+2^{2^n}}<\frac23\]
+ bármely $n\ge1$ természetes szám esetén.
+
+\ki{Kovács Béla}{Szatmárnémeti}\medskip
+
+{\bf 2. feladat: } Oldjuk meg a valós számok halmazán a
+\[6\sqrt{x-2}+10\sqrt{2x+3}+12\sqrt{3x+3}=6x+74\]
+egyenletet.
+
+\ki{Olosz Ferenc}{Szatmárnémeti}\medskip
+
+{\bf 3. feladat: } Egy négyzetbe az ábra szerint két egybevágó téglalapot írunk. Mekkora az $\alpha$ szög?
+
+\ki{Katz Sándor}{Bonyhád}\medskip
+
+\begin{figure}[hpb]
+\begin{center}
+\definecolor{wwwwww}{rgb}{0.4,0.4,0.4}
+\begin{tikzpicture}[line cap=round,line join=round,>=triangle 45,x=4.480825442550972cm,y=4.480825442550972cm]
+\clip(-0.0512,-0.0496) rectangle (1.0647,1.0574);
+\fill[color=wwwwww,fill=wwwwww,fill opacity=0.5] (0,0.2679) -- (0,0) -- (1,0) -- (1,0.2679) -- cycle;
+\fill[color=wwwwww,fill=wwwwww,fill opacity=0.5] (0.134,0.2679) -- (1,0.7679) -- (0.866,1) -- (0,0.5) -- cycle;
+\draw [shift={(0.134,0.2679)}] (0,0) -- (0:0.1785) arc (0:30:0.1785) -- cycle;
+\draw (1,0)-- (1,1);
+\draw (0,0)-- (1,0);
+\draw (1,1)-- (0,1);
+\draw (0,1)-- (0,0);
+\draw (0.866,1)-- (1,0.7679);
+\draw (0,0.2679)-- (1,0.2679);
+\draw (0,0.5)-- (0.134,0.2679);
+\draw (0.134,0.2679)-- (1,0.7679);
+\draw (0.866,1)-- (0,0.5);
+%\begin{scriptsize}
+\draw[color=black] (0.267,0.3005) node {$\alpha$};
+%\end{scriptsize}
+\end{tikzpicture}
+\end{center}
+\end{figure}
+
+{\bf 4. feladat: } Legyen az $ABC$ háromszög $AB$ oldalának $A$-hoz közelebbi harmadolópontja $P$, az $A$-tól távolabbi harmadolópontja $Q$. Legyen továbbá a $BC$ oldalon a $B$-hez közelebbi harmadolópont $R$, a $B$-től távolabbi harmadolópont $S$. Legyen a $CA$ oldalon a $C$-hez közelebbi harmadolópont $T$, a $C$-től távolabbi harmadolópont $U$. Legyen a $PS$ és $BT$ szakaszok metszéspontját az $U$ ponttal összekötő egyenes és a $BC$ szakasz metszéspontja $V$. Határozzuk meg a $BUV$ háromszög és a $PQRSTU$ hatszög területének arányát.
+
+\ki{Bíró Bálint}{Eger}\medskip
+
+{\bf 5. feladat: } Egy $10\times10$-es táblázat minden sorába és minden oszlopába az ábrán látható módon beírjuk a számokat 0-tól 9-ig, majd minden sorban és minden oszlopban bekeretezünk pontosan 1 számot, tehát összesen 10-et. Van-e a bekeretezett számok között mindig legalább két azonos szám?
+\begin{table}[htbp]
+\begin{center}
+\begin{tabular}{|c|c|c|c|c|}
+\hline
+0 & 1 & 2 & \ldots & 9 \\ \hline
+9 & 0 & 1 & \ldots & 8 \\ \hline
+8 & 9 & 0 & \ldots & 7 \\ \hline
+\vdots & \vdots & \vdots & $\ddots$ & \vdots \\ \hline
+1 & 2 & 3 & \ldots & 0 \\ \hline
+\end{tabular}
+\end{center}
+\end{table}
+
+\ki{Szabó Magda}{Szabadka}\medskip
+
+\pagebreak
+{\bf 6. feladat: } 
+Jelölje tetszőleges pozitív egész $n$ szám esetén $t(n)$ az $n$ szám különböző prímosz\-tó\-i\-nak számát. Mutassuk meg, hogy végtelen sok olyan pozitív egész $n$ szám van, amelyre
+\begin{itemize}
+\item[a.)] $t\left(n^2+n\right)$ páratlan.
+\item[b.)] $t\left(n^2+n\right)$ páros.
+\end{itemize}
+
+\ki{Borbély József}{Tata}
+\end{document}

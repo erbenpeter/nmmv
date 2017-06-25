@@ -1,0 +1,263 @@
+\documentclass[a4paper,10pt]{article} 
+\usepackage[utf8]{inputenc}
+\usepackage[a4paper]{geometry}
+\usepackage[magyar]{babel}
+\usepackage{t1enc}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{caption}
+\usepackage{pgf,tikz}
+\usepackage{pstricks,pstricks-add}
+\frenchspacing 
+\pagestyle{empty}
+\newcommand{\ki}[2]{\hfill {\it #1 (#2)}\medskip}
+\newcommand{\vonal}{\hbox to \hsize{\hskip2truecm\hrulefill\hskip2truecm}}
+\newcommand{\degre}{\ensuremath{^\circ}}
+\newcommand{\tg}{\mathop{\mathrm{tg}}\nolimits}
+\newcommand{\ctg}{\mathop{\mathrm{ctg}}\nolimits}
+\newcommand{\arc}{\mathop{\mathrm{arc}}\nolimits}
+\renewcommand{\vec}[1]{\mathbf{#1}}
+\begin{document}
+\begin{center} \Large {\em XXII. Nemzetközi Magyar Matematikaverseny} \end{center}
+\begin{center} \large{\em Győr, 2013. március 14--18.} \end{center}
+\smallskip
+\begin{center} \large{\bf 9. osztály} \end{center}
+\bigskip
+
+{\bf 1. feladat: } Határozza meg azokat az $m > n > g$ pozitív egész számokat, amelyekre
+$$m^2-n^2-g^2=2ng+68.$$
+
+\ki{Oláh György}{Felvidék}\medskip
+
+{\bf Megoldás: } Egyenletünket átalakítva $m^2-(n+g)^2=68$,
+illetve: $(m+n+g)(m-n-g)=68$ adódik. Mivel 
+$m+n+g>m-n-g>0$, ezért elegendő a
+$68=68\cdot 1=17\cdot 4=34\cdot 2$
+eseteket vizsgálni.
+$(m+n+g)+(m-n-g)=2m$, 
+így csak $m+n+g=34$
+és $m-n-g=2$ lehetséges. 
+Ekkor $2m=36$, $m=18$. Továbbá
+$18+n+g=34$ és $18-n-g=2$ miatt $n+g=16$. 
+
+Ez akkor teljesül, ha
+
+\begin{center}
+\begin{tabular}{rrr}
+m&n&g\cr
+\hline
+18&9 &7\cr
+18&10&6\cr
+18&11&5\cr
+18&12&4\cr
+18&13&3\cr
+18&14&2\cr
+18&15&1\cr
+\hline
+\end{tabular}
+\end{center}
+
+A feladat megoldását a felsorolt 7 számhármas adja, ezek ki is elégítik az eredeti feltételeket.
+
+\medskip
+
+\vonal
+
+
+{\bf 2. feladat: } Kukori és Kotkoda egy tojással teli kosárral érkezett a piacra. Az első vevőjük 
+Kopasznyakú volt, aki megvette a tojások felét és még két tojást. A második vevő 
+Kendermagos volt, aki megvette az első vásárlásból megmaradt tojások felét és még két 
+tojást. A harmadik vásárló, Hápogi megvette a második vásárlás után megmaradt tojások 
+felét és még két tojást. A negyedik vásárló, Csőrike megvette a Hápogi vásárlása után 
+megmaradt tojások felét és még két tojást. Csőrike vásárlása után Kotkoda örömmel 
+állapította meg, hogy kiürült a kosár. Mennyi tojást vitt el Kukori és Kotkoda a kosárban a 
+piacra? 
+
+
+\ki{Dr. Péics Hajnalka}{Délvidék}\medskip
+
+{\bf Megoldás: } Jelölje $x$ a kosárban levő tojások számát.
+Kopasznyakú vásárlása után $\frac x2-2$ tojás maradt a kosárban.
+
+Kendermagos vásárlása után $\frac{1}{2}\left(\frac{x}{2}-2\right)-2=\frac{x}{4}-3$ tojás maradt a kosárban.
+
+Hápogi vásárlása után $\frac{1}{2}\left(\frac{x}{4}-3\right)-2=\frac{x}{8}-\frac{7}{2}$ tojás maradt a kosárban.
+
+Csőrike vásárlása után $\frac{1}{2}\left(\frac{x}{7}-\frac{7}{2}\right)-2=\frac{x}{16}-\frac{15}{4}$ tojás maradt a kosárban, s mivel a kosár
+kiürült, így az
+
+$$\frac{x}{16}-\frac{15}{4}=0$$
+
+egyenletnek kell teljesülnie, amelynek megoldása $x=60$.
+
+Tehát Kukori és Kotkoda 60 tojást vitt a kosárban a piacra. 
+Valóban, a vásárlások után $60/2 - 2 = 28$, aztán 12, 4, 0 tojás maradt a kosárban. 
+
+\textit{Megjegyzés}: A feladat -- egyenlet nélkül -- visszafelé is megoldható, sőt általánosítható.
+
+\medskip
+
+\vonal
+
+
+{\bf 3. feladat: } Három kör közül mindegyik átmegy a másik kettő középpontján. Mekkora a három kör 
+közös részének a területe? 
+
+\ki{Pintér Ferenc}{Magyarország}\medskip
+
+{\bf Megoldás: } Jelölje a három kör középpontját $A$, $B$ és $C$. A feladat feltételéből adódóan az $ABC$ háromszög
+szabályos.
+
+A keresett területet megkaphatjuk, ha az $A$, $B$ és $C$ középpontú $60^\circ$-os körcikkek
+területösszegéből (ami együttesen egy félkör területe) levonjuk az $ABC$ szabályos háromszög
+területének a kétszeresét.
+
+Ha a körök sugara $r$, akkor a $60^\circ$-os körcikk területe hatodrésze a kör területének, azaz $\frac{r^2\pi}{6}$,
+az $r$ oldalú szabályos háromszög területe $\frac{r^2\sqrt 3}{4}$, így a keresett terület:
+$$3\cdot \frac{r^2\pi}{6}-2\cdot \frac{r^2\sqrt 3}{4}=\frac{r^2}{2}\left(\pi-\sqrt 3\right).$$
+\medskip
+
+\vonal
+
+
+{\bf 4. feladat: }  Hányféle módon lehet a 2013-as számot olyan természetes számok összegeként előállítani, az összeadandók sorrendjétől eltekintve, amelyeknek a szorzata is 2013? 
+
+
+\ki{Szabó Magda}{Délvidék}\medskip
+
+{\bf Megoldás: } Mivel $2013 = 3 \cdot  11 \cdot  61$ így először  
+$2013 = 3 \cdot  11 \cdot  61 = 3 + 11 + 61 + 1 +\ldots+1$, az 1-esek
+száma 1938, az összeadandók sorrendjétől eltekintünk, ezért ez egy eset. 
+
+A második felbontásnál 
+$2013 = 33 \cdot  61 = 33 + 61 + 1 + \ldots + 1$, az 1-esek száma 1919, ez a
+második eset.
+
+A harmadik felbontásnál 
+$2013 = 183 \cdot  11 = 183 + 11 + 1 + \ldots + 1$, az 1-esek száma 1819, ez a harmadik eset.
+
+A negyedik esethez 
+$2013 = 3 \cdot  671 = 671 + 3 + 1 + \ldots + 1$, az 1-esek száma 1339. 
+
+A $2013 = 2013$ nyilvánvaló előállítást megoldásnak is tekinthetjük, ki is zárhatjuk (megállapodás kérdése). Ettől függően 4 vagy 5-féle előállítási módunk lesz. Mindkét választ elfogadjuk.
+
+
+\medskip
+
+\vonal
+
+
+{\bf 5. feladat: } Tekintsük az 
+$$1\cdot 5^0,\quad 1\cdot 5^0+2\cdot 5^1,\quad 1\cdot 5^0+2\cdot 5^1+3\cdot 5^2,\quad\ldots,\quad 1\cdot 5^0+2\cdot 5^1+3\cdot 5^2+\ldots+k\cdot 5^{k-1}$$
+számokat, ahol $k$ tetszőleges pozitív egész szám és vegyük ezen számok utolsó számjegyét, 
+majd alkossunk ezen számjegyekből egy sorozatot. Mi a sorozat 9024. tagja? 
+
+
+\ki{Bíró Béla}{Erdély}\medskip
+
+{\bf I. megoldás: } Igazoljuk, hogy az 
+$(a_n)$ sorozat 4-es periódusú, azaz $a_{n+4} = {a_n}$, tetszőleges
+$n\in \{1, 2, 3,\ldots\}$ pozitív egész számra.
+
+Egyrészt:
+
+$1\cdot 5^0 = 1 \Rightarrow a_1 = 1$
+
+$1+2\cdot 5^1 = 11 \Rightarrow a_2 =1$
+
+$1+2\cdot 5^1 +3\cdot 5^2 = 86 \Rightarrow a_3 =6$
+
+$1+2\cdot 5^1 +3\cdot 5^2 +4\cdot 5^3 = 586 \Rightarrow a_4 =6$
+
+Másrészt, a periodikussághoz elegendő belátni, hogy az 
+$a_{n+4} - a_n$ számok 0-ra végződnek.
+
+Valóban:
+
+$$a_{n+4} - a_n = (n+1)5^n + (n+2)5^{n+1} + (n+3)5^{n+2} + (n+4)5^{n+3} = $$
+$$= (n+1)5^n + (n+2)\cdot 5\cdot 5^n +
+(n+3)\cdot 25\cdot 5^n + (n+4)\cdot 125\cdot 5^n =$$
+$$= (156n + 586)5^n =
+2\cdot 5^n (78n+293),$$ 
+
+ami osztható 10-el, bármely $n$ pozitív egész szám esetén.
+
+A $9024 = 4 \cdot (2256)$-ik szám tehát 6.
+
+
+\medskip
+
+{\bf II. megoldás: } Jelöljük $a_n$-nel az 
+$1 \cdot 5^0 + 2 \cdot 5^1 + \ldots + n \cdot 5^{n-1}$ számot, 
+$j_n$-nel az utolsó jegyét.
+
+Ekkor $a_{n+1}-a_n =(n+1)\cdot 5^n$, ami $n$ páratlan szám esetén egy 0-ra, míg páros esetén egy 5-re végződő szám. Tehát az utolsó jegy a sorozatban vagy megegyezik az előzővel, vagy
+pedig 5-tel tér el az előzőtől. Ez pedig ismétlődik rendre (hiszen a páros-páratlan számok is
+ismétlődnek), azaz a páratlan utáni páros indexű elemek megegyeznek, páros utáni páratlan
+pedig 5-tel tér el.
+
+Mivel $j_1 = 1; j_2 = 1; j_3 = 6; j_4 = 6; j_5 = 1 \ldots$ tehát az utolsó jegyek négyesével ismétlődnek.
+
+\medskip
+
+\vonal
+
+
+{\bf 6. feladat: }  Oldja meg a következő egyenletet a valós számok halmazán:
+$$\left|2x-4\right|-x=\{x\}$$
+($\{x\}$ jelöli az $x$ szám törtrészét, azaz $x$-nek és a legnagyobb, $x$-nél nem nagyobb
+egésznek a különbségét. Pl.: $\{3{,}71\} = 3{,}71-3= 0{,}71$, vagy $\{-2{,}4\}= -2{,}4 - (-3) = 0{,}6$.)
+
+
+\ki{Dr. Katz Sándor}{Magyarország}\medskip
+
+{\bf Megoldás: } Az $\{x\}$ grafikonja 1 meredekségű, alul zárt, felül nyílt szakaszokból áll. 
+
+\begin{center}
+\psset{xunit=1.0cm,yunit=1.0cm,algebraic=true,dimen=middle,dotstyle=o,dotsize=3pt 0,linewidth=0.8pt,arrowsize=3pt 2,arrowinset=0.25}
+\begin{pspicture*}(-0.66,-2.48)(5.78,2.48)
+\psaxes[labelFontSize=\scriptstyle,xAxis=true,yAxis=true,Dx=1,Dy=1,ticksize=-2pt 0,subticks=2]{->}(0,0)(-0.66,-2.48)(5.78,2.48)
+\psplot[plotpoints=200,linecolor=gray]{-0.6600000000000005}{5.779999999999999}{abs(2*x-4)-x}
+\psline[linewidth=0.05](0,0)(1,1)\psdots[dotstyle=*,dotsize=4pt](0,0)\psdots[dotstyle=o,dotsize=4pt](1,1)
+\psline[linewidth=0.05](1,0)(2,1)\psdots[dotstyle=*,dotsize=4pt](1,0)\psdots[dotstyle=o,dotsize=4pt](2,1)
+\psline[linewidth=0.05](2,0)(3,1)\psdots[dotstyle=*,dotsize=4pt](2,0)\psdots[dotstyle=o,dotsize=4pt](3,1)
+\psline[linewidth=0.05](3,0)(4,1)\psdots[dotstyle=*,dotsize=4pt](3,0)\psdots[dotstyle=o,dotsize=4pt](4,1)
+\psline[linewidth=0.05](4,0)(5,1)\psdots[dotstyle=*,dotsize=4pt](4,0)\psdots[dotstyle=o,dotsize=4pt](5,1)
+\psline[linewidth=0.05](5,0)(6,1)\psdots[dotstyle=*,dotsize=4pt](5,0)\psdots[dotstyle=o,dotsize=4pt](6,1)
+\psline[linewidth=0.05](-1,0)(0,1)\psdots[dotstyle=*,dotsize=4pt](-1,0)\psdots[dotstyle=o,dotsize=4pt](0,1)
+\begin{scriptsize}
+\rput[tl](1,2.24){\gray{$|2x-4|-x$}}
+%\rput[bl](-4.2,-0.5){$f$}
+%\rput[bl](-0.54,5.98){$g$}
+\end{scriptsize}
+\end{pspicture*}
+\end{center}
+
+
+$$|2x-4|-x =
+\left\{
+\begin{array}{rl}
+		x-4  & \mbox{ha } x \geq 2 \\
+		-3x+4 & \mbox{ha } x < 2
+	\end{array}
+\right. $$
+
+$0\le \{x\}<1$, ezért vizsgáljuk, hogy a $|2x-4|-x$
+(azaz az $x-4$ és $-3x+4$ kifejezések) hol vesznek fel a $[0; 1[$ intervallumba eső értékeket!
+
+Ha $x \le 1$, vagy $x\ge 5$, akkor 
+$|2x-4|-x \ge 1$,
+és ha $4/3 <x< 4$ akkor $|2x-4|-x <0$,
+ezért az egyenlet megoldásait csak az $[1; 4/3]$ és a $[4; 5[$ intervallumokon kereshetjük .
+
+Az $[1 ; 4/3]$ intervallumon az egyenletünk: $-3x+4 = x-1$. Ennek megoldása $x=5/4$. Ez az
+adott intervallumba esik, és kielégíti az egyenletet. 
+
+A $[4; 5[$ intervallumon az egyenletünk: $x-4 = x-4$. Ennek megoldása minden olyan $x$, amely
+az adott intervallumba esik.
+
+Tehát az egyenlet megoldásai $x=5/4$ és minden olyan $x$, amelyre $4\le x<5$.
+
+
+
+\end{document}
